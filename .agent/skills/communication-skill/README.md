@@ -16,6 +16,28 @@ Use `SKILL.md` as the main rule/instruction file.
 
 Use `anti-ai-writing.md` as supporting knowledge or reference.
 
+## Purpose
+
+Communication Skill is a human-centered communication framework.
+
+Goals:
+
+- Improve clarity
+- Improve specificity
+- Reduce AI-sounding language
+- Improve professional communication
+- Improve technical communication
+
+Works for:
+
+- Email
+- Chat
+- Tickets
+- Documentation
+- Executive summaries
+- Technical writing
+- Public content
+
 ## Simple Prompt
 
 Use this in any chat:
