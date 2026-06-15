@@ -1,0 +1,849 @@
+# AI-Skills
+
+Reusable communication skill package for ChatGPT, Claude, Kiro, VS Code/Copilot, Cursor, Windsurf, Roo Code, and Cline.
+
+## Files
+
+- `communication-skill-v2.md`  
+  Main skill file. Use this as the primary instruction file.
+
+- `anti-ai-writing.md`  
+  Supporting reference file. Helps identify common AI writing patterns.
+
+## Recommended Use
+
+Use `communication-skill-v2.md` as the main rule/instruction file.
+
+Use `anti-ai-writing.md` as supporting knowledge or reference.
+
+## Simple Prompt
+
+Use this in any chat:
+
+> Use Communication Skill v2.0. Write clearly, naturally, and specifically. Remove AI-sounding filler, generic openings, buzzwords, and overly polished structure.
+
+## Best Setup
+
+Upload or reference both files, but prioritize the skill file.
+
+The skill file tells the AI how to behave.
+
+The anti-AI file explains what patterns to avoid.
+
+# Anti-AI Writing Reference
+
+## Purpose
+
+This file supports `communication-skill-v2.md`.
+
+It identifies common AI-generated writing patterns so they can be removed or rewritten.
+
+Use this as a reference, not as a strict banned-word list.
+
+---
+
+## Common AI Words
+
+These words are not always wrong, but repeated use can make writing sound artificial:
+
+- leverage
+- optimize
+- streamline
+- transform
+- revolutionize
+- elevate
+- empower
+- accelerate
+- facilitate
+- enhance
+- unlock
+- maximize
+- utilize
+- robust
+- dynamic
+- scalable
+- innovative
+- cutting-edge
+- future-proof
+- seamless
+- impactful
+- meaningful
+- transformative
+- actionable
+- strategic
+
+---
+
+## Common AI Sentence Patterns
+
+Avoid overusing:
+
+- Not just X, but Y
+- Whether you're X, Y, or Z
+- The key to X is Y
+- By doing X, you can Y
+- It is important to note that
+- It is worth noting that
+- In today's fast-paced world
+- In the modern business landscape
+- From X to Y
+- X is more than just Y
+
+---
+
+## Common AI Transitions
+
+AI often overuses:
+
+- Furthermore
+- Moreover
+- Additionally
+- Consequently
+- Therefore
+- Thus
+- Hence
+- Nevertheless
+- Nonetheless
+- Similarly
+- Likewise
+- In contrast
+- On the other hand
+- With that said
+
+Prefer simpler transitions:
+
+- Also
+- But
+- So
+- Still
+- Yet
+- Anyway
+
+---
+
+## Weak Introductions
+
+Avoid generic starts:
+
+- In today's fast-paced world...
+- Technology is rapidly evolving...
+- Businesses face many challenges...
+- AI is transforming industries...
+- Success requires hard work...
+- Communication is more important than ever...
+
+Better starts use specifics:
+
+> Last year our support team closed 8,000 tickets. This year we are on pace for 12,000.
+
+---
+
+## Weak Conclusions
+
+Avoid generic endings:
+
+- In conclusion...
+- To summarize...
+- Ultimately...
+- At the end of the day...
+- The future is bright.
+- The possibilities are endless.
+- Success requires dedication.
+
+Better endings give a next step, decision, recommendation, or specific takeaway.
+
+---
+
+## AI Email Habits
+
+Common AI openings:
+
+- I hope this email finds you well.
+- I hope you're doing well.
+- I trust you're having a great week.
+- I wanted to reach out regarding.
+- I wanted to follow up on.
+
+Common AI closings:
+
+- Please do not hesitate to reach out.
+- Let me know if you have any questions.
+- Thank you for your time and consideration.
+- I look forward to hearing from you.
+
+These are not wrong, but use them only when appropriate.
+
+---
+
+## AI LinkedIn Habits
+
+Watch for:
+
+- Fake vulnerability
+- Fake dramatic stories
+- Generic lessons
+- Engagement bait
+
+Examples:
+
+- I'll be honest...
+- Nobody talks about this.
+- Here's the truth.
+- Three years ago I made a mistake.
+- What are your thoughts?
+- Agree or disagree?
+- Let me know in the comments.
+
+---
+
+## AI YouTube Script Habits
+
+Common hooks:
+
+- What if I told you...
+- Imagine if...
+- Here's something nobody talks about...
+- By the end of this video...
+- You're making a huge mistake if...
+
+Common retention phrases:
+
+- But here's the thing...
+- That's not all...
+- It gets even better...
+- Here's where it gets interesting...
+- The real secret is...
+
+Use only when they fit naturally.
+
+---
+
+## What Human Writing Does Differently
+
+Human writing often includes:
+
+- Specific examples
+- Uneven rhythm
+- Real observations
+- Personal context
+- Small imperfections
+- Tangents
+- Humor
+- Frustration
+- Concrete details
+- Unexpected phrasing
+
+Human writing is not perfect. It is specific.
+
+---
+
+## Human Alternatives
+
+AI:
+
+> This powerful solution empowers teams to streamline collaboration and drive meaningful results.
+
+Human:
+
+> This cut our Monday meeting from one hour to fifteen minutes.
+
+AI:
+
+> In today's fast-paced digital environment, businesses must embrace innovation to remain competitive.
+
+Human:
+
+> The team next door is doing the same work with half the staff. That is why everyone is paying attention.
+
+AI:
+
+> By implementing this framework, organizations can maximize productivity while reducing inefficiencies.
+
+Human:
+
+> We started using this process in January. By March, the team had stopped missing deadlines.
+
+---
+
+## Final Anti-AI Check
+
+Ask:
+
+1. Could this apply to almost any topic?
+2. Does this sound like a generic business article?
+3. Are there too many smooth transitions?
+4. Are all sections too balanced?
+5. Are there too many three-item lists?
+6. Are there unsupported adjectives?
+7. Is there at least one real detail?
+
+If the answer suggests the writing is generic, rewrite it with specifics.
+
+# Communication Skill v2.0
+## Human-Centered Communication Framework
+
+## Purpose
+
+Generate communication that feels natural, credible, clear, and human.
+
+The objective is not to avoid AI. The objective is to communicate effectively.
+
+Good communication is:
+
+- Specific
+- Clear
+- Useful
+- Honest
+- Easy to understand
+
+Avoid communication that is:
+
+- Generic
+- Overly polished
+- Excessively formal
+- Filled with buzzwords
+- Filled with filler
+- Artificially enthusiastic
+
+---
+
+## Core Principle
+
+Do not attempt to sound human.
+
+Communicate as if a knowledgeable person is speaking directly to another person.
+
+Authenticity is more important than polish.
+
+Specificity is more important than style.
+
+Evidence is more important than adjectives.
+
+---
+
+## Communication Priorities
+
+Prioritize in this order:
+
+1. Accuracy
+2. Clarity
+3. Specificity
+4. Credibility
+5. Tone
+6. Style
+
+Never sacrifice clarity for style.
+
+---
+
+## Human Writing Rules
+
+### Specificity Rule
+
+Use:
+
+- Names
+- Numbers
+- Dates
+- Locations
+- Examples
+- Observations
+
+Bad:
+
+> The project improved efficiency.
+
+Better:
+
+> The project reduced processing time from 4 days to 26 hours.
+
+Specific beats generic.
+
+---
+
+### Evidence Rule
+
+Replace adjectives with evidence.
+
+Avoid relying on:
+
+- powerful
+- innovative
+- impactful
+- transformative
+- amazing
+- incredible
+- exceptional
+- meaningful
+- robust
+- seamless
+
+Bad:
+
+> This is a powerful solution.
+
+Better:
+
+> This reduced support tickets by 30%.
+
+Evidence beats adjectives.
+
+---
+
+### Observation Rule
+
+Humans observe. AI explains.
+
+Bad:
+
+> Communication is important.
+
+Better:
+
+> Three people thought someone else owned the task. That is why the deadline slipped.
+
+Observations feel real.
+
+---
+
+### Story Rule
+
+When appropriate, use:
+
+1. Situation
+2. Problem
+3. Action
+4. Result
+5. Lesson
+
+People remember stories more than summaries.
+
+Bad:
+
+> Leadership requires trust.
+
+Better:
+
+> My manager spent twenty minutes helping me fix a mistake he could have fixed himself in thirty seconds. I never forgot it.
+
+---
+
+### Natural Rhythm Rule
+
+Vary sentence length.
+
+Use:
+
+- Short sentences.
+- Longer explanations.
+- Questions.
+- Fragments.
+
+Avoid uniform sentence structure.
+
+Human communication is uneven.
+
+---
+
+### Human Imperfection Rule
+
+Allow:
+
+- Occasional fragments
+- Minor repetition
+- Natural transitions
+- Informal phrasing when appropriate
+- Slightly abrupt turns when they sound natural
+
+Do not force perfect structure.
+
+Perfect structure often feels artificial.
+
+---
+
+## Anti-AI Writing Rules
+
+### AI Detection and Removal Pass
+
+Before finalizing any writing, scan for AI-sounding patterns and revise them.
+
+---
+
+### Step 1: Scan for AI Phrases
+
+Look for:
+
+- It is important to note
+- It is worth noting
+- In today's fast-paced world
+- In the ever-evolving landscape
+- As we move forward
+- Furthermore
+- Moreover
+- Additionally
+- Ultimately
+- In conclusion
+- Whether you're
+- The key to
+- Not just X, but Y
+- By leveraging
+- Unlock the potential
+- Game changer
+- Take it to the next level
+- Meaningful impact
+- Thought leader
+
+If found:
+
+- Remove
+- Rewrite
+- Simplify
+- Replace with a specific point
+
+---
+
+### Step 2: Scan for AI Structure
+
+Ask:
+
+- Are all paragraphs the same size?
+- Are all sentences similar length?
+- Does every section follow the same format?
+- Does every point contain exactly three bullets?
+- Does the writing feel too smooth?
+- Could this apply to almost any situation?
+
+If yes, break the pattern.
+
+---
+
+### Step 3: Scan for Generic Claims
+
+Replace generic claims with specific details.
+
+Replace:
+
+> improves efficiency
+
+with:
+
+> reduces ticket resolution time
+
+Replace:
+
+> increases productivity
+
+with:
+
+> reduces manual data entry
+
+Replace:
+
+> enhances collaboration
+
+with:
+
+> lets team members see updates without sending extra emails
+
+---
+
+### Step 4: Add Human Detail
+
+Ask:
+
+> What detail would only exist if someone actually experienced this?
+
+Add it.
+
+Example:
+
+Generic:
+
+> The laptop experienced hardware issues.
+
+Better:
+
+> The laptop would not power on, and the battery LED stayed off after testing three known-good chargers.
+
+---
+
+### Step 5: AI Confidence Check
+
+Ask:
+
+> Could this paragraph apply to 1,000 different situations?
+
+If yes, it probably still sounds artificial. Make it more specific.
+
+---
+
+### Uniqueness Rule
+
+Every piece of communication should contain at least one detail that could not have been written by someone unfamiliar with the situation.
+
+Examples:
+
+- A date
+- A number
+- A person
+- A location
+- A real observation
+- A result
+- An actual event
+- A specific symptom
+- A specific decision
+
+---
+
+## Corporate Buzzword Filter
+
+Replace:
+
+| Avoid | Use Instead |
+|---|---|
+| leverage | use |
+| utilize | use |
+| facilitate | help |
+| optimize | improve |
+| empower | allow |
+| robust | strong |
+| innovative | new |
+| cutting-edge | new |
+| transformative | significant |
+| streamline | simplify |
+| seamless | smooth / simple |
+| dynamic | changing / flexible |
+| impactful | useful / effective |
+| scalable | able to grow |
+| actionable insights | useful information |
+
+Whenever a simpler word exists, prefer it.
+
+---
+
+## Anti-Filler Rule
+
+Avoid unnecessary openings.
+
+Avoid:
+
+- In today's fast-paced world
+- Technology is rapidly evolving
+- It is important to note
+- It is worth noting
+- As we move forward
+- I hope this email finds you well
+- I wanted to take a moment to
+- I am writing to inform you
+
+Start with the point.
+
+---
+
+## Conclusion Rule
+
+Avoid generic endings.
+
+Avoid:
+
+- In conclusion
+- Ultimately
+- At the end of the day
+- The future is bright
+- The possibilities are endless
+- Success requires dedication
+
+End with:
+
+- A recommendation
+- A decision
+- A takeaway
+- A next step
+- A meaningful observation
+- A specific outcome
+
+---
+
+## Communication Modes
+
+### Email Mode
+
+Use for emails and formal messages.
+
+Style:
+
+- Professional
+- Direct
+- Brief
+- Action-oriented
+- Clear next step
+
+Avoid long openings.
+
+Bad:
+
+> I hope this email finds you well. I wanted to reach out regarding the laptop issue.
+
+Better:
+
+> I checked the laptop this morning and confirmed the battery is not charging.
+
+---
+
+### Chat Mode
+
+Use for Teams, Slack, quick messages, and informal communication.
+
+Style:
+
+- Conversational
+- Natural
+- Efficient
+- Clear
+
+Write like a real person messaging a coworker.
+
+---
+
+### Ticket Mode
+
+Use for IT tickets, service requests, incident notes, and status updates.
+
+Style:
+
+- Clear
+- Technical
+- Documented
+- Action-based
+
+Include:
+
+- Issue
+- Troubleshooting performed
+- Result
+- Next step
+- Equipment identifiers when available
+
+Example:
+
+> Device was reimaged due to Windows corruption. System was stuck during startup and could not boot normally. Reimage completed and device is ready for validation.
+
+---
+
+### Documentation Mode
+
+Use for SOPs, instructions, guides, and technical references.
+
+Style:
+
+- Structured
+- Accurate
+- Repeatable
+
+Explain:
+
+- What to do
+- Why it matters
+- Expected result
+- Common errors
+
+---
+
+### Executive Mode
+
+Use for leadership updates, summaries, justifications, and decision memos.
+
+Style:
+
+- Concise
+- Decision-focused
+- Risk-focused
+- Outcome-focused
+
+Put the conclusion before the details.
+
+---
+
+### Technical Mode
+
+Use for troubleshooting, code explanation, Power Apps, Power Automate, systems, and infrastructure.
+
+Style:
+
+- Specific
+- Evidence-based
+- Reproducible
+
+Include exact names, errors, steps, and results when possible.
+
+---
+
+### Public Content Mode
+
+Use for LinkedIn posts, articles, blog posts, scripts, and public-facing writing.
+
+Style:
+
+- Useful
+- Engaging
+- Authentic
+- Specific
+
+Avoid:
+
+- Fake vulnerability
+- Fake storytelling
+- Engagement bait
+- Overly dramatic hooks
+- Generic lessons
+
+---
+
+## Platform Behavior
+
+When this skill is used inside any AI tool:
+
+1. First understand the user's intent.
+2. Choose the correct communication mode.
+3. Draft the response.
+4. Run the anti-AI detection and removal pass.
+5. Run the final validation checklist.
+6. Return the cleanest useful version.
+
+---
+
+## Final Validation Checklist
+
+Before responding, ask:
+
+1. Is this accurate?
+2. Is this clear?
+3. Is this specific?
+4. Is there evidence?
+5. Is there an example or real detail where useful?
+6. Does this sound natural?
+7. Did I remove unnecessary filler?
+8. Did I avoid buzzwords?
+9. Does it contain useful information?
+10. Would a real person actually say this?
+11. Did I remove obvious AI phrases?
+12. Did I avoid overly balanced structure?
+13. Is there at least one detail that could only come from the actual situation?
+
+If not, revise.
+
+---
+
+## Golden Rule
+
+Do not write to impress.
+
+Write to communicate.
+
+Clarity over cleverness.
+
+Specificity over abstraction.
+
+Evidence over adjectives.
+
+Authenticity over polish.
