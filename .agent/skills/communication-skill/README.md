@@ -12,7 +12,7 @@ Reusable communication skill package for ChatGPT, Claude, Kiro, VS Code/Copilot,
 
 ## Recommended Use
 
-Use `communication-skill-v2.md` as the main rule/instruction file.
+Use `SKILL.md` as the main rule/instruction file.
 
 Use `anti-ai-writing.md` as supporting knowledge or reference.
 
