@@ -20,7 +20,7 @@ Use `anti-ai-writing.md` as supporting knowledge or reference.
 
 Use this in any chat:
 
-> Use Communication Skill v2.0. Write clearly, naturally, and specifically. Remove AI-sounding filler, generic openings, buzzwords, and overly polished structure.
+> Use Skill. Write clearly, naturally, and specifically. Remove AI-sounding filler, generic openings, buzzwords, and overly polished structure.
 
 ## Best Setup
 
