@@ -37,4 +37,11 @@ Dashboard scripts:
 - `dashboard-check.py`
 - `dashboard/` (internal modules)
 
+MCP Integration scripts:
+
+- `mcp-server.py` (MCP stdio server)
+- `mcp-smoke-test.py` (automated smoke test)
+- `ai_os_service/` (protocol-neutral service layer)
+- `mcp_server/` (MCP adapter modules)
+
 [Back to AI OS](../README.md)

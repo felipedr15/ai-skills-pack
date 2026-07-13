@@ -98,3 +98,11 @@ GET /api/repository?category=&q=&limit=
 ```
 
 7. Run unified validation to confirm no regressions across all phases.
+
+## Phase 6 MCP Integration Workflow (Implemented)
+
+1. Start the MCP server over stdio: `python scripts/mcp-server.py`
+2. Run the automated smoke test: `python scripts/mcp-smoke-test.py`
+3. Configure MCP clients using examples in `examples/mcp/`.
+4. The server is read-only by default with no network calls.
+5. Run unified validation to confirm MCP integration passes.

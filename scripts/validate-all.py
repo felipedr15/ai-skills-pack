@@ -119,6 +119,7 @@ def main():
     run_command(results, "discovery index structure validation", [python, "scripts/discovery-validate.py"])
     run_command(results, "dashboard staleness validation", [python, "scripts/dashboard-check.py"])
     run_command(results, "dashboard structure validation", [python, "scripts/dashboard-validate.py"])
+    run_command(results, "MCP smoke test", [python, "scripts/mcp-smoke-test.py"])
     validate_json(results)
     validate_links(results)
     validate_secrets(results)

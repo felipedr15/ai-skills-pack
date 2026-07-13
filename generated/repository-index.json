@@ -7,9 +7,9 @@
     "project-starters": 129,
     "templates": 30,
     "standards": 9,
-    "knowledge": 19,
+    "knowledge": 20,
     "references": 11,
-    "scripts": 53
+    "scripts": 65
   },
   "files": [
     {
@@ -113,6 +113,12 @@
       "category": "knowledge",
       "size": 4818,
       "sha256": "a388d10093f933aba12b718a7a90c14bd02d94211d0982c7525cc82a26bfecae"
+    },
+    {
+      "path": "knowledge/architecture/phase-6-mcp-integration.md",
+      "category": "knowledge",
+      "size": 2527,
+      "sha256": "302d85006652ed90f8c57a0f67e0f6a9f666d38f69c07db1dd29a30b5fcb406b"
     },
     {
       "path": "knowledge/best-practices/README.md",
@@ -1107,8 +1113,44 @@
     {
       "path": "scripts/README.md",
       "category": "scripts",
-      "size": 883,
-      "sha256": "eb5753967eefaa25efd3dd447915b219a738cdc9b1414d96063c7b068b552ffd"
+      "size": 1082,
+      "sha256": "823861d2bc223983a0dcbfcc8fbcef8b38dff51440c8c4d18427bc23d0125974"
+    },
+    {
+      "path": "scripts/ai_os_service/__init__.py",
+      "category": "scripts",
+      "size": 323,
+      "sha256": "91d5bda15ac95d818f00f14e39bb78ab46efcf941cb4caf13f90173ecec36f2d"
+    },
+    {
+      "path": "scripts/ai_os_service/errors.py",
+      "category": "scripts",
+      "size": 1878,
+      "sha256": "d6227d145916e1a7b3c424d6e9c000033af56a819c463516a19e898eeebb06fd"
+    },
+    {
+      "path": "scripts/ai_os_service/pagination.py",
+      "category": "scripts",
+      "size": 853,
+      "sha256": "e92470d891110c8b1cbd8f1d7f82f81ba932d6bebf445aea8b4025ee479a55a4"
+    },
+    {
+      "path": "scripts/ai_os_service/permissions.py",
+      "category": "scripts",
+      "size": 3499,
+      "sha256": "c5086c236c1db65ffa50641e872ae5ebd3e029420a4959f4dc046dabf0c1e496"
+    },
+    {
+      "path": "scripts/ai_os_service/service.py",
+      "category": "scripts",
+      "size": 18310,
+      "sha256": "37b7cabf71c33655270b6dba993332985147e92cdf6ad7606cfdd7589bfe0b21"
+    },
+    {
+      "path": "scripts/ai_os_service/utils.py",
+      "category": "scripts",
+      "size": 1278,
+      "sha256": "13f6d3808ad041ea49e6658da3303063cdd44ff895cd6b4231c90ba888ea9bf9"
     },
     {
       "path": "scripts/create-project.py",
@@ -1291,6 +1333,42 @@
       "sha256": "a7a97e9ce5c238701fc6f74cb05f686edb81914e34053a3e494cf4c08388f983"
     },
     {
+      "path": "scripts/mcp-server.py",
+      "category": "scripts",
+      "size": 573,
+      "sha256": "6da29b6957f4ce799ee1395a97f39b2111a1e6a618a43cee09feaa68884fe5bf"
+    },
+    {
+      "path": "scripts/mcp-smoke-test.py",
+      "category": "scripts",
+      "size": 7805,
+      "sha256": "7f67a3c28ebc5fade450c06e63eacf708a34b6e2197dd446fc8fff5d3f2db016"
+    },
+    {
+      "path": "scripts/mcp_server/__init__.py",
+      "category": "scripts",
+      "size": 297,
+      "sha256": "10ecafea8f4639f4b506a93d95525c9c22bab36a4e3a7dbe6e41e59f24e08b56"
+    },
+    {
+      "path": "scripts/mcp_server/adapter.py",
+      "category": "scripts",
+      "size": 7198,
+      "sha256": "5725734cb891491fed0fe5ea16baa623e4e9c3e2286da86e723088c5b9783520"
+    },
+    {
+      "path": "scripts/mcp_server/schemas.py",
+      "category": "scripts",
+      "size": 8632,
+      "sha256": "c3358c5233cf1aa7737b500235e93aa75d63efa0bef285afe4146da8de67ee76"
+    },
+    {
+      "path": "scripts/mcp_server/server.py",
+      "category": "scripts",
+      "size": 6973,
+      "sha256": "fbea1ff15a4ed7d6abd3ee3e19db1af02670e18cad197e0b128a875bd0a32025"
+    },
+    {
       "path": "scripts/memory-add.py",
       "category": "scripts",
       "size": 4149,
@@ -1395,8 +1473,8 @@
     {
       "path": "scripts/validate-all.py",
       "category": "scripts",
-      "size": 6143,
-      "sha256": "ef39b3de4679530e32d715f3b174c7cfe2ed96125142d984817ba822e75e660e"
+      "size": 6225,
+      "sha256": "d4d8cbeb423d180fb06f921b3d8699637d0e7b9863853ff41ce33f83ab2f82a9"
     },
     {
       "path": "scripts/validate-knowledge-graph.py",

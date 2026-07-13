@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-13T22:28:19Z",
+  "generatedAt": "2026-07-13T22:52:59Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 326,
-    "edges": 505,
+    "nodes": 329,
+    "edges": 518,
     "nodesByType": {
       "concept": 2,
-      "document": 288,
+      "document": 291,
       "memory": 5,
       "platform": 5,
       "project": 10,
@@ -18,10 +18,10 @@
       "belongs_to": 2,
       "contains": 129,
       "generated_from": 14,
-      "references": 168,
-      "related_to": 101,
+      "references": 169,
+      "related_to": 103,
       "supports": 4,
-      "uses": 87
+      "uses": 97
     }
   },
   "nodes": [
@@ -557,6 +557,24 @@
       }
     },
     {
+      "id": "document:examples/mcp/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": "examples/mcp/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:examples/mcp/server-config.example.json",
+      "type": "document",
+      "name": "Server Config.Example",
+      "sourcePath": "examples/mcp/server-config.example.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
       "id": "document:generated/memory-index.json",
       "type": "document",
       "name": "Memory Index",
@@ -633,6 +651,15 @@
       "type": "document",
       "name": "Phase 5 Interactive Dashboard",
       "sourcePath": "knowledge/architecture/phase-5-interactive-dashboard.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:knowledge/architecture/phase-6-mcp-integration.md",
+      "type": "document",
+      "name": "Phase 6 Mcp Integration",
+      "sourcePath": "knowledge/architecture/phase-6-mcp-integration.md",
       "metadata": {
         "extension": ".md"
       }
@@ -5016,6 +5043,15 @@
       }
     },
     {
+      "id": "edge:769b4a4c56b0695d",
+      "type": "references",
+      "from": "document:knowledge/architecture/phase-6-mcp-integration.md",
+      "to": "document:knowledge/architecture/README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:40262f8233604605",
       "type": "references",
       "from": "document:knowledge/best-practices/README.md",
@@ -6141,6 +6177,15 @@
       }
     },
     {
+      "id": "edge:b039583d96ea95bc",
+      "type": "related_to",
+      "from": "document:examples/mcp/README.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:9d2b9c8e52ff9ab5",
       "type": "related_to",
       "from": "document:knowledge/README.md",
@@ -6154,6 +6199,15 @@
       "type": "related_to",
       "from": "document:knowledge/ai-workflows/README.md",
       "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:5db017ebeb037690",
+      "type": "related_to",
+      "from": "document:knowledge/architecture/phase-6-mcp-integration.md",
+      "to": "concept:validation",
       "metadata": {
         "source": "document_text"
       }
@@ -6942,10 +6996,28 @@
       }
     },
     {
+      "id": "edge:19caeefb6f6da38b",
+      "type": "uses",
+      "from": "document:ARCHITECTURE.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:d4667278883a7511",
       "type": "uses",
       "from": "document:CHANGELOG.md",
       "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:fa9bdc2342c2c21a",
+      "type": "uses",
+      "from": "document:CHANGELOG.md",
+      "to": "tool:mcp",
       "metadata": {
         "source": "document_text"
       }
@@ -7041,10 +7113,46 @@
       }
     },
     {
+      "id": "edge:7991e70360394aba",
+      "type": "uses",
+      "from": "document:WORKFLOW.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:649a83a21118f7e3",
       "type": "uses",
       "from": "document:agents/reviewer.md",
       "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:f906a0e441333a01",
+      "type": "uses",
+      "from": "document:examples/mcp/README.md",
+      "to": "platform:claude",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:c289e356c144b270",
+      "type": "uses",
+      "from": "document:examples/mcp/README.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:9f2134cd30d50025",
+      "type": "uses",
+      "from": "document:examples/mcp/README.md",
+      "to": "tool:mcp",
       "metadata": {
         "source": "document_text"
       }
@@ -7098,6 +7206,33 @@
       "id": "edge:c11b47d3c1f304b6",
       "type": "uses",
       "from": "document:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:c46b5a1441f8aad5",
+      "type": "uses",
+      "from": "document:knowledge/architecture/phase-6-mcp-integration.md",
+      "to": "platform:claude",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:595c896e05c0d971",
+      "type": "uses",
+      "from": "document:knowledge/architecture/phase-6-mcp-integration.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:1e80bda204e0aa50",
+      "type": "uses",
+      "from": "document:knowledge/architecture/phase-6-mcp-integration.md",
       "to": "tool:mcp",
       "metadata": {
         "source": "document_text"
@@ -7270,6 +7405,15 @@
       "type": "uses",
       "from": "document:scripts/README.md",
       "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:db291fd293d8fd4a",
+      "type": "uses",
+      "from": "document:scripts/README.md",
+      "to": "tool:mcp",
       "metadata": {
         "source": "document_text"
       }

@@ -2,15 +2,15 @@
 
 > Generated from repository source files and knowledge graph. This file is not a source of truth.
 
-Generated at: 2026-07-13T22:28:24Z
+Generated at: 2026-07-13T23:03:21Z
 Source graph: generated/knowledge-graph.json
 
 ## Statistics
 
-- Documents: 304
-- Entities: 326
-- Terms: 864
-- Relationships: 505
+- Documents: 307
+- Entities: 329
+- Terms: 890
+- Relationships: 518
 
 ## Diagnostics
 

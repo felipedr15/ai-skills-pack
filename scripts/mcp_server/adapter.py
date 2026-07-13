@@ -1,0 +1,188 @@
+"""MCP adapter that maps MCP tool calls to the AI OS service layer."""
+from __future__ import annotations
+
+from pathlib import Path
+
+from ai_os_service.errors import ServiceError
+from ai_os_service.service import AiOsService
+
+from .schemas import RESOURCES
+
+
+class McpAdapter:
+    """Adapts MCP tool/resource requests to the AI OS service layer."""
+
+    def __init__(self, root: Path):
+        self.service = AiOsService(root)
+        self.root = root
+
+    def call_tool(self, name: str, arguments: dict) -> dict:
+        """Dispatch a tool call to the service layer."""
+        try:
+            handler = getattr(self, f"_tool_{name}", None)
+            if handler is None:
+                return {"error": {"code": "unknown_tool", "message": f"unknown tool: {name}"}}
+            return {"result": handler(arguments)}
+        except ServiceError as exc:
+            return {"error": exc.to_dict()}
+        except Exception as exc:
+            return {"error": {"code": "internal_error", "message": "an internal error occurred"}}
+
+    def read_resource(self, uri: str) -> dict:
+        """Read a resource by URI."""
+        try:
+            handler = self._resource_handlers().get(uri)
+            if handler is None:
+                return {"error": {"code": "not_found", "message": f"unknown resource: {uri}"}}
+            content, mime_type = handler()
+            return {"result": {"uri": uri, "content": content, "mimeType": mime_type}}
+        except ServiceError as exc:
+            return {"error": exc.to_dict()}
+        except Exception:
+            return {"error": {"code": "internal_error", "message": "an internal error occurred"}}
+
+    # ── Tool Handlers ──
+
+    def _tool_ai_os_status(self, args: dict) -> dict:
+        return self.service.get_repository_status()
+
+    def _tool_search_ai_os(self, args: dict) -> dict:
+        return self.service.search(
+            query=args.get("query", ""),
+            type_filter=args.get("type", ""),
+            path_filter=args.get("path", ""),
+            relationship=args.get("relationship", ""),
+            exact=args.get("exact", False),
+            case_sensitive=args.get("case_sensitive", False),
+            limit=args.get("limit", 20),
+        )
+
+    def _tool_explain_search_result(self, args: dict) -> dict:
+        return self.service.explain_search(
+            entity_id=args.get("entity_id", ""),
+            query=args.get("query", ""),
+        )
+
+    def _tool_get_entity(self, args: dict) -> dict:
+        return self.service.get_node(node_id=args.get("entity_id", ""))
+
+    def _tool_get_related_entities(self, args: dict) -> dict:
+        return self.service.get_neighbors(
+            node_id=args.get("entity_id", ""),
+            relationship=args.get("relationship", ""),
+            direction=args.get("direction", ""),
+            limit=args.get("limit", 20),
+        )
+
+    def _tool_traverse_knowledge_graph(self, args: dict) -> dict:
+        return self.service.traverse_graph(
+            node_id=args.get("entity_id", ""),
+            depth=args.get("depth", 2),
+            relationship=args.get("relationship", ""),
+            direction=args.get("direction", ""),
+            limit=args.get("limit", 20),
+        )
+
+    def _tool_find_knowledge_path(self, args: dict) -> dict:
+        return self.service.find_path(
+            source_id=args.get("source_id", ""),
+            target_id=args.get("target_id", ""),
+            relationship=args.get("relationship", ""),
+        )
+
+    def _tool_list_skills(self, args: dict) -> dict:
+        return self.service.list_skills(
+            platform=args.get("platform", ""),
+            tool=args.get("tool", ""),
+            category=args.get("category", ""),
+            path=args.get("path", ""),
+            limit=args.get("limit", 20),
+            cursor=args.get("cursor", 0),
+        )
+
+    def _tool_get_skill(self, args: dict) -> dict:
+        return self.service.get_skill(
+            skill_id=args.get("skill_id", ""),
+            source_path=args.get("source_path", ""),
+        )
+
+    def _tool_list_memory_summaries(self, args: dict) -> dict:
+        return self.service.list_memory_summaries(
+            project=args.get("project", ""),
+            category=args.get("category", ""),
+            source=args.get("source", ""),
+            limit=args.get("limit", 20),
+            cursor=args.get("cursor", 0),
+        )
+
+    def _tool_get_memory_summary(self, args: dict) -> dict:
+        return self.service.get_memory_summary(memory_id=args.get("memory_id", ""))
+
+    def _tool_get_repository_file(self, args: dict) -> dict:
+        return self.service.get_repository_file(
+            source_path=args.get("source_path", ""),
+            max_chars=args.get("max_chars", 2000),
+        )
+
+    def _tool_get_validation_status(self, args: dict) -> dict:
+        return self.service.get_validation_status()
+
+    def _tool_list_generated_artifacts(self, args: dict) -> dict:
+        return self.service.list_generated_artifacts()
+
+    def _tool_get_dashboard_status(self, args: dict) -> dict:
+        return self.service.get_dashboard_status()
+
+    # ── Resource Handlers ──
+
+    def _resource_handlers(self) -> dict:
+        return {
+            "ai-os://status": self._res_status,
+            "ai-os://architecture": self._res_architecture,
+            "ai-os://repository-map": self._res_repository_map,
+            "ai-os://skills": self._res_skills,
+            "ai-os://memory-summary": self._res_memory_summary,
+            "ai-os://knowledge-graph": self._res_knowledge_graph,
+            "ai-os://discovery": self._res_discovery,
+            "ai-os://dashboard": self._res_dashboard,
+            "ai-os://validation": self._res_validation,
+        }
+
+    def _read_generated_md(self, name: str) -> tuple[str, str]:
+        path = self.root / "generated" / name
+        if not path.is_file():
+            return f"# {name}\n\nNot available.\n", "text/markdown"
+        return path.read_text(encoding="utf-8", errors="replace")[:8000], "text/markdown"
+
+    def _res_status(self):
+        import json
+        return json.dumps(self.service.get_repository_status(), indent=2), "application/json"
+
+    def _res_architecture(self):
+        path = self.root / "ARCHITECTURE.md"
+        if not path.is_file():
+            return "# Architecture\n\nNot available.\n", "text/markdown"
+        return path.read_text(encoding="utf-8", errors="replace")[:8000], "text/markdown"
+
+    def _res_repository_map(self):
+        return self._read_generated_md("repository-map.md")
+
+    def _res_skills(self):
+        return self._read_generated_md("skills.md")
+
+    def _res_memory_summary(self):
+        return self._read_generated_md("memory-index.md")
+
+    def _res_knowledge_graph(self):
+        return self._read_generated_md("knowledge-graph.md")
+
+    def _res_discovery(self):
+        return self._read_generated_md("discovery-index.md")
+
+    def _res_dashboard(self):
+        import json
+        return json.dumps(self.service.get_dashboard_status(), indent=2), "application/json"
+
+    def _res_validation(self):
+        import json
+        return json.dumps(self.service.get_validation_status(), indent=2), "application/json"

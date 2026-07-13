@@ -252,6 +252,7 @@
 - `knowledge/architecture/phase-3-knowledge-graph.md`
 - `knowledge/architecture/phase-4-semantic-discovery.md`
 - `knowledge/architecture/phase-5-interactive-dashboard.md`
+- `knowledge/architecture/phase-6-mcp-integration.md`
 - `knowledge/best-practices/README.md`
 - `knowledge/documentation/README.md`
 - `knowledge/future-ideas/README.md`
@@ -283,6 +284,12 @@
 ## Scripts
 
 - `scripts/README.md`
+- `scripts/ai_os_service/__init__.py`
+- `scripts/ai_os_service/errors.py`
+- `scripts/ai_os_service/pagination.py`
+- `scripts/ai_os_service/permissions.py`
+- `scripts/ai_os_service/service.py`
+- `scripts/ai_os_service/utils.py`
 - `scripts/create-project.py`
 - `scripts/dashboard-build.py`
 - `scripts/dashboard-check.py`
@@ -313,6 +320,12 @@
 - `scripts/knowledge_graph/utils.py`
 - `scripts/knowledge_graph/validate.py`
 - `scripts/list-skills.py`
+- `scripts/mcp-server.py`
+- `scripts/mcp-smoke-test.py`
+- `scripts/mcp_server/__init__.py`
+- `scripts/mcp_server/adapter.py`
+- `scripts/mcp_server/schemas.py`
+- `scripts/mcp_server/server.py`
 - `scripts/memory-add.py`
 - `scripts/memory-archive.py`
 - `scripts/memory-list.py`

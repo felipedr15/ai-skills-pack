@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "ai-os": {
+      "command": "<PYTHON_EXECUTABLE>",
+      "args": ["<REPOSITORY_ROOT>/scripts/mcp-server.py"],
+      "disabled": false
+    }
+  }
+}

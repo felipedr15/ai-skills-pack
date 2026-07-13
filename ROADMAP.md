@@ -23,6 +23,10 @@ Local semantic discovery and graph-query engine combining the knowledge graph, s
 
 Local-first, offline-capable web dashboard for exploring repository state. Provides Overview, Skills, Memory, Knowledge Graph (list + SVG visualization), Discovery (search with explain), and Repository views. Uses Python standard-library HTTP server with no external dependencies. Includes graph visualization with BFS neighbor expansion, type/relationship filters, and performance limits.
 
+## Phase 6 — MCP Integration (Implemented)
+
+Protocol-neutral service layer and MCP-compatible server exposing 15 tools and 9 resources over stdio transport. Provides semantic search, graph traversal, skill/memory lookup, and safe file access with repository-root confinement, path traversal rejection, secret-file blocking, bounded excerpts, and read-only default mode. No external dependencies required.
+
 ## Version 1.1 — Workflow Improvements (Proposed)
 Improved bootstrap, deeper validation, more examples, and expanded Power Apps, Power Automate, and web deployment guidance.
 
