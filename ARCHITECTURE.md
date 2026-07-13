@@ -29,6 +29,14 @@ scripts/ ---------> validation/bootstrap
 references/ ------> tool-specific guidance
 ```
 
+## Phase 1 Automation
+
+`SKILL.md` front matter is authoritative. `generate-skill-registry.py` validates it and derives `generated/skills.json` and `generated/skills.md`. `index-repository.py` derives a security-conscious repository index and map from allowed source categories. Generated files are never sources of truth.
+
+`validate-all.py` is the unified read-only validation entry point. It checks existing repository rules, generated-file freshness, JSON, metadata, links, identifiers, dependencies, secret patterns, required templates, and unit tests. `create-project.py` copies a selected starter, safely replaces project placeholders, emits `project.yaml`, and optionally initializes Git without installing dependencies or committing.
+
+Phase 2 automation remains proposed; no advanced orchestration, publishing, deployment, or release automation is implemented.
+
 ## Models
 Skills are versioned Markdown instructions with metadata and stable IDs. Agents define bounded responsibilities and handoffs. Prompts are reusable entry points. Specifications express intent and traceability. Project memory separates durable decisions from temporary session context.
 
@@ -39,7 +47,7 @@ Standard-library Python and PowerShell check structure, metadata, links, formatt
 Tools consume only the files made available through their configuration. Requests flow into selected prompts, roles, skills, specifications, implementation evidence, and human decisions. No universal automatic ingestion is assumed.
 
 ## Extension Points
-Add skills, agents, prompts, starters, standards, references, validators, and optional integrations through governance and registry updates.
+Add skills, agents, prompts, starters, standards, references, validators, and optional integrations through governance and source metadata updates, then regenerate derived artifacts.
 
 ## Non-Goals
 AI OS is not an operating system, autonomous deployment service, credential store, universal agent runtime, or substitute for product-specific controls.

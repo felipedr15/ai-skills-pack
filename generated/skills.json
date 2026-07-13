@@ -1,0 +1,446 @@
+{
+  "schemaVersion": "1.0.0",
+  "skills": [
+    {
+      "id": "analytical",
+      "name": "Analytical",
+      "version": "1.0.0",
+      "description": "Reusable guidance for analytical work.",
+      "triggers": [
+        "analytical",
+        "analytical"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/personal/analytical/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "browser",
+      "name": "Browser",
+      "version": "1.0.0",
+      "description": "Reusable guidance for browser work.",
+      "triggers": [
+        "browser",
+        "browser"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/design/browser/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "build",
+      "name": "Build",
+      "version": "1.0.0",
+      "description": "Combined guidance for building, testing, optimizing, and deploying applications.",
+      "triggers": [
+        "build",
+        "build skill"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/build/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "clear-concise-writing",
+      "name": "Clear Concise Writing",
+      "version": "1.0.0",
+      "description": "Reusable guidance for clear concise writing work.",
+      "triggers": [
+        "clear-concise-writing",
+        "clear concise writing"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/personal/clear-concise-writing/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "communication-skill",
+      "name": "Communication Skill",
+      "version": "1.0.0",
+      "description": "Human-centered guidance for clear, credible, and useful communication.",
+      "triggers": [
+        "communication-skill",
+        "communication skill"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/communication-skill/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "creator",
+      "name": "Creator",
+      "version": "1.0.0",
+      "description": "Reusable guidance for creator work.",
+      "triggers": [
+        "creator",
+        "creator"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/build/creator/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "version": "1.0.0",
+      "description": "Reusable guidance for frontend work.",
+      "triggers": [
+        "frontend",
+        "frontend"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/build/frontend/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "performance-optimization",
+      "name": "Performance Optimization",
+      "version": "1.0.0",
+      "description": "Reusable guidance for performance optimization work.",
+      "triggers": [
+        "performance-optimization",
+        "performance optimization"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/build/performance-optimization/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "problem-solving",
+      "name": "Problem Solving",
+      "version": "1.0.0",
+      "description": "Reusable guidance for problem solving work.",
+      "triggers": [
+        "problem-solving",
+        "problem solving"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/personal/problem-solving/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "version": "1.0.0",
+      "description": "Combined guidance for finding, comparing, summarizing, and extracting information.",
+      "triggers": [
+        "research",
+        "research skill"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/research/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "simplify",
+      "name": "Simplify",
+      "version": "1.0.0",
+      "description": "Reusable guidance for simplify work.",
+      "triggers": [
+        "simplify",
+        "simplify"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/personal/simplify/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "superpower",
+      "name": "Superpower",
+      "version": "1.0.0",
+      "description": "Reusable guidance for superpower work.",
+      "triggers": [
+        "superpower",
+        "superpower"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/system/superpower/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "system",
+      "name": "System",
+      "version": "1.0.0",
+      "description": "Combined guidance for skill orchestration, platform adaptation, and agent workflows.",
+      "triggers": [
+        "system",
+        "system skill"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/system/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "testing",
+      "name": "Testing",
+      "version": "1.0.0",
+      "description": "Reusable guidance for testing work.",
+      "triggers": [
+        "testing",
+        "testing"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/system/testing/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "thinking",
+      "name": "Thinking",
+      "version": "1.0.0",
+      "description": "Combined guidance for problem solving, simplification, and concise explanation.",
+      "triggers": [
+        "thinking",
+        "thinking skill"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/thinking/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "name": "Ui Ux Pro Max",
+      "version": "1.0.0",
+      "description": "Reusable guidance for ui ux pro max work.",
+      "triggers": [
+        "ui-ux-pro-max",
+        "ui ux pro max"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/design/ui-ux-pro-max/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "using-superpowers",
+      "name": "using-superpowers",
+      "version": "1.0.0",
+      "description": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
+      "triggers": [
+        "using-superpowers",
+        "using-superpowers"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/system/using-superpowers/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "vercel-agent",
+      "name": "Vercel Agent",
+      "version": "1.0.0",
+      "description": "Reusable guidance for vercel agent work.",
+      "triggers": [
+        "vercel-agent",
+        "vercel agent"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/build/vercel-agent/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "vercel-react",
+      "name": "Vercel React",
+      "version": "1.0.0",
+      "description": "Reusable guidance for vercel react work.",
+      "triggers": [
+        "vercel-react",
+        "vercel react"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/build/vercel-react/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "web-design-guidelines",
+      "name": "web-design-guidelines",
+      "version": "1.0.0",
+      "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+      "triggers": [
+        "web-design-guidelines",
+        "web-design-guidelines"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/build/web-design-guidelines/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    },
+    {
+      "id": "writing",
+      "name": "Writing",
+      "version": "1.0.0",
+      "description": "Reusable guidance for writing work.",
+      "triggers": [
+        "writing",
+        "writing"
+      ],
+      "inputs": [
+        "task context"
+      ],
+      "outputs": [
+        "structured result"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/personal/writing/SKILL.md",
+      "replaces": null,
+      "deprecatedBy": null
+    }
+  ]
+}

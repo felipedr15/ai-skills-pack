@@ -33,7 +33,7 @@ Skills, agents, prompts, specifications, project memory, project starters, stand
 | Testing | `testing` | [.agent/skills/system/testing/SKILL.md](.agent/skills/system/testing/SKILL.md) | 1.0.0 | stable | Reusable guidance for testing work. |
 | using-superpowers | `using-superpowers` | [.agent/skills/system/using-superpowers/SKILL.md](.agent/skills/system/using-superpowers/SKILL.md) | 1.0.0 | stable | Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions |
 
-The machine-readable source of truth is [skills.json](skills.json).
+Skill `SKILL.md` front matter is the source of truth. Files under [generated/](generated/README.md), including the generated registry and repository index, are deterministic outputs and must never be edited as sources of truth. The legacy [skills.json](skills.json) remains available for compatibility during Phase 1.
 
 ## Standard Workflow
 
@@ -74,20 +74,34 @@ The [project-memory template](templates/project-memory/README.md) provides `READ
 ## Validation
 
 ```text
-python scripts/validate-repo.py
+python scripts/generate-skill-registry.py --check
+python scripts/index-repository.py --check
+python scripts/validate-all.py
 python scripts/list-skills.py
-powershell -ExecutionPolicy Bypass -File scripts/validate-markdown.ps1
-pwsh -File scripts/validate-markdown.ps1
 ```
+
+Regenerate derived files after changing skills or indexed content:
+
+```text
+python scripts/generate-skill-registry.py
+python scripts/index-repository.py
+```
+
+The optional `--check` mode performs no writes and exits non-zero when generated files are missing or stale.
 
 ## Project Creation
 
 ```text
+python scripts/create-project.py --list-types
 python scripts/create-project.py --name "My Project" --type web-app --destination ../my-project
 python scripts/create-project.py --name "Ops Automation" --type automation --destination ../ops-automation
 ```
 
-The command refuses to overwrite a non-empty destination unless `--force` is explicit.
+The command copies a starter, replaces safe placeholders, creates `project.yaml`, and refuses to overwrite a non-empty destination unless `--force` is explicit. Add `--init-git` to initialize an empty Git repository; the command never installs dependencies or creates commits.
+
+## Automation Status
+
+Phase 1 core automation implements registry generation, repository indexing, unified validation, and project bootstrap. Phase 2 remains proposed and is not implemented.
 
 ## Security
 

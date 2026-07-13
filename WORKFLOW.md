@@ -15,3 +15,13 @@ Request → planner skill selection → requirements → design → tasks → ex
 9. **Human authority:** a person decides whether to commit and deploy.
 
 Research may inform any pre-approval stage. Deployment requires a plan, explicit approval, smoke tests, monitoring, and rollback. AI OS documents this process; it does not automatically enforce every gate in every tool.
+
+## Phase 1 Automation Workflow
+
+1. Edit source files, including `SKILL.md` metadata when skills change.
+2. Run `python scripts/generate-skill-registry.py` and `python scripts/index-repository.py` to refresh derived artifacts.
+3. Run both commands with `--check` to verify deterministic freshness without writing.
+4. Run `python scripts/validate-all.py` for the complete validation summary and unit tests.
+5. Review the Git diff and obtain human approval before any commit.
+
+For a new project, list starters with `python scripts/create-project.py --list-types`, then provide `--name`, `--type`, and `--destination`. Use `--force` only after reviewing an existing destination. Phase 2 remains proposed and is not yet implemented.

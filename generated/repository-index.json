@@ -1,0 +1,1534 @@
+{
+  "schemaVersion": "1.0.0",
+  "counts": {
+    "skills": 33,
+    "agents": 11,
+    "prompts": 12,
+    "project-starters": 129,
+    "templates": 24,
+    "standards": 9,
+    "knowledge": 16,
+    "references": 11,
+    "scripts": 8
+  },
+  "files": [
+    {
+      "path": "agents/README.md",
+      "category": "agents",
+      "size": 153,
+      "sha256": "492cd03fd9ef3b13259ffdfdfada4b282372ca140c0d90b00e72eb4c3486bbf3"
+    },
+    {
+      "path": "agents/architect.md",
+      "category": "agents",
+      "size": 1045,
+      "sha256": "12e3d427e7765d2127d54f1f6f98f140c5a5b46ec979a367e573b43657b39838"
+    },
+    {
+      "path": "agents/builder.md",
+      "category": "agents",
+      "size": 1028,
+      "sha256": "8dac8c92e476ddfd524f0ee35f9e492df51d1568fd2de1b457b47d2d70744d52"
+    },
+    {
+      "path": "agents/deployment-manager.md",
+      "category": "agents",
+      "size": 1051,
+      "sha256": "53bc1c3ab1f4d8282099df9843fccab3793f9c0c79dd522b5db4dafc018be120"
+    },
+    {
+      "path": "agents/documentation-writer.md",
+      "category": "agents",
+      "size": 1060,
+      "sha256": "e1c17453a3cbc31a0a2fa688f188cb2031e2a62a9cac1e5f021f0335234cb159"
+    },
+    {
+      "path": "agents/planner.md",
+      "category": "agents",
+      "size": 1035,
+      "sha256": "9c22645f506c88e6efcec7a7763ee29b0c051dd6ddb52d421703c6d7327ca799"
+    },
+    {
+      "path": "agents/project-manager.md",
+      "category": "agents",
+      "size": 1050,
+      "sha256": "e97325bad2ec37c99f59bbc72ac0bae0ae15f5b5be164a70d85aba50faca7703"
+    },
+    {
+      "path": "agents/qa.md",
+      "category": "agents",
+      "size": 1026,
+      "sha256": "e4b68761cbbeea8d187f60f9165c31eb444ad1eae0ba4e0e9f9c1866f450cb64"
+    },
+    {
+      "path": "agents/researcher.md",
+      "category": "agents",
+      "size": 1043,
+      "sha256": "bc2a6f4b3a109c2e523dfbd51c360b562d42f76a706c879c9a28c0e68daf1cc8"
+    },
+    {
+      "path": "agents/reviewer.md",
+      "category": "agents",
+      "size": 1025,
+      "sha256": "9facd03bb829c5982c5b19fda07e9c05f59471110edd9624f993474cbba2a637"
+    },
+    {
+      "path": "agents/security-reviewer.md",
+      "category": "agents",
+      "size": 1060,
+      "sha256": "968cfedd7034d5fdf0b98b12777ea5c64869e84c074f1d6be08a6a44f7be1947"
+    },
+    {
+      "path": "knowledge/README.md",
+      "category": "knowledge",
+      "size": 748,
+      "sha256": "0a5bcf26754610d41a1d4317ddc3196cc4a74af6d01182e0a71711080986f614"
+    },
+    {
+      "path": "knowledge/ai-workflows/README.md",
+      "category": "knowledge",
+      "size": 485,
+      "sha256": "439ef243632c77c3887b2f887b3a49d859ad9818dc1a438869824a3c74cfdb40"
+    },
+    {
+      "path": "knowledge/architecture/README.md",
+      "category": "knowledge",
+      "size": 485,
+      "sha256": "662a09fceb251001c3bb2c3cc72dd5dbcd41f0d3857dc2c374af3e6aa8fcfc1b"
+    },
+    {
+      "path": "knowledge/best-practices/README.md",
+      "category": "knowledge",
+      "size": 489,
+      "sha256": "7a6a2f0f9129a9a9f57469dae4896734510486b10d5e50a0187104e5a40661e4"
+    },
+    {
+      "path": "knowledge/documentation/README.md",
+      "category": "knowledge",
+      "size": 487,
+      "sha256": "f4756296b6937a93b6e3be3cc9134fd40e7ed9c454c0d97f9f1cb91bb19b788e"
+    },
+    {
+      "path": "knowledge/future-ideas/README.md",
+      "category": "knowledge",
+      "size": 485,
+      "sha256": "f0719eab2e9ac4c74a843f42e3e38bb2cb467914c5dc87d6a9baebba2489513c"
+    },
+    {
+      "path": "knowledge/git/README.md",
+      "category": "knowledge",
+      "size": 467,
+      "sha256": "9ae4a21b36235a533df021d0143ff3f225e808046b288ff854f1407337526a97"
+    },
+    {
+      "path": "knowledge/github/README.md",
+      "category": "knowledge",
+      "size": 473,
+      "sha256": "b902731dd4efd479deba447c7f381130d29d2e1613b38d877f6085463f3a25d4"
+    },
+    {
+      "path": "knowledge/lessons-learned/README.md",
+      "category": "knowledge",
+      "size": 491,
+      "sha256": "9d322e482b1378c58b39dbeb9647082cfe3b94c6bc2d67eabd4326307490ad9e"
+    },
+    {
+      "path": "knowledge/power-apps/README.md",
+      "category": "knowledge",
+      "size": 481,
+      "sha256": "96f6d15e27fa79d8e70b0b335291d6d28fe0bf256e51f7b31370432371c0b19e"
+    },
+    {
+      "path": "knowledge/power-automate/README.md",
+      "category": "knowledge",
+      "size": 489,
+      "sha256": "8779e2a5a4dce46c072880e543012e703981a40c3395c8aba0b2130902639021"
+    },
+    {
+      "path": "knowledge/prompt-engineering/README.md",
+      "category": "knowledge",
+      "size": 497,
+      "sha256": "1cf8e1267ce1c8b8aefcad565baac1489ec39ac20c95af0fb1ca294c97c795fa"
+    },
+    {
+      "path": "knowledge/research-notes/README.md",
+      "category": "knowledge",
+      "size": 489,
+      "sha256": "6e69009987e50cb9a9e255bfe2643e395583d676bf52b76d860966bfd075f8ba"
+    },
+    {
+      "path": "knowledge/security/README.md",
+      "category": "knowledge",
+      "size": 477,
+      "sha256": "79b894ab2c9b8cc6dcb065c2f07e5332f9fbd762c8c0e0ae970b1e4233f9b27d"
+    },
+    {
+      "path": "knowledge/sharepoint/README.md",
+      "category": "knowledge",
+      "size": 481,
+      "sha256": "4da035bb74fa91385c30df137cf891bf30fe09e1b20e8205ecf913d3c3098fe7"
+    },
+    {
+      "path": "knowledge/vscode/README.md",
+      "category": "knowledge",
+      "size": 473,
+      "sha256": "74338329c804cc0f3b37f34f24495204c4bc4489237909282a88e401d6ae978f"
+    },
+    {
+      "path": "templates/project-starters/README.md",
+      "category": "project-starters",
+      "size": 454,
+      "sha256": "cbb3021a2b797340e3422693965fccdaf3706764f4c2c1c74b19027f75233b16"
+    },
+    {
+      "path": "templates/project-starters/automation/AGENTS.md",
+      "category": "project-starters",
+      "size": 180,
+      "sha256": "91582ea737034f58198cb2e9f16b812e36221f2ffb599d87c782b806ba409019"
+    },
+    {
+      "path": "templates/project-starters/automation/ARCHITECTURE.md",
+      "category": "project-starters",
+      "size": 126,
+      "sha256": "8fcfbdaee830bebfef655a98ca65bb73fe3925593952c191b91a5c672202109a"
+    },
+    {
+      "path": "templates/project-starters/automation/CHANGELOG.md",
+      "category": "project-starters",
+      "size": 79,
+      "sha256": "2cb78e10dfa769bbd43483c74a1f33465c3cc5ebd7ed761a45997e641a8dfd1a"
+    },
+    {
+      "path": "templates/project-starters/automation/CLAUDE.md",
+      "category": "project-starters",
+      "size": 150,
+      "sha256": "ead53f954a6fe161fade014d650fe41559b8af7627e5bd9af83c8412b1c11004"
+    },
+    {
+      "path": "templates/project-starters/automation/DESIGN.md",
+      "category": "project-starters",
+      "size": 107,
+      "sha256": "878ad27c73b3ca776bf86ca57556ec7a248a4a76b342731c3460fad1c97e8ca5"
+    },
+    {
+      "path": "templates/project-starters/automation/HANDOFF.md",
+      "category": "project-starters",
+      "size": 542,
+      "sha256": "de1687b0d3a01adbbe8a119bc69d4a8eb42ea0f6f407aca452e0e6ad863d2770"
+    },
+    {
+      "path": "templates/project-starters/automation/KNOWN_ISSUES.md",
+      "category": "project-starters",
+      "size": 88,
+      "sha256": "bc958331f04b29ae8d9eed8ba6f5474727fd0bfa4699b79ac6cb128f416766cd"
+    },
+    {
+      "path": "templates/project-starters/automation/README.md",
+      "category": "project-starters",
+      "size": 335,
+      "sha256": "7ea531838fff0ececd8fe02d175ec4b6cacc0b485d83a8a9743539119611a2bb"
+    },
+    {
+      "path": "templates/project-starters/automation/RELEASE_NOTES.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "311a9987b0523f1de805b2a85d8398cfed17bc0e73a360256038862de9cbb027"
+    },
+    {
+      "path": "templates/project-starters/automation/REQUIREMENTS.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "49da02fce76ecdfbd7c733f2ef19edb974ccab6e64fb5aea954e2d8990638683"
+    },
+    {
+      "path": "templates/project-starters/automation/RETROSPECTIVE.md",
+      "category": "project-starters",
+      "size": 163,
+      "sha256": "b20559f317417d1566205b4b6aeeb8eef01977e6db42560159a5ce146370fe47"
+    },
+    {
+      "path": "templates/project-starters/automation/ROADMAP.md",
+      "category": "project-starters",
+      "size": 56,
+      "sha256": "c7f7778399dee4843e54459edcb3ec880ec75c0d00780a8fbb4561d5aa1eb266"
+    },
+    {
+      "path": "templates/project-starters/automation/SESSION.md",
+      "category": "project-starters",
+      "size": 206,
+      "sha256": "aa3593e46cc3812c1e79bf73a365468f8964911e0ccc7714e738162c93032954"
+    },
+    {
+      "path": "templates/project-starters/automation/TASKS.md",
+      "category": "project-starters",
+      "size": 134,
+      "sha256": "232ffc608a4f3dd4239c59f787e6d616336ee55a30ca20495f51691346fc028d"
+    },
+    {
+      "path": "templates/project-starters/automation/TESTING.md",
+      "category": "project-starters",
+      "size": 117,
+      "sha256": "ad07e4345b8810b27c5c8ac897c980016e125e23e7b4929ed156eb14e148ad18"
+    },
+    {
+      "path": "templates/project-starters/automation/decisions.md",
+      "category": "project-starters",
+      "size": 169,
+      "sha256": "527d13efd504e8a45b4153387dc251aed4aec38cae8ae062d7542af6350ac224"
+    },
+    {
+      "path": "templates/project-starters/documentation/AGENTS.md",
+      "category": "project-starters",
+      "size": 180,
+      "sha256": "91582ea737034f58198cb2e9f16b812e36221f2ffb599d87c782b806ba409019"
+    },
+    {
+      "path": "templates/project-starters/documentation/ARCHITECTURE.md",
+      "category": "project-starters",
+      "size": 126,
+      "sha256": "8fcfbdaee830bebfef655a98ca65bb73fe3925593952c191b91a5c672202109a"
+    },
+    {
+      "path": "templates/project-starters/documentation/CHANGELOG.md",
+      "category": "project-starters",
+      "size": 79,
+      "sha256": "2cb78e10dfa769bbd43483c74a1f33465c3cc5ebd7ed761a45997e641a8dfd1a"
+    },
+    {
+      "path": "templates/project-starters/documentation/CLAUDE.md",
+      "category": "project-starters",
+      "size": 150,
+      "sha256": "ead53f954a6fe161fade014d650fe41559b8af7627e5bd9af83c8412b1c11004"
+    },
+    {
+      "path": "templates/project-starters/documentation/DESIGN.md",
+      "category": "project-starters",
+      "size": 107,
+      "sha256": "878ad27c73b3ca776bf86ca57556ec7a248a4a76b342731c3460fad1c97e8ca5"
+    },
+    {
+      "path": "templates/project-starters/documentation/HANDOFF.md",
+      "category": "project-starters",
+      "size": 542,
+      "sha256": "de1687b0d3a01adbbe8a119bc69d4a8eb42ea0f6f407aca452e0e6ad863d2770"
+    },
+    {
+      "path": "templates/project-starters/documentation/KNOWN_ISSUES.md",
+      "category": "project-starters",
+      "size": 88,
+      "sha256": "bc958331f04b29ae8d9eed8ba6f5474727fd0bfa4699b79ac6cb128f416766cd"
+    },
+    {
+      "path": "templates/project-starters/documentation/README.md",
+      "category": "project-starters",
+      "size": 312,
+      "sha256": "ca82848abae84ac99543c934b753b11e52be8b106ca7bbb978c69caa71e2700c"
+    },
+    {
+      "path": "templates/project-starters/documentation/RELEASE_NOTES.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "311a9987b0523f1de805b2a85d8398cfed17bc0e73a360256038862de9cbb027"
+    },
+    {
+      "path": "templates/project-starters/documentation/REQUIREMENTS.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "49da02fce76ecdfbd7c733f2ef19edb974ccab6e64fb5aea954e2d8990638683"
+    },
+    {
+      "path": "templates/project-starters/documentation/RETROSPECTIVE.md",
+      "category": "project-starters",
+      "size": 163,
+      "sha256": "b20559f317417d1566205b4b6aeeb8eef01977e6db42560159a5ce146370fe47"
+    },
+    {
+      "path": "templates/project-starters/documentation/ROADMAP.md",
+      "category": "project-starters",
+      "size": 56,
+      "sha256": "c7f7778399dee4843e54459edcb3ec880ec75c0d00780a8fbb4561d5aa1eb266"
+    },
+    {
+      "path": "templates/project-starters/documentation/SESSION.md",
+      "category": "project-starters",
+      "size": 206,
+      "sha256": "aa3593e46cc3812c1e79bf73a365468f8964911e0ccc7714e738162c93032954"
+    },
+    {
+      "path": "templates/project-starters/documentation/TASKS.md",
+      "category": "project-starters",
+      "size": 134,
+      "sha256": "232ffc608a4f3dd4239c59f787e6d616336ee55a30ca20495f51691346fc028d"
+    },
+    {
+      "path": "templates/project-starters/documentation/TESTING.md",
+      "category": "project-starters",
+      "size": 117,
+      "sha256": "ad07e4345b8810b27c5c8ac897c980016e125e23e7b4929ed156eb14e148ad18"
+    },
+    {
+      "path": "templates/project-starters/documentation/decisions.md",
+      "category": "project-starters",
+      "size": 169,
+      "sha256": "527d13efd504e8a45b4153387dc251aed4aec38cae8ae062d7542af6350ac224"
+    },
+    {
+      "path": "templates/project-starters/generic-project/AGENTS.md",
+      "category": "project-starters",
+      "size": 180,
+      "sha256": "91582ea737034f58198cb2e9f16b812e36221f2ffb599d87c782b806ba409019"
+    },
+    {
+      "path": "templates/project-starters/generic-project/ARCHITECTURE.md",
+      "category": "project-starters",
+      "size": 126,
+      "sha256": "8fcfbdaee830bebfef655a98ca65bb73fe3925593952c191b91a5c672202109a"
+    },
+    {
+      "path": "templates/project-starters/generic-project/CHANGELOG.md",
+      "category": "project-starters",
+      "size": 79,
+      "sha256": "2cb78e10dfa769bbd43483c74a1f33465c3cc5ebd7ed761a45997e641a8dfd1a"
+    },
+    {
+      "path": "templates/project-starters/generic-project/CLAUDE.md",
+      "category": "project-starters",
+      "size": 150,
+      "sha256": "ead53f954a6fe161fade014d650fe41559b8af7627e5bd9af83c8412b1c11004"
+    },
+    {
+      "path": "templates/project-starters/generic-project/DESIGN.md",
+      "category": "project-starters",
+      "size": 107,
+      "sha256": "878ad27c73b3ca776bf86ca57556ec7a248a4a76b342731c3460fad1c97e8ca5"
+    },
+    {
+      "path": "templates/project-starters/generic-project/HANDOFF.md",
+      "category": "project-starters",
+      "size": 542,
+      "sha256": "de1687b0d3a01adbbe8a119bc69d4a8eb42ea0f6f407aca452e0e6ad863d2770"
+    },
+    {
+      "path": "templates/project-starters/generic-project/KNOWN_ISSUES.md",
+      "category": "project-starters",
+      "size": 88,
+      "sha256": "bc958331f04b29ae8d9eed8ba6f5474727fd0bfa4699b79ac6cb128f416766cd"
+    },
+    {
+      "path": "templates/project-starters/generic-project/README.md",
+      "category": "project-starters",
+      "size": 293,
+      "sha256": "f6a32654dc4b5800943159b25423c4bb868e00ffb6242c7c5a7f26da4e855442"
+    },
+    {
+      "path": "templates/project-starters/generic-project/RELEASE_NOTES.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "311a9987b0523f1de805b2a85d8398cfed17bc0e73a360256038862de9cbb027"
+    },
+    {
+      "path": "templates/project-starters/generic-project/REQUIREMENTS.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "49da02fce76ecdfbd7c733f2ef19edb974ccab6e64fb5aea954e2d8990638683"
+    },
+    {
+      "path": "templates/project-starters/generic-project/RETROSPECTIVE.md",
+      "category": "project-starters",
+      "size": 163,
+      "sha256": "b20559f317417d1566205b4b6aeeb8eef01977e6db42560159a5ce146370fe47"
+    },
+    {
+      "path": "templates/project-starters/generic-project/ROADMAP.md",
+      "category": "project-starters",
+      "size": 56,
+      "sha256": "c7f7778399dee4843e54459edcb3ec880ec75c0d00780a8fbb4561d5aa1eb266"
+    },
+    {
+      "path": "templates/project-starters/generic-project/SESSION.md",
+      "category": "project-starters",
+      "size": 206,
+      "sha256": "aa3593e46cc3812c1e79bf73a365468f8964911e0ccc7714e738162c93032954"
+    },
+    {
+      "path": "templates/project-starters/generic-project/TASKS.md",
+      "category": "project-starters",
+      "size": 134,
+      "sha256": "232ffc608a4f3dd4239c59f787e6d616336ee55a30ca20495f51691346fc028d"
+    },
+    {
+      "path": "templates/project-starters/generic-project/TESTING.md",
+      "category": "project-starters",
+      "size": 117,
+      "sha256": "ad07e4345b8810b27c5c8ac897c980016e125e23e7b4929ed156eb14e148ad18"
+    },
+    {
+      "path": "templates/project-starters/generic-project/decisions.md",
+      "category": "project-starters",
+      "size": 169,
+      "sha256": "527d13efd504e8a45b4153387dc251aed4aec38cae8ae062d7542af6350ac224"
+    },
+    {
+      "path": "templates/project-starters/internal-it/AGENTS.md",
+      "category": "project-starters",
+      "size": 180,
+      "sha256": "91582ea737034f58198cb2e9f16b812e36221f2ffb599d87c782b806ba409019"
+    },
+    {
+      "path": "templates/project-starters/internal-it/ARCHITECTURE.md",
+      "category": "project-starters",
+      "size": 126,
+      "sha256": "8fcfbdaee830bebfef655a98ca65bb73fe3925593952c191b91a5c672202109a"
+    },
+    {
+      "path": "templates/project-starters/internal-it/CHANGELOG.md",
+      "category": "project-starters",
+      "size": 79,
+      "sha256": "2cb78e10dfa769bbd43483c74a1f33465c3cc5ebd7ed761a45997e641a8dfd1a"
+    },
+    {
+      "path": "templates/project-starters/internal-it/CLAUDE.md",
+      "category": "project-starters",
+      "size": 150,
+      "sha256": "ead53f954a6fe161fade014d650fe41559b8af7627e5bd9af83c8412b1c11004"
+    },
+    {
+      "path": "templates/project-starters/internal-it/DESIGN.md",
+      "category": "project-starters",
+      "size": 107,
+      "sha256": "878ad27c73b3ca776bf86ca57556ec7a248a4a76b342731c3460fad1c97e8ca5"
+    },
+    {
+      "path": "templates/project-starters/internal-it/HANDOFF.md",
+      "category": "project-starters",
+      "size": 542,
+      "sha256": "de1687b0d3a01adbbe8a119bc69d4a8eb42ea0f6f407aca452e0e6ad863d2770"
+    },
+    {
+      "path": "templates/project-starters/internal-it/KNOWN_ISSUES.md",
+      "category": "project-starters",
+      "size": 88,
+      "sha256": "bc958331f04b29ae8d9eed8ba6f5474727fd0bfa4699b79ac6cb128f416766cd"
+    },
+    {
+      "path": "templates/project-starters/internal-it/README.md",
+      "category": "project-starters",
+      "size": 308,
+      "sha256": "22dc0fa92b272d1d3ff62df33a7f5444c315b7ad90c9c48b0fad8c9733fc2ab1"
+    },
+    {
+      "path": "templates/project-starters/internal-it/RELEASE_NOTES.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "311a9987b0523f1de805b2a85d8398cfed17bc0e73a360256038862de9cbb027"
+    },
+    {
+      "path": "templates/project-starters/internal-it/REQUIREMENTS.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "49da02fce76ecdfbd7c733f2ef19edb974ccab6e64fb5aea954e2d8990638683"
+    },
+    {
+      "path": "templates/project-starters/internal-it/RETROSPECTIVE.md",
+      "category": "project-starters",
+      "size": 163,
+      "sha256": "b20559f317417d1566205b4b6aeeb8eef01977e6db42560159a5ce146370fe47"
+    },
+    {
+      "path": "templates/project-starters/internal-it/ROADMAP.md",
+      "category": "project-starters",
+      "size": 56,
+      "sha256": "c7f7778399dee4843e54459edcb3ec880ec75c0d00780a8fbb4561d5aa1eb266"
+    },
+    {
+      "path": "templates/project-starters/internal-it/SESSION.md",
+      "category": "project-starters",
+      "size": 206,
+      "sha256": "aa3593e46cc3812c1e79bf73a365468f8964911e0ccc7714e738162c93032954"
+    },
+    {
+      "path": "templates/project-starters/internal-it/TASKS.md",
+      "category": "project-starters",
+      "size": 134,
+      "sha256": "232ffc608a4f3dd4239c59f787e6d616336ee55a30ca20495f51691346fc028d"
+    },
+    {
+      "path": "templates/project-starters/internal-it/TESTING.md",
+      "category": "project-starters",
+      "size": 117,
+      "sha256": "ad07e4345b8810b27c5c8ac897c980016e125e23e7b4929ed156eb14e148ad18"
+    },
+    {
+      "path": "templates/project-starters/internal-it/decisions.md",
+      "category": "project-starters",
+      "size": 169,
+      "sha256": "527d13efd504e8a45b4153387dc251aed4aec38cae8ae062d7542af6350ac224"
+    },
+    {
+      "path": "templates/project-starters/power-apps/AGENTS.md",
+      "category": "project-starters",
+      "size": 180,
+      "sha256": "91582ea737034f58198cb2e9f16b812e36221f2ffb599d87c782b806ba409019"
+    },
+    {
+      "path": "templates/project-starters/power-apps/ARCHITECTURE.md",
+      "category": "project-starters",
+      "size": 126,
+      "sha256": "8fcfbdaee830bebfef655a98ca65bb73fe3925593952c191b91a5c672202109a"
+    },
+    {
+      "path": "templates/project-starters/power-apps/CHANGELOG.md",
+      "category": "project-starters",
+      "size": 79,
+      "sha256": "2cb78e10dfa769bbd43483c74a1f33465c3cc5ebd7ed761a45997e641a8dfd1a"
+    },
+    {
+      "path": "templates/project-starters/power-apps/CLAUDE.md",
+      "category": "project-starters",
+      "size": 150,
+      "sha256": "ead53f954a6fe161fade014d650fe41559b8af7627e5bd9af83c8412b1c11004"
+    },
+    {
+      "path": "templates/project-starters/power-apps/DESIGN.md",
+      "category": "project-starters",
+      "size": 107,
+      "sha256": "878ad27c73b3ca776bf86ca57556ec7a248a4a76b342731c3460fad1c97e8ca5"
+    },
+    {
+      "path": "templates/project-starters/power-apps/HANDOFF.md",
+      "category": "project-starters",
+      "size": 542,
+      "sha256": "de1687b0d3a01adbbe8a119bc69d4a8eb42ea0f6f407aca452e0e6ad863d2770"
+    },
+    {
+      "path": "templates/project-starters/power-apps/KNOWN_ISSUES.md",
+      "category": "project-starters",
+      "size": 88,
+      "sha256": "bc958331f04b29ae8d9eed8ba6f5474727fd0bfa4699b79ac6cb128f416766cd"
+    },
+    {
+      "path": "templates/project-starters/power-apps/README.md",
+      "category": "project-starters",
+      "size": 332,
+      "sha256": "52ba722ed1985d072a1287231e58e68e1d466d0e165504b140696544e16bad22"
+    },
+    {
+      "path": "templates/project-starters/power-apps/RELEASE_NOTES.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "311a9987b0523f1de805b2a85d8398cfed17bc0e73a360256038862de9cbb027"
+    },
+    {
+      "path": "templates/project-starters/power-apps/REQUIREMENTS.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "49da02fce76ecdfbd7c733f2ef19edb974ccab6e64fb5aea954e2d8990638683"
+    },
+    {
+      "path": "templates/project-starters/power-apps/RETROSPECTIVE.md",
+      "category": "project-starters",
+      "size": 163,
+      "sha256": "b20559f317417d1566205b4b6aeeb8eef01977e6db42560159a5ce146370fe47"
+    },
+    {
+      "path": "templates/project-starters/power-apps/ROADMAP.md",
+      "category": "project-starters",
+      "size": 56,
+      "sha256": "c7f7778399dee4843e54459edcb3ec880ec75c0d00780a8fbb4561d5aa1eb266"
+    },
+    {
+      "path": "templates/project-starters/power-apps/SESSION.md",
+      "category": "project-starters",
+      "size": 206,
+      "sha256": "aa3593e46cc3812c1e79bf73a365468f8964911e0ccc7714e738162c93032954"
+    },
+    {
+      "path": "templates/project-starters/power-apps/TASKS.md",
+      "category": "project-starters",
+      "size": 134,
+      "sha256": "232ffc608a4f3dd4239c59f787e6d616336ee55a30ca20495f51691346fc028d"
+    },
+    {
+      "path": "templates/project-starters/power-apps/TESTING.md",
+      "category": "project-starters",
+      "size": 117,
+      "sha256": "ad07e4345b8810b27c5c8ac897c980016e125e23e7b4929ed156eb14e148ad18"
+    },
+    {
+      "path": "templates/project-starters/power-apps/decisions.md",
+      "category": "project-starters",
+      "size": 169,
+      "sha256": "527d13efd504e8a45b4153387dc251aed4aec38cae8ae062d7542af6350ac224"
+    },
+    {
+      "path": "templates/project-starters/power-automate/AGENTS.md",
+      "category": "project-starters",
+      "size": 180,
+      "sha256": "91582ea737034f58198cb2e9f16b812e36221f2ffb599d87c782b806ba409019"
+    },
+    {
+      "path": "templates/project-starters/power-automate/ARCHITECTURE.md",
+      "category": "project-starters",
+      "size": 126,
+      "sha256": "8fcfbdaee830bebfef655a98ca65bb73fe3925593952c191b91a5c672202109a"
+    },
+    {
+      "path": "templates/project-starters/power-automate/CHANGELOG.md",
+      "category": "project-starters",
+      "size": 79,
+      "sha256": "2cb78e10dfa769bbd43483c74a1f33465c3cc5ebd7ed761a45997e641a8dfd1a"
+    },
+    {
+      "path": "templates/project-starters/power-automate/CLAUDE.md",
+      "category": "project-starters",
+      "size": 150,
+      "sha256": "ead53f954a6fe161fade014d650fe41559b8af7627e5bd9af83c8412b1c11004"
+    },
+    {
+      "path": "templates/project-starters/power-automate/DESIGN.md",
+      "category": "project-starters",
+      "size": 107,
+      "sha256": "878ad27c73b3ca776bf86ca57556ec7a248a4a76b342731c3460fad1c97e8ca5"
+    },
+    {
+      "path": "templates/project-starters/power-automate/HANDOFF.md",
+      "category": "project-starters",
+      "size": 542,
+      "sha256": "de1687b0d3a01adbbe8a119bc69d4a8eb42ea0f6f407aca452e0e6ad863d2770"
+    },
+    {
+      "path": "templates/project-starters/power-automate/KNOWN_ISSUES.md",
+      "category": "project-starters",
+      "size": 88,
+      "sha256": "bc958331f04b29ae8d9eed8ba6f5474727fd0bfa4699b79ac6cb128f416766cd"
+    },
+    {
+      "path": "templates/project-starters/power-automate/README.md",
+      "category": "project-starters",
+      "size": 330,
+      "sha256": "b8f76439376c9db58688c772170a17569ca6035d5576a22fd883579ef0c48cb3"
+    },
+    {
+      "path": "templates/project-starters/power-automate/RELEASE_NOTES.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "311a9987b0523f1de805b2a85d8398cfed17bc0e73a360256038862de9cbb027"
+    },
+    {
+      "path": "templates/project-starters/power-automate/REQUIREMENTS.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "49da02fce76ecdfbd7c733f2ef19edb974ccab6e64fb5aea954e2d8990638683"
+    },
+    {
+      "path": "templates/project-starters/power-automate/RETROSPECTIVE.md",
+      "category": "project-starters",
+      "size": 163,
+      "sha256": "b20559f317417d1566205b4b6aeeb8eef01977e6db42560159a5ce146370fe47"
+    },
+    {
+      "path": "templates/project-starters/power-automate/ROADMAP.md",
+      "category": "project-starters",
+      "size": 56,
+      "sha256": "c7f7778399dee4843e54459edcb3ec880ec75c0d00780a8fbb4561d5aa1eb266"
+    },
+    {
+      "path": "templates/project-starters/power-automate/SESSION.md",
+      "category": "project-starters",
+      "size": 206,
+      "sha256": "aa3593e46cc3812c1e79bf73a365468f8964911e0ccc7714e738162c93032954"
+    },
+    {
+      "path": "templates/project-starters/power-automate/TASKS.md",
+      "category": "project-starters",
+      "size": 134,
+      "sha256": "232ffc608a4f3dd4239c59f787e6d616336ee55a30ca20495f51691346fc028d"
+    },
+    {
+      "path": "templates/project-starters/power-automate/TESTING.md",
+      "category": "project-starters",
+      "size": 117,
+      "sha256": "ad07e4345b8810b27c5c8ac897c980016e125e23e7b4929ed156eb14e148ad18"
+    },
+    {
+      "path": "templates/project-starters/power-automate/decisions.md",
+      "category": "project-starters",
+      "size": 169,
+      "sha256": "527d13efd504e8a45b4153387dc251aed4aec38cae8ae062d7542af6350ac224"
+    },
+    {
+      "path": "templates/project-starters/python/AGENTS.md",
+      "category": "project-starters",
+      "size": 180,
+      "sha256": "91582ea737034f58198cb2e9f16b812e36221f2ffb599d87c782b806ba409019"
+    },
+    {
+      "path": "templates/project-starters/python/ARCHITECTURE.md",
+      "category": "project-starters",
+      "size": 126,
+      "sha256": "8fcfbdaee830bebfef655a98ca65bb73fe3925593952c191b91a5c672202109a"
+    },
+    {
+      "path": "templates/project-starters/python/CHANGELOG.md",
+      "category": "project-starters",
+      "size": 79,
+      "sha256": "2cb78e10dfa769bbd43483c74a1f33465c3cc5ebd7ed761a45997e641a8dfd1a"
+    },
+    {
+      "path": "templates/project-starters/python/CLAUDE.md",
+      "category": "project-starters",
+      "size": 150,
+      "sha256": "ead53f954a6fe161fade014d650fe41559b8af7627e5bd9af83c8412b1c11004"
+    },
+    {
+      "path": "templates/project-starters/python/DESIGN.md",
+      "category": "project-starters",
+      "size": 107,
+      "sha256": "878ad27c73b3ca776bf86ca57556ec7a248a4a76b342731c3460fad1c97e8ca5"
+    },
+    {
+      "path": "templates/project-starters/python/HANDOFF.md",
+      "category": "project-starters",
+      "size": 542,
+      "sha256": "de1687b0d3a01adbbe8a119bc69d4a8eb42ea0f6f407aca452e0e6ad863d2770"
+    },
+    {
+      "path": "templates/project-starters/python/KNOWN_ISSUES.md",
+      "category": "project-starters",
+      "size": 88,
+      "sha256": "bc958331f04b29ae8d9eed8ba6f5474727fd0bfa4699b79ac6cb128f416766cd"
+    },
+    {
+      "path": "templates/project-starters/python/README.md",
+      "category": "project-starters",
+      "size": 362,
+      "sha256": "5c8abd677f108d03db2323bc52afc907a4a6fb90a9074d0693efc6eea6f851bd"
+    },
+    {
+      "path": "templates/project-starters/python/RELEASE_NOTES.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "311a9987b0523f1de805b2a85d8398cfed17bc0e73a360256038862de9cbb027"
+    },
+    {
+      "path": "templates/project-starters/python/REQUIREMENTS.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "49da02fce76ecdfbd7c733f2ef19edb974ccab6e64fb5aea954e2d8990638683"
+    },
+    {
+      "path": "templates/project-starters/python/RETROSPECTIVE.md",
+      "category": "project-starters",
+      "size": 163,
+      "sha256": "b20559f317417d1566205b4b6aeeb8eef01977e6db42560159a5ce146370fe47"
+    },
+    {
+      "path": "templates/project-starters/python/ROADMAP.md",
+      "category": "project-starters",
+      "size": 56,
+      "sha256": "c7f7778399dee4843e54459edcb3ec880ec75c0d00780a8fbb4561d5aa1eb266"
+    },
+    {
+      "path": "templates/project-starters/python/SESSION.md",
+      "category": "project-starters",
+      "size": 206,
+      "sha256": "aa3593e46cc3812c1e79bf73a365468f8964911e0ccc7714e738162c93032954"
+    },
+    {
+      "path": "templates/project-starters/python/TASKS.md",
+      "category": "project-starters",
+      "size": 134,
+      "sha256": "232ffc608a4f3dd4239c59f787e6d616336ee55a30ca20495f51691346fc028d"
+    },
+    {
+      "path": "templates/project-starters/python/TESTING.md",
+      "category": "project-starters",
+      "size": 117,
+      "sha256": "ad07e4345b8810b27c5c8ac897c980016e125e23e7b4929ed156eb14e148ad18"
+    },
+    {
+      "path": "templates/project-starters/python/decisions.md",
+      "category": "project-starters",
+      "size": 169,
+      "sha256": "527d13efd504e8a45b4153387dc251aed4aec38cae8ae062d7542af6350ac224"
+    },
+    {
+      "path": "templates/project-starters/web-app/AGENTS.md",
+      "category": "project-starters",
+      "size": 180,
+      "sha256": "91582ea737034f58198cb2e9f16b812e36221f2ffb599d87c782b806ba409019"
+    },
+    {
+      "path": "templates/project-starters/web-app/ARCHITECTURE.md",
+      "category": "project-starters",
+      "size": 126,
+      "sha256": "8fcfbdaee830bebfef655a98ca65bb73fe3925593952c191b91a5c672202109a"
+    },
+    {
+      "path": "templates/project-starters/web-app/CHANGELOG.md",
+      "category": "project-starters",
+      "size": 79,
+      "sha256": "2cb78e10dfa769bbd43483c74a1f33465c3cc5ebd7ed761a45997e641a8dfd1a"
+    },
+    {
+      "path": "templates/project-starters/web-app/CLAUDE.md",
+      "category": "project-starters",
+      "size": 150,
+      "sha256": "ead53f954a6fe161fade014d650fe41559b8af7627e5bd9af83c8412b1c11004"
+    },
+    {
+      "path": "templates/project-starters/web-app/DESIGN.md",
+      "category": "project-starters",
+      "size": 107,
+      "sha256": "878ad27c73b3ca776bf86ca57556ec7a248a4a76b342731c3460fad1c97e8ca5"
+    },
+    {
+      "path": "templates/project-starters/web-app/HANDOFF.md",
+      "category": "project-starters",
+      "size": 542,
+      "sha256": "de1687b0d3a01adbbe8a119bc69d4a8eb42ea0f6f407aca452e0e6ad863d2770"
+    },
+    {
+      "path": "templates/project-starters/web-app/KNOWN_ISSUES.md",
+      "category": "project-starters",
+      "size": 88,
+      "sha256": "bc958331f04b29ae8d9eed8ba6f5474727fd0bfa4699b79ac6cb128f416766cd"
+    },
+    {
+      "path": "templates/project-starters/web-app/README.md",
+      "category": "project-starters",
+      "size": 451,
+      "sha256": "a80def19491d77c6852a4f51ff32cb39095bd584114aefa06aa7863526667de9"
+    },
+    {
+      "path": "templates/project-starters/web-app/RELEASE_NOTES.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "311a9987b0523f1de805b2a85d8398cfed17bc0e73a360256038862de9cbb027"
+    },
+    {
+      "path": "templates/project-starters/web-app/REQUIREMENTS.md",
+      "category": "project-starters",
+      "size": 93,
+      "sha256": "49da02fce76ecdfbd7c733f2ef19edb974ccab6e64fb5aea954e2d8990638683"
+    },
+    {
+      "path": "templates/project-starters/web-app/RETROSPECTIVE.md",
+      "category": "project-starters",
+      "size": 163,
+      "sha256": "b20559f317417d1566205b4b6aeeb8eef01977e6db42560159a5ce146370fe47"
+    },
+    {
+      "path": "templates/project-starters/web-app/ROADMAP.md",
+      "category": "project-starters",
+      "size": 56,
+      "sha256": "c7f7778399dee4843e54459edcb3ec880ec75c0d00780a8fbb4561d5aa1eb266"
+    },
+    {
+      "path": "templates/project-starters/web-app/SESSION.md",
+      "category": "project-starters",
+      "size": 206,
+      "sha256": "aa3593e46cc3812c1e79bf73a365468f8964911e0ccc7714e738162c93032954"
+    },
+    {
+      "path": "templates/project-starters/web-app/TASKS.md",
+      "category": "project-starters",
+      "size": 134,
+      "sha256": "232ffc608a4f3dd4239c59f787e6d616336ee55a30ca20495f51691346fc028d"
+    },
+    {
+      "path": "templates/project-starters/web-app/TESTING.md",
+      "category": "project-starters",
+      "size": 117,
+      "sha256": "ad07e4345b8810b27c5c8ac897c980016e125e23e7b4929ed156eb14e148ad18"
+    },
+    {
+      "path": "templates/project-starters/web-app/decisions.md",
+      "category": "project-starters",
+      "size": 169,
+      "sha256": "527d13efd504e8a45b4153387dc251aed4aec38cae8ae062d7542af6350ac224"
+    },
+    {
+      "path": "prompts/README.md",
+      "category": "prompts",
+      "size": 149,
+      "sha256": "66f3439436aa278d2df5e355a7734a64c2a1b5099e3138514a4a1d52715cc7ce"
+    },
+    {
+      "path": "prompts/create-skill.prompt.md",
+      "category": "prompts",
+      "size": 620,
+      "sha256": "de865832be4802c55d37b3f8eb844c0e9b14d4f32283e1844e50d5ce112177c8"
+    },
+    {
+      "path": "prompts/debug.prompt.md",
+      "category": "prompts",
+      "size": 618,
+      "sha256": "f66cab3ccad8f7bdd410a537858f920ce496580c7584ce6793818e8383e74b05"
+    },
+    {
+      "path": "prompts/deploy.prompt.md",
+      "category": "prompts",
+      "size": 655,
+      "sha256": "c830ff7270d5803fed342da89a6e687db5aaf984fb05c0a27ca1a2692ba727e9"
+    },
+    {
+      "path": "prompts/design.prompt.md",
+      "category": "prompts",
+      "size": 638,
+      "sha256": "88f78165d4a69afedc728d017c2d8131deb29dd6f8dd7e5d20baa077b7c1a4ae"
+    },
+    {
+      "path": "prompts/document.prompt.md",
+      "category": "prompts",
+      "size": 644,
+      "sha256": "689362d73ecc8f2514d829a8b310fbb3d0fad99e108be2770eb9e08e9ca992f7"
+    },
+    {
+      "path": "prompts/execute.prompt.md",
+      "category": "prompts",
+      "size": 656,
+      "sha256": "60642417455172a2d07ec6b8952107705355ccd55884657c3ae5b83b7c059b6e"
+    },
+    {
+      "path": "prompts/plan.prompt.md",
+      "category": "prompts",
+      "size": 678,
+      "sha256": "32f22363b8754adc131cb23f7e2af16bf2580ccd933c76c1b5faf8d5eb43a7c5"
+    },
+    {
+      "path": "prompts/qa.prompt.md",
+      "category": "prompts",
+      "size": 549,
+      "sha256": "d546581dc7c5a1203650c3db2c309a5c1209e6b809ab14e2bdbcfe9f74abc679"
+    },
+    {
+      "path": "prompts/research.prompt.md",
+      "category": "prompts",
+      "size": 639,
+      "sha256": "3b30d1813d262a2c73aadeba284d20147eff72adb586fff34ea9aa0e3af2d593"
+    },
+    {
+      "path": "prompts/review.prompt.md",
+      "category": "prompts",
+      "size": 651,
+      "sha256": "a6f9be157ca24c0ca6eed3b48e29064e88272fcf8d3c7749718ea75e84d8c5df"
+    },
+    {
+      "path": "prompts/specify.prompt.md",
+      "category": "prompts",
+      "size": 639,
+      "sha256": "3d73e5d54704c5375091bd3bf77e456be4582564f0e596af5339fae665b97a06"
+    },
+    {
+      "path": "references/README.md",
+      "category": "references",
+      "size": 546,
+      "sha256": "11b17fa4608b304b87f04f56445c0f1c607d5343b833ca951bef6f501be08f0c"
+    },
+    {
+      "path": "references/canva.md",
+      "category": "references",
+      "size": 415,
+      "sha256": "a3a96bc4ac68fb1854da3e6523126683b7b2a517edd00f3d776211dae6e859a5"
+    },
+    {
+      "path": "references/chatgpt.md",
+      "category": "references",
+      "size": 410,
+      "sha256": "632c24260a3a3babf4f542c873894166e43a986a9180f86b26668f3b25cbfe7b"
+    },
+    {
+      "path": "references/claude.md",
+      "category": "references",
+      "size": 441,
+      "sha256": "a3ed58d42142bef7b79ccdd1a6f89e156538b21b749664edef54598ac01864b2"
+    },
+    {
+      "path": "references/codex.md",
+      "category": "references",
+      "size": 424,
+      "sha256": "1dc93b2915a103c3740e8326f56b990b044478bc7c68bba4f7f5a71588a166b6"
+    },
+    {
+      "path": "references/copilot.md",
+      "category": "references",
+      "size": 468,
+      "sha256": "36e7f2422eabbed751246c45c693f85bf85d371eb736128c5db1c5f988035093"
+    },
+    {
+      "path": "references/kiro.md",
+      "category": "references",
+      "size": 441,
+      "sha256": "12a55874e89f872d79821ed615c3607b84f3c9394e46a816328c4f15ed83cbf4"
+    },
+    {
+      "path": "references/mcp.md",
+      "category": "references",
+      "size": 481,
+      "sha256": "c47f33729ee8b0ebee78ea1f12e4a2fd438a9c2e384369cfa543d51e188ccb95"
+    },
+    {
+      "path": "references/v0.md",
+      "category": "references",
+      "size": 406,
+      "sha256": "63623d58b71ffa1953563e0cfa308a020fa38a0f6972113932a7dcb13b4bb4b1"
+    },
+    {
+      "path": "references/vercel.md",
+      "category": "references",
+      "size": 466,
+      "sha256": "02f17e8a2f1507e706b79d8b3fcdf2597bc73bacf7c55e35a35cd10c5fb5cc44"
+    },
+    {
+      "path": "references/workflow-examples.md",
+      "category": "references",
+      "size": 2804,
+      "sha256": "653683f8266abfa9c5b2b87f29ea4021ee6c5f58f5010a0ee3b025a9d7a4318a"
+    },
+    {
+      "path": "scripts/README.md",
+      "category": "scripts",
+      "size": 162,
+      "sha256": "a505e4afe0051b2ddca99ea5f56feba76734cbc2622f1de5696780d8a9e3fd69"
+    },
+    {
+      "path": "scripts/create-project.py",
+      "category": "scripts",
+      "size": 5180,
+      "sha256": "fb3e8620022bc4c75490e49dc3a4973202edf9d3f072badad65b9e0fdf04b5e6"
+    },
+    {
+      "path": "scripts/generate-skill-registry.py",
+      "category": "scripts",
+      "size": 5927,
+      "sha256": "49ffa99aa9b89c22afef9d13b54f68ee80d60e7cedac56db8c95c70334fd2aad"
+    },
+    {
+      "path": "scripts/index-repository.py",
+      "category": "scripts",
+      "size": 3984,
+      "sha256": "e1a7f0ba6b72899d64a83dcfd643978c4b6ea10bce3a7778a04c0cccfeab87a0"
+    },
+    {
+      "path": "scripts/list-skills.py",
+      "category": "scripts",
+      "size": 1184,
+      "sha256": "a7a97e9ce5c238701fc6f74cb05f686edb81914e34053a3e494cf4c08388f983"
+    },
+    {
+      "path": "scripts/validate-all.py",
+      "category": "scripts",
+      "size": 4887,
+      "sha256": "53fcb1ab61e7b854ce84f1429bd283c1be29e877e4e2958114d85f55ca268376"
+    },
+    {
+      "path": "scripts/validate-markdown.ps1",
+      "category": "scripts",
+      "size": 1436,
+      "sha256": "d31be2ac49d272f5da0e7c6c9a772535a0566de176724a4aa10f7668f2d734ad"
+    },
+    {
+      "path": "scripts/validate-repo.py",
+      "category": "scripts",
+      "size": 7263,
+      "sha256": "9e4948101f5ec80281102fd94b2893eb763a7848cac50a4d0e59ab701cbf47f6"
+    },
+    {
+      "path": ".agent/skills/communication-skill/README.md",
+      "category": "skills",
+      "size": 1207,
+      "sha256": "3285b6b6d511e2f1b78cee8419bc7c3f6f7c7bcaae0de3d783a53df7ccec4615"
+    },
+    {
+      "path": ".agent/skills/communication-skill/SKILL.md",
+      "category": "skills",
+      "size": 9579,
+      "sha256": "4492214b68b708158eb610e7c889fd6f1557222097845c0d3469894b2eebc14e"
+    },
+    {
+      "path": ".agent/skills/communication-skill/anti-ai-writing.md",
+      "category": "skills",
+      "size": 4702,
+      "sha256": "a6732242a7b3780179fab8114974edefe28ce75f040c6e2e6bebca92e36957dc"
+    },
+    {
+      "path": ".agent/skills/communication-skill/examples.md",
+      "category": "skills",
+      "size": 664,
+      "sha256": "89cae10318f763e917f54a46a3e69259c6998159a4e3593c217802e4f82e0bd6"
+    },
+    {
+      "path": ".agent/skills/design/browser/README.md",
+      "category": "skills",
+      "size": 137,
+      "sha256": "c3b6845a0c93c8a551e42e100ccf8bf501557f8411dd9db49553d859d30457ee"
+    },
+    {
+      "path": ".agent/skills/design/browser/SKILL.md",
+      "category": "skills",
+      "size": 542,
+      "sha256": "227f3ff1af68ed2f489a2b55d54b824177140182b6a755d08940275268dac31a"
+    },
+    {
+      "path": ".agent/skills/design/ui-ux-pro-max/README.md",
+      "category": "skills",
+      "size": 149,
+      "sha256": "2688beaad789caf79eb7ec942595901991a23945c5dfad2ef13aae040e30831d"
+    },
+    {
+      "path": ".agent/skills/design/ui-ux-pro-max/SKILL.md",
+      "category": "skills",
+      "size": 1440,
+      "sha256": "e56bb95f1a41331d9db733eb9403c57cec4e9464792a677af2278880728a127d"
+    },
+    {
+      "path": ".agent/skills/personal/analytical/README.md",
+      "category": "skills",
+      "size": 143,
+      "sha256": "29a09fe1f3d4103f9b03b186ada14ff5fb046b6f9747a6ed8b6e7ce06bbf4928"
+    },
+    {
+      "path": ".agent/skills/personal/analytical/SKILL.md",
+      "category": "skills",
+      "size": 412,
+      "sha256": "85d56fc897202c168dc647c9d47a591e463ec2d1381549e92ac21c525adece52"
+    },
+    {
+      "path": ".agent/skills/personal/clear-concise-writing/README.md",
+      "category": "skills",
+      "size": 165,
+      "sha256": "1541849362f8799d429e943941edb6c988ad87ededcd9922b601660a8e911772"
+    },
+    {
+      "path": ".agent/skills/personal/clear-concise-writing/SKILL.md",
+      "category": "skills",
+      "size": 1081,
+      "sha256": "36e7ee499d3f74e8e57e21a235163cba12a13eb544303c59385aab1d544d5925"
+    },
+    {
+      "path": ".agent/skills/personal/problem-solving/README.md",
+      "category": "skills",
+      "size": 153,
+      "sha256": "0a0e9f8da5e154d5ca6e2f55fc3c9d7b058ba999e4afd3a69a67a53d9ad019b0"
+    },
+    {
+      "path": ".agent/skills/personal/problem-solving/SKILL.md",
+      "category": "skills",
+      "size": 576,
+      "sha256": "4a80a6e2c970be4e8837596f533545ca146d958ad27810bfaa3a81821c56951a"
+    },
+    {
+      "path": ".agent/skills/personal/simplify/README.md",
+      "category": "skills",
+      "size": 139,
+      "sha256": "3e00582fb00e406a77cc29a43b9e89ddff8e404823839e12e1f755cbd2fc17b2"
+    },
+    {
+      "path": ".agent/skills/personal/simplify/SKILL.md",
+      "category": "skills",
+      "size": 1028,
+      "sha256": "6f2064427cd8f98686324e07b84e850bccb18d5aae952413677843e2995fc87f"
+    },
+    {
+      "path": ".agent/skills/personal/writing/README.md",
+      "category": "skills",
+      "size": 137,
+      "sha256": "8a3b5547dbc6a0774c3009bfde49e8aeec5410779db3341578056ba5cc37d938"
+    },
+    {
+      "path": ".agent/skills/personal/writing/SKILL.md",
+      "category": "skills",
+      "size": 1079,
+      "sha256": "80dd74838c9c5566ea89477ce46246b134803aca78c950218ad781b25ef0da07"
+    },
+    {
+      "path": ".agent/skills/references/codex-tools.md",
+      "category": "skills",
+      "size": 639,
+      "sha256": "948652be60626287f5ee90cbcb12d93c8f16972f6b7a3b952481cc6ba337bf7c"
+    },
+    {
+      "path": ".agent/skills/references/copilot-tools.md",
+      "category": "skills",
+      "size": 494,
+      "sha256": "94f6e80b2dd4182a0023325ccd1a9b2f793a11b370d0499639850cf87d3abd67"
+    },
+    {
+      "path": ".agent/skills/references/gemini-tools.md",
+      "category": "skills",
+      "size": 595,
+      "sha256": "ecb3c0bb4f7d13546a280fc54dfc00b42aa4b75dbf9c53b39395ca3c3964a50c"
+    },
+    {
+      "path": ".agent/skills/research/README.md",
+      "category": "skills",
+      "size": 285,
+      "sha256": "a740cf1670adb34231db8e102e1f09d3c0b514bc423ce354fcce5382289090ec"
+    },
+    {
+      "path": ".agent/skills/research/SKILL.md",
+      "category": "skills",
+      "size": 1602,
+      "sha256": "698690d332ac6bec6f56051db6428b47ad445a2de70beae4fb444d67891ba713"
+    },
+    {
+      "path": ".agent/skills/system/README.md",
+      "category": "skills",
+      "size": 327,
+      "sha256": "56de6281570a823bed82eba328c321fbd07a5fa7ba693190e1249ef62e3f1f06"
+    },
+    {
+      "path": ".agent/skills/system/SKILL.md",
+      "category": "skills",
+      "size": 1939,
+      "sha256": "2dc80b2d97d71251e112adfd116676bbac84167ec065e60d4dc06e9043c7509a"
+    },
+    {
+      "path": ".agent/skills/system/superpower/README.md",
+      "category": "skills",
+      "size": 143,
+      "sha256": "9ecd398894dfe929495768cf87001b35b75659c35b8555bad4e8997b5baa0b0f"
+    },
+    {
+      "path": ".agent/skills/system/superpower/SKILL.md",
+      "category": "skills",
+      "size": 545,
+      "sha256": "81883e45f4b4526f43419df91f167ec116f8dac3685f6d2518c05deded33db24"
+    },
+    {
+      "path": ".agent/skills/system/testing/README.md",
+      "category": "skills",
+      "size": 137,
+      "sha256": "fab6f7500f220b05d0d7c9743f8bc93b2acbd1613428b2273c1c99a6accdd5f1"
+    },
+    {
+      "path": ".agent/skills/system/testing/SKILL.md",
+      "category": "skills",
+      "size": 532,
+      "sha256": "ca800a1756451ccfcbe24e615165cfccde0715f9d7eb9c328ca535a3f0f9f86c"
+    },
+    {
+      "path": ".agent/skills/system/using-superpowers/README.md",
+      "category": "skills",
+      "size": 157,
+      "sha256": "45eab3f33760a63a8de4810919eb3f59cd54e12e295cd7c136c8b492f8335ac9"
+    },
+    {
+      "path": ".agent/skills/system/using-superpowers/SKILL.md",
+      "category": "skills",
+      "size": 5762,
+      "sha256": "388f2143b13ffcb4117406b472d37b2e2319417f31dbaa03a6d2bcb4795033ee"
+    },
+    {
+      "path": ".agent/skills/thinking/README.md",
+      "category": "skills",
+      "size": 386,
+      "sha256": "d5c570ae3677bba88843dfafbe6a6eb9dd9b0a3dbdd55a158c91593774bfd79c"
+    },
+    {
+      "path": ".agent/skills/thinking/SKILL.md",
+      "category": "skills",
+      "size": 2855,
+      "sha256": "5461b9610de10fd1550ccac3d8995e20a9d6a2a67add7b88d799122f92476313"
+    },
+    {
+      "path": "standards/README.md",
+      "category": "standards",
+      "size": 343,
+      "sha256": "44bf96b2132054a3e225dbbeafbbd8227406b790bc70e06937ce99042873193c"
+    },
+    {
+      "path": "standards/accessibility.md",
+      "category": "standards",
+      "size": 187,
+      "sha256": "0a3abc39f4e4ee91cf08685d4f124309c156e5845e6082fdc488e423a82a2e98"
+    },
+    {
+      "path": "standards/code-review.md",
+      "category": "standards",
+      "size": 179,
+      "sha256": "594a86331c293333d4c84b6c7f653b27c6f01f8a9135e3bd4f2e61ab139e3180"
+    },
+    {
+      "path": "standards/documentation.md",
+      "category": "standards",
+      "size": 178,
+      "sha256": "b0a98edbaa6a89090d1ea63cc144e03a956694b51d22f45ae6364aa5236c4756"
+    },
+    {
+      "path": "standards/git.md",
+      "category": "standards",
+      "size": 211,
+      "sha256": "1ea97323a21f22e0297653653e4542ae65cf57a60a15168a8f89f77eaa16f389"
+    },
+    {
+      "path": "standards/naming.md",
+      "category": "standards",
+      "size": 187,
+      "sha256": "4114962e09e538a7365b536c5076f1397d5bc934a8d535354019c688bfe3f048"
+    },
+    {
+      "path": "standards/release-management.md",
+      "category": "standards",
+      "size": 185,
+      "sha256": "75b3d10d4351607b0107d899b1e22f0cbfcf581f623ffdc2cc5e5e149cd7f855"
+    },
+    {
+      "path": "standards/security.md",
+      "category": "standards",
+      "size": 176,
+      "sha256": "4c29a56474931fbbac3c6314c40b64c52a06e395cdb64f80f6381026db788cb9"
+    },
+    {
+      "path": "standards/testing.md",
+      "category": "standards",
+      "size": 172,
+      "sha256": "59216fbba6a0ab33f24d2f13af6e7b3730a6b46d561b43ee8a7daae86eee7735"
+    },
+    {
+      "path": "templates/README.md",
+      "category": "templates",
+      "size": 198,
+      "sha256": "5285e7f3b9bbece2510835e67fea3e9677ee9b39882b7d7eac6ade9aaa3a59de"
+    },
+    {
+      "path": "templates/project-memory/AGENTS.md",
+      "category": "templates",
+      "size": 180,
+      "sha256": "91582ea737034f58198cb2e9f16b812e36221f2ffb599d87c782b806ba409019"
+    },
+    {
+      "path": "templates/project-memory/ARCHITECTURE.md",
+      "category": "templates",
+      "size": 126,
+      "sha256": "8fcfbdaee830bebfef655a98ca65bb73fe3925593952c191b91a5c672202109a"
+    },
+    {
+      "path": "templates/project-memory/CHANGELOG.md",
+      "category": "templates",
+      "size": 79,
+      "sha256": "2cb78e10dfa769bbd43483c74a1f33465c3cc5ebd7ed761a45997e641a8dfd1a"
+    },
+    {
+      "path": "templates/project-memory/CLAUDE.md",
+      "category": "templates",
+      "size": 150,
+      "sha256": "ead53f954a6fe161fade014d650fe41559b8af7627e5bd9af83c8412b1c11004"
+    },
+    {
+      "path": "templates/project-memory/DESIGN.md",
+      "category": "templates",
+      "size": 107,
+      "sha256": "878ad27c73b3ca776bf86ca57556ec7a248a4a76b342731c3460fad1c97e8ca5"
+    },
+    {
+      "path": "templates/project-memory/HANDOFF.md",
+      "category": "templates",
+      "size": 542,
+      "sha256": "de1687b0d3a01adbbe8a119bc69d4a8eb42ea0f6f407aca452e0e6ad863d2770"
+    },
+    {
+      "path": "templates/project-memory/KNOWN_ISSUES.md",
+      "category": "templates",
+      "size": 88,
+      "sha256": "bc958331f04b29ae8d9eed8ba6f5474727fd0bfa4699b79ac6cb128f416766cd"
+    },
+    {
+      "path": "templates/project-memory/README.md",
+      "category": "templates",
+      "size": 243,
+      "sha256": "1cd32326e0b3183a49e152b5cdae5622bb16c82d773c9a0a101f562d93ce2fbd"
+    },
+    {
+      "path": "templates/project-memory/RELEASE_NOTES.md",
+      "category": "templates",
+      "size": 93,
+      "sha256": "311a9987b0523f1de805b2a85d8398cfed17bc0e73a360256038862de9cbb027"
+    },
+    {
+      "path": "templates/project-memory/REQUIREMENTS.md",
+      "category": "templates",
+      "size": 93,
+      "sha256": "49da02fce76ecdfbd7c733f2ef19edb974ccab6e64fb5aea954e2d8990638683"
+    },
+    {
+      "path": "templates/project-memory/RETROSPECTIVE.md",
+      "category": "templates",
+      "size": 163,
+      "sha256": "b20559f317417d1566205b4b6aeeb8eef01977e6db42560159a5ce146370fe47"
+    },
+    {
+      "path": "templates/project-memory/ROADMAP.md",
+      "category": "templates",
+      "size": 56,
+      "sha256": "c7f7778399dee4843e54459edcb3ec880ec75c0d00780a8fbb4561d5aa1eb266"
+    },
+    {
+      "path": "templates/project-memory/SESSION.md",
+      "category": "templates",
+      "size": 206,
+      "sha256": "aa3593e46cc3812c1e79bf73a365468f8964911e0ccc7714e738162c93032954"
+    },
+    {
+      "path": "templates/project-memory/TASKS.md",
+      "category": "templates",
+      "size": 134,
+      "sha256": "232ffc608a4f3dd4239c59f787e6d616336ee55a30ca20495f51691346fc028d"
+    },
+    {
+      "path": "templates/project-memory/TESTING.md",
+      "category": "templates",
+      "size": 117,
+      "sha256": "ad07e4345b8810b27c5c8ac897c980016e125e23e7b4929ed156eb14e148ad18"
+    },
+    {
+      "path": "templates/project-memory/decisions.md",
+      "category": "templates",
+      "size": 169,
+      "sha256": "527d13efd504e8a45b4153387dc251aed4aec38cae8ae062d7542af6350ac224"
+    },
+    {
+      "path": "templates/specifications/README.md",
+      "category": "templates",
+      "size": 169,
+      "sha256": "a2225808211290e2221a5a9e0dd08a026b7259463f41146d9a54debd6e54b349"
+    },
+    {
+      "path": "templates/specifications/deployment-plan.md",
+      "category": "templates",
+      "size": 174,
+      "sha256": "312b43e3436d64afba3d7c1a8ea6fa4441d32c40a40be4a9d940dd14609d2509"
+    },
+    {
+      "path": "templates/specifications/design.md",
+      "category": "templates",
+      "size": 311,
+      "sha256": "3f00ebadf4891fb79666a177d3d3c60da80ab0833f3dbbd7ec9d373a295e58a0"
+    },
+    {
+      "path": "templates/specifications/requirements.md",
+      "category": "templates",
+      "size": 431,
+      "sha256": "14151e61f46723aa6f08699f8d209d5d086961273e313908820def3ff8cbd995"
+    },
+    {
+      "path": "templates/specifications/retrospective.md",
+      "category": "templates",
+      "size": 163,
+      "sha256": "b20559f317417d1566205b4b6aeeb8eef01977e6db42560159a5ce146370fe47"
+    },
+    {
+      "path": "templates/specifications/tasks.md",
+      "category": "templates",
+      "size": 175,
+      "sha256": "a44d9e17f7ae4c0a00b5655f3a2b3ea5275ea79512cbe90cc5ff7a64f7a46958"
+    },
+    {
+      "path": "templates/specifications/testing-plan.md",
+      "category": "templates",
+      "size": 174,
+      "sha256": "b2fa4906496710bf9ff469148aaf3c8330c1d0949926447c3ec23286d4af84c8"
+    }
+  ]
+}

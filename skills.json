@@ -2,6 +2,71 @@
   "schemaVersion": "1.0.0",
   "skills": [
     {
+      "id": "build",
+      "name": "Build",
+      "path": ".agent/skills/build/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Combined guidance for building, testing, optimizing, and deploying applications.",
+      "triggers": [
+        "build",
+        "build skill"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "communication-skill",
+      "name": "Communication Skill",
+      "path": ".agent/skills/communication-skill/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Human-centered guidance for clear, credible, and useful communication.",
+      "triggers": [
+        "communication-skill",
+        "communication skill"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "path": ".agent/skills/research/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Combined guidance for finding, comparing, summarizing, and extracting information.",
+      "triggers": [
+        "research",
+        "research skill"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "system",
+      "name": "System",
+      "path": ".agent/skills/system/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Combined guidance for skill orchestration, platform adaptation, and agent workflows.",
+      "triggers": [
+        "system",
+        "system skill"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "thinking",
+      "name": "Thinking",
+      "path": ".agent/skills/thinking/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Combined guidance for problem solving, simplification, and concise explanation.",
+      "triggers": [
+        "thinking",
+        "thinking skill"
+      ],
+      "dependencies": []
+    },
+    {
       "id": "creator",
       "name": "Creator",
       "path": ".agent/skills/build/creator/SKILL.md",
