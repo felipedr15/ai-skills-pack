@@ -67,3 +67,34 @@ python scripts/discover.py stats
 ```
 
 5. Run unified validation to confirm no regressions across all phases.
+
+## Phase 5 Interactive Dashboard Workflow (Implemented)
+
+1. Build dashboard artifacts with `python scripts/dashboard-build.py`.
+2. Validate dashboard structure with `python scripts/dashboard-validate.py`.
+3. Check dashboard freshness without writing via `python scripts/dashboard-check.py`.
+4. Start the local dashboard server:
+
+```text
+python scripts/dashboard-serve.py
+python scripts/dashboard-serve.py --port 9000 --no-browser
+```
+
+5. Access the dashboard at `http://127.0.0.1:8080` (default port).
+6. Use the API endpoints for programmatic access:
+
+```text
+GET /api/health
+GET /api/data
+GET /api/skills?q=&category=&path=
+GET /api/memory?category=&status=&project=
+GET /api/graph/nodes?type=&q=&limit=
+GET /api/graph/edges?type=&node=&limit=
+GET /api/graph/node/{id}
+GET /api/graph/visualize?focus=&nodeType=&edgeType=&depth=&limit=
+GET /api/discovery/search?q=&type=&path=&limit=
+GET /api/discovery/explain/{id}?q=
+GET /api/repository?category=&q=&limit=
+```
+
+7. Run unified validation to confirm no regressions across all phases.

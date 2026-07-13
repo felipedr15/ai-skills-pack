@@ -37,7 +37,7 @@ references/ ------> tool-specific guidance
 
 `validate-all.py` is the unified read-only validation entry point. It checks existing repository rules, generated-file freshness, JSON, metadata, links, identifiers, dependencies, secret patterns, required templates, and unit tests. `create-project.py` copies a selected starter, safely replaces project placeholders, emits `project.yaml`, and optionally initializes Git without installing dependencies or committing.
 
-Phase 2 implements local structured memory records, deterministic memory indexing, memory lifecycle commands, archive and promotion flows, and memory-specific security validation. Phase 3 implements a deterministic local knowledge graph generated from repository sources. Phase 4 implements a local semantic discovery and graph-query engine that combines the knowledge graph, source files, and memory metadata into a searchable index with deterministic ranking, graph traversal, and CLI querying. Advanced orchestration, publishing, deployment, and release automation remain proposed.
+Phase 2 implements local structured memory records, deterministic memory indexing, memory lifecycle commands, archive and promotion flows, and memory-specific security validation. Phase 3 implements a deterministic local knowledge graph generated from repository sources. Phase 4 implements a local semantic discovery and graph-query engine that combines the knowledge graph, source files, and memory metadata into a searchable index with deterministic ranking, graph traversal, and CLI querying. Phase 5 implements a local interactive dashboard for exploring repository state with read-only views, graph visualization, and live API endpoints. Advanced orchestration, publishing, deployment, and release automation remain proposed.
 
 ## Knowledge Graph Architecture
 
@@ -70,6 +70,22 @@ The Semantic Discovery engine is repository-local and combines the knowledge gra
 Query modes: search, related, traverse, path, explain, stats. Ranking is deterministic with stable tie-breaking (score descending, type, name, ID). Graph traversal uses BFS with cycle protection and configurable depth (max 5).
 
 Source files remain authoritative. The discovery index is a derived compact artifact that references source paths and graph node IDs without duplicating source content. Staleness checks ignore `generatedAt` only.
+
+## Dashboard Architecture
+
+The Interactive Dashboard is a local-first, offline-capable web application for exploring repository state.
+
+- Build: `scripts/dashboard-build.py`
+- Serve: `scripts/dashboard-serve.py`
+- Validate: `scripts/dashboard-validate.py`
+- Staleness check: `scripts/dashboard-check.py`
+- Internal modules: `scripts/dashboard/`
+- HTML output: `generated/dashboard.html`
+- Data output: `generated/dashboard-data.json`
+
+The dashboard reads generated JSON artifacts and presents interactive views: Overview, Skills, Memory, Knowledge Graph (list + visualization), Discovery, and Repository. It uses a Python standard-library HTTP server on localhost with no external dependencies, no network calls beyond localhost, and no telemetry.
+
+Graph visualization uses a vanilla SVG force-directed layout limited to 50 nodes with BFS neighbor expansion (depth 1-3). All rendered text is escaped. No secrets or full memory contents are displayed. The dashboard is read-only and non-authoritative.
 
 ## Memory Engine Architecture
 

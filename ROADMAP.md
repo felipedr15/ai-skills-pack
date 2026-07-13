@@ -19,6 +19,10 @@ Deterministic local graph generation from repository source files, graph validat
 
 Local semantic discovery and graph-query engine combining the knowledge graph, source file metadata, and memory records into a deterministic search index. Supports keyword, phrase, type, path, and relationship filtering with graph traversal, shortest-path finding, and scoring explanations. CLI provides search, related, traverse, path, explain, and stats commands.
 
+## Phase 5 — Interactive Dashboard (Implemented)
+
+Local-first, offline-capable web dashboard for exploring repository state. Provides Overview, Skills, Memory, Knowledge Graph (list + SVG visualization), Discovery (search with explain), and Repository views. Uses Python standard-library HTTP server with no external dependencies. Includes graph visualization with BFS neighbor expansion, type/relationship filters, and performance limits.
+
 ## Version 1.1 — Workflow Improvements (Proposed)
 Improved bootstrap, deeper validation, more examples, and expanded Power Apps, Power Automate, and web deployment guidance.
 

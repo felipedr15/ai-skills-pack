@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-13T06:22:06Z",
+  "generatedAt": "2026-07-13T22:28:24Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 303,
-    "entities": 325,
-    "terms": 857,
-    "relationships": 503
+    "documents": 304,
+    "entities": 326,
+    "terms": 864,
+    "relationships": 505
   },
   "documents": [
     {
@@ -958,6 +958,7 @@
         "Phase 1 Automation",
         "Knowledge Graph Architecture",
         "Semantic Discovery Architecture",
+        "Dashboard Architecture",
         "Memory Engine Architecture",
         "Models",
         "Validation and Security",
@@ -1067,6 +1068,7 @@
         "Phase 2 — Memory Engine (Implemented)",
         "Phase 3 — Knowledge Graph (Implemented)",
         "Phase 4 — Semantic Discovery (Implemented)",
+        "Phase 5 — Interactive Dashboard (Implemented)",
         "Version 1.1 — Workflow Improvements (Proposed)",
         "Version 1.2 — Integration Improvements (Proposed)",
         "Version 2.0 — Advanced Automation (Proposed)"
@@ -1099,7 +1101,8 @@
         "Phase 1 Automation Workflow",
         "Phase 2 Memory Workflow (Implemented)",
         "Phase 3 Knowledge Graph Workflow (Implemented)",
-        "Phase 4 Semantic Discovery Workflow (Implemented)"
+        "Phase 4 Semantic Discovery Workflow (Implemented)",
+        "Phase 5 Interactive Dashboard Workflow (Implemented)"
       ],
       "snippet": "Request → planner skill selection → requirements → design → tasks → executor handoff → implementation → validation → diff review → human validation → commit → deployment.",
       "frontMatter": {}
@@ -1409,6 +1412,29 @@
         "Future Integration"
       ],
       "snippet": "Describe the local deterministic Semantic Discovery and Query Engine introduced in Phase 4.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "sourcePath": "knowledge/architecture/phase-5-interactive-dashboard.md",
+      "title": "Phase 5 Interactive Dashboard Architecture",
+      "category": "knowledge",
+      "headings": [
+        "Phase 5 Interactive Dashboard Architecture",
+        "Purpose",
+        "Source-of-Truth Policy",
+        "Startup Commands",
+        "Development Commands",
+        "Production Build",
+        "Data Sources",
+        "Dashboard Pages",
+        "Graph Visualization",
+        "Security Model",
+        "API Endpoints",
+        "Troubleshooting",
+        "Future Extension Points"
+      ],
+      "snippet": "Document the local interactive dashboard introduced in Phase 5 for exploring AI OS repository state.",
       "frontMatter": {}
     },
     {
@@ -5748,6 +5774,16 @@
       }
     },
     {
+      "id": "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "nodeId": "document:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "type": "document",
+      "name": "Phase 5 Interactive Dashboard",
+      "sourcePath": "knowledge/architecture/phase-5-interactive-dashboard.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "entity:document:knowledge/best-practices/README.md",
       "nodeId": "document:knowledge/best-practices/README.md",
       "type": "document",
@@ -8725,6 +8761,7 @@
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:knowledge/ai-workflows/README.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
@@ -8962,7 +8999,8 @@
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
     ],
     "api": [
-      "doc:SECURITY.md"
+      "doc:SECURITY.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
     "app": [
       "doc:references/workflow-examples.md",
@@ -9119,6 +9157,7 @@
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/decisions/README.md",
       "doc:memory/permanent/principles/README.md",
       "doc:prompts/design.prompt.md",
@@ -9146,6 +9185,7 @@
       "entity:document:knowledge/architecture/README.md",
       "entity:document:knowledge/architecture/phase-3-knowledge-graph.md",
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md",
+      "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:templates/project-memory/ARCHITECTURE.md",
       "entity:document:templates/project-starters/automation/ARCHITECTURE.md",
       "entity:document:templates/project-starters/documentation/ARCHITECTURE.md",
@@ -9500,6 +9540,7 @@
     ],
     "build": [
       "doc:CLAUDE.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:prompts/qa.prompt.md",
       "doc:references/workflow-examples.md"
     ],
@@ -9798,6 +9839,7 @@
       "doc:README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md"
     ],
     "commit": [
@@ -10183,10 +10225,18 @@
     "customer": [
       "doc:SECURITY.md"
     ],
+    "dashboard": [
+      "doc:ARCHITECTURE.md",
+      "doc:ROADMAP.md",
+      "doc:WORKFLOW.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md"
+    ],
     "data": [
       "doc:ARCHITECTURE.md",
       "doc:SECURITY.md",
       "doc:agents/security-reviewer.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:prompts/design.prompt.md",
       "doc:standards/security.md",
@@ -10516,7 +10566,8 @@
     ],
     "development": [
       "doc:ARCHITECTURE.md",
-      "doc:README.md"
+      "doc:README.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
     "diagrams": [
       "doc:references/canva.md"
@@ -10590,6 +10641,7 @@
       "doc:prompts/create-skill.prompt.md"
     ],
     "document": [
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:prompts/deploy.prompt.md",
       "doc:prompts/document.prompt.md",
       "entity:document:.agent/skills/communication-skill/README.md",
@@ -10657,6 +10709,7 @@
       "entity:document:knowledge/architecture/README.md",
       "entity:document:knowledge/architecture/phase-3-knowledge-graph.md",
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md",
+      "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/best-practices/README.md",
       "entity:document:knowledge/documentation/README.md",
       "entity:document:knowledge/future-ideas/README.md",
@@ -11034,6 +11087,9 @@
     "employee": [
       "doc:SECURITY.md"
     ],
+    "endpoints": [
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
+    ],
     "engine": [
       "doc:ARCHITECTURE.md",
       "doc:README.md",
@@ -11206,11 +11262,15 @@
       "doc:templates/project-starters/python/CLAUDE.md",
       "doc:templates/project-starters/web-app/CLAUDE.md"
     ],
+    "exploring": [
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
+    ],
     "expose": [
       "doc:references/mcp.md"
     ],
     "extension": [
       "doc:ARCHITECTURE.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:references/README.md"
     ],
     "extracting": [
@@ -11439,6 +11499,7 @@
       "doc:.github/instructions/README.md",
       "doc:ARCHITECTURE.md",
       "doc:README.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/archive/README.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/sessions/README.md",
@@ -11484,6 +11545,7 @@
     "future": [
       "doc:.kiro/steering/technology.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/future-ideas/README.md",
       "doc:templates/project-memory/ROADMAP.md",
       "doc:templates/project-starters/automation/ROADMAP.md",
@@ -11648,6 +11710,7 @@
       "doc:WORKFLOW.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:references/workflow-examples.md",
       "doc:scripts/knowledge_graph/README.md",
       "entity:document:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -11913,6 +11976,7 @@
       "doc:.github/copilot-instructions.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md",
       "doc:memory/decisions/README.md",
       "doc:memory/sessions/README.md",
@@ -12029,6 +12093,12 @@
     "interactions": [
       "doc:standards/accessibility.md"
     ],
+    "interactive": [
+      "doc:ROADMAP.md",
+      "doc:WORKFLOW.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md"
+    ],
     "interface": [
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md"
     ],
@@ -12088,7 +12158,8 @@
     ],
     "introduced": [
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
-      "doc:knowledge/architecture/phase-4-semantic-discovery.md"
+      "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
     "introductions": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
@@ -12269,6 +12340,7 @@
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -12299,6 +12371,7 @@
       "entity:document:knowledge/architecture/README.md",
       "entity:document:knowledge/architecture/phase-3-knowledge-graph.md",
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md",
+      "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/best-practices/README.md",
       "entity:document:knowledge/documentation/README.md",
       "entity:document:knowledge/future-ideas/README.md",
@@ -12456,6 +12529,7 @@
     "local": [
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md"
     ],
     "logging": [
@@ -12651,6 +12725,7 @@
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -12935,6 +13010,7 @@
       "entity:document:knowledge/architecture/README.md",
       "entity:document:knowledge/architecture/phase-3-knowledge-graph.md",
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md",
+      "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/best-practices/README.md",
       "entity:document:knowledge/documentation/README.md",
       "entity:document:knowledge/future-ideas/README.md",
@@ -13313,6 +13389,7 @@
     ],
     "model": [
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:references/mcp.md",
       "doc:templates/specifications/design.md"
     ],
@@ -13583,6 +13660,7 @@
     "of": [
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "entity:memory:decision-memory-index-source-truth-001"
@@ -13703,6 +13781,7 @@
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
@@ -13791,6 +13870,9 @@
     ],
     "package": [
       "doc:.agent/skills/communication-skill/README.md"
+    ],
+    "pages": [
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
     "parent": [
       "doc:templates/project-memory/AGENTS.md",
@@ -13883,9 +13965,11 @@
       "doc:WORKFLOW.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:scripts/knowledge_graph/README.md",
       "entity:document:knowledge/architecture/phase-3-knowledge-graph.md",
-      "entity:document:knowledge/architecture/phase-4-semantic-discovery.md"
+      "entity:document:knowledge/architecture/phase-4-semantic-discovery.md",
+      "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
     "phrases": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -13942,12 +14026,14 @@
     ],
     "points": [
       "doc:ARCHITECTURE.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:prompts/README.md"
     ],
     "policy": [
       "doc:SECURITY.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
-      "doc:knowledge/architecture/phase-4-semantic-discovery.md"
+      "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
     "portable": [
       "doc:.kiro/steering/product.md",
@@ -14143,6 +14229,7 @@
       "entity:document:.kiro/steering/product.md"
     ],
     "production": [
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:references/vercel.md"
     ],
     "products": [
@@ -14629,6 +14716,7 @@
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -15170,6 +15258,7 @@
       "doc:AGENTS.md",
       "doc:ARCHITECTURE.md",
       "doc:README.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:references/README.md",
@@ -15799,6 +15888,7 @@
       "doc:SECURITY.md",
       "doc:agents/security-reviewer.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/security/README.md",
       "doc:memory/README.md",
       "doc:prompts/design.prompt.md",
@@ -16150,6 +16240,7 @@
       "doc:.agent/skills/research/SKILL.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
@@ -16165,6 +16256,7 @@
       "entity:memory:decision-memory-index-source-truth-001"
     ],
     "sources": [
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:prompts/research.prompt.md"
     ],
     "specific": [
@@ -16576,7 +16668,11 @@
     "starting": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
     ],
+    "startup": [
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
+    ],
     "state": [
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:templates/project-memory/ARCHITECTURE.md",
       "doc:templates/project-starters/automation/ARCHITECTURE.md",
       "doc:templates/project-starters/documentation/ARCHITECTURE.md",
@@ -17282,6 +17378,7 @@
       "doc:agents/reviewer.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:prompts/debug.prompt.md",
@@ -17479,6 +17576,7 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md"
     ],
     "troubleshooting": [
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/lessons/README.md",
       "doc:references/chatgpt.md",
       "doc:references/workflow-examples.md"
@@ -17486,6 +17584,7 @@
     "truth": [
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "entity:memory:decision-memory-index-source-truth-001"
@@ -17748,6 +17847,9 @@
     ],
     "visual": [
       "doc:references/canva.md"
+    ],
+    "visualization": [
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
     "vs": [
       "doc:.agent/skills/communication-skill/README.md",

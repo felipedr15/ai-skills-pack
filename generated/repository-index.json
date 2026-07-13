@@ -7,9 +7,9 @@
     "project-starters": 129,
     "templates": 30,
     "standards": 9,
-    "knowledge": 18,
+    "knowledge": 19,
     "references": 11,
-    "scripts": 43
+    "scripts": 53
   },
   "files": [
     {
@@ -107,6 +107,12 @@
       "category": "knowledge",
       "size": 3182,
       "sha256": "c0fe06eda7956b6f52a3a267ac599bc035913c0ddb8b817231ab4e25d1126e65"
+    },
+    {
+      "path": "knowledge/architecture/phase-5-interactive-dashboard.md",
+      "category": "knowledge",
+      "size": 4818,
+      "sha256": "a388d10093f933aba12b718a7a90c14bd02d94211d0982c7525cc82a26bfecae"
     },
     {
       "path": "knowledge/best-practices/README.md",
@@ -1101,14 +1107,74 @@
     {
       "path": "scripts/README.md",
       "category": "scripts",
-      "size": 733,
-      "sha256": "7e2675b8ba2f8d58fc82192db1912bcf5dfc050b98fe4c54102d748909277f38"
+      "size": 883,
+      "sha256": "eb5753967eefaa25efd3dd447915b219a738cdc9b1414d96063c7b068b552ffd"
     },
     {
       "path": "scripts/create-project.py",
       "category": "scripts",
       "size": 5180,
       "sha256": "fb3e8620022bc4c75490e49dc3a4973202edf9d3f072badad65b9e0fdf04b5e6"
+    },
+    {
+      "path": "scripts/dashboard-build.py",
+      "category": "scripts",
+      "size": 1232,
+      "sha256": "2903982ed230f7889acd99fab4733c46eca8988d2681b17948382a857e2fc68e"
+    },
+    {
+      "path": "scripts/dashboard-check.py",
+      "category": "scripts",
+      "size": 1889,
+      "sha256": "a5c0bc5399d3f9b8e89b580caf5ea9c362ec571b48854b63ee2d0558de7c0385"
+    },
+    {
+      "path": "scripts/dashboard-serve.py",
+      "category": "scripts",
+      "size": 1097,
+      "sha256": "856bbe5778421f0a51c6cd71e64e1b3822e0f18c880b920e138cc686515434f2"
+    },
+    {
+      "path": "scripts/dashboard-validate.py",
+      "category": "scripts",
+      "size": 1558,
+      "sha256": "25e722d97f235db566ca60d1419d103da1c64518be6e1d179f88186eed23382f"
+    },
+    {
+      "path": "scripts/dashboard/__init__.py",
+      "category": "scripts",
+      "size": 143,
+      "sha256": "e4b44cf51ead0a3a8eca84eaf95d6fe64b79e8914d384011fe52b1618e901bc5"
+    },
+    {
+      "path": "scripts/dashboard/aggregate.py",
+      "category": "scripts",
+      "size": 5841,
+      "sha256": "210db1547c4a96cc2bb15abe3c2fa99501a401d2535213ea3348178aebc22520"
+    },
+    {
+      "path": "scripts/dashboard/render.py",
+      "category": "scripts",
+      "size": 1016,
+      "sha256": "b4093585813aee91796e8211b52f3a1a8ea4096d7bd6daec3b0bb63c93cd4341"
+    },
+    {
+      "path": "scripts/dashboard/server.py",
+      "category": "scripts",
+      "size": 24112,
+      "sha256": "d74861979968cf9742be7a13c22097ed19c16b2056122823f69f39fa6f0e66cd"
+    },
+    {
+      "path": "scripts/dashboard/template.py",
+      "category": "scripts",
+      "size": 42935,
+      "sha256": "007dc0510bbc9f2bae6cad3546b038b5b9a40886546925616a85c0f4871c8f73"
+    },
+    {
+      "path": "scripts/dashboard/validate.py",
+      "category": "scripts",
+      "size": 3207,
+      "sha256": "7a77cc014356b3ae025a80bf15ba3be5b7b2904a59797cd7a52f782bfeda99a4"
     },
     {
       "path": "scripts/discover.py",
@@ -1329,8 +1395,8 @@
     {
       "path": "scripts/validate-all.py",
       "category": "scripts",
-      "size": 5942,
-      "sha256": "ff8efb278a5a556046dddd884f28b075c1f6f5c55f2d6d6b02fddca8e5a0b5e3"
+      "size": 6143,
+      "sha256": "ef39b3de4679530e32d715f3b174c7cfe2ed96125142d984817ba822e75e660e"
     },
     {
       "path": "scripts/validate-knowledge-graph.py",

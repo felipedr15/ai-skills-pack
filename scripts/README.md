@@ -29,4 +29,12 @@ Semantic Discovery scripts:
 - `discovery-check.py`
 - `semantic_discovery/` (internal modules)
 
+Dashboard scripts:
+
+- `dashboard-build.py`
+- `dashboard-serve.py`
+- `dashboard-validate.py`
+- `dashboard-check.py`
+- `dashboard/` (internal modules)
+
 [Back to AI OS](../README.md)

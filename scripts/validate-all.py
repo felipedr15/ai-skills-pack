@@ -117,6 +117,8 @@ def main():
     run_command(results, "repository index validation", [python, "scripts/index-repository.py", "--check"])
     run_command(results, "discovery index staleness validation", [python, "scripts/discovery-check.py"])
     run_command(results, "discovery index structure validation", [python, "scripts/discovery-validate.py"])
+    run_command(results, "dashboard staleness validation", [python, "scripts/dashboard-check.py"])
+    run_command(results, "dashboard structure validation", [python, "scripts/dashboard-validate.py"])
     validate_json(results)
     validate_links(results)
     validate_secrets(results)

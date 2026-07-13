@@ -251,6 +251,7 @@
 - `knowledge/architecture/README.md`
 - `knowledge/architecture/phase-3-knowledge-graph.md`
 - `knowledge/architecture/phase-4-semantic-discovery.md`
+- `knowledge/architecture/phase-5-interactive-dashboard.md`
 - `knowledge/best-practices/README.md`
 - `knowledge/documentation/README.md`
 - `knowledge/future-ideas/README.md`
@@ -283,6 +284,16 @@
 
 - `scripts/README.md`
 - `scripts/create-project.py`
+- `scripts/dashboard-build.py`
+- `scripts/dashboard-check.py`
+- `scripts/dashboard-serve.py`
+- `scripts/dashboard-validate.py`
+- `scripts/dashboard/__init__.py`
+- `scripts/dashboard/aggregate.py`
+- `scripts/dashboard/render.py`
+- `scripts/dashboard/server.py`
+- `scripts/dashboard/template.py`
+- `scripts/dashboard/validate.py`
 - `scripts/discover.py`
 - `scripts/discovery-build.py`
 - `scripts/discovery-check.py`

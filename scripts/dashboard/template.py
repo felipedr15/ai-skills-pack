@@ -1,0 +1,643 @@
+"""HTML template for the AI OS dashboard with interactive exploration views."""
+from __future__ import annotations
+
+DASHBOARD_HTML = """\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI OS Dashboard</title>
+<style>
+:root {
+  --bg: #f5f7fa; --bg-card: #fff; --text: #1a1a2e; --text-muted: #64748b;
+  --border: #e2e8f0; --accent: #0f3460; --accent-light: #dbeafe;
+  --success: #d1fae5; --success-border: #10b981; --warning: #fef3c7; --warning-border: #f59e0b;
+  --error: #fee2e2; --error-border: #ef4444; --shadow: rgba(0,0,0,0.08);
+  --nav-bg: #1e293b; --nav-text: #e2e8f0; --nav-active: #3b82f6;
+}
+[data-theme="dark"] {
+  --bg: #0f172a; --bg-card: #1e293b; --text: #e2e8f0; --text-muted: #94a3b8;
+  --border: #334155; --accent: #60a5fa; --accent-light: #1e3a5f;
+  --success: #064e3b; --success-border: #10b981; --warning: #451a03; --warning-border: #f59e0b;
+  --error: #450a0a; --error-border: #ef4444; --shadow: rgba(0,0,0,0.3);
+  --nav-bg: #020617; --nav-text: #cbd5e1; --nav-active: #60a5fa;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--nav-active); outline-offset: 2px; }
+"""
+DASHBOARD_HTML += """\
+/* Layout */
+.app { display: flex; min-height: 100vh; }
+nav { width: 220px; background: var(--nav-bg); color: var(--nav-text); padding: 1rem 0; position: fixed; top: 0; left: 0; height: 100vh; overflow-y: auto; z-index: 100; }
+nav h1 { font-size: 1.1rem; padding: 0 1rem 1rem; border-bottom: 1px solid var(--border); margin-bottom: 0.5rem; }
+nav ul { list-style: none; }
+nav li a { display: block; padding: 0.6rem 1rem; color: var(--nav-text); font-size: 0.9rem; border-left: 3px solid transparent; }
+nav li a:hover, nav li a.active { background: var(--accent-light); border-left-color: var(--nav-active); color: var(--nav-active); text-decoration: none; }
+nav li a:focus-visible { outline-offset: -2px; }
+.theme-toggle { padding: 0.6rem 1rem; margin-top: 1rem; border-top: 1px solid var(--border); }
+.theme-toggle button { background: none; border: 1px solid var(--border); color: var(--nav-text); padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; font-size: 0.8rem; width: 100%; }
+main { flex: 1; margin-left: 220px; padding: 2rem; max-width: 1100px; }
+@media (max-width: 768px) {
+  nav { width: 100%; height: auto; position: relative; }
+  nav ul { display: flex; flex-wrap: wrap; }
+  nav li a { padding: 0.5rem 0.75rem; border-left: none; border-bottom: 3px solid transparent; }
+  nav li a.active { border-bottom-color: var(--nav-active); }
+  main { margin-left: 0; padding: 1rem; }
+  .app { flex-direction: column; }
+}
+"""
+DASHBOARD_HTML += """\
+/* Components */
+h2 { font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: 0.4rem; }
+.card { background: var(--bg-card); border-radius: 8px; padding: 1.5rem; box-shadow: 0 1px 3px var(--shadow); margin-bottom: 1.5rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+.stat-card { background: var(--bg-card); border-radius: 8px; padding: 1.25rem; box-shadow: 0 1px 3px var(--shadow); text-align: center; }
+.stat-card .big { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+.stat-card .label { color: var(--text-muted); font-size: 0.85rem; margin-top: 0.25rem; }
+.filters { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem; align-items: center; }
+.filters input, .filters select { padding: 0.5rem 0.75rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-card); color: var(--text); font-size: 0.85rem; min-width: 150px; }
+.filters input:focus, .filters select:focus { border-color: var(--nav-active); }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+th, td { text-align: left; padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--border); }
+th { background: var(--bg); font-weight: 600; color: var(--text-muted); position: sticky; top: 0; }
+tr:hover { background: var(--accent-light); }
+.badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.75rem; font-weight: 500; }
+.badge-stable { background: var(--success); color: #065f46; }
+.badge-active { background: var(--accent-light); color: var(--accent); }
+.badge-ok { background: var(--success); color: #065f46; }
+.badge-missing { background: var(--error); color: #991b1b; }
+.warning { background: var(--warning); border-left: 4px solid var(--warning-border); padding: 0.75rem 1rem; border-radius: 4px; margin-bottom: 0.75rem; font-size: 0.85rem; }
+.success { background: var(--success); border-left: 4px solid var(--success-border); padding: 0.75rem 1rem; border-radius: 4px; margin-bottom: 0.75rem; font-size: 0.85rem; }
+.error { background: var(--error); border-left: 4px solid var(--error-border); padding: 0.75rem 1rem; border-radius: 4px; margin-bottom: 0.75rem; font-size: 0.85rem; }
+.empty-state { text-align: center; padding: 2rem; color: var(--text-muted); }
+.loading { text-align: center; padding: 2rem; color: var(--text-muted); }
+.tag { display: inline-block; background: var(--accent-light); color: var(--accent); padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.75rem; margin: 0.1rem; }
+.detail-section { margin-top: 1rem; }
+.detail-section h3 { font-size: 1rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+.meta-row { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 0.5rem; font-size: 0.85rem; }
+.meta-row span { color: var(--text-muted); }
+.meta-row strong { color: var(--text); }
+.back-link { display: inline-block; margin-bottom: 1rem; font-size: 0.85rem; cursor: pointer; }
+.result-item { border-bottom: 1px solid var(--border); padding: 0.75rem 0; }
+.result-item:last-child { border-bottom: none; }
+.result-score { font-weight: 600; color: var(--accent); min-width: 3rem; display: inline-block; }
+.result-reasons { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+/* Graph Visualization */
+.graph-container { position: relative; width: 100%; height: 500px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-card); overflow: hidden; }
+.graph-container svg { width: 100%; height: 100%; }
+.graph-container svg .node-circle { cursor: pointer; stroke-width: 2; transition: r 0.2s; }
+.graph-container svg .node-circle:hover { stroke: var(--nav-active); stroke-width: 3; }
+.graph-container svg .node-circle.focused { stroke: var(--nav-active); stroke-width: 3; r: 10; }
+.graph-container svg .node-circle.neighbor { stroke: var(--warning-border); stroke-width: 2.5; }
+.graph-container svg .node-label { font-size: 9px; fill: var(--text); pointer-events: none; text-anchor: middle; }
+.graph-container svg .edge-line { stroke: var(--border); stroke-width: 1; opacity: 0.6; }
+.graph-container svg .edge-line.highlighted { stroke: var(--nav-active); stroke-width: 2; opacity: 1; }
+.graph-info { padding: 0.5rem; font-size: 0.8rem; color: var(--text-muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+.graph-legend { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.8rem; }
+.graph-legend span { display: inline-flex; align-items: center; gap: 0.3rem; }
+.graph-legend .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+footer { margin-top: 3rem; padding: 1rem 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.8rem; text-align: center; }
+</style>
+</head>
+<body>
+<div class="app">
+<nav role="navigation" aria-label="Main navigation">
+<h1>AI OS</h1>
+<ul>
+<li><a href="#overview" data-view="overview" class="active" tabindex="0">Overview</a></li>
+<li><a href="#skills" data-view="skills" tabindex="0">Skills</a></li>
+<li><a href="#memory" data-view="memory" tabindex="0">Memory</a></li>
+<li><a href="#graph" data-view="graph" tabindex="0">Knowledge Graph</a></li>
+<li><a href="#graphviz" data-view="graphviz" tabindex="0">Graph Viz</a></li>
+<li><a href="#discovery" data-view="discovery" tabindex="0">Discovery</a></li>
+<li><a href="#repository" data-view="repository" tabindex="0">Repository</a></li>
+</ul>
+<div class="theme-toggle"><button id="theme-btn" aria-label="Toggle dark/light mode">Toggle Theme</button></div>
+</nav>
+<main role="main" aria-live="polite">
+<div id="view-container"><div class="loading">Loading dashboard...</div></div>
+<footer>Generated by ai-os-dashboard. Source files remain authoritative.</footer>
+</main>
+</div>
+"""
+DASHBOARD_HTML += """\
+<script>
+const DATA = __DASHBOARD_DATA__;
+let currentView = 'overview';
+
+// Theme
+function initTheme() {
+  const saved = localStorage.getItem('ai-os-theme');
+  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+}
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('ai-os-theme', next);
+}
+initTheme();
+document.getElementById('theme-btn').addEventListener('click', toggleTheme);
+
+// Navigation
+const navLinks = document.querySelectorAll('nav a[data-view]');
+navLinks.forEach(link => {
+  link.addEventListener('click', e => { e.preventDefault(); navigate(link.dataset.view); });
+  link.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(link.dataset.view); }});
+});
+window.addEventListener('hashchange', () => { const v = location.hash.slice(1) || 'overview'; navigate(v, false); });
+
+function navigate(view, pushHash = true) {
+  currentView = view;
+  navLinks.forEach(l => l.classList.toggle('active', l.dataset.view === view));
+  if (pushHash) location.hash = view;
+  renderView(view);
+}
+
+function renderView(view) {
+  const container = document.getElementById('view-container');
+  container.innerHTML = '<div class="loading">Loading...</div>';
+  switch (view) {
+    case 'overview': container.innerHTML = renderOverview(); break;
+    case 'skills': renderSkills(container); break;
+    case 'memory': renderMemory(container); break;
+    case 'graph': renderGraph(container); break;
+    case 'graphviz': renderGraphViz(container); break;
+    case 'discovery': renderDiscovery(container); break;
+    case 'repository': renderRepository(container); break;
+    default: container.innerHTML = '<div class="error">Unknown view</div>';
+  }
+}
+
+// ── Overview ──
+function renderOverview() {
+  const r = DATA.repository || {}; const s = DATA.skills || {}; const m = DATA.memory || {};
+  const kg = DATA.knowledgeGraph || {}; const d = DATA.discovery || {};
+  const arts = (DATA.artifacts || {}).artifacts || [];
+  const missing = arts.filter(a => !a.exists);
+  let alertHtml = missing.length > 0
+    ? `<div class="warning">Warning: ${missing.length} artifact(s) missing. Run the corresponding build script.</div>`
+    : `<div class="success">All generated artifacts present.</div>`;
+  let artRows = arts.map(a => `<tr><td>${a.path}</td><td><span class="badge ${a.exists ? 'badge-ok' : 'badge-missing'}">${a.exists ? 'OK' : 'MISSING'}</span></td><td style="color:var(--text-muted);font-size:0.8rem">${a.generatedAt || '-'}</td></tr>`).join('');
+  return `<h2>Overview</h2>
+    <div class="grid">
+      <div class="stat-card"><div class="big">${r.totalFiles||0}</div><div class="label">Repository Files</div></div>
+      <div class="stat-card"><div class="big">${s.totalSkills||0}</div><div class="label">Skills</div></div>
+      <div class="stat-card"><div class="big">${m.totalRecords||0}</div><div class="label">Memory Records</div></div>
+      <div class="stat-card"><div class="big">${kg.totalNodes||0}</div><div class="label">Graph Nodes</div></div>
+      <div class="stat-card"><div class="big">${kg.totalEdges||0}</div><div class="label">Graph Edges</div></div>
+      <div class="stat-card"><div class="big">${d.terms||0}</div><div class="label">Indexed Terms</div></div>
+    </div>
+    ${alertHtml}
+    <div class="card"><h2>Artifact Status</h2><table><thead><tr><th>Artifact</th><th>Status</th><th>Generated At</th></tr></thead><tbody>${artRows}</tbody></table></div>`;
+}
+"""
+DASHBOARD_HTML += """\
+// ── Skills View ──
+function renderSkills(container) {
+  container.innerHTML = `<h2>Skills</h2>
+    <div class="filters">
+      <input type="search" id="skill-search" placeholder="Search skills..." aria-label="Search skills">
+      <input type="text" id="skill-path" placeholder="Filter by path..." aria-label="Filter by path">
+      <select id="skill-category" aria-label="Filter by category"><option value="">All categories</option></select>
+    </div>
+    <div id="skills-results"><div class="loading">Loading...</div></div>`;
+  fetchSkills();
+  document.getElementById('skill-search').addEventListener('input', debounce(fetchSkills, 200));
+  document.getElementById('skill-path').addEventListener('input', debounce(fetchSkills, 200));
+  document.getElementById('skill-category').addEventListener('change', fetchSkills);
+}
+function fetchSkills() {
+  const q = (document.getElementById('skill-search')||{}).value || '';
+  const path = (document.getElementById('skill-path')||{}).value || '';
+  const cat = (document.getElementById('skill-category')||{}).value || '';
+  const params = new URLSearchParams();
+  if (q) params.set('q', q); if (path) params.set('path', path); if (cat) params.set('category', cat);
+  fetch('/api/skills?' + params).then(r => r.json()).then(data => {
+    const el = document.getElementById('skills-results');
+    if (!el) return;
+    if (!data.available) { el.innerHTML = '<div class="error">Skills registry not available.</div>'; return; }
+    if (data.skills.length === 0) { el.innerHTML = '<div class="empty-state">No skills match the current filters.</div>'; return; }
+    const rows = data.skills.map(s => `<tr>
+      <td><strong>${esc(s.name)}</strong><br><span style="color:var(--text-muted);font-size:0.8rem">${esc(s.id)}</span></td>
+      <td>${esc(s.version)}</td><td><span class="badge badge-stable">${esc(s.status)}</span></td>
+      <td style="font-size:0.8rem">${esc(s.path)}</td>
+      <td style="font-size:0.8rem">${esc(s.description||'')}</td></tr>`).join('');
+    el.innerHTML = `<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:0.5rem">${data.total} skill(s)</p>
+      <table><thead><tr><th>Name</th><th>Version</th><th>Status</th><th>Path</th><th>Description</th></tr></thead><tbody>${rows}</tbody></table>`;
+  }).catch(() => { const el = document.getElementById('skills-results'); if (el) el.innerHTML = '<div class="error">Failed to load skills.</div>'; });
+}
+
+// ── Memory View ──
+function renderMemory(container) {
+  container.innerHTML = `<h2>Memory Records</h2>
+    <div class="warning" style="font-size:0.8rem">Only summaries are shown. Full contents are never exposed in the dashboard.</div>
+    <div class="filters">
+      <select id="mem-type" aria-label="Filter by type"><option value="">All types</option></select>
+      <select id="mem-status" aria-label="Filter by status"><option value="">All statuses</option></select>
+      <input type="text" id="mem-project" placeholder="Filter by project..." aria-label="Filter by project">
+    </div>
+    <div id="memory-results"><div class="loading">Loading...</div></div>`;
+  fetchMemory();
+  document.getElementById('mem-type').addEventListener('change', fetchMemory);
+  document.getElementById('mem-status').addEventListener('change', fetchMemory);
+  document.getElementById('mem-project').addEventListener('input', debounce(fetchMemory, 200));
+}
+function fetchMemory() {
+  const cat = (document.getElementById('mem-type')||{}).value || '';
+  const status = (document.getElementById('mem-status')||{}).value || '';
+  const project = (document.getElementById('mem-project')||{}).value || '';
+  const params = new URLSearchParams();
+  if (cat) params.set('category', cat); if (status) params.set('status', status); if (project) params.set('project', project);
+  fetch('/api/memory?' + params).then(r => r.json()).then(data => {
+    const el = document.getElementById('memory-results');
+    if (!el) return;
+    if (!data.available) { el.innerHTML = '<div class="error">Memory index not available.</div>'; return; }
+    if (data.records.length === 0) { el.innerHTML = '<div class="empty-state">No memory records match the current filters.</div>'; return; }
+    const items = data.records.map(r => {
+      const tags = (r.tags||[]).map(t => `<span class="tag">${esc(t)}</span>`).join(' ');
+      const related = (r.related||[]).map(rel => `<span class="tag">${esc(rel.name||rel.nodeId)} (${esc(rel.relationship)})</span>`).join(' ');
+      return `<div class="result-item">
+        <strong>${esc(r.title)}</strong> <span class="badge badge-active">${esc(r.type)}</span> <span class="badge badge-stable">${esc(r.status)}</span>
+        <div class="meta-row"><span>Scope:</span><strong>${esc(r.scope)}</strong> <span>Project:</span><strong>${esc(r.project||'-')}</strong> <span>Created:</span><strong>${esc(r.created)}</strong></div>
+        <div style="font-size:0.85rem;margin-top:0.25rem">${esc(r.summary)}</div>
+        ${tags ? '<div style="margin-top:0.25rem">'+tags+'</div>' : ''}
+        ${related ? '<div class="detail-section"><h3>Related Entities</h3>'+related+'</div>' : ''}
+      </div>`;
+    }).join('');
+    el.innerHTML = `<p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:0.5rem">${data.total} record(s)</p>${items}`;
+  }).catch(() => { const el = document.getElementById('memory-results'); if (el) el.innerHTML = '<div class="error">Failed to load memory.</div>'; });
+}
+"""
+DASHBOARD_HTML += """\
+// ── Knowledge Graph View ──
+let graphSubView = 'nodes';
+function renderGraph(container) {
+  container.innerHTML = `<h2>Knowledge Graph</h2>
+    <div class="filters">
+      <button id="graph-tab-nodes" class="badge badge-active" aria-pressed="true">Nodes</button>
+      <button id="graph-tab-edges" class="badge" aria-pressed="false">Edges</button>
+      <select id="graph-type" aria-label="Filter by type"><option value="">All types</option></select>
+      <input type="search" id="graph-search" placeholder="Search..." aria-label="Search graph">
+    </div>
+    <div id="graph-results"><div class="loading">Loading...</div></div>
+    <div id="graph-detail" style="display:none"></div>`;
+  document.getElementById('graph-tab-nodes').addEventListener('click', () => { graphSubView='nodes'; updateGraphTabs(); fetchGraph(); });
+  document.getElementById('graph-tab-edges').addEventListener('click', () => { graphSubView='edges'; updateGraphTabs(); fetchGraph(); });
+  document.getElementById('graph-type').addEventListener('change', fetchGraph);
+  document.getElementById('graph-search').addEventListener('input', debounce(fetchGraph, 200));
+  fetchGraphTypes();
+  fetchGraph();
+}
+function updateGraphTabs() {
+  document.getElementById('graph-tab-nodes').className = graphSubView==='nodes'?'badge badge-active':'badge';
+  document.getElementById('graph-tab-edges').className = graphSubView==='edges'?'badge badge-active':'badge';
+  document.getElementById('graph-tab-nodes').setAttribute('aria-pressed', graphSubView==='nodes');
+  document.getElementById('graph-tab-edges').setAttribute('aria-pressed', graphSubView==='edges');
+}
+function fetchGraphTypes() {
+  const kg = DATA.knowledgeGraph || {};
+  const sel = document.getElementById('graph-type');
+  if (!sel) return;
+  const types = graphSubView === 'nodes' ? Object.keys(kg.nodesByType||{}) : Object.keys(kg.edgesByType||{});
+  sel.innerHTML = '<option value="">All types</option>' + types.sort().map(t => `<option value="${t}">${t}</option>`).join('');
+}
+function fetchGraph() {
+  fetchGraphTypes();
+  const type = (document.getElementById('graph-type')||{}).value || '';
+  const q = (document.getElementById('graph-search')||{}).value || '';
+  const params = new URLSearchParams();
+  if (type) params.set('type', type); if (q) params.set('q', q); params.set('limit', '100');
+  const endpoint = graphSubView === 'nodes' ? '/api/graph/nodes' : '/api/graph/edges';
+  fetch(endpoint + '?' + params).then(r => r.json()).then(data => {
+    const el = document.getElementById('graph-results');
+    if (!el) return;
+    document.getElementById('graph-detail').style.display = 'none';
+    if (!data.available) { el.innerHTML = '<div class="error">Knowledge graph not available.</div>'; return; }
+    if (graphSubView === 'nodes') {
+      if (data.nodes.length === 0) { el.innerHTML = '<div class="empty-state">No nodes match filters.</div>'; return; }
+      const rows = data.nodes.map(n => `<tr>
+        <td><a href="#" class="node-link" data-id="${esc(n.id)}">${esc(n.id)}</a></td>
+        <td>${esc(n.name)}</td><td><span class="badge badge-active">${esc(n.type)}</span></td>
+        <td style="font-size:0.8rem">${esc(n.sourcePath)}</td></tr>`).join('');
+      el.innerHTML = `<p style="color:var(--text-muted);font-size:0.85rem">${data.total} node(s) (showing ${data.nodes.length})</p>
+        <table><thead><tr><th>ID</th><th>Name</th><th>Type</th><th>Source</th></tr></thead><tbody>${rows}</tbody></table>`;
+      el.querySelectorAll('.node-link').forEach(link => link.addEventListener('click', e => { e.preventDefault(); showNodeDetail(link.dataset.id); }));
+    } else {
+      if (data.edges.length === 0) { el.innerHTML = '<div class="empty-state">No edges match filters.</div>'; return; }
+      const rows = data.edges.map(e => `<tr><td><span class="badge badge-active">${esc(e.type)}</span></td>
+        <td><a href="#" class="node-link" data-id="${esc(e.from)}">${esc(e.from)}</a></td>
+        <td><a href="#" class="node-link" data-id="${esc(e.to)}">${esc(e.to)}</a></td></tr>`).join('');
+      el.innerHTML = `<p style="color:var(--text-muted);font-size:0.85rem">${data.total} edge(s) (showing ${data.edges.length})</p>
+        <table><thead><tr><th>Type</th><th>From</th><th>To</th></tr></thead><tbody>${rows}</tbody></table>`;
+      el.querySelectorAll('.node-link').forEach(link => link.addEventListener('click', e => { e.preventDefault(); showNodeDetail(link.dataset.id); }));
+    }
+  }).catch(() => { const el = document.getElementById('graph-results'); if (el) el.innerHTML = '<div class="error">Failed to load graph data.</div>'; });
+}
+function showNodeDetail(nodeId) {
+  fetch('/api/graph/node/' + encodeURIComponent(nodeId)).then(r => r.json()).then(data => {
+    if (data.error) { alert(data.error); return; }
+    const el = document.getElementById('graph-detail');
+    const results = document.getElementById('graph-results');
+    if (!el) return;
+    results.style.display = 'none';
+    el.style.display = 'block';
+    const n = data.node;
+    const inRows = data.inbound.map(e => `<tr><td><span class="badge badge-active">${esc(e.relationship)}</span></td><td><a href="#" class="detail-node-link" data-id="${esc(e.nodeId)}">${esc(e.name||e.nodeId)}</a></td><td><span class="badge">${esc(e.type)}</span></td></tr>`).join('');
+    const outRows = data.outbound.map(e => `<tr><td><span class="badge badge-active">${esc(e.relationship)}</span></td><td><a href="#" class="detail-node-link" data-id="${esc(e.nodeId)}">${esc(e.name||e.nodeId)}</a></td><td><span class="badge">${esc(e.type)}</span></td></tr>`).join('');
+    el.innerHTML = `<a href="#" class="back-link" id="graph-back">&larr; Back to list</a>
+      <div class="card"><h2>${esc(n.name)}</h2>
+      <div class="meta-row"><span>ID:</span><strong>${esc(n.id)}</strong><span>Type:</span><strong>${esc(n.type)}</strong><span>Source:</span><strong>${esc(n.sourcePath)}</strong></div></div>
+      <div class="card"><h2>Inbound (${data.totalInbound})</h2>${inRows?'<table><thead><tr><th>Relationship</th><th>From</th><th>Type</th></tr></thead><tbody>'+inRows+'</tbody></table>':'<div class="empty-state">No inbound relationships.</div>'}</div>
+      <div class="card"><h2>Outbound (${data.totalOutbound})</h2>${outRows?'<table><thead><tr><th>Relationship</th><th>To</th><th>Type</th></tr></thead><tbody>'+outRows+'</tbody></table>':'<div class="empty-state">No outbound relationships.</div>'}</div>`;
+    document.getElementById('graph-back').addEventListener('click', e => { e.preventDefault(); el.style.display='none'; results.style.display='block'; });
+    el.querySelectorAll('.detail-node-link').forEach(link => link.addEventListener('click', e => { e.preventDefault(); showNodeDetail(link.dataset.id); }));
+  }).catch(() => alert('Failed to load node detail'));
+}
+"""
+DASHBOARD_HTML += """\
+// ── Discovery View ──
+function renderDiscovery(container) {
+  container.innerHTML = `<h2>Semantic Discovery</h2>
+    <div class="filters">
+      <input type="search" id="disc-search" placeholder="Search query..." aria-label="Discovery search" style="min-width:250px">
+      <select id="disc-type" aria-label="Filter by type"><option value="">All types</option></select>
+      <input type="text" id="disc-path" placeholder="Path filter..." aria-label="Filter by path">
+      <button id="disc-go" style="padding:0.5rem 1rem;background:var(--accent);color:#fff;border:none;border-radius:4px;cursor:pointer">Search</button>
+    </div>
+    <div id="disc-results"><div class="empty-state">Enter a search query to explore the repository.</div></div>`;
+  const types = [...new Set((DATA.knowledgeGraph||{}).nodesByType ? Object.keys((DATA.knowledgeGraph||{}).nodesByType) : [])];
+  const sel = document.getElementById('disc-type');
+  types.sort().forEach(t => { const o = document.createElement('option'); o.value=t; o.textContent=t; sel.appendChild(o); });
+  document.getElementById('disc-go').addEventListener('click', fetchDiscovery);
+  document.getElementById('disc-search').addEventListener('keydown', e => { if (e.key==='Enter') fetchDiscovery(); });
+}
+function fetchDiscovery() {
+  const q = (document.getElementById('disc-search')||{}).value || '';
+  const type = (document.getElementById('disc-type')||{}).value || '';
+  const path = (document.getElementById('disc-path')||{}).value || '';
+  if (!q.trim()) { document.getElementById('disc-results').innerHTML = '<div class="empty-state">Enter a search query.</div>'; return; }
+  const params = new URLSearchParams(); params.set('q', q); if (type) params.set('type', type); if (path) params.set('path', path);
+  document.getElementById('disc-results').innerHTML = '<div class="loading">Searching...</div>';
+  fetch('/api/discovery/search?' + params).then(r => r.json()).then(data => {
+    const el = document.getElementById('disc-results');
+    if (!el) return;
+    if (data.error) { el.innerHTML = `<div class="error">${esc(data.error)}</div>`; return; }
+    if (data.results.length === 0) { el.innerHTML = '<div class="empty-state">No results found.</div>'; return; }
+    const items = data.results.map(r => {
+      const reasons = (r.reasons||[]).join('; ');
+      const related = (r.related||[]).map(rel => `<span class="tag">${esc(rel.nodeId)} (${esc(rel.relationship)})</span>`).join(' ');
+      return `<div class="result-item">
+        <span class="result-score">${r.score}</span> <strong>${esc(r.name)}</strong> <span class="badge badge-active">${esc(r.type)}</span>
+        <div style="font-size:0.8rem;color:var(--text-muted)">${esc(r.sourcePath)}</div>
+        <div class="result-reasons">Matched: ${(r.matchedFields||[]).join(', ')} | ${esc(reasons)}</div>
+        ${related ? '<div style="margin-top:0.25rem">'+related+'</div>' : ''}
+        <a href="#" class="explain-link" data-id="${esc(r.id.replace('entity:',''))}" data-q="${esc(q)}" style="font-size:0.8rem">Explain</a>
+      </div>`;
+    }).join('');
+    el.innerHTML = `<p style="color:var(--text-muted);font-size:0.85rem">${data.total} result(s) for "${esc(q)}"</p>${items}`;
+    el.querySelectorAll('.explain-link').forEach(link => link.addEventListener('click', e => {
+      e.preventDefault();
+      const nodeId = link.dataset.id; const query = link.dataset.q;
+      showExplain(nodeId, query);
+    }));
+  }).catch(() => { const el = document.getElementById('disc-results'); if (el) el.innerHTML = '<div class="error">Search failed.</div>'; });
+}
+function showExplain(nodeId, query) {
+  fetch('/api/discovery/explain/' + encodeURIComponent(nodeId) + '?q=' + encodeURIComponent(query)).then(r => r.json()).then(data => {
+    if (data.error) { alert(data.error); return; }
+    const el = document.getElementById('disc-results');
+    const n = data.node || {};
+    const neighbors = (data.neighborDetails||[]).map(nd => `<tr><td>${esc(nd.direction)}</td><td><span class="badge badge-active">${esc(nd.relationship)}</span></td><td>${esc(nd.name||nd.nodeId)}</td></tr>`).join('');
+    el.innerHTML = `<a href="#" class="back-link" id="disc-back">&larr; Back to results</a>
+      <div class="card"><h2>Explain: ${esc(n.name||nodeId)}</h2>
+      <div class="meta-row"><span>Node:</span><strong>${esc(nodeId)}</strong><span>Type:</span><strong>${esc(n.type||'')}</strong><span>Query:</span><strong>"${esc(query)}"</strong></div>
+      <div class="meta-row"><span>Score:</span><strong>${data.score}</strong><span>Neighbors:</span><strong>${data.neighbors}</strong></div>
+      <div class="detail-section"><h3>Matched Fields</h3><div>${(data.matchedFields||[]).map(f=>'<span class="tag">'+esc(f)+'</span>').join(' ')||'None'}</div></div>
+      <div class="detail-section"><h3>Scoring Reasons</h3><div>${(data.reasons||[]).map(r=>'<div style="font-size:0.85rem">- '+esc(r)+'</div>').join('')||'No direct match.'}</div></div>
+      ${neighbors?'<div class="detail-section"><h3>Neighbors (top 10)</h3><table><thead><tr><th>Direction</th><th>Relationship</th><th>Name</th></tr></thead><tbody>'+neighbors+'</tbody></table></div>':''}
+      </div>`;
+    document.getElementById('disc-back').addEventListener('click', e => { e.preventDefault(); fetchDiscovery(); });
+  }).catch(() => alert('Failed to load explanation'));
+}
+"""
+DASHBOARD_HTML += """\
+// ── Repository View ──
+function renderRepository(container) {
+  const r = DATA.repository || {};
+  const counts = r.counts || {};
+  const categories = Object.keys(counts).sort();
+  const catOptions = categories.map(c => `<option value="${c}">${c} (${counts[c]})</option>`).join('');
+  container.innerHTML = `<h2>Repository</h2>
+    <div class="grid">
+      <div class="stat-card"><div class="big">${r.totalFiles||0}</div><div class="label">Total Files</div></div>
+      ${categories.map(c => `<div class="stat-card"><div class="big">${counts[c]}</div><div class="label">${c}</div></div>`).join('')}
+    </div>
+    <div class="filters">
+      <select id="repo-cat" aria-label="Filter by category"><option value="">All categories</option>${catOptions}</select>
+      <input type="search" id="repo-search" placeholder="Search files..." aria-label="Search files">
+    </div>
+    <div id="repo-results"><div class="loading">Loading...</div></div>`;
+  fetchRepo();
+  document.getElementById('repo-cat').addEventListener('change', fetchRepo);
+  document.getElementById('repo-search').addEventListener('input', debounce(fetchRepo, 200));
+}
+function fetchRepo() {
+  const cat = (document.getElementById('repo-cat')||{}).value || '';
+  const q = (document.getElementById('repo-search')||{}).value || '';
+  const params = new URLSearchParams(); if (cat) params.set('category', cat); if (q) params.set('q', q); params.set('limit', '100');
+  fetch('/api/repository?' + params).then(r => r.json()).then(data => {
+    const el = document.getElementById('repo-results');
+    if (!el) return;
+    if (!data.available) { el.innerHTML = '<div class="error">Repository index not available.</div>'; return; }
+    if (data.files.length === 0) { el.innerHTML = '<div class="empty-state">No files match filters.</div>'; return; }
+    const rows = data.files.map(f => `<tr><td>${esc(f.path)}</td><td><span class="badge badge-active">${esc(f.category)}</span></td><td style="text-align:right">${f.size}</td></tr>`).join('');
+    el.innerHTML = `<p style="color:var(--text-muted);font-size:0.85rem">${data.total} file(s) (showing ${data.files.length})</p>
+      <table><thead><tr><th>Path</th><th>Category</th><th style="text-align:right">Size</th></tr></thead><tbody>${rows}</tbody></table>`;
+  }).catch(() => { const el = document.getElementById('repo-results'); if (el) el.innerHTML = '<div class="error">Failed to load repository.</div>'; });
+}
+
+// ── Graph Visualization View ──
+const NODE_COLORS = {skill:'#3b82f6',memory:'#8b5cf6',document:'#6b7280',platform:'#f59e0b',tool:'#10b981',concept:'#ef4444',project:'#ec4899'};
+let vizData = null;
+let vizFocusNode = null;
+
+function renderGraphViz(container) {
+  const kg = DATA.knowledgeGraph || {};
+  const nodeTypes = Object.keys(kg.nodesByType || {}).sort();
+  const edgeTypes = Object.keys(kg.edgesByType || {}).sort();
+  const ntOpts = nodeTypes.map(t => `<option value="${t}">${t}</option>`).join('');
+  const etOpts = edgeTypes.map(t => `<option value="${t}">${t}</option>`).join('');
+  container.innerHTML = `<h2>Knowledge Graph Visualization</h2>
+    <div class="filters">
+      <input type="search" id="viz-search" placeholder="Focus on node..." aria-label="Search node to focus">
+      <select id="viz-node-type" aria-label="Filter by node type"><option value="">All node types</option>${ntOpts}</select>
+      <select id="viz-edge-type" aria-label="Filter by edge type"><option value="">All edge types</option>${etOpts}</select>
+      <select id="viz-depth" aria-label="Expansion depth"><option value="1">Depth 1</option><option value="2">Depth 2</option><option value="3">Depth 3</option></select>
+      <button id="viz-go" style="padding:0.5rem 1rem;background:var(--accent);color:#fff;border:none;border-radius:4px;cursor:pointer">Load</button>
+    </div>
+    <div class="graph-legend" id="viz-legend"></div>
+    <div class="graph-info" id="viz-info"></div>
+    <div class="graph-container" id="viz-svg-container" role="img" aria-label="Knowledge graph visualization"></div>
+    <div id="viz-node-detail" style="display:none"></div>
+    <div id="viz-fallback"></div>`;
+  document.getElementById('viz-go').addEventListener('click', loadViz);
+  document.getElementById('viz-search').addEventListener('keydown', e => { if (e.key==='Enter') loadViz(); });
+  renderLegend(nodeTypes);
+  loadViz();
+}
+
+function renderLegend(types) {
+  const el = document.getElementById('viz-legend');
+  if (!el) return;
+  el.innerHTML = types.map(t => `<span><span class="dot" style="background:${NODE_COLORS[t]||'#6b7280'}"></span>${esc(t)}</span>`).join('');
+}
+
+function loadViz() {
+  const search = (document.getElementById('viz-search')||{}).value || '';
+  const nodeType = (document.getElementById('viz-node-type')||{}).value || '';
+  const edgeType = (document.getElementById('viz-edge-type')||{}).value || '';
+  const depth = (document.getElementById('viz-depth')||{}).value || '1';
+  const params = new URLSearchParams();
+  if (search) params.set('focus', search);
+  if (nodeType) params.set('nodeType', nodeType);
+  if (edgeType) params.set('edgeType', edgeType);
+  params.set('depth', depth);
+  const info = document.getElementById('viz-info');
+  if (info) info.innerHTML = '<span>Loading graph...</span>';
+  fetch('/api/graph/visualize?' + params).then(r => r.json()).then(data => {
+    vizData = data;
+    if (!data.available) { showFallback('Knowledge graph not available.'); return; }
+    if (data.nodes.length === 0) { showFallback('No nodes match the current filters.'); return; }
+    const info = document.getElementById('viz-info');
+    if (info) info.innerHTML = `<span>Showing ${data.showing} of ${data.total} nodes</span><span>${data.edges.length} edges</span>${data.truncated?'<span class="warning" style="padding:0.25rem 0.5rem;margin:0">View limited to '+data.maxNodes+' nodes</span>':''}`;
+    document.getElementById('viz-fallback').innerHTML = '';
+    document.getElementById('viz-node-detail').style.display = 'none';
+    renderSVG(data);
+  }).catch(() => { showFallback('Failed to load graph data.'); });
+}
+
+function showFallback(msg) {
+  const svgC = document.getElementById('viz-svg-container');
+  if (svgC) svgC.innerHTML = '';
+  const fb = document.getElementById('viz-fallback');
+  if (!fb) return;
+  if (!vizData || !vizData.nodes || vizData.nodes.length === 0) {
+    fb.innerHTML = `<div class="empty-state">${esc(msg)}</div>`;
+    return;
+  }
+  // Render table fallback
+  const rows = vizData.nodes.map(n => `<tr><td>${esc(n.id)}</td><td>${esc(n.name)}</td><td><span class="badge badge-active">${esc(n.type)}</span></td><td style="font-size:0.8rem">${esc(n.sourcePath)}</td></tr>`).join('');
+  fb.innerHTML = `<div class="card"><h2>Fallback Table View</h2><p class="empty-state">${esc(msg)}</p><table><thead><tr><th>ID</th><th>Name</th><th>Type</th><th>Source</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+function renderSVG(data) {
+  const container = document.getElementById('viz-svg-container');
+  if (!container) return;
+  const W = container.clientWidth || 800;
+  const H = container.clientHeight || 500;
+  const nodes = data.nodes.map((n, i) => ({...n, x: W/2 + (Math.cos(i*2.4)*(W*0.35)), y: H/2 + (Math.sin(i*2.4)*(H*0.35)), vx: 0, vy: 0}));
+  const nodeMap = {}; nodes.forEach(n => nodeMap[n.id] = n);
+  const edges = data.edges.filter(e => nodeMap[e.from] && nodeMap[e.to]);
+
+  // Simple force simulation (no library)
+  for (let iter = 0; iter < 80; iter++) {
+    // Repulsion between all nodes
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i+1; j < nodes.length; j++) {
+        let dx = nodes[j].x - nodes[i].x;
+        let dy = nodes[j].y - nodes[i].y;
+        let dist = Math.sqrt(dx*dx+dy*dy) || 1;
+        let force = 800 / (dist*dist);
+        let fx = (dx/dist)*force; let fy = (dy/dist)*force;
+        nodes[i].vx -= fx; nodes[i].vy -= fy;
+        nodes[j].vx += fx; nodes[j].vy += fy;
+      }
+    }
+    // Attraction along edges
+    for (const e of edges) {
+      const s = nodeMap[e.from]; const t = nodeMap[e.to];
+      let dx = t.x - s.x; let dy = t.y - s.y;
+      let dist = Math.sqrt(dx*dx+dy*dy) || 1;
+      let force = (dist - 80) * 0.02;
+      let fx = (dx/dist)*force; let fy = (dy/dist)*force;
+      s.vx += fx; s.vy += fy; t.vx -= fx; t.vy -= fy;
+    }
+    // Center gravity
+    for (const n of nodes) {
+      n.vx += (W/2 - n.x)*0.005; n.vy += (H/2 - n.y)*0.005;
+      n.x += n.vx * 0.3; n.y += n.vy * 0.3;
+      n.vx *= 0.7; n.vy *= 0.7;
+      n.x = Math.max(20, Math.min(W-20, n.x)); n.y = Math.max(20, Math.min(H-20, n.y));
+    }
+  }
+
+  // Render SVG
+  let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Graph with ${nodes.length} nodes and ${edges.length} edges">`;
+  // Edges
+  for (const e of edges) {
+    const s = nodeMap[e.from]; const t = nodeMap[e.to];
+    const cls = vizFocusNode && (e.from===vizFocusNode||e.to===vizFocusNode) ? 'edge-line highlighted' : 'edge-line';
+    svg += `<line class="${cls}" x1="${s.x}" y1="${s.y}" x2="${t.x}" y2="${t.y}" data-type="${esc(e.type)}"/>`;
+  }
+  // Nodes
+  for (const n of nodes) {
+    const color = NODE_COLORS[n.type] || '#6b7280';
+    let cls = 'node-circle';
+    if (n.id === vizFocusNode) cls += ' focused';
+    else if (vizFocusNode && edges.some(e => (e.from===vizFocusNode&&e.to===n.id)||(e.to===vizFocusNode&&e.from===n.id))) cls += ' neighbor';
+    const r = n.id === vizFocusNode ? 10 : 7;
+    svg += `<circle class="${cls}" cx="${n.x}" cy="${n.y}" r="${r}" fill="${color}" data-id="${esc(n.id)}" tabindex="0" role="button" aria-label="${esc(n.name)} (${esc(n.type)})"><title>${esc(n.name)} [${esc(n.type)}]</title></circle>`;
+    svg += `<text class="node-label" x="${n.x}" y="${n.y+16}">${esc(n.name.length>15?n.name.slice(0,14)+'…':n.name)}</text>`;
+  }
+  svg += '</svg>';
+  container.innerHTML = svg;
+
+  // Click handlers
+  container.querySelectorAll('.node-circle').forEach(circle => {
+    circle.addEventListener('click', () => selectVizNode(circle.dataset.id));
+    circle.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' ') { e.preventDefault(); selectVizNode(circle.dataset.id); }});
+  });
+}
+
+function selectVizNode(nodeId) {
+  vizFocusNode = nodeId;
+  // Re-render with highlight
+  if (vizData) renderSVG(vizData);
+  // Show detail panel
+  fetch('/api/graph/node/' + encodeURIComponent(nodeId)).then(r => r.json()).then(data => {
+    if (data.error) return;
+    const el = document.getElementById('viz-node-detail');
+    if (!el) return;
+    el.style.display = 'block';
+    const n = data.node;
+    const inRows = data.inbound.slice(0,10).map(e => `<tr><td><span class="badge badge-active">${esc(e.relationship)}</span></td><td>${esc(e.name||e.nodeId)}</td><td><span class="badge">${esc(e.type)}</span></td></tr>`).join('');
+    const outRows = data.outbound.slice(0,10).map(e => `<tr><td><span class="badge badge-active">${esc(e.relationship)}</span></td><td>${esc(e.name||e.nodeId)}</td><td><span class="badge">${esc(e.type)}</span></td></tr>`).join('');
+    el.innerHTML = `<div class="card">
+      <h2>${esc(n.name)}</h2>
+      <div class="meta-row"><span>ID:</span><strong>${esc(n.id)}</strong><span>Type:</span><strong>${esc(n.type)}</strong><span>Source:</span><strong>${esc(n.sourcePath)}</strong></div>
+      <div class="detail-section"><h3>Inbound (${data.totalInbound})</h3>${inRows?'<table><thead><tr><th>Relationship</th><th>From</th><th>Type</th></tr></thead><tbody>'+inRows+'</tbody></table>':'<div class="empty-state">None</div>'}</div>
+      <div class="detail-section"><h3>Outbound (${data.totalOutbound})</h3>${outRows?'<table><thead><tr><th>Relationship</th><th>To</th><th>Type</th></tr></thead><tbody>'+outRows+'</tbody></table>':'<div class="empty-state">None</div>'}</div>
+      <button onclick="document.getElementById('viz-search').value='${esc(n.id)}';loadViz()" style="margin-top:0.5rem;padding:0.4rem 0.8rem;background:var(--accent);color:#fff;border:none;border-radius:4px;cursor:pointer">Focus on this node</button>
+    </div>`;
+  }).catch(()=>{});
+}
+
+// ── Utilities ──
+function esc(s) { if (!s) return ''; return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function debounce(fn, ms) { let t; return function(...args) { clearTimeout(t); t = setTimeout(() => fn.apply(this, args), ms); }; }
+
+// Init
+const initView = location.hash.slice(1) || 'overview';
+navigate(initView, false);
+</script>
+</body>
+</html>
+"""
