@@ -18,3 +18,5 @@ env/
 .pytest_cache/
 .DS_Store
 Thumbs.db
+
+extensions.txt

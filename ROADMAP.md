@@ -15,6 +15,10 @@ Structured local memory architecture, memory schema and registry, memory CRUD-st
 
 Deterministic local graph generation from repository source files, graph validation and staleness checks, relationship discovery from explicit references and metadata, and generated graph summaries.
 
+## Phase 4 — Semantic Discovery (Implemented)
+
+Local semantic discovery and graph-query engine combining the knowledge graph, source file metadata, and memory records into a deterministic search index. Supports keyword, phrase, type, path, and relationship filtering with graph traversal, shortest-path finding, and scoring explanations. CLI provides search, related, traverse, path, explain, and stats commands.
+
 ## Version 1.1 — Workflow Improvements (Proposed)
 Improved bootstrap, deeper validation, more examples, and expanded Power Apps, Power Automate, and web deployment guidance.
 

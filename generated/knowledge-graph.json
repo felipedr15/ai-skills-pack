@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-13T04:38:15Z",
+  "generatedAt": "2026-07-13T06:14:15Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 324,
-    "edges": 500,
+    "nodes": 325,
+    "edges": 503,
     "nodesByType": {
       "concept": 2,
-      "document": 286,
+      "document": 287,
       "memory": 5,
       "platform": 5,
       "project": 10,
@@ -18,10 +18,10 @@
       "belongs_to": 2,
       "contains": 129,
       "generated_from": 14,
-      "references": 166,
+      "references": 167,
       "related_to": 101,
       "supports": 4,
-      "uses": 84
+      "uses": 86
     }
   },
   "nodes": [
@@ -615,6 +615,15 @@
       "type": "document",
       "name": "Phase 3 Knowledge Graph",
       "sourcePath": "knowledge/architecture/phase-3-knowledge-graph.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:knowledge/architecture/phase-4-semantic-discovery.md",
+      "type": "document",
+      "name": "Phase 4 Semantic Discovery",
+      "sourcePath": "knowledge/architecture/phase-4-semantic-discovery.md",
       "metadata": {
         "extension": ".md"
       }
@@ -4980,6 +4989,15 @@
       }
     },
     {
+      "id": "edge:7b65289dbb8ef78d",
+      "type": "references",
+      "from": "document:knowledge/architecture/phase-4-semantic-discovery.md",
+      "to": "document:knowledge/architecture/README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:40262f8233604605",
       "type": "references",
       "from": "document:knowledge/best-practices/README.md",
@@ -7036,6 +7054,24 @@
       "type": "uses",
       "from": "document:knowledge/README.md",
       "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:64b63619aa7575a5",
+      "type": "uses",
+      "from": "document:knowledge/architecture/phase-4-semantic-discovery.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:2971b01510a8f343",
+      "type": "uses",
+      "from": "document:knowledge/architecture/phase-4-semantic-discovery.md",
+      "to": "tool:mcp",
       "metadata": {
         "source": "document_text"
       }

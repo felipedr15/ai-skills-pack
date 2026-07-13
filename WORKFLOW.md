@@ -48,3 +48,22 @@ python scripts/validate-all.py
 2. Validate graph schema, references, and path safety with `python scripts/validate-knowledge-graph.py`.
 3. Check generated graph freshness without writing via `python scripts/generate-knowledge-graph.py --check`.
 4. Run unified validation to confirm no regressions in prior phases.
+
+## Phase 4 Semantic Discovery Workflow (Implemented)
+
+1. Build discovery index from knowledge graph and source files with `python scripts/discovery-build.py`.
+2. Validate discovery index structure with `python scripts/discovery-validate.py`.
+3. Check generated discovery index freshness without writing via `python scripts/discovery-check.py`.
+4. Query the repository using the discovery CLI:
+
+```text
+python scripts/discover.py search "knowledge graph"
+python scripts/discover.py search validation --type skill
+python scripts/discover.py related <node-id>
+python scripts/discover.py traverse <node-id> --depth 2
+python scripts/discover.py path <source-id> <target-id>
+python scripts/discover.py explain <node-id> "query"
+python scripts/discover.py stats
+```
+
+5. Run unified validation to confirm no regressions across all phases.

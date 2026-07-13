@@ -37,7 +37,7 @@ references/ ------> tool-specific guidance
 
 `validate-all.py` is the unified read-only validation entry point. It checks existing repository rules, generated-file freshness, JSON, metadata, links, identifiers, dependencies, secret patterns, required templates, and unit tests. `create-project.py` copies a selected starter, safely replaces project placeholders, emits `project.yaml`, and optionally initializes Git without installing dependencies or committing.
 
-Phase 2 implements local structured memory records, deterministic memory indexing, memory lifecycle commands, archive and promotion flows, and memory-specific security validation. Phase 3 implements a deterministic local knowledge graph generated from repository sources. Advanced orchestration, publishing, deployment, and release automation remain proposed.
+Phase 2 implements local structured memory records, deterministic memory indexing, memory lifecycle commands, archive and promotion flows, and memory-specific security validation. Phase 3 implements a deterministic local knowledge graph generated from repository sources. Phase 4 implements a local semantic discovery and graph-query engine that combines the knowledge graph, source files, and memory metadata into a searchable index with deterministic ranking, graph traversal, and CLI querying. Advanced orchestration, publishing, deployment, and release automation remain proposed.
 
 ## Knowledge Graph Architecture
 
@@ -54,6 +54,22 @@ Source files remain authoritative. Generated graph artifacts are derived views.
 Graph model includes nodes and edges with deterministic IDs and normalized relative paths. Relationship discovery is conservative and uses explicit links, wiki links, metadata, and curated text cues.
 
 Staleness checks compare regenerated graph data to checked-in output while ignoring `generatedAt`.
+
+## Semantic Discovery Architecture
+
+The Semantic Discovery engine is repository-local and combines the knowledge graph with source file metadata into a queryable search index.
+
+- Query CLI: `scripts/discover.py`
+- Builder: `scripts/discovery-build.py`
+- Validator: `scripts/discovery-validate.py`
+- Staleness check: `scripts/discovery-check.py`
+- Internal modules: `scripts/semantic_discovery/`
+- JSON output: `generated/discovery-index.json`
+- Markdown summary: `generated/discovery-index.md`
+
+Query modes: search, related, traverse, path, explain, stats. Ranking is deterministic with stable tie-breaking (score descending, type, name, ID). Graph traversal uses BFS with cycle protection and configurable depth (max 5).
+
+Source files remain authoritative. The discovery index is a derived compact artifact that references source paths and graph node IDs without duplicating source content. Staleness checks ignore `generatedAt` only.
 
 ## Memory Engine Architecture
 

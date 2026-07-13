@@ -115,6 +115,8 @@ def main():
     run_command(results, "knowledge graph structure validation", [python, "scripts/validate-knowledge-graph.py"])
     run_command(results, "memory security secret-pattern validation", [python, "scripts/validate-memory-security.py"])
     run_command(results, "repository index validation", [python, "scripts/index-repository.py", "--check"])
+    run_command(results, "discovery index staleness validation", [python, "scripts/discovery-check.py"])
+    run_command(results, "discovery index structure validation", [python, "scripts/discovery-validate.py"])
     validate_json(results)
     validate_links(results)
     validate_secrets(results)

@@ -8,6 +8,7 @@
 - One-command project bootstrap with starter discovery, `project.yaml`, overwrite protection, and optional Git initialization.
 - Phase 2 Memory Engine with structured memory folders, memory schema, source registry, deterministic generated memory indexes, memory add/list/search/archive/promote scripts, security scanning, and dedicated memory tests.
 - Phase 3 Knowledge Graph with deterministic local graph generation, standalone build/validate/check commands, generated knowledge graph artifacts, and dedicated Knowledge Graph tests.
+- Phase 4 Semantic Discovery with local query engine, deterministic search ranking, graph traversal (BFS, shortest path, neighbors), term-based inverted index, type/path/relationship filtering, explain and stats commands, standalone build/validate/check scripts, generated discovery artifacts, and 63 dedicated tests.
 
 ### Changed
 - Evolved the AI Skills Pack README into the AI OS entry point while preserving its reusable-skill purpose.
@@ -15,6 +16,7 @@
 - Updated continuous integration to check generated artifacts and run unified validation plus unit tests with read-only permissions.
 - Updated validation and workflow documentation to include memory structure checks, generated memory index freshness checks, and memory security scanning.
 - Extended unified and CI validation to include knowledge graph freshness and structure checks.
+- Extended unified and CI validation to include discovery index freshness and structure checks.
 
 ### Fixed
 - Added useful content to the previously empty analytical skill.

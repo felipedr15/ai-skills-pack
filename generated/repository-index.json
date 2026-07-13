@@ -7,9 +7,9 @@
     "project-starters": 129,
     "templates": 30,
     "standards": 9,
-    "knowledge": 17,
+    "knowledge": 18,
     "references": 11,
-    "scripts": 28
+    "scripts": 43
   },
   "files": [
     {
@@ -93,14 +93,20 @@
     {
       "path": "knowledge/architecture/README.md",
       "category": "knowledge",
-      "size": 577,
-      "sha256": "71a95a58d160ff6f0045dba551da54c697d4e3e2d04fa817954e5b8eaaf7ba08"
+      "size": 559,
+      "sha256": "70bc66eefeb189c80980bbec361812f110421ba675ed15ce6c84ee96ddd4879a"
     },
     {
       "path": "knowledge/architecture/phase-3-knowledge-graph.md",
       "category": "knowledge",
-      "size": 1306,
-      "sha256": "9052a198385c27f254c53ebed5e08652c1a55e4b77d2b17b2cbc5ea79a7fbdfc"
+      "size": 1247,
+      "sha256": "3f9f6224111b607d12585405f4ee77f093a009a7b08d1ea355e1ac43e223d0be"
+    },
+    {
+      "path": "knowledge/architecture/phase-4-semantic-discovery.md",
+      "category": "knowledge",
+      "size": 3182,
+      "sha256": "c0fe06eda7956b6f52a3a267ac599bc035913c0ddb8b817231ab4e25d1126e65"
     },
     {
       "path": "knowledge/best-practices/README.md",
@@ -1089,14 +1095,14 @@
     {
       "path": "references/workflow-examples.md",
       "category": "references",
-      "size": 4124,
-      "sha256": "c053045f5fc3bf281ead2b10e3253601667ea9d1dcf75761f0c841f2ccb917fe"
+      "size": 4057,
+      "sha256": "7ec7322a9192c5f0161b0b67bc6b074002eaa288a7384f2de9c515cbf17545b1"
     },
     {
       "path": "scripts/README.md",
       "category": "scripts",
-      "size": 572,
-      "sha256": "27ee5e70284c6f82eecc0792f7181fbb3055d84166a8041fd15da84e9b39462c"
+      "size": 733,
+      "sha256": "7e2675b8ba2f8d58fc82192db1912bcf5dfc050b98fe4c54102d748909277f38"
     },
     {
       "path": "scripts/create-project.py",
@@ -1105,16 +1111,40 @@
       "sha256": "fb3e8620022bc4c75490e49dc3a4973202edf9d3f072badad65b9e0fdf04b5e6"
     },
     {
+      "path": "scripts/discover.py",
+      "category": "scripts",
+      "size": 5574,
+      "sha256": "7b66409fd7e7035472b3c5c0e26ef3b9a13f24079594998e4356a96112015034"
+    },
+    {
+      "path": "scripts/discovery-build.py",
+      "category": "scripts",
+      "size": 963,
+      "sha256": "d51505554ec0ac8bb847b6f6396f139b08bece042c80c30c18848fb490772ad9"
+    },
+    {
+      "path": "scripts/discovery-check.py",
+      "category": "scripts",
+      "size": 984,
+      "sha256": "db6cac28f2dcf8c3f031d2a56074fcddeb43d16838b8a04d47f860a3df352e68"
+    },
+    {
+      "path": "scripts/discovery-validate.py",
+      "category": "scripts",
+      "size": 1356,
+      "sha256": "c9a81e295024ccfceec8bf4f7a6225f32c1881bdf7aa2cd6fd1b1538f0605e27"
+    },
+    {
       "path": "scripts/generate-knowledge-graph.py",
       "category": "scripts",
-      "size": 3519,
-      "sha256": "fe3569e179f2ba04d4611ac9638ec116be7f18c1773853e4a4a43ad972059605"
+      "size": 3419,
+      "sha256": "6bf0dd771be6ba9cb27f98f0ab93b4d3a5e76d3865b63686322c4fa06e39c819"
     },
     {
       "path": "scripts/generate-memory-index.py",
       "category": "scripts",
-      "size": 6146,
-      "sha256": "188a2152ebfbf60b504c8cf16581d77435ed9beb1e538d7f626ea2857224f00a"
+      "size": 5957,
+      "sha256": "ac5b1bf0cbac36b79fbdb73ea1392e59619a2dabcaa6f1f8b457b9f2f7907932"
     },
     {
       "path": "scripts/generate-skill-registry.py",
@@ -1131,62 +1161,62 @@
     {
       "path": "scripts/knowledge-build.py",
       "category": "scripts",
-      "size": 460,
-      "sha256": "d2307908d4a480d1e9205815934922d50bb3752c120ba5dba7c308391fe9138f"
+      "size": 442,
+      "sha256": "7fa203cb8c31c4a310f5c747e2d2002622d6a33458678031ddc6a4cc1ca2edce"
     },
     {
       "path": "scripts/knowledge-check.py",
       "category": "scripts",
-      "size": 471,
-      "sha256": "7270577068bcd2aa10cab726a7e559cccee62e82fcc117c1f809f883897961bd"
+      "size": 453,
+      "sha256": "b9877a4719dd075a5e1c8a4d68312865173f4a0f7fdc6e65a851f2a0838a4de2"
     },
     {
       "path": "scripts/knowledge-validate.py",
       "category": "scripts",
-      "size": 463,
-      "sha256": "77f3917b540d24f5786ef70354e28626eaa7f40406ffa3e2f565c1937ba7722a"
+      "size": 445,
+      "sha256": "e55c6e44e0df3e5e31aa1d84b7a2111b71f972789214acc82a10b8a53b209767"
     },
     {
       "path": "scripts/knowledge_graph/README.md",
       "category": "scripts",
-      "size": 269,
-      "sha256": "94044dda171310583d4bc542f1ee4621e1595b01120335175d046c8e293bdde1"
+      "size": 259,
+      "sha256": "2357fd168ced589ed0ff41d1af714752d7e6c1a42e2a8e64516771aad1063601"
     },
     {
       "path": "scripts/knowledge_graph/__init__.py",
       "category": "scripts",
-      "size": 320,
-      "sha256": "4cc70b54ad51caeac0a7d7acca3c3fb676248463949d07feb96a43c293ec8d4b"
+      "size": 313,
+      "sha256": "dbe35099a64ab608dce0969e47dc71ffcbdbdaa6e0351d1a176fff037fe76b02"
     },
     {
       "path": "scripts/knowledge_graph/build.py",
       "category": "scripts",
-      "size": 12406,
-      "sha256": "69dce7f1fd52e0db58e246398b6b374f82a2a7d43856a2757cb02b5de2c5714b"
+      "size": 12119,
+      "sha256": "6ee431b83cc394fb59655f7b32612a445c95ad40569cadb3d7e115b1521740df"
     },
     {
       "path": "scripts/knowledge_graph/extract.py",
       "category": "scripts",
-      "size": 4283,
-      "sha256": "6722776abf071bfac5ebb8428b1cf60d65211fa5140f214b1be11421c0f51c26"
+      "size": 4135,
+      "sha256": "8933d3ee1a507cc279a308eeff825991d296704a342c3102b01de31f435c4e77"
     },
     {
       "path": "scripts/knowledge_graph/render.py",
       "category": "scripts",
-      "size": 1861,
-      "sha256": "175b9a844d294644d7f66ffff6fe76b395f5031296cc44b08c8933b7ce340d81"
+      "size": 1805,
+      "sha256": "b1a9af8f3978aa13e583146976c7bfefe597d64ca8ed33c821ffbb1998bb6e8f"
     },
     {
       "path": "scripts/knowledge_graph/utils.py",
       "category": "scripts",
-      "size": 2978,
-      "sha256": "85a2ad299dcff0778830d41ba029df0a1b3de724e5965adc0d3a5d16cfdb12fa"
+      "size": 2867,
+      "sha256": "02047853ac4b0deeb333297d90c79b049ad0fc2d232ad5fccf631aecff3fbc5c"
     },
     {
       "path": "scripts/knowledge_graph/validate.py",
       "category": "scripts",
-      "size": 6754,
-      "sha256": "30aaef27ceb96015f81b8ca4e89e04c95549a479bf3f24a073f8e0610f8f2083"
+      "size": 6574,
+      "sha256": "9ba4d7b0e5c723e803418808d9c975eb95ddae6bdbe75badba5d8633de99ff6f"
     },
     {
       "path": "scripts/list-skills.py",
@@ -1197,50 +1227,116 @@
     {
       "path": "scripts/memory-add.py",
       "category": "scripts",
-      "size": 4272,
-      "sha256": "8177cb36c60fd67e3689291e4ab02b9da2d409de1d5ba8a8a27bad38823db9c2"
+      "size": 4149,
+      "sha256": "f5495209fdee9cf23990e8372e8675206f1bb22b3df7a02e81230daaa21e7b80"
     },
     {
       "path": "scripts/memory-archive.py",
       "category": "scripts",
-      "size": 2454,
-      "sha256": "833ad40be661d3b9772b7da2c33f5f0b7198688c7a1bd51d637549922c1a681f"
+      "size": 2380,
+      "sha256": "ede8d1b19d04d932761f5f7c89260b9779c0625512dc58e132b93b4337f9c328"
     },
     {
       "path": "scripts/memory-list.py",
       "category": "scripts",
-      "size": 2046,
-      "sha256": "d5216e40795e2379e84e4d9d18ed0ec936ea94532113bb0f6fe8491cfe7cdedf"
+      "size": 1984,
+      "sha256": "b9198e8816ef7d432034d94e97fb5fcaa1711f5917b5200dbdac79e2e1c5eec0"
     },
     {
       "path": "scripts/memory-promote.py",
       "category": "scripts",
-      "size": 6323,
-      "sha256": "4f7d6064166d4db0d30b6904daaad7529f6f8f1cd054183ee8391e5322726b72"
+      "size": 6178,
+      "sha256": "6f10e65438c2dd73d75c5229ca8927c19b29c8da5a4f3811f81db14e6d1d2cb3"
     },
     {
       "path": "scripts/memory-search.py",
       "category": "scripts",
-      "size": 4116,
-      "sha256": "5251d6cb298c93a0cf2891a5e4eedae94501b196fb8c5ee27c8637c572cdeb5d"
+      "size": 3988,
+      "sha256": "2a63326c73ef44fac649a22c93220929f2aeee3e0581296a02f37bf423494075"
     },
     {
       "path": "scripts/memory_utils.py",
       "category": "scripts",
-      "size": 11177,
-      "sha256": "ed915751bb01cac2c232971e85b49ab844076843a1422c817368fb6982e983a6"
+      "size": 10831,
+      "sha256": "e1eebe312bf4893f1aebad21380e5edc5c667dacb997f59b99885384d070c7be"
+    },
+    {
+      "path": "scripts/semantic_discovery/__init__.py",
+      "category": "scripts",
+      "size": 243,
+      "sha256": "0e3212ad46d181e653714820c2d3480c7fa9af1a8faf3e6beca4d7cb4d0999cc"
+    },
+    {
+      "path": "scripts/semantic_discovery/build.py",
+      "category": "scripts",
+      "size": 2539,
+      "sha256": "25bc93c5106a4119d23666d44f1fae82baad4941cbf1c7e9630b303604a4acf1"
+    },
+    {
+      "path": "scripts/semantic_discovery/cli.py",
+      "category": "scripts",
+      "size": 11289,
+      "sha256": "d7ee5715f567e6867c463adad856e7f432da1a964492af4e65bd2f94ae8a3859"
+    },
+    {
+      "path": "scripts/semantic_discovery/extract.py",
+      "category": "scripts",
+      "size": 6048,
+      "sha256": "e89488d9f971b47e3a1b76e8a9992ab1d2d1050917363e63200144bbd8c2264a"
+    },
+    {
+      "path": "scripts/semantic_discovery/index.py",
+      "category": "scripts",
+      "size": 7745,
+      "sha256": "41894bef74e05e72ba907006f7e51f4cc436221a5c170859e47ee0d2c8167876"
+    },
+    {
+      "path": "scripts/semantic_discovery/query.py",
+      "category": "scripts",
+      "size": 3103,
+      "sha256": "46d1c2f6bb6a8838cbfb5f75d4165849b8c50aef26ac70dec440808a731123a7"
+    },
+    {
+      "path": "scripts/semantic_discovery/rank.py",
+      "category": "scripts",
+      "size": 7769,
+      "sha256": "53d5f0acd58f485cacdcfbc98ec068beb3d153037e65b148e3949b789c247fba"
+    },
+    {
+      "path": "scripts/semantic_discovery/render.py",
+      "category": "scripts",
+      "size": 7704,
+      "sha256": "654074064335e108e28a6c2154ef4c1153f10469dc87f4c4318a8da2d6e1a4da"
+    },
+    {
+      "path": "scripts/semantic_discovery/traverse.py",
+      "category": "scripts",
+      "size": 6612,
+      "sha256": "15e38e659374dc44f625d6a4b553e981eaf0a4e053aabd3c9e85fa32ba3d7fff"
+    },
+    {
+      "path": "scripts/semantic_discovery/utils.py",
+      "category": "scripts",
+      "size": 2574,
+      "sha256": "19ecf52f04647b44b3adf0e0ca887f4b2dc746d47575299b8c8ce8e56802379a"
+    },
+    {
+      "path": "scripts/semantic_discovery/validate.py",
+      "category": "scripts",
+      "size": 7412,
+      "sha256": "9fe36833c2e791009fa49b8b126e66740675330e7de8281fcf4c01806022f43f"
     },
     {
       "path": "scripts/validate-all.py",
       "category": "scripts",
-      "size": 5729,
-      "sha256": "cd8e2c82b4c67bcb0c8a2ca9092830db2b9a86f3d7a19b943f57397455f19a3b"
+      "size": 5942,
+      "sha256": "ff8efb278a5a556046dddd884f28b075c1f6f5c55f2d6d6b02fddca8e5a0b5e3"
     },
     {
       "path": "scripts/validate-knowledge-graph.py",
       "category": "scripts",
-      "size": 1295,
-      "sha256": "7962177b6087503476038f5404d92700cf9ddba2c6f03a7c0439a7d1e3b82a1a"
+      "size": 1255,
+      "sha256": "67b715a31a483f4fe7de3c264a90db7c3b4bfbc01669a7df6b92794fed57cf54"
     },
     {
       "path": "scripts/validate-markdown.ps1",
@@ -1251,14 +1347,14 @@
     {
       "path": "scripts/validate-memory-security.py",
       "category": "scripts",
-      "size": 3991,
-      "sha256": "7db6cdca7a3a05d72ca2b36cff6f176a9c0f45dd39ac3d1c966b1035dc10c9b1"
+      "size": 3886,
+      "sha256": "7f5b20b760717705b6553136f000f3bca79bbb975951adf67bf420831dcda111"
     },
     {
       "path": "scripts/validate-repo.py",
       "category": "scripts",
-      "size": 19050,
-      "sha256": "e08d1568fdb162efab873d385d133b63b7681ec7005a44a942f67597158dd940"
+      "size": 18517,
+      "sha256": "064b57d318ac859caf95313513e4ffe0efb0e9866a091f26f5605e4d434e986b"
     },
     {
       "path": ".agent/skills/communication-skill/README.md",
@@ -1521,38 +1617,38 @@
     {
       "path": "templates/memory/README.md",
       "category": "templates",
-      "size": 387,
-      "sha256": "d9dd7b0fcc3efc111e6c1d1c458c0c559482c7153ceca52dd2b3798c6515e599"
+      "size": 374,
+      "sha256": "0387a4028935cd0135598b94083279af97418337854407a6d9038f44443c87b7"
     },
     {
       "path": "templates/memory/decision-memory.md",
       "category": "templates",
-      "size": 626,
-      "sha256": "0e34e3aadd302d5975f6992a41986ac10cb12544407caeb4f7e189be3f135efc"
+      "size": 584,
+      "sha256": "48237b795241efa7dfba4c0d1e329ecf993b3c20bdbe0ce8c0e05cd62af6324c"
     },
     {
       "path": "templates/memory/lesson-memory.md",
       "category": "templates",
-      "size": 636,
-      "sha256": "f75d66ce714192d9dd83dcf2160678153422c2e2f7d3f11171a4d75956ab9fc5"
+      "size": 592,
+      "sha256": "abacc507536d6679cd3368ff1671dab35c4c65123210ac34c963eb8bb29aa534"
     },
     {
       "path": "templates/memory/permanent-memory.md",
       "category": "templates",
-      "size": 580,
-      "sha256": "78f449bd8faf1a1e00b13061d3bfe2280d044fa2b5243d13f655273fa0e28b92"
+      "size": 544,
+      "sha256": "1e5b922c7b9ef6d9178882090c90224974a0271f6a84fae5fd4cde9f69d3b4ad"
     },
     {
       "path": "templates/memory/project-memory.md",
       "category": "templates",
-      "size": 564,
-      "sha256": "9c31e45169baab10495658fc24f530ccb6bfb90aefcdbf5a14ec2a7140c30233"
+      "size": 528,
+      "sha256": "66cf6991b0d98a02cc6791a84039cc2c2149152eac14d344c51617992adcca11"
     },
     {
       "path": "templates/memory/session-memory.md",
       "category": "templates",
-      "size": 764,
-      "sha256": "6abc1927b424e680bbf3b556640df1dc5d40d5a52b38379625d4651754d74d25"
+      "size": 714,
+      "sha256": "789c46c4d7d0f735970f5e6b8fc98e30c9dd19cc4e8e0bcc18d516a4d7547edf"
     },
     {
       "path": "templates/project-memory/AGENTS.md",

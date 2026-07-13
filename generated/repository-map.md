@@ -250,6 +250,7 @@
 - `knowledge/ai-workflows/README.md`
 - `knowledge/architecture/README.md`
 - `knowledge/architecture/phase-3-knowledge-graph.md`
+- `knowledge/architecture/phase-4-semantic-discovery.md`
 - `knowledge/best-practices/README.md`
 - `knowledge/documentation/README.md`
 - `knowledge/future-ideas/README.md`
@@ -282,6 +283,10 @@
 
 - `scripts/README.md`
 - `scripts/create-project.py`
+- `scripts/discover.py`
+- `scripts/discovery-build.py`
+- `scripts/discovery-check.py`
+- `scripts/discovery-validate.py`
 - `scripts/generate-knowledge-graph.py`
 - `scripts/generate-memory-index.py`
 - `scripts/generate-skill-registry.py`
@@ -303,6 +308,17 @@
 - `scripts/memory-promote.py`
 - `scripts/memory-search.py`
 - `scripts/memory_utils.py`
+- `scripts/semantic_discovery/__init__.py`
+- `scripts/semantic_discovery/build.py`
+- `scripts/semantic_discovery/cli.py`
+- `scripts/semantic_discovery/extract.py`
+- `scripts/semantic_discovery/index.py`
+- `scripts/semantic_discovery/query.py`
+- `scripts/semantic_discovery/rank.py`
+- `scripts/semantic_discovery/render.py`
+- `scripts/semantic_discovery/traverse.py`
+- `scripts/semantic_discovery/utils.py`
+- `scripts/semantic_discovery/validate.py`
 - `scripts/validate-all.py`
 - `scripts/validate-knowledge-graph.py`
 - `scripts/validate-markdown.ps1`

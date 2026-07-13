@@ -21,4 +21,12 @@ Knowledge Graph scripts:
 - `knowledge-check.py`
 - `knowledge_graph/` (internal modules)
 
+Semantic Discovery scripts:
+
+- `discover.py` (interactive query CLI)
+- `discovery-build.py`
+- `discovery-validate.py`
+- `discovery-check.py`
+- `semantic_discovery/` (internal modules)
+
 [Back to AI OS](../README.md)
