@@ -15,3 +15,13 @@ AI OS memory is explicit repository content in `memory/`.
 - Treat generated memory indexes as derived outputs only.
 
 Memory security scanning is pattern-based and conservative. It may miss some risks or flag false positives, so human review remains required.
+
+## Knowledge Graph Rules
+
+Knowledge Graph generation must remain local and repository-based.
+
+- Do not send repository data to external services.
+- Do not include full record contents for memory files in graph nodes.
+- Include concise metadata and relationships only.
+- Exclude secret-like files and ignored directories from discovery.
+- Treat generated graph files as derived outputs only.

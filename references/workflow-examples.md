@@ -52,4 +52,16 @@ python scripts/validate-memory-security.py
 python scripts/validate-all.py
 ```
 
+## Knowledge graph build workflow
+Run `python scripts/generate-knowledge-graph.py`, review generated node and edge counts, and confirm outputs remain derived artifacts.
+
+## Knowledge graph validation workflow
+Run:
+
+```text
+python scripts/validate-knowledge-graph.py
+python scripts/generate-knowledge-graph.py --check
+python scripts/validate-all.py
+```
+
 [Back to references](README.md)

@@ -9,7 +9,7 @@ Platform-neutral core, explicit human gates, source-controlled memory, actual-pa
 ## Logical Layers
 1. Core AI skills in `.agent/skills/`.
 2. AI OS core: instructions, roles, prompts, standards, validation, and security.
-3. Specifications, project memory, and structured memory engine records.
+3. Specifications, project memory, structured memory engine records, and knowledge graph relationships.
 4. Project starters.
 5. Knowledge and platform references.
 
@@ -27,6 +27,7 @@ prompts/ ---------> prompts.json
 templates/ -------> project artifacts
 scripts/ ---------> validation/bootstrap
 memory/ ----------> source memory records + registry
+generated/ -------> deterministic derived artifacts
 references/ ------> tool-specific guidance
 ```
 
@@ -36,7 +37,23 @@ references/ ------> tool-specific guidance
 
 `validate-all.py` is the unified read-only validation entry point. It checks existing repository rules, generated-file freshness, JSON, metadata, links, identifiers, dependencies, secret patterns, required templates, and unit tests. `create-project.py` copies a selected starter, safely replaces project placeholders, emits `project.yaml`, and optionally initializes Git without installing dependencies or committing.
 
-Phase 2 implements local structured memory records, deterministic memory indexing, memory lifecycle commands, archive and promotion flows, and memory-specific security validation. Advanced orchestration, publishing, deployment, and release automation remain proposed.
+Phase 2 implements local structured memory records, deterministic memory indexing, memory lifecycle commands, archive and promotion flows, and memory-specific security validation. Phase 3 implements a deterministic local knowledge graph generated from repository sources. Advanced orchestration, publishing, deployment, and release automation remain proposed.
+
+## Knowledge Graph Architecture
+
+The Knowledge Graph is repository-local and generated from authoritative Markdown and JSON sources.
+
+- Builder: `scripts/generate-knowledge-graph.py`
+- Validator: `scripts/validate-knowledge-graph.py`
+- Internal modules: `scripts/knowledge_graph/`
+- JSON output: `generated/knowledge-graph.json`
+- Markdown summary: `generated/knowledge-graph.md`
+
+Source files remain authoritative. Generated graph artifacts are derived views.
+
+Graph model includes nodes and edges with deterministic IDs and normalized relative paths. Relationship discovery is conservative and uses explicit links, wiki links, metadata, and curated text cues.
+
+Staleness checks compare regenerated graph data to checked-in output while ignoring `generatedAt`.
 
 ## Memory Engine Architecture
 

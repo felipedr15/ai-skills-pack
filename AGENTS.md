@@ -30,7 +30,7 @@ The planner scopes work; architect designs; researcher gathers evidence; builder
 Inspect before editing. Preserve useful content. Do not modify unrelated files or silently expand scope. Surface conflicts instead of destructively resolving them.
 
 ## Validation Requirements
-Run relevant tests plus `python scripts/validate-repo.py`, `python scripts/list-skills.py`, `python scripts/generate-memory-index.py --check`, `python scripts/validate-memory-security.py`, and Markdown validation. Fix work-caused failures.
+Run relevant tests plus `python scripts/validate-repo.py`, `python scripts/list-skills.py`, `python scripts/generate-memory-index.py --check`, `python scripts/generate-knowledge-graph.py --check`, `python scripts/validate-knowledge-graph.py`, `python scripts/validate-memory-security.py`, and Markdown validation. Fix work-caused failures.
 
 ## Reporting Requirements
 Report files changed, requirement coverage, tests and results, assumptions, risks, warnings, and recommended follow-up.

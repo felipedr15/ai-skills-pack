@@ -41,3 +41,10 @@ python scripts/generate-memory-index.py --check
 python scripts/validate-memory-security.py
 python scripts/validate-all.py
 ```
+
+## Phase 3 Knowledge Graph Workflow (Implemented)
+
+1. Build graph artifacts from repository source files with `python scripts/generate-knowledge-graph.py`.
+2. Validate graph schema, references, and path safety with `python scripts/validate-knowledge-graph.py`.
+3. Check generated graph freshness without writing via `python scripts/generate-knowledge-graph.py --check`.
+4. Run unified validation to confirm no regressions in prior phases.

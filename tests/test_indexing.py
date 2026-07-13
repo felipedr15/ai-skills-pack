@@ -17,6 +17,8 @@ class IndexingTests(unittest.TestCase):
                 "scripts/z.py": "z", "scripts/a.py": "a", ".agent/skills/demo/SKILL.md": "skill",
                 "templates/project-starters/web/README.md": "starter", "knowledge/note.md": "note",
                 "scripts/__pycache__/bad.pyc": "bad", "scripts/.env": "secret", "node_modules/pkg/file.js": "dependency",
+                ".venv/Lib/site-packages/pip/_vendor/requests/sessions.py": "password='0123456789ABCDEF'",
+                "env/lib/python/site.py": "runtime",
             }
             for name, content in files.items():
                 path = root / name
@@ -28,6 +30,8 @@ class IndexingTests(unittest.TestCase):
             self.assertIn("templates/project-starters/web/README.md", paths)
             self.assertNotIn("scripts/.env", paths)
             self.assertNotIn("scripts/__pycache__/bad.pyc", paths)
+            self.assertNotIn(".venv/Lib/site-packages/pip/_vendor/requests/sessions.py", paths)
+            self.assertNotIn("env/lib/python/site.py", paths)
             self.assertEqual(paths, [item["path"] for item in sorted(result["files"], key=lambda item: (item["category"], item["path"]))])
 
     def test_stale_index_detection(self):

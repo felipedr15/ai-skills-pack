@@ -84,6 +84,52 @@ python scripts/generate-memory-index.py --check
 python scripts/validate-memory-security.py
 ```
 
+## Knowledge Graph (Phase 3)
+
+The local Knowledge Graph connects repository entities and relationships across skills, memories, projects, documents, tools, platforms, and concepts.
+
+- Source of truth remains Markdown and JSON source files.
+- Generated graph outputs are derived artifacts and never authoritative.
+- No external API, cloud service, vector database, or hosted graph database is used.
+
+Supported node types:
+
+- `skill`
+- `memory`
+- `project`
+- `document`
+- `platform`
+- `tool`
+- `concept`
+
+Supported edge types:
+
+- `contains`
+- `references`
+- `related_to`
+- `supports`
+- `uses`
+- `belongs_to`
+- `generated_from`
+
+Output files:
+
+- `generated/knowledge-graph.json`
+- `generated/knowledge-graph.md`
+
+Knowledge graph commands:
+
+```text
+python scripts/generate-knowledge-graph.py
+python scripts/validate-knowledge-graph.py
+python scripts/generate-knowledge-graph.py --check
+python scripts/knowledge-build.py
+python scripts/knowledge-validate.py
+python scripts/knowledge-check.py
+```
+
+Extend entity and relationship coverage by updating extraction and graph modules in `scripts/knowledge_graph/` and adding tests in `tests/test_knowledge_graph.py`.
+
 ## Quick Start
 
 1. Clone or open AI OS.
@@ -108,6 +154,8 @@ python scripts/validate-memory-security.py
 python scripts/generate-skill-registry.py --check
 python scripts/index-repository.py --check
 python scripts/generate-memory-index.py --check
+python scripts/generate-knowledge-graph.py --check
+python scripts/validate-knowledge-graph.py
 python scripts/validate-memory-security.py
 python scripts/validate-all.py
 python scripts/list-skills.py
@@ -119,6 +167,7 @@ Regenerate derived files after changing skills, memory records, or indexed conte
 python scripts/generate-skill-registry.py
 python scripts/index-repository.py
 python scripts/generate-memory-index.py
+python scripts/generate-knowledge-graph.py
 ```
 
 The optional `--check` mode performs no writes and exits non-zero when generated files are missing or stale.
@@ -135,7 +184,7 @@ The command copies a starter, replaces safe placeholders, creates `project.yaml`
 
 ## Automation Status
 
-Phase 1 core automation implements registry generation, repository indexing, unified validation, and project bootstrap. Phase 2 implements the structured local Memory Engine.
+Phase 1 core automation implements registry generation, repository indexing, unified validation, and project bootstrap. Phase 2 implements the structured local Memory Engine. Phase 3 implements the local repository Knowledge Graph.
 
 ## Security
 

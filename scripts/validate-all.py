@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Run all AI OS validation without modifying repository files."""
+import importlib.util
 import json
 import os
 import re
@@ -9,8 +10,17 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TEXT_SUFFIXES = {".md", ".json", ".yml", ".yaml", ".py", ".ps1", ".txt"}
-SKIP_DIRS = {".git", "node_modules", "vendor", "dist", "build", ".venv", "venv", "__pycache__", ".pytest_cache"}
 SECRET = re.compile(r"(?i)(api[_-]?key|access[_-]?token|password|client[_-]?secret)\s*[:=]\s*[\"']?[A-Za-z0-9_\-/+=]{16,}")
+
+_indexer_spec = importlib.util.spec_from_file_location("index_repository", ROOT / "scripts/index-repository.py")
+if _indexer_spec is None or _indexer_spec.loader is None:
+    raise RuntimeError("unable to load scripts/index-repository.py")
+_indexer = importlib.util.module_from_spec(_indexer_spec)
+_indexer_spec.loader.exec_module(_indexer)
+
+
+def is_excluded_path(path: Path) -> bool:
+    return _indexer.is_excluded(path)
 
 
 class Results:
@@ -41,7 +51,7 @@ def run_command(results, label, command, env=None):
 
 
 def validate_json(results):
-    files = sorted(path for path in ROOT.rglob("*.json") if not SKIP_DIRS.intersection(path.relative_to(ROOT).parts))
+    files = sorted(path for path in ROOT.rglob("*.json") if not is_excluded_path(path.relative_to(ROOT)))
     for path in files:
         try:
             json.loads(path.read_text(encoding="utf-8"))
@@ -55,7 +65,7 @@ def validate_links(results):
     broken = []
     pattern = re.compile(r"\[[^]]*\]\((?!https?://|mailto:|#)([^)]+)\)")
     for path in sorted(ROOT.rglob("*.md")):
-        if SKIP_DIRS.intersection(path.relative_to(ROOT).parts):
+        if is_excluded_path(path.relative_to(ROOT)):
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
         for target in pattern.findall(text):
@@ -71,7 +81,9 @@ def validate_links(results):
 def validate_secrets(results):
     matches = []
     for path in sorted(ROOT.rglob("*")):
-        if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES or SKIP_DIRS.intersection(path.relative_to(ROOT).parts):
+        if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
+            continue
+        if is_excluded_path(path.relative_to(ROOT)):
             continue
         if SECRET.search(path.read_text(encoding="utf-8", errors="ignore")):
             matches.append(path.relative_to(ROOT))
@@ -99,6 +111,8 @@ def main():
     run_command(results, "existing repository validation", [python, "scripts/validate-repo.py"])
     run_command(results, "skill registry and metadata/dependency/duplicate-ID validation", [python, "scripts/generate-skill-registry.py", "--check"])
     run_command(results, "memory index metadata/duplicate-ID/path/reference validation", [python, "scripts/generate-memory-index.py", "--check"])
+    run_command(results, "knowledge graph generation/staleness validation", [python, "scripts/generate-knowledge-graph.py", "--check"])
+    run_command(results, "knowledge graph structure validation", [python, "scripts/validate-knowledge-graph.py"])
     run_command(results, "memory security secret-pattern validation", [python, "scripts/validate-memory-security.py"])
     run_command(results, "repository index validation", [python, "scripts/index-repository.py", "--check"])
     validate_json(results)

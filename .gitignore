@@ -11,6 +11,10 @@ tmp/
 output/
 .session/
 __pycache__/
-*.pyc
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
 .DS_Store
 Thumbs.db

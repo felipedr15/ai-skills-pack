@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATEGORIES = ("skills", "agents", "prompts", "project-starters", "templates", "standards", "knowledge", "references", "scripts")
-EXCLUDED_DIRS = {".git", ".github", ".idea", ".vscode", "__pycache__", ".pytest_cache", ".mypy_cache", ".tox", "node_modules", "vendor", "dist", "build", "coverage", ".venv", "venv", "generated", "tests"}
+EXCLUDED_DIRS = {".git", ".github", ".idea", ".vscode", "__pycache__", ".pytest_cache", ".mypy_cache", ".tox", "node_modules", "vendor", "dist", "build", "coverage", ".venv", "venv", "env", "generated", "tests"}
 EXCLUDED_NAMES = {".env", ".env.local", ".env.production", "secrets.json", "private.json", ".DS_Store"}
 EXCLUDED_SUFFIXES = {".pyc", ".pyo", ".tmp", ".temp", ".log", ".cache", ".key", ".pem", ".p12", ".pfx"}
 

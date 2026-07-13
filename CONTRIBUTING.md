@@ -6,7 +6,7 @@ Memory records must follow `schemas/memory.schema.json`, live under `memory/`, a
 
 Skills need complete front matter, a folder README, tests or examples when applicable, and a changelog entry. Agents and prompts must name inputs, outputs, skills, restrictions, and handoffs. Starters must preserve the required project-memory contract. Specifications require traceable requirements, design, tasks, and validation.
 
-After source changes, run `python scripts/generate-skill-registry.py`, `python scripts/index-repository.py`, and `python scripts/generate-memory-index.py` when memory data changes. Their `--check` modes fail without writing when derived files are stale. Run `python scripts/validate-memory-security.py` and `python scripts/validate-all.py` before review. Never include secrets or unrelated changes. Pull requests should describe scope, requirement coverage, tests, risks, documentation, changelog impact, and human validation.
+After source changes, run `python scripts/generate-skill-registry.py`, `python scripts/index-repository.py`, `python scripts/generate-memory-index.py`, and `python scripts/generate-knowledge-graph.py` when relevant source data changes. Their `--check` modes fail without writing when derived files are stale. Run `python scripts/validate-memory-security.py`, `python scripts/validate-knowledge-graph.py`, and `python scripts/validate-all.py` before review. Never include secrets or unrelated changes. Pull requests should describe scope, requirement coverage, tests, risks, documentation, changelog impact, and human validation.
 
 Create projects with `python scripts/create-project.py --name "Name" --type TYPE --destination PATH`; use `--list-types` to discover starters.
 
@@ -18,4 +18,12 @@ python scripts/memory-list.py --type lesson
 python scripts/memory-search.py "keyword"
 python scripts/memory-archive.py --id lesson-example-001
 python scripts/memory-promote.py --id session-example-001 --target-type lesson --reason "Reusable finding"
+```
+
+Knowledge Graph command examples:
+
+```text
+python scripts/generate-knowledge-graph.py
+python scripts/validate-knowledge-graph.py
+python scripts/generate-knowledge-graph.py --check
 ```

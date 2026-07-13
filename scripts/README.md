@@ -12,4 +12,13 @@ Memory Engine scripts:
 - `generate-memory-index.py`
 - `validate-memory-security.py`
 
+Knowledge Graph scripts:
+
+- `generate-knowledge-graph.py`
+- `validate-knowledge-graph.py`
+- `knowledge-build.py`
+- `knowledge-validate.py`
+- `knowledge-check.py`
+- `knowledge_graph/` (internal modules)
+
 [Back to AI OS](../README.md)

@@ -2,15 +2,26 @@
 """Validate AI OS repository structure and metadata."""
 from __future__ import annotations
 
+import importlib.util
 import json
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
+_indexer_spec = importlib.util.spec_from_file_location("index_repository", ROOT / "scripts/index-repository.py")
+if _indexer_spec is None or _indexer_spec.loader is None:
+    raise RuntimeError("unable to load scripts/index-repository.py")
+_indexer = importlib.util.module_from_spec(_indexer_spec)
+_indexer_spec.loader.exec_module(_indexer)
+
 failures = []
 warnings = []
 passes = []
+
+
+def is_excluded_path(path: Path) -> bool:
+    return _indexer.is_excluded(path)
 
 
 def fail(message):
@@ -256,6 +267,11 @@ def validate_templates_and_required_files():
         "scripts/create-project.py",
         "scripts/list-skills.py",
         "scripts/generate-memory-index.py",
+        "scripts/generate-knowledge-graph.py",
+        "scripts/validate-knowledge-graph.py",
+        "scripts/knowledge-build.py",
+        "scripts/knowledge-validate.py",
+        "scripts/knowledge-check.py",
         "scripts/memory-add.py",
         "scripts/memory-list.py",
         "scripts/memory-search.py",
@@ -263,6 +279,8 @@ def validate_templates_and_required_files():
         "scripts/memory-promote.py",
         "scripts/validate-memory-security.py",
         "schemas/memory.schema.json",
+        "generated/knowledge-graph.json",
+        "generated/knowledge-graph.md",
     ]
     for path in required_files:
         if not (ROOT / path).is_file():
@@ -284,10 +302,11 @@ def validate_skills_registered_vs_actual():
 
 def validate_markdown_and_links():
     for md in ROOT.rglob("*.md"):
-        if ".git" in md.parts:
+        rel_path = md.relative_to(ROOT)
+        if is_excluded_path(rel_path):
             continue
         data = md.read_bytes()
-        rel = md.relative_to(ROOT).as_posix()
+        rel = rel_path.as_posix()
         if not data.strip():
             fail(f"empty Markdown: {rel}")
         if data and not data.endswith(b"\n"):
@@ -308,10 +327,13 @@ def validate_secret_patterns():
     secret = re.compile(r"(?i)(api[_-]?key|access[_-]?token|password|client[_-]?secret)\s*[:=]\s*[\"']?[A-Za-z0-9_\-/+=]{16,}")
     text_suffixes = {".md", ".json", ".yml", ".yaml", ".py", ".ps1", ".txt"}
     for path in ROOT.rglob("*"):
-        if not path.is_file() or ".git" in path.parts or path.suffix.lower() not in text_suffixes:
+        if not path.is_file() or path.suffix.lower() not in text_suffixes:
+            continue
+        rel_path = path.relative_to(ROOT)
+        if is_excluded_path(rel_path):
             continue
         if secret.search(path.read_text(encoding="utf-8", errors="ignore")):
-            fail(f"possible secret: {path.relative_to(ROOT)}")
+            fail(f"possible secret: {rel_path}")
 
 
 def validate_folder_readmes():
@@ -327,6 +349,7 @@ def validate_folder_readmes():
         "knowledge",
         "references",
         "scripts",
+        "scripts/knowledge_graph",
         ".kiro",
         ".kiro/steering",
         ".kiro/specs",

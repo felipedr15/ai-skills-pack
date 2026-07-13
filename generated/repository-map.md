@@ -249,6 +249,7 @@
 - `knowledge/README.md`
 - `knowledge/ai-workflows/README.md`
 - `knowledge/architecture/README.md`
+- `knowledge/architecture/phase-3-knowledge-graph.md`
 - `knowledge/best-practices/README.md`
 - `knowledge/documentation/README.md`
 - `knowledge/future-ideas/README.md`
@@ -281,9 +282,20 @@
 
 - `scripts/README.md`
 - `scripts/create-project.py`
+- `scripts/generate-knowledge-graph.py`
 - `scripts/generate-memory-index.py`
 - `scripts/generate-skill-registry.py`
 - `scripts/index-repository.py`
+- `scripts/knowledge-build.py`
+- `scripts/knowledge-check.py`
+- `scripts/knowledge-validate.py`
+- `scripts/knowledge_graph/README.md`
+- `scripts/knowledge_graph/__init__.py`
+- `scripts/knowledge_graph/build.py`
+- `scripts/knowledge_graph/extract.py`
+- `scripts/knowledge_graph/render.py`
+- `scripts/knowledge_graph/utils.py`
+- `scripts/knowledge_graph/validate.py`
 - `scripts/list-skills.py`
 - `scripts/memory-add.py`
 - `scripts/memory-archive.py`
@@ -292,6 +304,7 @@
 - `scripts/memory-search.py`
 - `scripts/memory_utils.py`
 - `scripts/validate-all.py`
+- `scripts/validate-knowledge-graph.py`
 - `scripts/validate-markdown.ps1`
 - `scripts/validate-memory-security.py`
 - `scripts/validate-repo.py`

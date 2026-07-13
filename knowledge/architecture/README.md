@@ -12,4 +12,7 @@ Secrets, personal data, unverified claims, project-only temporary notes, or bind
 ## Naming Guidance
 Use lowercase hyphenated topic filenames; include dates only when time context matters.
 
+## Available Notes
+- [Phase 3 Knowledge Graph Architecture](phase-3-knowledge-graph.md)
+
 [Back to knowledge hub](../README.md)

@@ -18,6 +18,10 @@ jobs:
         run: python scripts/index-repository.py --check
       - name: Check generated memory index
         run: python scripts/generate-memory-index.py --check
+      - name: Check generated knowledge graph
+        run: python scripts/generate-knowledge-graph.py --check
+      - name: Validate generated knowledge graph
+        run: python scripts/validate-knowledge-graph.py
       - name: Validate memory security
         run: python scripts/validate-memory-security.py
       - name: Run unified validation

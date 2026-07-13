@@ -11,6 +11,10 @@ Deterministic skill-registry generation, repository indexing, unified continuous
 
 Structured local memory architecture, memory schema and registry, memory CRUD-style command scripts, archive and promotion workflows, deterministic memory index generation, and memory security validation.
 
+## Phase 3 — Knowledge Graph (Implemented)
+
+Deterministic local graph generation from repository source files, graph validation and staleness checks, relationship discovery from explicit references and metadata, and generated graph summaries.
+
 ## Version 1.1 — Workflow Improvements (Proposed)
 Improved bootstrap, deeper validation, more examples, and expanded Power Apps, Power Automate, and web deployment guidance.
 
@@ -20,4 +24,4 @@ Optional MCP research, synchronization workflows, documentation indexing, and re
 ## Version 2.0 — Advanced Automation (Proposed)
 Project dashboard, skill dependency visualization, optional multi-agent orchestration, optional knowledge indexing, and release automation.
 
-Knowledge graph, dashboard, MCP-driven integrations, and advanced unified CLI orchestration remain proposed.
+Dashboard, MCP-driven integrations, and advanced unified CLI orchestration remain proposed.
