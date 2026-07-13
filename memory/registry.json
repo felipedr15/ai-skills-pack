@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "id": "convention-documentation-structure-001",
+      "title": "Example documentation convention for section structure",
+      "type": "convention",
+      "scope": "global",
+      "project": null,
+      "status": "active",
+      "path": "memory/permanent/conventions/convention-documentation-structure-001.md",
+      "tags": [
+        "documentation",
+        "convention",
+        "structure"
+      ],
+      "sensitivity": "internal",
+      "retention": "permanent"
+    },
+    {
+      "id": "decision-memory-index-source-truth-001",
+      "title": "Generated memory indexes are derived views, not source of truth",
+      "type": "decision",
+      "scope": "project",
+      "project": "ai-os",
+      "status": "active",
+      "path": "memory/decisions/decision-memory-index-source-truth-001.md",
+      "tags": [
+        "memory",
+        "indexing",
+        "governance"
+      ],
+      "sensitivity": "internal",
+      "retention": "project"
+    },
+    {
+      "id": "lesson-powerapps-refresh-001",
+      "title": "Refresh data before rebuilding collections",
+      "type": "lesson",
+      "scope": "global",
+      "project": null,
+      "status": "active",
+      "path": "memory/lessons/lesson-powerapps-refresh-001.md",
+      "tags": [
+        "power-apps",
+        "sharepoint",
+        "refresh"
+      ],
+      "sensitivity": "internal",
+      "retention": "permanent"
+    },
+    {
+      "id": "lesson-validate-generated-files-before-committing-001",
+      "title": "Validate generated files before committing",
+      "type": "lesson",
+      "scope": "global",
+      "project": null,
+      "status": "active",
+      "path": "memory/lessons/lesson-validate-generated-files-before-committing-001.md",
+      "tags": [
+        "git",
+        "validation",
+        "workflow"
+      ],
+      "sensitivity": "internal",
+      "retention": "permanent"
+    },
+    {
+      "id": "session-memory-engine-example-001",
+      "title": "Temporary example session for memory engine rollout",
+      "type": "session",
+      "scope": "session",
+      "project": "ai-os",
+      "status": "active",
+      "path": "memory/sessions/session-memory-engine-example-001.md",
+      "tags": [
+        "memory",
+        "session",
+        "example"
+      ],
+      "sensitivity": "internal",
+      "retention": "temporary"
+    }
+  ]
+}

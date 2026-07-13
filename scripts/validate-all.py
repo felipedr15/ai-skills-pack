@@ -98,6 +98,8 @@ def main():
     python = sys.executable
     run_command(results, "existing repository validation", [python, "scripts/validate-repo.py"])
     run_command(results, "skill registry and metadata/dependency/duplicate-ID validation", [python, "scripts/generate-skill-registry.py", "--check"])
+    run_command(results, "memory index metadata/duplicate-ID/path/reference validation", [python, "scripts/generate-memory-index.py", "--check"])
+    run_command(results, "memory security secret-pattern validation", [python, "scripts/validate-memory-security.py"])
     run_command(results, "repository index validation", [python, "scripts/index-repository.py", "--check"])
     validate_json(results)
     validate_links(results)

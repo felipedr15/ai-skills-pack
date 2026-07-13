@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordCount": 5,
+  "records": [
+    {
+      "id": "convention-documentation-structure-001",
+      "title": "Example documentation convention for section structure",
+      "type": "convention",
+      "scope": "global",
+      "project": null,
+      "status": "active",
+      "created": "2026-07-12",
+      "updated": "2026-07-12",
+      "source": "AI OS documentation maintenance",
+      "summary": "Use consistent section headings so docs remain searchable and comparable across projects.",
+      "tags": [
+        "documentation",
+        "convention",
+        "structure"
+      ],
+      "related": [],
+      "sensitivity": "internal",
+      "retention": "permanent",
+      "contentPath": "memory/permanent/conventions/convention-documentation-structure-001.md",
+      "path": "memory/permanent/conventions/convention-documentation-structure-001.md",
+      "excerpt": "Use stable headings and concise sections to keep documentation consistent."
+    },
+    {
+      "id": "decision-memory-index-source-truth-001",
+      "title": "Generated memory indexes are derived views, not source of truth",
+      "type": "decision",
+      "scope": "project",
+      "project": "ai-os",
+      "status": "active",
+      "created": "2026-07-12",
+      "updated": "2026-07-12",
+      "source": "AI OS Phase 2 implementation",
+      "summary": "Source Markdown and registry records remain authoritative; generated indexes are deterministic outputs.",
+      "tags": [
+        "memory",
+        "indexing",
+        "governance"
+      ],
+      "related": [
+        "convention-documentation-structure-001"
+      ],
+      "sensitivity": "internal",
+      "retention": "project",
+      "contentPath": "memory/decisions/decision-memory-index-source-truth-001.md",
+      "path": "memory/decisions/decision-memory-index-source-truth-001.md",
+      "excerpt": "Indexes help discovery and validation but cannot replace source records."
+    },
+    {
+      "id": "lesson-powerapps-refresh-001",
+      "title": "Refresh data before rebuilding collections",
+      "type": "lesson",
+      "scope": "global",
+      "project": null,
+      "status": "active",
+      "created": "2026-07-12",
+      "updated": "2026-07-12",
+      "source": "MWS Schedule App troubleshooting",
+      "summary": "Refresh the source before rebuilding dependent collections.",
+      "tags": [
+        "power-apps",
+        "sharepoint",
+        "refresh"
+      ],
+      "related": [],
+      "sensitivity": "internal",
+      "retention": "permanent",
+      "contentPath": "memory/lessons/lesson-powerapps-refresh-001.md",
+      "path": "memory/lessons/lesson-powerapps-refresh-001.md",
+      "excerpt": "Refresh the source dataset first, then rebuild dependent collections."
+    },
+    {
+      "id": "lesson-validate-generated-files-before-committing-001",
+      "title": "Validate generated files before committing",
+      "type": "lesson",
+      "scope": "global",
+      "project": null,
+      "status": "active",
+      "created": "2026-07-12",
+      "updated": "2026-07-12",
+      "source": "memory-add",
+      "summary": "Run registry and repository index checks before committing generated changes.",
+      "tags": [
+        "git",
+        "validation",
+        "workflow"
+      ],
+      "related": [],
+      "sensitivity": "internal",
+      "retention": "permanent",
+      "contentPath": "memory/lessons/lesson-validate-generated-files-before-committing-001.md",
+      "path": "memory/lessons/lesson-validate-generated-files-before-committing-001.md",
+      "excerpt": "Run registry and repository index checks before committing generated changes."
+    },
+    {
+      "id": "session-memory-engine-example-001",
+      "title": "Temporary example session for memory engine rollout",
+      "type": "session",
+      "scope": "session",
+      "project": "ai-os",
+      "status": "active",
+      "created": "2026-07-12",
+      "updated": "2026-07-12",
+      "source": "AI OS Phase 2 implementation example",
+      "summary": "Temporary session record used to demonstrate structure and promotion flow.",
+      "tags": [
+        "memory",
+        "session",
+        "example"
+      ],
+      "related": [
+        "decision-memory-index-source-truth-001"
+      ],
+      "sensitivity": "internal",
+      "retention": "temporary",
+      "contentPath": "memory/sessions/session-memory-engine-example-001.md",
+      "path": "memory/sessions/session-memory-engine-example-001.md",
+      "excerpt": "Session memory is temporary and should be promoted or archived when work completes."
+    }
+  ]
+}

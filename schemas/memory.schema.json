@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/ai-os/schemas/memory.schema.json",
+  "title": "AI OS Memory Record",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "type",
+    "scope",
+    "project",
+    "status",
+    "created",
+    "updated",
+    "source",
+    "summary",
+    "tags",
+    "related",
+    "sensitivity",
+    "retention",
+    "contentPath"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "enum": [
+        "convention",
+        "preference",
+        "principle",
+        "project",
+        "session",
+        "decision",
+        "lesson"
+      ]
+    },
+    "scope": {
+      "enum": [
+        "global",
+        "project",
+        "session"
+      ]
+    },
+    "project": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "active",
+        "proposed",
+        "archived",
+        "superseded"
+      ]
+    },
+    "created": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "updated": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "related": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "sensitivity": {
+      "enum": [
+        "public",
+        "internal",
+        "restricted"
+      ]
+    },
+    "retention": {
+      "enum": [
+        "permanent",
+        "project",
+        "temporary",
+        "archive"
+      ]
+    },
+    "contentPath": {
+      "type": "string",
+      "pattern": "^memory/.+\\.md$"
+    }
+  },
+  "additionalProperties": false
+}

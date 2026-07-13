@@ -24,4 +24,20 @@ Research may inform any pre-approval stage. Deployment requires a plan, explicit
 4. Run `python scripts/validate-all.py` for the complete validation summary and unit tests.
 5. Review the Git diff and obtain human approval before any commit.
 
-For a new project, list starters with `python scripts/create-project.py --list-types`, then provide `--name`, `--type`, and `--destination`. Use `--force` only after reviewing an existing destination. Phase 2 remains proposed and is not yet implemented.
+For a new project, list starters with `python scripts/create-project.py --list-types`, then provide `--name`, `--type`, and `--destination`. Use `--force` only after reviewing an existing destination.
+
+## Phase 2 Memory Workflow (Implemented)
+
+1. Create memory records with `python scripts/memory-add.py` using explicit metadata and safe content.
+2. Keep authoritative data in source Markdown files and `memory/registry.json`.
+3. List and search memory using `python scripts/memory-list.py` and `python scripts/memory-search.py`.
+4. Promote temporary or proposed records with `python scripts/memory-promote.py`.
+5. Archive inactive records with `python scripts/memory-archive.py` while preserving IDs.
+6. Regenerate derived memory indexes with `python scripts/generate-memory-index.py`.
+7. Run validation and security checks:
+
+```text
+python scripts/generate-memory-index.py --check
+python scripts/validate-memory-security.py
+python scripts/validate-all.py
+```

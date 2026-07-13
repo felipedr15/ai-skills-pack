@@ -202,6 +202,12 @@
 ## Templates
 
 - `templates/README.md`
+- `templates/memory/README.md`
+- `templates/memory/decision-memory.md`
+- `templates/memory/lesson-memory.md`
+- `templates/memory/permanent-memory.md`
+- `templates/memory/project-memory.md`
+- `templates/memory/session-memory.md`
 - `templates/project-memory/AGENTS.md`
 - `templates/project-memory/ARCHITECTURE.md`
 - `templates/project-memory/CHANGELOG.md`
@@ -275,9 +281,17 @@
 
 - `scripts/README.md`
 - `scripts/create-project.py`
+- `scripts/generate-memory-index.py`
 - `scripts/generate-skill-registry.py`
 - `scripts/index-repository.py`
 - `scripts/list-skills.py`
+- `scripts/memory-add.py`
+- `scripts/memory-archive.py`
+- `scripts/memory-list.py`
+- `scripts/memory-promote.py`
+- `scripts/memory-search.py`
+- `scripts/memory_utils.py`
 - `scripts/validate-all.py`
 - `scripts/validate-markdown.ps1`
+- `scripts/validate-memory-security.py`
 - `scripts/validate-repo.py`

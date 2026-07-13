@@ -7,6 +7,10 @@ Implemented foundation: core skills, agent roles, shared instructions, prompt li
 
 Deterministic skill-registry generation, repository indexing, unified continuous validation, and one-command project bootstrap.
 
+## Phase 2 — Memory Engine (Implemented)
+
+Structured local memory architecture, memory schema and registry, memory CRUD-style command scripts, archive and promotion workflows, deterministic memory index generation, and memory security validation.
+
 ## Version 1.1 — Workflow Improvements (Proposed)
 Improved bootstrap, deeper validation, more examples, and expanded Power Apps, Power Automate, and web deployment guidance.
 
@@ -16,4 +20,4 @@ Optional MCP research, synchronization workflows, documentation indexing, and re
 ## Version 2.0 — Advanced Automation (Proposed)
 Project dashboard, skill dependency visualization, optional multi-agent orchestration, optional knowledge indexing, and release automation.
 
-Phase 2 remains proposed and is not yet implemented.
+Knowledge graph, dashboard, MCP-driven integrations, and advanced unified CLI orchestration remain proposed.

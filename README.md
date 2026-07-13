@@ -10,7 +10,7 @@ AI OS provides guidance for ChatGPT (planning, research, troubleshooting, docume
 
 ## Core Capabilities
 
-Skills, agents, prompts, specifications, project memory, project starters, standards, a knowledge base, validation, security guidance, and deployment guidance.
+Skills, agents, prompts, specifications, project memory, structured repository memory, project starters, standards, a knowledge base, validation, security guidance, and deployment guidance.
 
 ## Available Skills
 
@@ -53,6 +53,37 @@ Substantial work moves through approved requirements, design, and task documents
 
 The [project-memory template](templates/project-memory/README.md) provides `README.md`, `AGENTS.md`, `CLAUDE.md`, `REQUIREMENTS.md`, `DESIGN.md`, `TASKS.md`, `decisions.md`, `HANDOFF.md`, temporary `SESSION.md`, `TESTING.md`, `KNOWN_ISSUES.md`, `CHANGELOG.md`, `RELEASE_NOTES.md`, and `RETROSPECTIVE.md` (plus architecture and roadmap context).
 
+## Memory Engine (Phase 2)
+
+The [memory engine](memory/README.md) adds structured, local, repository-based records for:
+
+- permanent memory (`memory/permanent/`)
+- project memory (`memory/projects/`)
+- session memory (`memory/sessions/`)
+- decision memory (`memory/decisions/`)
+- lessons learned (`memory/lessons/`)
+- archive retention (`memory/archive/`)
+
+Source Markdown records and [memory/registry.json](memory/registry.json) are the source of truth.
+Generated files [generated/memory-index.json](generated/memory-index.json) and [generated/memory-index.md](generated/memory-index.md) are derived and never authoritative.
+
+AI OS memory is explicit repository content. It is not automatic access to ChatGPT, Claude, Copilot, or Kiro histories. Tools only receive memory when configured or instructed to read it.
+
+The repository does not currently expose a unified AI OS CLI module for memory commands, so Phase 2 uses standalone scripts. Future CLI consolidation remains proposed.
+
+### Memory Commands
+
+```text
+python scripts/memory-add.py --type lesson --title "Refresh data before rebuilding collections" --scope global --summary "Refresh the source before rebuilding dependent collections." --tags "power-apps,sharepoint,refresh" --sensitivity internal --retention permanent
+python scripts/memory-list.py --type lesson
+python scripts/memory-search.py "refresh" --tag refresh --max-results 10
+python scripts/memory-archive.py --id lesson-powerapps-refresh-001
+python scripts/memory-promote.py --id session-memory-engine-example-001 --target-type lesson --target-scope global --reason "Reusable troubleshooting lesson"
+python scripts/generate-memory-index.py
+python scripts/generate-memory-index.py --check
+python scripts/validate-memory-security.py
+```
+
 ## Quick Start
 
 1. Clone or open AI OS.
@@ -76,15 +107,18 @@ The [project-memory template](templates/project-memory/README.md) provides `READ
 ```text
 python scripts/generate-skill-registry.py --check
 python scripts/index-repository.py --check
+python scripts/generate-memory-index.py --check
+python scripts/validate-memory-security.py
 python scripts/validate-all.py
 python scripts/list-skills.py
 ```
 
-Regenerate derived files after changing skills or indexed content:
+Regenerate derived files after changing skills, memory records, or indexed content:
 
 ```text
 python scripts/generate-skill-registry.py
 python scripts/index-repository.py
+python scripts/generate-memory-index.py
 ```
 
 The optional `--check` mode performs no writes and exits non-zero when generated files are missing or stale.
@@ -101,7 +135,7 @@ The command copies a starter, replaces safe placeholders, creates `project.yaml`
 
 ## Automation Status
 
-Phase 1 core automation implements registry generation, repository indexing, unified validation, and project bootstrap. Phase 2 remains proposed and is not implemented.
+Phase 1 core automation implements registry generation, repository indexing, unified validation, and project bootstrap. Phase 2 implements the structured local Memory Engine.
 
 ## Security
 

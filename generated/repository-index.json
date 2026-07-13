@@ -5,11 +5,11 @@
     "agents": 11,
     "prompts": 12,
     "project-starters": 129,
-    "templates": 24,
+    "templates": 30,
     "standards": 9,
     "knowledge": 16,
     "references": 11,
-    "scripts": 8
+    "scripts": 16
   },
   "files": [
     {
@@ -1083,20 +1083,26 @@
     {
       "path": "references/workflow-examples.md",
       "category": "references",
-      "size": 2804,
-      "sha256": "653683f8266abfa9c5b2b87f29ea4021ee6c5f58f5010a0ee3b025a9d7a4318a"
+      "size": 3759,
+      "sha256": "5af022942b381e45eb8eb07a1511af0c568df5261225287ea0580ea66bdd4ddc"
     },
     {
       "path": "scripts/README.md",
       "category": "scripts",
-      "size": 162,
-      "sha256": "a505e4afe0051b2ddca99ea5f56feba76734cbc2622f1de5696780d8a9e3fd69"
+      "size": 360,
+      "sha256": "5b9fd9074cf4e2c4ac31738d412e1837b31c5cc8cd2a99006d6386003ce34469"
     },
     {
       "path": "scripts/create-project.py",
       "category": "scripts",
       "size": 5180,
       "sha256": "fb3e8620022bc4c75490e49dc3a4973202edf9d3f072badad65b9e0fdf04b5e6"
+    },
+    {
+      "path": "scripts/generate-memory-index.py",
+      "category": "scripts",
+      "size": 6146,
+      "sha256": "188a2152ebfbf60b504c8cf16581d77435ed9beb1e538d7f626ea2857224f00a"
     },
     {
       "path": "scripts/generate-skill-registry.py",
@@ -1117,10 +1123,46 @@
       "sha256": "a7a97e9ce5c238701fc6f74cb05f686edb81914e34053a3e494cf4c08388f983"
     },
     {
+      "path": "scripts/memory-add.py",
+      "category": "scripts",
+      "size": 4272,
+      "sha256": "8177cb36c60fd67e3689291e4ab02b9da2d409de1d5ba8a8a27bad38823db9c2"
+    },
+    {
+      "path": "scripts/memory-archive.py",
+      "category": "scripts",
+      "size": 2454,
+      "sha256": "833ad40be661d3b9772b7da2c33f5f0b7198688c7a1bd51d637549922c1a681f"
+    },
+    {
+      "path": "scripts/memory-list.py",
+      "category": "scripts",
+      "size": 2046,
+      "sha256": "d5216e40795e2379e84e4d9d18ed0ec936ea94532113bb0f6fe8491cfe7cdedf"
+    },
+    {
+      "path": "scripts/memory-promote.py",
+      "category": "scripts",
+      "size": 6323,
+      "sha256": "4f7d6064166d4db0d30b6904daaad7529f6f8f1cd054183ee8391e5322726b72"
+    },
+    {
+      "path": "scripts/memory-search.py",
+      "category": "scripts",
+      "size": 4116,
+      "sha256": "5251d6cb298c93a0cf2891a5e4eedae94501b196fb8c5ee27c8637c572cdeb5d"
+    },
+    {
+      "path": "scripts/memory_utils.py",
+      "category": "scripts",
+      "size": 11177,
+      "sha256": "ed915751bb01cac2c232971e85b49ab844076843a1422c817368fb6982e983a6"
+    },
+    {
       "path": "scripts/validate-all.py",
       "category": "scripts",
-      "size": 4887,
-      "sha256": "53fcb1ab61e7b854ce84f1429bd283c1be29e877e4e2958114d85f55ca268376"
+      "size": 5152,
+      "sha256": "37c19eb223e62dc5ec2ee28eeb3c3529d0d419f6c060ebb99c03be02bbccd56b"
     },
     {
       "path": "scripts/validate-markdown.ps1",
@@ -1129,10 +1171,16 @@
       "sha256": "d31be2ac49d272f5da0e7c6c9a772535a0566de176724a4aa10f7668f2d734ad"
     },
     {
+      "path": "scripts/validate-memory-security.py",
+      "category": "scripts",
+      "size": 3991,
+      "sha256": "7db6cdca7a3a05d72ca2b36cff6f176a9c0f45dd39ac3d1c966b1035dc10c9b1"
+    },
+    {
       "path": "scripts/validate-repo.py",
       "category": "scripts",
-      "size": 7263,
-      "sha256": "9e4948101f5ec80281102fd94b2893eb763a7848cac50a4d0e59ab701cbf47f6"
+      "size": 18153,
+      "sha256": "a7a095a0831517edf699b9f0c37878a4b95297b8aa441289d8c06b7943dc8141"
     },
     {
       "path": ".agent/skills/communication-skill/README.md",
@@ -1391,6 +1439,42 @@
       "category": "templates",
       "size": 198,
       "sha256": "5285e7f3b9bbece2510835e67fea3e9677ee9b39882b7d7eac6ade9aaa3a59de"
+    },
+    {
+      "path": "templates/memory/README.md",
+      "category": "templates",
+      "size": 387,
+      "sha256": "d9dd7b0fcc3efc111e6c1d1c458c0c559482c7153ceca52dd2b3798c6515e599"
+    },
+    {
+      "path": "templates/memory/decision-memory.md",
+      "category": "templates",
+      "size": 626,
+      "sha256": "0e34e3aadd302d5975f6992a41986ac10cb12544407caeb4f7e189be3f135efc"
+    },
+    {
+      "path": "templates/memory/lesson-memory.md",
+      "category": "templates",
+      "size": 636,
+      "sha256": "f75d66ce714192d9dd83dcf2160678153422c2e2f7d3f11171a4d75956ab9fc5"
+    },
+    {
+      "path": "templates/memory/permanent-memory.md",
+      "category": "templates",
+      "size": 580,
+      "sha256": "78f449bd8faf1a1e00b13061d3bfe2280d044fa2b5243d13f655273fa0e28b92"
+    },
+    {
+      "path": "templates/memory/project-memory.md",
+      "category": "templates",
+      "size": 564,
+      "sha256": "9c31e45169baab10495658fc24f530ccb6bfb90aefcdbf5a14ec2a7140c30233"
+    },
+    {
+      "path": "templates/memory/session-memory.md",
+      "category": "templates",
+      "size": 764,
+      "sha256": "6abc1927b424e680bbf3b556640df1dc5d40d5a52b38379625d4651754d74d25"
     },
     {
       "path": "templates/project-memory/AGENTS.md",
