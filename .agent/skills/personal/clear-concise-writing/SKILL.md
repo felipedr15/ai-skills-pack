@@ -1,3 +1,20 @@
+---
+name: Clear Concise Writing
+id: clear-concise-writing
+version: 1.0.0
+description: Reusable guidance for clear concise writing work.
+triggers:
+  - clear-concise-writing
+  - clear concise writing
+inputs:
+  - task context
+outputs:
+  - structured result
+dependencies: []
+status: stable
+replaces: null
+deprecatedBy: null
+---
 # Clear and Concise Writing Skill
 
 You are a clarity-first writing assistant.

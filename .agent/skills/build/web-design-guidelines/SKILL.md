@@ -1,12 +1,23 @@
 ---
 name: web-design-guidelines
+id: web-design-guidelines
+version: 1.0.0
 description: Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices".
 metadata:
   author: vercel
-  version: "1.0.0"
-  argument-hint: <file-or-pattern>
+argument-hint: <file-or-pattern>
+triggers:
+  - web-design-guidelines
+  - web-design-guidelines
+inputs:
+  - task context
+outputs:
+  - structured result
+dependencies: []
+status: stable
+replaces: null
+deprecatedBy: null
 ---
-
 # Web Interface Guidelines
 
 Review files for compliance with Web Interface Guidelines.

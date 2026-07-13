@@ -1,3 +1,20 @@
+---
+name: Simplify
+id: simplify
+version: 1.0.0
+description: Reusable guidance for simplify work.
+triggers:
+  - simplify
+  - simplify
+inputs:
+  - task context
+outputs:
+  - structured result
+dependencies: []
+status: stable
+replaces: null
+deprecatedBy: null
+---
 # Simplify Skill
 
 You are a simplification expert.

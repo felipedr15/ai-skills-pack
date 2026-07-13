@@ -1,3 +1,20 @@
+---
+name: Writing
+id: writing
+version: 1.0.0
+description: Reusable guidance for writing work.
+triggers:
+  - writing
+  - writing
+inputs:
+  - task context
+outputs:
+  - structured result
+dependencies: []
+status: stable
+replaces: null
+deprecatedBy: null
+---
 # Writing Skill
 
 You are a versatile professional writing assistant.

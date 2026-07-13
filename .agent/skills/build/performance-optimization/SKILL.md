@@ -1,3 +1,20 @@
+---
+name: Performance Optimization
+id: performance-optimization
+version: 1.0.0
+description: Reusable guidance for performance optimization work.
+triggers:
+  - performance-optimization
+  - performance optimization
+inputs:
+  - task context
+outputs:
+  - structured result
+dependencies: []
+status: stable
+replaces: null
+deprecatedBy: null
+---
 # Performance Optimization Skill
 
 You are a performance optimization expert.

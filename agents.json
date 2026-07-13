@@ -1,0 +1,195 @@
+{
+  "schemaVersion": "1.0.0",
+  "agents": [
+    {
+      "id": "planner",
+      "name": "Planner",
+      "path": "agents/planner.md",
+      "description": "Turn requests into approved, traceable scope.",
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "skills": [
+        "problem-solving",
+        "analytical"
+      ],
+      "handoffTo": "architect"
+    },
+    {
+      "id": "architect",
+      "name": "Architect",
+      "path": "agents/architect.md",
+      "description": "Design components, interfaces, risks, and alternatives.",
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "skills": [
+        "analytical",
+        "problem-solving"
+      ],
+      "handoffTo": "builder"
+    },
+    {
+      "id": "researcher",
+      "name": "Researcher",
+      "path": "agents/researcher.md",
+      "description": "Gather and distinguish evidence, inference, and limitations.",
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "skills": [
+        "browser",
+        "analytical"
+      ],
+      "handoffTo": "planner"
+    },
+    {
+      "id": "builder",
+      "name": "Builder",
+      "path": "agents/builder.md",
+      "description": "Implement only approved scope and record evidence.",
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "skills": [
+        "creator",
+        "testing"
+      ],
+      "handoffTo": "reviewer"
+    },
+    {
+      "id": "reviewer",
+      "name": "Reviewer",
+      "path": "agents/reviewer.md",
+      "description": "Evaluate the Git diff against approved artifacts.",
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "skills": [
+        "analytical",
+        "testing"
+      ],
+      "handoffTo": "qa"
+    },
+    {
+      "id": "qa",
+      "name": "QA",
+      "path": "agents/qa.md",
+      "description": "Plan and perform traceable validation.",
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "skills": [
+        "testing",
+        "problem-solving"
+      ],
+      "handoffTo": "project-manager"
+    },
+    {
+      "id": "documentation-writer",
+      "name": "Documentation Writer",
+      "path": "agents/documentation-writer.md",
+      "description": "Create clear, accurate, audience-focused documentation.",
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "skills": [
+        "writing",
+        "clear-concise-writing"
+      ],
+      "handoffTo": "reviewer"
+    },
+    {
+      "id": "security-reviewer",
+      "name": "Security Reviewer",
+      "path": "agents/security-reviewer.md",
+      "description": "Assess data, access, dependency, and deployment risks.",
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "skills": [
+        "analytical",
+        "problem-solving"
+      ],
+      "handoffTo": "project-manager"
+    },
+    {
+      "id": "deployment-manager",
+      "name": "Deployment Manager",
+      "path": "agents/deployment-manager.md",
+      "description": "Prepare approved deployment and rollback guidance.",
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "skills": [
+        "vercel-agent",
+        "testing"
+      ],
+      "handoffTo": "project-manager"
+    },
+    {
+      "id": "project-manager",
+      "name": "Project Manager",
+      "path": "agents/project-manager.md",
+      "description": "Coordinate gates, status, ownership, and human decisions.",
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "skills": [
+        "writing",
+        "problem-solving"
+      ],
+      "handoffTo": "planner"
+    }
+  ]
+}

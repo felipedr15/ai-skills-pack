@@ -1,8 +1,20 @@
 ---
 name: using-superpowers
+id: using-superpowers
+version: 1.0.0
 description: Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions
+triggers:
+  - using-superpowers
+  - using-superpowers
+inputs:
+  - task context
+outputs:
+  - structured result
+dependencies: []
+status: stable
+replaces: null
+deprecatedBy: null
 ---
-
 <SUBAGENT-STOP>
 If you were dispatched as a subagent to execute a specific task, skip this skill.
 </SUBAGENT-STOP>

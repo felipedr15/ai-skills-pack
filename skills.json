@@ -1,0 +1,213 @@
+{
+  "schemaVersion": "1.0.0",
+  "skills": [
+    {
+      "id": "creator",
+      "name": "Creator",
+      "path": ".agent/skills/build/creator/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for creator work.",
+      "triggers": [
+        "creator",
+        "creator"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "path": ".agent/skills/build/frontend/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for frontend work.",
+      "triggers": [
+        "frontend",
+        "frontend"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "performance-optimization",
+      "name": "Performance Optimization",
+      "path": ".agent/skills/build/performance-optimization/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for performance optimization work.",
+      "triggers": [
+        "performance-optimization",
+        "performance optimization"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "vercel-agent",
+      "name": "Vercel Agent",
+      "path": ".agent/skills/build/vercel-agent/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for vercel agent work.",
+      "triggers": [
+        "vercel-agent",
+        "vercel agent"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "vercel-react",
+      "name": "Vercel React",
+      "path": ".agent/skills/build/vercel-react/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for vercel react work.",
+      "triggers": [
+        "vercel-react",
+        "vercel react"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "web-design-guidelines",
+      "name": "web-design-guidelines",
+      "path": ".agent/skills/build/web-design-guidelines/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+      "triggers": [
+        "web-design-guidelines",
+        "web-design-guidelines"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "browser",
+      "name": "Browser",
+      "path": ".agent/skills/design/browser/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for browser work.",
+      "triggers": [
+        "browser",
+        "browser"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "name": "Ui Ux Pro Max",
+      "path": ".agent/skills/design/ui-ux-pro-max/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for ui ux pro max work.",
+      "triggers": [
+        "ui-ux-pro-max",
+        "ui ux pro max"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "analytical",
+      "name": "Analytical",
+      "path": ".agent/skills/personal/analytical/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for analytical work.",
+      "triggers": [
+        "analytical",
+        "analytical"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "clear-concise-writing",
+      "name": "Clear Concise Writing",
+      "path": ".agent/skills/personal/clear-concise-writing/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for clear concise writing work.",
+      "triggers": [
+        "clear-concise-writing",
+        "clear concise writing"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "problem-solving",
+      "name": "Problem Solving",
+      "path": ".agent/skills/personal/problem-solving/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for problem solving work.",
+      "triggers": [
+        "problem-solving",
+        "problem solving"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "simplify",
+      "name": "Simplify",
+      "path": ".agent/skills/personal/simplify/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for simplify work.",
+      "triggers": [
+        "simplify",
+        "simplify"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "writing",
+      "name": "Writing",
+      "path": ".agent/skills/personal/writing/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for writing work.",
+      "triggers": [
+        "writing",
+        "writing"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "superpower",
+      "name": "Superpower",
+      "path": ".agent/skills/system/superpower/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for superpower work.",
+      "triggers": [
+        "superpower",
+        "superpower"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "testing",
+      "name": "Testing",
+      "path": ".agent/skills/system/testing/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Reusable guidance for testing work.",
+      "triggers": [
+        "testing",
+        "testing"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "using-superpowers",
+      "name": "using-superpowers",
+      "path": ".agent/skills/system/using-superpowers/SKILL.md",
+      "version": "1.0.0",
+      "status": "stable",
+      "description": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
+      "triggers": [
+        "using-superpowers",
+        "using-superpowers"
+      ],
+      "dependencies": []
+    }
+  ]
+}

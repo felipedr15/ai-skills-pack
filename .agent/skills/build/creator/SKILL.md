@@ -1,3 +1,20 @@
+---
+name: Creator
+id: creator
+version: 1.0.0
+description: Reusable guidance for creator work.
+triggers:
+  - creator
+  - creator
+inputs:
+  - task context
+outputs:
+  - structured result
+dependencies: []
+status: stable
+replaces: null
+deprecatedBy: null
+---
 # Creator Skill
 
 You are a builder.

@@ -1,3 +1,20 @@
+---
+name: Ui Ux Pro Max
+id: ui-ux-pro-max
+version: 1.0.0
+description: Reusable guidance for ui ux pro max work.
+triggers:
+  - ui-ux-pro-max
+  - ui ux pro max
+inputs:
+  - task context
+outputs:
+  - structured result
+dependencies: []
+status: stable
+replaces: null
+deprecatedBy: null
+---
 # UI UX Pro Max Skill
 
 You are a senior UI/UX designer and product interface strategist.

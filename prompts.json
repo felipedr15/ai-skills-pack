@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "1.0.0",
+  "prompts": [
+    {
+      "id": "plan",
+      "name": "Plan Prompt",
+      "path": "prompts/plan.prompt.md",
+      "role": "Planner",
+      "purpose": "Analyze without implementing; select skills and define scope, assumptions, risks, dependencies, acceptance criteria, and executor-ready guidance.",
+      "requiredSkills": [
+        "analytical",
+        "problem-solving"
+      ]
+    },
+    {
+      "id": "specify",
+      "name": "Specify Prompt",
+      "path": "prompts/specify.prompt.md",
+      "role": "Planner",
+      "purpose": "Create structured functional and non-functional requirements with exclusions, dependencies, and testable acceptance criteria.",
+      "requiredSkills": [
+        "writing",
+        "analytical"
+      ]
+    },
+    {
+      "id": "design",
+      "name": "Design Prompt",
+      "path": "prompts/design.prompt.md",
+      "role": "Architect",
+      "purpose": "Define architecture, data flow, components, interfaces, security, risks, alternatives, testing, deployment, and rollback.",
+      "requiredSkills": [
+        "analytical",
+        "problem-solving"
+      ]
+    },
+    {
+      "id": "execute",
+      "name": "Execute Prompt",
+      "path": "prompts/execute.prompt.md",
+      "role": "Builder",
+      "purpose": "Read approved requirements, design, tasks, and handoff; implement only approved scope; validate and report the diff without committing.",
+      "requiredSkills": [
+        "creator",
+        "testing"
+      ]
+    },
+    {
+      "id": "debug",
+      "name": "Debug Prompt",
+      "path": "prompts/debug.prompt.md",
+      "role": "Builder",
+      "purpose": "Reproduce with evidence, identify root cause, make the smallest safe authorized fix, and add regression validation.",
+      "requiredSkills": [
+        "problem-solving",
+        "testing"
+      ]
+    },
+    {
+      "id": "review",
+      "name": "Review Prompt",
+      "path": "prompts/review.prompt.md",
+      "role": "Reviewer",
+      "purpose": "Compare the Git diff to requirements, design, tasks, and handoff; return APPROVED, APPROVED WITH CHANGES, or REJECTED with evidence.",
+      "requiredSkills": [
+        "analytical",
+        "testing"
+      ]
+    },
+    {
+      "id": "qa",
+      "name": "Qa Prompt",
+      "path": "prompts/qa.prompt.md",
+      "role": "QA",
+      "purpose": "Build and execute a traceable validation plan; record evidence, results, and unresolved failures.",
+      "requiredSkills": [
+        "testing"
+      ]
+    },
+    {
+      "id": "research",
+      "name": "Research Prompt",
+      "path": "prompts/research.prompt.md",
+      "role": "Researcher",
+      "purpose": "Define scope, gather sources, distinguish fact/inference/assumption/conflict/limitation, and protect confidential context.",
+      "requiredSkills": [
+        "browser",
+        "analytical"
+      ]
+    },
+    {
+      "id": "document",
+      "name": "Document Prompt",
+      "path": "prompts/document.prompt.md",
+      "role": "Documentation Writer",
+      "purpose": "Create audience-appropriate user, administrator, developer, or executive documentation using communication skills.",
+      "requiredSkills": [
+        "writing",
+        "clear-concise-writing"
+      ]
+    },
+    {
+      "id": "deploy",
+      "name": "Deploy Prompt",
+      "path": "prompts/deploy.prompt.md",
+      "role": "Deployment Manager",
+      "purpose": "Assess readiness; require human approval; document configuration, smoke tests, monitoring, rollback; never deploy automatically.",
+      "requiredSkills": [
+        "vercel-agent",
+        "testing"
+      ]
+    },
+    {
+      "id": "create-skill",
+      "name": "Create Skill Prompt",
+      "path": "prompts/create-skill.prompt.md",
+      "role": "Planner",
+      "purpose": "Inspect skills, avoid duplication, create metadata and docs, update registries, validate, and do not commit.",
+      "requiredSkills": [
+        "writing",
+        "analytical"
+      ]
+    }
+  ]
+}

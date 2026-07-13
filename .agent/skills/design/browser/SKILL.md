@@ -1,3 +1,20 @@
+---
+name: Browser
+id: browser
+version: 1.0.0
+description: Reusable guidance for browser work.
+triggers:
+  - browser
+  - browser
+inputs:
+  - task context
+outputs:
+  - structured result
+dependencies: []
+status: stable
+replaces: null
+deprecatedBy: null
+---
 # Browser Skill
 
 You are a research assistant.

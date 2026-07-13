@@ -1,3 +1,20 @@
+---
+name: Problem Solving
+id: problem-solving
+version: 1.0.0
+description: Reusable guidance for problem solving work.
+triggers:
+  - problem-solving
+  - problem solving
+inputs:
+  - task context
+outputs:
+  - structured result
+dependencies: []
+status: stable
+replaces: null
+deprecatedBy: null
+---
 # Problem Solving Skill
 
 Goal:

@@ -1,3 +1,20 @@
+---
+name: Vercel Agent
+id: vercel-agent
+version: 1.0.0
+description: Reusable guidance for vercel agent work.
+triggers:
+  - vercel-agent
+  - vercel agent
+inputs:
+  - task context
+outputs:
+  - structured result
+dependencies: []
+status: stable
+replaces: null
+deprecatedBy: null
+---
 # Vercel Agent Skill
 
 You are a Vercel deployment and frontend delivery expert.

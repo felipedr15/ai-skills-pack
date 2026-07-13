@@ -1,3 +1,20 @@
+---
+name: Superpower
+id: superpower
+version: 1.0.0
+description: Reusable guidance for superpower work.
+triggers:
+  - superpower
+  - superpower
+inputs:
+  - task context
+outputs:
+  - structured result
+dependencies: []
+status: stable
+replaces: null
+deprecatedBy: null
+---
 # Superpower Skill
 
 You combine all skills.

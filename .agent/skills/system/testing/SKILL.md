@@ -1,3 +1,20 @@
+---
+name: Testing
+id: testing
+version: 1.0.0
+description: Reusable guidance for testing work.
+triggers:
+  - testing
+  - testing
+inputs:
+  - task context
+outputs:
+  - structured result
+dependencies: []
+status: stable
+replaces: null
+deprecatedBy: null
+---
 # Testing Skill
 
 You are a QA engineer.
