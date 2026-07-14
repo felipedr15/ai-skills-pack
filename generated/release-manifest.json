@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "1.0.0",
+  "version": "0.7.0",
+  "generatedAt": "2026-07-14T00:11:27Z",
+  "generator": "ai-os-release",
+  "repository": {
+    "fileCount": 328
+  },
+  "artifacts": [
+    {
+      "path": "generated/skills.json",
+      "exists": true,
+      "size": 11115,
+      "checksum": "ce0727720c8e6e9be4d46d85877d833a20b9485404e5b8e541df5ca4834250a6",
+      "schemaVersion": "1.0.0",
+      "generator": null
+    },
+    {
+      "path": "generated/skills.md",
+      "exists": true,
+      "size": 2356,
+      "checksum": "4b4f3bc6d645e4096eb14cd3406dbba3e24e385f2041c948bdf91526cc9f88aa"
+    },
+    {
+      "path": "generated/repository-index.json",
+      "exists": true,
+      "size": 67371,
+      "checksum": "db5d4fe9376931067b6700addcbb5543f6531b1a7362104f9e1d4d63a6a5d5ad",
+      "schemaVersion": "1.0.0",
+      "generator": null
+    },
+    {
+      "path": "generated/repository-map.md",
+      "exists": true,
+      "size": 14540,
+      "checksum": "813ee341bb2c73c4a8ec882080ebdffbfc0d427f922076c4360cbeeab6b8b223"
+    },
+    {
+      "path": "generated/memory-index.json",
+      "exists": true,
+      "size": 4559,
+      "checksum": "0f317fdc3c581e99cd188ea3795b392577bc320a9de3174b535d3230ce60ea92",
+      "schemaVersion": "1.0.0",
+      "generator": null
+    },
+    {
+      "path": "generated/memory-index.md",
+      "exists": true,
+      "size": 1305,
+      "checksum": "3d18bc43ca3d1a66c0f14716496cb5fb1bc07d7c1892c097158a601e000a48c6"
+    },
+    {
+      "path": "generated/knowledge-graph.json",
+      "exists": true,
+      "size": 204592,
+      "checksum": "4b24ff7fe984c202af648c6ff538753615561f59c1371478101975e7984ff1db",
+      "schemaVersion": "1.0.0",
+      "generator": "ai-os-knowledge-graph"
+    },
+    {
+      "path": "generated/knowledge-graph.md",
+      "exists": true,
+      "size": 1109,
+      "checksum": "28e60c599f0059aa6dbe58c8580116d622c12445f1a576726c23d2056ebaf943"
+    },
+    {
+      "path": "generated/discovery-index.json",
+      "exists": true,
+      "size": 738328,
+      "checksum": "4ab9c4ea4016ae5923ed99c46147a44f8f1d1bbbf4e4ff0da7ec9b0f55d584c1",
+      "schemaVersion": "1.0.0",
+      "generator": "ai-os-semantic-discovery"
+    },
+    {
+      "path": "generated/discovery-index.md",
+      "exists": true,
+      "size": 350,
+      "checksum": "a0363f8c8495639caa8904a5d3efd1fe4a075a4531cdacb89b0ff43daeb2467d"
+    },
+    {
+      "path": "generated/dashboard.html",
+      "exists": true,
+      "size": 46942,
+      "checksum": "c26d31a9ed82f7e17fa5ba0fd2420cd1f707d58d3cc58a7db0caa034da56e7a7"
+    },
+    {
+      "path": "generated/dashboard-data.json",
+      "exists": true,
+      "size": 6199,
+      "checksum": "fb230d5ff03e050a7270d270c89445601559b87076f9be6b04f843dd69d56e5f",
+      "schemaVersion": "1.0.0",
+      "generator": "ai-os-dashboard"
+    }
+  ],
+  "components": {
+    "memoryEngine": true,
+    "knowledgeGraph": true,
+    "semanticDiscovery": true,
+    "dashboard": true,
+    "mcp": true
+  },
+  "tests": {
+    "count": 0,
+    "status": "unknown"
+  },
+  "validation": {
+    "pass": 0,
+    "warning": 0,
+    "fail": 0
+  },
+  "security": {
+    "secretScan": "pass",
+    "pathConfinement": "pass",
+    "readOnlyMcpDefault": true
+  }
+}

@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-13T23:03:21Z",
+  "generatedAt": "2026-07-14T00:12:54Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 307,
-    "entities": 329,
-    "terms": 890,
-    "relationships": 518
+    "documents": 309,
+    "entities": 331,
+    "terms": 899,
+    "relationships": 521
   },
   "documents": [
     {
@@ -1070,6 +1070,7 @@
         "Phase 4 — Semantic Discovery (Implemented)",
         "Phase 5 — Interactive Dashboard (Implemented)",
         "Phase 6 — MCP Integration (Implemented)",
+        "Phase 7 — Release Hardening (Implemented)",
         "Version 1.1 — Workflow Improvements (Proposed)",
         "Version 1.2 — Integration Improvements (Proposed)",
         "Version 2.0 — Advanced Automation (Proposed)"
@@ -1104,7 +1105,8 @@
         "Phase 3 Knowledge Graph Workflow (Implemented)",
         "Phase 4 Semantic Discovery Workflow (Implemented)",
         "Phase 5 Interactive Dashboard Workflow (Implemented)",
-        "Phase 6 MCP Integration Workflow (Implemented)"
+        "Phase 6 MCP Integration Workflow (Implemented)",
+        "Phase 7 Release Hardening Workflow (Implemented)"
       ],
       "snippet": "Request → planner skill selection → requirements → design → tasks → executor handoff → implementation → validation → diff review → human validation → commit → deployment.",
       "frontMatter": {}
@@ -1333,6 +1335,22 @@
       "frontMatter": {}
     },
     {
+      "id": "doc:config/ai-os.example.json",
+      "sourcePath": "config/ai-os.example.json",
+      "title": "ai-os.example",
+      "category": "document",
+      "headings": [
+        "schemaVersion",
+        "dashboard",
+        "mcp",
+        "generation",
+        "validation",
+        "backup"
+      ],
+      "snippet": "",
+      "frontMatter": {}
+    },
+    {
       "id": "doc:examples/mcp/README.md",
       "sourcePath": "examples/mcp/README.md",
       "title": "AI OS MCP Server Configuration",
@@ -1501,6 +1519,28 @@
         "Future Extension Points"
       ],
       "snippet": "Document the protocol-neutral service layer and MCP server introduced in Phase 6.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "sourcePath": "knowledge/architecture/phase-7-release-hardening.md",
+      "title": "Phase 7 Release Hardening Architecture",
+      "category": "knowledge",
+      "headings": [
+        "Phase 7 Release Hardening Architecture",
+        "Purpose",
+        "Version",
+        "Unified CLI",
+        "One-Command Bootstrap",
+        "Environment Doctor",
+        "Configuration",
+        "Build Orchestration",
+        "Packaging",
+        "Backup and Restore",
+        "Security",
+        "Cross-Platform Wrappers"
+      ],
+      "snippet": "Document the release hardening, unified CLI, and one-command bootstrap introduced in Phase 7.",
       "frontMatter": {}
     },
     {
@@ -5760,6 +5800,16 @@
       }
     },
     {
+      "id": "entity:document:config/ai-os.example.json",
+      "nodeId": "document:config/ai-os.example.json",
+      "type": "document",
+      "name": "Ai Os.Example",
+      "sourcePath": "config/ai-os.example.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
       "id": "entity:document:examples/mcp/README.md",
       "nodeId": "document:examples/mcp/README.md",
       "type": "document",
@@ -5875,6 +5925,16 @@
       "type": "document",
       "name": "Phase 6 Mcp Integration",
       "sourcePath": "knowledge/architecture/phase-6-mcp-integration.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/architecture/phase-7-release-hardening.md",
+      "nodeId": "document:knowledge/architecture/phase-7-release-hardening.md",
+      "type": "document",
+      "name": "Phase 7 Release Hardening",
+      "sourcePath": "knowledge/architecture/phase-7-release-hardening.md",
       "metadata": {
         "extension": ".md"
       }
@@ -8860,6 +8920,7 @@
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
+      "doc:config/ai-os.example.json",
       "doc:examples/mcp/README.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -8887,6 +8948,7 @@
       "doc:templates/project-starters/web-app/AGENTS.md",
       "doc:templates/project-starters/web-app/HANDOFF.md",
       "entity:document:.agent/skills/communication-skill/anti-ai-writing.md",
+      "entity:document:config/ai-os.example.json",
       "entity:document:knowledge/ai-workflows/README.md",
       "entity:project:ai-os"
     ],
@@ -9005,6 +9067,7 @@
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -9262,6 +9325,7 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:memory/decisions/README.md",
       "doc:memory/permanent/principles/README.md",
       "doc:prompts/design.prompt.md",
@@ -9291,6 +9355,7 @@
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md",
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
+      "entity:document:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:templates/project-memory/ARCHITECTURE.md",
       "entity:document:templates/project-starters/automation/ARCHITECTURE.md",
       "entity:document:templates/project-starters/documentation/ARCHITECTURE.md",
@@ -9525,6 +9590,10 @@
       "doc:templates/project-starters/python/HANDOFF.md",
       "doc:templates/project-starters/web-app/HANDOFF.md"
     ],
+    "backup": [
+      "doc:config/ai-os.example.json",
+      "doc:knowledge/architecture/phase-7-release-hardening.md"
+    ],
     "bad": [
       "doc:.agent/skills/communication-skill/examples.md"
     ],
@@ -9618,6 +9687,9 @@
     "bodies": [
       "doc:.github/instructions/skills.instructions.md"
     ],
+    "bootstrap": [
+      "doc:knowledge/architecture/phase-7-release-hardening.md"
+    ],
     "boundaries": [
       "doc:knowledge/architecture/phase-6-mcp-integration.md"
     ],
@@ -9649,6 +9721,7 @@
     "build": [
       "doc:CLAUDE.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:prompts/qa.prompt.md",
       "doc:references/workflow-examples.md"
     ],
@@ -9902,7 +9975,8 @@
     ],
     "cli": [
       "doc:.agent/skills/references/copilot-tools.md",
-      "doc:.agent/skills/references/gemini-tools.md"
+      "doc:.agent/skills/references/gemini-tools.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "client": [
       "doc:examples/mcp/README.md",
@@ -9953,7 +10027,8 @@
       "doc:.agent/skills/thinking/SKILL.md"
     ],
     "command": [
-      "doc:examples/mcp/README.md"
+      "doc:examples/mcp/README.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "commands": [
       "doc:README.md",
@@ -10095,7 +10170,9 @@
       "doc:prompts/research.prompt.md"
     ],
     "config": [
+      "doc:config/ai-os.example.json",
       "doc:examples/mcp/server-config.example.json",
+      "entity:document:config/ai-os.example.json",
       "entity:document:examples/mcp/server-config.example.json"
     ],
     "configuration": [
@@ -10104,6 +10181,7 @@
       "doc:.kiro/steering/README.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:prompts/deploy.prompt.md",
       "doc:references/README.md",
       "doc:references/vercel.md",
@@ -10311,6 +10389,9 @@
       "doc:templates/project-starters/web-app/HANDOFF.md",
       "doc:templates/project-starters/web-app/REQUIREMENTS.md"
     ],
+    "cross": [
+      "doc:knowledge/architecture/phase-7-release-hardening.md"
+    ],
     "curated": [
       "doc:knowledge/README.md"
     ],
@@ -10356,6 +10437,7 @@
       "doc:ARCHITECTURE.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
+      "doc:config/ai-os.example.json",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
@@ -10770,9 +10852,13 @@
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:prompts/create-skill.prompt.md"
     ],
+    "doctor": [
+      "doc:knowledge/architecture/phase-7-release-hardening.md"
+    ],
     "document": [
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:prompts/deploy.prompt.md",
       "doc:prompts/document.prompt.md",
       "entity:document:.agent/skills/communication-skill/README.md",
@@ -10832,6 +10918,7 @@
       "entity:document:agents/researcher.md",
       "entity:document:agents/reviewer.md",
       "entity:document:agents/security-reviewer.md",
+      "entity:document:config/ai-os.example.json",
       "entity:document:examples/mcp/README.md",
       "entity:document:examples/mcp/server-config.example.json",
       "entity:document:generated/memory-index.json",
@@ -10844,6 +10931,7 @@
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md",
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
+      "entity:document:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/best-practices/README.md",
       "entity:document:knowledge/documentation/README.md",
       "entity:document:knowledge/future-ideas/README.md",
@@ -11245,6 +11333,7 @@
       "doc:prompts/README.md"
     ],
     "environment": [
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:references/README.md",
       "doc:references/vercel.md",
       "doc:templates/specifications/deployment-plan.md"
@@ -11305,6 +11394,7 @@
     ],
     "example": [
       "doc:.agent/skills/communication-skill/examples.md",
+      "doc:config/ai-os.example.json",
       "doc:examples/mcp/server-config.example.json",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
@@ -11314,6 +11404,7 @@
       "doc:templates/memory/permanent-memory.md",
       "doc:templates/memory/project-memory.md",
       "doc:templates/memory/session-memory.md",
+      "entity:document:config/ai-os.example.json",
       "entity:document:examples/mcp/server-config.example.json",
       "entity:memory:convention-documentation-structure-001",
       "entity:memory:session-memory-engine-example-001"
@@ -11730,6 +11821,7 @@
       "entity:memory:lesson-validate-generated-files-before-committing-001"
     ],
     "generation": [
+      "doc:config/ai-os.example.json",
       "doc:references/v0.md"
     ],
     "generic": [
@@ -11999,6 +12091,12 @@
       "doc:.kiro/steering/product.md",
       "doc:agents/README.md"
     ],
+    "hardening": [
+      "doc:ROADMAP.md",
+      "doc:WORKFLOW.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "entity:document:knowledge/architecture/phase-7-release-hardening.md"
+    ],
     "have": [
       "doc:references/README.md"
     ],
@@ -12126,6 +12224,7 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:memory/README.md",
       "doc:memory/decisions/README.md",
       "doc:memory/sessions/README.md",
@@ -12312,7 +12411,8 @@
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
-      "doc:knowledge/architecture/phase-6-mcp-integration.md"
+      "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "introductions": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
@@ -12426,6 +12526,7 @@
       "doc:.kiro/steering/technology.md",
       "doc:agents.json",
       "doc:agents/README.md",
+      "doc:config/ai-os.example.json",
       "doc:examples/mcp/server-config.example.json",
       "doc:memory/README.md",
       "doc:memory/registry.json",
@@ -12436,6 +12537,7 @@
       "doc:schemas/skill.schema.json",
       "doc:skills.json",
       "entity:document:agents.json",
+      "entity:document:config/ai-os.example.json",
       "entity:document:examples/mcp/server-config.example.json",
       "entity:document:generated/memory-index.json",
       "entity:document:generated/repository-index.json",
@@ -12499,6 +12601,7 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -12531,6 +12634,7 @@
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md",
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
+      "entity:document:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/best-practices/README.md",
       "entity:document:knowledge/documentation/README.md",
       "entity:document:knowledge/future-ideas/README.md",
@@ -12818,6 +12922,7 @@
     "mcp": [
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
+      "doc:config/ai-os.example.json",
       "doc:examples/mcp/README.md",
       "doc:examples/mcp/server-config.example.json",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
@@ -12907,6 +13012,7 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -13194,6 +13300,7 @@
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md",
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
+      "entity:document:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/best-practices/README.md",
       "entity:document:knowledge/documentation/README.md",
       "entity:document:knowledge/future-ideas/README.md",
@@ -13860,6 +13967,7 @@
       "doc:.kiro/steering/README.md"
     ],
     "one": [
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:memory/projects/README.md"
     ],
     "only": [
@@ -13951,7 +14059,8 @@
     ],
     "orchestration": [
       "doc:.agent/skills/system/README.md",
-      "doc:.agent/skills/system/SKILL.md"
+      "doc:.agent/skills/system/SKILL.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "order": [
       "doc:.github/copilot-instructions.md",
@@ -13970,6 +14079,7 @@
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
+      "doc:config/ai-os.example.json",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md",
@@ -13986,6 +14096,7 @@
       "doc:templates/project-starters/power-automate/AGENTS.md",
       "doc:templates/project-starters/python/AGENTS.md",
       "doc:templates/project-starters/web-app/AGENTS.md",
+      "entity:document:config/ai-os.example.json",
       "entity:project:ai-os"
     ],
     "other": [
@@ -14064,6 +14175,9 @@
     ],
     "package": [
       "doc:.agent/skills/communication-skill/README.md"
+    ],
+    "packaging": [
+      "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "pages": [
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
@@ -14162,11 +14276,13 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:scripts/knowledge_graph/README.md",
       "entity:document:knowledge/architecture/phase-3-knowledge-graph.md",
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md",
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
-      "entity:document:knowledge/architecture/phase-6-mcp-integration.md"
+      "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
+      "entity:document:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "phrases": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -14216,6 +14332,7 @@
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:CHANGELOG.md",
       "doc:examples/mcp/README.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "entity:platform:claude",
       "entity:platform:codex",
       "entity:platform:copilot",
@@ -14920,6 +15037,7 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -15386,6 +15504,9 @@
       "doc:.github/instructions/templates.instructions.md"
     ],
     "release": [
+      "doc:ROADMAP.md",
+      "doc:WORKFLOW.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:standards/release-management.md",
       "doc:templates/project-memory/RELEASE_NOTES.md",
       "doc:templates/project-starters/automation/RELEASE_NOTES.md",
@@ -15396,6 +15517,7 @@
       "doc:templates/project-starters/power-automate/RELEASE_NOTES.md",
       "doc:templates/project-starters/python/RELEASE_NOTES.md",
       "doc:templates/project-starters/web-app/RELEASE_NOTES.md",
+      "entity:document:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:standards/release-management.md",
       "entity:document:templates/project-memory/RELEASE_NOTES.md",
       "entity:document:templates/project-starters/automation/RELEASE_NOTES.md",
@@ -15686,6 +15808,9 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md"
+    ],
+    "restore": [
+      "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "restrictions": [
       "doc:agents/architect.md",
@@ -16020,6 +16145,7 @@
     ],
     "schema": [
       "doc:agents.json",
+      "doc:config/ai-os.example.json",
       "doc:memory/registry.json",
       "doc:prompts.json",
       "doc:schemas/memory.schema.json",
@@ -16113,6 +16239,7 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/security/README.md",
       "doc:memory/README.md",
       "doc:prompts/design.prompt.md",
@@ -17632,6 +17759,7 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:memory/README.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:prompts/debug.prompt.md",
@@ -17891,6 +18019,9 @@
       "doc:.kiro/steering/structure.md",
       "doc:templates/memory/README.md"
     ],
+    "unified": [
+      "doc:knowledge/architecture/phase-7-release-hardening.md"
+    ],
     "uniqueness": [
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
@@ -18042,6 +18173,7 @@
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:agents/qa.md",
+      "doc:config/ai-os.example.json",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:prompts/debug.prompt.md",
@@ -18090,6 +18222,8 @@
       "doc:.kiro/steering/README.md",
       "doc:ROADMAP.md",
       "doc:agents.json",
+      "doc:config/ai-os.example.json",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:memory/registry.json",
       "doc:prompts.json",
       "doc:references/README.md",
@@ -18326,6 +18460,9 @@
     ],
     "working": [
       "doc:CLAUDE.md"
+    ],
+    "wrappers": [
+      "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "write": [
       "doc:.github/instructions/markdown.instructions.md"

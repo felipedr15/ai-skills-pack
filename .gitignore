@@ -20,3 +20,8 @@ env/
 Thumbs.db
 
 extensions.txt
+
+# Phase 7 local state
+config/ai-os.local.json
+.ai-os/
+dist/

@@ -106,3 +106,16 @@ GET /api/repository?category=&q=&limit=
 3. Configure MCP clients using examples in `examples/mcp/`.
 4. The server is read-only by default with no network calls.
 5. Run unified validation to confirm MCP integration passes.
+
+## Phase 7 Release Hardening Workflow (Implemented)
+
+1. Bootstrap: `python scripts/ai-os.py bootstrap`
+2. Status: `python scripts/ai-os.py status`
+3. Doctor: `python scripts/ai-os.py doctor`
+4. Generate: `python scripts/ai-os.py build`
+5. Validate: `python scripts/ai-os.py validate`
+6. Release check: `python scripts/ai-os.py release-check`
+7. Package: `python scripts/ai-os.py package`
+8. Backup: `python scripts/ai-os.py backup`
+9. Restore: `python scripts/ai-os.py restore <path>`
+10. Clean: `python scripts/ai-os.py clean-generated --confirm`

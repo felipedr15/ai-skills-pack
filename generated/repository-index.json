@@ -7,9 +7,9 @@
     "project-starters": 129,
     "templates": 30,
     "standards": 9,
-    "knowledge": 20,
+    "knowledge": 21,
     "references": 11,
-    "scripts": 65
+    "scripts": 72
   },
   "files": [
     {
@@ -119,6 +119,12 @@
       "category": "knowledge",
       "size": 2527,
       "sha256": "302d85006652ed90f8c57a0f67e0f6a9f666d38f69c07db1dd29a30b5fcb406b"
+    },
+    {
+      "path": "knowledge/architecture/phase-7-release-hardening.md",
+      "category": "knowledge",
+      "size": 2218,
+      "sha256": "a3d92fdd7334b5815a422d1e957034062769c9454ceafc2b9490755d76c33404"
     },
     {
       "path": "knowledge/best-practices/README.md",
@@ -1113,8 +1119,14 @@
     {
       "path": "scripts/README.md",
       "category": "scripts",
-      "size": 1082,
-      "sha256": "823861d2bc223983a0dcbfcc8fbcef8b38dff51440c8c4d18427bc23d0125974"
+      "size": 1181,
+      "sha256": "02bc48427464f153116d48e68ef3e4d3997a9a873bb01abb97f26946c204610f"
+    },
+    {
+      "path": "scripts/ai-os.py",
+      "category": "scripts",
+      "size": 23462,
+      "sha256": "91933d419f8486035237a733287d19264906248782cbf3572006d5a40a168d03"
     },
     {
       "path": "scripts/ai_os_service/__init__.py",
@@ -1403,6 +1415,42 @@
       "category": "scripts",
       "size": 10831,
       "sha256": "e1eebe312bf4893f1aebad21380e5edc5c667dacb997f59b99885384d070c7be"
+    },
+    {
+      "path": "scripts/release/__init__.py",
+      "category": "scripts",
+      "size": 53,
+      "sha256": "9ff27e86e796f51f2d8b22ab84c75146c8d7d761d723ec6191830b05830fc282"
+    },
+    {
+      "path": "scripts/release/config.py",
+      "category": "scripts",
+      "size": 3228,
+      "sha256": "4a3db659b43b629cad2d2aa96bb0829ac205e1073f3188091d85485674917fa4"
+    },
+    {
+      "path": "scripts/release/manifest.py",
+      "category": "scripts",
+      "size": 9344,
+      "sha256": "b68f09f5ef3db1ad786b640b55719ff0eefdc3361e0cc9e06ace528e6ef56407"
+    },
+    {
+      "path": "scripts/release/status.py",
+      "category": "scripts",
+      "size": 1898,
+      "sha256": "f77ea36da9bbc15969872512760343f90f08afde377aa31c15961d740426b1fd"
+    },
+    {
+      "path": "scripts/release/utils.py",
+      "category": "scripts",
+      "size": 2719,
+      "sha256": "76cb79e137aaf8839f9f6fbcb796460922ea40f48f1aa3ca885601f336095c3f"
+    },
+    {
+      "path": "scripts/release/version.py",
+      "category": "scripts",
+      "size": 1256,
+      "sha256": "7fe1dff680710cafe088247bd1dd3c093dc72fa19a4ef3b06111c97c0339ed2e"
     },
     {
       "path": "scripts/semantic_discovery/__init__.py",

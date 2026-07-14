@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-13T22:52:59Z",
+  "generatedAt": "2026-07-14T00:08:48Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 329,
-    "edges": 518,
+    "nodes": 331,
+    "edges": 521,
     "nodesByType": {
       "concept": 2,
-      "document": 291,
+      "document": 293,
       "memory": 5,
       "platform": 5,
       "project": 10,
@@ -18,10 +18,10 @@
       "belongs_to": 2,
       "contains": 129,
       "generated_from": 14,
-      "references": 169,
+      "references": 170,
       "related_to": 103,
       "supports": 4,
-      "uses": 97
+      "uses": 99
     }
   },
   "nodes": [
@@ -557,6 +557,15 @@
       }
     },
     {
+      "id": "document:config/ai-os.example.json",
+      "type": "document",
+      "name": "Ai Os.Example",
+      "sourcePath": "config/ai-os.example.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
       "id": "document:examples/mcp/README.md",
       "type": "document",
       "name": "Readme",
@@ -660,6 +669,15 @@
       "type": "document",
       "name": "Phase 6 Mcp Integration",
       "sourcePath": "knowledge/architecture/phase-6-mcp-integration.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:knowledge/architecture/phase-7-release-hardening.md",
+      "type": "document",
+      "name": "Phase 7 Release Hardening",
+      "sourcePath": "knowledge/architecture/phase-7-release-hardening.md",
       "metadata": {
         "extension": ".md"
       }
@@ -5052,6 +5070,15 @@
       }
     },
     {
+      "id": "edge:ff105dccea30efc0",
+      "type": "references",
+      "from": "document:knowledge/architecture/phase-7-release-hardening.md",
+      "to": "document:knowledge/architecture/README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:40262f8233604605",
       "type": "references",
       "from": "document:knowledge/best-practices/README.md",
@@ -7233,6 +7260,24 @@
       "id": "edge:1e80bda204e0aa50",
       "type": "uses",
       "from": "document:knowledge/architecture/phase-6-mcp-integration.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:4f5c1387b0680f22",
+      "type": "uses",
+      "from": "document:knowledge/architecture/phase-7-release-hardening.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:dc06780203888fd9",
+      "type": "uses",
+      "from": "document:knowledge/architecture/phase-7-release-hardening.md",
       "to": "tool:mcp",
       "metadata": {
         "source": "document_text"

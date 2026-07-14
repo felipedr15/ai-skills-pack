@@ -44,4 +44,9 @@ MCP Integration scripts:
 - `ai_os_service/` (protocol-neutral service layer)
 - `mcp_server/` (MCP adapter modules)
 
+Release and Bootstrap scripts:
+
+- `ai-os.py` (unified CLI)
+- `release/` (release package modules)
+
 [Back to AI OS](../README.md)

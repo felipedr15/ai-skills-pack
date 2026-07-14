@@ -27,6 +27,10 @@ Local-first, offline-capable web dashboard for exploring repository state. Provi
 
 Protocol-neutral service layer and MCP-compatible server exposing 15 tools and 9 resources over stdio transport. Provides semantic search, graph traversal, skill/memory lookup, and safe file access with repository-root confinement, path traversal rejection, secret-file blocking, bounded excerpts, and read-only default mode. No external dependencies required.
 
+## Phase 7 — Release Hardening (Implemented)
+
+One-command bootstrap, unified CLI, environment doctor, configuration system, build orchestration, release packaging, backup/restore, safe cleaning, migration framework, and cross-platform wrappers. Semantic versioning with single source of truth. Release check validates all phases before packaging.
+
 ## Version 1.1 — Workflow Improvements (Proposed)
 Improved bootstrap, deeper validation, more examples, and expanded Power Apps, Power Automate, and web deployment guidance.
 

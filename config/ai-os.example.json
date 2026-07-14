@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "dashboard": {
+    "host": "127.0.0.1",
+    "port": 8080,
+    "openBrowser": false
+  },
+  "mcp": {
+    "enabled": true,
+    "readOnly": true,
+    "maxSearchResults": 20,
+    "maxTraversalDepth": 5,
+    "maxExcerptChars": 2000
+  },
+  "generation": {
+    "regenerateOnBootstrap": true
+  },
+  "validation": {
+    "runTests": true
+  },
+  "backup": {
+    "directory": ".ai-os/backups"
+  }
+}

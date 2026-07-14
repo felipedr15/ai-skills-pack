@@ -253,6 +253,7 @@
 - `knowledge/architecture/phase-4-semantic-discovery.md`
 - `knowledge/architecture/phase-5-interactive-dashboard.md`
 - `knowledge/architecture/phase-6-mcp-integration.md`
+- `knowledge/architecture/phase-7-release-hardening.md`
 - `knowledge/best-practices/README.md`
 - `knowledge/documentation/README.md`
 - `knowledge/future-ideas/README.md`
@@ -284,6 +285,7 @@
 ## Scripts
 
 - `scripts/README.md`
+- `scripts/ai-os.py`
 - `scripts/ai_os_service/__init__.py`
 - `scripts/ai_os_service/errors.py`
 - `scripts/ai_os_service/pagination.py`
@@ -332,6 +334,12 @@
 - `scripts/memory-promote.py`
 - `scripts/memory-search.py`
 - `scripts/memory_utils.py`
+- `scripts/release/__init__.py`
+- `scripts/release/config.py`
+- `scripts/release/manifest.py`
+- `scripts/release/status.py`
+- `scripts/release/utils.py`
+- `scripts/release/version.py`
 - `scripts/semantic_discovery/__init__.py`
 - `scripts/semantic_discovery/build.py`
 - `scripts/semantic_discovery/cli.py`
