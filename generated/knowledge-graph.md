@@ -2,15 +2,15 @@
 
 > Generated from repository source files. This file is not a source of truth.
 
-Generated at: 2026-07-15T19:26:55Z
+Generated at: 2026-07-15T19:51:03Z
 
-Nodes: 346
-Edges: 571
+Nodes: 347
+Edges: 574
 
 ## Node Counts By Type
 
 - concept: 2
-- document: 308
+- document: 309
 - memory: 5
 - platform: 5
 - project: 10
@@ -23,9 +23,9 @@ Edges: 571
 - contains: 129
 - generated_from: 14
 - references: 193
-- related_to: 120
+- related_to: 121
 - supports: 4
-- uses: 109
+- uses: 111
 
 ## Unresolved References
 
@@ -44,8 +44,8 @@ Count: 8
 
 - references: 193
 - contains: 129
-- related_to: 120
-- uses: 109
+- related_to: 121
+- uses: 111
 - generated_from: 14
 - supports: 4
 - belongs_to: 2

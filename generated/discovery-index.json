@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-15T19:26:55Z",
+  "generatedAt": "2026-07-15T19:51:04Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 324,
-    "entities": 346,
-    "terms": 975,
-    "relationships": 571
+    "documents": 325,
+    "entities": 347,
+    "terms": 984,
+    "relationships": 574
   },
   "documents": [
     {
@@ -1057,6 +1057,20 @@
         "References"
       ],
       "snippet": "AI OS is a repository-based **AI Development Operating System** for coordinating AI tools, reusable skills, specifications, project memory, validation, documentation, and deployment workflows. It is n",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:RELEASE_NOTES_v0.8.0.md",
+      "sourcePath": "RELEASE_NOTES_v0.8.0.md",
+      "title": "RELEASE_NOTES_v0.8.0",
+      "category": "document",
+      "headings": [
+        "What's Changed",
+        "New Contributors",
+        "Additional fixes included after PR #2",
+        "Final validation"
+      ],
+      "snippet": "* feat: add Phase 8 continuous learning and agent orchestration by @frojas15 in https://github.com/frojas15/ai-skills-pack/pull/2",
       "frontMatter": {}
     },
     {
@@ -5957,6 +5971,16 @@
       }
     },
     {
+      "id": "entity:document:RELEASE_NOTES_v0.8.0.md",
+      "nodeId": "document:RELEASE_NOTES_v0.8.0.md",
+      "type": "document",
+      "name": "Release Notes V0.8.0",
+      "sourcePath": "RELEASE_NOTES_v0.8.0.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "entity:document:ROADMAP.md",
       "nodeId": "document:ROADMAP.md",
       "type": "document",
@@ -9186,6 +9210,7 @@
     ],
     "add": [
       "doc:.agent/skills/communication-skill/SKILL.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:prompts/debug.prompt.md",
       "doc:references/workflow-examples.md"
@@ -9207,6 +9232,7 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md"
     ],
     "additional": [
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json"
@@ -9233,6 +9259,7 @@
       "doc:ROADMAP.md"
     ],
     "after": [
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:templates/memory/session-memory.md"
     ],
     "against": [
@@ -9279,6 +9306,7 @@
       "doc:CHANGELOG.md",
       "doc:CONTRIBUTING.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:agents/README.md",
@@ -9406,6 +9434,7 @@
       "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
@@ -9555,6 +9584,7 @@
       "doc:CONTRIBUTING.md",
       "doc:GOVERNANCE.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
@@ -10315,6 +10345,7 @@
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
     "by": [
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:docs/agent-orchestration.md",
       "doc:knowledge/workflows/README.md",
       "doc:references/README.md"
@@ -10410,6 +10441,7 @@
     ],
     "changed": [
       "doc:CHANGELOG.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:templates/project-memory/CHANGELOG.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/automation/CHANGELOG.md",
@@ -10605,6 +10637,9 @@
     "collections": [
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "entity:memory:lesson-powerapps-refresh-001"
+    ],
+    "com": [
+      "doc:RELEASE_NOTES_v0.8.0.md"
     ],
     "combine": [
       "doc:.agent/skills/system/superpower/SKILL.md"
@@ -10881,6 +10916,7 @@
     "continuous": [
       "doc:ARCHITECTURE.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
@@ -10897,7 +10933,8 @@
       "entity:document:CONTRIBUTING.md"
     ],
     "contributors": [
-      "doc:GOVERNANCE.md"
+      "doc:GOVERNANCE.md",
+      "doc:RELEASE_NOTES_v0.8.0.md"
     ],
     "control": [
       "doc:AGENTS.md"
@@ -11570,6 +11607,7 @@
       "entity:document:CONTRIBUTING.md",
       "entity:document:GOVERNANCE.md",
       "entity:document:README.md",
+      "entity:document:RELEASE_NOTES_v0.8.0.md",
       "entity:document:ROADMAP.md",
       "entity:document:SECURITY.md",
       "entity:document:WORKFLOW.md",
@@ -12242,6 +12280,9 @@
       "doc:templates/project-starters/python/TESTING.md",
       "doc:templates/project-starters/web-app/TESTING.md"
     ],
+    "feat": [
+      "doc:RELEASE_NOTES_v0.8.0.md"
+    ],
     "feature": [
       "doc:.kiro/specs/README.md",
       "doc:knowledge/workflows/feature-development.json",
@@ -12307,7 +12348,8 @@
     "final": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
-      "doc:GOVERNANCE.md"
+      "doc:GOVERNANCE.md",
+      "doc:RELEASE_NOTES_v0.8.0.md"
     ],
     "find": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
@@ -12348,6 +12390,9 @@
       "doc:templates/project-starters/power-automate/CHANGELOG.md",
       "doc:templates/project-starters/python/CHANGELOG.md",
       "doc:templates/project-starters/web-app/CHANGELOG.md"
+    ],
+    "fixes": [
+      "doc:RELEASE_NOTES_v0.8.0.md"
     ],
     "flags": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
@@ -12501,6 +12546,9 @@
       "doc:docs/knowledge-health.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
+    "frojas15": [
+      "doc:RELEASE_NOTES_v0.8.0.md"
+    ],
     "from": [
       "doc:.github/instructions/specifications.instructions.md",
       "doc:docs/agent-orchestration.md",
@@ -12637,6 +12685,7 @@
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/technology.md",
       "doc:CHANGELOG.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/github/README.md",
       "doc:references/copilot.md",
       "entity:document:.github/README.md",
@@ -12888,6 +12937,9 @@
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:docs/continuous-learning.md"
     ],
+    "https": [
+      "doc:RELEASE_NOTES_v0.8.0.md"
+    ],
     "hub": [
       "doc:.github/README.md",
       "doc:.github/copilot-instructions.md",
@@ -12987,6 +13039,7 @@
     "in": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:.github/copilot-instructions.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -13003,6 +13056,9 @@
     "incident": [
       "doc:knowledge/workflows/incident-response.json",
       "entity:document:knowledge/workflows/incident-response.json"
+    ],
+    "included": [
+      "doc:RELEASE_NOTES_v0.8.0.md"
     ],
     "includes": [
       "doc:.agent/skills/research/README.md",
@@ -13551,6 +13607,7 @@
     "learning": [
       "doc:ARCHITECTURE.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
@@ -13857,6 +13914,7 @@
       "doc:CONTRIBUTING.md",
       "doc:GOVERNANCE.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
@@ -14152,6 +14210,7 @@
       "entity:document:CONTRIBUTING.md",
       "entity:document:GOVERNANCE.md",
       "entity:document:README.md",
+      "entity:document:RELEASE_NOTES_v0.8.0.md",
       "entity:document:ROADMAP.md",
       "entity:document:SECURITY.md",
       "entity:document:WORKFLOW.md",
@@ -14674,6 +14733,7 @@
       "doc:standards/git.md"
     ],
     "new": [
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/workflows/feature-development.json",
       "doc:knowledge/workflows/procedure-creation.json",
@@ -14790,6 +14850,7 @@
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/research/SKILL.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/README.md",
       "doc:knowledge/architecture/README.md",
@@ -14813,6 +14874,7 @@
       "doc:templates/project-starters/python/SESSION.md",
       "doc:templates/project-starters/web-app/RELEASE_NOTES.md",
       "doc:templates/project-starters/web-app/SESSION.md",
+      "entity:document:RELEASE_NOTES_v0.8.0.md",
       "entity:document:knowledge/research-notes/README.md",
       "entity:document:templates/project-memory/RELEASE_NOTES.md",
       "entity:document:templates/project-starters/automation/RELEASE_NOTES.md",
@@ -14994,6 +15056,7 @@
       "doc:.agent/skills/system/SKILL.md",
       "doc:ARCHITECTURE.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
@@ -15125,6 +15188,9 @@
       "doc:agents/project-manager.md",
       "doc:standards/documentation.md"
     ],
+    "pack": [
+      "doc:RELEASE_NOTES_v0.8.0.md"
+    ],
     "package": [
       "doc:.agent/skills/communication-skill/README.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
@@ -15224,6 +15290,7 @@
     "phase": [
       "doc:ARCHITECTURE.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
@@ -15415,6 +15482,9 @@
     ],
     "powershell": [
       "doc:.kiro/steering/technology.md"
+    ],
+    "pr": [
+      "doc:RELEASE_NOTES_v0.8.0.md"
     ],
     "practices": [
       "doc:knowledge/best-practices/README.md",
@@ -15998,6 +16068,9 @@
     "publish": [
       "doc:.github/workflows/README.md"
     ],
+    "pull": [
+      "doc:RELEASE_NOTES_v0.8.0.md"
+    ],
     "purpose": [
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
@@ -16505,6 +16578,7 @@
       "doc:.github/instructions/templates.instructions.md"
     ],
     "release": [
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
@@ -16519,6 +16593,7 @@
       "doc:templates/project-starters/power-automate/RELEASE_NOTES.md",
       "doc:templates/project-starters/python/RELEASE_NOTES.md",
       "doc:templates/project-starters/web-app/RELEASE_NOTES.md",
+      "entity:document:RELEASE_NOTES_v0.8.0.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/workflows/release-preparation.json",
       "entity:document:standards/release-management.md",
@@ -17558,6 +17633,7 @@
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
       "doc:agents/architect.md",
       "doc:agents/builder.md",
@@ -19293,8 +19369,10 @@
       "entity:skill:ui-ux-pro-max"
     ],
     "v0": [
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:references/v0.md",
       "doc:references/workflow-examples.md",
+      "entity:document:RELEASE_NOTES_v0.8.0.md",
       "entity:document:references/v0.md"
     ],
     "valid": [
@@ -19322,6 +19400,7 @@
       "doc:CHANGELOG.md",
       "doc:CLAUDE.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:agents/qa.md",
@@ -19461,6 +19540,7 @@
     ],
     "what": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
+      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:docs/continuous-learning.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
