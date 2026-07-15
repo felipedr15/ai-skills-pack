@@ -1713,8 +1713,8 @@
     {
       "path": "scripts/validate-markdown.ps1",
       "category": "scripts",
-      "size": 1436,
-      "sha256": "d31be2ac49d272f5da0e7c6c9a772535a0566de176724a4aa10f7668f2d734ad"
+      "size": 1421,
+      "sha256": "f9ed9e0639469144f4c6107802458ba42f0613e8d71d697bd069fa6c09b80a17"
     },
     {
       "path": "scripts/validate-memory-security.py",

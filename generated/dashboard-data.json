@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-15T15:23:26Z",
+  "generatedAt": "2026-07-15T16:41:51Z",
   "generator": "ai-os-dashboard",
   "repository": {
     "available": true,
@@ -244,7 +244,7 @@
         "generatedAt": null,
         "stale": false,
         "path": "repository-index.json",
-        "fileTimestamp": "2026-07-14T23:59:10Z"
+        "fileTimestamp": "2026-07-15T16:40:56Z"
       },
       {
         "exists": true,
