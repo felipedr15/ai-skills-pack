@@ -2,15 +2,15 @@
 
 > Generated from repository source files. This file is not a source of truth.
 
-Generated at: 2026-07-14T23:11:16Z
+Generated at: 2026-07-15T16:47:17Z
 
-Nodes: 347
+Nodes: 346
 Edges: 570
 
 ## Node Counts By Type
 
 - concept: 2
-- document: 309
+- document: 308
 - memory: 5
 - platform: 5
 - project: 10

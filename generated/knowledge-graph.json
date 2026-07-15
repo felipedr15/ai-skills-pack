@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-14T23:11:16Z",
+  "generatedAt": "2026-07-15T16:47:17Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 347,
+    "nodes": 346,
     "edges": 570,
     "nodesByType": {
       "concept": 2,
-      "document": 309,
+      "document": 308,
       "memory": 5,
       "platform": 5,
       "project": 10,
@@ -356,15 +356,6 @@
       "sourcePath": ".kiro/steering/workflow.md",
       "metadata": {
         "extension": ".md"
-      }
-    },
-    {
-      "id": "document:.vscode/settings.json",
-      "type": "document",
-      "name": "Settings",
-      "sourcePath": ".vscode/settings.json",
-      "metadata": {
-        "extension": ".json"
       }
     },
     {

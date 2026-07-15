@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-15T16:41:51Z",
+  "generatedAt": "2026-07-15T16:51:02Z",
   "generator": "ai-os-dashboard",
   "repository": {
     "available": true,
@@ -199,11 +199,11 @@
   },
   "knowledgeGraph": {
     "available": true,
-    "totalNodes": 347,
+    "totalNodes": 346,
     "totalEdges": 570,
     "nodesByType": {
       "concept": 2,
-      "document": 309,
+      "document": 308,
       "memory": 5,
       "platform": 5,
       "project": 10,
@@ -223,9 +223,9 @@
   },
   "discovery": {
     "available": true,
-    "documents": 325,
-    "entities": 347,
-    "terms": 977,
+    "documents": 324,
+    "entities": 346,
+    "terms": 973,
     "relationships": 570,
     "warnings": 0,
     "unindexedFiles": 0
@@ -237,35 +237,35 @@
         "generatedAt": null,
         "stale": false,
         "path": "skills.json",
-        "fileTimestamp": "2026-07-14T23:11:14Z"
+        "fileTimestamp": "2026-07-15T16:44:15Z"
       },
       {
         "exists": true,
         "generatedAt": null,
         "stale": false,
         "path": "repository-index.json",
-        "fileTimestamp": "2026-07-15T16:40:56Z"
+        "fileTimestamp": "2026-07-15T16:45:42Z"
       },
       {
         "exists": true,
         "generatedAt": null,
         "stale": false,
         "path": "memory-index.json",
-        "fileTimestamp": "2026-07-14T23:11:14Z"
+        "fileTimestamp": "2026-07-15T16:44:15Z"
       },
       {
         "exists": true,
-        "generatedAt": "2026-07-14T23:11:16Z",
+        "generatedAt": "2026-07-15T16:47:17Z",
         "stale": false,
         "path": "knowledge-graph.json",
-        "fileTimestamp": "2026-07-14T23:11:16Z"
+        "fileTimestamp": "2026-07-15T16:47:17Z"
       },
       {
         "exists": true,
-        "generatedAt": "2026-07-15T15:22:36Z",
+        "generatedAt": "2026-07-15T16:47:18Z",
         "stale": false,
         "path": "discovery-index.json",
-        "fileTimestamp": "2026-07-15T15:22:36Z"
+        "fileTimestamp": "2026-07-15T16:47:18Z"
       }
     ]
   },

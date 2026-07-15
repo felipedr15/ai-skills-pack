@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-15T15:22:36Z",
+  "generatedAt": "2026-07-15T16:47:18Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 325,
-    "entities": 347,
-    "terms": 977,
+    "documents": 324,
+    "entities": 346,
+    "terms": 973,
     "relationships": 570
   },
   "documents": [
@@ -921,18 +921,6 @@
         "Workflow Steering"
       ],
       "snippet": "Use requirements-first work: approve requirements, design, and tasks; prepare handoff; execute bounded scope; validate; review the diff; obtain human approval; then let a human authorize commit and de",
-      "frontMatter": {}
-    },
-    {
-      "id": "doc:.vscode/settings.json",
-      "sourcePath": ".vscode/settings.json",
-      "title": "settings",
-      "category": "document",
-      "headings": [
-        "python-envs.pythonProjects",
-        "chat.tools.terminal.autoApprove"
-      ],
-      "snippet": "",
       "frontMatter": {}
     },
     {
@@ -5898,16 +5886,6 @@
       }
     },
     {
-      "id": "entity:document:.vscode/settings.json",
-      "nodeId": "document:.vscode/settings.json",
-      "type": "document",
-      "name": "Settings",
-      "sourcePath": ".vscode/settings.json",
-      "metadata": {
-        "extension": ".json"
-      }
-    },
-    {
       "id": "entity:document:AGENTS.md",
       "nodeId": "document:AGENTS.md",
       "type": "document",
@@ -9789,8 +9767,7 @@
       "doc:docs/memory-approval.md"
     ],
     "approve": [
-      "doc:.kiro/steering/workflow.md",
-      "doc:.vscode/settings.json"
+      "doc:.kiro/steering/workflow.md"
     ],
     "approved": [
       "doc:.github/copilot-instructions.md",
@@ -10035,9 +10012,6 @@
       "doc:prompts/debug.prompt.md",
       "doc:references/mcp.md",
       "doc:references/workflow-examples.md"
-    ],
-    "auto": [
-      "doc:.vscode/settings.json"
     ],
     "automate": [
       "doc:knowledge/power-automate/README.md",
@@ -10486,8 +10460,7 @@
     ],
     "chat": [
       "doc:.agent/skills/communication-skill/README.md",
-      "doc:.agent/skills/communication-skill/SKILL.md",
-      "doc:.vscode/settings.json"
+      "doc:.agent/skills/communication-skill/SKILL.md"
     ],
     "chatgpt": [
       "doc:.agent/skills/communication-skill/README.md",
@@ -11582,7 +11555,6 @@
       "entity:document:.kiro/steering/structure.md",
       "entity:document:.kiro/steering/technology.md",
       "entity:document:.kiro/steering/workflow.md",
-      "entity:document:.vscode/settings.json",
       "entity:document:AGENTS.md",
       "entity:document:ARCHITECTURE.md",
       "entity:document:CHANGELOG.md",
@@ -12052,9 +12024,6 @@
       "doc:references/README.md",
       "doc:references/vercel.md",
       "doc:templates/specifications/deployment-plan.md"
-    ],
-    "envs": [
-      "doc:.vscode/settings.json"
     ],
     "error": [
       "doc:templates/specifications/design.md"
@@ -13346,7 +13315,6 @@
       "doc:.github/instructions/prompts.instructions.md",
       "doc:.github/instructions/skills.instructions.md",
       "doc:.kiro/steering/technology.md",
-      "doc:.vscode/settings.json",
       "doc:agents.json",
       "doc:agents/README.md",
       "doc:config/ai-os.example.json",
@@ -13368,7 +13336,6 @@
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json",
       "doc:skills.json",
-      "entity:document:.vscode/settings.json",
       "entity:document:agents.json",
       "entity:document:config/ai-os.example.json",
       "entity:document:examples/mcp/server-config.example.json",
@@ -15891,7 +15858,6 @@
       "entity:project:web-app"
     ],
     "projects": [
-      "doc:.vscode/settings.json",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -16113,7 +16079,6 @@
     ],
     "python": [
       "doc:.kiro/steering/technology.md",
-      "doc:.vscode/settings.json",
       "doc:templates/project-starters/python/AGENTS.md",
       "doc:templates/project-starters/python/ARCHITECTURE.md",
       "doc:templates/project-starters/python/CHANGELOG.md",
@@ -17434,10 +17399,6 @@
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "entity:document:memory/sessions/README.md",
       "entity:memory:session-memory-engine-example-001"
-    ],
-    "settings": [
-      "doc:.vscode/settings.json",
-      "entity:document:.vscode/settings.json"
     ],
     "setup": [
       "doc:.agent/skills/communication-skill/README.md"
@@ -18785,9 +18746,6 @@
     "term": [
       "doc:memory/permanent/principles/README.md"
     ],
-    "terminal": [
-      "doc:.vscode/settings.json"
-    ],
     "test": [
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
@@ -19058,7 +19016,6 @@
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
-      "doc:.vscode/settings.json",
       "doc:AGENTS.md",
       "doc:README.md",
       "doc:examples/mcp/README.md",
@@ -19447,9 +19404,7 @@
       "doc:references/copilot.md"
     ],
     "vscode": [
-      "doc:.vscode/settings.json",
       "doc:knowledge/vscode/README.md",
-      "entity:document:.vscode/settings.json",
       "entity:document:knowledge/vscode/README.md"
     ],
     "ways": [

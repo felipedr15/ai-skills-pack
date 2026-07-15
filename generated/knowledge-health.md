@@ -3,7 +3,7 @@
 > Generated from repository state. Not a source of truth — a diagnostic snapshot.
 > Scores are explainable heuristics, not precise measurements.
 
-Generated at: 2026-07-14T23:11:17Z
+Generated at: 2026-07-15T16:50:20Z
 Generator: ai-os-orchestration
 Overall health score: 83 / 100
 
