@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "version": "0.8.0",
-  "generatedAt": "2026-07-15T19:51:06Z",
+  "generatedAt": "2026-07-15T20:00:02Z",
   "generator": "ai-os-release",
   "repository": {
     "fileCount": 359
@@ -66,8 +66,8 @@
     {
       "path": "generated/discovery-index.json",
       "exists": true,
-      "size": 787999,
-      "checksum": "e054f22da3b1a29ed14375c5299c0f9e733761834650f2b9eeb9e0e0e3598a42",
+      "size": 788227,
+      "checksum": "7b8952e53ab88292e76d479f6ed8ee9f744d32711603f5526e9a864c93277d04",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-semantic-discovery"
     },
@@ -75,7 +75,7 @@
       "path": "generated/discovery-index.md",
       "exists": true,
       "size": 350,
-      "checksum": "64f2ec63b4b6b63b5edf2cbd8a9b4c93b7eb6ff4a3259215febd0d01d278ba54"
+      "checksum": "a61dc0fbe1bce6bb8bf1d3a1810cafa9e7626e020e6a259bc744d0d4d5070481"
     },
     {
       "path": "generated/agent-registry.json",
@@ -123,13 +123,13 @@
       "path": "generated/dashboard.html",
       "exists": true,
       "size": 63162,
-      "checksum": "58bbcfd8e0f8e8de4082706faa758eafdf348c60bfa2ab374b6ce8eeb1f9b6bd"
+      "checksum": "a4470d03e2323cb1687dceaee00d05f28c0331c58d56e2122bb25dd352a2b2dc"
     },
     {
       "path": "generated/dashboard-data.json",
       "exists": true,
       "size": 6809,
-      "checksum": "99537d288da7997c3502742e2972b68167d8d65b2b6fd406d19167476dce19e5",
+      "checksum": "1ca860b277afe4ce183550530625d28cabb9ef1c4324201f38222712d5b248ff",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-dashboard"
     }

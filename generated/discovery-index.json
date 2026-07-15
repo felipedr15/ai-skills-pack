@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-15T19:51:04Z",
+  "generatedAt": "2026-07-15T20:00:00Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
     "documents": 325,
     "entities": 347,
-    "terms": 984,
+    "terms": 990,
     "relationships": 574
   },
   "documents": [
@@ -978,6 +978,7 @@
       "headings": [
         "Changelog",
         "Unreleased",
+        "Changed",
         "[0.8.0] - 2026-07-15",
         "Added",
         "Changed",
@@ -986,7 +987,7 @@
         "Removed",
         "Security"
       ],
-      "snippet": "- AI OS core architecture, agent and prompt registries, specification and memory templates, project starters, standards, knowledge hub, platform references, validation scripts, and GitHub validation w",
+      "snippet": "- Post-release repository maintenance: after `v0.8.0` was tagged, added a tracked copy of the release notes and regenerated the knowledge graph and discovery index to include that document. These docu",
       "frontMatter": {}
     },
     {
@@ -9259,6 +9260,7 @@
       "doc:ROADMAP.md"
     ],
     "after": [
+      "doc:CHANGELOG.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:templates/memory/session-memory.md"
     ],
@@ -9303,7 +9305,6 @@
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
       "doc:ARCHITECTURE.md",
-      "doc:CHANGELOG.md",
       "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
@@ -9432,7 +9433,6 @@
       "doc:.kiro/steering/product.md",
       "doc:AGENTS.md",
       "doc:ARCHITECTURE.md",
-      "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
@@ -9878,7 +9878,6 @@
     ],
     "architecture": [
       "doc:ARCHITECTURE.md",
-      "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -10981,6 +10980,7 @@
       "entity:platform:copilot"
     ],
     "copy": [
+      "doc:CHANGELOG.md",
       "doc:templates/project-starters/README.md",
       "doc:templates/specifications/README.md"
     ],
@@ -10988,7 +10988,6 @@
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.kiro/steering/structure.md",
       "doc:.kiro/steering/technology.md",
-      "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:ROADMAP.md"
     ],
@@ -11502,6 +11501,7 @@
     ],
     "discovery": [
       "doc:ARCHITECTURE.md",
+      "doc:CHANGELOG.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -11556,7 +11556,11 @@
     "doctor": [
       "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
+    "docu": [
+      "doc:CHANGELOG.md"
+    ],
     "document": [
+      "doc:CHANGELOG.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
@@ -12661,7 +12665,6 @@
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/technology.md",
       "doc:AGENTS.md",
-      "doc:CHANGELOG.md",
       "doc:agents/reviewer.md",
       "doc:knowledge/git/README.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -12684,7 +12687,6 @@
       "doc:.github/instructions/templates.instructions.md",
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/technology.md",
-      "doc:CHANGELOG.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/github/README.md",
       "doc:references/copilot.md",
@@ -12739,6 +12741,7 @@
     ],
     "graph": [
       "doc:ARCHITECTURE.md",
+      "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
@@ -12946,7 +12949,6 @@
       "doc:.github/instructions/README.md",
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/technology.md",
-      "doc:CHANGELOG.md",
       "doc:knowledge/README.md",
       "doc:references/copilot.md"
     ],
@@ -13057,6 +13059,9 @@
       "doc:knowledge/workflows/incident-response.json",
       "entity:document:knowledge/workflows/incident-response.json"
     ],
+    "include": [
+      "doc:CHANGELOG.md"
+    ],
     "included": [
       "doc:RELEASE_NOTES_v0.8.0.md"
     ],
@@ -13072,6 +13077,7 @@
       "doc:.kiro/steering/product.md"
     ],
     "index": [
+      "doc:CHANGELOG.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "entity:document:generated/memory-index.json",
@@ -13763,6 +13769,7 @@
       "doc:GOVERNANCE.md"
     ],
     "maintenance": [
+      "doc:CHANGELOG.md",
       "doc:knowledge/workflows/knowledge-maintenance.json",
       "entity:document:knowledge/workflows/knowledge-maintenance.json"
     ],
@@ -14493,7 +14500,6 @@
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
       "doc:ARCHITECTURE.md",
-      "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
@@ -14850,6 +14856,7 @@
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/research/SKILL.md",
+      "doc:CHANGELOG.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/README.md",
@@ -14932,6 +14939,7 @@
       "doc:.kiro/steering/workflow.md"
     ],
     "of": [
+      "doc:CHANGELOG.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -15080,7 +15088,6 @@
       "doc:.kiro/steering/product.md",
       "doc:AGENTS.md",
       "doc:ARCHITECTURE.md",
-      "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
@@ -15365,7 +15372,6 @@
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/system/SKILL.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
-      "doc:CHANGELOG.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "entity:platform:claude",
@@ -15398,6 +15404,9 @@
     "portable": [
       "doc:.kiro/steering/product.md",
       "doc:ARCHITECTURE.md"
+    ],
+    "post": [
+      "doc:CHANGELOG.md"
     ],
     "power": [
       "doc:.kiro/steering/technology.md",
@@ -15619,7 +15628,6 @@
       "doc:.github/instructions/templates.instructions.md",
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
-      "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:agents/project-manager.md",
@@ -15961,7 +15969,6 @@
     "prompt": [
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.github/instructions/prompts.instructions.md",
-      "doc:CHANGELOG.md",
       "doc:CONTRIBUTING.md",
       "doc:ROADMAP.md",
       "doc:knowledge/prompt-engineering/README.md",
@@ -16471,7 +16478,6 @@
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
-      "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
@@ -16531,11 +16537,13 @@
     "regenerate": [
       "doc:knowledge/workflows/README.md"
     ],
+    "regenerated": [
+      "doc:CHANGELOG.md"
+    ],
     "registered": [
       "doc:examples/mcp/README.md"
     ],
     "registries": [
-      "doc:CHANGELOG.md",
       "doc:GOVERNANCE.md",
       "doc:prompts/create-skill.prompt.md"
     ],
@@ -16578,6 +16586,7 @@
       "doc:.github/instructions/templates.instructions.md"
     ],
     "release": [
+      "doc:CHANGELOG.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
@@ -16671,6 +16680,7 @@
       "doc:.kiro/steering/README.md",
       "doc:AGENTS.md",
       "doc:ARCHITECTURE.md",
+      "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -17308,7 +17318,6 @@
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
     ],
     "scripts": [
-      "doc:CHANGELOG.md",
       "doc:knowledge/workflows/README.md",
       "doc:scripts/README.md",
       "doc:scripts/knowledge_graph/README.md",
@@ -17765,7 +17774,6 @@
     "specification": [
       "doc:.kiro/README.md",
       "doc:AGENTS.md",
-      "doc:CHANGELOG.md",
       "doc:CONTRIBUTING.md",
       "doc:ROADMAP.md",
       "doc:references/kiro.md",
@@ -17857,7 +17865,6 @@
     "standards": [
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
-      "doc:CHANGELOG.md",
       "doc:knowledge/README.md",
       "doc:memory/permanent/README.md",
       "doc:standards/README.md",
@@ -17898,7 +17905,6 @@
     ],
     "starters": [
       "doc:.kiro/steering/structure.md",
-      "doc:CHANGELOG.md",
       "doc:ROADMAP.md",
       "doc:templates/README.md",
       "doc:templates/project-starters/README.md",
@@ -18410,6 +18416,9 @@
       "entity:tool:git",
       "entity:tool:mcp"
     ],
+    "tagged": [
+      "doc:CHANGELOG.md"
+    ],
     "takeaways": [
       "doc:.agent/skills/research/SKILL.md"
     ],
@@ -18480,7 +18489,6 @@
     "templates": [
       "doc:.github/instructions/templates.instructions.md",
       "doc:.kiro/steering/structure.md",
-      "doc:CHANGELOG.md",
       "doc:ROADMAP.md",
       "doc:templates/README.md",
       "doc:templates/memory/README.md",
@@ -18901,6 +18909,7 @@
     ],
     "that": [
       "doc:.agent/skills/communication-skill/SKILL.md",
+      "doc:CHANGELOG.md",
       "doc:memory/permanent/README.md",
       "doc:memory/permanent/preferences/README.md",
       "doc:memory/permanent/principles/README.md",
@@ -18922,6 +18931,7 @@
       "doc:.kiro/README.md",
       "doc:.kiro/steering/README.md",
       "doc:.kiro/steering/workflow.md",
+      "doc:CHANGELOG.md",
       "doc:agents/README.md",
       "doc:agents/reviewer.md",
       "doc:docs/continuous-learning.md",
@@ -18965,6 +18975,7 @@
     "these": [
       "doc:.github/instructions/README.md",
       "doc:.kiro/steering/README.md",
+      "doc:CHANGELOG.md",
       "doc:templates/memory/README.md",
       "doc:templates/specifications/README.md"
     ],
@@ -19056,6 +19067,7 @@
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:.agent/skills/thinking/SKILL.md",
+      "doc:CHANGELOG.md",
       "doc:CONTRIBUTING.md",
       "doc:docs/knowledge-health.md",
       "doc:knowledge/workflows/README.md",
@@ -19140,6 +19152,7 @@
       "doc:templates/specifications/README.md"
     ],
     "tracked": [
+      "doc:CHANGELOG.md",
       "doc:docs/continuous-learning.md"
     ],
     "tracking": [
@@ -19369,6 +19382,7 @@
       "entity:skill:ui-ux-pro-max"
     ],
     "v0": [
+      "doc:CHANGELOG.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:references/v0.md",
       "doc:references/workflow-examples.md",
@@ -19397,7 +19411,6 @@
       "doc:.github/workflows/README.md",
       "doc:AGENTS.md",
       "doc:ARCHITECTURE.md",
-      "doc:CHANGELOG.md",
       "doc:CLAUDE.md",
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
@@ -19493,6 +19506,9 @@
     "vscode": [
       "doc:knowledge/vscode/README.md",
       "entity:document:knowledge/vscode/README.md"
+    ],
+    "was": [
+      "doc:CHANGELOG.md"
     ],
     "ways": [
       "doc:docs/knowledge-health.md"

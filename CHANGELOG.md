@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+### Changed
+- Post-release repository maintenance: after `v0.8.0` was tagged, added a tracked copy of the release notes and regenerated the knowledge graph and discovery index to include that document. These documentation and generated-artifact updates are present on `main` but do not change the released Phase 8 runtime behavior.
+
 ## [0.8.0] - 2026-07-15
 
 ### Added
