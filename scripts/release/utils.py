@@ -72,6 +72,9 @@ GENERATED_ARTIFACTS = [
     "memory-index.json", "memory-index.md",
     "knowledge-graph.json", "knowledge-graph.md",
     "discovery-index.json", "discovery-index.md",
+    "agent-registry.json", "agent-registry.md",
+    "workflow-registry.json", "workflow-registry.md",
+    "knowledge-health.json", "knowledge-health.md",
     "dashboard.html", "dashboard-data.json",
     "release-manifest.json", "release-manifest.md",
 ]
@@ -82,5 +85,8 @@ GENERATION_ORDER = [
     ("scripts/index-repository.py", "repository index"),
     ("scripts/generate-knowledge-graph.py", "knowledge graph"),
     ("scripts/discovery-build.py", "discovery index"),
+    ("scripts/generate-agent-registry.py", "agent registry"),
+    ("scripts/generate-workflow-registry.py", "workflow registry"),
+    ("scripts/generate-knowledge-health.py", "knowledge health"),
     ("scripts/dashboard-build.py", "dashboard"),
 ]

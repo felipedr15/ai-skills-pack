@@ -116,6 +116,14 @@ footer { margin-top: 3rem; padding: 1rem 0; border-top: 1px solid var(--border);
 <li><a href="#graphviz" data-view="graphviz" tabindex="0">Graph Viz</a></li>
 <li><a href="#discovery" data-view="discovery" tabindex="0">Discovery</a></li>
 <li><a href="#repository" data-view="repository" tabindex="0">Repository</a></li>
+<li><a href="#orchestration" data-view="orchestration" tabindex="0">Orchestration</a></li>
+<li><a href="#workflows" data-view="workflows" tabindex="0">Workflows</a></li>
+<li><a href="#agents" data-view="agents" tabindex="0">Agents</a></li>
+<li><a href="#sessions" data-view="sessions" tabindex="0">Sessions</a></li>
+<li><a href="#memory-suggestions" data-view="memory-suggestions" tabindex="0">Memory Suggestions</a></li>
+<li><a href="#knowledge-health" data-view="knowledge-health" tabindex="0">Knowledge Health</a></li>
+<li><a href="#feedback" data-view="feedback" tabindex="0">Feedback</a></li>
+<li><a href="#audit" data-view="audit" tabindex="0">Audit</a></li>
 </ul>
 <div class="theme-toggle"><button id="theme-btn" aria-label="Toggle dark/light mode">Toggle Theme</button></div>
 </nav>
@@ -172,6 +180,14 @@ function renderView(view) {
     case 'graphviz': renderGraphViz(container); break;
     case 'discovery': renderDiscovery(container); break;
     case 'repository': renderRepository(container); break;
+    case 'orchestration': renderOrchestrationOverview(container); break;
+    case 'workflows': renderWorkflows(container); break;
+    case 'agents': renderAgents(container); break;
+    case 'sessions': renderSessions(container); break;
+    case 'memory-suggestions': renderMemorySuggestions(container); break;
+    case 'knowledge-health': renderKnowledgeHealth(container); break;
+    case 'feedback': renderFeedbackView(container); break;
+    case 'audit': renderAudit(container); break;
     default: container.innerHTML = '<div class="error">Unknown view</div>';
   }
 }
@@ -628,6 +644,186 @@ function selectVizNode(nodeId) {
       <button onclick="document.getElementById('viz-search').value='${esc(n.id)}';loadViz()" style="margin-top:0.5rem;padding:0.4rem 0.8rem;background:var(--accent);color:#fff;border:none;border-radius:4px;cursor:pointer">Focus on this node</button>
     </div>`;
   }).catch(()=>{});
+}
+
+// ── Orchestration Overview (Phase 8) ──
+function renderOrchestrationOverview(container) {
+  const o = DATA.orchestration || {};
+  container.innerHTML = `<h2>Orchestration Overview</h2>
+    ${o.available ? '' : '<div class="warning">Registries not yet built. Run: python scripts/ai-os.py generate</div>'}
+    <div class="grid">
+      <div class="stat-card"><div class="big">${o.agentCount||0}</div><div class="label">Agents</div></div>
+      <div class="stat-card"><div class="big">${o.workflowCount||0}</div><div class="label">Workflows</div></div>
+      <div class="stat-card"><div class="big">${o.knowledgeHealthScore||0}/100</div><div class="label">Knowledge Health</div></div>
+      <div class="stat-card" id="oo-sessions"><div class="big">-</div><div class="label">Active Sessions</div></div>
+      <div class="stat-card" id="oo-approvals"><div class="big">-</div><div class="label">Pending Approvals</div></div>
+      <div class="stat-card" id="oo-suggestions"><div class="big">-</div><div class="label">Pending Memory Suggestions</div></div>
+    </div>
+    <div class="card"><h2>Knowledge Health by Category</h2><table><thead><tr><th>Category</th><th>Score</th></tr></thead><tbody>
+      ${Object.entries(o.knowledgeHealthCategories||{}).map(([k,v]) => `<tr><td>${esc(k)}</td><td>${v}/100</td></tr>`).join('')}
+    </tbody></table></div>`;
+  fetch('/api/orchestration/sessions?status=active').then(r=>r.json()).then(d => setStat('oo-sessions', d.total)).catch(()=>{});
+  fetch('/api/orchestration/approvals?status=pending').then(r=>r.json()).then(d => setStat('oo-approvals', d.total)).catch(()=>{});
+  fetch('/api/orchestration/memory-suggestions?status=pending').then(r=>r.json()).then(d => setStat('oo-suggestions', d.total)).catch(()=>{});
+}
+function setStat(id, value) { const el = document.getElementById(id); if (el) el.querySelector('.big').textContent = value; }
+
+// ── Workflows View ──
+function renderWorkflows(container) {
+  container.innerHTML = `<h2>Workflows</h2><div id="wf-results"><div class="loading">Loading...</div></div>`;
+  fetch('/api/orchestration/workflows').then(r=>r.json()).then(data => {
+    const el = document.getElementById('wf-results');
+    if (!el) return;
+    if (!data.available || data.workflows.length === 0) { el.innerHTML = '<div class="empty-state">No workflows available. Run: python scripts/ai-os.py generate</div>'; return; }
+    const items = data.workflows.map(w => {
+      const steps = (w.steps||[]).map(s => `<tr><td>${esc(s.id)}</td><td>${esc(s.agent)}</td><td>${esc(s.action)}</td><td>${s.requiresApproval ? '<span class="badge badge-active">approval required</span>' : ''}</td></tr>`).join('');
+      return `<div class="card"><h2>${esc(w.name)} <span style="font-size:0.75rem;color:var(--text-muted)">${esc(w.id)}</span></h2>
+        <div style="font-size:0.85rem;margin-bottom:0.5rem">${esc(w.description)}</div>
+        <div class="meta-row"><span>Trigger intent:</span><strong>${esc(w.triggerIntent)}</strong><span>Approval gates:</span><strong>${(w.approvalGates||[]).length}</strong><span>Validation gates:</span><strong>${(w.validationGates||[]).length}</strong></div>
+        <table><thead><tr><th>Step</th><th>Agent</th><th>Action</th><th></th></tr></thead><tbody>${steps}</tbody></table></div>`;
+    }).join('');
+    el.innerHTML = `<p style="color:var(--text-muted);font-size:0.85rem">${data.total} workflow(s)</p>${items}`;
+  }).catch(() => { const el = document.getElementById('wf-results'); if (el) el.innerHTML = '<div class="error">Failed to load workflows.</div>'; });
+}
+
+// ── Agents View ──
+function renderAgents(container) {
+  container.innerHTML = `<h2>Agents</h2><div id="ag-results"><div class="loading">Loading...</div></div>`;
+  fetch('/api/orchestration/agents').then(r=>r.json()).then(data => {
+    const el = document.getElementById('ag-results');
+    if (!el) return;
+    if (!data.available || data.agents.length === 0) { el.innerHTML = '<div class="empty-state">No agents available. Run: python scripts/ai-os.py generate</div>'; return; }
+    const rows = data.agents.map(a => `<tr>
+      <td><strong>${esc(a.name)}</strong><br><span style="color:var(--text-muted);font-size:0.8rem">${esc(a.id)}</span></td>
+      <td><span class="badge badge-active">${esc(a.role)}</span></td>
+      <td style="font-size:0.8rem">${(a.requiredSkills||[]).map(s=>'<span class="tag">'+esc(s)+'</span>').join(' ')}</td>
+      <td style="font-size:0.8rem">${(a.allowedActions||[]).map(s=>'<span class="tag">'+esc(s)+'</span>').join(' ')}</td>
+      <td style="font-size:0.8rem">${(a.forbiddenActions||[]).length} restricted action(s)</td>
+      </tr>`).join('');
+    el.innerHTML = `<p style="color:var(--text-muted);font-size:0.85rem">${data.total} agent(s)</p>
+      <table><thead><tr><th>Agent</th><th>Role</th><th>Required Skills</th><th>Allowed Actions</th><th>Restrictions</th></tr></thead><tbody>${rows}</tbody></table>`;
+  }).catch(() => { const el = document.getElementById('ag-results'); if (el) el.innerHTML = '<div class="error">Failed to load agents.</div>'; });
+}
+
+// ── Sessions View ──
+function renderSessions(container) {
+  container.innerHTML = `<h2>Sessions</h2>
+    <div class="filters"><select id="sess-status" aria-label="Filter by status">
+      <option value="">All statuses</option>
+      <option>planned</option><option>approved</option><option>active</option><option>blocked</option>
+      <option>validation</option><option>completed</option><option>failed</option><option>cancelled</option><option>archived</option>
+    </select></div>
+    <div id="sess-results"><div class="loading">Loading...</div></div>`;
+  document.getElementById('sess-status').addEventListener('change', fetchSessions);
+  fetchSessions();
+}
+function fetchSessions() {
+  const status = (document.getElementById('sess-status')||{}).value || '';
+  const params = new URLSearchParams(); if (status) params.set('status', status);
+  fetch('/api/orchestration/sessions?' + params).then(r=>r.json()).then(data => {
+    const el = document.getElementById('sess-results');
+    if (!el) return;
+    if (!data.available || data.sessions.length === 0) { el.innerHTML = '<div class="empty-state">No sessions recorded yet. Start one: python scripts/ai-os.py session start "&lt;task&gt;"</div>'; return; }
+    const rows = data.sessions.map(s => `<tr>
+      <td style="font-size:0.8rem">${esc(s.sessionId)}</td>
+      <td><span class="badge badge-active">${esc(s.status)}</span></td>
+      <td>${esc((s.task||'').slice(0,60))}</td>
+      <td style="font-size:0.8rem">${(s.agents||[]).join(', ')}</td>
+      <td>${(s.knowledgeUsed||[]).length}</td>
+      <td>${(s.validations||[]).filter(v=>v.passed).length}/${(s.validations||[]).length}</td>
+      </tr>`).join('');
+    el.innerHTML = `<p style="color:var(--text-muted);font-size:0.85rem">${data.total} session(s)</p>
+      <table><thead><tr><th>ID</th><th>Status</th><th>Task</th><th>Agents</th><th>Knowledge Used</th><th>Validations Passed</th></tr></thead><tbody>${rows}</tbody></table>`;
+  }).catch(() => { const el = document.getElementById('sess-results'); if (el) el.innerHTML = '<div class="error">Failed to load sessions.</div>'; });
+}
+
+// ── Memory Suggestions View ──
+function renderMemorySuggestions(container) {
+  container.innerHTML = `<h2>Memory Suggestions</h2>
+    <div class="warning" style="font-size:0.8rem">All suggestions require explicit approval (via the CLI) before a memory file is created.</div>
+    <div class="filters"><select id="ms-status" aria-label="Filter by status">
+      <option value="">All statuses</option><option>pending</option><option>approved</option><option>rejected</option>
+    </select></div>
+    <div id="ms-results"><div class="loading">Loading...</div></div>`;
+  document.getElementById('ms-status').addEventListener('change', fetchMemorySuggestions);
+  fetchMemorySuggestions();
+}
+function fetchMemorySuggestions() {
+  const status = (document.getElementById('ms-status')||{}).value || '';
+  const params = new URLSearchParams(); if (status) params.set('status', status);
+  fetch('/api/orchestration/memory-suggestions?' + params).then(r=>r.json()).then(data => {
+    const el = document.getElementById('ms-results');
+    if (!el) return;
+    if (!data.available || data.suggestions.length === 0) { el.innerHTML = '<div class="empty-state">No memory suggestions yet.</div>'; return; }
+    const items = data.suggestions.map(s => {
+      const dupWarning = (s.duplicates||[]).length ? `<div class="warning" style="font-size:0.8rem">Similar to existing memory: ${esc(s.duplicates[0].id)} (similarity ${s.duplicates[0].similarity})</div>` : '';
+      return `<div class="result-item">
+        <span class="badge badge-active">${esc(s.status)}</span> <strong>${esc(s.title)}</strong> <span class="result-score">${s.confidence}</span>
+        <div style="font-size:0.85rem;margin-top:0.25rem">${esc(s.summary)}</div>
+        ${dupWarning}
+      </div>`;
+    }).join('');
+    el.innerHTML = `<p style="color:var(--text-muted);font-size:0.85rem">${data.total} suggestion(s)</p>${items}`;
+  }).catch(() => { const el = document.getElementById('ms-results'); if (el) el.innerHTML = '<div class="error">Failed to load memory suggestions.</div>'; });
+}
+
+// ── Knowledge Health View ──
+function renderKnowledgeHealth(container) {
+  container.innerHTML = `<h2>Knowledge Health</h2><div id="kh-results"><div class="loading">Loading...</div></div>`;
+  fetch('/api/orchestration/knowledge-health').then(r=>r.json()).then(data => {
+    const el = document.getElementById('kh-results');
+    if (!el) return;
+    const catRows = Object.entries(data.categoryScores||{}).map(([k,v]) => `<tr><td>${esc(k)}</td><td>${v}/100</td></tr>`).join('');
+    const gapRows = (data.gaps||[]).slice(0,50).map(g => `<tr><td><span class="badge ${g.severity==='critical'?'badge-missing':'badge-active'}">${esc(g.severity)}</span></td><td>${esc(g.category)}</td><td style="font-size:0.85rem">${esc(g.description)}</td></tr>`).join('');
+    const recs = (data.recommendations||[]).map(r => `<div style="font-size:0.85rem">- ${esc(r)}</div>`).join('');
+    el.innerHTML = `<div class="grid"><div class="stat-card"><div class="big">${data.overallScore}/100</div><div class="label">Overall Score</div></div>
+      <div class="stat-card"><div class="big">${(data.gaps||[]).length}</div><div class="label">Gaps Detected</div></div>
+      <div class="stat-card"><div class="big">${(data.reviewDueItems||[]).length}</div><div class="label">Review Due</div></div>
+      <div class="stat-card"><div class="big">${(data.isolatedNodes||[]).length}</div><div class="label">Isolated Nodes</div></div>
+      <div class="stat-card"><div class="big">${(data.unresolvedReferences||[]).length}</div><div class="label">Unresolved References</div></div></div>
+      <div class="card"><h2>Category Scores</h2><table><thead><tr><th>Category</th><th>Score</th></tr></thead><tbody>${catRows}</tbody></table></div>
+      <div class="card"><h2>Recommendations</h2>${recs || '<div class="empty-state">None</div>'}</div>
+      <div class="card"><h2>Gaps</h2><table><thead><tr><th>Severity</th><th>Category</th><th>Description</th></tr></thead><tbody>${gapRows}</tbody></table></div>`;
+  }).catch(() => { const el = document.getElementById('kh-results'); if (el) el.innerHTML = '<div class="error">Failed to load knowledge health.</div>'; });
+}
+
+// ── Feedback View ──
+function renderFeedbackView(container) {
+  container.innerHTML = `<h2>Feedback</h2><div id="fb-results"><div class="loading">Loading...</div></div>`;
+  fetch('/api/orchestration/feedback').then(r=>r.json()).then(data => {
+    const el = document.getElementById('fb-results');
+    if (!el) return;
+    if (!data.available) { el.innerHTML = '<div class="error">Feedback not available.</div>'; return; }
+    const stats = data.stats || {};
+    const typeCounts = Object.entries(stats.byType||{}).map(([k,v]) => `<span class="tag">${esc(k)}: ${v}</span>`).join(' ');
+    if (data.feedback.length === 0) { el.innerHTML = `<div class="grid"><div class="stat-card"><div class="big">0</div><div class="label">Open</div></div></div><div class="empty-state">No feedback recorded yet.</div>`; return; }
+    const rows = data.feedback.map(f => `<tr><td>${esc(f.feedbackId)}</td><td><span class="badge badge-active">${esc(f.status)}</span></td><td>${esc(f.type)}</td><td style="font-size:0.8rem">${esc(f.targetId)}</td></tr>`).join('');
+    el.innerHTML = `<div class="grid">
+        <div class="stat-card"><div class="big">${stats.total||0}</div><div class="label">Total</div></div>
+        <div class="stat-card"><div class="big">${stats.open||0}</div><div class="label">Open</div></div>
+        <div class="stat-card"><div class="big">${stats.resolved||0}</div><div class="label">Resolved</div></div>
+      </div>
+      <div class="card"><h2>By Type</h2>${typeCounts||'None'}</div>
+      <table><thead><tr><th>ID</th><th>Status</th><th>Type</th><th>Target</th></tr></thead><tbody>${rows}</tbody></table>`;
+  }).catch(() => { const el = document.getElementById('fb-results'); if (el) el.innerHTML = '<div class="error">Failed to load feedback.</div>'; });
+}
+
+// ── Audit View ──
+function renderAudit(container) {
+  container.innerHTML = `<h2>Audit Trail</h2><div id="au-results"><div class="loading">Loading...</div></div>`;
+  fetch('/api/orchestration/audit-summary').then(r=>r.json()).then(data => {
+    const el = document.getElementById('au-results');
+    if (!el) return;
+    const typeCounts = Object.entries(data.byType||{}).map(([k,v]) => `<span class="tag">${esc(k)}: ${v}</span>`).join(' ');
+    const recent = (data.recentEvents||[]).slice().reverse().map(e => `<tr><td style="font-size:0.8rem">${esc(e.createdAt)}</td><td>${esc(e.event)}</td></tr>`).join('');
+    el.innerHTML = `<div class="grid">
+        <div class="stat-card"><div class="big">${data.totalEvents||0}</div><div class="label">Total Events</div></div>
+        <div class="stat-card"><div class="big">${data.chainValid ? 'Valid' : 'INVALID'}</div><div class="label">Chain Integrity</div></div>
+      </div>
+      ${data.chainValid ? '' : '<div class="error">Audit chain integrity check failed — possible tampering.</div>'}
+      <div class="card"><h2>Event Summary</h2>${typeCounts||'None'}</div>
+      <div class="card"><h2>Recent Events</h2><table><thead><tr><th>Time</th><th>Event</th></tr></thead><tbody>${recent}</tbody></table></div>`;
+  }).catch(() => { const el = document.getElementById('au-results'); if (el) el.innerHTML = '<div class="error">Failed to load audit summary.</div>'; });
 }
 
 // ── Utilities ──

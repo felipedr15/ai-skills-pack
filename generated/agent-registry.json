@@ -1,0 +1,517 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-14T23:11:16Z",
+  "generator": "ai-os-orchestration",
+  "agents": [
+    {
+      "id": "agent:architect",
+      "name": "Architect",
+      "role": "architecture",
+      "description": "Design components, interfaces, risks, and alternatives.",
+      "capabilities": [
+        "Inspect context",
+        "apply approved scope",
+        "maintain traceability",
+        "surface assumptions risks",
+        "prepare the next handoff"
+      ],
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "allowedActions": [
+        "design_components",
+        "create_plan"
+      ],
+      "forbiddenActions": [
+        "git_commit",
+        "git_push",
+        "git_merge",
+        "git_tag",
+        "arbitrary_shell_execution",
+        "secret_access",
+        "network_access",
+        "automatic_approval"
+      ],
+      "requiredSkills": [
+        "analytical",
+        "problem-solving"
+      ],
+      "validationRequirements": [
+        "Inputs and scope verified.",
+        "Outputs trace to requirements.",
+        "Validation and risks recorded.",
+        "Next role has sufficient context"
+      ],
+      "sourcePath": "agents/architect.md",
+      "metadata": {
+        "handoffTo": "builder",
+        "rolePurpose": "Design components, interfaces, risks, and alternatives."
+      }
+    },
+    {
+      "id": "agent:builder",
+      "name": "Builder",
+      "role": "building",
+      "description": "Implement only approved scope and record evidence.",
+      "capabilities": [
+        "Inspect context",
+        "apply approved scope",
+        "maintain traceability",
+        "surface assumptions risks",
+        "prepare the next handoff"
+      ],
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "allowedActions": [
+        "modify_files"
+      ],
+      "forbiddenActions": [
+        "git_commit",
+        "git_push",
+        "git_merge",
+        "git_tag",
+        "arbitrary_shell_execution",
+        "secret_access",
+        "network_access",
+        "automatic_approval"
+      ],
+      "requiredSkills": [
+        "creator",
+        "testing"
+      ],
+      "validationRequirements": [
+        "Inputs and scope verified.",
+        "Outputs trace to requirements.",
+        "Validation and risks recorded.",
+        "Next role has sufficient context"
+      ],
+      "sourcePath": "agents/builder.md",
+      "metadata": {
+        "handoffTo": "reviewer",
+        "rolePurpose": "Implement only approved scope and record evidence."
+      }
+    },
+    {
+      "id": "agent:deployment-manager",
+      "name": "Deployment Manager",
+      "role": "release",
+      "description": "Prepare approved deployment and rollback guidance.",
+      "capabilities": [
+        "Inspect context",
+        "apply approved scope",
+        "maintain traceability",
+        "surface assumptions risks",
+        "prepare the next handoff"
+      ],
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "allowedActions": [
+        "prepare_deployment_guidance"
+      ],
+      "forbiddenActions": [
+        "git_commit",
+        "git_push",
+        "git_merge",
+        "git_tag",
+        "arbitrary_shell_execution",
+        "secret_access",
+        "network_access",
+        "automatic_approval"
+      ],
+      "requiredSkills": [
+        "vercel-agent",
+        "testing"
+      ],
+      "validationRequirements": [
+        "Inputs and scope verified.",
+        "Outputs trace to requirements.",
+        "Validation and risks recorded.",
+        "Next role has sufficient context"
+      ],
+      "sourcePath": "agents/deployment-manager.md",
+      "metadata": {
+        "handoffTo": "project-manager",
+        "rolePurpose": "Prepare approved deployment and rollback guidance."
+      }
+    },
+    {
+      "id": "agent:documentation-writer",
+      "name": "Documentation Writer",
+      "role": "documentation",
+      "description": "Create clear, accurate, audience-focused documentation.",
+      "capabilities": [
+        "Inspect context",
+        "apply approved scope",
+        "maintain traceability",
+        "surface assumptions risks",
+        "prepare the next handoff"
+      ],
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "allowedActions": [
+        "create_memory_suggestion",
+        "update_documentation"
+      ],
+      "forbiddenActions": [
+        "git_commit",
+        "git_push",
+        "git_merge",
+        "git_tag",
+        "arbitrary_shell_execution",
+        "secret_access",
+        "network_access",
+        "automatic_approval"
+      ],
+      "requiredSkills": [
+        "writing",
+        "clear-concise-writing"
+      ],
+      "validationRequirements": [
+        "Inputs and scope verified.",
+        "Outputs trace to requirements.",
+        "Validation and risks recorded.",
+        "Next role has sufficient context"
+      ],
+      "sourcePath": "agents/documentation-writer.md",
+      "metadata": {
+        "handoffTo": "reviewer",
+        "rolePurpose": "Create clear, accurate, audience-focused documentation."
+      }
+    },
+    {
+      "id": "agent:planner",
+      "name": "Planner",
+      "role": "planning",
+      "description": "Turn requests into approved, traceable scope.",
+      "capabilities": [
+        "Inspect context",
+        "apply approved scope",
+        "maintain traceability",
+        "surface assumptions risks",
+        "prepare the next handoff"
+      ],
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "allowedActions": [
+        "search_knowledge",
+        "create_plan",
+        "classify_task"
+      ],
+      "forbiddenActions": [
+        "git_commit",
+        "git_push",
+        "git_merge",
+        "git_tag",
+        "arbitrary_shell_execution",
+        "secret_access",
+        "network_access",
+        "automatic_approval"
+      ],
+      "requiredSkills": [
+        "problem-solving",
+        "analytical"
+      ],
+      "validationRequirements": [
+        "Inputs and scope verified.",
+        "Outputs trace to requirements.",
+        "Validation and risks recorded.",
+        "Next role has sufficient context"
+      ],
+      "sourcePath": "agents/planner.md",
+      "metadata": {
+        "handoffTo": "architect",
+        "rolePurpose": "Turn requests into approved, traceable scope."
+      }
+    },
+    {
+      "id": "agent:project-manager",
+      "name": "Project Manager",
+      "role": "project-management",
+      "description": "Coordinate gates, status, ownership, and human decisions.",
+      "capabilities": [
+        "Inspect context",
+        "apply approved scope",
+        "maintain traceability",
+        "surface assumptions risks",
+        "prepare the next handoff"
+      ],
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "allowedActions": [
+        "coordinate_approval_gates"
+      ],
+      "forbiddenActions": [
+        "git_commit",
+        "git_push",
+        "git_merge",
+        "git_tag",
+        "arbitrary_shell_execution",
+        "secret_access",
+        "network_access",
+        "automatic_approval"
+      ],
+      "requiredSkills": [
+        "writing",
+        "problem-solving"
+      ],
+      "validationRequirements": [
+        "Inputs and scope verified.",
+        "Outputs trace to requirements.",
+        "Validation and risks recorded.",
+        "Next role has sufficient context"
+      ],
+      "sourcePath": "agents/project-manager.md",
+      "metadata": {
+        "handoffTo": "planner",
+        "rolePurpose": "Coordinate gates, status, ownership, and human decisions."
+      }
+    },
+    {
+      "id": "agent:qa",
+      "name": "QA",
+      "role": "quality-assurance",
+      "description": "Plan and perform traceable validation.",
+      "capabilities": [
+        "Inspect context",
+        "apply approved scope",
+        "maintain traceability",
+        "surface assumptions risks",
+        "prepare the next handoff"
+      ],
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "allowedActions": [
+        "run_approved_validation"
+      ],
+      "forbiddenActions": [
+        "git_commit",
+        "git_push",
+        "git_merge",
+        "git_tag",
+        "arbitrary_shell_execution",
+        "secret_access",
+        "network_access",
+        "automatic_approval"
+      ],
+      "requiredSkills": [
+        "testing",
+        "problem-solving"
+      ],
+      "validationRequirements": [
+        "Inputs and scope verified.",
+        "Outputs trace to requirements.",
+        "Validation and risks recorded.",
+        "Next role has sufficient context"
+      ],
+      "sourcePath": "agents/qa.md",
+      "metadata": {
+        "handoffTo": "project-manager",
+        "rolePurpose": "Plan and perform traceable validation."
+      }
+    },
+    {
+      "id": "agent:researcher",
+      "name": "Researcher",
+      "role": "research",
+      "description": "Gather and distinguish evidence, inference, and limitations.",
+      "capabilities": [
+        "Inspect context",
+        "apply approved scope",
+        "maintain traceability",
+        "surface assumptions risks",
+        "prepare the next handoff"
+      ],
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "allowedActions": [
+        "search_knowledge",
+        "gather_evidence"
+      ],
+      "forbiddenActions": [
+        "git_commit",
+        "git_push",
+        "git_merge",
+        "git_tag",
+        "arbitrary_shell_execution",
+        "secret_access",
+        "network_access",
+        "automatic_approval"
+      ],
+      "requiredSkills": [
+        "browser",
+        "analytical"
+      ],
+      "validationRequirements": [
+        "Inputs and scope verified.",
+        "Outputs trace to requirements.",
+        "Validation and risks recorded.",
+        "Next role has sufficient context"
+      ],
+      "sourcePath": "agents/researcher.md",
+      "metadata": {
+        "handoffTo": "planner",
+        "rolePurpose": "Gather and distinguish evidence, inference, and limitations."
+      }
+    },
+    {
+      "id": "agent:reviewer",
+      "name": "Reviewer",
+      "role": "review",
+      "description": "Evaluate the Git diff against approved artifacts.",
+      "capabilities": [
+        "Inspect context",
+        "apply approved scope",
+        "maintain traceability",
+        "surface assumptions risks",
+        "prepare the next handoff"
+      ],
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "allowedActions": [
+        "review_diff"
+      ],
+      "forbiddenActions": [
+        "git_commit",
+        "git_push",
+        "git_merge",
+        "git_tag",
+        "arbitrary_shell_execution",
+        "secret_access",
+        "network_access",
+        "automatic_approval"
+      ],
+      "requiredSkills": [
+        "analytical",
+        "testing"
+      ],
+      "validationRequirements": [
+        "Inputs and scope verified.",
+        "Outputs trace to requirements.",
+        "Validation and risks recorded.",
+        "Next role has sufficient context"
+      ],
+      "sourcePath": "agents/reviewer.md",
+      "metadata": {
+        "handoffTo": "qa",
+        "rolePurpose": "Evaluate the Git diff against approved artifacts."
+      }
+    },
+    {
+      "id": "agent:security-reviewer",
+      "name": "Security Reviewer",
+      "role": "security",
+      "description": "Assess data, access, dependency, and deployment risks.",
+      "capabilities": [
+        "Inspect context",
+        "apply approved scope",
+        "maintain traceability",
+        "surface assumptions risks",
+        "prepare the next handoff"
+      ],
+      "inputs": [
+        "request",
+        "approved artifacts"
+      ],
+      "outputs": [
+        "role deliverable",
+        "handoff"
+      ],
+      "allowedActions": [
+        "assess_security_risk"
+      ],
+      "forbiddenActions": [
+        "git_commit",
+        "git_push",
+        "git_merge",
+        "git_tag",
+        "arbitrary_shell_execution",
+        "secret_access",
+        "network_access",
+        "automatic_approval"
+      ],
+      "requiredSkills": [
+        "analytical",
+        "problem-solving"
+      ],
+      "validationRequirements": [
+        "Inputs and scope verified.",
+        "Outputs trace to requirements.",
+        "Validation and risks recorded.",
+        "Next role has sufficient context"
+      ],
+      "sourcePath": "agents/security-reviewer.md",
+      "metadata": {
+        "handoffTo": "project-manager",
+        "rolePurpose": "Assess data, access, dependency, and deployment risks."
+      }
+    }
+  ],
+  "stats": {
+    "totalAgents": 10,
+    "byRole": {
+      "architecture": 1,
+      "building": 1,
+      "release": 1,
+      "documentation": 1,
+      "planning": 1,
+      "project-management": 1,
+      "quality-assurance": 1,
+      "research": 1,
+      "review": 1,
+      "security": 1
+    }
+  }
+}

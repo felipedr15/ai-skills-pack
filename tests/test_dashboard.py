@@ -166,6 +166,70 @@ class AggregationTests(unittest.TestCase):
             self.assertIn("knowledgeGraph", data)
             self.assertIn("discovery", data)
             self.assertIn("artifacts", data)
+            self.assertIn("orchestration", data)
+
+
+# ============================================================
+# Phase 8: Orchestration Aggregation Tests
+# ============================================================
+
+class Phase8AggregationTests(unittest.TestCase):
+    def test_missing_registries_report_unavailable(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "generated").mkdir()
+            result = db_aggregate.aggregate_orchestration(root)
+            self.assertFalse(result["available"])
+            self.assertEqual(result["agentCount"], 0)
+            self.assertEqual(result["workflowCount"], 0)
+
+    def test_present_registries_report_counts(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            gen = root / "generated"
+            gen.mkdir()
+            (gen / "agent-registry.json").write_text(json.dumps({
+                "stats": {"totalAgents": 10, "byRole": {"planning": 1}}}), encoding="utf-8")
+            (gen / "workflow-registry.json").write_text(json.dumps({
+                "stats": {"totalWorkflows": 8}}), encoding="utf-8")
+            (gen / "knowledge-health.json").write_text(json.dumps({
+                "overallScore": 87, "categoryScores": {"graphIntegrity": 90}}), encoding="utf-8")
+            result = db_aggregate.aggregate_orchestration(root)
+            self.assertTrue(result["available"])
+            self.assertEqual(result["agentCount"], 10)
+            self.assertEqual(result["workflowCount"], 8)
+            self.assertEqual(result["knowledgeHealthScore"], 87)
+
+    def test_no_local_session_data_in_aggregation(self):
+        # aggregate_orchestration must never import the local-runtime-state
+        # modules (session/approvals/memory_suggestions/feedback/audit) —
+        # only read from committed generated/ artifacts.
+        import inspect
+        source = inspect.getsource(db_aggregate.aggregate_orchestration)
+        for banned in ("orchestration.session", "orchestration.approvals",
+                       "orchestration.feedback", "orchestration.audit",
+                       "runtime_dir"):
+            self.assertNotIn(banned, source)
+
+    def test_malformed_registry_json_handled_gracefully(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            gen = root / "generated"
+            gen.mkdir()
+            (gen / "agent-registry.json").write_text("{not valid json", encoding="utf-8")
+            result = db_aggregate.aggregate_orchestration(root)
+            self.assertFalse(result["available"])
+
+
+class Phase8DashboardValidationTests(unittest.TestCase):
+    def test_missing_orchestration_section_rejected(self):
+        data = {
+            "schemaVersion": SCHEMA_VERSION, "generatedAt": "x", "generator": GENERATOR,
+            "repository": {}, "skills": {}, "memory": {}, "knowledgeGraph": {},
+            "discovery": {}, "artifacts": {},
+        }
+        failures, _warnings = db_validate.validate_dashboard_data(data)
+        self.assertTrue(any("orchestration" in f for f in failures))
 
 
 # ============================================================
@@ -225,6 +289,7 @@ class ValidationTests(unittest.TestCase):
             "knowledgeGraph": {"available": True},
             "discovery": {"available": True},
             "artifacts": {"artifacts": []},
+            "orchestration": {"available": True},
         }
 
     def test_valid_data_passes(self):
@@ -349,6 +414,94 @@ class ServerTests(unittest.TestCase):
         status, body = self._get("/index.html")
         self.assertEqual(status, 200)
         self.assertIn("<!DOCTYPE html>", body)
+
+
+# ============================================================
+# Phase 8: Orchestration Live API Tests
+# ============================================================
+
+class Phase8OrchestrationAPITests(unittest.TestCase):
+    """Read-only checks against the live orchestration endpoints."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.port = 18766
+        cls.root = ROOT
+        handler = db_server.make_handler(cls.root)
+        from http.server import HTTPServer
+        cls.server = HTTPServer(("127.0.0.1", cls.port), handler)
+        cls.thread = threading.Thread(target=cls.server.serve_forever, daemon=True)
+        cls.thread.start()
+        time.sleep(0.3)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.server.shutdown()
+        cls.server.server_close()
+
+    def _get(self, path: str) -> tuple[int, str]:
+        conn = HTTPConnection("127.0.0.1", self.port, timeout=5)
+        conn.request("GET", path)
+        resp = conn.getresponse()
+        body = resp.read().decode("utf-8")
+        conn.close()
+        return resp.status, body
+
+    def test_sessions_endpoint(self):
+        status, body = self._get("/api/orchestration/sessions")
+        self.assertEqual(status, 200)
+        data = json.loads(body)
+        self.assertIn("sessions", data)
+        self.assertIn("total", data)
+
+    def test_approvals_endpoint_reports_pending_count(self):
+        status, body = self._get("/api/orchestration/approvals")
+        self.assertEqual(status, 200)
+        data = json.loads(body)
+        self.assertIn("approvals", data)
+        self.assertEqual(data["total"], len(data["approvals"]))
+
+    def test_memory_suggestions_endpoint(self):
+        status, body = self._get("/api/orchestration/memory-suggestions")
+        self.assertEqual(status, 200)
+        data = json.loads(body)
+        self.assertIn("suggestions", data)
+
+    def test_feedback_endpoint(self):
+        status, body = self._get("/api/orchestration/feedback")
+        self.assertEqual(status, 200)
+        data = json.loads(body)
+        self.assertIn("stats", data)
+
+    def test_audit_summary_endpoint(self):
+        status, body = self._get("/api/orchestration/audit-summary")
+        self.assertEqual(status, 200)
+        data = json.loads(body)
+        self.assertIn("totalEvents", data)
+        self.assertIn("chainValid", data)
+
+    def test_knowledge_health_endpoint(self):
+        status, body = self._get("/api/orchestration/knowledge-health")
+        self.assertEqual(status, 200)
+        data = json.loads(body)
+        self.assertIn("overallScore", data)
+
+    def test_agents_endpoint(self):
+        status, body = self._get("/api/orchestration/agents")
+        self.assertEqual(status, 200)
+        data = json.loads(body)
+        self.assertIn("agents", data)
+
+    def test_workflows_endpoint(self):
+        status, body = self._get("/api/orchestration/workflows")
+        self.assertEqual(status, 200)
+        data = json.loads(body)
+        self.assertIn("workflows", data)
+
+    def test_no_full_memory_body_in_feedback_response(self):
+        status, body = self._get("/api/orchestration/feedback")
+        self.assertEqual(status, 200)
+        self.assertNotIn("password=", body)
 
 
 # ============================================================

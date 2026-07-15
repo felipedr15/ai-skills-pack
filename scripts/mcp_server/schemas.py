@@ -170,6 +170,146 @@ TOOLS = [
         "description": "Get dashboard build and availability status.",
         "inputSchema": {"type": "object", "properties": {}, "required": []},
     },
+    {
+        "name": "plan_task",
+        "description": "Create a structured task plan (classification, workflow, agents, retrieved knowledge). Performs no execution.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "task": {"type": "string", "description": "Task description"},
+                "project": {"type": "string", "description": "Optional project identifier"},
+                "workflow": {"type": "string", "description": "Optional workflow override"},
+                "limit": {"type": "integer", "description": "Maximum retrieved knowledge items"},
+                "no_memory": {"type": "boolean", "description": "Exclude memory-type results"},
+                "no_history": {"type": "boolean", "description": "Skip knowledge retrieval entirely"},
+            },
+            "required": ["task"],
+        },
+    },
+    {
+        "name": "classify_task",
+        "description": "Deterministically classify a task's intent. No execution, no external model.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "task": {"type": "string", "description": "Task description"},
+                "project": {"type": "string", "description": "Optional project identifier"},
+                "workflow": {"type": "string", "description": "Optional workflow override"},
+            },
+            "required": ["task"],
+        },
+    },
+    {
+        "name": "list_workflows",
+        "description": "List the generated workflow registry.",
+        "inputSchema": {"type": "object", "properties": {}, "required": []},
+    },
+    {
+        "name": "get_workflow",
+        "description": "Get a workflow definition by id.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {"workflow_id": {"type": "string", "description": "Workflow id, e.g. workflow:bug-fix"}},
+            "required": ["workflow_id"],
+        },
+    },
+    {
+        "name": "list_agents",
+        "description": "List the generated agent registry.",
+        "inputSchema": {"type": "object", "properties": {}, "required": []},
+    },
+    {
+        "name": "get_agent",
+        "description": "Get an agent definition by id.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {"agent_id": {"type": "string", "description": "Agent id, e.g. agent:planner"}},
+            "required": ["agent_id"],
+        },
+    },
+    {
+        "name": "list_sessions",
+        "description": "List local work sessions (read-only summaries; no full transcripts).",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "status": {"type": "string", "description": "Filter by session status"},
+                "limit": {"type": "integer", "description": "Maximum results"},
+                "cursor": {"type": "integer", "description": "Pagination cursor"},
+            },
+            "required": [],
+        },
+    },
+    {
+        "name": "get_session",
+        "description": "Get a local work session by id.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {"session_id": {"type": "string", "description": "Session id"}},
+            "required": ["session_id"],
+        },
+    },
+    {
+        "name": "list_pending_approvals",
+        "description": "List pending approval gates. Approving/rejecting is CLI-only, never exposed here.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "limit": {"type": "integer", "description": "Maximum results"},
+                "cursor": {"type": "integer", "description": "Pagination cursor"},
+            },
+            "required": [],
+        },
+    },
+    {
+        "name": "list_memory_suggestions",
+        "description": "List memory suggestions. Approving/rejecting is CLI-only, never exposed here.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "status": {"type": "string", "description": "Filter by suggestion status"},
+                "limit": {"type": "integer", "description": "Maximum results"},
+                "cursor": {"type": "integer", "description": "Pagination cursor"},
+            },
+            "required": [],
+        },
+    },
+    {
+        "name": "get_knowledge_health",
+        "description": "Get the live knowledge health report (scores, gaps, recommendations).",
+        "inputSchema": {"type": "object", "properties": {}, "required": []},
+    },
+    {
+        "name": "list_review_due",
+        "description": "List documents due for review (only those opting into freshness metadata).",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "days": {"type": "integer", "description": "Look-ahead window in days"},
+                "limit": {"type": "integer", "description": "Maximum results"},
+                "cursor": {"type": "integer", "description": "Pagination cursor"},
+            },
+            "required": [],
+        },
+    },
+    {
+        "name": "list_feedback",
+        "description": "List local feedback entries.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "status": {"type": "string", "description": "Filter by feedback status"},
+                "limit": {"type": "integer", "description": "Maximum results"},
+                "cursor": {"type": "integer", "description": "Pagination cursor"},
+            },
+            "required": [],
+        },
+    },
+    {
+        "name": "get_audit_summary",
+        "description": "Get a summary of the local audit trail (event counts and chain validity, not raw events).",
+        "inputSchema": {"type": "object", "properties": {}, "required": []},
+    },
 ]
 
 RESOURCES = [
@@ -182,4 +322,12 @@ RESOURCES = [
     {"uri": "ai-os://discovery", "name": "Discovery Index", "description": "Generated discovery index summary", "mimeType": "text/markdown"},
     {"uri": "ai-os://dashboard", "name": "Dashboard", "description": "Dashboard data summary", "mimeType": "application/json"},
     {"uri": "ai-os://validation", "name": "Validation", "description": "Validation status summary", "mimeType": "application/json"},
+    {"uri": "ai-os://agents", "name": "Agent Registry", "description": "Generated agent registry summary", "mimeType": "text/markdown"},
+    {"uri": "ai-os://workflows", "name": "Workflow Registry", "description": "Generated workflow registry summary", "mimeType": "text/markdown"},
+    {"uri": "ai-os://knowledge-health", "name": "Knowledge Health", "description": "Live knowledge health report", "mimeType": "application/json"},
+    {"uri": "ai-os://sessions", "name": "Sessions", "description": "Local work session summaries", "mimeType": "application/json"},
+    {"uri": "ai-os://approvals", "name": "Approvals", "description": "Pending approval gates", "mimeType": "application/json"},
+    {"uri": "ai-os://memory-suggestions", "name": "Memory Suggestions", "description": "Pending memory suggestions", "mimeType": "application/json"},
+    {"uri": "ai-os://review-due", "name": "Review Due", "description": "Documents due for review", "mimeType": "application/json"},
+    {"uri": "ai-os://audit-summary", "name": "Audit Summary", "description": "Audit trail summary (counts and chain validity, not raw events)", "mimeType": "application/json"},
 ]

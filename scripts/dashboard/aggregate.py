@@ -140,6 +140,29 @@ def aggregate_artifacts(root: Path) -> dict:
     return {"artifacts": result}
 
 
+def aggregate_orchestration(root: Path) -> dict:
+    """Aggregate Phase 8 registry/health stats.
+
+    Sourced only from committed `generated/*.json` artifacts (agent
+    registry, workflow registry, knowledge health) — never from local
+    `.ai-os/` runtime state (sessions/approvals/suggestions/feedback/audit
+    are served live via /api/orchestration/* instead, so they never end up
+    baked into this committed snapshot).
+    """
+    agents = _load_json(root / "generated" / "agent-registry.json")
+    workflows = _load_json(root / "generated" / "workflow-registry.json")
+    health = _load_json(root / "generated" / "knowledge-health.json")
+
+    return {
+        "available": agents is not None and workflows is not None and health is not None,
+        "agentCount": (agents or {}).get("stats", {}).get("totalAgents", 0),
+        "workflowCount": (workflows or {}).get("stats", {}).get("totalWorkflows", 0),
+        "agentsByRole": (agents or {}).get("stats", {}).get("byRole", {}),
+        "knowledgeHealthScore": (health or {}).get("overallScore", 0),
+        "knowledgeHealthCategories": (health or {}).get("categoryScores", {}),
+    }
+
+
 def build_dashboard_data(root: Path) -> dict:
     """Build the complete dashboard data payload."""
     return {
@@ -152,4 +175,5 @@ def build_dashboard_data(root: Path) -> dict:
         "knowledgeGraph": aggregate_knowledge_graph(root),
         "discovery": aggregate_discovery(root),
         "artifacts": aggregate_artifacts(root),
+        "orchestration": aggregate_orchestration(root),
     }

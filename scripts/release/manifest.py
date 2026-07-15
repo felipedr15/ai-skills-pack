@@ -24,6 +24,12 @@ TRACKED_ARTIFACTS = [
     "generated/knowledge-graph.md",
     "generated/discovery-index.json",
     "generated/discovery-index.md",
+    "generated/agent-registry.json",
+    "generated/agent-registry.md",
+    "generated/workflow-registry.json",
+    "generated/workflow-registry.md",
+    "generated/knowledge-health.json",
+    "generated/knowledge-health.md",
     "generated/dashboard.html",
     "generated/dashboard-data.json",
 ]
@@ -88,6 +94,8 @@ def build_manifest(root: Path) -> dict:
             "semanticDiscovery": (root / "generated" / "discovery-index.json").is_file(),
             "dashboard": (root / "generated" / "dashboard.html").is_file(),
             "mcp": (root / "scripts" / "mcp-server.py").is_file(),
+            "orchestration": (root / "generated" / "agent-registry.json").is_file()
+            and (root / "generated" / "workflow-registry.json").is_file(),
         },
         "tests": {
             "count": 0,

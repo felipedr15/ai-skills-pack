@@ -27,3 +27,18 @@ python scripts/generate-knowledge-graph.py
 python scripts/validate-knowledge-graph.py
 python scripts/generate-knowledge-graph.py --check
 ```
+
+Orchestration (Phase 8): agent docs (`agents/*.md`, `agents.json`) and workflow sources
+(`knowledge/workflows/*.json`) are authoritative; never hand-edit
+`generated/agent-registry.json`, `generated/workflow-registry.json`, or
+`generated/knowledge-health.json`. After changing an agent doc or a workflow source, run:
+
+```text
+python scripts/generate-agent-registry.py
+python scripts/generate-workflow-registry.py
+python scripts/generate-knowledge-health.py
+python scripts/orchestration-validate.py
+```
+
+Session, approval, memory-suggestion, feedback, and audit data under `.ai-os/` are local runtime
+state, never source of truth, and never committed.

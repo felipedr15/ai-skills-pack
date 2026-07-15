@@ -322,10 +322,10 @@ class PaginationTests(unittest.TestCase):
 
 class McpRegistrationTests(unittest.TestCase):
     def test_expected_tool_count(self):
-        self.assertEqual(len(TOOLS), 15)
+        self.assertEqual(len(TOOLS), 29)
 
     def test_expected_resource_count(self):
-        self.assertEqual(len(RESOURCES), 9)
+        self.assertEqual(len(RESOURCES), 17)
 
     def test_tools_have_schemas(self):
         for tool in TOOLS:
@@ -431,7 +431,7 @@ class McpStdioTests(unittest.TestCase):
             self._send(proc, "initialize", {"protocolVersion": "2024-11-05", "capabilities": {}, "clientInfo": {"name": "test"}})
             resp = self._send(proc, "tools/list", {}, 2)
             tools = resp["result"]["tools"]
-            self.assertEqual(len(tools), 15)
+            self.assertEqual(len(tools), 29)
         finally:
             proc.kill()
 
@@ -441,7 +441,7 @@ class McpStdioTests(unittest.TestCase):
             self._send(proc, "initialize", {"protocolVersion": "2024-11-05", "capabilities": {}, "clientInfo": {"name": "test"}})
             resp = self._send(proc, "resources/list", {}, 2)
             resources = resp["result"]["resources"]
-            self.assertEqual(len(resources), 9)
+            self.assertEqual(len(resources), 17)
         finally:
             proc.kill()
 
@@ -553,6 +553,108 @@ class ErrorHandlingTests(unittest.TestCase):
             svc = AiOsService(root)
             with self.assertRaises(Unavailable):
                 svc.list_skills()
+
+
+# ============================================================
+# Phase 8: Continuous Learning and Agent Orchestration
+# ============================================================
+
+class Phase8ToolRegistrationTests(unittest.TestCase):
+    def test_new_tools_registered(self):
+        names = {t["name"] for t in TOOLS}
+        for expected in (
+            "plan_task", "classify_task", "list_workflows", "get_workflow",
+            "list_agents", "get_agent", "list_sessions", "get_session",
+            "list_pending_approvals", "list_memory_suggestions",
+            "get_knowledge_health", "list_review_due", "list_feedback",
+            "get_audit_summary",
+        ):
+            self.assertIn(expected, names)
+
+    def test_new_resources_registered(self):
+        uris = {r["uri"] for r in RESOURCES}
+        for expected in (
+            "ai-os://agents", "ai-os://workflows", "ai-os://knowledge-health",
+            "ai-os://sessions", "ai-os://approvals", "ai-os://memory-suggestions",
+            "ai-os://review-due", "ai-os://audit-summary",
+        ):
+            self.assertIn(expected, uris)
+
+    def test_every_new_tool_has_adapter_handler(self):
+        adapter = McpAdapter(ROOT)
+        for tool in TOOLS:
+            self.assertTrue(hasattr(adapter, f"_tool_{tool['name']}"), tool["name"])
+
+    def test_no_approval_mutating_tool_exposed(self):
+        names = {t["name"] for t in TOOLS}
+        for forbidden in ("approve_memory_suggestion", "reject_memory_suggestion",
+                          "approve_approval", "reject_approval"):
+            self.assertNotIn(forbidden, names)
+
+
+class Phase8ServiceReadOnlyTests(unittest.TestCase):
+    def setUp(self):
+        self.svc = AiOsService(ROOT)
+
+    def test_plan_task_requires_task(self):
+        with self.assertRaises(InvalidRequest):
+            self.svc.plan_task(task="")
+
+    def test_classify_task_is_deterministic(self):
+        first = self.svc.classify_task(task="Fix the login bug")
+        second = self.svc.classify_task(task="Fix the login bug")
+        self.assertEqual(first, second)
+
+    def test_list_agents_read_only(self):
+        result = self.svc.list_agents()
+        self.assertIn("agents", result)
+
+    def test_get_agent_not_found(self):
+        with self.assertRaises(NotFound):
+            self.svc.get_agent(agent_id="agent:does-not-exist")
+
+    def test_list_workflows_read_only(self):
+        result = self.svc.list_workflows()
+        self.assertIn("workflows", result)
+
+    def test_get_workflow_not_found(self):
+        with self.assertRaises(NotFound):
+            self.svc.get_workflow(workflow_id="workflow:does-not-exist")
+
+    def test_list_sessions_paginated_and_limited(self):
+        result = self.svc.list_sessions(limit=1000)
+        self.assertLessEqual(result["limit"], 100)
+
+    def test_get_session_not_found(self):
+        with self.assertRaises(NotFound):
+            self.svc.get_session(session_id="session-does-not-exist-001")
+
+    def test_get_knowledge_health_read_only(self):
+        result = self.svc.get_knowledge_health()
+        self.assertIn("overallScore", result)
+
+    def test_list_feedback_result_limit_enforced(self):
+        result = self.svc.list_feedback(limit=99999)
+        self.assertLessEqual(result["limit"], 100)
+
+    def test_get_audit_summary_read_only(self):
+        result = self.svc.get_audit_summary()
+        self.assertIn("totalEvents", result)
+
+
+class Phase8SessionRedactionTests(unittest.TestCase):
+    def test_session_summary_has_no_transcript_field(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            sys.path.insert(0, str(SCRIPTS))
+            from orchestration.session import create_session
+            create_session(root, "Investigate api_key=abcdefghijklmnopqrst12345 leak", plan={})
+            svc = AiOsService(root)
+            result = svc.list_sessions()
+            self.assertEqual(len(result["items"]), 1)
+            session = result["items"][0]
+            self.assertNotIn("transcript", session)
+            self.assertNotIn("abcdefghijklmnopqrst12345", json.dumps(session))
 
 
 if __name__ == "__main__":

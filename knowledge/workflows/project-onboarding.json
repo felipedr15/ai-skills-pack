@@ -1,0 +1,22 @@
+{
+  "id": "workflow:project-onboarding",
+  "name": "Project Onboarding",
+  "description": "Scaffold and document a new project within the AI OS knowledge structure.",
+  "triggerIntent": "project-planning",
+  "requiredInputs": ["project name", "project type", "initial goals"],
+  "steps": [
+    {"id": "retrieve-context", "agent": "planner", "action": "search_knowledge", "requiresApproval": false},
+    {"id": "create-plan", "agent": "planner", "action": "create_plan", "requiresApproval": true},
+    {"id": "scaffold", "agent": "builder", "action": "modify_files", "requiresApproval": true},
+    {"id": "document", "agent": "documentation-writer", "action": "update_documentation", "requiresApproval": true},
+    {"id": "validate", "agent": "qa", "action": "run_approved_validation", "requiresApproval": false},
+    {"id": "coordinate", "agent": "project-manager", "action": "coordinate_approval_gates", "requiresApproval": true}
+  ],
+  "completionCriteria": ["project scaffold created", "project documented", "validation step recorded as passed"],
+  "failureBehavior": "Stop at the failed step, record a failure entry on the session, and require re-planning before continuing. No automatic retry.",
+  "allowedActions": ["search_knowledge", "create_plan", "modify_files", "update_documentation", "run_approved_validation", "coordinate_approval_gates"],
+  "forbiddenActions": ["git_commit", "git_push", "git_merge", "arbitrary_shell_execution", "network_access"],
+  "outputArtifacts": ["session record", "project scaffold", "project documentation"],
+  "memorySuggestionPolicy": "Suggest a memory capturing the project's purpose and conventions once onboarding completes; stays pending until approved.",
+  "auditPolicy": "Record workflow-selected, agent-selected, knowledge-retrieved, approval-requested/approved, and validation-run events."
+}

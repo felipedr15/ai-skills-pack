@@ -31,6 +31,14 @@ Protocol-neutral service layer and MCP-compatible server exposing 15 tools and 9
 
 One-command bootstrap, unified CLI, environment doctor, configuration system, build orchestration, release packaging, backup/restore, safe cleaning, migration framework, and cross-platform wrappers. Semantic versioning with single source of truth. Release check validates all phases before packaging.
 
+## Phase 8 — Continuous Learning and Agent Orchestration (Implemented)
+
+Deterministic task classification, agent and workflow registries, knowledge-retrieval planning
+(reusing the Phase 4 discovery engine), local session tracking with an explicit approval
+boundary, memory-suggestion generation gated on explicit approval, knowledge-gap and freshness
+detection, local feedback capture, and a hash-chained audit trail. 14 new read-only MCP tools, 8
+new resources, and 8 new dashboard pages. No execution engine — planning and tracking only.
+
 ## Version 1.1 — Workflow Improvements (Proposed)
 Improved bootstrap, deeper validation, more examples, and expanded Power Apps, Power Automate, and web deployment guidance.
 
@@ -38,6 +46,6 @@ Improved bootstrap, deeper validation, more examples, and expanded Power Apps, P
 Optional MCP research, synchronization workflows, documentation indexing, and registry generation.
 
 ## Version 2.0 — Advanced Automation (Proposed)
-Project dashboard, skill dependency visualization, optional multi-agent orchestration, optional knowledge indexing, and release automation.
+Project dashboard, skill dependency visualization, optional knowledge indexing, and release automation. Multi-agent orchestration's planning/tracking foundation is implemented in Phase 8; a controlled, allow-listed execution engine (still requiring human approval at every consequential step) remains proposed.
 
 Dashboard, MCP-driven integrations, and advanced unified CLI orchestration remain proposed.

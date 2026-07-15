@@ -1,0 +1,23 @@
+{
+  "id": "workflow:feature-development",
+  "name": "Feature Development",
+  "description": "Plan, design, implement, and validate a new feature end to end.",
+  "triggerIntent": "feature-development",
+  "requiredInputs": ["feature description", "target project", "acceptance criteria (if known)"],
+  "steps": [
+    {"id": "retrieve-context", "agent": "planner", "action": "search_knowledge", "requiresApproval": false},
+    {"id": "create-plan", "agent": "planner", "action": "create_plan", "requiresApproval": true},
+    {"id": "design", "agent": "architect", "action": "design_components", "requiresApproval": true},
+    {"id": "implement", "agent": "builder", "action": "modify_files", "requiresApproval": true},
+    {"id": "review", "agent": "reviewer", "action": "review_diff", "requiresApproval": false},
+    {"id": "validate", "agent": "qa", "action": "run_approved_validation", "requiresApproval": false},
+    {"id": "suggest-memory", "agent": "documentation-writer", "action": "create_memory_suggestion", "requiresApproval": true}
+  ],
+  "completionCriteria": ["design approved", "validation step recorded as passed", "review completed"],
+  "failureBehavior": "Stop at the failed step, record a failure entry on the session, and require re-planning before continuing. No automatic retry.",
+  "allowedActions": ["search_knowledge", "create_plan", "design_components", "modify_files", "review_diff", "run_approved_validation", "create_memory_suggestion"],
+  "forbiddenActions": ["git_commit", "git_push", "git_merge", "arbitrary_shell_execution", "network_access"],
+  "outputArtifacts": ["session record", "memory suggestion (pending)"],
+  "memorySuggestionPolicy": "Suggest a memory capturing the design decision or approach only after validation passes; stays pending until approved.",
+  "auditPolicy": "Record workflow-selected, agent-selected, knowledge-retrieved, approval-requested/approved, validation-run, and memory-suggested events."
+}

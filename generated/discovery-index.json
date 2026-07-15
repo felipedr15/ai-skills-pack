@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-14T00:12:54Z",
+  "generatedAt": "2026-07-15T17:05:39Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 309,
-    "entities": 331,
-    "terms": 899,
-    "relationships": 521
+    "documents": 324,
+    "entities": 346,
+    "terms": 973,
+    "relationships": 570
   },
   "documents": [
     {
@@ -960,6 +960,7 @@
         "Semantic Discovery Architecture",
         "Dashboard Architecture",
         "Memory Engine Architecture",
+        "Continuous Learning and Agent Orchestration Architecture (Phase 8)",
         "Models",
         "Validation and Security",
         "Tool Integration and Data Flow",
@@ -1043,6 +1044,7 @@
         "Memory Engine (Phase 2)",
         "Memory Commands",
         "Knowledge Graph (Phase 3)",
+        "Continuous Learning and Agent Orchestration (Phase 8)",
         "Quick Start",
         "Validation",
         "Project Creation",
@@ -1071,6 +1073,7 @@
         "Phase 5 — Interactive Dashboard (Implemented)",
         "Phase 6 — MCP Integration (Implemented)",
         "Phase 7 — Release Hardening (Implemented)",
+        "Phase 8 — Continuous Learning and Agent Orchestration (Implemented)",
         "Version 1.1 — Workflow Improvements (Proposed)",
         "Version 1.2 — Integration Improvements (Proposed)",
         "Version 2.0 — Advanced Automation (Proposed)"
@@ -1086,7 +1089,8 @@
       "headings": [
         "Security Policy",
         "Memory Engine Rules",
-        "Knowledge Graph Rules"
+        "Knowledge Graph Rules",
+        "Continuous Learning and Orchestration Rules (Phase 8)"
       ],
       "snippet": "Never store passwords, API keys, access tokens, private certificates, connection strings, authentication cookies, MFA codes, employee or customer personal data, government-protected data, confidential",
       "frontMatter": {}
@@ -1106,7 +1110,8 @@
         "Phase 4 Semantic Discovery Workflow (Implemented)",
         "Phase 5 Interactive Dashboard Workflow (Implemented)",
         "Phase 6 MCP Integration Workflow (Implemented)",
-        "Phase 7 Release Hardening Workflow (Implemented)"
+        "Phase 7 Release Hardening Workflow (Implemented)",
+        "Phase 8 Continuous Learning and Agent Orchestration Workflow (Implemented)"
       ],
       "snippet": "Request → planner skill selection → requirements → design → tasks → executor handoff → implementation → validation → diff review → human validation → commit → deployment.",
       "frontMatter": {}
@@ -1351,6 +1356,83 @@
       "frontMatter": {}
     },
     {
+      "id": "doc:docs/agent-orchestration.md",
+      "sourcePath": "docs/agent-orchestration.md",
+      "title": "Agent Orchestration (Phase 8)",
+      "category": "document",
+      "headings": [
+        "Agent Orchestration (Phase 8)",
+        "Agent Registry",
+        "Workflow Registry",
+        "Task Classification",
+        "Planning",
+        "Sessions",
+        "MCP and Dashboard"
+      ],
+      "snippet": "`generated/agent-registry.json` / `.md`, built from `agents/*.md` and `agents.json` by",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/continuous-learning.md",
+      "sourcePath": "docs/continuous-learning.md",
+      "title": "Continuous Learning (Phase 8)",
+      "category": "document",
+      "headings": [
+        "Continuous Learning (Phase 8)",
+        "The Loop",
+        "What This Is Not",
+        "See Also"
+      ],
+      "snippet": "How AI OS turns a task description into a tracked, human-approved unit of work — and how it",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/feedback-and-audit.md",
+      "sourcePath": "docs/feedback-and-audit.md",
+      "title": "Feedback and Audit (Phase 8)",
+      "category": "document",
+      "headings": [
+        "Feedback and Audit (Phase 8)",
+        "Feedback",
+        "Audit Trail",
+        "Troubleshooting"
+      ],
+      "snippet": "Local, structured feedback capture — no telemetry, no upload, nothing sent anywhere.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/knowledge-health.md",
+      "sourcePath": "docs/knowledge-health.md",
+      "title": "Knowledge Health (Phase 8)",
+      "category": "document",
+      "headings": [
+        "Knowledge Health (Phase 8)",
+        "Two Views, One Reason",
+        "Commands",
+        "Scoring",
+        "Known Limitation: No Search Query Log",
+        "Freshness / Review-Due",
+        "Gap Categories"
+      ],
+      "snippet": "There are two ways to see knowledge health, and the split is deliberate:",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/memory-approval.md",
+      "sourcePath": "docs/memory-approval.md",
+      "title": "Approvals and Memory Suggestions (Phase 8)",
+      "category": "document",
+      "headings": [
+        "Approvals and Memory Suggestions (Phase 8)",
+        "Human Approval Requirement",
+        "Approval Types",
+        "Memory Suggestions",
+        "Security Notes"
+      ],
+      "snippet": "Nothing in Phase 8 writes a source-of-truth document, modifies a file, or creates a permanent",
+      "frontMatter": {}
+    },
+    {
       "id": "doc:examples/mcp/README.md",
       "sourcePath": "examples/mcp/README.md",
       "title": "AI OS MCP Server Configuration",
@@ -1366,8 +1448,8 @@
         "Platform Examples",
         "Windows",
         "macOS / Linux",
-        "Registered Tools (15)",
-        "Registered Resources (9)",
+        "Registered Tools (29)",
+        "Registered Resources (17)",
         "Verification",
         "Tool List",
         "Resource List",
@@ -1541,6 +1623,32 @@
         "Cross-Platform Wrappers"
       ],
       "snippet": "Document the release hardening, unified CLI, and one-command bootstrap introduced in Phase 7.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "sourcePath": "knowledge/architecture/phase-8-learning-orchestration.md",
+      "title": "Phase 8 Continuous Learning and Agent Orchestration Architecture",
+      "category": "knowledge",
+      "headings": [
+        "Phase 8 Continuous Learning and Agent Orchestration Architecture",
+        "Purpose",
+        "Package",
+        "Reuse, Not Duplication",
+        "Agent Registry",
+        "Workflow Registry",
+        "Task Classification",
+        "Planning",
+        "Storage Split (the key architectural decision)",
+        "Session Lifecycle",
+        "Approval Engine",
+        "Memory Suggestions",
+        "Knowledge Gaps and Freshness",
+        "Audit Trail",
+        "Security Boundaries",
+        "Non-Goals"
+      ],
+      "snippet": "Add a planning, tracking, and suggestion layer on top of Phases 1-7: classify a task, select a",
       "frontMatter": {}
     },
     {
@@ -1736,6 +1844,204 @@
         "Naming Guidance"
       ],
       "snippet": "Capture reusable, reviewed lessons and references about vscode.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/workflows/README.md",
+      "sourcePath": "knowledge/workflows/README.md",
+      "title": "Workflows",
+      "category": "knowledge",
+      "headings": [
+        "Workflows",
+        "Format",
+        "Required Workflow Types",
+        "Regenerate"
+      ],
+      "snippet": "Hand-authored workflow definitions consumed by `scripts/orchestration/workflow.py` to build",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/workflows/bug-fix.json",
+      "sourcePath": "knowledge/workflows/bug-fix.json",
+      "title": "Bug Fix",
+      "category": "knowledge",
+      "headings": [
+        "id",
+        "name",
+        "description",
+        "triggerIntent",
+        "requiredInputs",
+        "steps",
+        "completionCriteria",
+        "failureBehavior",
+        "allowedActions",
+        "forbiddenActions",
+        "outputArtifacts",
+        "memorySuggestionPolicy",
+        "auditPolicy"
+      ],
+      "snippet": "Diagnose and resolve a defect with a validated fix and optional lesson capture.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/workflows/documentation-update.json",
+      "sourcePath": "knowledge/workflows/documentation-update.json",
+      "title": "Documentation Update",
+      "category": "knowledge",
+      "headings": [
+        "id",
+        "name",
+        "description",
+        "triggerIntent",
+        "requiredInputs",
+        "steps",
+        "completionCriteria",
+        "failureBehavior",
+        "allowedActions",
+        "forbiddenActions",
+        "outputArtifacts",
+        "memorySuggestionPolicy",
+        "auditPolicy"
+      ],
+      "snippet": "Update existing documentation to correct or extend it, with review and validation.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/workflows/feature-development.json",
+      "sourcePath": "knowledge/workflows/feature-development.json",
+      "title": "Feature Development",
+      "category": "knowledge",
+      "headings": [
+        "id",
+        "name",
+        "description",
+        "triggerIntent",
+        "requiredInputs",
+        "steps",
+        "completionCriteria",
+        "failureBehavior",
+        "allowedActions",
+        "forbiddenActions",
+        "outputArtifacts",
+        "memorySuggestionPolicy",
+        "auditPolicy"
+      ],
+      "snippet": "Plan, design, implement, and validate a new feature end to end.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/workflows/incident-response.json",
+      "sourcePath": "knowledge/workflows/incident-response.json",
+      "title": "Incident Response",
+      "category": "knowledge",
+      "headings": [
+        "id",
+        "name",
+        "description",
+        "triggerIntent",
+        "requiredInputs",
+        "steps",
+        "completionCriteria",
+        "failureBehavior",
+        "allowedActions",
+        "forbiddenActions",
+        "outputArtifacts",
+        "memorySuggestionPolicy",
+        "auditPolicy"
+      ],
+      "snippet": "Triage and resolve an active incident or reported issue with a validated fix.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/workflows/knowledge-maintenance.json",
+      "sourcePath": "knowledge/workflows/knowledge-maintenance.json",
+      "title": "Knowledge Maintenance",
+      "category": "knowledge",
+      "headings": [
+        "id",
+        "name",
+        "description",
+        "triggerIntent",
+        "requiredInputs",
+        "steps",
+        "completionCriteria",
+        "failureBehavior",
+        "allowedActions",
+        "forbiddenActions",
+        "outputArtifacts",
+        "memorySuggestionPolicy",
+        "auditPolicy"
+      ],
+      "snippet": "Address a detected knowledge gap, stale document, or research question.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/workflows/procedure-creation.json",
+      "sourcePath": "knowledge/workflows/procedure-creation.json",
+      "title": "Procedure Creation",
+      "category": "knowledge",
+      "headings": [
+        "id",
+        "name",
+        "description",
+        "triggerIntent",
+        "requiredInputs",
+        "steps",
+        "completionCriteria",
+        "failureBehavior",
+        "allowedActions",
+        "forbiddenActions",
+        "outputArtifacts",
+        "memorySuggestionPolicy",
+        "auditPolicy"
+      ],
+      "snippet": "Draft a new reusable procedure or runbook from research and existing conventions.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/workflows/project-onboarding.json",
+      "sourcePath": "knowledge/workflows/project-onboarding.json",
+      "title": "Project Onboarding",
+      "category": "knowledge",
+      "headings": [
+        "id",
+        "name",
+        "description",
+        "triggerIntent",
+        "requiredInputs",
+        "steps",
+        "completionCriteria",
+        "failureBehavior",
+        "allowedActions",
+        "forbiddenActions",
+        "outputArtifacts",
+        "memorySuggestionPolicy",
+        "auditPolicy"
+      ],
+      "snippet": "Scaffold and document a new project within the AI OS knowledge structure.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/workflows/release-preparation.json",
+      "sourcePath": "knowledge/workflows/release-preparation.json",
+      "title": "Release Preparation",
+      "category": "knowledge",
+      "headings": [
+        "id",
+        "name",
+        "description",
+        "triggerIntent",
+        "requiredInputs",
+        "steps",
+        "completionCriteria",
+        "failureBehavior",
+        "allowedActions",
+        "forbiddenActions",
+        "outputArtifacts",
+        "memorySuggestionPolicy",
+        "auditPolicy"
+      ],
+      "snippet": "Prepare a release candidate for human review — never creates the release itself.",
       "frontMatter": {}
     },
     {
@@ -5810,6 +6116,56 @@
       }
     },
     {
+      "id": "entity:document:docs/agent-orchestration.md",
+      "nodeId": "document:docs/agent-orchestration.md",
+      "type": "document",
+      "name": "Agent Orchestration",
+      "sourcePath": "docs/agent-orchestration.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/continuous-learning.md",
+      "nodeId": "document:docs/continuous-learning.md",
+      "type": "document",
+      "name": "Continuous Learning",
+      "sourcePath": "docs/continuous-learning.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/feedback-and-audit.md",
+      "nodeId": "document:docs/feedback-and-audit.md",
+      "type": "document",
+      "name": "Feedback And Audit",
+      "sourcePath": "docs/feedback-and-audit.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/knowledge-health.md",
+      "nodeId": "document:docs/knowledge-health.md",
+      "type": "document",
+      "name": "Knowledge Health",
+      "sourcePath": "docs/knowledge-health.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/memory-approval.md",
+      "nodeId": "document:docs/memory-approval.md",
+      "type": "document",
+      "name": "Memory Approval",
+      "sourcePath": "docs/memory-approval.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "entity:document:examples/mcp/README.md",
       "nodeId": "document:examples/mcp/README.md",
       "type": "document",
@@ -5935,6 +6291,16 @@
       "type": "document",
       "name": "Phase 7 Release Hardening",
       "sourcePath": "knowledge/architecture/phase-7-release-hardening.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "nodeId": "document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "type": "document",
+      "name": "Phase 8 Learning Orchestration",
+      "sourcePath": "knowledge/architecture/phase-8-learning-orchestration.md",
       "metadata": {
         "extension": ".md"
       }
@@ -6067,6 +6433,96 @@
       "sourcePath": "knowledge/vscode/README.md",
       "metadata": {
         "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/workflows/README.md",
+      "nodeId": "document:knowledge/workflows/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": "knowledge/workflows/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/workflows/bug-fix.json",
+      "nodeId": "document:knowledge/workflows/bug-fix.json",
+      "type": "document",
+      "name": "Bug Fix",
+      "sourcePath": "knowledge/workflows/bug-fix.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/workflows/documentation-update.json",
+      "nodeId": "document:knowledge/workflows/documentation-update.json",
+      "type": "document",
+      "name": "Documentation Update",
+      "sourcePath": "knowledge/workflows/documentation-update.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/workflows/feature-development.json",
+      "nodeId": "document:knowledge/workflows/feature-development.json",
+      "type": "document",
+      "name": "Feature Development",
+      "sourcePath": "knowledge/workflows/feature-development.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/workflows/incident-response.json",
+      "nodeId": "document:knowledge/workflows/incident-response.json",
+      "type": "document",
+      "name": "Incident Response",
+      "sourcePath": "knowledge/workflows/incident-response.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/workflows/knowledge-maintenance.json",
+      "nodeId": "document:knowledge/workflows/knowledge-maintenance.json",
+      "type": "document",
+      "name": "Knowledge Maintenance",
+      "sourcePath": "knowledge/workflows/knowledge-maintenance.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/workflows/procedure-creation.json",
+      "nodeId": "document:knowledge/workflows/procedure-creation.json",
+      "type": "document",
+      "name": "Procedure Creation",
+      "sourcePath": "knowledge/workflows/procedure-creation.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/workflows/project-onboarding.json",
+      "nodeId": "document:knowledge/workflows/project-onboarding.json",
+      "type": "document",
+      "name": "Project Onboarding",
+      "sourcePath": "knowledge/workflows/project-onboarding.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/workflows/release-preparation.json",
+      "nodeId": "document:knowledge/workflows/release-preparation.json",
+      "type": "document",
+      "name": "Release Preparation",
+      "sourcePath": "knowledge/workflows/release-preparation.json",
+      "metadata": {
+        "extension": ".json"
       }
     },
     {
@@ -8606,8 +9062,13 @@
       "entity:memory:session-memory-engine-example-001"
     ],
     "15": [
-      "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md"
+    ],
+    "17": [
+      "doc:examples/mcp/README.md"
+    ],
+    "29": [
+      "doc:examples/mcp/README.md"
     ],
     "about": [
       "doc:knowledge/ai-workflows/README.md",
@@ -8683,6 +9144,14 @@
     ],
     "actions": [
       "doc:.kiro/steering/technology.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:templates/project-memory/RETROSPECTIVE.md",
       "doc:templates/project-starters/automation/RETROSPECTIVE.md",
       "doc:templates/project-starters/documentation/RETROSPECTIVE.md",
@@ -8695,6 +9164,7 @@
       "doc:templates/specifications/retrospective.md"
     ],
     "active": [
+      "doc:knowledge/workflows/incident-response.json",
       "doc:memory/sessions/README.md",
       "entity:memory:convention-documentation-structure-001",
       "entity:memory:decision-memory-index-source-truth-001",
@@ -8708,6 +9178,7 @@
     ],
     "add": [
       "doc:.agent/skills/communication-skill/SKILL.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:prompts/debug.prompt.md",
       "doc:references/workflow-examples.md"
     ],
@@ -8731,6 +9202,9 @@
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json"
+    ],
+    "address": [
+      "doc:knowledge/workflows/knowledge-maintenance.json"
     ],
     "administrator": [
       "doc:prompts/document.prompt.md"
@@ -8793,11 +9267,15 @@
       "doc:.github/copilot-instructions.md",
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
+      "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
       "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:ROADMAP.md",
+      "doc:WORKFLOW.md",
       "doc:agents/README.md",
+      "doc:docs/agent-orchestration.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:references/copilot.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-memory/HANDOFF.md",
@@ -8838,6 +9316,7 @@
       "entity:document:.agent/skills/system/testing/README.md",
       "entity:document:.agent/skills/system/using-superpowers/README.md",
       "entity:document:.agent/skills/thinking/README.md",
+      "entity:document:docs/agent-orchestration.md",
       "entity:platform:claude",
       "entity:platform:codex",
       "entity:platform:copilot",
@@ -8876,6 +9355,7 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
+      "doc:docs/agent-orchestration.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-starters/automation/AGENTS.md",
       "doc:templates/project-starters/documentation/AGENTS.md",
@@ -8921,9 +9401,11 @@
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
+      "doc:docs/continuous-learning.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "doc:knowledge/workflows/project-onboarding.json",
       "doc:memory/README.md",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
@@ -8959,6 +9441,14 @@
       "doc:.agent/skills/system/superpower/SKILL.md"
     ],
     "allowed": [
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/automation/HANDOFF.md",
       "doc:templates/project-starters/documentation/HANDOFF.md",
@@ -8968,6 +9458,9 @@
       "doc:templates/project-starters/power-automate/HANDOFF.md",
       "doc:templates/project-starters/python/HANDOFF.md",
       "doc:templates/project-starters/web-app/HANDOFF.md"
+    ],
+    "also": [
+      "doc:docs/continuous-learning.md"
     ],
     "alternative": [
       "doc:standards/accessibility.md"
@@ -8979,6 +9472,9 @@
       "doc:prompts/design.prompt.md",
       "doc:templates/memory/decision-memory.md",
       "doc:templates/specifications/design.md"
+    ],
+    "an": [
+      "doc:knowledge/workflows/incident-response.json"
     ],
     "analysis": [
       "doc:.agent/skills/personal/analytical/SKILL.md",
@@ -9052,6 +9548,8 @@
       "doc:GOVERNANCE.md",
       "doc:README.md",
       "doc:ROADMAP.md",
+      "doc:SECURITY.md",
+      "doc:WORKFLOW.md",
       "doc:agents/README.md",
       "doc:agents/architect.md",
       "doc:agents/builder.md",
@@ -9060,6 +9558,11 @@
       "doc:agents/qa.md",
       "doc:agents/researcher.md",
       "doc:agents/security-reviewer.md",
+      "doc:docs/agent-orchestration.md",
+      "doc:docs/continuous-learning.md",
+      "doc:docs/feedback-and-audit.md",
+      "doc:docs/knowledge-health.md",
+      "doc:docs/memory-approval.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/README.md",
       "doc:knowledge/ai-workflows/README.md",
@@ -9068,6 +9571,7 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -9081,6 +9585,12 @@
       "doc:knowledge/security/README.md",
       "doc:knowledge/sharepoint/README.md",
       "doc:knowledge/vscode/README.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
       "doc:memory/README.md",
       "doc:memory/decisions/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
@@ -9144,7 +9654,8 @@
       "doc:templates/project-starters/web-app/AGENTS.md",
       "doc:templates/project-starters/web-app/CLAUDE.md",
       "doc:templates/specifications/README.md",
-      "doc:templates/specifications/design.md"
+      "doc:templates/specifications/design.md",
+      "entity:document:docs/feedback-and-audit.md"
     ],
     "anti": [
       "doc:.agent/skills/communication-skill/SKILL.md",
@@ -9163,6 +9674,9 @@
       "doc:.agent/skills/system/testing/README.md",
       "doc:.agent/skills/system/using-superpowers/README.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
+    ],
+    "anywhere": [
+      "doc:docs/feedback-and-audit.md"
     ],
     "api": [
       "doc:SECURITY.md",
@@ -9239,12 +9753,18 @@
       "doc:.github/instructions/specifications.instructions.md",
       "doc:.kiro/steering/workflow.md",
       "doc:GOVERNANCE.md",
+      "doc:docs/memory-approval.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:prompts/deploy.prompt.md",
       "doc:references/vercel.md",
       "doc:references/workflow-examples.md",
       "doc:standards/release-management.md",
       "doc:standards/security.md",
-      "doc:templates/specifications/deployment-plan.md"
+      "doc:templates/specifications/deployment-plan.md",
+      "entity:document:docs/memory-approval.md"
+    ],
+    "approvals": [
+      "doc:docs/memory-approval.md"
     ],
     "approve": [
       "doc:.kiro/steering/workflow.md"
@@ -9255,6 +9775,7 @@
       "doc:agents/deployment-manager.md",
       "doc:agents/planner.md",
       "doc:agents/reviewer.md",
+      "doc:docs/continuous-learning.md",
       "doc:prompts/execute.prompt.md",
       "doc:prompts/review.prompt.md",
       "doc:references/workflow-examples.md",
@@ -9314,7 +9835,8 @@
       "entity:document:agents/architect.md"
     ],
     "architectural": [
-      "doc:ARCHITECTURE.md"
+      "doc:ARCHITECTURE.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "architecture": [
       "doc:ARCHITECTURE.md",
@@ -9326,6 +9848,7 @@
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:memory/decisions/README.md",
       "doc:memory/permanent/principles/README.md",
       "doc:prompts/design.prompt.md",
@@ -9356,6 +9879,7 @@
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
+      "entity:document:knowledge/architecture/phase-8-learning-orchestration.md",
       "entity:document:templates/project-memory/ARCHITECTURE.md",
       "entity:document:templates/project-starters/automation/ARCHITECTURE.md",
       "entity:document:templates/project-starters/documentation/ARCHITECTURE.md",
@@ -9385,12 +9909,21 @@
       "doc:.agent/skills/system/testing/SKILL.md",
       "doc:.kiro/steering/technology.md",
       "doc:CLAUDE.md",
+      "doc:docs/knowledge-health.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:references/README.md",
       "entity:memory:decision-memory-index-source-truth-001"
     ],
     "artifacts": [
       "doc:agents/reviewer.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:references/workflow-examples.md"
     ],
     "as": [
@@ -9447,8 +9980,24 @@
       "doc:prompts/document.prompt.md",
       "doc:standards/documentation.md"
     ],
+    "audit": [
+      "doc:docs/feedback-and-audit.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
+      "entity:document:docs/feedback-and-audit.md"
+    ],
     "authentication": [
       "doc:SECURITY.md"
+    ],
+    "authored": [
+      "doc:knowledge/workflows/README.md"
     ],
     "authoritative": [
       "doc:memory/decisions/decision-memory-index-source-truth-001.md"
@@ -9633,7 +10182,15 @@
       "doc:.agent/skills/system/SKILL.md",
       "doc:.github/README.md",
       "doc:.kiro/README.md",
-      "doc:.kiro/steering/README.md"
+      "doc:.kiro/steering/README.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json"
     ],
     "belong": [
       "doc:knowledge/ai-workflows/README.md",
@@ -9691,7 +10248,8 @@
       "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "boundaries": [
-      "doc:knowledge/architecture/phase-6-mcp-integration.md"
+      "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "boundary": [
       "doc:references/canva.md",
@@ -9718,10 +10276,15 @@
       "entity:document:.agent/skills/design/browser/README.md",
       "entity:skill:browser"
     ],
+    "bug": [
+      "doc:knowledge/workflows/bug-fix.json",
+      "entity:document:knowledge/workflows/bug-fix.json"
+    ],
     "build": [
       "doc:CLAUDE.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/workflows/README.md",
       "doc:prompts/qa.prompt.md",
       "doc:references/workflow-examples.md"
     ],
@@ -9734,6 +10297,7 @@
       "doc:references/workflow-examples.md"
     ],
     "built": [
+      "doc:docs/agent-orchestration.md",
       "doc:scripts/README.md"
     ],
     "but": [
@@ -9743,10 +10307,15 @@
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
     "by": [
+      "doc:docs/agent-orchestration.md",
+      "doc:knowledge/workflows/README.md",
       "doc:references/README.md"
     ],
     "can": [
       "doc:references/copilot.md"
+    ],
+    "candidate": [
+      "doc:knowledge/workflows/release-preparation.json"
     ],
     "cannot": [
       "doc:memory/decisions/decision-memory-index-source-truth-001.md"
@@ -9771,6 +10340,7 @@
       "doc:references/vercel.md"
     ],
     "capture": [
+      "doc:docs/feedback-and-audit.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/best-practices/README.md",
@@ -9786,9 +10356,13 @@
       "doc:knowledge/security/README.md",
       "doc:knowledge/sharepoint/README.md",
       "doc:knowledge/vscode/README.md",
+      "doc:knowledge/workflows/bug-fix.json",
       "doc:memory/decisions/README.md",
       "doc:memory/permanent/conventions/README.md",
       "doc:memory/permanent/preferences/README.md"
+    ],
+    "categories": [
+      "doc:docs/knowledge-health.md"
     ],
     "cause": [
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
@@ -9930,6 +10504,13 @@
     "clarity": [
       "doc:.agent/skills/personal/clear-concise-writing/SKILL.md"
     ],
+    "classification": [
+      "doc:docs/agent-orchestration.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+    ],
+    "classify": [
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+    ],
     "claude": [
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/references/codex-tools.md",
@@ -10032,6 +10613,7 @@
     ],
     "commands": [
       "doc:README.md",
+      "doc:docs/knowledge-health.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -10111,6 +10693,14 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:templates/memory/session-memory.md"
     ],
     "components": [
@@ -10223,6 +10813,9 @@
     "construction": [
       "doc:scripts/knowledge_graph/README.md"
     ],
+    "consumed": [
+      "doc:knowledge/workflows/README.md"
+    ],
     "contains": [
       "doc:.agent/skills/design/browser/README.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
@@ -10277,6 +10870,16 @@
       "doc:templates/project-starters/web-app/CLAUDE.md",
       "doc:templates/project-starters/web-app/SESSION.md"
     ],
+    "continuous": [
+      "doc:ARCHITECTURE.md",
+      "doc:README.md",
+      "doc:ROADMAP.md",
+      "doc:SECURITY.md",
+      "doc:WORKFLOW.md",
+      "doc:docs/continuous-learning.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "entity:document:docs/continuous-learning.md"
+    ],
     "contrast": [
       "doc:standards/accessibility.md"
     ],
@@ -10298,6 +10901,7 @@
       "entity:memory:convention-documentation-structure-001"
     ],
     "conventions": [
+      "doc:knowledge/workflows/procedure-creation.json",
       "doc:memory/permanent/conventions/README.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "entity:document:memory/permanent/conventions/README.md",
@@ -10346,6 +10950,9 @@
     "corporate": [
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
+    "correct": [
+      "doc:knowledge/workflows/documentation-update.json"
+    ],
     "cover": [
       "doc:standards/testing.md"
     ],
@@ -10360,14 +10967,28 @@
       "doc:templates/project-starters/README.md",
       "entity:document:prompts/create-skill.prompt.md"
     ],
+    "creates": [
+      "doc:docs/memory-approval.md",
+      "doc:knowledge/workflows/release-preparation.json"
+    ],
     "creation": [
       "doc:README.md",
-      "doc:scripts/README.md"
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:scripts/README.md",
+      "entity:document:knowledge/workflows/procedure-creation.json"
     ],
     "credible": [
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
     "criteria": [
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:prompts/plan.prompt.md",
       "doc:prompts/specify.prompt.md",
       "doc:templates/project-memory/HANDOFF.md",
@@ -10438,6 +11059,7 @@
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
+      "doc:docs/agent-orchestration.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
@@ -10502,6 +11124,7 @@
       "entity:document:prompts/debug.prompt.md"
     ],
     "decision": [
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:memory/decisions/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:references/workflow-examples.md",
@@ -10573,6 +11196,9 @@
       "entity:document:templates/project-starters/web-app/decisions.md",
       "entity:memory:decision-memory-index-source-truth-001"
     ],
+    "defect": [
+      "doc:knowledge/workflows/bug-fix.json"
+    ],
     "define": [
       "doc:prompts/design.prompt.md",
       "doc:prompts/plan.prompt.md",
@@ -10580,12 +11206,14 @@
       "doc:standards/documentation.md"
     ],
     "definitions": [
-      "doc:agents/README.md"
+      "doc:agents/README.md",
+      "doc:knowledge/workflows/README.md"
     ],
     "deletion": [
       "doc:memory/archive/README.md"
     ],
     "deliberate": [
+      "doc:docs/knowledge-health.md",
       "doc:standards/release-management.md"
     ],
     "delivery": [
@@ -10670,6 +11298,15 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md"
     ],
     "description": [
+      "doc:docs/continuous-learning.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:templates/specifications/requirements.md"
     ],
     "design": [
@@ -10682,6 +11319,7 @@
       "doc:.kiro/steering/workflow.md",
       "doc:WORKFLOW.md",
       "doc:agents/architect.md",
+      "doc:knowledge/workflows/feature-development.json",
       "doc:prompts/design.prompt.md",
       "doc:prompts/execute.prompt.md",
       "doc:prompts/review.prompt.md",
@@ -10759,6 +11397,9 @@
       "doc:templates/memory/project-memory.md",
       "doc:templates/memory/session-memory.md"
     ],
+    "detected": [
+      "doc:knowledge/workflows/knowledge-maintenance.json"
+    ],
     "detection": [
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
@@ -10779,7 +11420,12 @@
     "development": [
       "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
+      "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "doc:knowledge/workflows/feature-development.json",
+      "entity:document:knowledge/workflows/feature-development.json"
+    ],
+    "diagnose": [
+      "doc:knowledge/workflows/bug-fix.json"
     ],
     "diagrams": [
       "doc:references/canva.md"
@@ -10849,16 +11495,29 @@
       "doc:templates/project-starters/web-app/HANDOFF.md"
     ],
     "docs": [
+      "doc:docs/agent-orchestration.md",
+      "doc:docs/continuous-learning.md",
+      "doc:docs/feedback-and-audit.md",
+      "doc:docs/knowledge-health.md",
+      "doc:docs/memory-approval.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
-      "doc:prompts/create-skill.prompt.md"
+      "doc:prompts/create-skill.prompt.md",
+      "entity:document:docs/agent-orchestration.md",
+      "entity:document:docs/continuous-learning.md",
+      "entity:document:docs/feedback-and-audit.md",
+      "entity:document:docs/knowledge-health.md",
+      "entity:document:docs/memory-approval.md"
     ],
     "doctor": [
       "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "document": [
+      "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/project-onboarding.json",
       "doc:prompts/deploy.prompt.md",
       "doc:prompts/document.prompt.md",
       "entity:document:.agent/skills/communication-skill/README.md",
@@ -10919,6 +11578,11 @@
       "entity:document:agents/reviewer.md",
       "entity:document:agents/security-reviewer.md",
       "entity:document:config/ai-os.example.json",
+      "entity:document:docs/agent-orchestration.md",
+      "entity:document:docs/continuous-learning.md",
+      "entity:document:docs/feedback-and-audit.md",
+      "entity:document:docs/knowledge-health.md",
+      "entity:document:docs/memory-approval.md",
       "entity:document:examples/mcp/README.md",
       "entity:document:examples/mcp/server-config.example.json",
       "entity:document:generated/memory-index.json",
@@ -10932,6 +11596,7 @@
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
+      "entity:document:knowledge/architecture/phase-8-learning-orchestration.md",
       "entity:document:knowledge/best-practices/README.md",
       "entity:document:knowledge/documentation/README.md",
       "entity:document:knowledge/future-ideas/README.md",
@@ -10945,6 +11610,15 @@
       "entity:document:knowledge/security/README.md",
       "entity:document:knowledge/sharepoint/README.md",
       "entity:document:knowledge/vscode/README.md",
+      "entity:document:knowledge/workflows/README.md",
+      "entity:document:knowledge/workflows/bug-fix.json",
+      "entity:document:knowledge/workflows/documentation-update.json",
+      "entity:document:knowledge/workflows/feature-development.json",
+      "entity:document:knowledge/workflows/incident-response.json",
+      "entity:document:knowledge/workflows/knowledge-maintenance.json",
+      "entity:document:knowledge/workflows/procedure-creation.json",
+      "entity:document:knowledge/workflows/project-onboarding.json",
+      "entity:document:knowledge/workflows/release-preparation.json",
       "entity:document:memory/README.md",
       "entity:document:memory/archive/README.md",
       "entity:document:memory/decisions/README.md",
@@ -11165,6 +11839,7 @@
       "doc:ROADMAP.md",
       "doc:agents/documentation-writer.md",
       "doc:knowledge/documentation/README.md",
+      "doc:knowledge/workflows/documentation-update.json",
       "doc:memory/permanent/conventions/README.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:prompts/document.prompt.md",
@@ -11198,6 +11873,7 @@
       "doc:templates/project-starters/web-app/SESSION.md",
       "entity:document:agents/documentation-writer.md",
       "entity:document:knowledge/documentation/README.md",
+      "entity:document:knowledge/workflows/documentation-update.json",
       "entity:document:standards/documentation.md",
       "entity:document:templates/project-starters/documentation/AGENTS.md",
       "entity:document:templates/project-starters/documentation/ARCHITECTURE.md",
@@ -11243,6 +11919,9 @@
       "doc:knowledge/sharepoint/README.md",
       "doc:knowledge/vscode/README.md"
     ],
+    "draft": [
+      "doc:knowledge/workflows/procedure-creation.json"
+    ],
     "driven": [
       "doc:references/kiro.md"
     ],
@@ -11251,6 +11930,9 @@
       "doc:CONTRIBUTING.md",
       "doc:standards/naming.md",
       "doc:templates/specifications/README.md"
+    ],
+    "due": [
+      "doc:docs/knowledge-health.md"
     ],
     "duplicate": [
       "doc:.github/instructions/markdown.instructions.md"
@@ -11262,6 +11944,7 @@
       "doc:.github/instructions/skills.instructions.md"
     ],
     "duplication": [
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:prompts/create-skill.prompt.md"
     ],
     "durable": [
@@ -11309,6 +11992,9 @@
     "employee": [
       "doc:SECURITY.md"
     ],
+    "end": [
+      "doc:knowledge/workflows/feature-development.json"
+    ],
     "endpoints": [
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
@@ -11318,6 +12004,7 @@
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:memory/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "entity:memory:session-memory-engine-example-001"
@@ -11452,7 +12139,9 @@
       "doc:templates/project-starters/web-app/HANDOFF.md"
     ],
     "existing": [
-      "doc:CONTRIBUTING.md"
+      "doc:CONTRIBUTING.md",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/procedure-creation.json"
     ],
     "expectations": [
       "doc:standards/README.md"
@@ -11503,6 +12192,9 @@
     "exposes": [
       "doc:examples/mcp/README.md"
     ],
+    "extend": [
+      "doc:knowledge/workflows/documentation-update.json"
+    ],
     "extension": [
       "doc:ARCHITECTURE.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -11519,6 +12211,16 @@
     "fact": [
       "doc:prompts/research.prompt.md"
     ],
+    "failure": [
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json"
+    ],
     "failures": [
       "doc:prompts/qa.prompt.md",
       "doc:standards/testing.md",
@@ -11533,10 +12235,16 @@
       "doc:templates/project-starters/web-app/TESTING.md"
     ],
     "feature": [
-      "doc:.kiro/specs/README.md"
+      "doc:.kiro/specs/README.md",
+      "doc:knowledge/workflows/feature-development.json",
+      "entity:document:knowledge/workflows/feature-development.json"
     ],
     "features": [
       "doc:.kiro/specs/README.md"
+    ],
+    "feedback": [
+      "doc:docs/feedback-and-audit.md",
+      "entity:document:docs/feedback-and-audit.md"
     ],
     "feels": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -11546,6 +12254,7 @@
     ],
     "file": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
+      "doc:docs/memory-approval.md",
       "doc:examples/mcp/README.md",
       "doc:templates/project-memory/SESSION.md",
       "doc:templates/project-starters/automation/SESSION.md",
@@ -11615,7 +12324,10 @@
       "doc:.kiro/steering/structure.md"
     ],
     "fix": [
-      "doc:prompts/debug.prompt.md"
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:prompts/debug.prompt.md",
+      "entity:document:knowledge/workflows/bug-fix.json"
     ],
     "fixed": [
       "doc:CHANGELOG.md",
@@ -11737,6 +12449,7 @@
       "doc:ARCHITECTURE.md",
       "doc:README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:memory/archive/README.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/sessions/README.md",
@@ -11749,8 +12462,19 @@
       "entity:memory:convention-documentation-structure-001",
       "entity:memory:session-memory-engine-example-001"
     ],
+    "forbidden": [
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json"
+    ],
     "format": [
-      "doc:.agent/skills/thinking/SKILL.md"
+      "doc:.agent/skills/thinking/SKILL.md",
+      "doc:knowledge/workflows/README.md"
     ],
     "formats": [
       "doc:.kiro/steering/technology.md"
@@ -11765,9 +12489,15 @@
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:ARCHITECTURE.md"
     ],
+    "freshness": [
+      "doc:docs/knowledge-health.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+    ],
     "from": [
       "doc:.github/instructions/specifications.instructions.md",
+      "doc:docs/agent-orchestration.md",
       "doc:knowledge/README.md",
+      "doc:knowledge/workflows/procedure-creation.json",
       "doc:memory/lessons/README.md"
     ],
     "front": [
@@ -11796,6 +12526,13 @@
       "doc:templates/project-starters/web-app/ROADMAP.md",
       "entity:document:knowledge/future-ideas/README.md"
     ],
+    "gap": [
+      "doc:docs/knowledge-health.md",
+      "doc:knowledge/workflows/knowledge-maintenance.json"
+    ],
+    "gaps": [
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+    ],
     "gates": [
       "doc:WORKFLOW.md",
       "doc:agents/project-manager.md"
@@ -11812,6 +12549,7 @@
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
     "generated": [
+      "doc:docs/agent-orchestration.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "entity:document:generated/memory-index.json",
@@ -11916,6 +12654,7 @@
     ],
     "goals": [
       "doc:ARCHITECTURE.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:templates/project-memory/REQUIREMENTS.md",
       "doc:templates/project-starters/automation/REQUIREMENTS.md",
       "doc:templates/project-starters/documentation/REQUIREMENTS.md",
@@ -12027,6 +12766,9 @@
     "habits": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
     ],
+    "hand": [
+      "doc:knowledge/workflows/README.md"
+    ],
     "handling": [
       "doc:standards/security.md",
       "doc:templates/specifications/deployment-plan.md",
@@ -12104,6 +12846,10 @@
       "doc:.github/instructions/markdown.instructions.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md"
     ],
+    "health": [
+      "doc:docs/knowledge-health.md",
+      "entity:document:docs/knowledge-health.md"
+    ],
     "help": [
       "doc:memory/decisions/decision-memory-index-source-truth-001.md"
     ],
@@ -12131,7 +12877,8 @@
       "doc:references/vercel.md"
     ],
     "how": [
-      "doc:.agent/skills/system/using-superpowers/SKILL.md"
+      "doc:.agent/skills/system/using-superpowers/SKILL.md",
+      "doc:docs/continuous-learning.md"
     ],
     "hub": [
       "doc:.github/README.md",
@@ -12149,6 +12896,9 @@
       "doc:.kiro/steering/workflow.md",
       "doc:WORKFLOW.md",
       "doc:agents/project-manager.md",
+      "doc:docs/continuous-learning.md",
+      "doc:docs/memory-approval.md",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:prompts/deploy.prompt.md",
       "doc:references/workflow-examples.md",
       "doc:standards/git.md",
@@ -12162,6 +12912,14 @@
       "doc:standards/naming.md"
     ],
     "id": [
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json"
@@ -12198,6 +12956,7 @@
     "implement": [
       "doc:.github/instructions/specifications.instructions.md",
       "doc:agents/builder.md",
+      "doc:knowledge/workflows/feature-development.json",
       "doc:prompts/execute.prompt.md"
     ],
     "implementation": [
@@ -12220,6 +12979,7 @@
     "in": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:.github/copilot-instructions.md",
+      "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -12231,6 +12991,10 @@
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:scripts/README.md",
       "doc:templates/memory/session-memory.md"
+    ],
+    "incident": [
+      "doc:knowledge/workflows/incident-response.json",
+      "entity:document:knowledge/workflows/incident-response.json"
     ],
     "includes": [
       "doc:.agent/skills/research/README.md",
@@ -12281,7 +13045,15 @@
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
-      "doc:knowledge/architecture/phase-4-semantic-discovery.md"
+      "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json"
     ],
     "inspect": [
       "doc:CONTRIBUTING.md",
@@ -12340,6 +13112,16 @@
     "integrations": [
       "doc:.kiro/steering/technology.md",
       "doc:references/mcp.md"
+    ],
+    "intent": [
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json"
     ],
     "interactions": [
       "doc:standards/accessibility.md"
@@ -12405,7 +13187,8 @@
       "entity:project:internal-it"
     ],
     "into": [
-      "doc:agents/planner.md"
+      "doc:agents/planner.md",
+      "doc:docs/continuous-learning.md"
     ],
     "introduced": [
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -12424,11 +13207,14 @@
       "doc:ARCHITECTURE.md",
       "doc:README.md",
       "doc:agents/README.md",
+      "doc:docs/continuous-learning.md",
+      "doc:docs/knowledge-health.md",
       "doc:memory/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:templates/memory/session-memory.md"
     ],
     "issue": [
+      "doc:knowledge/workflows/incident-response.json",
       "doc:templates/project-memory/KNOWN_ISSUES.md",
       "doc:templates/project-starters/automation/KNOWN_ISSUES.md",
       "doc:templates/project-starters/documentation/KNOWN_ISSUES.md",
@@ -12472,6 +13258,8 @@
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/product.md",
       "doc:README.md",
+      "doc:docs/continuous-learning.md",
+      "doc:knowledge/workflows/documentation-update.json",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -12516,6 +13304,9 @@
       "entity:document:templates/project-starters/internal-it/decisions.md",
       "entity:project:internal-it"
     ],
+    "itself": [
+      "doc:knowledge/workflows/release-preparation.json"
+    ],
     "js": [
       "doc:references/v0.md"
     ],
@@ -12527,7 +13318,16 @@
       "doc:agents.json",
       "doc:agents/README.md",
       "doc:config/ai-os.example.json",
+      "doc:docs/agent-orchestration.md",
       "doc:examples/mcp/server-config.example.json",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:memory/README.md",
       "doc:memory/registry.json",
       "doc:prompts.json",
@@ -12542,6 +13342,14 @@
       "entity:document:generated/memory-index.json",
       "entity:document:generated/repository-index.json",
       "entity:document:generated/skills.json",
+      "entity:document:knowledge/workflows/bug-fix.json",
+      "entity:document:knowledge/workflows/documentation-update.json",
+      "entity:document:knowledge/workflows/feature-development.json",
+      "entity:document:knowledge/workflows/incident-response.json",
+      "entity:document:knowledge/workflows/knowledge-maintenance.json",
+      "entity:document:knowledge/workflows/procedure-creation.json",
+      "entity:document:knowledge/workflows/project-onboarding.json",
+      "entity:document:knowledge/workflows/release-preparation.json",
       "entity:document:memory/registry.json",
       "entity:document:prompts.json",
       "entity:document:schemas/memory.schema.json",
@@ -12558,7 +13366,8 @@
       "doc:templates/specifications/README.md"
     ],
     "key": [
-      "doc:.agent/skills/research/SKILL.md"
+      "doc:.agent/skills/research/SKILL.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "keyboard": [
       "doc:standards/accessibility.md"
@@ -12593,6 +13402,7 @@
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
+      "doc:docs/knowledge-health.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/README.md",
       "doc:knowledge/ai-workflows/README.md",
@@ -12602,6 +13412,7 @@
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -12615,6 +13426,15 @@
       "doc:knowledge/security/README.md",
       "doc:knowledge/sharepoint/README.md",
       "doc:knowledge/vscode/README.md",
+      "doc:knowledge/workflows/README.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:references/workflow-examples.md",
       "doc:scripts/knowledge_graph/README.md",
       "doc:templates/project-memory/RETROSPECTIVE.md",
@@ -12627,6 +13447,7 @@
       "doc:templates/project-starters/python/RETROSPECTIVE.md",
       "doc:templates/project-starters/web-app/RETROSPECTIVE.md",
       "doc:templates/specifications/retrospective.md",
+      "entity:document:docs/knowledge-health.md",
       "entity:document:knowledge/README.md",
       "entity:document:knowledge/ai-workflows/README.md",
       "entity:document:knowledge/architecture/README.md",
@@ -12635,6 +13456,7 @@
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
+      "entity:document:knowledge/architecture/phase-8-learning-orchestration.md",
       "entity:document:knowledge/best-practices/README.md",
       "entity:document:knowledge/documentation/README.md",
       "entity:document:knowledge/future-ideas/README.md",
@@ -12648,9 +13470,19 @@
       "entity:document:knowledge/security/README.md",
       "entity:document:knowledge/sharepoint/README.md",
       "entity:document:knowledge/vscode/README.md",
+      "entity:document:knowledge/workflows/README.md",
+      "entity:document:knowledge/workflows/bug-fix.json",
+      "entity:document:knowledge/workflows/documentation-update.json",
+      "entity:document:knowledge/workflows/feature-development.json",
+      "entity:document:knowledge/workflows/incident-response.json",
+      "entity:document:knowledge/workflows/knowledge-maintenance.json",
+      "entity:document:knowledge/workflows/procedure-creation.json",
+      "entity:document:knowledge/workflows/project-onboarding.json",
+      "entity:document:knowledge/workflows/release-preparation.json",
       "entity:document:scripts/knowledge_graph/README.md"
     ],
     "known": [
+      "doc:docs/knowledge-health.md",
       "doc:templates/project-memory/KNOWN_ISSUES.md",
       "doc:templates/project-memory/RELEASE_NOTES.md",
       "doc:templates/project-starters/automation/KNOWN_ISSUES.md",
@@ -12686,7 +13518,8 @@
       "doc:standards/documentation.md"
     ],
     "layer": [
-      "doc:knowledge/architecture/phase-6-mcp-integration.md"
+      "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "layers": [
       "doc:.kiro/steering/structure.md",
@@ -12707,11 +13540,23 @@
       "doc:templates/specifications/retrospective.md",
       "entity:document:knowledge/lessons-learned/README.md"
     ],
+    "learning": [
+      "doc:ARCHITECTURE.md",
+      "doc:README.md",
+      "doc:ROADMAP.md",
+      "doc:SECURITY.md",
+      "doc:WORKFLOW.md",
+      "doc:docs/continuous-learning.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "entity:document:docs/continuous-learning.md",
+      "entity:document:knowledge/architecture/phase-8-learning-orchestration.md"
+    ],
     "least": [
       "doc:.github/README.md",
       "doc:standards/security.md"
     ],
     "lesson": [
+      "doc:knowledge/workflows/bug-fix.json",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:templates/memory/lesson-memory.md",
@@ -12762,7 +13607,8 @@
       "doc:prompts/README.md"
     ],
     "lifecycle": [
-      "doc:WORKFLOW.md"
+      "doc:WORKFLOW.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "lifecycles": [
       "doc:GOVERNANCE.md"
@@ -12773,6 +13619,7 @@
       "doc:.agent/skills/references/gemini-tools.md"
     ],
     "limitation": [
+      "doc:docs/knowledge-health.md",
       "doc:prompts/research.prompt.md"
     ],
     "limitations": [
@@ -12799,10 +13646,14 @@
       "doc:memory/permanent/README.md"
     ],
     "local": [
+      "doc:docs/feedback-and-audit.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md"
+    ],
+    "log": [
+      "doc:docs/knowledge-health.md"
     ],
     "logging": [
       "doc:templates/specifications/design.md"
@@ -12825,6 +13676,9 @@
       "doc:templates/project-starters/python/CLAUDE.md",
       "doc:templates/project-starters/web-app/CLAUDE.md"
     ],
+    "loop": [
+      "doc:docs/continuous-learning.md"
+    ],
     "lost": [
       "doc:.kiro/steering/product.md"
     ],
@@ -12842,6 +13696,10 @@
     "maintainers": [
       "doc:.kiro/steering/product.md",
       "doc:GOVERNANCE.md"
+    ],
+    "maintenance": [
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "entity:document:knowledge/workflows/knowledge-maintenance.json"
     ],
     "make": [
       "doc:prompts/debug.prompt.md"
@@ -12923,6 +13781,7 @@
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
+      "doc:docs/agent-orchestration.md",
       "doc:examples/mcp/README.md",
       "doc:examples/mcp/server-config.example.json",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
@@ -13004,6 +13863,11 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
+      "doc:docs/agent-orchestration.md",
+      "doc:docs/continuous-learning.md",
+      "doc:docs/feedback-and-audit.md",
+      "doc:docs/knowledge-health.md",
+      "doc:docs/memory-approval.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/README.md",
       "doc:knowledge/ai-workflows/README.md",
@@ -13013,6 +13877,7 @@
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -13026,6 +13891,7 @@
       "doc:knowledge/security/README.md",
       "doc:knowledge/sharepoint/README.md",
       "doc:knowledge/vscode/README.md",
+      "doc:knowledge/workflows/README.md",
       "doc:memory/README.md",
       "doc:memory/archive/README.md",
       "doc:memory/decisions/README.md",
@@ -13292,6 +14158,11 @@
       "entity:document:agents/researcher.md",
       "entity:document:agents/reviewer.md",
       "entity:document:agents/security-reviewer.md",
+      "entity:document:docs/agent-orchestration.md",
+      "entity:document:docs/continuous-learning.md",
+      "entity:document:docs/feedback-and-audit.md",
+      "entity:document:docs/knowledge-health.md",
+      "entity:document:docs/memory-approval.md",
       "entity:document:examples/mcp/README.md",
       "entity:document:knowledge/README.md",
       "entity:document:knowledge/ai-workflows/README.md",
@@ -13301,6 +14172,7 @@
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
+      "entity:document:knowledge/architecture/phase-8-learning-orchestration.md",
       "entity:document:knowledge/best-practices/README.md",
       "entity:document:knowledge/documentation/README.md",
       "entity:document:knowledge/future-ideas/README.md",
@@ -13314,6 +14186,7 @@
       "entity:document:knowledge/security/README.md",
       "entity:document:knowledge/sharepoint/README.md",
       "entity:document:knowledge/vscode/README.md",
+      "entity:document:knowledge/workflows/README.md",
       "entity:document:memory/README.md",
       "entity:document:memory/archive/README.md",
       "entity:document:memory/decisions/README.md",
@@ -13558,7 +14431,17 @@
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
+      "doc:docs/memory-approval.md",
       "doc:examples/mcp/README.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:memory/README.md",
       "doc:memory/archive/README.md",
       "doc:memory/decisions/README.md",
@@ -13600,6 +14483,7 @@
       "doc:templates/project-memory/TASKS.md",
       "doc:templates/project-memory/TESTING.md",
       "doc:templates/project-memory/decisions.md",
+      "entity:document:docs/memory-approval.md",
       "entity:document:generated/memory-index.json",
       "entity:document:memory/README.md",
       "entity:document:memory/archive/README.md",
@@ -13692,6 +14576,9 @@
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md"
     ],
+    "modifies": [
+      "doc:docs/memory-approval.md"
+    ],
     "modules": [
       "doc:scripts/knowledge_graph/README.md"
     ],
@@ -13718,6 +14605,14 @@
       "doc:templates/project-starters/web-app/SESSION.md"
     ],
     "name": [
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:templates/project-memory/README.md",
       "doc:templates/project-starters/automation/README.md",
       "doc:templates/project-starters/documentation/README.md",
@@ -13766,11 +14661,15 @@
     ],
     "never": [
       "doc:SECURITY.md",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:prompts/deploy.prompt.md",
       "doc:standards/git.md"
     ],
     "new": [
-      "doc:knowledge/architecture/phase-4-semantic-discovery.md"
+      "doc:knowledge/architecture/phase-4-semantic-discovery.md",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json"
     ],
     "next": [
       "doc:.agent/skills/personal/analytical/SKILL.md",
@@ -13788,6 +14687,8 @@
       "doc:templates/project-starters/web-app/ROADMAP.md"
     ],
     "no": [
+      "doc:docs/feedback-and-audit.md",
+      "doc:docs/knowledge-health.md",
       "doc:scripts/README.md"
     ],
     "node": [
@@ -13796,6 +14697,7 @@
     "non": [
       "doc:.kiro/steering/technology.md",
       "doc:ARCHITECTURE.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:prompts/specify.prompt.md",
       "doc:templates/project-memory/REQUIREMENTS.md",
       "doc:templates/project-starters/automation/REQUIREMENTS.md",
@@ -13815,8 +14717,10 @@
       "doc:.github/instructions/README.md",
       "doc:.github/instructions/specifications.instructions.md",
       "doc:.github/workflows/README.md",
+      "doc:docs/continuous-learning.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -13878,6 +14782,7 @@
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/research/SKILL.md",
+      "doc:docs/memory-approval.md",
       "doc:knowledge/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/research-notes/README.md",
@@ -13910,6 +14815,10 @@
       "entity:document:templates/project-starters/power-automate/RELEASE_NOTES.md",
       "entity:document:templates/project-starters/python/RELEASE_NOTES.md",
       "entity:document:templates/project-starters/web-app/RELEASE_NOTES.md"
+    ],
+    "nothing": [
+      "doc:docs/feedback-and-audit.md",
+      "doc:docs/memory-approval.md"
     ],
     "number": [
       "doc:templates/project-memory/decisions.md",
@@ -13953,10 +14862,13 @@
       "doc:.kiro/steering/workflow.md"
     ],
     "of": [
+      "doc:docs/continuous-learning.md",
+      "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:memory/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "entity:memory:decision-memory-index-source-truth-001"
@@ -13964,9 +14876,15 @@
     "on": [
       "doc:.github/README.md",
       "doc:.kiro/README.md",
-      "doc:.kiro/steering/README.md"
+      "doc:.kiro/steering/README.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+    ],
+    "onboarding": [
+      "doc:knowledge/workflows/project-onboarding.json",
+      "entity:document:knowledge/workflows/project-onboarding.json"
     ],
     "one": [
+      "doc:docs/knowledge-health.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:memory/projects/README.md"
     ],
@@ -14014,6 +14932,7 @@
     ],
     "optional": [
       "doc:.kiro/steering/technology.md",
+      "doc:knowledge/workflows/bug-fix.json",
       "doc:references/mcp.md"
     ],
     "options": [
@@ -14024,6 +14943,11 @@
       "doc:CLAUDE.md",
       "doc:CONTRIBUTING.md",
       "doc:SECURITY.md",
+      "doc:docs/memory-approval.md",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -14060,7 +14984,17 @@
     "orchestration": [
       "doc:.agent/skills/system/README.md",
       "doc:.agent/skills/system/SKILL.md",
-      "doc:knowledge/architecture/phase-7-release-hardening.md"
+      "doc:ARCHITECTURE.md",
+      "doc:README.md",
+      "doc:ROADMAP.md",
+      "doc:SECURITY.md",
+      "doc:WORKFLOW.md",
+      "doc:docs/agent-orchestration.md",
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/workflows/README.md",
+      "entity:document:docs/agent-orchestration.md",
+      "entity:document:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "order": [
       "doc:.github/copilot-instructions.md",
@@ -14080,8 +15014,10 @@
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
+      "doc:docs/continuous-learning.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "doc:knowledge/workflows/project-onboarding.json",
       "doc:memory/README.md",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
@@ -14128,7 +15064,15 @@
     "output": [
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/SKILL.md",
-      "doc:.agent/skills/thinking/SKILL.md"
+      "doc:.agent/skills/thinking/SKILL.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json"
     ],
     "outputs": [
       "doc:.github/instructions/prompts.instructions.md",
@@ -14174,7 +15118,8 @@
       "doc:standards/documentation.md"
     ],
     "package": [
-      "doc:.agent/skills/communication-skill/README.md"
+      "doc:.agent/skills/communication-skill/README.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "packaging": [
       "doc:knowledge/architecture/phase-7-release-hardening.md"
@@ -14219,6 +15164,7 @@
       "doc:templates/specifications/requirements.md"
     ],
     "permanent": [
+      "doc:docs/memory-approval.md",
       "doc:memory/permanent/README.md",
       "doc:memory/permanent/conventions/README.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
@@ -14271,18 +15217,29 @@
       "doc:ARCHITECTURE.md",
       "doc:README.md",
       "doc:ROADMAP.md",
+      "doc:SECURITY.md",
       "doc:WORKFLOW.md",
+      "doc:docs/agent-orchestration.md",
+      "doc:docs/continuous-learning.md",
+      "doc:docs/feedback-and-audit.md",
+      "doc:docs/knowledge-health.md",
+      "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:scripts/knowledge_graph/README.md",
       "entity:document:knowledge/architecture/phase-3-knowledge-graph.md",
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md",
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
-      "entity:document:knowledge/architecture/phase-7-release-hardening.md"
+      "entity:document:knowledge/architecture/phase-7-release-hardening.md",
+      "entity:document:knowledge/architecture/phase-8-learning-orchestration.md"
+    ],
+    "phases": [
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "phrases": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -14296,6 +15253,7 @@
     ],
     "plan": [
       "doc:agents/qa.md",
+      "doc:knowledge/workflows/feature-development.json",
       "doc:prompts/plan.prompt.md",
       "doc:prompts/qa.prompt.md",
       "doc:references/README.md",
@@ -14313,6 +15271,8 @@
       "entity:document:agents/planner.md"
     ],
     "planning": [
+      "doc:docs/agent-orchestration.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:references/chatgpt.md",
       "doc:references/claude.md",
       "doc:references/kiro.md",
@@ -14350,7 +15310,15 @@
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
-      "doc:knowledge/architecture/phase-6-mcp-integration.md"
+      "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json"
     ],
     "portable": [
       "doc:.kiro/steering/product.md",
@@ -14469,9 +15437,14 @@
     "preferred": [
       "doc:CLAUDE.md"
     ],
+    "preparation": [
+      "doc:knowledge/workflows/release-preparation.json",
+      "entity:document:knowledge/workflows/release-preparation.json"
+    ],
     "prepare": [
       "doc:.kiro/steering/workflow.md",
-      "doc:agents/deployment-manager.md"
+      "doc:agents/deployment-manager.md",
+      "doc:knowledge/workflows/release-preparation.json"
     ],
     "presentations": [
       "doc:references/canva.md"
@@ -14534,6 +15507,10 @@
       "entity:document:.agent/skills/personal/problem-solving/README.md",
       "entity:skill:problem-solving"
     ],
+    "procedure": [
+      "doc:knowledge/workflows/procedure-creation.json",
+      "entity:document:knowledge/workflows/procedure-creation.json"
+    ],
     "process": [
       "doc:memory/decisions/README.md"
     ],
@@ -14568,6 +15545,7 @@
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:agents/project-manager.md",
+      "doc:knowledge/workflows/project-onboarding.json",
       "doc:memory/projects/README.md",
       "doc:schemas/project.schema.json",
       "doc:scripts/README.md",
@@ -14719,6 +15697,7 @@
       "doc:templates/project-starters/web-app/TESTING.md",
       "doc:templates/project-starters/web-app/decisions.md",
       "entity:document:agents/project-manager.md",
+      "entity:document:knowledge/workflows/project-onboarding.json",
       "entity:document:schemas/project.schema.json",
       "entity:document:templates/memory/project-memory.md",
       "entity:document:templates/project-memory/AGENTS.md",
@@ -15038,6 +16017,7 @@
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -15094,6 +16074,7 @@
       "doc:templates/project-starters/web-app/AGENTS.md"
     ],
     "py": [
+      "doc:knowledge/workflows/README.md",
       "doc:templates/project-starters/README.md"
     ],
     "python": [
@@ -15144,7 +16125,11 @@
       "doc:memory/permanent/preferences/README.md"
     ],
     "query": [
+      "doc:docs/knowledge-health.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md"
+    ],
+    "question": [
+      "doc:knowledge/workflows/knowledge-maintenance.json"
     ],
     "questions": [
       "doc:.agent/skills/research/SKILL.md",
@@ -15237,6 +16222,7 @@
       "doc:knowledge/security/README.md",
       "doc:knowledge/sharepoint/README.md",
       "doc:knowledge/vscode/README.md",
+      "doc:knowledge/workflows/README.md",
       "doc:memory/README.md",
       "doc:memory/archive/README.md",
       "doc:memory/decisions/README.md",
@@ -15304,6 +16290,7 @@
       "entity:document:knowledge/security/README.md",
       "entity:document:knowledge/sharepoint/README.md",
       "entity:document:knowledge/vscode/README.md",
+      "entity:document:knowledge/workflows/README.md",
       "entity:document:memory/README.md",
       "entity:document:memory/archive/README.md",
       "entity:document:memory/decisions/README.md",
@@ -15338,6 +16325,7 @@
       "doc:prompts/plan.prompt.md"
     ],
     "reason": [
+      "doc:docs/knowledge-health.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:templates/memory/decision-memory.md"
     ],
@@ -15459,6 +16447,9 @@
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "entity:memory:lesson-powerapps-refresh-001"
     ],
+    "regenerate": [
+      "doc:knowledge/workflows/README.md"
+    ],
     "registered": [
       "doc:examples/mcp/README.md"
     ],
@@ -15469,6 +16460,8 @@
     ],
     "registry": [
       "doc:agents/README.md",
+      "doc:docs/agent-orchestration.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:memory/registry.json",
@@ -15507,6 +16500,7 @@
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:standards/release-management.md",
       "doc:templates/project-memory/RELEASE_NOTES.md",
       "doc:templates/project-starters/automation/RELEASE_NOTES.md",
@@ -15518,6 +16512,7 @@
       "doc:templates/project-starters/python/RELEASE_NOTES.md",
       "doc:templates/project-starters/web-app/RELEASE_NOTES.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
+      "entity:document:knowledge/workflows/release-preparation.json",
       "entity:document:standards/release-management.md",
       "entity:document:templates/project-memory/RELEASE_NOTES.md",
       "entity:document:templates/project-starters/automation/RELEASE_NOTES.md",
@@ -15580,6 +16575,9 @@
       "doc:templates/project-starters/power-automate/HANDOFF.md",
       "doc:templates/project-starters/python/HANDOFF.md",
       "doc:templates/project-starters/web-app/HANDOFF.md"
+    ],
+    "reported": [
+      "doc:knowledge/workflows/incident-response.json"
     ],
     "reporting": [
       "doc:AGENTS.md",
@@ -15651,11 +16649,21 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
+      "doc:knowledge/workflows/README.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json"
     ],
     "requirement": [
+      "doc:docs/memory-approval.md",
       "doc:standards/code-review.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-memory/REQUIREMENTS.md",
@@ -15759,6 +16767,8 @@
       "doc:.agent/skills/research/README.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:knowledge/research-notes/README.md",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
       "doc:prompts/research.prompt.md",
       "doc:references/chatgpt.md",
       "doc:references/workflow-examples.md",
@@ -15776,6 +16786,10 @@
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:templates/memory/lesson-memory.md"
+    ],
+    "resolve": [
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/incident-response.json"
     ],
     "resource": [
       "doc:examples/mcp/README.md"
@@ -15795,7 +16809,9 @@
       "doc:knowledge/architecture/phase-6-mcp-integration.md"
     ],
     "response": [
-      "doc:.agent/skills/system/using-superpowers/SKILL.md"
+      "doc:.agent/skills/system/using-superpowers/SKILL.md",
+      "doc:knowledge/workflows/incident-response.json",
+      "entity:document:knowledge/workflows/incident-response.json"
     ],
     "responsibilities": [
       "doc:agents/architect.md",
@@ -15901,6 +16917,7 @@
       "doc:knowledge/security/README.md",
       "doc:knowledge/sharepoint/README.md",
       "doc:knowledge/vscode/README.md",
+      "doc:knowledge/workflows/procedure-creation.json",
       "doc:memory/lessons/README.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -15909,10 +16926,16 @@
       "doc:templates/README.md",
       "doc:templates/memory/lesson-memory.md"
     ],
+    "reuse": [
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+    ],
     "review": [
       "doc:.kiro/steering/workflow.md",
       "doc:GOVERNANCE.md",
       "doc:WORKFLOW.md",
+      "doc:docs/knowledge-health.md",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -16122,6 +17145,9 @@
     "run": [
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md"
     ],
+    "runbook": [
+      "doc:knowledge/workflows/procedure-creation.json"
+    ],
     "runs": [
       "doc:.github/workflows/README.md"
     ],
@@ -16139,6 +17165,9 @@
     ],
     "sample": [
       "doc:examples/mcp/README.md"
+    ],
+    "scaffold": [
+      "doc:knowledge/workflows/project-onboarding.json"
     ],
     "scan": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -16189,11 +17218,15 @@
     "scoped": [
       "doc:.github/instructions/README.md"
     ],
+    "scoring": [
+      "doc:docs/knowledge-health.md"
+    ],
     "script": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
     ],
     "scripts": [
       "doc:CHANGELOG.md",
+      "doc:knowledge/workflows/README.md",
       "doc:scripts/README.md",
       "doc:scripts/knowledge_graph/README.md",
       "doc:templates/project-starters/README.md",
@@ -16201,6 +17234,7 @@
       "entity:document:scripts/knowledge_graph/README.md"
     ],
     "search": [
+      "doc:docs/knowledge-health.md",
       "doc:examples/mcp/README.md",
       "doc:references/workflow-examples.md"
     ],
@@ -16235,11 +17269,13 @@
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:agents/security-reviewer.md",
+      "doc:docs/memory-approval.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/security/README.md",
       "doc:memory/README.md",
       "doc:prompts/design.prompt.md",
@@ -16282,9 +17318,12 @@
       "entity:document:standards/security.md"
     ],
     "see": [
+      "doc:docs/continuous-learning.md",
+      "doc:docs/knowledge-health.md",
       "doc:prompts/README.md"
     ],
     "select": [
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:prompts/plan.prompt.md"
     ],
     "selection": [
@@ -16303,6 +17342,9 @@
     ],
     "senior": [
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md"
+    ],
+    "sent": [
+      "doc:docs/feedback-and-audit.md"
     ],
     "sentence": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
@@ -16324,6 +17366,7 @@
     ],
     "session": [
       "doc:knowledge/README.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:memory/projects/README.md",
       "doc:memory/sessions/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
@@ -16350,6 +17393,7 @@
       "entity:memory:session-memory-engine-example-001"
     ],
     "sessions": [
+      "doc:docs/agent-orchestration.md",
       "doc:memory/permanent/README.md",
       "doc:memory/sessions/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
@@ -16605,6 +17649,7 @@
     ],
     "source": [
       "doc:.agent/skills/research/SKILL.md",
+      "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -16686,6 +17731,10 @@
       "doc:.kiro/steering/structure.md",
       "entity:document:.kiro/specs/README.md"
     ],
+    "split": [
+      "doc:docs/knowledge-health.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+    ],
     "stable": [
       "doc:CONTRIBUTING.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
@@ -16705,6 +17754,9 @@
       "entity:skill:ui-ux-pro-max",
       "entity:skill:using-superpowers",
       "entity:skill:writing"
+    ],
+    "stale": [
+      "doc:knowledge/workflows/knowledge-maintenance.json"
     ],
     "standard": [
       "doc:.kiro/steering/technology.md",
@@ -17082,6 +18134,14 @@
     ],
     "steps": [
       "doc:.agent/skills/personal/analytical/SKILL.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/automation/HANDOFF.md",
       "doc:templates/project-starters/documentation/HANDOFF.md",
@@ -17098,6 +18158,9 @@
     ],
     "stop": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
+    ],
+    "storage": [
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "store": [
       "doc:SECURITY.md",
@@ -17124,6 +18187,7 @@
     "structure": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.kiro/steering/structure.md",
+      "doc:knowledge/workflows/project-onboarding.json",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:standards/accessibility.md",
@@ -17132,6 +18196,7 @@
       "entity:memory:convention-documentation-structure-001"
     ],
     "structured": [
+      "doc:docs/feedback-and-audit.md",
       "doc:prompts/specify.prompt.md",
       "doc:references/kiro.md"
     ],
@@ -17147,6 +18212,21 @@
     ],
     "sufficient": [
       "doc:standards/accessibility.md"
+    ],
+    "suggestion": [
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json"
+    ],
+    "suggestions": [
+      "doc:docs/memory-approval.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "summaries": [
       "doc:examples/mcp/README.md"
@@ -17250,6 +18330,9 @@
       "doc:.agent/skills/research/SKILL.md"
     ],
     "task": [
+      "doc:docs/agent-orchestration.md",
+      "doc:docs/continuous-learning.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:references/kiro.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-memory/TASKS.md",
@@ -17306,6 +18389,9 @@
     "technology": [
       "doc:.kiro/steering/technology.md",
       "entity:document:.kiro/steering/technology.md"
+    ],
+    "telemetry": [
+      "doc:docs/feedback-and-audit.md"
     ],
     "templates": [
       "doc:.github/instructions/templates.instructions.md",
@@ -17754,12 +18840,17 @@
       "doc:.kiro/steering/workflow.md",
       "doc:agents/README.md",
       "doc:agents/reviewer.md",
+      "doc:docs/continuous-learning.md",
+      "doc:docs/knowledge-health.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:memory/README.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:prompts/debug.prompt.md",
@@ -17783,6 +18874,9 @@
     "then": [
       "doc:.kiro/steering/workflow.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md"
+    ],
+    "there": [
+      "doc:docs/knowledge-health.md"
     ],
     "these": [
       "doc:.github/instructions/README.md",
@@ -17815,6 +18909,7 @@
       "doc:.agent/skills/system/testing/README.md",
       "doc:.agent/skills/system/using-superpowers/README.md",
       "doc:.github/README.md",
+      "doc:docs/continuous-learning.md",
       "doc:memory/README.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-memory/SESSION.md",
@@ -17878,6 +18973,10 @@
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:.agent/skills/thinking/SKILL.md",
       "doc:CONTRIBUTING.md",
+      "doc:docs/knowledge-health.md",
+      "doc:knowledge/workflows/README.md",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:prompts/review.prompt.md",
@@ -17927,6 +19026,9 @@
       "entity:document:.agent/skills/references/copilot-tools.md",
       "entity:document:.agent/skills/references/gemini-tools.md"
     ],
+    "top": [
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+    ],
     "topic": [
       "doc:.agent/skills/research/SKILL.md"
     ],
@@ -17953,8 +19055,16 @@
       "doc:prompts/qa.prompt.md",
       "doc:templates/specifications/README.md"
     ],
+    "tracked": [
+      "doc:docs/continuous-learning.md"
+    ],
     "tracking": [
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:standards/documentation.md"
+    ],
+    "trail": [
+      "doc:docs/feedback-and-audit.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "transitions": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
@@ -17966,7 +19076,21 @@
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md"
     ],
+    "triage": [
+      "doc:knowledge/workflows/incident-response.json"
+    ],
+    "trigger": [
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json"
+    ],
     "troubleshooting": [
+      "doc:docs/feedback-and-audit.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/lessons/README.md",
@@ -17974,6 +19098,7 @@
       "doc:references/workflow-examples.md"
     ],
     "truth": [
+      "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -17987,6 +19112,12 @@
     ],
     "turn": [
       "doc:agents/planner.md"
+    ],
+    "turns": [
+      "doc:docs/continuous-learning.md"
+    ],
+    "two": [
+      "doc:docs/knowledge-health.md"
     ],
     "type": [
       "doc:schemas/memory.schema.json",
@@ -18003,7 +19134,9 @@
     ],
     "types": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
-      "doc:knowledge/architecture/phase-3-knowledge-graph.md"
+      "doc:docs/memory-approval.md",
+      "doc:knowledge/architecture/phase-3-knowledge-graph.md",
+      "doc:knowledge/workflows/README.md"
     ],
     "ui": [
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
@@ -18026,6 +19159,7 @@
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
     "unit": [
+      "doc:docs/continuous-learning.md",
       "doc:templates/specifications/testing-plan.md"
     ],
     "unreleased": [
@@ -18070,7 +19204,9 @@
     ],
     "update": [
       "doc:.github/instructions/skills.instructions.md",
-      "doc:prompts/create-skill.prompt.md"
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:prompts/create-skill.prompt.md",
+      "entity:document:knowledge/workflows/documentation-update.json"
     ],
     "updates": [
       "doc:templates/project-memory/RETROSPECTIVE.md",
@@ -18083,6 +19219,9 @@
       "doc:templates/project-starters/python/RETROSPECTIVE.md",
       "doc:templates/project-starters/web-app/RETROSPECTIVE.md",
       "doc:templates/specifications/retrospective.md"
+    ],
+    "upload": [
+      "doc:docs/feedback-and-audit.md"
     ],
     "usage": [
       "doc:.agent/skills/research/README.md",
@@ -18156,10 +19295,15 @@
     "validate": [
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/workflow.md",
+      "doc:knowledge/workflows/feature-development.json",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:prompts/create-skill.prompt.md",
       "doc:prompts/execute.prompt.md",
       "entity:memory:lesson-validate-generated-files-before-committing-001"
+    ],
+    "validated": [
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/incident-response.json"
     ],
     "validation": [
       "doc:.agent/skills/communication-skill/SKILL.md",
@@ -18174,6 +19318,7 @@
       "doc:WORKFLOW.md",
       "doc:agents/qa.md",
       "doc:config/ai-os.example.json",
+      "doc:knowledge/workflows/documentation-update.json",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:prompts/debug.prompt.md",
@@ -18242,6 +19387,7 @@
       "doc:standards/release-management.md"
     ],
     "views": [
+      "doc:docs/knowledge-health.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "entity:memory:decision-memory-index-source-truth-001"
     ],
@@ -18260,6 +19406,9 @@
     "vscode": [
       "doc:knowledge/vscode/README.md",
       "entity:document:knowledge/vscode/README.md"
+    ],
+    "ways": [
+      "doc:docs/knowledge-health.md"
     ],
     "weak": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
@@ -18304,6 +19453,7 @@
     ],
     "what": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
+      "doc:docs/continuous-learning.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/best-practices/README.md",
@@ -18377,6 +19527,9 @@
     ],
     "with": [
       "doc:.github/workflows/README.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/incident-response.json",
       "doc:prompts/debug.prompt.md",
       "doc:prompts/review.prompt.md",
       "doc:prompts/specify.prompt.md",
@@ -18387,6 +19540,9 @@
       "doc:templates/memory/permanent-memory.md",
       "doc:templates/memory/project-memory.md",
       "doc:templates/memory/session-memory.md"
+    ],
+    "within": [
+      "doc:knowledge/workflows/project-onboarding.json"
     ],
     "without": [
       "doc:.github/instructions/skills.instructions.md",
@@ -18412,6 +19568,7 @@
       "doc:.agent/skills/system/testing/SKILL.md",
       "doc:.kiro/steering/workflow.md",
       "doc:agents/README.md",
+      "doc:docs/continuous-learning.md",
       "doc:memory/sessions/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:standards/README.md",
@@ -18439,6 +19596,9 @@
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
+      "doc:docs/agent-orchestration.md",
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/workflows/README.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:memory/permanent/conventions/README.md",
       "doc:prompts/README.md",
@@ -18454,9 +19614,27 @@
       "doc:.kiro/steering/product.md",
       "doc:README.md",
       "doc:knowledge/ai-workflows/README.md",
+      "doc:knowledge/workflows/README.md",
+      "doc:knowledge/workflows/bug-fix.json",
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:knowledge/workflows/feature-development.json",
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:knowledge/workflows/procedure-creation.json",
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:knowledge/workflows/release-preparation.json",
       "doc:references/codex.md",
       "entity:document:.github/workflows/README.md",
-      "entity:document:knowledge/ai-workflows/README.md"
+      "entity:document:knowledge/ai-workflows/README.md",
+      "entity:document:knowledge/workflows/README.md",
+      "entity:document:knowledge/workflows/bug-fix.json",
+      "entity:document:knowledge/workflows/documentation-update.json",
+      "entity:document:knowledge/workflows/feature-development.json",
+      "entity:document:knowledge/workflows/incident-response.json",
+      "entity:document:knowledge/workflows/knowledge-maintenance.json",
+      "entity:document:knowledge/workflows/procedure-creation.json",
+      "entity:document:knowledge/workflows/project-onboarding.json",
+      "entity:document:knowledge/workflows/release-preparation.json"
     ],
     "working": [
       "doc:CLAUDE.md"
@@ -18470,6 +19648,9 @@
     "writer": [
       "doc:agents/documentation-writer.md",
       "entity:document:agents/documentation-writer.md"
+    ],
+    "writes": [
+      "doc:docs/memory-approval.md"
     ],
     "writing": [
       "doc:.agent/skills/communication-skill/SKILL.md",

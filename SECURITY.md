@@ -25,3 +25,21 @@ Knowledge Graph generation must remain local and repository-based.
 - Include concise metadata and relationships only.
 - Exclude secret-like files and ignored directories from discovery.
 - Treat generated graph files as derived outputs only.
+
+## Continuous Learning and Orchestration Rules (Phase 8)
+
+- No permanent memory is ever written without an explicit, human-granted `permanent-memory`
+  approval. There is no configuration setting that enables auto-approval.
+- No source file or knowledge document is modified automatically by any orchestration command.
+- No Git operation, arbitrary shell execution, or network call originates from
+  `scripts/orchestration/`.
+- Session, approval, memory-suggestion, feedback, and audit data live only in the local,
+  git-ignored `.ai-os/` directory — never in `generated/` (which stays deterministic and
+  machine-independent) and never uploaded anywhere.
+- Free-text fields (task descriptions, feedback comments, memory-suggestion summaries, audit
+  event details) are redacted for secret-like patterns and length-capped before being written to
+  disk, reusing the same `ai_os_service.permissions` redaction used elsewhere.
+- No approval-mutating operation (approve/reject) is exposed through the MCP layer — approvals
+  are CLI-only.
+- The audit trail is hash-chained so tampering with `.ai-os/audit/` is detectable via
+  `python scripts/ai-os.py audit validate`.

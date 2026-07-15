@@ -1,0 +1,22 @@
+{
+  "id": "workflow:release-preparation",
+  "name": "Release Preparation",
+  "description": "Prepare a release candidate for human review — never creates the release itself.",
+  "triggerIntent": "release",
+  "requiredInputs": ["target version", "release scope"],
+  "steps": [
+    {"id": "retrieve-context", "agent": "planner", "action": "search_knowledge", "requiresApproval": false},
+    {"id": "create-plan", "agent": "planner", "action": "create_plan", "requiresApproval": true},
+    {"id": "security-review", "agent": "security-reviewer", "action": "assess_security_risk", "requiresApproval": false},
+    {"id": "deployment-guidance", "agent": "deployment-manager", "action": "prepare_deployment_guidance", "requiresApproval": true},
+    {"id": "validate", "agent": "qa", "action": "run_approved_validation", "requiresApproval": false},
+    {"id": "coordinate", "agent": "project-manager", "action": "coordinate_approval_gates", "requiresApproval": true}
+  ],
+  "completionCriteria": ["security review recorded", "validation step recorded as passed", "deployment guidance approved"],
+  "failureBehavior": "Stop at the failed step and require re-planning before continuing. No automatic retry, no automatic packaging or tagging.",
+  "allowedActions": ["search_knowledge", "create_plan", "assess_security_risk", "prepare_deployment_guidance", "run_approved_validation", "coordinate_approval_gates"],
+  "forbiddenActions": ["git_commit", "git_push", "git_tag", "git_merge", "arbitrary_shell_execution", "network_access", "package_publish", "github_release_creation"],
+  "outputArtifacts": ["session record", "deployment guidance document"],
+  "memorySuggestionPolicy": "Suggest a memory capturing release risks or blockers only after the workflow completes; stays pending until approved.",
+  "auditPolicy": "Record workflow-selected, agent-selected, knowledge-retrieved, approval-requested/approved, and validation-run events. Never records a release-creation event."
+}

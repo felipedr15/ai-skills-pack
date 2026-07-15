@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-14T00:12:54Z",
+  "generatedAt": "2026-07-15T17:05:39Z",
   "generator": "ai-os-dashboard",
   "repository": {
     "available": true,
@@ -11,11 +11,11 @@
       "project-starters": 129,
       "templates": 30,
       "standards": 9,
-      "knowledge": 21,
+      "knowledge": 31,
       "references": 11,
-      "scripts": 72
+      "scripts": 92
     },
-    "totalFiles": 328
+    "totalFiles": 358
   },
   "skills": {
     "available": true,
@@ -199,11 +199,11 @@
   },
   "knowledgeGraph": {
     "available": true,
-    "totalNodes": 331,
-    "totalEdges": 521,
+    "totalNodes": 346,
+    "totalEdges": 570,
     "nodesByType": {
       "concept": 2,
-      "document": 293,
+      "document": 308,
       "memory": 5,
       "platform": 5,
       "project": 10,
@@ -214,19 +214,19 @@
       "belongs_to": 2,
       "contains": 129,
       "generated_from": 14,
-      "references": 170,
-      "related_to": 103,
+      "references": 193,
+      "related_to": 120,
       "supports": 4,
-      "uses": 99
+      "uses": 108
     },
     "unresolvedReferences": 8
   },
   "discovery": {
     "available": true,
-    "documents": 309,
-    "entities": 331,
-    "terms": 899,
-    "relationships": 521,
+    "documents": 324,
+    "entities": 346,
+    "terms": 973,
+    "relationships": 570,
     "warnings": 0,
     "unindexedFiles": 0
   },
@@ -237,36 +237,62 @@
         "generatedAt": null,
         "stale": false,
         "path": "skills.json",
-        "fileTimestamp": "2026-07-14T00:08:46Z"
+        "fileTimestamp": "2026-07-15T16:44:15Z"
       },
       {
         "exists": true,
         "generatedAt": null,
         "stale": false,
         "path": "repository-index.json",
-        "fileTimestamp": "2026-07-14T00:11:25Z"
+        "fileTimestamp": "2026-07-15T17:05:37Z"
       },
       {
         "exists": true,
         "generatedAt": null,
         "stale": false,
         "path": "memory-index.json",
-        "fileTimestamp": "2026-07-14T00:08:46Z"
+        "fileTimestamp": "2026-07-15T16:44:15Z"
       },
       {
         "exists": true,
-        "generatedAt": "2026-07-14T00:08:48Z",
+        "generatedAt": "2026-07-15T17:05:38Z",
         "stale": false,
         "path": "knowledge-graph.json",
-        "fileTimestamp": "2026-07-14T00:08:48Z"
+        "fileTimestamp": "2026-07-15T17:05:38Z"
       },
       {
         "exists": true,
-        "generatedAt": "2026-07-14T00:12:54Z",
+        "generatedAt": "2026-07-15T17:05:39Z",
         "stale": false,
         "path": "discovery-index.json",
-        "fileTimestamp": "2026-07-14T00:12:54Z"
+        "fileTimestamp": "2026-07-15T17:05:39Z"
       }
     ]
+  },
+  "orchestration": {
+    "available": true,
+    "agentCount": 10,
+    "workflowCount": 8,
+    "agentsByRole": {
+      "architecture": 1,
+      "building": 1,
+      "release": 1,
+      "documentation": 1,
+      "planning": 1,
+      "project-management": 1,
+      "quality-assurance": 1,
+      "research": 1,
+      "review": 1,
+      "security": 1
+    },
+    "knowledgeHealthScore": 83,
+    "knowledgeHealthCategories": {
+      "graphIntegrity": 92,
+      "projectDocumentation": 100,
+      "skillDocumentation": 5,
+      "memoryLinkage": 100,
+      "workflowGovernance": 100,
+      "freshness": 100
+    }
   }
 }

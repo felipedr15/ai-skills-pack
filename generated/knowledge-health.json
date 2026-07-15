@@ -1,0 +1,215 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-15T17:05:39Z",
+  "generator": "ai-os-orchestration",
+  "overallScore": 83,
+  "categoryScores": {
+    "graphIntegrity": 92,
+    "projectDocumentation": 100,
+    "skillDocumentation": 5,
+    "memoryLinkage": 100,
+    "workflowGovernance": 100,
+    "freshness": 100
+  },
+  "gaps": [
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "analytical has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "browser has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "build has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "clear-concise-writing has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "creator has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "frontend has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "performance-optimization has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "problem-solving has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "research has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "simplify has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "superpower has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "system has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "testing has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "thinking has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "ui-ux-pro-max has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "using-superpowers has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "vercel-agent has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "vercel-react has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "web-design-guidelines has no validation section"
+    },
+    {
+      "category": "skill-without-validation-section",
+      "severity": "info",
+      "description": "writing has no validation section"
+    }
+  ],
+  "staleItems": [],
+  "unresolvedReferences": [
+    {
+      "source": "README.md",
+      "target": ".agent/skills/build/creator/SKILL.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": ".agent/skills/build/frontend/SKILL.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": ".agent/skills/build/performance-optimization/SKILL.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": ".agent/skills/build/vercel-agent/SKILL.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": ".agent/skills/build/vercel-react/SKILL.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": ".agent/skills/build/web-design-guidelines/SKILL.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "generated/README.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "generated/memory-index.md",
+      "kind": "markdown"
+    }
+  ],
+  "isolatedNodes": [
+    "document:.agent/skills/research/README.md",
+    "document:.agent/skills/thinking/README.md",
+    "document:.github/instructions/markdown.instructions.md",
+    "document:.github/instructions/prompts.instructions.md",
+    "document:.github/instructions/skills.instructions.md",
+    "document:.github/instructions/specifications.instructions.md",
+    "document:.github/instructions/templates.instructions.md",
+    "document:config/ai-os.example.json",
+    "document:examples/mcp/server-config.example.json",
+    "document:generated/repository-index.json",
+    "document:generated/skills.json",
+    "document:knowledge/workflows/bug-fix.json",
+    "document:knowledge/workflows/documentation-update.json",
+    "document:knowledge/workflows/feature-development.json",
+    "document:knowledge/workflows/incident-response.json",
+    "document:knowledge/workflows/knowledge-maintenance.json",
+    "document:knowledge/workflows/procedure-creation.json",
+    "document:knowledge/workflows/project-onboarding.json",
+    "document:knowledge/workflows/release-preparation.json",
+    "document:schemas/memory.schema.json",
+    "document:schemas/project.schema.json",
+    "document:schemas/skill.schema.json",
+    "document:templates/memory/decision-memory.md",
+    "document:templates/memory/lesson-memory.md",
+    "document:templates/memory/permanent-memory.md",
+    "document:templates/memory/project-memory.md",
+    "document:templates/memory/session-memory.md",
+    "document:templates/project-memory/AGENTS.md",
+    "document:templates/project-memory/ARCHITECTURE.md",
+    "document:templates/project-memory/CHANGELOG.md",
+    "document:templates/project-memory/DESIGN.md",
+    "document:templates/project-memory/KNOWN_ISSUES.md",
+    "document:templates/project-memory/REQUIREMENTS.md",
+    "document:templates/project-memory/RETROSPECTIVE.md",
+    "document:templates/project-memory/ROADMAP.md",
+    "document:templates/project-memory/SESSION.md",
+    "document:templates/project-memory/TESTING.md",
+    "document:templates/project-memory/decisions.md",
+    "document:templates/specifications/deployment-plan.md",
+    "document:templates/specifications/design.md",
+    "document:templates/specifications/requirements.md",
+    "document:templates/specifications/retrospective.md",
+    "document:templates/specifications/testing-plan.md",
+    "memory:lesson-powerapps-refresh-001"
+  ],
+  "reviewDueItems": [],
+  "conflicts": [],
+  "recommendations": [
+    "Improve skillDocumentation (score 5/100) — see related gaps for specifics."
+  ],
+  "diagnostics": {
+    "searchQueryLogging": "search queries are not logged (no telemetry); this signal is unavailable by design",
+    "scoreRange": "0-100, higher is healthier; heuristic, not a precise measurement",
+    "includesLiveSignals": false
+  }
+}
