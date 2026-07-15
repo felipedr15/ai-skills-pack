@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-15T18:31:16Z",
+  "generatedAt": "2026-07-15T19:26:56Z",
   "generator": "ai-os-dashboard",
   "repository": {
     "available": true,
@@ -225,7 +225,7 @@
     "available": true,
     "documents": 324,
     "entities": 346,
-    "terms": 973,
+    "terms": 975,
     "relationships": 571,
     "warnings": 0,
     "unindexedFiles": 0
@@ -237,35 +237,35 @@
         "generatedAt": null,
         "stale": false,
         "path": "skills.json",
-        "fileTimestamp": "2026-07-15T18:31:12Z"
+        "fileTimestamp": "2026-07-15T19:26:52Z"
       },
       {
         "exists": true,
         "generatedAt": null,
         "stale": false,
         "path": "repository-index.json",
-        "fileTimestamp": "2026-07-15T18:31:13Z"
+        "fileTimestamp": "2026-07-15T19:26:53Z"
       },
       {
         "exists": true,
         "generatedAt": null,
         "stale": false,
         "path": "memory-index.json",
-        "fileTimestamp": "2026-07-15T18:31:12Z"
+        "fileTimestamp": "2026-07-15T19:26:53Z"
       },
       {
         "exists": true,
-        "generatedAt": "2026-07-15T18:31:14Z",
+        "generatedAt": "2026-07-15T19:26:55Z",
         "stale": false,
         "path": "knowledge-graph.json",
-        "fileTimestamp": "2026-07-15T18:31:14Z"
+        "fileTimestamp": "2026-07-15T19:26:55Z"
       },
       {
         "exists": true,
-        "generatedAt": "2026-07-15T18:31:15Z",
+        "generatedAt": "2026-07-15T19:26:55Z",
         "stale": false,
         "path": "discovery-index.json",
-        "fileTimestamp": "2026-07-15T18:31:15Z"
+        "fileTimestamp": "2026-07-15T19:26:55Z"
       }
     ]
   },

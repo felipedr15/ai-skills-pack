@@ -2,7 +2,7 @@
 
 > Generated from repository source files. This file is not a source of truth.
 
-Generated at: 2026-07-15T18:31:14Z
+Generated at: 2026-07-15T19:26:55Z
 
 Nodes: 346
 Edges: 571

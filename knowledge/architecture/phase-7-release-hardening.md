@@ -6,7 +6,7 @@ Document the release hardening, unified CLI, and one-command bootstrap introduce
 
 ## Version
 
-Single source of truth: `VERSION` file at repository root. Semantic versioning. Current: `0.7.0`.
+Single source of truth: `VERSION` file at repository root. Semantic versioning. Current: `0.8.0`.
 
 ## Unified CLI
 

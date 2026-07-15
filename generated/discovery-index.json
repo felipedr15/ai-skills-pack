@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-15T18:31:15Z",
+  "generatedAt": "2026-07-15T19:26:55Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
     "documents": 324,
     "entities": 346,
-    "terms": 973,
+    "terms": 975,
     "relationships": 571
   },
   "documents": [
@@ -978,6 +978,7 @@
       "headings": [
         "Changelog",
         "Unreleased",
+        "[0.8.0] - 2026-07-15",
         "Added",
         "Changed",
         "Fixed",
@@ -9061,11 +9062,18 @@
       "entity:memory:lesson-validate-generated-files-before-committing-001",
       "entity:memory:session-memory-engine-example-001"
     ],
+    "07": [
+      "doc:CHANGELOG.md"
+    ],
     "15": [
+      "doc:CHANGELOG.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md"
     ],
     "17": [
       "doc:examples/mcp/README.md"
+    ],
+    "2026": [
+      "doc:CHANGELOG.md"
     ],
     "29": [
       "doc:examples/mcp/README.md"

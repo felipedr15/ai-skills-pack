@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.7.0",
-  "generatedAt": "2026-07-15T18:31:16Z",
+  "version": "0.8.0",
+  "generatedAt": "2026-07-15T19:26:56Z",
   "generator": "ai-os-release",
   "repository": {
     "fileCount": 359
@@ -25,7 +25,7 @@
       "path": "generated/repository-index.json",
       "exists": true,
       "size": 73551,
-      "checksum": "85a9bf7323306223a78be90e3f1ee4675480cbbf4117ccc9416ac31c5879da55",
+      "checksum": "d01d240860dd0a9c05cc96abf88f698cd3bdf1c10a4e3dbf19512051a801df0e",
       "schemaVersion": "1.0.0",
       "generator": null
     },
@@ -53,7 +53,7 @@
       "path": "generated/knowledge-graph.json",
       "exists": true,
       "size": 219820,
-      "checksum": "548a978aba365ead3b4ceb581119f60ae6249d57a7519ca0f49d771bf7d7e37e",
+      "checksum": "99b769fdb1ff1283d3059f154230afe64e4bc690db2f8867264872db573d16da",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-knowledge-graph"
     },
@@ -61,13 +61,13 @@
       "path": "generated/knowledge-graph.md",
       "exists": true,
       "size": 1111,
-      "checksum": "a3e9bc6fd912fe2fa219e081e40fe93895033b028f5842164dfce6cd62d24fbf"
+      "checksum": "0ec9cd7d6ff2185bcb472f9cc688e6435741cf11233243761e29f3fc175194a0"
     },
     {
       "path": "generated/discovery-index.json",
       "exists": true,
-      "size": 785407,
-      "checksum": "add3937b08eb423cd7bb57a5f0043ece3a67682ed3742d73b0f73923590a20dc",
+      "size": 785555,
+      "checksum": "ac409d32f5c672e0fd6d244fa3a98c3fadb7a6e3f6834889af5d792b2554d6e4",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-semantic-discovery"
     },
@@ -75,13 +75,13 @@
       "path": "generated/discovery-index.md",
       "exists": true,
       "size": 350,
-      "checksum": "3f770ea57c4bdb063393e5809a1d2edb6f0c3ec49db9dbedb109c2b0813d0bbd"
+      "checksum": "90e6b128f056f91ef66a768506750f87ffeaf5a69d7fba975d1876239a5779c4"
     },
     {
       "path": "generated/agent-registry.json",
       "exists": true,
       "size": 13553,
-      "checksum": "40570ef0e40aa90c2d6c8eb577d2baeb8b9aad1b51432fc18a6950c33e84cc54",
+      "checksum": "d3a66510d69b12d47ed2dd97fa61c2e6f8ef7a53f8908d945b2ee195f70f7c20",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-orchestration"
     },
@@ -89,13 +89,13 @@
       "path": "generated/agent-registry.md",
       "exists": true,
       "size": 4375,
-      "checksum": "925a180881601008178e193064f503c0ab7dc6d01c79e1bcea8cdd9f64490a9c"
+      "checksum": "f18b47ef7d03bb8e8a234c7a303dc866dae62594178aa8541b6c868e5ff42fe4"
     },
     {
       "path": "generated/workflow-registry.json",
       "exists": true,
       "size": 23378,
-      "checksum": "4bc56d207c2b23af53c7e1ee23cd0511a1fba4f1bea1f56bee747c8187d991cc",
+      "checksum": "27a99549c716a5261a6eca329e398758e96438385e5412640f3c44a14dac8165",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-orchestration"
     },
@@ -103,13 +103,13 @@
       "path": "generated/workflow-registry.md",
       "exists": true,
       "size": 6035,
-      "checksum": "fe0eb6f08cbb409da67df80ea89194d149d66e140dda68038da156d440fcd505"
+      "checksum": "0301486563a805155c9d11b16add3defb4a8111d9525415339c16b4736f75597"
     },
     {
       "path": "generated/knowledge-health.json",
       "exists": true,
       "size": 7289,
-      "checksum": "ac1ed1eeeedfc5d6e5303cd90d6395915cff34833545699289523831fb28e619",
+      "checksum": "6441ef64c292257c03440fad9bbf471af1f0dee1a9a8b106049eee52daed4be6",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-orchestration"
     },
@@ -117,19 +117,19 @@
       "path": "generated/knowledge-health.md",
       "exists": true,
       "size": 2213,
-      "checksum": "194d023cd06f8445c875e57afd9ac6a5d45899eebcd6f4296fa14232e13f60e5"
+      "checksum": "2c5ad633d1aa28ee20e7fc0e57768f82b5995fe2e8ecf48f789f805e5f7e975f"
     },
     {
       "path": "generated/dashboard.html",
       "exists": true,
       "size": 63162,
-      "checksum": "252f2eb48466fc35cff0296031e3b33518fb5f153c413482771d7de8216a6d6c"
+      "checksum": "7028104c1624ef0b07423f338db16f48f917628f72262b80f0aecdb543503c1d"
     },
     {
       "path": "generated/dashboard-data.json",
       "exists": true,
       "size": 6809,
-      "checksum": "8131b361b7abf6cadcd9848469490b998c31afc1faf741b09a116193f6622346",
+      "checksum": "f338180869d84ef5d34f62baca9c52329b1dcbd860a63fbcd34290a1aad0b63c",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-dashboard"
     }

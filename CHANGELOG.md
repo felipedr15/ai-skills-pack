@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [0.8.0] - 2026-07-15
+
 ### Added
 - AI OS core architecture, agent and prompt registries, specification and memory templates, project starters, standards, knowledge hub, platform references, validation scripts, and GitHub validation workflow.
 - Phase 1 deterministic skill-registry generation, repository indexing, unified continuous validation, JSON schemas, and unit tests.
@@ -27,6 +29,8 @@
 
 ### Fixed
 - Added useful content to the previously empty analytical skill.
+- Added `.gitattributes` `eol=lf` rules for `.ps1`/`.html`/`.sh` and the dashboard staleness check now ignores per-artifact filesystem timestamps, so generated artifacts (repository index, knowledge graph, discovery index, dashboard) validate consistently across platforms instead of only on the machine that generated them.
+- The knowledge-graph and semantic-discovery generators now scope file discovery to git-tracked files (falling back to a deterministic allowlist when git is unavailable) instead of walking the entire repository root, so arbitrary untracked local directories are never indexed regardless of name.
 
 ### Deprecated
 None.
