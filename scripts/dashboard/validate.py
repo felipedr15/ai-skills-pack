@@ -84,10 +84,26 @@ def validate_dashboard_html(path: Path) -> tuple[list[str], list[str]]:
     return failures, warnings
 
 
+def _strip_volatile_fields(data: dict) -> dict:
+    """Return a copy of dashboard data with non-reproducible fields blanked.
+
+    generatedAt and per-artifact fileTimestamp reflect wall-clock/filesystem
+    mtime, which git does not preserve across checkouts, so they must be
+    excluded from staleness comparisons or the check can never pass on a
+    fresh clone.
+    """
+    result = dict(data)
+    result["generatedAt"] = "<ignored>"
+    artifacts = result.get("artifacts")
+    if isinstance(artifacts, dict) and isinstance(artifacts.get("artifacts"), list):
+        result["artifacts"] = dict(artifacts)
+        result["artifacts"]["artifacts"] = [
+            {**item, "fileTimestamp": "<ignored>"} if isinstance(item, dict) else item
+            for item in artifacts["artifacts"]
+        ]
+    return result
+
+
 def compare_data_ignoring_generated_at(current: dict, saved: dict) -> bool:
-    """Compare two dashboard data objects ignoring generatedAt."""
-    left = dict(current)
-    right = dict(saved)
-    left["generatedAt"] = "<ignored>"
-    right["generatedAt"] = "<ignored>"
-    return left == right
+    """Compare two dashboard data objects ignoring volatile timestamp fields."""
+    return _strip_volatile_fields(current) == _strip_volatile_fields(saved)

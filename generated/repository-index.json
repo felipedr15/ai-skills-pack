@@ -1287,8 +1287,8 @@
     {
       "path": "scripts/dashboard/validate.py",
       "category": "scripts",
-      "size": 3224,
-      "sha256": "fd56074bfc5771ffd2e382ba60ff2df5ef4e7da386930f9be33d2ffae51bae7b"
+      "size": 3981,
+      "sha256": "0f619273f116472c979b21f2f57dd5dab5e470edbce64acd577473910170d8da"
     },
     {
       "path": "scripts/discover.py",
