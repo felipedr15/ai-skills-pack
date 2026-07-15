@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-14T00:08:48Z",
+  "generatedAt": "2026-07-14T23:11:16Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 331,
-    "edges": 521,
+    "nodes": 347,
+    "edges": 570,
     "nodesByType": {
       "concept": 2,
-      "document": 293,
+      "document": 309,
       "memory": 5,
       "platform": 5,
       "project": 10,
@@ -18,10 +18,10 @@
       "belongs_to": 2,
       "contains": 129,
       "generated_from": 14,
-      "references": 170,
-      "related_to": 103,
+      "references": 193,
+      "related_to": 120,
       "supports": 4,
-      "uses": 99
+      "uses": 108
     }
   },
   "nodes": [
@@ -359,6 +359,15 @@
       }
     },
     {
+      "id": "document:.vscode/settings.json",
+      "type": "document",
+      "name": "Settings",
+      "sourcePath": ".vscode/settings.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
       "id": "document:AGENTS.md",
       "type": "document",
       "name": "Agents",
@@ -566,6 +575,51 @@
       }
     },
     {
+      "id": "document:docs/agent-orchestration.md",
+      "type": "document",
+      "name": "Agent Orchestration",
+      "sourcePath": "docs/agent-orchestration.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/continuous-learning.md",
+      "type": "document",
+      "name": "Continuous Learning",
+      "sourcePath": "docs/continuous-learning.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/feedback-and-audit.md",
+      "type": "document",
+      "name": "Feedback And Audit",
+      "sourcePath": "docs/feedback-and-audit.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/knowledge-health.md",
+      "type": "document",
+      "name": "Knowledge Health",
+      "sourcePath": "docs/knowledge-health.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/memory-approval.md",
+      "type": "document",
+      "name": "Memory Approval",
+      "sourcePath": "docs/memory-approval.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "document:examples/mcp/README.md",
       "type": "document",
       "name": "Readme",
@@ -678,6 +732,15 @@
       "type": "document",
       "name": "Phase 7 Release Hardening",
       "sourcePath": "knowledge/architecture/phase-7-release-hardening.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "type": "document",
+      "name": "Phase 8 Learning Orchestration",
+      "sourcePath": "knowledge/architecture/phase-8-learning-orchestration.md",
       "metadata": {
         "extension": ".md"
       }
@@ -797,6 +860,87 @@
       "sourcePath": "knowledge/vscode/README.md",
       "metadata": {
         "extension": ".md"
+      }
+    },
+    {
+      "id": "document:knowledge/workflows/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": "knowledge/workflows/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:knowledge/workflows/bug-fix.json",
+      "type": "document",
+      "name": "Bug Fix",
+      "sourcePath": "knowledge/workflows/bug-fix.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "document:knowledge/workflows/documentation-update.json",
+      "type": "document",
+      "name": "Documentation Update",
+      "sourcePath": "knowledge/workflows/documentation-update.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "document:knowledge/workflows/feature-development.json",
+      "type": "document",
+      "name": "Feature Development",
+      "sourcePath": "knowledge/workflows/feature-development.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "document:knowledge/workflows/incident-response.json",
+      "type": "document",
+      "name": "Incident Response",
+      "sourcePath": "knowledge/workflows/incident-response.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "document:knowledge/workflows/knowledge-maintenance.json",
+      "type": "document",
+      "name": "Knowledge Maintenance",
+      "sourcePath": "knowledge/workflows/knowledge-maintenance.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "document:knowledge/workflows/procedure-creation.json",
+      "type": "document",
+      "name": "Procedure Creation",
+      "sourcePath": "knowledge/workflows/procedure-creation.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "document:knowledge/workflows/project-onboarding.json",
+      "type": "document",
+      "name": "Project Onboarding",
+      "sourcePath": "knowledge/workflows/project-onboarding.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
+      "id": "document:knowledge/workflows/release-preparation.json",
+      "type": "document",
+      "name": "Release Preparation",
+      "sourcePath": "knowledge/workflows/release-preparation.json",
+      "metadata": {
+        "extension": ".json"
       }
     },
     {
@@ -4620,6 +4764,15 @@
       }
     },
     {
+      "id": "edge:01c1416308e28130",
+      "type": "references",
+      "from": "document:ARCHITECTURE.md",
+      "to": "document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:bf683130432cbed0",
       "type": "references",
       "from": "document:README.md",
@@ -4692,10 +4845,64 @@
       }
     },
     {
+      "id": "edge:745c89fcbd62d2eb",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/agent-orchestration.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:41d740e78746687a",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/continuous-learning.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:047c3fb669e81357",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/feedback-and-audit.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:de0f70b24fd6c71f",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/knowledge-health.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:f1e9579869424832",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/memory-approval.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:6f00b10322cded96",
       "type": "references",
       "from": "document:README.md",
       "to": "document:generated/memory-index.json",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:8e3ed60d53a64d76",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:knowledge/architecture/phase-8-learning-orchestration.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -4858,6 +5065,132 @@
       "type": "references",
       "from": "document:agents/README.md",
       "to": "document:agents.json",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:84263579c5575de3",
+      "type": "references",
+      "from": "document:docs/agent-orchestration.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:f3fdbaa4023aa763",
+      "type": "references",
+      "from": "document:docs/agent-orchestration.md",
+      "to": "document:knowledge/architecture/phase-4-semantic-discovery.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:29c12a6ff1ded8d5",
+      "type": "references",
+      "from": "document:docs/agent-orchestration.md",
+      "to": "document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:e94fcc6fcffdb4b2",
+      "type": "references",
+      "from": "document:docs/agent-orchestration.md",
+      "to": "document:knowledge/workflows/README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:22cc1a2afc2684e3",
+      "type": "references",
+      "from": "document:docs/continuous-learning.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:a9851527a9592ee4",
+      "type": "references",
+      "from": "document:docs/continuous-learning.md",
+      "to": "document:docs/agent-orchestration.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:2b563be510bcd4a2",
+      "type": "references",
+      "from": "document:docs/continuous-learning.md",
+      "to": "document:docs/feedback-and-audit.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:2427a992522d83e6",
+      "type": "references",
+      "from": "document:docs/continuous-learning.md",
+      "to": "document:docs/knowledge-health.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:b62f5f9121467883",
+      "type": "references",
+      "from": "document:docs/continuous-learning.md",
+      "to": "document:docs/memory-approval.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:7cf9538d61a71ff5",
+      "type": "references",
+      "from": "document:docs/continuous-learning.md",
+      "to": "document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:611bfe7920611ea1",
+      "type": "references",
+      "from": "document:docs/feedback-and-audit.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:98631b38f4df900a",
+      "type": "references",
+      "from": "document:docs/feedback-and-audit.md",
+      "to": "document:docs/knowledge-health.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:fd47a61e750ba019",
+      "type": "references",
+      "from": "document:docs/knowledge-health.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:03050f142da5ecfe",
+      "type": "references",
+      "from": "document:docs/memory-approval.md",
+      "to": "document:README.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5079,6 +5412,15 @@
       }
     },
     {
+      "id": "edge:c3f9f4f716185384",
+      "type": "references",
+      "from": "document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:40262f8233604605",
       "type": "references",
       "from": "document:knowledge/best-practices/README.md",
@@ -5191,6 +5533,15 @@
       "type": "references",
       "from": "document:knowledge/vscode/README.md",
       "to": "document:knowledge/README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:dc6805ac3dfb0867",
+      "type": "references",
+      "from": "document:knowledge/workflows/README.md",
+      "to": "document:README.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -6015,6 +6366,15 @@
       }
     },
     {
+      "id": "edge:41473226c6080937",
+      "type": "related_to",
+      "from": "document:ARCHITECTURE.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:33053007513a2cde",
       "type": "related_to",
       "from": "document:CHANGELOG.md",
@@ -6046,6 +6406,15 @@
       "type": "related_to",
       "from": "document:CONTRIBUTING.md",
       "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:ed46a3a4552803b6",
+      "type": "related_to",
+      "from": "document:CONTRIBUTING.md",
+      "to": "concept:workflow",
       "metadata": {
         "source": "document_text"
       }
@@ -6204,10 +6573,109 @@
       }
     },
     {
+      "id": "edge:39fb84485fcc63ef",
+      "type": "related_to",
+      "from": "document:docs/agent-orchestration.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:48ee41bb8e71ed22",
+      "type": "related_to",
+      "from": "document:docs/agent-orchestration.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:35a86243ab272a00",
+      "type": "related_to",
+      "from": "document:docs/continuous-learning.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:37725b8757f7cf36",
+      "type": "related_to",
+      "from": "document:docs/continuous-learning.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:24a18744cd0f00d5",
+      "type": "related_to",
+      "from": "document:docs/feedback-and-audit.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:e54ab94b9e76d2a2",
+      "type": "related_to",
+      "from": "document:docs/feedback-and-audit.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:9d48a5d52390ab24",
+      "type": "related_to",
+      "from": "document:docs/knowledge-health.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:728478ada14d3101",
+      "type": "related_to",
+      "from": "document:docs/knowledge-health.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:c24d678fda4192b1",
+      "type": "related_to",
+      "from": "document:docs/memory-approval.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:25b275975fff19e1",
+      "type": "related_to",
+      "from": "document:docs/memory-approval.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:b039583d96ea95bc",
       "type": "related_to",
       "from": "document:examples/mcp/README.md",
       "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:6168544d8569d92f",
+      "type": "related_to",
+      "from": "document:examples/mcp/README.md",
+      "to": "concept:workflow",
       "metadata": {
         "source": "document_text"
       }
@@ -6235,6 +6703,33 @@
       "type": "related_to",
       "from": "document:knowledge/architecture/phase-6-mcp-integration.md",
       "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:fc24e27ead8e09d1",
+      "type": "related_to",
+      "from": "document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:196bd5395587694c",
+      "type": "related_to",
+      "from": "document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:11cab11d310f39dd",
+      "type": "related_to",
+      "from": "document:knowledge/workflows/README.md",
+      "to": "concept:workflow",
       "metadata": {
         "source": "document_text"
       }
@@ -6424,6 +6919,15 @@
       "type": "related_to",
       "from": "document:scripts/README.md",
       "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:e5e3a88b708497f3",
+      "type": "related_to",
+      "from": "document:scripts/README.md",
+      "to": "concept:workflow",
       "metadata": {
         "source": "document_text"
       }
@@ -7131,6 +7635,15 @@
       }
     },
     {
+      "id": "edge:f4864a2e7a3d1aee",
+      "type": "uses",
+      "from": "document:SECURITY.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:49f45c966db7169b",
       "type": "uses",
       "from": "document:WORKFLOW.md",
@@ -7152,6 +7665,60 @@
       "id": "edge:649a83a21118f7e3",
       "type": "uses",
       "from": "document:agents/reviewer.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:294ca0e30c7085a3",
+      "type": "uses",
+      "from": "document:docs/agent-orchestration.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:a67571ed0fbdffb5",
+      "type": "uses",
+      "from": "document:docs/agent-orchestration.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:0f1cfa22695abad3",
+      "type": "uses",
+      "from": "document:docs/continuous-learning.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:77febbf781ba0789",
+      "type": "uses",
+      "from": "document:docs/feedback-and-audit.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:0097df72457dce39",
+      "type": "uses",
+      "from": "document:docs/knowledge-health.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:30025d39989ab54b",
+      "type": "uses",
+      "from": "document:docs/memory-approval.md",
       "to": "tool:git",
       "metadata": {
         "source": "document_text"
@@ -7278,6 +7845,24 @@
       "id": "edge:dc06780203888fd9",
       "type": "uses",
       "from": "document:knowledge/architecture/phase-7-release-hardening.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:93f4aa87327cc7ad",
+      "type": "uses",
+      "from": "document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:b2307d2ec48628e6",
+      "type": "uses",
+      "from": "document:knowledge/architecture/phase-8-learning-orchestration.md",
       "to": "tool:mcp",
       "metadata": {
         "source": "document_text"

@@ -254,6 +254,7 @@
 - `knowledge/architecture/phase-5-interactive-dashboard.md`
 - `knowledge/architecture/phase-6-mcp-integration.md`
 - `knowledge/architecture/phase-7-release-hardening.md`
+- `knowledge/architecture/phase-8-learning-orchestration.md`
 - `knowledge/best-practices/README.md`
 - `knowledge/documentation/README.md`
 - `knowledge/future-ideas/README.md`
@@ -267,6 +268,15 @@
 - `knowledge/security/README.md`
 - `knowledge/sharepoint/README.md`
 - `knowledge/vscode/README.md`
+- `knowledge/workflows/README.md`
+- `knowledge/workflows/bug-fix.json`
+- `knowledge/workflows/documentation-update.json`
+- `knowledge/workflows/feature-development.json`
+- `knowledge/workflows/incident-response.json`
+- `knowledge/workflows/knowledge-maintenance.json`
+- `knowledge/workflows/procedure-creation.json`
+- `knowledge/workflows/project-onboarding.json`
+- `knowledge/workflows/release-preparation.json`
 
 ## References
 
@@ -307,9 +317,12 @@
 - `scripts/discovery-build.py`
 - `scripts/discovery-check.py`
 - `scripts/discovery-validate.py`
+- `scripts/generate-agent-registry.py`
 - `scripts/generate-knowledge-graph.py`
+- `scripts/generate-knowledge-health.py`
 - `scripts/generate-memory-index.py`
 - `scripts/generate-skill-registry.py`
+- `scripts/generate-workflow-registry.py`
 - `scripts/index-repository.py`
 - `scripts/knowledge-build.py`
 - `scripts/knowledge-check.py`
@@ -334,6 +347,23 @@
 - `scripts/memory-promote.py`
 - `scripts/memory-search.py`
 - `scripts/memory_utils.py`
+- `scripts/orchestration-validate.py`
+- `scripts/orchestration/__init__.py`
+- `scripts/orchestration/approvals.py`
+- `scripts/orchestration/audit.py`
+- `scripts/orchestration/feedback.py`
+- `scripts/orchestration/freshness.py`
+- `scripts/orchestration/knowledge_gaps.py`
+- `scripts/orchestration/memory_suggestions.py`
+- `scripts/orchestration/models.py`
+- `scripts/orchestration/planner.py`
+- `scripts/orchestration/registry.py`
+- `scripts/orchestration/render.py`
+- `scripts/orchestration/router.py`
+- `scripts/orchestration/session.py`
+- `scripts/orchestration/utils.py`
+- `scripts/orchestration/validate.py`
+- `scripts/orchestration/workflow.py`
 - `scripts/release/__init__.py`
 - `scripts/release/config.py`
 - `scripts/release/manifest.py`

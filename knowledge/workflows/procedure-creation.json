@@ -1,0 +1,22 @@
+{
+  "id": "workflow:procedure-creation",
+  "name": "Procedure Creation",
+  "description": "Draft a new reusable procedure or runbook from research and existing conventions.",
+  "triggerIntent": "procedure-creation",
+  "requiredInputs": ["procedure topic", "intended audience"],
+  "steps": [
+    {"id": "retrieve-context", "agent": "researcher", "action": "search_knowledge", "requiresApproval": false},
+    {"id": "create-plan", "agent": "planner", "action": "create_plan", "requiresApproval": true},
+    {"id": "draft-procedure", "agent": "documentation-writer", "action": "update_documentation", "requiresApproval": true},
+    {"id": "review", "agent": "reviewer", "action": "review_diff", "requiresApproval": false},
+    {"id": "validate", "agent": "qa", "action": "run_approved_validation", "requiresApproval": false},
+    {"id": "suggest-memory", "agent": "documentation-writer", "action": "create_memory_suggestion", "requiresApproval": true}
+  ],
+  "completionCriteria": ["procedure drafted and reviewed", "validation step recorded as passed"],
+  "failureBehavior": "Stop at the failed step, record a failure entry on the session, and require re-planning before continuing. No automatic retry.",
+  "allowedActions": ["search_knowledge", "create_plan", "update_documentation", "review_diff", "run_approved_validation", "create_memory_suggestion"],
+  "forbiddenActions": ["git_commit", "git_push", "git_merge", "arbitrary_shell_execution", "network_access"],
+  "outputArtifacts": ["session record", "procedure document (draft)", "memory suggestion (pending)"],
+  "memorySuggestionPolicy": "Suggest a memory referencing the new procedure once validation passes; stays pending until approved.",
+  "auditPolicy": "Record workflow-selected, agent-selected, knowledge-retrieved, approval-requested/approved, validation-run, and memory-suggested events."
+}

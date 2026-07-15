@@ -47,6 +47,22 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             self._handle_repository(params)
         elif path == "/api/graph/visualize":
             self._handle_graph_visualize(params)
+        elif path == "/api/orchestration/agents":
+            self._handle_orchestration_agents(params)
+        elif path == "/api/orchestration/workflows":
+            self._handle_orchestration_workflows(params)
+        elif path == "/api/orchestration/sessions":
+            self._handle_orchestration_sessions(params)
+        elif path == "/api/orchestration/approvals":
+            self._handle_orchestration_approvals(params)
+        elif path == "/api/orchestration/memory-suggestions":
+            self._handle_orchestration_memory_suggestions(params)
+        elif path == "/api/orchestration/feedback":
+            self._handle_orchestration_feedback(params)
+        elif path == "/api/orchestration/audit-summary":
+            self._handle_orchestration_audit_summary(params)
+        elif path == "/api/orchestration/knowledge-health":
+            self._handle_orchestration_knowledge_health(params)
         elif path == "/" or path == "/index.html":
             self._serve_dashboard_html()
         else:
@@ -559,6 +575,70 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             "depth": depth,
             "maxNodes": self.MAX_VIS_NODES,
         })
+
+    # ── Orchestration API (Phase 8) ──
+    # Live local runtime state (.ai-os/) — read-only, never baked into the
+    # committed generated/dashboard-data.json snapshot.
+
+    def _ensure_orchestration_importable(self):
+        import sys as _sys
+        scripts_dir = str(self.root / "scripts")
+        if scripts_dir not in _sys.path:
+            _sys.path.insert(0, scripts_dir)
+
+    def _handle_orchestration_agents(self, params: dict):
+        data = _load_json(self.root / "generated" / "agent-registry.json")
+        if data is None:
+            self._send_json({"available": False, "agents": [], "total": 0})
+            return
+        self._send_json({"available": True, "agents": data.get("agents", []), "total": len(data.get("agents", []))})
+
+    def _handle_orchestration_workflows(self, params: dict):
+        data = _load_json(self.root / "generated" / "workflow-registry.json")
+        if data is None:
+            self._send_json({"available": False, "workflows": [], "total": 0})
+            return
+        self._send_json({"available": True, "workflows": data.get("workflows", []), "total": len(data.get("workflows", []))})
+
+    def _handle_orchestration_sessions(self, params: dict):
+        self._ensure_orchestration_importable()
+        from orchestration.session import list_sessions
+        status = params.get("status", [""])[0] or None
+        sessions = list_sessions(self.root, status=status)
+        self._send_json({"available": True, "sessions": sessions, "total": len(sessions)})
+
+    def _handle_orchestration_approvals(self, params: dict):
+        self._ensure_orchestration_importable()
+        from orchestration.approvals import list_approvals
+        status = params.get("status", ["pending"])[0] or None
+        approvals = list_approvals(self.root, status=status)
+        self._send_json({"available": True, "approvals": approvals, "total": len(approvals)})
+
+    def _handle_orchestration_memory_suggestions(self, params: dict):
+        self._ensure_orchestration_importable()
+        from orchestration.memory_suggestions import list_suggestions
+        status = params.get("status", [""])[0] or None
+        suggestions = list_suggestions(self.root, status=status)
+        self._send_json({"available": True, "suggestions": suggestions, "total": len(suggestions)})
+
+    def _handle_orchestration_feedback(self, params: dict):
+        self._ensure_orchestration_importable()
+        from orchestration.feedback import feedback_stats, list_feedback
+        status = params.get("status", [""])[0] or None
+        entries = list_feedback(self.root, status=status)
+        self._send_json({"available": True, "feedback": entries, "total": len(entries), "stats": feedback_stats(self.root)})
+
+    def _handle_orchestration_audit_summary(self, params: dict):
+        self._ensure_orchestration_importable()
+        from orchestration.audit import list_events, summary
+        result = summary(self.root)
+        result["recentEvents"] = list_events(self.root, limit=10)
+        self._send_json(result)
+
+    def _handle_orchestration_knowledge_health(self, params: dict):
+        self._ensure_orchestration_importable()
+        from orchestration.knowledge_gaps import build_knowledge_health
+        self._send_json(build_knowledge_health(self.root, include_live=True))
 
     def translate_path(self, path):
         """Serve files from the generated/ directory."""

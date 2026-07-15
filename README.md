@@ -130,6 +130,35 @@ python scripts/knowledge-check.py
 
 Extend entity and relationship coverage by updating extraction and graph modules in `scripts/knowledge_graph/` and adding tests in `tests/test_knowledge_graph.py`.
 
+## Continuous Learning and Agent Orchestration (Phase 8)
+
+A planning and tracking layer on top of Phases 1-7: classify a task, select a workflow and agent
+roles, retrieve relevant knowledge, track a local work session, and produce memory/knowledge-gap/
+feedback suggestions that require explicit human approval before anything becomes permanent.
+Nothing here executes work, touches Git, or calls a network service.
+
+```text
+python scripts/ai-os.py classify "Fix the login bug"
+python scripts/ai-os.py plan "Fix the login bug" --explain
+python scripts/ai-os.py session start "Fix the login bug"
+python scripts/ai-os.py session validate <id> --name unit-tests --status pass
+python scripts/ai-os.py session complete <id>
+python scripts/ai-os.py approval list --status pending
+python scripts/ai-os.py approval approve <id>
+python scripts/ai-os.py memory-suggestions list --status pending
+python scripts/ai-os.py memory-suggestions approve <id>
+python scripts/ai-os.py knowledge-health
+python scripts/ai-os.py knowledge-gaps
+python scripts/ai-os.py review-due
+python scripts/ai-os.py feedback add --type outdated --target-type document --target-id x.md
+python scripts/ai-os.py audit validate
+```
+
+See [Continuous Learning](docs/continuous-learning.md), [Agent Orchestration](docs/agent-orchestration.md),
+[Memory Approval](docs/memory-approval.md), [Knowledge Health](docs/knowledge-health.md),
+[Feedback and Audit](docs/feedback-and-audit.md), and
+[Phase 8 Architecture](knowledge/architecture/phase-8-learning-orchestration.md).
+
 ## Quick Start
 
 1. Clone or open AI OS.

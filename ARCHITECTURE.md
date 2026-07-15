@@ -102,6 +102,21 @@ Memory promotion preserves traceability with related IDs. Archived records remai
 
 Generated memory indexes are deterministic outputs and not source-of-truth data.
 
+## Continuous Learning and Agent Orchestration Architecture (Phase 8)
+
+A planning/tracking layer, not an execution engine. `scripts/orchestration/` classifies a task
+deterministically, selects a workflow (`knowledge/workflows/*.json` → `generated/workflow-registry.json`)
+and agent roles (`agents/*.md` → `generated/agent-registry.json`), retrieves knowledge by reusing
+the existing semantic discovery engine, and tracks a local session
+(`.ai-os/sessions/`) through an explicit status-transition graph.
+
+Storage is split by nature: deterministic registries and the knowledge-health report live in
+`generated/` (committed, `--check`-able); sessions, approvals, memory suggestions, feedback, and
+the hash-chained audit trail live in `.ai-os/` (local, git-ignored). Promoting a memory suggestion
+into `memory/` is the only write path, and it is blocked until a human explicitly approves it —
+see [Phase 8 Architecture](knowledge/architecture/phase-8-learning-orchestration.md) for the full
+design.
+
 ## Models
 Skills are versioned Markdown instructions with metadata and stable IDs. Agents define bounded responsibilities and handoffs. Prompts are reusable entry points. Specifications express intent and traceability. Project memory separates durable decisions from temporary session context.
 

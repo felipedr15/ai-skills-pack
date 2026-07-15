@@ -133,6 +133,66 @@ class McpAdapter:
     def _tool_get_dashboard_status(self, args: dict) -> dict:
         return self.service.get_dashboard_status()
 
+    # ── Phase 8: Continuous Learning and Agent Orchestration ──
+    # Read-only. No approval-mutating tool is registered here by design.
+
+    def _tool_plan_task(self, args: dict) -> dict:
+        return self.service.plan_task(
+            task=args.get("task", ""),
+            project=args.get("project", ""),
+            workflow=args.get("workflow", ""),
+            limit=args.get("limit", 20),
+            no_memory=args.get("no_memory", False),
+            no_history=args.get("no_history", False),
+        )
+
+    def _tool_classify_task(self, args: dict) -> dict:
+        return self.service.classify_task(
+            task=args.get("task", ""),
+            project=args.get("project", ""),
+            workflow=args.get("workflow", ""),
+        )
+
+    def _tool_list_workflows(self, args: dict) -> dict:
+        return self.service.list_workflows()
+
+    def _tool_get_workflow(self, args: dict) -> dict:
+        return self.service.get_workflow(workflow_id=args.get("workflow_id", ""))
+
+    def _tool_list_agents(self, args: dict) -> dict:
+        return self.service.list_agents()
+
+    def _tool_get_agent(self, args: dict) -> dict:
+        return self.service.get_agent(agent_id=args.get("agent_id", ""))
+
+    def _tool_list_sessions(self, args: dict) -> dict:
+        return self.service.list_sessions(
+            status=args.get("status", ""), limit=args.get("limit", 20), cursor=args.get("cursor", 0))
+
+    def _tool_get_session(self, args: dict) -> dict:
+        return self.service.get_session(session_id=args.get("session_id", ""))
+
+    def _tool_list_pending_approvals(self, args: dict) -> dict:
+        return self.service.list_pending_approvals(limit=args.get("limit", 20), cursor=args.get("cursor", 0))
+
+    def _tool_list_memory_suggestions(self, args: dict) -> dict:
+        return self.service.list_memory_suggestions(
+            status=args.get("status", ""), limit=args.get("limit", 20), cursor=args.get("cursor", 0))
+
+    def _tool_get_knowledge_health(self, args: dict) -> dict:
+        return self.service.get_knowledge_health()
+
+    def _tool_list_review_due(self, args: dict) -> dict:
+        return self.service.list_review_due(
+            days=args.get("days", 30), limit=args.get("limit", 20), cursor=args.get("cursor", 0))
+
+    def _tool_list_feedback(self, args: dict) -> dict:
+        return self.service.list_feedback(
+            status=args.get("status", ""), limit=args.get("limit", 20), cursor=args.get("cursor", 0))
+
+    def _tool_get_audit_summary(self, args: dict) -> dict:
+        return self.service.get_audit_summary()
+
     # ── Resource Handlers ──
 
     def _resource_handlers(self) -> dict:
@@ -146,6 +206,14 @@ class McpAdapter:
             "ai-os://discovery": self._res_discovery,
             "ai-os://dashboard": self._res_dashboard,
             "ai-os://validation": self._res_validation,
+            "ai-os://agents": self._res_agents,
+            "ai-os://workflows": self._res_workflows,
+            "ai-os://knowledge-health": self._res_knowledge_health,
+            "ai-os://sessions": self._res_sessions,
+            "ai-os://approvals": self._res_approvals,
+            "ai-os://memory-suggestions": self._res_memory_suggestions,
+            "ai-os://review-due": self._res_review_due,
+            "ai-os://audit-summary": self._res_audit_summary,
         }
 
     def _read_generated_md(self, name: str) -> tuple[str, str]:
@@ -186,3 +254,33 @@ class McpAdapter:
     def _res_validation(self):
         import json
         return json.dumps(self.service.get_validation_status(), indent=2), "application/json"
+
+    def _res_agents(self):
+        return self._read_generated_md("agent-registry.md")
+
+    def _res_workflows(self):
+        return self._read_generated_md("workflow-registry.md")
+
+    def _res_knowledge_health(self):
+        import json
+        return json.dumps(self.service.get_knowledge_health(), indent=2), "application/json"
+
+    def _res_sessions(self):
+        import json
+        return json.dumps(self.service.list_sessions(limit=50), indent=2), "application/json"
+
+    def _res_approvals(self):
+        import json
+        return json.dumps(self.service.list_pending_approvals(limit=50), indent=2), "application/json"
+
+    def _res_memory_suggestions(self):
+        import json
+        return json.dumps(self.service.list_memory_suggestions(limit=50), indent=2), "application/json"
+
+    def _res_review_due(self):
+        import json
+        return json.dumps(self.service.list_review_due(limit=50), indent=2), "application/json"
+
+    def _res_audit_summary(self):
+        import json
+        return json.dumps(self.service.get_audit_summary(), indent=2), "application/json"

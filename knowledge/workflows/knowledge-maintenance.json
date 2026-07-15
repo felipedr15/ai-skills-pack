@@ -1,0 +1,22 @@
+{
+  "id": "workflow:knowledge-maintenance",
+  "name": "Knowledge Maintenance",
+  "description": "Address a detected knowledge gap, stale document, or research question.",
+  "triggerIntent": "knowledge-maintenance",
+  "requiredInputs": ["knowledge area", "stale or missing content description"],
+  "steps": [
+    {"id": "retrieve-context", "agent": "researcher", "action": "search_knowledge", "requiresApproval": false},
+    {"id": "gather-evidence", "agent": "researcher", "action": "gather_evidence", "requiresApproval": false},
+    {"id": "create-plan", "agent": "planner", "action": "create_plan", "requiresApproval": true},
+    {"id": "update-docs", "agent": "documentation-writer", "action": "update_documentation", "requiresApproval": true},
+    {"id": "validate", "agent": "qa", "action": "run_approved_validation", "requiresApproval": false},
+    {"id": "suggest-memory", "agent": "documentation-writer", "action": "create_memory_suggestion", "requiresApproval": true}
+  ],
+  "completionCriteria": ["evidence gathered", "documentation updated and validated"],
+  "failureBehavior": "Stop at the failed step, record a failure entry on the session, and require re-planning before continuing. No automatic retry.",
+  "allowedActions": ["search_knowledge", "gather_evidence", "create_plan", "update_documentation", "run_approved_validation", "create_memory_suggestion"],
+  "forbiddenActions": ["git_commit", "git_push", "git_merge", "arbitrary_shell_execution", "network_access"],
+  "outputArtifacts": ["session record", "memory suggestion (pending)"],
+  "memorySuggestionPolicy": "Suggest a memory capturing the closed knowledge gap once validation passes; stays pending until approved.",
+  "auditPolicy": "Record workflow-selected, agent-selected, knowledge-retrieved, approval-requested/approved, validation-run, and memory-suggested events."
+}

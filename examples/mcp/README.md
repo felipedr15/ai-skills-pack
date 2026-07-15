@@ -78,7 +78,7 @@ For VS Code extensions that support MCP, configure the server command:
 }
 ```
 
-## Registered Tools (15)
+## Registered Tools (29)
 
 | Tool | Description |
 |------|-------------|
@@ -97,8 +97,24 @@ For VS Code extensions that support MCP, configure the server command:
 | `get_validation_status` | Validation status |
 | `list_generated_artifacts` | Generated artifact status |
 | `get_dashboard_status` | Dashboard availability |
+| `plan_task` (Phase 8) | Create a structured task plan (no execution) |
+| `classify_task` (Phase 8) | Deterministically classify a task's intent |
+| `list_workflows` (Phase 8) | List the generated workflow registry |
+| `get_workflow` (Phase 8) | Get a workflow definition by id |
+| `list_agents` (Phase 8) | List the generated agent registry |
+| `get_agent` (Phase 8) | Get an agent definition by id |
+| `list_sessions` (Phase 8) | List local work session summaries |
+| `get_session` (Phase 8) | Get a local work session by id |
+| `list_pending_approvals` (Phase 8) | List pending approval gates (read-only) |
+| `list_memory_suggestions` (Phase 8) | List memory suggestions (read-only) |
+| `get_knowledge_health` (Phase 8) | Live knowledge health report |
+| `list_review_due` (Phase 8) | Documents due for review |
+| `list_feedback` (Phase 8) | List local feedback entries |
+| `get_audit_summary` (Phase 8) | Audit trail summary (counts and chain validity) |
 
-## Registered Resources (9)
+No approval-mutating tool (approve/reject) is registered — approvals remain CLI-only.
+
+## Registered Resources (17)
 
 | URI | Description |
 |-----|-------------|
@@ -111,6 +127,14 @@ For VS Code extensions that support MCP, configure the server command:
 | `ai-os://discovery` | Discovery index summary |
 | `ai-os://dashboard` | Dashboard status |
 | `ai-os://validation` | Validation status |
+| `ai-os://agents` (Phase 8) | Agent registry summary |
+| `ai-os://workflows` (Phase 8) | Workflow registry summary |
+| `ai-os://knowledge-health` (Phase 8) | Live knowledge health report |
+| `ai-os://sessions` (Phase 8) | Local work session summaries |
+| `ai-os://approvals` (Phase 8) | Pending approval gates |
+| `ai-os://memory-suggestions` (Phase 8) | Pending memory suggestions |
+| `ai-os://review-due` (Phase 8) | Documents due for review |
+| `ai-os://audit-summary` (Phase 8) | Audit trail summary |
 
 ## Verification
 
@@ -120,14 +144,14 @@ After connecting, verify tools are registered:
 
 ```
 Method: tools/list
-Expected: 15 tools returned
+Expected: 29 tools returned
 ```
 
 ### Resource List
 
 ```
 Method: resources/list
-Expected: 9 resources returned
+Expected: 17 resources returned
 ```
 
 ### Sample Search

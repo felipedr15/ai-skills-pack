@@ -1,0 +1,22 @@
+{
+  "id": "workflow:incident-response",
+  "name": "Incident Response",
+  "description": "Triage and resolve an active incident or reported issue with a validated fix.",
+  "triggerIntent": "incident-response",
+  "requiredInputs": ["incident description", "impact", "urgency"],
+  "steps": [
+    {"id": "retrieve-context", "agent": "planner", "action": "search_knowledge", "requiresApproval": false},
+    {"id": "assess", "agent": "security-reviewer", "action": "assess_security_risk", "requiresApproval": false},
+    {"id": "create-plan", "agent": "planner", "action": "create_plan", "requiresApproval": true},
+    {"id": "implement", "agent": "builder", "action": "modify_files", "requiresApproval": true},
+    {"id": "validate", "agent": "qa", "action": "run_approved_validation", "requiresApproval": false},
+    {"id": "suggest-memory", "agent": "documentation-writer", "action": "create_memory_suggestion", "requiresApproval": true}
+  ],
+  "completionCriteria": ["impact assessed", "validation step recorded as passed", "memory suggestion recorded or explicitly skipped"],
+  "failureBehavior": "Stop at the failed step, record a failure entry on the session, and require re-planning before continuing. No automatic retry.",
+  "allowedActions": ["search_knowledge", "assess_security_risk", "create_plan", "modify_files", "run_approved_validation", "create_memory_suggestion"],
+  "forbiddenActions": ["git_commit", "git_push", "git_merge", "arbitrary_shell_execution", "network_access"],
+  "outputArtifacts": ["session record", "memory suggestion (pending)"],
+  "memorySuggestionPolicy": "Suggest a lesson-learned memory capturing root cause and resolution once validation passes; stays pending until approved.",
+  "auditPolicy": "Record workflow-selected, agent-selected, knowledge-retrieved, approval-requested/approved, validation-run, and memory-suggested events."
+}

@@ -118,4 +118,20 @@ GET /api/repository?category=&q=&limit=
 7. Package: `python scripts/ai-os.py package`
 8. Backup: `python scripts/ai-os.py backup`
 9. Restore: `python scripts/ai-os.py restore <path>`
+
+## Phase 8 Continuous Learning and Agent Orchestration Workflow (Implemented)
+
+1. Classify: `python scripts/ai-os.py classify "<task>"`
+2. Plan: `python scripts/ai-os.py plan "<task>" --explain`
+3. Start a session: `python scripts/ai-os.py session start "<task>"`
+4. Approve the plan if requested: `python scripts/ai-os.py approval approve <id>`
+5. Record a validation result: `python scripts/ai-os.py session validate <id> --name X --status pass`
+6. Complete the session: `python scripts/ai-os.py session complete <id>`
+7. Review the generated memory suggestion: `python scripts/ai-os.py memory-suggestions show <id>`
+8. Approve its permanent-memory approval, then approve the suggestion itself — this is the only
+   path that writes into `memory/`.
+9. Check knowledge health and review-due items: `python scripts/ai-os.py knowledge-health`,
+   `knowledge-gaps`, `review-due`.
+10. Record feedback and inspect the audit trail: `feedback add`, `audit list`, `audit validate`.
+11. Run unified validation to confirm no regressions across all phases.
 10. Clean: `python scripts/ai-os.py clean-generated --confirm`

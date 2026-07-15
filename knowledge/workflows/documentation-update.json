@@ -1,0 +1,22 @@
+{
+  "id": "workflow:documentation-update",
+  "name": "Documentation Update",
+  "description": "Update existing documentation to correct or extend it, with review and validation.",
+  "triggerIntent": "documentation",
+  "requiredInputs": ["document to update", "reason for the update"],
+  "steps": [
+    {"id": "retrieve-context", "agent": "planner", "action": "search_knowledge", "requiresApproval": false},
+    {"id": "create-plan", "agent": "planner", "action": "create_plan", "requiresApproval": true},
+    {"id": "update-docs", "agent": "documentation-writer", "action": "update_documentation", "requiresApproval": true},
+    {"id": "review", "agent": "reviewer", "action": "review_diff", "requiresApproval": false},
+    {"id": "validate", "agent": "qa", "action": "run_approved_validation", "requiresApproval": false},
+    {"id": "suggest-memory", "agent": "documentation-writer", "action": "create_memory_suggestion", "requiresApproval": true}
+  ],
+  "completionCriteria": ["documentation change reviewed", "validation step recorded as passed"],
+  "failureBehavior": "Stop at the failed step, record a failure entry on the session, and require re-planning before continuing. No automatic retry.",
+  "allowedActions": ["search_knowledge", "create_plan", "update_documentation", "review_diff", "run_approved_validation", "create_memory_suggestion"],
+  "forbiddenActions": ["git_commit", "git_push", "git_merge", "arbitrary_shell_execution", "network_access"],
+  "outputArtifacts": ["session record", "memory suggestion (pending)"],
+  "memorySuggestionPolicy": "Suggest a memory only if the update reveals a broader convention worth capturing; stays pending until approved.",
+  "auditPolicy": "Record workflow-selected, agent-selected, knowledge-retrieved, approval-requested/approved, validation-run, and memory-suggested events."
+}

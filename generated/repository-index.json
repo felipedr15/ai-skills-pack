@@ -7,9 +7,9 @@
     "project-starters": 129,
     "templates": 30,
     "standards": 9,
-    "knowledge": 21,
+    "knowledge": 31,
     "references": 11,
-    "scripts": 72
+    "scripts": 92
   },
   "files": [
     {
@@ -127,6 +127,12 @@
       "sha256": "a3d92fdd7334b5815a422d1e957034062769c9454ceafc2b9490755d76c33404"
     },
     {
+      "path": "knowledge/architecture/phase-8-learning-orchestration.md",
+      "category": "knowledge",
+      "size": 6671,
+      "sha256": "d4fc021a115cd91e493cc23dc582678c036f38203c81da682056dc66476eaa19"
+    },
+    {
       "path": "knowledge/best-practices/README.md",
       "category": "knowledge",
       "size": 489,
@@ -203,6 +209,60 @@
       "category": "knowledge",
       "size": 473,
       "sha256": "74338329c804cc0f3b37f34f24495204c4bc4489237909282a88e401d6ae978f"
+    },
+    {
+      "path": "knowledge/workflows/README.md",
+      "category": "knowledge",
+      "size": 1453,
+      "sha256": "7dbc4977e03dd9afd54fb60dd4385429a987b06ea736005fbb668b45977c1f21"
+    },
+    {
+      "path": "knowledge/workflows/bug-fix.json",
+      "category": "knowledge",
+      "size": 1721,
+      "sha256": "a5b478ba18a9a5b0fd623a02471dea5a7ea95018771d559a2906d08413c7a199"
+    },
+    {
+      "path": "knowledge/workflows/documentation-update.json",
+      "category": "knowledge",
+      "size": 1836,
+      "sha256": "332e051c4563fb0c89fdaefc88fada31fcd6a9fdd024796df0c6615f2075efaa"
+    },
+    {
+      "path": "knowledge/workflows/feature-development.json",
+      "category": "knowledge",
+      "size": 1953,
+      "sha256": "4c1921c1ed44b4718e561d0cafe5517faf10a7b6cc6dab5a01d7154be68200ab"
+    },
+    {
+      "path": "knowledge/workflows/incident-response.json",
+      "category": "knowledge",
+      "size": 1871,
+      "sha256": "172422096a7fa734b95a842c798d5e85f218969873dc9e2c6c7be1bb2e4c724c"
+    },
+    {
+      "path": "knowledge/workflows/knowledge-maintenance.json",
+      "category": "knowledge",
+      "size": 1851,
+      "sha256": "ad129a315aa2d9cd778cbec367c7b7295b4de5ae05fa805adbd549affe698df0"
+    },
+    {
+      "path": "knowledge/workflows/procedure-creation.json",
+      "category": "knowledge",
+      "size": 1856,
+      "sha256": "6924a457b00b29555eaa33bef5c6203e543ea80cffbe0849d3278aae63455821"
+    },
+    {
+      "path": "knowledge/workflows/project-onboarding.json",
+      "category": "knowledge",
+      "size": 1843,
+      "sha256": "e4195d4caece232b3fd6b4eea77371a9d19a7e1c0424f611b432685975f50783"
+    },
+    {
+      "path": "knowledge/workflows/release-preparation.json",
+      "category": "knowledge",
+      "size": 1973,
+      "sha256": "eb3a93119f31ab14f705e63972ebbbbd9e88dff4a4ec1daa92ecc6b2f1b83cce"
     },
     {
       "path": "templates/project-starters/README.md",
@@ -1119,14 +1179,14 @@
     {
       "path": "scripts/README.md",
       "category": "scripts",
-      "size": 1181,
-      "sha256": "02bc48427464f153116d48e68ef3e4d3997a9a873bb01abb97f26946c204610f"
+      "size": 1786,
+      "sha256": "62b1d16f926be55ccafb1d2513e1810429dd3183e289a61f71611f2509a9087c"
     },
     {
       "path": "scripts/ai-os.py",
       "category": "scripts",
-      "size": 23462,
-      "sha256": "91933d419f8486035237a733287d19264906248782cbf3572006d5a40a168d03"
+      "size": 48677,
+      "sha256": "86fb7f850169cb0fa6d1368b664ac61467dcde96c4712265e6e81ec634d00bd9"
     },
     {
       "path": "scripts/ai_os_service/__init__.py",
@@ -1155,8 +1215,8 @@
     {
       "path": "scripts/ai_os_service/service.py",
       "category": "scripts",
-      "size": 18310,
-      "sha256": "37b7cabf71c33655270b6dba993332985147e92cdf6ad7606cfdd7589bfe0b21"
+      "size": 22546,
+      "sha256": "7b8aa8330904e2e7fb49fe6441395be605787a8a56aecac57add666b280c0da0"
     },
     {
       "path": "scripts/ai_os_service/utils.py",
@@ -1167,14 +1227,14 @@
     {
       "path": "scripts/create-project.py",
       "category": "scripts",
-      "size": 5180,
-      "sha256": "fb3e8620022bc4c75490e49dc3a4973202edf9d3f072badad65b9e0fdf04b5e6"
+      "size": 5283,
+      "sha256": "77c1ac638fea8d37b5d02242d4faf0098c4999b11b3b98a2e44008a6d0460f9e"
     },
     {
       "path": "scripts/dashboard-build.py",
       "category": "scripts",
-      "size": 1232,
-      "sha256": "2903982ed230f7889acd99fab4733c46eca8988d2681b17948382a857e2fc68e"
+      "size": 2404,
+      "sha256": "bf82f40c9c4ef0a3077476698e4a59c4b75674686afb81fd97c337bb4f797675"
     },
     {
       "path": "scripts/dashboard-check.py",
@@ -1203,8 +1263,8 @@
     {
       "path": "scripts/dashboard/aggregate.py",
       "category": "scripts",
-      "size": 5841,
-      "sha256": "210db1547c4a96cc2bb15abe3c2fa99501a401d2535213ea3348178aebc22520"
+      "size": 7046,
+      "sha256": "333a7f35f25239d7c2eaa2640aa0e8fec15f3932394355fce6881e6583a6adc6"
     },
     {
       "path": "scripts/dashboard/render.py",
@@ -1215,20 +1275,20 @@
     {
       "path": "scripts/dashboard/server.py",
       "category": "scripts",
-      "size": 24112,
-      "sha256": "d74861979968cf9742be7a13c22097ed19c16b2056122823f69f39fa6f0e66cd"
+      "size": 28336,
+      "sha256": "880f41257e4d773eac26c76fa2ec20217cb55a64f595c3ef4b209dab91a93083"
     },
     {
       "path": "scripts/dashboard/template.py",
       "category": "scripts",
-      "size": 42935,
-      "sha256": "007dc0510bbc9f2bae6cad3546b038b5b9a40886546925616a85c0f4871c8f73"
+      "size": 58683,
+      "sha256": "dc01d7b427241d1d80d3d531b8f6e18eed581094dfd8e73ba7e324c1783c1d26"
     },
     {
       "path": "scripts/dashboard/validate.py",
       "category": "scripts",
-      "size": 3207,
-      "sha256": "7a77cc014356b3ae025a80bf15ba3be5b7b2904a59797cd7a52f782bfeda99a4"
+      "size": 3224,
+      "sha256": "fd56074bfc5771ffd2e382ba60ff2df5ef4e7da386930f9be33d2ffae51bae7b"
     },
     {
       "path": "scripts/discover.py",
@@ -1239,8 +1299,8 @@
     {
       "path": "scripts/discovery-build.py",
       "category": "scripts",
-      "size": 963,
-      "sha256": "d51505554ec0ac8bb847b6f6396f139b08bece042c80c30c18848fb490772ad9"
+      "size": 1510,
+      "sha256": "22ad4f6a4832b7aaf8f5518b4575eb0a7f8823780744debec336e020b611c9a4"
     },
     {
       "path": "scripts/discovery-check.py",
@@ -1255,10 +1315,22 @@
       "sha256": "c9a81e295024ccfceec8bf4f7a6225f32c1881bdf7aa2cd6fd1b1538f0605e27"
     },
     {
+      "path": "scripts/generate-agent-registry.py",
+      "category": "scripts",
+      "size": 2902,
+      "sha256": "1f1bea3522b58114de19fb22c727f00f63ece4a2df24841b55cce1aff6f2e462"
+    },
+    {
       "path": "scripts/generate-knowledge-graph.py",
       "category": "scripts",
       "size": 3419,
       "sha256": "6bf0dd771be6ba9cb27f98f0ab93b4d3a5e76d3865b63686322c4fa06e39c819"
+    },
+    {
+      "path": "scripts/generate-knowledge-health.py",
+      "category": "scripts",
+      "size": 3144,
+      "sha256": "61f2b44afc286ab5546a70cf017b796b92cabe9c663ff7141d112b3c5a4c8117"
     },
     {
       "path": "scripts/generate-memory-index.py",
@@ -1269,8 +1341,14 @@
     {
       "path": "scripts/generate-skill-registry.py",
       "category": "scripts",
-      "size": 5927,
-      "sha256": "49ffa99aa9b89c22afef9d13b54f68ee80d60e7cedac56db8c95c70334fd2aad"
+      "size": 6077,
+      "sha256": "e7d163b4ca37f40aff78d818078842c7fdf20e5a79f128b16f6ce3283d30990c"
+    },
+    {
+      "path": "scripts/generate-workflow-registry.py",
+      "category": "scripts",
+      "size": 2962,
+      "sha256": "21c8f7e91346092139dd58c4943cf7894bc5204c7b3e353e1227270aa59ff52e"
     },
     {
       "path": "scripts/index-repository.py",
@@ -1341,8 +1419,8 @@
     {
       "path": "scripts/list-skills.py",
       "category": "scripts",
-      "size": 1184,
-      "sha256": "a7a97e9ce5c238701fc6f74cb05f686edb81914e34053a3e494cf4c08388f983"
+      "size": 1217,
+      "sha256": "1467155d44e09deeac2aad857d4af3601ba6eeffd5dbf6045ef91174eafc2715"
     },
     {
       "path": "scripts/mcp-server.py",
@@ -1353,8 +1431,8 @@
     {
       "path": "scripts/mcp-smoke-test.py",
       "category": "scripts",
-      "size": 7805,
-      "sha256": "7f67a3c28ebc5fade450c06e63eacf708a34b6e2197dd446fc8fff5d3f2db016"
+      "size": 9142,
+      "sha256": "b31b2751217b5e1b5c7740899d53dad4cf5eed4c8e7bdf8ed0c6325eb5b06429"
     },
     {
       "path": "scripts/mcp_server/__init__.py",
@@ -1365,14 +1443,14 @@
     {
       "path": "scripts/mcp_server/adapter.py",
       "category": "scripts",
-      "size": 7198,
-      "sha256": "5725734cb891491fed0fe5ea16baa623e4e9c3e2286da86e723088c5b9783520"
+      "size": 11332,
+      "sha256": "370eadbeaa470907cadd92108cfa4529a2c1e377c2e2c3cb610a8f3f3f678eb1"
     },
     {
       "path": "scripts/mcp_server/schemas.py",
       "category": "scripts",
-      "size": 8632,
-      "sha256": "c3358c5233cf1aa7737b500235e93aa75d63efa0bef285afe4146da8de67ee76"
+      "size": 15571,
+      "sha256": "67ac12ff4eab53badb65f380b09bf8363d25352b17788c94c979637a2e022ebb"
     },
     {
       "path": "scripts/mcp_server/server.py",
@@ -1417,6 +1495,108 @@
       "sha256": "e1eebe312bf4893f1aebad21380e5edc5c667dacb997f59b99885384d070c7be"
     },
     {
+      "path": "scripts/orchestration-validate.py",
+      "category": "scripts",
+      "size": 735,
+      "sha256": "0aa225b94ccd49b74a9420069958e143e77d4af1fd2f5cc69ea02252d385d70f"
+    },
+    {
+      "path": "scripts/orchestration/__init__.py",
+      "category": "scripts",
+      "size": 3682,
+      "sha256": "6b5f7ae94c39fc3aeb0ba1342ae24b70c47c3e32bc4c2781e41c273ab8016519"
+    },
+    {
+      "path": "scripts/orchestration/approvals.py",
+      "category": "scripts",
+      "size": 4246,
+      "sha256": "ed951ff1d59b9c4155deb81411abe533f4ffce61f08f5858108accaea85a5f3a"
+    },
+    {
+      "path": "scripts/orchestration/audit.py",
+      "category": "scripts",
+      "size": 6678,
+      "sha256": "f3c8b5c03163fd8c3ae360f05c7025e5eacff3c8a991f81f2b0f341d9e9e6f1e"
+    },
+    {
+      "path": "scripts/orchestration/feedback.py",
+      "category": "scripts",
+      "size": 3603,
+      "sha256": "02b8b7c3ba08274798b50e99f6c9d3d7b2cb65e6bc3fdf92d4db0fd07589dc07"
+    },
+    {
+      "path": "scripts/orchestration/freshness.py",
+      "category": "scripts",
+      "size": 4727,
+      "sha256": "a0c3592c985eb1da5e4c097bd90060ff9db78c1507e97839055b9fe2a1002531"
+    },
+    {
+      "path": "scripts/orchestration/knowledge_gaps.py",
+      "category": "scripts",
+      "size": 11513,
+      "sha256": "0c52526b1b21ed8db77dcd0270ca26c72b777bf3dd93ab46c5ef18a0bf2338ba"
+    },
+    {
+      "path": "scripts/orchestration/memory_suggestions.py",
+      "category": "scripts",
+      "size": 8959,
+      "sha256": "7b4c01a332f0c3d1d6f7e725fff1c78fe56c46b5b0375e7afc805ad38e1db6a4"
+    },
+    {
+      "path": "scripts/orchestration/models.py",
+      "category": "scripts",
+      "size": 3627,
+      "sha256": "1d42bf355543615816e64aedca779a50d85dd6872a4cce0362cfe321fee5e7c6"
+    },
+    {
+      "path": "scripts/orchestration/planner.py",
+      "category": "scripts",
+      "size": 5366,
+      "sha256": "824508e53c94ea091703f7bc384f0c5dbdf24f2449275a1ce3fae01f90f45ef4"
+    },
+    {
+      "path": "scripts/orchestration/registry.py",
+      "category": "scripts",
+      "size": 7777,
+      "sha256": "f6b8f21a167aa2defd6c221898382e2d323fd512666ebe7497d90fef37fa4561"
+    },
+    {
+      "path": "scripts/orchestration/render.py",
+      "category": "scripts",
+      "size": 4134,
+      "sha256": "660cfddc24a00018d90525f8ade06aa13baa5012d2ce291f84b770054b5307f8"
+    },
+    {
+      "path": "scripts/orchestration/router.py",
+      "category": "scripts",
+      "size": 9873,
+      "sha256": "9d023c14d933a324fb4f09efc7f5732c6ad1db3f360e358760194a6d60054456"
+    },
+    {
+      "path": "scripts/orchestration/session.py",
+      "category": "scripts",
+      "size": 6985,
+      "sha256": "f52f3d4dcae7d899e98b97bd1a8fcbba1f394515e3e639b3286890d198f12d77"
+    },
+    {
+      "path": "scripts/orchestration/utils.py",
+      "category": "scripts",
+      "size": 3116,
+      "sha256": "5852041b2f6d825055148e45e2ad70bec0e74d2ef3ab5e1c38891cb5bbf2b673"
+    },
+    {
+      "path": "scripts/orchestration/validate.py",
+      "category": "scripts",
+      "size": 9213,
+      "sha256": "6b705513bd44d6d339b32717bc7115d3609fff174d0c57dfb9c5b027bf7de52e"
+    },
+    {
+      "path": "scripts/orchestration/workflow.py",
+      "category": "scripts",
+      "size": 7390,
+      "sha256": "9a66755291ddbb15a096c911b0ac7f9e6056a3890df65453b796130c1b35b81f"
+    },
+    {
       "path": "scripts/release/__init__.py",
       "category": "scripts",
       "size": 53,
@@ -1431,8 +1611,8 @@
     {
       "path": "scripts/release/manifest.py",
       "category": "scripts",
-      "size": 9344,
-      "sha256": "b68f09f5ef3db1ad786b640b55719ff0eefdc3361e0cc9e06ace528e6ef56407"
+      "size": 9729,
+      "sha256": "25e31911dcec22a3340f94eb4fa86f341d96e7ac968f3d4b7b938b02db801413"
     },
     {
       "path": "scripts/release/status.py",
@@ -1443,8 +1623,8 @@
     {
       "path": "scripts/release/utils.py",
       "category": "scripts",
-      "size": 2719,
-      "sha256": "76cb79e137aaf8839f9f6fbcb796460922ea40f48f1aa3ca885601f336095c3f"
+      "size": 3069,
+      "sha256": "35851e72620e3551c738dbe8ef100224113b4f5eef5847ab5f2c12c2f3b0290d"
     },
     {
       "path": "scripts/release/version.py",
@@ -1521,8 +1701,8 @@
     {
       "path": "scripts/validate-all.py",
       "category": "scripts",
-      "size": 6225,
-      "sha256": "d4d8cbeb423d180fb06f921b3d8699637d0e7b9863853ff41ce33f83ab2f82a9"
+      "size": 6715,
+      "sha256": "5fb91fc3cf14e4fbd65d68abe37262628d8b5ae23cd750220d8bc73478bc4fef"
     },
     {
       "path": "scripts/validate-knowledge-graph.py",
@@ -1557,8 +1737,8 @@
     {
       "path": ".agent/skills/communication-skill/SKILL.md",
       "category": "skills",
-      "size": 9579,
-      "sha256": "4492214b68b708158eb610e7c889fd6f1557222097845c0d3469894b2eebc14e"
+      "size": 9597,
+      "sha256": "6bb3cee68ea9fc1457250d97f363f1cd6139407df7ab336c4bc890f49a88a17c"
     },
     {
       "path": ".agent/skills/communication-skill/anti-ai-writing.md",
@@ -1683,8 +1863,8 @@
     {
       "path": ".agent/skills/research/SKILL.md",
       "category": "skills",
-      "size": 1602,
-      "sha256": "698690d332ac6bec6f56051db6428b47ad445a2de70beae4fb444d67891ba713"
+      "size": 1620,
+      "sha256": "2b0a005754f244d35f8eb7e9e42b311eacce8064efdd4f4384d57aa9cf491619"
     },
     {
       "path": ".agent/skills/system/README.md",
@@ -1695,8 +1875,8 @@
     {
       "path": ".agent/skills/system/SKILL.md",
       "category": "skills",
-      "size": 1939,
-      "sha256": "2dc80b2d97d71251e112adfd116676bbac84167ec065e60d4dc06e9043c7509a"
+      "size": 1957,
+      "sha256": "2de2b7bbd8342644dee796a694ca75b8bd4f80c01e6870e41832a9abdbb04c58"
     },
     {
       "path": ".agent/skills/system/superpower/README.md",
@@ -1743,8 +1923,8 @@
     {
       "path": ".agent/skills/thinking/SKILL.md",
       "category": "skills",
-      "size": 2855,
-      "sha256": "5461b9610de10fd1550ccac3d8995e20a9d6a2a67add7b88d799122f92476313"
+      "size": 2873,
+      "sha256": "98111589f7991f2895363b92fd17b2f1923692773b6e739e9a56470054a62216"
     },
     {
       "path": "standards/README.md",

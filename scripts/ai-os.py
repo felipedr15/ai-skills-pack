@@ -21,6 +21,17 @@ from release.utils import (
     print_warning, run_python_script, load_json_safe,
 )
 
+from orchestration import approvals as orch_approvals
+from orchestration import audit as orch_audit
+from orchestration import feedback as orch_feedback
+from orchestration import memory_suggestions as orch_memory_suggestions
+from orchestration import session as orch_session
+from orchestration.freshness import review_due
+from orchestration.knowledge_gaps import build_knowledge_health
+from orchestration.planner import create_plan
+from orchestration.router import classify_task
+from orchestration.workflow import build_workflow_registry
+
 
 def cmd_version(args):
     """Print AI OS version."""
@@ -540,6 +551,365 @@ def cmd_migrate(args):
     return 0
 
 
+def cmd_plan(args):
+    """Create a structured task plan. Performs no execution."""
+    plan = create_plan(ROOT, args.task, project=args.project, workflow_override=args.workflow,
+                        limit=args.limit, no_memory=args.no_memory, no_history=args.no_history)
+    if args.json:
+        print(json.dumps(plan, indent=2))
+        return 0
+
+    workflow = plan["selectedWorkflow"]
+    print(f"Task: {plan['taskSummary']}")
+    print(f"Intent: {plan['intent']} (confidence {plan['confidence']})")
+    print(f"Workflow: {workflow['id'] if workflow else 'none selected'}")
+    print(f"Agents: {', '.join(a['id'] for a in plan['selectedAgents']) or 'none'}")
+    print(f"Approval gates: {', '.join(plan['approvalGates']) or 'none'}")
+    print(f"Validation requirements: {', '.join(plan['validationRequirements']) or 'none'}")
+    print(f"Expected output artifacts: {', '.join(plan['expectedOutputArtifacts']) or 'none'}")
+    print(f"Memory suggestion policy: {plan['memorySuggestionPolicy'] or 'none'}")
+    print(f"Audit policy: {plan['auditPolicy'] or 'none'}")
+    print(f"Knowledge retrieved: {len(plan['retrievedKnowledge'])} item(s)")
+    if args.explain:
+        print("\nMatched signals:")
+        for signal in plan["matchedSignals"]:
+            print(f"  - {signal}")
+        print("\nSteps:")
+        for step in plan["steps"]:
+            approval = " (requires approval)" if step.get("requiresApproval") else ""
+            print(f"  - {step['id']}: {step['agent']} -> {step['action']}{approval}")
+        print("\nRetrieved knowledge:")
+        for item in plan["retrievedKnowledge"][:10]:
+            print(f"  - [{item.get('type')}] {item.get('name')} ({item.get('sourcePath')}) score={item.get('score')}")
+    if plan["risksAndWarnings"]:
+        print("\nRisks and warnings:")
+        for warning in plan["risksAndWarnings"]:
+            print(f"  - {warning}")
+    return 0
+
+
+def cmd_classify(args):
+    """Classify a task's intent. Deterministic, no execution."""
+    result = classify_task(ROOT, args.task, project=args.project, requested_workflow=args.workflow)
+    if args.json:
+        print(json.dumps(result, indent=2))
+        return 0
+    print(f"Intent: {result['intent']} (confidence {result['confidence']})")
+    print(f"Matched signals: {', '.join(result['matchedSignals']) or 'none'}")
+    print(f"Suggested workflow: {result['suggestedWorkflow'] or 'none'}")
+    print(f"Suggested agents: {', '.join(result['suggestedAgents']) or 'none'}")
+    print(f"Approval required: {result['approvalRequired']}")
+    if result["warnings"]:
+        print("Warnings:")
+        for warning in result["warnings"]:
+            print(f"  - {warning}")
+    return 0
+
+
+def cmd_workflow(args):
+    """List or show workflow registry entries."""
+    registry = build_workflow_registry(ROOT)
+    if args.workflow_cmd == "list":
+        if args.json:
+            print(json.dumps(registry, indent=2))
+        else:
+            for workflow in registry["workflows"]:
+                print(f"{workflow['id']}: {workflow['name']} (approval gates: {len(workflow['approvalGates'])})")
+        return 0
+    if args.workflow_cmd == "show":
+        workflow = next((w for w in registry["workflows"] if w["id"] == args.workflow_id), None)
+        if workflow is None:
+            print(f"FAIL workflow not found: {args.workflow_id}", file=sys.stderr)
+            return 1
+        if args.json:
+            print(json.dumps(workflow, indent=2))
+        else:
+            print(f"{workflow['id']}: {workflow['name']}")
+            print(workflow["description"])
+            for step in workflow["steps"]:
+                approval = " (requires approval)" if step.get("requiresApproval") else ""
+                print(f"  - {step['id']}: {step['agent']} -> {step['action']}{approval}")
+        return 0
+    print("Usage: ai-os.py workflow {list,show}", file=sys.stderr)
+    return 1
+
+
+def cmd_session(args):
+    """Track a local work session through a plan. Never modifies source files."""
+    try:
+        if args.session_cmd == "list":
+            sessions = orch_session.list_sessions(ROOT, status=args.status)
+            if args.json:
+                print(json.dumps(sessions, indent=2))
+            else:
+                for session in sessions:
+                    print(f"{session['sessionId']}: [{session['status']}] {session['task'][:60]}")
+            return 0
+
+        if args.session_cmd == "show":
+            session = orch_session.get_session(ROOT, args.session_id)
+            print(json.dumps(session, indent=2))
+            return 0
+
+        if args.session_cmd == "start":
+            plan = create_plan(ROOT, args.task, project=args.project, workflow_override=args.workflow)
+            session = orch_session.create_session(ROOT, args.task, project=args.project, plan=plan)
+            orch_audit.append_event(ROOT, "workflow-selected",
+                                     details={"workflowId": session.get("workflowId"), "sessionId": session["sessionId"]})
+            for agent_id in session.get("agents", []):
+                orch_audit.append_event(ROOT, "agent-selected", details={"agentId": agent_id, "sessionId": session["sessionId"]})
+            orch_audit.append_event(ROOT, "knowledge-retrieved",
+                                     details={"count": len(session.get("knowledgeUsed", [])), "sessionId": session["sessionId"]})
+            if plan["approvalGates"]:
+                approval = orch_approvals.request_approval(
+                    ROOT, approval_type="plan", target=session["sessionId"],
+                    reason="workflow requires plan approval before proceeding")
+                orch_audit.append_event(ROOT, "approval-requested",
+                                         details={"approvalId": approval["approvalId"], "type": "plan"})
+            if args.json:
+                print(json.dumps(session, indent=2))
+            else:
+                print(f"Session created: {session['sessionId']} [{session['status']}]")
+                print(f"Workflow: {session['workflowId']}")
+                print(f"Agents: {', '.join(session['agents']) or 'none'}")
+            return 0
+
+        if args.session_cmd == "validate":
+            orch_session.advance_toward(ROOT, args.session_id, "active")
+            session = orch_session.record_validation(
+                ROOT, args.session_id, name=args.name, passed=(args.status == "pass"), detail=args.detail or "")
+            orch_audit.append_event(ROOT, "validation-run",
+                                     details={"sessionId": args.session_id, "name": args.name, "passed": args.status == "pass"})
+            if args.status == "pass":
+                session = orch_session.advance_toward(ROOT, args.session_id, "validation")
+            print(f"Validation recorded: {args.name} -> {args.status} (session status: {session['status']})")
+            return 0
+
+        if args.session_cmd == "complete":
+            session = orch_session.get_session(ROOT, args.session_id)
+            if session["status"] != "validation":
+                print(f"FAIL session must be in 'validation' status to complete (current: {session['status']}); "
+                      "run `session validate` first", file=sys.stderr)
+                return 1
+            session = orch_session.complete_session(ROOT, args.session_id)
+            orch_audit.append_event(ROOT, "session-completed", details={"sessionId": args.session_id})
+            passed_validations = [v for v in session.get("validations", []) if v.get("passed")]
+            if passed_validations:
+                suggestion = orch_memory_suggestions.generate_suggestion(ROOT, session)
+                orch_audit.append_event(ROOT, "memory-suggested",
+                                         details={"suggestionId": suggestion["id"], "sessionId": args.session_id})
+                approval = orch_approvals.request_approval(
+                    ROOT, approval_type="permanent-memory", target=suggestion["id"],
+                    reason="memory suggestion generated on session completion")
+                orch_audit.append_event(ROOT, "approval-requested",
+                                         details={"approvalId": approval["approvalId"], "type": "permanent-memory"})
+                print(f"Session completed: {args.session_id}")
+                print(f"Memory suggestion created (pending approval): {suggestion['id']}")
+            else:
+                print(f"Session completed: {args.session_id} (no passed validations; no memory suggestion created)")
+            return 0
+
+        if args.session_cmd == "archive":
+            orch_session.archive_session(ROOT, args.session_id)
+            print(f"Session archived: {args.session_id}")
+            return 0
+    except (orch_session.SessionError, orch_approvals.ApprovalError, ValueError) as exc:
+        print(f"FAIL {exc}", file=sys.stderr)
+        return 1
+
+    print("Usage: ai-os.py session {list,show,start,validate,complete,archive}", file=sys.stderr)
+    return 1
+
+
+def cmd_approval(args):
+    """List, show, approve, or reject explicit approval gates."""
+    try:
+        if args.approval_cmd == "list":
+            items = orch_approvals.list_approvals(ROOT, status=args.status)
+            if args.json:
+                print(json.dumps(items, indent=2))
+            else:
+                for approval in items:
+                    print(f"{approval['approvalId']}: [{approval['status']}] {approval['type']} -> {approval['target']}")
+            return 0
+        if args.approval_cmd == "show":
+            print(json.dumps(orch_approvals.get_approval(ROOT, args.approval_id), indent=2))
+            return 0
+        if args.approval_cmd == "approve":
+            approval = orch_approvals.approve(ROOT, args.approval_id)
+            orch_audit.append_event(ROOT, "approval-approved", details={"approvalId": approval["approvalId"], "type": approval["type"]})
+            print(f"Approved: {approval['approvalId']}")
+            return 0
+        if args.approval_cmd == "reject":
+            approval = orch_approvals.reject(ROOT, args.approval_id, reason=args.reason or "")
+            orch_audit.append_event(ROOT, "approval-rejected", details={"approvalId": approval["approvalId"], "type": approval["type"]})
+            print(f"Rejected: {approval['approvalId']}")
+            return 0
+    except orch_approvals.ApprovalError as exc:
+        print(f"FAIL {exc}", file=sys.stderr)
+        return 1
+
+    print("Usage: ai-os.py approval {list,show,approve,reject}", file=sys.stderr)
+    return 1
+
+
+def cmd_memory_suggestions(args):
+    """List, show, approve, reject, or export memory suggestions."""
+    try:
+        if args.memory_suggestions_cmd == "list":
+            items = orch_memory_suggestions.list_suggestions(ROOT, status=args.status)
+            if args.json:
+                print(json.dumps(items, indent=2))
+            else:
+                for suggestion in items:
+                    print(f"{suggestion['id']}: [{suggestion['status']}] {suggestion['title'][:60]} "
+                          f"(confidence {suggestion['confidence']})")
+            return 0
+        if args.memory_suggestions_cmd == "show":
+            print(json.dumps(orch_memory_suggestions.get_suggestion(ROOT, args.suggestion_id), indent=2))
+            return 0
+        if args.memory_suggestions_cmd == "approve":
+            suggestion = orch_memory_suggestions.approve(ROOT, args.suggestion_id)
+            orch_audit.append_event(ROOT, "memory-approved", details={"suggestionId": suggestion["id"]})
+            print(f"Approved and promoted to memory: {suggestion['id']} -> {suggestion.get('proposedPath')}")
+            return 0
+        if args.memory_suggestions_cmd == "reject":
+            suggestion = orch_memory_suggestions.reject(ROOT, args.suggestion_id, reason=args.reason or "")
+            orch_audit.append_event(ROOT, "memory-rejected", details={"suggestionId": suggestion["id"]})
+            print(f"Rejected: {suggestion['id']}")
+            return 0
+        if args.memory_suggestions_cmd == "export":
+            dest = Path(args.output) if args.output else ROOT / ".ai-os" / "memory-suggestions" / f"{args.suggestion_id}.export.json"
+            path = orch_memory_suggestions.export_suggestion(ROOT, args.suggestion_id, dest)
+            print(f"Exported to: {path}")
+            return 0
+    except (orch_memory_suggestions.MemorySuggestionError, orch_approvals.ApprovalError) as exc:
+        print(f"FAIL {exc}", file=sys.stderr)
+        return 1
+
+    print("Usage: ai-os.py memory-suggestions {list,show,approve,reject,export}", file=sys.stderr)
+    return 1
+
+
+def cmd_knowledge_health(args):
+    """Print the live knowledge health summary (includes local session/feedback signal)."""
+    report = build_knowledge_health(ROOT, include_live=True)
+    if args.json:
+        print(json.dumps(report, indent=2))
+        return 0
+    print(f"Overall knowledge health score: {report['overallScore']}/100")
+    for name, score in sorted(report["categoryScores"].items()):
+        print(f"  {name}: {score}/100")
+    print("\nRecommendations:")
+    for recommendation in report["recommendations"]:
+        print(f"  - {recommendation}")
+    return 0
+
+
+def cmd_knowledge_gaps(args):
+    """Print detected knowledge gaps (live view; not written to generated/)."""
+    report = build_knowledge_health(ROOT, include_live=True)
+    orch_audit.append_event(ROOT, "knowledge-gap-detected",
+                             details={"gapCount": len(report["gaps"]), "overallScore": report["overallScore"]})
+    if args.json:
+        print(json.dumps(report, indent=2))
+        return 0
+    print(f"Overall score: {report['overallScore']}/100 ({len(report['gaps'])} gap(s) detected)")
+    for gap in report["gaps"][:args.limit]:
+        print(f"  [{gap['severity']}] {gap['category']}: {gap['description']}")
+    return 0
+
+
+def cmd_review_due(args):
+    """List documents due for review (only those opting into freshness metadata)."""
+    items = review_due(ROOT, days=args.days)
+    if args.json:
+        print(json.dumps(items, indent=2))
+        return 0
+    if not items:
+        print("No documents are due for review.")
+        print("(Only documents declaring owner/lastReviewed/reviewIntervalDays/nextReview front matter are tracked.)")
+        return 0
+    for item in items:
+        tag = "OVERDUE" if item["overdue"] else "DUE SOON" if item["dueSoon"] else "ISSUE"
+        print(f"[{tag}] {item['path']}: {', '.join(item['issues']) or ('next review ' + str(item.get('nextReview')))}")
+    return 0
+
+
+def cmd_feedback(args):
+    """Add, list, resolve, or summarize local feedback."""
+    try:
+        if args.feedback_cmd == "add":
+            entry = orch_feedback.add_feedback(
+                ROOT, feedback_type=args.type, target_type=args.target_type, target_id=args.target_id,
+                query=args.query or "", comment=args.comment or "", related_session_id=args.session)
+            orch_audit.append_event(ROOT, "feedback-added", details={"feedbackId": entry["feedbackId"], "type": entry["type"]})
+            print(f"Feedback recorded: {entry['feedbackId']}")
+            return 0
+        if args.feedback_cmd == "list":
+            items = orch_feedback.list_feedback(ROOT, status=args.status, feedback_type=args.type)
+            if args.json:
+                print(json.dumps(items, indent=2))
+            else:
+                for entry in items:
+                    print(f"{entry['feedbackId']}: [{entry['status']}] {entry['type']} -> {entry['targetId']}")
+            return 0
+        if args.feedback_cmd == "resolve":
+            entry = orch_feedback.resolve_feedback(ROOT, args.feedback_id)
+            print(f"Resolved: {entry['feedbackId']}")
+            return 0
+        if args.feedback_cmd == "stats":
+            stats = orch_feedback.feedback_stats(ROOT)
+            if args.json:
+                print(json.dumps(stats, indent=2))
+            else:
+                print(f"Total: {stats['total']} (open: {stats['open']}, resolved: {stats['resolved']})")
+                for feedback_type, count in sorted(stats["byType"].items()):
+                    print(f"  {feedback_type}: {count}")
+            return 0
+    except orch_feedback.FeedbackError as exc:
+        print(f"FAIL {exc}", file=sys.stderr)
+        return 1
+
+    print("Usage: ai-os.py feedback {add,list,resolve,stats}", file=sys.stderr)
+    return 1
+
+
+def cmd_audit(args):
+    """List, show, export, or validate the local audit trail."""
+    try:
+        if args.audit_cmd == "list":
+            events = orch_audit.list_events(ROOT, event_type=args.type, limit=args.limit)
+            if args.json:
+                print(json.dumps(events, indent=2))
+            else:
+                for index, event in enumerate(events):
+                    print(f"[{index}] {event['createdAt']} {event['event']}")
+            return 0
+        if args.audit_cmd == "show":
+            print(json.dumps(orch_audit.get_event(ROOT, args.index), indent=2))
+            return 0
+        if args.audit_cmd == "export":
+            dest = Path(args.output) if args.output else ROOT / ".ai-os" / "audit" / "export.json"
+            path = orch_audit.export_events(ROOT, dest)
+            print(f"Exported to: {path}")
+            return 0
+        if args.audit_cmd == "validate":
+            valid, errors = orch_audit.validate_chain(ROOT)
+            if valid:
+                print("PASS audit chain valid")
+                return 0
+            for error in errors:
+                print(f"FAIL {error}", file=sys.stderr)
+            return 1
+    except orch_audit.AuditError as exc:
+        print(f"FAIL {exc}", file=sys.stderr)
+        return 1
+
+    print("Usage: ai-os.py audit {list,show,export,validate}", file=sys.stderr)
+    return 1
+
+
 def cmd_help(args):
     """Show help."""
     print("AI OS Unified CLI")
@@ -564,6 +934,19 @@ def cmd_help(args):
     print("  clean-generated  Remove generated artifacts")
     print("  migrate          Check migration status")
     print("  help             Show this help")
+    print()
+    print("Phase 8 — continuous learning and agent orchestration:")
+    print("  plan                 Create a structured task plan (no execution)")
+    print("  classify             Classify a task's intent")
+    print("  workflow             list|show workflow registry entries")
+    print("  session              list|show|start|validate|complete|archive a local session")
+    print("  approval             list|show|approve|reject an approval gate")
+    print("  memory-suggestions   list|show|approve|reject|export a memory suggestion")
+    print("  knowledge-health     Show the live knowledge health summary")
+    print("  knowledge-gaps       Show detected knowledge gaps")
+    print("  review-due           List documents due for review")
+    print("  feedback             add|list|resolve|stats local feedback")
+    print("  audit                list|show|export|validate the audit trail")
     return 0
 
 
@@ -626,6 +1009,123 @@ def main(argv=None) -> int:
     p = sub.add_parser("migrate", help="Check migrations")
     p.add_argument("--check", action="store_true")
 
+    # Phase 8 — continuous learning and agent orchestration
+    p = sub.add_parser("plan", help="Create a structured task plan")
+    p.add_argument("task")
+    p.add_argument("--project")
+    p.add_argument("--workflow")
+    p.add_argument("--json", action="store_true")
+    p.add_argument("--limit", type=int, default=20)
+    p.add_argument("--explain", action="store_true")
+    p.add_argument("--no-memory", action="store_true")
+    p.add_argument("--no-history", action="store_true")
+
+    p = sub.add_parser("classify", help="Classify a task's intent")
+    p.add_argument("task")
+    p.add_argument("--project")
+    p.add_argument("--workflow")
+    p.add_argument("--json", action="store_true")
+
+    p = sub.add_parser("workflow", help="Workflow registry")
+    workflow_sub = p.add_subparsers(dest="workflow_cmd")
+    wl = workflow_sub.add_parser("list", help="List workflows")
+    wl.add_argument("--json", action="store_true")
+    ws = workflow_sub.add_parser("show", help="Show a workflow")
+    ws.add_argument("workflow_id")
+    ws.add_argument("--json", action="store_true")
+
+    p = sub.add_parser("session", help="Local work sessions")
+    session_sub = p.add_subparsers(dest="session_cmd")
+    sl = session_sub.add_parser("list", help="List sessions")
+    sl.add_argument("--status")
+    sl.add_argument("--json", action="store_true")
+    ss = session_sub.add_parser("show", help="Show a session")
+    ss.add_argument("session_id")
+    st = session_sub.add_parser("start", help="Start a session from a task")
+    st.add_argument("task")
+    st.add_argument("--project")
+    st.add_argument("--workflow")
+    st.add_argument("--json", action="store_true")
+    sv = session_sub.add_parser("validate", help="Record a validation result")
+    sv.add_argument("session_id")
+    sv.add_argument("--name", required=True)
+    sv.add_argument("--status", choices=["pass", "fail"], required=True)
+    sv.add_argument("--detail", default="")
+    sc = session_sub.add_parser("complete", help="Complete a validated session")
+    sc.add_argument("session_id")
+    sa = session_sub.add_parser("archive", help="Archive a session")
+    sa.add_argument("session_id")
+
+    p = sub.add_parser("approval", help="Approval gates")
+    approval_sub = p.add_subparsers(dest="approval_cmd")
+    apl = approval_sub.add_parser("list", help="List approvals")
+    apl.add_argument("--status")
+    apl.add_argument("--json", action="store_true")
+    aps = approval_sub.add_parser("show", help="Show an approval")
+    aps.add_argument("approval_id")
+    apa = approval_sub.add_parser("approve", help="Approve a pending approval")
+    apa.add_argument("approval_id")
+    apr = approval_sub.add_parser("reject", help="Reject a pending approval")
+    apr.add_argument("approval_id")
+    apr.add_argument("--reason", default="")
+
+    p = sub.add_parser("memory-suggestions", help="Memory suggestions")
+    ms_sub = p.add_subparsers(dest="memory_suggestions_cmd")
+    msl = ms_sub.add_parser("list", help="List memory suggestions")
+    msl.add_argument("--status")
+    msl.add_argument("--json", action="store_true")
+    mss = ms_sub.add_parser("show", help="Show a memory suggestion")
+    mss.add_argument("suggestion_id")
+    msa = ms_sub.add_parser("approve", help="Approve and promote a suggestion to memory")
+    msa.add_argument("suggestion_id")
+    msr = ms_sub.add_parser("reject", help="Reject a memory suggestion")
+    msr.add_argument("suggestion_id")
+    msr.add_argument("--reason", default="")
+    mse = ms_sub.add_parser("export", help="Export a memory suggestion for review")
+    mse.add_argument("suggestion_id")
+    mse.add_argument("--output")
+
+    p = sub.add_parser("knowledge-health", help="Live knowledge health summary")
+    p.add_argument("--json", action="store_true")
+
+    p = sub.add_parser("knowledge-gaps", help="Detected knowledge gaps")
+    p.add_argument("--json", action="store_true")
+    p.add_argument("--limit", type=int, default=50)
+
+    p = sub.add_parser("review-due", help="Documents due for review")
+    p.add_argument("--days", type=int, default=0)
+    p.add_argument("--json", action="store_true")
+
+    p = sub.add_parser("feedback", help="Local feedback")
+    feedback_sub = p.add_subparsers(dest="feedback_cmd")
+    fa = feedback_sub.add_parser("add", help="Add feedback")
+    fa.add_argument("--type", required=True)
+    fa.add_argument("--target-type", required=True)
+    fa.add_argument("--target-id", required=True)
+    fa.add_argument("--query", default="")
+    fa.add_argument("--comment", default="")
+    fa.add_argument("--session", default=None)
+    fl = feedback_sub.add_parser("list", help="List feedback")
+    fl.add_argument("--status")
+    fl.add_argument("--type")
+    fl.add_argument("--json", action="store_true")
+    fr = feedback_sub.add_parser("resolve", help="Resolve feedback")
+    fr.add_argument("feedback_id")
+    fst = feedback_sub.add_parser("stats", help="Feedback statistics")
+    fst.add_argument("--json", action="store_true")
+
+    p = sub.add_parser("audit", help="Local audit trail")
+    audit_sub = p.add_subparsers(dest="audit_cmd")
+    aul = audit_sub.add_parser("list", help="List audit events")
+    aul.add_argument("--type")
+    aul.add_argument("--limit", type=int, default=100)
+    aul.add_argument("--json", action="store_true")
+    aus = audit_sub.add_parser("show", help="Show an audit event by index")
+    aus.add_argument("index", type=int)
+    aue = audit_sub.add_parser("export", help="Export the audit trail")
+    aue.add_argument("--output")
+    audit_sub.add_parser("validate", help="Validate the audit hash chain")
+
     args = parser.parse_args(argv)
 
     if not args.command:
@@ -650,6 +1150,17 @@ def main(argv=None) -> int:
         "clean-generated": cmd_clean_generated,
         "migrate": cmd_migrate,
         "help": cmd_help,
+        "plan": cmd_plan,
+        "classify": cmd_classify,
+        "workflow": cmd_workflow,
+        "session": cmd_session,
+        "approval": cmd_approval,
+        "memory-suggestions": cmd_memory_suggestions,
+        "knowledge-health": cmd_knowledge_health,
+        "knowledge-gaps": cmd_knowledge_gaps,
+        "review-due": cmd_review_due,
+        "feedback": cmd_feedback,
+        "audit": cmd_audit,
     }
 
     handler = commands.get(args.command)

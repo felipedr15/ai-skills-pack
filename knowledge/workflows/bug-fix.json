@@ -1,0 +1,21 @@
+{
+  "id": "workflow:bug-fix",
+  "name": "Bug Fix",
+  "description": "Diagnose and resolve a defect with a validated fix and optional lesson capture.",
+  "triggerIntent": "bug-fix",
+  "requiredInputs": ["task description", "affected component or file", "reproduction steps (if known)"],
+  "steps": [
+    {"id": "retrieve-context", "agent": "planner", "action": "search_knowledge", "requiresApproval": false},
+    {"id": "create-plan", "agent": "planner", "action": "create_plan", "requiresApproval": true},
+    {"id": "implement", "agent": "builder", "action": "modify_files", "requiresApproval": true},
+    {"id": "validate", "agent": "qa", "action": "run_approved_validation", "requiresApproval": false},
+    {"id": "suggest-memory", "agent": "documentation-writer", "action": "create_memory_suggestion", "requiresApproval": true}
+  ],
+  "completionCriteria": ["validation step recorded as passed", "memory suggestion recorded or explicitly skipped"],
+  "failureBehavior": "Stop at the failed step, record a failure entry on the session, and require re-planning before continuing. No automatic retry.",
+  "allowedActions": ["search_knowledge", "create_plan", "modify_files", "run_approved_validation", "create_memory_suggestion"],
+  "forbiddenActions": ["git_commit", "git_push", "git_merge", "arbitrary_shell_execution", "network_access"],
+  "outputArtifacts": ["session record", "memory suggestion (pending)"],
+  "memorySuggestionPolicy": "Suggest a lesson-learned memory only after validation passes; the suggestion stays pending until explicitly approved.",
+  "auditPolicy": "Record workflow-selected, agent-selected, knowledge-retrieved, approval-requested/approved, validation-run, and memory-suggested events."
+}

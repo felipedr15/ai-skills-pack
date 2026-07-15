@@ -470,3 +470,90 @@ class AiOsService:
             "generator": data.get("generator") if data else None,
             "schemaVersion": data.get("schemaVersion") if data else None,
         }
+
+    # ── Phase 8: Continuous Learning and Agent Orchestration ──
+    # All methods below are read-only. No approval-mutating operations are
+    # exposed via the service/MCP layer — approvals stay CLI-only.
+
+    def plan_task(self, *, task: str, project: str = "", workflow: str = "",
+                  limit: int = DEFAULT_LIMIT, no_memory: bool = False, no_history: bool = False) -> dict:
+        if not task or not task.strip():
+            raise InvalidRequest("task required")
+        from orchestration.planner import create_plan
+        return create_plan(
+            self.root, task, project=project or None, workflow_override=workflow or None,
+            limit=clamp_limit(limit), no_memory=no_memory, no_history=no_history)
+
+    def classify_task(self, *, task: str, project: str = "", workflow: str = "") -> dict:
+        if not task or not task.strip():
+            raise InvalidRequest("task required")
+        from orchestration.router import classify_task as _classify_task
+        return _classify_task(self.root, task, project=project or None, requested_workflow=workflow or None)
+
+    def list_workflows(self) -> dict:
+        from orchestration.workflow import build_workflow_registry
+        return build_workflow_registry(self.root)
+
+    def get_workflow(self, *, workflow_id: str) -> dict:
+        if not workflow_id:
+            raise InvalidRequest("workflow_id required")
+        registry = self.list_workflows()
+        for workflow in registry.get("workflows", []):
+            if workflow["id"] == workflow_id:
+                return workflow
+        raise NotFound(f"workflow not found: {workflow_id}")
+
+    def list_agents(self) -> dict:
+        from orchestration.registry import build_agent_registry
+        return build_agent_registry(self.root)
+
+    def get_agent(self, *, agent_id: str) -> dict:
+        if not agent_id:
+            raise InvalidRequest("agent_id required")
+        registry = self.list_agents()
+        for agent in registry.get("agents", []):
+            if agent["id"] == agent_id:
+                return agent
+        raise NotFound(f"agent not found: {agent_id}")
+
+    def list_sessions(self, *, status: str = "", limit: int = DEFAULT_LIMIT, cursor: int = 0) -> dict:
+        from orchestration.session import list_sessions as _list_sessions
+        sessions = _list_sessions(self.root, status=status or None)
+        return paginate(sessions, limit, cursor)
+
+    def get_session(self, *, session_id: str) -> dict:
+        if not session_id:
+            raise InvalidRequest("session_id required")
+        from orchestration.session import SessionError, get_session as _get_session
+        try:
+            return _get_session(self.root, session_id)
+        except SessionError as exc:
+            raise NotFound(str(exc)) from exc
+
+    def list_pending_approvals(self, *, limit: int = DEFAULT_LIMIT, cursor: int = 0) -> dict:
+        from orchestration.approvals import list_approvals
+        approvals = list_approvals(self.root, status="pending")
+        return paginate(approvals, limit, cursor)
+
+    def list_memory_suggestions(self, *, status: str = "", limit: int = DEFAULT_LIMIT, cursor: int = 0) -> dict:
+        from orchestration.memory_suggestions import list_suggestions
+        suggestions = list_suggestions(self.root, status=status or None)
+        return paginate(suggestions, limit, cursor)
+
+    def get_knowledge_health(self) -> dict:
+        from orchestration.knowledge_gaps import build_knowledge_health
+        return build_knowledge_health(self.root, include_live=True)
+
+    def list_review_due(self, *, days: int = 30, limit: int = DEFAULT_LIMIT, cursor: int = 0) -> dict:
+        from orchestration.freshness import review_due
+        items = review_due(self.root, days=days)
+        return paginate(items, limit, cursor)
+
+    def list_feedback(self, *, status: str = "", limit: int = DEFAULT_LIMIT, cursor: int = 0) -> dict:
+        from orchestration.feedback import list_feedback as _list_feedback
+        entries = _list_feedback(self.root, status=status or None)
+        return paginate(entries, limit, cursor)
+
+    def get_audit_summary(self) -> dict:
+        from orchestration.audit import summary
+        return summary(self.root)

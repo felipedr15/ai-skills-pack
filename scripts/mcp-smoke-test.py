@@ -69,12 +69,12 @@ def main() -> int:
         # 2. Tool list
         req_id += 1
         resp = send_request(proc, "tools/list", {}, req_id)
-        check("tools/list", resp, lambda r: len(r.get("result", {}).get("tools", [])) == 15)
+        check("tools/list", resp, lambda r: len(r.get("result", {}).get("tools", [])) == 29)
 
         # 3. Resource list
         req_id += 1
         resp = send_request(proc, "resources/list", {}, req_id)
-        check("resources/list", resp, lambda r: len(r.get("result", {}).get("resources", [])) == 9)
+        check("resources/list", resp, lambda r: len(r.get("result", {}).get("resources", [])) == 17)
 
         # 4. ai_os_status
         req_id += 1
@@ -163,6 +163,35 @@ def main() -> int:
         else:
             failures.append("FAIL memory exposes full content")
 
+        # 17b. Phase 8: classify_task
+        req_id += 1
+        resp = send_request(proc, "tools/call", {"name": "classify_task", "arguments": {"task": "Fix the login bug"}}, req_id)
+        check("classify_task", resp)
+
+        # 17c. Phase 8: list_agents
+        req_id += 1
+        resp = send_request(proc, "tools/call", {"name": "list_agents", "arguments": {}}, req_id)
+        check("list_agents", resp)
+
+        # 17d. Phase 8: get_knowledge_health
+        req_id += 1
+        resp = send_request(proc, "tools/call", {"name": "get_knowledge_health", "arguments": {}}, req_id)
+        check("get_knowledge_health", resp)
+
+        # 17e. Phase 8: no approval-mutating tool is registered
+        req_id += 1
+        resp = send_request(proc, "tools/call", {"name": "approve_memory_suggestion", "arguments": {}}, req_id)
+        content = json.loads(resp.get("result", {}).get("content", [{}])[0].get("text", "{}"))
+        if content.get("code") == "unknown_tool":
+            print("  PASS no approval-mutating tool exposed")
+        else:
+            failures.append("FAIL an approval-mutating tool appears to be exposed")
+
+        # 17f. Phase 8: read ai-os://agents resource
+        req_id += 1
+        resp = send_request(proc, "resources/read", {"uri": "ai-os://agents"}, req_id)
+        check("read ai-os://agents", resp)
+
         # 18. Unknown tool
         req_id += 1
         resp = send_request(proc, "tools/call", {"name": "nonexistent_tool", "arguments": {}}, req_id)
@@ -181,7 +210,7 @@ def main() -> int:
         failures.append(f"FAIL unexpected error: {exc}")
         proc.kill()
 
-    print(f"\nSmoke test complete: {19 - len(failures)} PASS, {len(failures)} FAIL")
+    print(f"\nSmoke test complete: {24 - len(failures)} PASS, {len(failures)} FAIL")
     for f in failures:
         print(f"  {f}")
     return 1 if failures else 0
