@@ -74,7 +74,7 @@ Standard library only. Supports:
 - Secret-like files excluded from indexing
 - No full source content stored
 - Snippets limited to 200 characters
-- Reuses existing repository ignore rules and secret detection
+- Indexing is scoped to git-tracked repository files (`git ls-files` via `scripts/repo_files.py`), not an unscoped filesystem walk, so arbitrary untracked local directories are never indexed regardless of name. Falls back to a deterministic directory/suffix allowlist when git is unavailable.
 
 ## Commands
 

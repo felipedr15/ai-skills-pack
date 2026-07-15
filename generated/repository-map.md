@@ -370,6 +370,7 @@
 - `scripts/release/status.py`
 - `scripts/release/utils.py`
 - `scripts/release/version.py`
+- `scripts/repo_files.py`
 - `scripts/semantic_discovery/__init__.py`
 - `scripts/semantic_discovery/build.py`
 - `scripts/semantic_discovery/cli.py`

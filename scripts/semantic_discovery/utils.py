@@ -6,6 +6,8 @@ from pathlib import Path
 
 SKIP_DIRS = {
     ".git",
+    ".vscode",
+    ".idea",
     "node_modules",
     "vendor",
     "dist",

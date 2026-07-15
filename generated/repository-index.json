@@ -9,7 +9,7 @@
     "standards": 9,
     "knowledge": 31,
     "references": 11,
-    "scripts": 92
+    "scripts": 93
   },
   "files": [
     {
@@ -99,14 +99,14 @@
     {
       "path": "knowledge/architecture/phase-3-knowledge-graph.md",
       "category": "knowledge",
-      "size": 1247,
-      "sha256": "3f9f6224111b607d12585405f4ee77f093a009a7b08d1ea355e1ac43e223d0be"
+      "size": 1583,
+      "sha256": "18130cb681b032189f73137bc154502407070c735c710de76278585bedd22cd2"
     },
     {
       "path": "knowledge/architecture/phase-4-semantic-discovery.md",
       "category": "knowledge",
-      "size": 3182,
-      "sha256": "c0fe06eda7956b6f52a3a267ac599bc035913c0ddb8b817231ab4e25d1126e65"
+      "size": 3412,
+      "sha256": "a333f1da3d78c8bd4fd06da227a953bc2edfe302d98c9b35ec6786d7f9184f0f"
     },
     {
       "path": "knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -1395,8 +1395,8 @@
     {
       "path": "scripts/knowledge_graph/extract.py",
       "category": "scripts",
-      "size": 4135,
-      "sha256": "8933d3ee1a507cc279a308eeff825991d296704a342c3102b01de31f435c4e77"
+      "size": 4187,
+      "sha256": "5c0d2573380751bda597e9a1949571bdec18b7a003e48a2f25a03ce42ad1e476"
     },
     {
       "path": "scripts/knowledge_graph/render.py",
@@ -1407,8 +1407,8 @@
     {
       "path": "scripts/knowledge_graph/utils.py",
       "category": "scripts",
-      "size": 2867,
-      "sha256": "02047853ac4b0deeb333297d90c79b049ad0fc2d232ad5fccf631aecff3fbc5c"
+      "size": 2895,
+      "sha256": "ada13d33eaf7958229adfc12dfdb7a2de4f66bc9168f0fdffcb049bee06ff439"
     },
     {
       "path": "scripts/knowledge_graph/validate.py",
@@ -1633,6 +1633,12 @@
       "sha256": "7fe1dff680710cafe088247bd1dd3c093dc72fa19a4ef3b06111c97c0339ed2e"
     },
     {
+      "path": "scripts/repo_files.py",
+      "category": "scripts",
+      "size": 3245,
+      "sha256": "220a410d17b0168ee912edb0b7781ff5f8d52938889a13225ab3a355365f661d"
+    },
+    {
       "path": "scripts/semantic_discovery/__init__.py",
       "category": "scripts",
       "size": 243,
@@ -1653,8 +1659,8 @@
     {
       "path": "scripts/semantic_discovery/extract.py",
       "category": "scripts",
-      "size": 6048,
-      "sha256": "e89488d9f971b47e3a1b76e8a9992ab1d2d1050917363e63200144bbd8c2264a"
+      "size": 6100,
+      "sha256": "ce42ea3280fac1722727ae59635b74649c4a60a2d397e7167c848a4f569b1e77"
     },
     {
       "path": "scripts/semantic_discovery/index.py",
@@ -1689,8 +1695,8 @@
     {
       "path": "scripts/semantic_discovery/utils.py",
       "category": "scripts",
-      "size": 2574,
-      "sha256": "19ecf52f04647b44b3adf0e0ca887f4b2dc746d47575299b8c8ce8e56802379a"
+      "size": 2602,
+      "sha256": "5f12788a133a93eedfe22c2aa69a11cf93cd738384c50da13a60363f2ddd4e4e"
     },
     {
       "path": "scripts/semantic_discovery/validate.py",

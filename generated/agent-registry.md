@@ -3,7 +3,7 @@
 > Generated from `agents/*.md` and `agents.json`. This file is not a source of truth —
 > edit the agent markdown docs instead and regenerate.
 
-Generated at: 2026-07-14T23:11:16Z
+Generated at: 2026-07-15T18:31:15Z
 Generator: ai-os-orchestration
 Total agents: 10
 

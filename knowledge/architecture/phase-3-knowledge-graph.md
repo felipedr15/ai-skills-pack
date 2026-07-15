@@ -46,6 +46,7 @@ Source Markdown and JSON files remain authoritative. Generated graph artifacts a
 - Paths are normalized to forward slashes.
 - Staleness checks ignore `generatedAt` only.
 - Secret-like files and excluded directories are skipped.
+- Discovery is scoped to git-tracked repository files (`git ls-files`) so arbitrary untracked local directories (IDE settings, scratch folders, etc.) are never indexed, whatever they are named. When git is unavailable, a deterministic directory/suffix allowlist (`scripts/repo_files.py`) is used instead of an unscoped filesystem walk.
 - No network requests are performed.
 
 ## Commands

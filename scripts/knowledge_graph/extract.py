@@ -4,6 +4,8 @@ import json
 import re
 from pathlib import Path
 
+from repo_files import discoverable_files
+
 from .utils import markdown_links, normalize_relpath, parse_front_matter, path_is_excluded, slug, wiki_links
 
 PLATFORMS = {
@@ -56,7 +58,7 @@ def classify_document(path: str) -> str:
 
 def discover_source_files(root: Path) -> list[Path]:
     files: list[Path] = []
-    for path in root.rglob("*"):
+    for path in discoverable_files(root):
         if not path.is_file() or path_is_excluded(path.relative_to(root)):
             continue
         rel = normalize_relpath(path, root)

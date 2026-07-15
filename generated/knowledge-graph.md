@@ -2,10 +2,10 @@
 
 > Generated from repository source files. This file is not a source of truth.
 
-Generated at: 2026-07-15T17:05:38Z
+Generated at: 2026-07-15T18:31:14Z
 
 Nodes: 346
-Edges: 570
+Edges: 571
 
 ## Node Counts By Type
 
@@ -25,7 +25,7 @@ Edges: 570
 - references: 193
 - related_to: 120
 - supports: 4
-- uses: 108
+- uses: 109
 
 ## Unresolved References
 
@@ -45,7 +45,7 @@ Count: 8
 - references: 193
 - contains: 129
 - related_to: 120
-- uses: 108
+- uses: 109
 - generated_from: 14
 - supports: 4
 - belongs_to: 2

@@ -5,13 +5,15 @@ import json
 import re
 from pathlib import Path
 
+from repo_files import discoverable_files
+
 from .utils import normalize_path, path_is_excluded
 
 
 def discover_source_files(root: Path) -> list[Path]:
     """Discover indexable source files from the repository."""
     files: list[Path] = []
-    for path in root.rglob("*"):
+    for path in discoverable_files(root):
         if not path.is_file():
             continue
         rel = path.relative_to(root)

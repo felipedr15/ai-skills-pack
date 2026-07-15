@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-15T17:05:38Z",
+  "generatedAt": "2026-07-15T18:31:14Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
     "nodes": 346,
-    "edges": 570,
+    "edges": 571,
     "nodesByType": {
       "concept": 2,
       "document": 308,
@@ -21,7 +21,7 @@
       "references": 193,
       "related_to": 120,
       "supports": 4,
-      "uses": 108
+      "uses": 109
     }
   },
   "nodes": [
@@ -7764,6 +7764,15 @@
       "id": "edge:7f8d3e0f4dcf208f",
       "type": "uses",
       "from": "document:knowledge/README.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:b88d8ced99f3d1ef",
+      "type": "uses",
+      "from": "document:knowledge/architecture/phase-3-knowledge-graph.md",
       "to": "tool:git",
       "metadata": {
         "source": "document_text"
