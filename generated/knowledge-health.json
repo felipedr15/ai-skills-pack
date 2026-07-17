@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T00:53:49Z",
+  "generatedAt": "2026-07-17T08:52:43Z",
   "generator": "ai-os-orchestration",
   "overallScore": 83,
   "categoryScores": {
@@ -116,18 +116,8 @@
   "staleItems": [],
   "unresolvedReferences": [
     {
-      "source": ".kiro/README.md",
-      "target": "specs/README.md",
-      "kind": "markdown"
-    },
-    {
-      "source": ".kiro/specs/README.md",
-      "target": "specs/README.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "ARCHITECTURE.md",
-      "target": "knowledge/architecture/phase-9-professional-context.md",
+      "source": ".kiro/specs/phase-9-professional-context/README.md",
+      "target": "specs/phase-9-professional-context",
       "kind": "markdown"
     },
     {
@@ -169,16 +159,6 @@
       "source": "README.md",
       "target": "generated/memory-index.md",
       "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": "knowledge/architecture/phase-9-professional-context.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": "specs/README.md",
-      "kind": "markdown"
     }
   ],
   "isolatedNodes": [
@@ -203,6 +183,7 @@
     "document:knowledge/workflows/procedure-creation.json",
     "document:knowledge/workflows/project-onboarding.json",
     "document:knowledge/workflows/release-preparation.json",
+    "document:profile/registry.json",
     "document:schemas/memory.schema.json",
     "document:schemas/project.schema.json",
     "document:schemas/skill.schema.json",

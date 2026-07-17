@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T00:53:47Z",
+  "generatedAt": "2026-07-17T08:52:42Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 325,
-    "entities": 349,
-    "terms": 992,
-    "relationships": 580
+    "documents": 333,
+    "entities": 357,
+    "terms": 1089,
+    "relationships": 611
   },
   "documents": [
     {
@@ -869,6 +869,17 @@
       "frontMatter": {}
     },
     {
+      "id": "doc:.kiro/specs/phase-9-professional-context/README.md",
+      "sourcePath": ".kiro/specs/phase-9-professional-context/README.md",
+      "title": "Moved",
+      "category": "document",
+      "headings": [
+        "Moved"
+      ],
+      "snippet": "The canonical Phase 9 specification is located at:",
+      "frontMatter": {}
+    },
+    {
       "id": "doc:.kiro/steering/README.md",
       "sourcePath": ".kiro/steering/README.md",
       "title": "Steering Guidance",
@@ -1674,6 +1685,27 @@
       "frontMatter": {}
     },
     {
+      "id": "doc:knowledge/architecture/phase-9-professional-context.md",
+      "sourcePath": "knowledge/architecture/phase-9-professional-context.md",
+      "title": "Phase 9 Professional Context and Work Intelligence Architecture",
+      "category": "knowledge",
+      "headings": [
+        "Phase 9 Professional Context and Work Intelligence Architecture",
+        "Purpose and Boundaries",
+        "2. Directory and Ownership Model",
+        "3. Data Flow",
+        "4. Schema and Evidence Model",
+        "5. Security Model",
+        "6. Determinism Model",
+        "7. Integration Model",
+        "8. Failure Behavior",
+        "9. Deferred Work",
+        "10. Operational Examples"
+      ],
+      "snippet": "Phase 9 adds a strictly local-first, privacy-first layer capturing *who the user is",
+      "frontMatter": {}
+    },
+    {
       "id": "doc:knowledge/best-practices/README.md",
       "sourcePath": "knowledge/best-practices/README.md",
       "title": "Best Practices Knowledge",
@@ -2413,6 +2445,36 @@
       }
     },
     {
+      "id": "doc:profile/README.md",
+      "sourcePath": "profile/README.md",
+      "title": "Professional Profile",
+      "category": "profile",
+      "headings": [
+        "Professional Profile",
+        "Purpose",
+        "Source of truth",
+        "What this is not",
+        "Structure",
+        "Evidence-based expertise",
+        "Security restrictions",
+        "Commands"
+      ],
+      "snippet": "Canonical, explicitly-authored professional context: role, team, responsibilities, reporting relationships, and an evidence-based expertise profile.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:profile/registry.json",
+      "sourcePath": "profile/registry.json",
+      "title": "registry",
+      "category": "profile",
+      "headings": [
+        "schemaVersion",
+        "profiles"
+      ],
+      "snippet": "",
+      "frontMatter": {}
+    },
+    {
       "id": "doc:prompts.json",
       "sourcePath": "prompts.json",
       "title": "prompts",
@@ -2887,6 +2949,130 @@
         "skills"
       ],
       "snippet": "",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:specs/README.md",
+      "sourcePath": "specs/README.md",
+      "title": "Feature Specifications",
+      "category": "document",
+      "headings": [
+        "Feature Specifications"
+      ],
+      "snippet": "This is the tool-neutral source of truth for project requirements, design, and implementation tasks. It is usable by Kiro, ChatGPT, Claude, Codex, Copilot, and human contributors alike — nothing here ",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:specs/phase-9-professional-context/design.md",
+      "sourcePath": "specs/phase-9-professional-context/design.md",
+      "title": "Design — Phase 9: Professional Context and Work Intelligence",
+      "category": "document",
+      "headings": [
+        "Design — Phase 9: Professional Context and Work Intelligence",
+        "Overview",
+        "Current State",
+        "Proposed Architecture",
+        "Components",
+        "Data Flow",
+        "Data Model",
+        "Primary Professional Profile",
+        "Interfaces",
+        "Security",
+        "Error Handling",
+        "Logging and Monitoring",
+        "Testing Strategy",
+        "Deployment Strategy",
+        "Rollback Strategy",
+        "Alternatives Considered",
+        "Risks",
+        "Open Questions"
+      ],
+      "snippet": "Phase 9 adds three new pieces of state — a canonical professional profile, derived work-activity signals, and an evidence-based expertise profile — plus the generators, validation, MCP tools, and dash",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:specs/phase-9-professional-context/requirements.md",
+      "sourcePath": "specs/phase-9-professional-context/requirements.md",
+      "title": "Requirements — Phase 9: Professional Context and Work Intelligence",
+      "category": "document",
+      "headings": [
+        "Requirements — Phase 9: Professional Context and Work Intelligence",
+        "Summary",
+        "Problem Statement",
+        "Goals",
+        "Non-Goals",
+        "Users",
+        "Functional Requirements",
+        "REQ-001: Professional profile source records",
+        "REQ-002: Work-activity aggregation",
+        "REQ-003: Expertise profile",
+        "REQ-004: Read-only MCP exposure",
+        "REQ-005: Approval-gated writes",
+        "REQ-006: Profile switching",
+        "REQ-007: Dashboard visibility",
+        "Non-Functional Requirements",
+        "Security / Privacy",
+        "Reliability",
+        "Maintainability",
+        "Compatibility",
+        "Dependencies",
+        "Assumptions",
+        "Constraints",
+        "Risks",
+        "Open Questions"
+      ],
+      "snippet": "Extend the Phase 8 data model (memory engine, knowledge graph, session tracking, approval engine) with a new, strictly local-first layer that captures the user's professional role/organizational conte",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:specs/phase-9-professional-context/tasks.md",
+      "sourcePath": "specs/phase-9-professional-context/tasks.md",
+      "title": "Tasks — Phase 9: Professional Context and Work Intelligence",
+      "category": "document",
+      "headings": [
+        "Tasks — Phase 9: Professional Context and Work Intelligence",
+        "Implementation Order",
+        "Data Layer",
+        "TASK-001: Create the `profile/` directory and core schema",
+        "TASK-002: Implement `scripts/profile/` package and structural validation",
+        "TASK-003: Implement expertise schema and evidence-pointer validation",
+        "TASK-004: Add the `memory/` ↔ `profile/` boundary guard",
+        "Generators",
+        "TASK-005: Implement `scripts/generate-profile-index.py`",
+        "TASK-006: Implement `scripts/generate-work-activity.py`",
+        "TASK-007: Wire new generators into `scripts/validate-all.py`",
+        "`sync-knowledge` and Snapshots",
+        "TASK-008: Implement `ai-os.py profile sync-knowledge` (scaffold-once)",
+        "TASK-009: Implement `--force-refresh` timestamped snapshots",
+        "TASK-010: Implement sanitization for `overview.md` and snapshot content",
+        "TASK-011: Guarantee `generate` / `generate --check` never touch `knowledge/professional-context/`",
+        "CLI, Approvals, and Profile Switching",
+        "TASK-012: Implement `ai-os.py profile show`",
+        "TASK-013: Implement `ai-os.py profile switch <id>`",
+        "TASK-014: Extend `scripts/orchestration/approvals.py`",
+        "Knowledge Graph and Discovery Integration",
+        "TASK-015: Classify `profile/` in the knowledge graph and discovery allowlists",
+        "TASK-016: Extend untracked-directory regression coverage for the new content types",
+        "MCP and Dashboard",
+        "TASK-017: Add read-only MCP tools",
+        "TASK-018: Extend `mcp-smoke-test.py`",
+        "TASK-019: Add the \"Professional Context\" dashboard page",
+        "Tests",
+        "TASK-020: `tests/test_profile.py`",
+        "TASK-021: `tests/test_work_activity.py`",
+        "TASK-022: `tests/test_profile_sync_knowledge.py`",
+        "TASK-023: Extend `tests/test_dashboard.py` and `validate-all.py` generator-wiring tests",
+        "Documentation",
+        "TASK-024: Update repository-level documentation",
+        "TASK-025: Add `knowledge/architecture/phase-9-professional-context.md`",
+        "Spec Hygiene",
+        "TASK-026: Verify no stale references to the old `.kiro/specs/phase-9-professional-context/` path remain",
+        "TASK-027: Preserve tool-agnostic design",
+        "Final Validation and Stop Condition",
+        "TASK-028: Run the full validation and manual acceptance sequence",
+        "TASK-029: Stop before staging, committing, pushing, merging, tagging, or releasing"
+      ],
+      "snippet": "Traces to `requirements.md` (REQ-001–REQ-007) and `design.md`. Do not begin implementation until requirements.md and design.md are both approved (they are, as of this document). Tasks are grouped in d",
       "frontMatter": {}
     },
     {
@@ -5858,6 +6044,16 @@
       }
     },
     {
+      "id": "entity:document:.kiro/specs/phase-9-professional-context/README.md",
+      "nodeId": "document:.kiro/specs/phase-9-professional-context/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".kiro/specs/phase-9-professional-context/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "entity:document:.kiro/steering/README.md",
       "nodeId": "document:.kiro/steering/README.md",
       "type": "document",
@@ -6234,7 +6430,7 @@
       "name": "Profile Index",
       "sourcePath": "generated/profile-index.json",
       "metadata": {
-        "supplemental": true
+        "extension": ".json"
       }
     },
     {
@@ -6264,7 +6460,7 @@
       "name": "Work Activity",
       "sourcePath": "generated/work-activity.json",
       "metadata": {
-        "supplemental": true
+        "extension": ".json"
       }
     },
     {
@@ -6353,6 +6549,16 @@
       "type": "document",
       "name": "Phase 8 Learning Orchestration",
       "sourcePath": "knowledge/architecture/phase-8-learning-orchestration.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/architecture/phase-9-professional-context.md",
+      "nodeId": "document:knowledge/architecture/phase-9-professional-context.md",
+      "type": "document",
+      "name": "Phase 9 Professional Context",
+      "sourcePath": "knowledge/architecture/phase-9-professional-context.md",
       "metadata": {
         "extension": ".md"
       }
@@ -6688,6 +6894,26 @@
       }
     },
     {
+      "id": "entity:document:profile/README.md",
+      "nodeId": "document:profile/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": "profile/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:profile/registry.json",
+      "nodeId": "document:profile/registry.json",
+      "type": "document",
+      "name": "Registry",
+      "sourcePath": "profile/registry.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
       "id": "entity:document:prompts.json",
       "nodeId": "document:prompts.json",
       "type": "document",
@@ -6985,6 +7211,46 @@
       "sourcePath": "skills.json",
       "metadata": {
         "extension": ".json"
+      }
+    },
+    {
+      "id": "entity:document:specs/README.md",
+      "nodeId": "document:specs/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": "specs/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:specs/phase-9-professional-context/design.md",
+      "nodeId": "document:specs/phase-9-professional-context/design.md",
+      "type": "document",
+      "name": "Design",
+      "sourcePath": "specs/phase-9-professional-context/design.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:specs/phase-9-professional-context/requirements.md",
+      "nodeId": "document:specs/phase-9-professional-context/requirements.md",
+      "type": "document",
+      "name": "Requirements",
+      "sourcePath": "specs/phase-9-professional-context/requirements.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:specs/phase-9-professional-context/tasks.md",
+      "nodeId": "document:specs/phase-9-professional-context/tasks.md",
+      "type": "document",
+      "name": "Tasks",
+      "sourcePath": "specs/phase-9-professional-context/tasks.md",
+      "metadata": {
+        "extension": ".md"
       }
     },
     {
@@ -9073,6 +9339,8 @@
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/memory/decision-memory.md",
       "doc:templates/memory/lesson-memory.md",
       "doc:templates/memory/permanent-memory.md",
@@ -9113,8 +9381,101 @@
       "entity:memory:lesson-validate-generated-files-before-committing-001",
       "entity:memory:session-memory-engine-example-001"
     ],
+    "002": [
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "003": [
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "004": [
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "005": [
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "006": [
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "007": [
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "008": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "009": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "010": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "011": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "012": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "013": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "014": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "015": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "016": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "017": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "018": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "019": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "020": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "021": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "022": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "023": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "024": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "025": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "026": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "027": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "028": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "029": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "07": [
       "doc:CHANGELOG.md"
+    ],
+    "10": [
+      "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
     "15": [
       "doc:CHANGELOG.md",
@@ -9149,6 +9510,7 @@
     "acceptance": [
       "doc:prompts/plan.prompt.md",
       "doc:prompts/specify.prompt.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-memory/REQUIREMENTS.md",
       "doc:templates/project-starters/automation/HANDOFF.md",
@@ -9232,6 +9594,9 @@
       "entity:memory:session-memory-engine-example-001"
     ],
     "activity": [
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:generated/work-activity.json"
     ],
     "adaptation": [
@@ -9243,7 +9608,8 @@
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:prompts/debug.prompt.md",
-      "doc:references/workflow-examples.md"
+      "doc:references/workflow-examples.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "added": [
       "doc:CHANGELOG.md",
@@ -9269,6 +9635,10 @@
     ],
     "address": [
       "doc:knowledge/workflows/knowledge-maintenance.json"
+    ],
+    "adds": [
+      "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:specs/phase-9-professional-context/design.md"
     ],
     "administrator": [
       "doc:prompts/document.prompt.md"
@@ -9453,6 +9823,12 @@
       "entity:document:templates/project-starters/python/AGENTS.md",
       "entity:document:templates/project-starters/web-app/AGENTS.md"
     ],
+    "aggregation": [
+      "doc:specs/phase-9-professional-context/requirements.md"
+    ],
+    "agnostic": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "ai": [
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
@@ -9475,6 +9851,7 @@
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/README.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-memory/HANDOFF.md",
@@ -9502,8 +9879,12 @@
     "aligned": [
       "doc:.github/instructions/prompts.instructions.md"
     ],
+    "alike": [
+      "doc:specs/README.md"
+    ],
     "all": [
-      "doc:.agent/skills/system/superpower/SKILL.md"
+      "doc:.agent/skills/system/superpower/SKILL.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "allowed": [
       "doc:knowledge/workflows/bug-fix.json",
@@ -9524,6 +9905,9 @@
       "doc:templates/project-starters/python/HANDOFF.md",
       "doc:templates/project-starters/web-app/HANDOFF.md"
     ],
+    "allowlists": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "also": [
       "doc:docs/continuous-learning.md"
     ],
@@ -9535,11 +9919,14 @@
       "doc:agents/architect.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:prompts/design.prompt.md",
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/memory/decision-memory.md",
       "doc:templates/specifications/design.md"
     ],
     "an": [
-      "doc:knowledge/workflows/incident-response.json"
+      "doc:knowledge/workflows/incident-response.json",
+      "doc:profile/README.md",
+      "doc:specs/phase-9-professional-context/design.md"
     ],
     "analysis": [
       "doc:.agent/skills/personal/analytical/SKILL.md",
@@ -9638,6 +10025,7 @@
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -9668,6 +10056,7 @@
       "doc:memory/permanent/preferences/README.md",
       "doc:memory/permanent/principles/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:profile/README.md",
       "doc:prompts/create-skill.prompt.md",
       "doc:prompts/debug.prompt.md",
       "doc:prompts/design.prompt.md",
@@ -9690,6 +10079,10 @@
       "doc:references/workflow-examples.md",
       "doc:scripts/README.md",
       "doc:scripts/knowledge_graph/README.md",
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/accessibility.md",
       "doc:standards/code-review.md",
       "doc:standards/documentation.md",
@@ -9824,13 +10217,15 @@
       "doc:prompts/deploy.prompt.md",
       "doc:references/vercel.md",
       "doc:references/workflow-examples.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:standards/release-management.md",
       "doc:standards/security.md",
       "doc:templates/specifications/deployment-plan.md",
       "entity:document:docs/memory-approval.md"
     ],
     "approvals": [
-      "doc:docs/memory-approval.md"
+      "doc:docs/memory-approval.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "approve": [
       "doc:.kiro/steering/workflow.md"
@@ -9845,6 +10240,7 @@
       "doc:prompts/execute.prompt.md",
       "doc:prompts/review.prompt.md",
       "doc:references/workflow-examples.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-starters/automation/AGENTS.md",
       "doc:templates/project-starters/documentation/AGENTS.md",
@@ -9914,10 +10310,13 @@
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/decisions/README.md",
       "doc:memory/permanent/principles/README.md",
       "doc:prompts/design.prompt.md",
       "doc:references/claude.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/ARCHITECTURE.md",
       "doc:templates/project-memory/CLAUDE.md",
       "doc:templates/project-starters/automation/ARCHITECTURE.md",
@@ -9945,6 +10344,7 @@
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "entity:document:knowledge/architecture/phase-9-professional-context.md",
       "entity:document:templates/project-memory/ARCHITECTURE.md",
       "entity:document:templates/project-starters/automation/ARCHITECTURE.md",
       "entity:document:templates/project-starters/documentation/ARCHITECTURE.md",
@@ -9977,6 +10377,7 @@
       "doc:docs/knowledge-health.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:references/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:memory:decision-memory-index-source-truth-001"
     ],
     "artifacts": [
@@ -9990,6 +10391,9 @@
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:knowledge/workflows/release-preparation.json",
       "doc:references/workflow-examples.md"
+    ],
+    "as": [
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "assess": [
       "doc:agents/security-reviewer.md",
@@ -10023,6 +10427,7 @@
     "assumptions": [
       "doc:.agent/skills/personal/analytical/SKILL.md",
       "doc:prompts/plan.prompt.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/automation/HANDOFF.md",
       "doc:templates/project-starters/documentation/HANDOFF.md",
@@ -10035,6 +10440,7 @@
       "doc:templates/specifications/requirements.md"
     ],
     "at": [
+      "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/structure.md"
     ],
     "audience": [
@@ -10060,7 +10466,8 @@
     ],
     "authored": [
       "doc:CHANGELOG.md",
-      "doc:knowledge/workflows/README.md"
+      "doc:knowledge/workflows/README.md",
+      "doc:profile/README.md"
     ],
     "authoritative": [
       "doc:memory/decisions/decision-memory-index-source-truth-001.md"
@@ -10224,7 +10631,9 @@
     "based": [
       "doc:.agent/skills/personal/analytical/SKILL.md",
       "doc:README.md",
-      "doc:memory/README.md"
+      "doc:memory/README.md",
+      "doc:profile/README.md",
+      "doc:specs/phase-9-professional-context/design.md"
     ],
     "be": [
       "doc:memory/sessions/session-memory-engine-example-001.md",
@@ -10236,9 +10645,13 @@
       "doc:CONTRIBUTING.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/git.md",
       "entity:memory:lesson-powerapps-refresh-001",
       "entity:memory:lesson-validate-generated-files-before-committing-001"
+    ],
+    "begin": [
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "behavior": [
       "doc:.agent/skills/communication-skill/SKILL.md",
@@ -10246,6 +10659,7 @@
       "doc:.github/README.md",
       "doc:.kiro/README.md",
       "doc:.kiro/steering/README.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/workflows/bug-fix.json",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/feature-development.json",
@@ -10310,9 +10724,13 @@
     "bootstrap": [
       "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
+    "both": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "boundaries": [
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
-      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
     "boundary": [
       "doc:references/canva.md",
@@ -10323,7 +10741,8 @@
       "doc:references/kiro.md",
       "doc:references/mcp.md",
       "doc:references/v0.md",
-      "doc:references/vercel.md"
+      "doc:references/vercel.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "bounded": [
       "doc:.kiro/steering/workflow.md",
@@ -10373,7 +10792,8 @@
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:docs/agent-orchestration.md",
       "doc:knowledge/workflows/README.md",
-      "doc:references/README.md"
+      "doc:references/README.md",
+      "doc:specs/README.md"
     ],
     "can": [
       "doc:references/copilot.md"
@@ -10387,7 +10807,10 @@
     "canonical": [
       "doc:.kiro/README.md",
       "doc:.kiro/specs/README.md",
-      "doc:CHANGELOG.md"
+      "doc:.kiro/specs/phase-9-professional-context/README.md",
+      "doc:CHANGELOG.md",
+      "doc:profile/README.md",
+      "doc:specs/phase-9-professional-context/design.md"
     ],
     "canva": [
       "doc:references/canva.md",
@@ -10429,6 +10852,12 @@
       "doc:memory/decisions/README.md",
       "doc:memory/permanent/conventions/README.md",
       "doc:memory/permanent/preferences/README.md"
+    ],
+    "captures": [
+      "doc:specs/phase-9-professional-context/requirements.md"
+    ],
+    "capturing": [
+      "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
     "categories": [
       "doc:docs/knowledge-health.md"
@@ -10530,16 +10959,19 @@
     ],
     "chat": [
       "doc:.agent/skills/communication-skill/README.md",
-      "doc:.agent/skills/communication-skill/SKILL.md"
+      "doc:.agent/skills/communication-skill/SKILL.md",
+      "doc:specs/README.md"
     ],
     "chatgpt": [
       "doc:.agent/skills/communication-skill/README.md",
       "doc:references/chatgpt.md",
+      "doc:specs/README.md",
       "entity:document:references/chatgpt.md"
     ],
     "check": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/code-review.md"
     ],
     "checklist": [
@@ -10579,7 +11011,8 @@
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "classify": [
-      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "claude": [
       "doc:.agent/skills/communication-skill/README.md",
@@ -10589,6 +11022,7 @@
       "doc:CLAUDE.md",
       "doc:examples/mcp/README.md",
       "doc:references/claude.md",
+      "doc:specs/README.md",
       "doc:templates/project-memory/CLAUDE.md",
       "doc:templates/project-starters/automation/CLAUDE.md",
       "doc:templates/project-starters/documentation/CLAUDE.md",
@@ -10627,7 +11061,8 @@
     "cli": [
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
-      "doc:knowledge/architecture/phase-7-release-hardening.md"
+      "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "client": [
       "doc:examples/mcp/README.md",
@@ -10656,6 +11091,7 @@
     "codex": [
       "doc:.agent/skills/references/codex-tools.md",
       "doc:references/codex.md",
+      "doc:specs/README.md",
       "entity:document:.agent/skills/references/codex-tools.md",
       "entity:document:references/codex.md",
       "entity:platform:codex"
@@ -10690,7 +11126,8 @@
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
-      "doc:memory/README.md"
+      "doc:memory/README.md",
+      "doc:profile/README.md"
     ],
     "commit": [
       "doc:.kiro/steering/workflow.md",
@@ -10714,6 +11151,7 @@
     "committing": [
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:prompts/execute.prompt.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:memory:lesson-validate-generated-files-before-committing-001"
     ],
     "common": [
@@ -10743,6 +11181,7 @@
       "doc:.agent/skills/research/SKILL.md"
     ],
     "compatibility": [
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md"
     ],
     "compatible": [
@@ -10779,6 +11218,7 @@
     "components": [
       "doc:agents/architect.md",
       "doc:prompts/design.prompt.md",
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/project-memory/ARCHITECTURE.md",
       "doc:templates/project-memory/DESIGN.md",
       "doc:templates/project-starters/automation/ARCHITECTURE.md",
@@ -10824,6 +11264,9 @@
     ],
     "conclusions": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
+    ],
+    "condition": [
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "confidence": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -10872,6 +11315,7 @@
     ],
     "considered": [
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/memory/decision-memory.md",
       "doc:templates/specifications/design.md"
     ],
@@ -10882,6 +11326,7 @@
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md"
     ],
     "constraints": [
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md"
     ],
     "construction": [
@@ -10903,13 +11348,18 @@
       "doc:.agent/skills/system/using-superpowers/README.md",
       "doc:.github/README.md"
     ],
+    "conte": [
+      "doc:specs/phase-9-professional-context/requirements.md"
+    ],
     "content": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.github/instructions/markdown.instructions.md",
-      "doc:CONTRIBUTING.md"
+      "doc:CONTRIBUTING.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "context": [
       "doc:.kiro/README.md",
+      "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/README.md",
       "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
@@ -10919,14 +11369,19 @@
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
       "doc:examples/mcp/README.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/projects/README.md",
       "doc:memory/sessions/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:profile/README.md",
       "doc:prompts/research.prompt.md",
       "doc:references/claude.md",
       "doc:references/mcp.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/memory/decision-memory.md",
       "doc:templates/memory/permanent-memory.md",
       "doc:templates/memory/project-memory.md",
@@ -10948,7 +11403,12 @@
       "doc:templates/project-starters/python/CLAUDE.md",
       "doc:templates/project-starters/python/SESSION.md",
       "doc:templates/project-starters/web-app/CLAUDE.md",
-      "doc:templates/project-starters/web-app/SESSION.md"
+      "doc:templates/project-starters/web-app/SESSION.md",
+      "entity:document:.kiro/specs/phase-9-professional-context/README.md",
+      "entity:document:knowledge/architecture/phase-9-professional-context.md",
+      "entity:document:specs/phase-9-professional-context/design.md",
+      "entity:document:specs/phase-9-professional-context/requirements.md",
+      "entity:document:specs/phase-9-professional-context/tasks.md"
     ],
     "continuous": [
       "doc:ARCHITECTURE.md",
@@ -10971,7 +11431,8 @@
     ],
     "contributors": [
       "doc:GOVERNANCE.md",
-      "doc:RELEASE_NOTES_v0.8.0.md"
+      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:specs/README.md"
     ],
     "control": [
       "doc:AGENTS.md"
@@ -11012,6 +11473,7 @@
       "doc:.github/copilot-instructions.md",
       "doc:.github/instructions/README.md",
       "doc:references/copilot.md",
+      "doc:specs/README.md",
       "entity:document:.agent/skills/references/copilot-tools.md",
       "entity:document:.github/copilot-instructions.md",
       "entity:document:references/copilot.md",
@@ -11026,7 +11488,8 @@
       "doc:.kiro/steering/structure.md",
       "doc:.kiro/steering/technology.md",
       "doc:README.md",
-      "doc:ROADMAP.md"
+      "doc:ROADMAP.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "corporate": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -11038,6 +11501,7 @@
       "doc:standards/testing.md"
     ],
     "coverage": [
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/code-review.md"
     ],
     "create": [
@@ -11045,6 +11509,7 @@
       "doc:prompts/create-skill.prompt.md",
       "doc:prompts/document.prompt.md",
       "doc:prompts/specify.prompt.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-starters/README.md",
       "entity:document:prompts/create-skill.prompt.md"
     ],
@@ -11099,6 +11564,7 @@
     ],
     "current": [
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/memory/session-memory.md",
       "doc:templates/project-memory/ARCHITECTURE.md",
       "doc:templates/project-memory/ROADMAP.md",
@@ -11135,6 +11601,9 @@
     "customer": [
       "doc:SECURITY.md"
     ],
+    "dash": [
+      "doc:specs/phase-9-professional-context/design.md"
+    ],
     "dashboard": [
       "doc:ARCHITECTURE.md",
       "doc:ROADMAP.md",
@@ -11142,6 +11611,8 @@
       "doc:config/ai-os.example.json",
       "doc:docs/agent-orchestration.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
     "data": [
@@ -11149,8 +11620,12 @@
       "doc:SECURITY.md",
       "doc:agents/security-reviewer.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:prompts/design.prompt.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/security.md",
       "doc:templates/project-memory/ARCHITECTURE.md",
       "doc:templates/project-memory/DESIGN.md",
@@ -11280,6 +11755,9 @@
     "defect": [
       "doc:knowledge/workflows/bug-fix.json"
     ],
+    "deferred": [
+      "doc:knowledge/architecture/phase-9-professional-context.md"
+    ],
     "define": [
       "doc:prompts/design.prompt.md",
       "doc:prompts/plan.prompt.md",
@@ -11307,6 +11785,7 @@
     "dependencies": [
       "doc:prompts/plan.prompt.md",
       "doc:prompts/specify.prompt.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/automation/HANDOFF.md",
       "doc:templates/project-starters/documentation/HANDOFF.md",
@@ -11352,6 +11831,7 @@
       "doc:prompts/design.prompt.md",
       "doc:references/vercel.md",
       "doc:references/workflow-examples.md",
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:standards/release-management.md",
       "doc:templates/project-memory/ARCHITECTURE.md",
       "doc:templates/project-starters/automation/ARCHITECTURE.md",
@@ -11372,6 +11852,7 @@
     ],
     "derived": [
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
+      "doc:specs/phase-9-professional-context/design.md",
       "entity:memory:decision-memory-index-source-truth-001"
     ],
     "describe": [
@@ -11407,6 +11888,9 @@
       "doc:prompts/review.prompt.md",
       "doc:references/claude.md",
       "doc:references/kiro.md",
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/DESIGN.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-memory/SESSION.md",
@@ -11438,6 +11922,7 @@
       "entity:document:.agent/skills/design/browser/README.md",
       "entity:document:.agent/skills/design/ui-ux-pro-max/README.md",
       "entity:document:prompts/design.prompt.md",
+      "entity:document:specs/phase-9-professional-context/design.md",
       "entity:document:templates/project-memory/DESIGN.md",
       "entity:document:templates/project-starters/automation/DESIGN.md",
       "entity:document:templates/project-starters/documentation/DESIGN.md",
@@ -11486,7 +11971,8 @@
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
     "determinism": [
-      "doc:knowledge/architecture/phase-3-knowledge-graph.md"
+      "doc:knowledge/architecture/phase-3-knowledge-graph.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
     "deterministic": [
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -11535,7 +12021,9 @@
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
     ],
     "directory": [
-      "doc:ARCHITECTURE.md"
+      "doc:ARCHITECTURE.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "discovery": [
       "doc:ARCHITECTURE.md",
@@ -11544,6 +12032,7 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:scripts/knowledge_graph/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md"
     ],
     "distinct": [
@@ -11557,6 +12046,7 @@
       "doc:.github/instructions/README.md",
       "doc:.github/instructions/specifications.instructions.md",
       "doc:prompts/create-skill.prompt.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/automation/AGENTS.md",
@@ -11602,6 +12092,7 @@
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:prompts/deploy.prompt.md",
       "doc:prompts/document.prompt.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:.agent/skills/communication-skill/README.md",
       "entity:document:.agent/skills/communication-skill/anti-ai-writing.md",
       "entity:document:.agent/skills/communication-skill/examples.md",
@@ -11632,6 +12123,7 @@
       "entity:document:.github/workflows/README.md",
       "entity:document:.kiro/README.md",
       "entity:document:.kiro/specs/README.md",
+      "entity:document:.kiro/specs/phase-9-professional-context/README.md",
       "entity:document:.kiro/steering/README.md",
       "entity:document:.kiro/steering/product.md",
       "entity:document:.kiro/steering/structure.md",
@@ -11682,6 +12174,7 @@
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "entity:document:knowledge/architecture/phase-9-professional-context.md",
       "entity:document:knowledge/best-practices/README.md",
       "entity:document:knowledge/documentation/README.md",
       "entity:document:knowledge/future-ideas/README.md",
@@ -11715,6 +12208,8 @@
       "entity:document:memory/projects/README.md",
       "entity:document:memory/registry.json",
       "entity:document:memory/sessions/README.md",
+      "entity:document:profile/README.md",
+      "entity:document:profile/registry.json",
       "entity:document:prompts.json",
       "entity:document:prompts/README.md",
       "entity:document:prompts/create-skill.prompt.md",
@@ -11745,6 +12240,10 @@
       "entity:document:scripts/README.md",
       "entity:document:scripts/knowledge_graph/README.md",
       "entity:document:skills.json",
+      "entity:document:specs/README.md",
+      "entity:document:specs/phase-9-professional-context/design.md",
+      "entity:document:specs/phase-9-professional-context/requirements.md",
+      "entity:document:specs/phase-9-professional-context/tasks.md",
       "entity:document:standards/README.md",
       "entity:document:standards/accessibility.md",
       "entity:document:standards/code-review.md",
@@ -11930,6 +12429,7 @@
       "doc:prompts/document.prompt.md",
       "doc:references/canva.md",
       "doc:references/chatgpt.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/code-review.md",
       "doc:standards/documentation.md",
       "doc:templates/project-memory/SESSION.md",
@@ -12092,6 +12592,7 @@
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:memory/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "entity:memory:session-memory-engine-example-001"
     ],
     "engineer": [
@@ -12111,6 +12612,7 @@
       "doc:templates/specifications/deployment-plan.md"
     ],
     "error": [
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/specifications/design.md"
     ],
     "establish": [
@@ -12144,14 +12646,18 @@
       "doc:.agent/skills/personal/analytical/SKILL.md",
       "doc:agents/builder.md",
       "doc:agents/researcher.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:profile/README.md",
       "doc:prompts/debug.prompt.md",
       "doc:prompts/qa.prompt.md",
       "doc:prompts/review.prompt.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/testing.md",
       "doc:templates/memory/decision-memory.md",
       "doc:templates/memory/lesson-memory.md",
@@ -12185,6 +12691,7 @@
       "doc:.agent/skills/communication-skill/examples.md",
       "doc:examples/mcp/README.md",
       "doc:examples/mcp/server-config.example.json",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:references/workflow-examples.md",
       "doc:standards/documentation.md",
       "entity:document:.agent/skills/communication-skill/examples.md",
@@ -12247,6 +12754,12 @@
     "expert": [
       "doc:.agent/skills/personal/simplify/SKILL.md"
     ],
+    "expertise": [
+      "doc:profile/README.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "explanation": [
       "doc:.agent/skills/thinking/SKILL.md"
     ],
@@ -12258,6 +12771,7 @@
       "doc:.kiro/steering/technology.md",
       "doc:CHANGELOG.md",
       "doc:CLAUDE.md",
+      "doc:profile/README.md",
       "doc:references/mcp.md",
       "doc:templates/project-memory/CLAUDE.md",
       "doc:templates/project-starters/automation/CLAUDE.md",
@@ -12278,8 +12792,13 @@
     "exposes": [
       "doc:examples/mcp/README.md"
     ],
+    "exposure": [
+      "doc:specs/phase-9-professional-context/requirements.md"
+    ],
     "extend": [
-      "doc:knowledge/workflows/documentation-update.json"
+      "doc:knowledge/workflows/documentation-update.json",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "extension": [
       "doc:ARCHITECTURE.md",
@@ -12298,6 +12817,7 @@
       "doc:prompts/research.prompt.md"
     ],
     "failure": [
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/workflows/bug-fix.json",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/feature-development.json",
@@ -12326,6 +12846,7 @@
     "feature": [
       "doc:.kiro/specs/README.md",
       "doc:knowledge/workflows/feature-development.json",
+      "doc:specs/README.md",
       "entity:document:knowledge/workflows/feature-development.json"
     ],
     "feedback": [
@@ -12386,7 +12907,8 @@
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:GOVERNANCE.md",
-      "doc:RELEASE_NOTES_v0.8.0.md"
+      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "find": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
@@ -12404,7 +12926,9 @@
       "doc:.agent/skills/personal/clear-concise-writing/SKILL.md",
       "doc:.kiro/steering/workflow.md",
       "doc:AGENTS.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/README.md"
     ],
     "five": [
@@ -12436,8 +12960,10 @@
     ],
     "flow": [
       "doc:ARCHITECTURE.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:prompts/design.prompt.md",
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/project-memory/ARCHITECTURE.md",
       "doc:templates/project-memory/DESIGN.md",
       "doc:templates/project-starters/automation/ARCHITECTURE.md",
@@ -12546,6 +13072,8 @@
       "doc:memory/sessions/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:scripts/knowledge_graph/README.md",
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/README.md",
       "doc:standards/git.md",
       "doc:templates/memory/README.md",
@@ -12562,6 +13090,9 @@
       "doc:knowledge/workflows/procedure-creation.json",
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:knowledge/workflows/release-preparation.json"
+    ],
+    "force": [
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "format": [
       "doc:.agent/skills/thinking/SKILL.md",
@@ -12599,8 +13130,12 @@
       "doc:.github/instructions/skills.instructions.md",
       "doc:.kiro/steering/technology.md"
     ],
+    "full": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "functional": [
       "doc:prompts/specify.prompt.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md"
     ],
     "future": [
@@ -12627,6 +13162,9 @@
     "gaps": [
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
+    "gated": [
+      "doc:specs/phase-9-professional-context/requirements.md"
+    ],
     "gates": [
       "doc:WORKFLOW.md",
       "doc:agents/project-manager.md"
@@ -12640,7 +13178,8 @@
       "entity:document:.agent/skills/references/gemini-tools.md"
     ],
     "generate": [
-      "doc:.agent/skills/communication-skill/SKILL.md"
+      "doc:.agent/skills/communication-skill/SKILL.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "generated": [
       "doc:docs/agent-orchestration.md",
@@ -12657,6 +13196,13 @@
     "generation": [
       "doc:config/ai-os.example.json",
       "doc:references/v0.md"
+    ],
+    "generator": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "generators": [
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "generic": [
       "doc:.agent/skills/communication-skill/SKILL.md",
@@ -12750,6 +13296,7 @@
     "goals": [
       "doc:ARCHITECTURE.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/project-memory/REQUIREMENTS.md",
       "doc:templates/project-starters/automation/REQUIREMENTS.md",
       "doc:templates/project-starters/documentation/REQUIREMENTS.md",
@@ -12773,7 +13320,8 @@
       "doc:SECURITY.md"
     ],
     "gpt": [
-      "doc:.agent/skills/communication-skill/README.md"
+      "doc:.agent/skills/communication-skill/README.md",
+      "doc:specs/README.md"
     ],
     "graph": [
       "doc:ARCHITECTURE.md",
@@ -12787,11 +13335,22 @@
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:references/workflow-examples.md",
       "doc:scripts/knowledge_graph/README.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:knowledge/architecture/phase-3-knowledge-graph.md",
       "entity:document:scripts/knowledge_graph/README.md"
     ],
+    "grouped": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "guarantee": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "guaranteed": [
       "doc:references/README.md"
+    ],
+    "guard": [
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "guidance": [
       "doc:.agent/skills/communication-skill/SKILL.md",
@@ -12865,6 +13424,7 @@
       "doc:knowledge/workflows/README.md"
     ],
     "handling": [
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:standards/security.md",
       "doc:templates/specifications/deployment-plan.md",
       "doc:templates/specifications/design.md"
@@ -12965,7 +13525,8 @@
       "doc:knowledge/research-notes/README.md",
       "doc:knowledge/security/README.md",
       "doc:knowledge/sharepoint/README.md",
-      "doc:knowledge/vscode/README.md"
+      "doc:knowledge/vscode/README.md",
+      "doc:specs/README.md"
     ],
     "hold": [
       "doc:memory/sessions/README.md"
@@ -13000,11 +13561,15 @@
       "doc:knowledge/workflows/release-preparation.json",
       "doc:prompts/deploy.prompt.md",
       "doc:references/workflow-examples.md",
+      "doc:specs/README.md",
       "doc:standards/git.md",
       "doc:standards/security.md"
     ],
     "humans": [
       "doc:GOVERNANCE.md"
+    ],
+    "hygiene": [
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "hyphenated": [
       "doc:CONTRIBUTING.md",
@@ -13021,7 +13586,8 @@
       "doc:knowledge/workflows/release-preparation.json",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
-      "doc:schemas/skill.schema.json"
+      "doc:schemas/skill.schema.json",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "ideas": [
       "doc:knowledge/future-ideas/README.md",
@@ -13056,11 +13622,14 @@
       "doc:.github/instructions/specifications.instructions.md",
       "doc:agents/builder.md",
       "doc:knowledge/workflows/feature-development.json",
-      "doc:prompts/execute.prompt.md"
+      "doc:prompts/execute.prompt.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "implementation": [
       "doc:WORKFLOW.md",
-      "doc:references/kiro.md"
+      "doc:references/kiro.md",
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "implemented": [
       "doc:ROADMAP.md",
@@ -13090,6 +13659,7 @@
       "doc:memory/sessions/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:scripts/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/memory/session-memory.md"
     ],
     "incident": [
@@ -13113,6 +13683,7 @@
     "index": [
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:generated/memory-index.json",
       "entity:document:generated/profile-index.json",
       "entity:document:generated/repository-index.json",
@@ -13208,7 +13779,9 @@
       "doc:WORKFLOW.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:references/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/naming.md",
       "doc:templates/specifications/testing-plan.md",
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md"
@@ -13221,7 +13794,11 @@
       "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
       "doc:README.md",
-      "doc:ROADMAP.md"
+      "doc:ROADMAP.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "intent": [
       "doc:knowledge/workflows/bug-fix.json",
@@ -13248,6 +13825,7 @@
     "interfaces": [
       "doc:agents/architect.md",
       "doc:prompts/design.prompt.md",
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/project-memory/DESIGN.md",
       "doc:templates/project-starters/automation/DESIGN.md",
       "doc:templates/project-starters/documentation/DESIGN.md",
@@ -13298,7 +13876,8 @@
     ],
     "into": [
       "doc:agents/planner.md",
-      "doc:docs/continuous-learning.md"
+      "doc:docs/continuous-learning.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "introduced": [
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -13315,13 +13894,17 @@
     ],
     "is": [
       "doc:.kiro/specs/README.md",
+      "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:ARCHITECTURE.md",
       "doc:README.md",
       "doc:agents/README.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/knowledge-health.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:profile/README.md",
+      "doc:specs/README.md",
       "doc:templates/memory/session-memory.md"
     ],
     "issue": [
@@ -13376,6 +13959,7 @@
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:specs/README.md",
       "doc:templates/memory/decision-memory.md",
       "doc:templates/memory/lesson-memory.md",
       "doc:templates/memory/permanent-memory.md",
@@ -13441,6 +14025,7 @@
       "doc:knowledge/workflows/release-preparation.json",
       "doc:memory/README.md",
       "doc:memory/registry.json",
+      "doc:profile/registry.json",
       "doc:prompts.json",
       "doc:prompts/README.md",
       "doc:schemas/memory.schema.json",
@@ -13464,6 +14049,7 @@
       "entity:document:knowledge/workflows/project-onboarding.json",
       "entity:document:knowledge/workflows/release-preparation.json",
       "entity:document:memory/registry.json",
+      "entity:document:profile/registry.json",
       "entity:document:prompts.json",
       "entity:document:schemas/memory.schema.json",
       "entity:document:schemas/project.schema.json",
@@ -13492,6 +14078,7 @@
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.kiro/README.md",
       "doc:.kiro/specs/README.md",
+      "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/README.md",
       "doc:.kiro/steering/product.md",
       "doc:.kiro/steering/structure.md",
@@ -13499,8 +14086,11 @@
       "doc:.kiro/steering/workflow.md",
       "doc:examples/mcp/README.md",
       "doc:references/kiro.md",
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:.kiro/README.md",
       "entity:document:.kiro/specs/README.md",
+      "entity:document:.kiro/specs/phase-9-professional-context/README.md",
       "entity:document:.kiro/steering/README.md",
       "entity:document:.kiro/steering/product.md",
       "entity:document:.kiro/steering/structure.md",
@@ -13525,6 +14115,7 @@
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -13549,6 +14140,8 @@
       "doc:knowledge/workflows/release-preparation.json",
       "doc:references/workflow-examples.md",
       "doc:scripts/knowledge_graph/README.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/RETROSPECTIVE.md",
       "doc:templates/project-starters/automation/RETROSPECTIVE.md",
       "doc:templates/project-starters/documentation/RETROSPECTIVE.md",
@@ -13569,6 +14162,7 @@
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "entity:document:knowledge/architecture/phase-9-professional-context.md",
       "entity:document:knowledge/best-practices/README.md",
       "entity:document:knowledge/documentation/README.md",
       "entity:document:knowledge/future-ideas/README.md",
@@ -13631,7 +14225,10 @@
     ],
     "layer": [
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
-      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "layers": [
       "doc:.kiro/steering/structure.md",
@@ -13714,6 +14311,9 @@
     "let": [
       "doc:.kiro/steering/workflow.md"
     ],
+    "level": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "library": [
       "doc:.kiro/steering/technology.md",
       "doc:ROADMAP.md",
@@ -13767,12 +14367,18 @@
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
-      "doc:memory/README.md"
+      "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:memory/README.md",
+      "doc:specs/phase-9-professional-context/requirements.md"
+    ],
+    "located": [
+      "doc:.kiro/specs/phase-9-professional-context/README.md"
     ],
     "log": [
       "doc:docs/knowledge-health.md"
     ],
     "logging": [
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/specifications/design.md"
     ],
     "logical": [
@@ -13807,6 +14413,7 @@
       "doc:examples/mcp/README.md"
     ],
     "maintainability": [
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:standards/code-review.md",
       "doc:templates/specifications/requirements.md"
     ],
@@ -13836,6 +14443,7 @@
       "doc:schemas/project.schema.json"
     ],
     "manual": [
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/TESTING.md",
       "doc:templates/project-starters/automation/TESTING.md",
       "doc:templates/project-starters/documentation/TESTING.md",
@@ -13903,6 +14511,9 @@
       "doc:examples/mcp/server-config.example.json",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:references/mcp.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:examples/mcp/README.md",
       "entity:document:examples/mcp/server-config.example.json",
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
@@ -13954,6 +14565,7 @@
       "doc:.github/workflows/README.md",
       "doc:.kiro/README.md",
       "doc:.kiro/specs/README.md",
+      "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/README.md",
       "doc:.kiro/steering/product.md",
       "doc:.kiro/steering/structure.md",
@@ -13996,6 +14608,7 @@
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -14025,6 +14638,7 @@
       "doc:memory/projects/README.md",
       "doc:memory/sessions/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:profile/README.md",
       "doc:prompts/README.md",
       "doc:prompts/create-skill.prompt.md",
       "doc:prompts/debug.prompt.md",
@@ -14050,6 +14664,10 @@
       "doc:references/workflow-examples.md",
       "doc:scripts/README.md",
       "doc:scripts/knowledge_graph/README.md",
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/README.md",
       "doc:standards/accessibility.md",
       "doc:standards/code-review.md",
@@ -14250,6 +14868,7 @@
       "entity:document:.github/workflows/README.md",
       "entity:document:.kiro/README.md",
       "entity:document:.kiro/specs/README.md",
+      "entity:document:.kiro/specs/phase-9-professional-context/README.md",
       "entity:document:.kiro/steering/README.md",
       "entity:document:.kiro/steering/product.md",
       "entity:document:.kiro/steering/structure.md",
@@ -14292,6 +14911,7 @@
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "entity:document:knowledge/architecture/phase-9-professional-context.md",
       "entity:document:knowledge/best-practices/README.md",
       "entity:document:knowledge/documentation/README.md",
       "entity:document:knowledge/future-ideas/README.md",
@@ -14316,6 +14936,7 @@
       "entity:document:memory/permanent/principles/README.md",
       "entity:document:memory/projects/README.md",
       "entity:document:memory/sessions/README.md",
+      "entity:document:profile/README.md",
       "entity:document:prompts/README.md",
       "entity:document:prompts/create-skill.prompt.md",
       "entity:document:prompts/debug.prompt.md",
@@ -14341,6 +14962,10 @@
       "entity:document:references/workflow-examples.md",
       "entity:document:scripts/README.md",
       "entity:document:scripts/knowledge_graph/README.md",
+      "entity:document:specs/README.md",
+      "entity:document:specs/phase-9-professional-context/design.md",
+      "entity:document:specs/phase-9-professional-context/requirements.md",
+      "entity:document:specs/phase-9-professional-context/tasks.md",
       "entity:document:standards/README.md",
       "entity:document:standards/accessibility.md",
       "entity:document:standards/code-review.md",
@@ -14578,6 +15203,8 @@
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:references/workflow-examples.md",
       "doc:schemas/memory.schema.json",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/README.md",
       "doc:templates/memory/README.md",
       "doc:templates/memory/decision-memory.md",
@@ -14658,6 +15285,9 @@
     "merge": [
       "doc:standards/git.md"
     ],
+    "merging": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "messages": [
       "doc:standards/git.md"
     ],
@@ -14684,7 +15314,10 @@
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:references/mcp.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/design.md"
     ],
     "models": [
@@ -14702,9 +15335,13 @@
     ],
     "monitoring": [
       "doc:prompts/deploy.prompt.md",
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:standards/release-management.md",
       "doc:templates/specifications/deployment-plan.md",
       "doc:templates/specifications/design.md"
+    ],
+    "moved": [
+      "doc:.kiro/specs/phase-9-professional-context/README.md"
     ],
     "multi": [
       "doc:standards/naming.md"
@@ -14775,12 +15412,14 @@
       "doc:.kiro/steering/product.md"
     ],
     "neutral": [
-      "doc:knowledge/architecture/phase-6-mcp-integration.md"
+      "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:specs/README.md"
     ],
     "never": [
       "doc:SECURITY.md",
       "doc:knowledge/workflows/release-preparation.json",
       "doc:prompts/deploy.prompt.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/git.md"
     ],
     "new": [
@@ -14788,7 +15427,10 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/workflows/feature-development.json",
       "doc:knowledge/workflows/procedure-creation.json",
-      "doc:knowledge/workflows/project-onboarding.json"
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "next": [
       "doc:.agent/skills/personal/analytical/SKILL.md",
@@ -14808,7 +15450,8 @@
     "no": [
       "doc:docs/feedback-and-audit.md",
       "doc:docs/knowledge-health.md",
-      "doc:scripts/README.md"
+      "doc:scripts/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "node": [
       "doc:knowledge/architecture/phase-3-knowledge-graph.md"
@@ -14818,6 +15461,7 @@
       "doc:ARCHITECTURE.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:prompts/specify.prompt.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/project-memory/REQUIREMENTS.md",
       "doc:templates/project-starters/automation/REQUIREMENTS.md",
       "doc:templates/project-starters/documentation/REQUIREMENTS.md",
@@ -14858,8 +15502,10 @@
       "doc:knowledge/vscode/README.md",
       "doc:memory/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
+      "doc:profile/README.md",
       "doc:prompts/create-skill.prompt.md",
       "doc:references/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-memory/RETROSPECTIVE.md",
@@ -14942,7 +15588,8 @@
     ],
     "nothing": [
       "doc:docs/feedback-and-audit.md",
-      "doc:docs/memory-approval.md"
+      "doc:docs/memory-approval.md",
+      "doc:specs/README.md"
     ],
     "number": [
       "doc:templates/project-memory/decisions.md",
@@ -14995,7 +15642,14 @@
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:memory/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
+      "doc:profile/README.md",
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:memory:decision-memory-index-source-truth-001"
+    ],
+    "old": [
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "on": [
       "doc:.github/README.md",
@@ -15007,6 +15661,9 @@
       "doc:knowledge/workflows/project-onboarding.json",
       "entity:document:knowledge/workflows/project-onboarding.json"
     ],
+    "once": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "one": [
       "doc:docs/knowledge-health.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
@@ -15017,6 +15674,8 @@
       "doc:CLAUDE.md",
       "doc:agents/builder.md",
       "doc:prompts/execute.prompt.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/security.md",
       "doc:templates/project-memory/CLAUDE.md",
       "doc:templates/project-memory/SESSION.md",
@@ -15039,6 +15698,8 @@
     ],
     "open": [
       "doc:.agent/skills/research/SKILL.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/design.md",
       "doc:templates/specifications/requirements.md"
     ],
@@ -15047,6 +15708,9 @@
     ],
     "operating": [
       "doc:README.md"
+    ],
+    "operational": [
+      "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
     "operations": [
       "doc:scripts/README.md"
@@ -15081,6 +15745,7 @@
       "doc:prompts/review.prompt.md",
       "doc:references/mcp.md",
       "doc:references/v0.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/memory/decision-memory.md",
       "doc:templates/memory/lesson-memory.md",
       "doc:templates/memory/permanent-memory.md",
@@ -15118,12 +15783,17 @@
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/workflows/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:docs/agent-orchestration.md",
       "entity:document:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "order": [
       "doc:.github/copilot-instructions.md",
-      "doc:AGENTS.md"
+      "doc:AGENTS.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "organizational": [
+      "doc:specs/phase-9-professional-context/requirements.md"
     ],
     "organize": [
       "doc:.kiro/steering/structure.md"
@@ -15145,6 +15815,7 @@
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/README.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-starters/automation/AGENTS.md",
@@ -15222,6 +15893,8 @@
     "overview": [
       "doc:README.md",
       "doc:examples/mcp/README.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/DESIGN.md",
       "doc:templates/project-starters/automation/DESIGN.md",
       "doc:templates/project-starters/documentation/DESIGN.md",
@@ -15238,6 +15911,7 @@
     ],
     "ownership": [
       "doc:agents/project-manager.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:standards/documentation.md"
     ],
     "pack": [
@@ -15245,10 +15919,14 @@
     ],
     "package": [
       "doc:.agent/skills/communication-skill/README.md",
-      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "packaging": [
       "doc:knowledge/architecture/phase-7-release-hardening.md"
+    ],
+    "page": [
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "pages": [
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
@@ -15273,7 +15951,8 @@
     "path": [
       "doc:.github/README.md",
       "doc:.github/instructions/README.md",
-      "doc:examples/mcp/README.md"
+      "doc:examples/mcp/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "paths": [
       "doc:.github/instructions/skills.instructions.md",
@@ -15340,6 +16019,7 @@
       "entity:skill:writing"
     ],
     "phase": [
+      "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
       "doc:README.md",
@@ -15358,19 +16038,31 @@
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:scripts/knowledge_graph/README.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
+      "entity:document:.kiro/specs/phase-9-professional-context/README.md",
       "entity:document:knowledge/architecture/phase-3-knowledge-graph.md",
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md",
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
-      "entity:document:knowledge/architecture/phase-8-learning-orchestration.md"
+      "entity:document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "entity:document:knowledge/architecture/phase-9-professional-context.md",
+      "entity:document:specs/phase-9-professional-context/design.md",
+      "entity:document:specs/phase-9-professional-context/requirements.md",
+      "entity:document:specs/phase-9-professional-context/tasks.md"
     ],
     "phases": [
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "phrases": [
       "doc:.agent/skills/communication-skill/SKILL.md"
+    ],
+    "pieces": [
+      "doc:specs/phase-9-professional-context/design.md"
     ],
     "placeholder": [
       "doc:standards/security.md"
@@ -15425,6 +16117,12 @@
       "entity:platform:copilot",
       "entity:platform:power-apps",
       "entity:platform:power-automate"
+    ],
+    "plus": [
+      "doc:specs/phase-9-professional-context/design.md"
+    ],
+    "pointer": [
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "points": [
       "doc:ARCHITECTURE.md",
@@ -15582,6 +16280,7 @@
     "preserve": [
       "doc:.github/instructions/markdown.instructions.md",
       "doc:.github/instructions/skills.instructions.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/naming.md",
       "doc:standards/testing.md"
     ],
@@ -15595,6 +16294,9 @@
     ],
     "preview": [
       "doc:references/vercel.md"
+    ],
+    "primary": [
+      "doc:specs/phase-9-professional-context/design.md"
     ],
     "principle": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -15612,6 +16314,8 @@
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
     ],
     "privacy": [
+      "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md"
     ],
     "private": [
@@ -15633,6 +16337,7 @@
       "doc:.agent/skills/personal/problem-solving/SKILL.md",
       "doc:.agent/skills/thinking/README.md",
       "doc:.agent/skills/thinking/SKILL.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md",
       "entity:document:.agent/skills/personal/problem-solving/README.md",
       "entity:skill:problem-solving"
@@ -15661,15 +16366,36 @@
     ],
     "professional": [
       "doc:.agent/skills/personal/writing/SKILL.md",
+      "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
-      "doc:WORKFLOW.md"
+      "doc:WORKFLOW.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:profile/README.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
+      "entity:document:.kiro/specs/phase-9-professional-context/README.md",
+      "entity:document:knowledge/architecture/phase-9-professional-context.md",
+      "entity:document:specs/phase-9-professional-context/design.md",
+      "entity:document:specs/phase-9-professional-context/requirements.md",
+      "entity:document:specs/phase-9-professional-context/tasks.md"
     ],
     "profile": [
-      "entity:document:generated/profile-index.json"
+      "doc:profile/README.md",
+      "doc:profile/registry.json",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
+      "entity:document:generated/profile-index.json",
+      "entity:document:profile/README.md",
+      "entity:document:profile/registry.json"
+    ],
+    "profiles": [
+      "doc:profile/registry.json"
     ],
     "progress": [
       "doc:memory/sessions/README.md",
@@ -15687,6 +16413,7 @@
       "doc:memory/projects/README.md",
       "doc:schemas/project.schema.json",
       "doc:scripts/README.md",
+      "doc:specs/README.md",
       "doc:templates/README.md",
       "doc:templates/memory/project-memory.md",
       "doc:templates/project-memory/AGENTS.md",
@@ -16093,6 +16820,7 @@
     ],
     "proposed": [
       "doc:ROADMAP.md",
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/project-memory/ROADMAP.md",
       "doc:templates/project-starters/automation/ROADMAP.md",
       "doc:templates/project-starters/documentation/ROADMAP.md",
@@ -16159,6 +16887,7 @@
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/best-practices/README.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/future-ideas/README.md",
@@ -16182,6 +16911,7 @@
       "doc:memory/permanent/principles/README.md",
       "doc:memory/projects/README.md",
       "doc:memory/sessions/README.md",
+      "doc:profile/README.md",
       "doc:standards/documentation.md",
       "doc:templates/project-memory/ARCHITECTURE.md",
       "doc:templates/project-memory/README.md",
@@ -16214,8 +16944,12 @@
       "doc:templates/project-starters/python/AGENTS.md",
       "doc:templates/project-starters/web-app/AGENTS.md"
     ],
+    "pushing": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "py": [
       "doc:knowledge/workflows/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-starters/README.md"
     ],
     "python": [
@@ -16275,6 +17009,8 @@
     "questions": [
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/design.md",
       "doc:templates/specifications/requirements.md"
     ],
@@ -16294,6 +17030,8 @@
       "doc:.github/copilot-instructions.md",
       "doc:.github/workflows/README.md",
       "doc:prompts/execute.prompt.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/automation/HANDOFF.md",
       "doc:templates/project-starters/documentation/HANDOFF.md",
@@ -16343,6 +17081,7 @@
       "doc:.github/workflows/README.md",
       "doc:.kiro/README.md",
       "doc:.kiro/specs/README.md",
+      "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/README.md",
       "doc:README.md",
       "doc:agents/README.md",
@@ -16374,10 +17113,12 @@
       "doc:memory/permanent/principles/README.md",
       "doc:memory/projects/README.md",
       "doc:memory/sessions/README.md",
+      "doc:profile/README.md",
       "doc:prompts/README.md",
       "doc:references/README.md",
       "doc:scripts/README.md",
       "doc:scripts/knowledge_graph/README.md",
+      "doc:specs/README.md",
       "doc:standards/README.md",
       "doc:templates/README.md",
       "doc:templates/memory/README.md",
@@ -16411,6 +17152,7 @@
       "entity:document:.github/workflows/README.md",
       "entity:document:.kiro/README.md",
       "entity:document:.kiro/specs/README.md",
+      "entity:document:.kiro/specs/phase-9-professional-context/README.md",
       "entity:document:.kiro/steering/README.md",
       "entity:document:README.md",
       "entity:document:agents/README.md",
@@ -16442,10 +17184,12 @@
       "entity:document:memory/permanent/principles/README.md",
       "entity:document:memory/projects/README.md",
       "entity:document:memory/sessions/README.md",
+      "entity:document:profile/README.md",
       "entity:document:prompts/README.md",
       "entity:document:references/README.md",
       "entity:document:scripts/README.md",
       "entity:document:scripts/knowledge_graph/README.md",
+      "entity:document:specs/README.md",
       "entity:document:standards/README.md",
       "entity:document:templates/README.md",
       "entity:document:templates/memory/README.md",
@@ -16504,6 +17248,7 @@
       "doc:memory/decisions/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/registry.json",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/memory/README.md"
     ],
     "red": [
@@ -16558,6 +17303,7 @@
       "doc:references/v0.md",
       "doc:references/vercel.md",
       "doc:references/workflow-examples.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/automation/HANDOFF.md",
       "doc:templates/project-starters/documentation/HANDOFF.md",
@@ -16585,6 +17331,7 @@
     ],
     "refresh": [
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:memory:lesson-powerapps-refresh-001"
     ],
     "regenerate": [
@@ -16604,12 +17351,15 @@
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:memory/registry.json",
+      "doc:profile/registry.json",
       "doc:scripts/README.md",
       "entity:document:memory/registry.json",
+      "entity:document:profile/registry.json",
       "entity:project:ai-os"
     ],
     "regression": [
       "doc:prompts/debug.prompt.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/testing.md",
       "doc:templates/specifications/testing-plan.md"
     ],
@@ -16630,6 +17380,9 @@
       "doc:templates/memory/permanent-memory.md",
       "doc:templates/memory/project-memory.md",
       "doc:templates/memory/session-memory.md"
+    ],
+    "relationships": [
+      "doc:profile/README.md"
     ],
     "relative": [
       "doc:.github/instructions/markdown.instructions.md",
@@ -16668,7 +17421,11 @@
     "released": [
       "doc:CHANGELOG.md"
     ],
+    "releasing": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "reliability": [
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:standards/code-review.md",
       "doc:templates/specifications/requirements.md"
     ],
@@ -16678,7 +17435,8 @@
     "remain": [
       "doc:.kiro/steering/technology.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
-      "doc:memory/permanent/conventions/convention-documentation-structure-001.md"
+      "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "removal": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -16725,7 +17483,8 @@
     ],
     "reporting": [
       "doc:AGENTS.md",
-      "doc:CLAUDE.md"
+      "doc:CLAUDE.md",
+      "doc:profile/README.md"
     ],
     "repository": [
       "doc:.github/workflows/README.md",
@@ -16740,12 +17499,15 @@
       "doc:references/README.md",
       "doc:references/codex.md",
       "doc:references/copilot.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:generated/repository-index.json"
     ],
     "reproduce": [
       "doc:prompts/debug.prompt.md"
     ],
     "req": [
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/REQUIREMENTS.md",
       "doc:templates/project-starters/automation/REQUIREMENTS.md",
       "doc:templates/project-starters/documentation/REQUIREMENTS.md",
@@ -16851,6 +17613,9 @@
       "doc:prompts/specify.prompt.md",
       "doc:references/claude.md",
       "doc:references/kiro.md",
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/testing.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-memory/REQUIREMENTS.md",
@@ -16890,6 +17655,7 @@
       "doc:templates/project-starters/web-app/TASKS.md",
       "doc:templates/specifications/README.md",
       "doc:templates/specifications/requirements.md",
+      "entity:document:specs/phase-9-professional-context/requirements.md",
       "entity:document:templates/project-memory/REQUIREMENTS.md",
       "entity:document:templates/project-starters/automation/REQUIREMENTS.md",
       "entity:document:templates/project-starters/documentation/REQUIREMENTS.md",
@@ -16971,7 +17737,8 @@
       "doc:agents/qa.md",
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
-      "doc:agents/security-reviewer.md"
+      "doc:agents/security-reviewer.md",
+      "doc:profile/README.md"
     ],
     "restore": [
       "doc:knowledge/architecture/phase-7-release-hardening.md"
@@ -16987,7 +17754,8 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
-      "doc:memory/README.md"
+      "doc:memory/README.md",
+      "doc:profile/README.md"
     ],
     "results": [
       "doc:prompts/qa.prompt.md",
@@ -17161,6 +17929,8 @@
       "doc:agents/security-reviewer.md",
       "doc:prompts/design.prompt.md",
       "doc:prompts/plan.prompt.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/automation/HANDOFF.md",
       "doc:templates/project-starters/documentation/HANDOFF.md",
@@ -17209,6 +17979,7 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
+      "doc:profile/README.md",
       "doc:references/canva.md",
       "doc:references/chatgpt.md",
       "doc:references/claude.md",
@@ -17218,6 +17989,7 @@
       "doc:references/mcp.md",
       "doc:references/v0.md",
       "doc:references/vercel.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/automation/HANDOFF.md",
       "doc:templates/project-starters/documentation/HANDOFF.md",
@@ -17241,6 +18013,7 @@
       "doc:agents/deployment-manager.md",
       "doc:prompts/deploy.prompt.md",
       "doc:prompts/design.prompt.md",
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:standards/code-review.md",
       "doc:standards/release-management.md",
       "doc:templates/project-memory/DESIGN.md",
@@ -17291,7 +18064,8 @@
       "doc:SECURITY.md"
     ],
     "run": [
-      "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md"
+      "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "runbook": [
       "doc:knowledge/workflows/procedure-creation.json"
@@ -17314,8 +18088,12 @@
     "sample": [
       "doc:examples/mcp/README.md"
     ],
+    "sanitization": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "scaffold": [
-      "doc:knowledge/workflows/project-onboarding.json"
+      "doc:knowledge/workflows/project-onboarding.json",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "scan": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -17323,12 +18101,15 @@
     "schema": [
       "doc:agents.json",
       "doc:config/ai-os.example.json",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/registry.json",
+      "doc:profile/registry.json",
       "doc:prompts.json",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json",
       "doc:skills.json",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:schemas/memory.schema.json",
       "entity:document:schemas/project.schema.json",
       "entity:document:schemas/skill.schema.json"
@@ -17376,6 +18157,7 @@
       "doc:knowledge/workflows/README.md",
       "doc:scripts/README.md",
       "doc:scripts/knowledge_graph/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-starters/README.md",
       "entity:document:scripts/README.md",
       "entity:document:scripts/knowledge_graph/README.md"
@@ -17423,10 +18205,14 @@
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/security/README.md",
       "doc:memory/README.md",
+      "doc:profile/README.md",
       "doc:prompts/design.prompt.md",
       "doc:references/workflow-examples.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:standards/code-review.md",
       "doc:standards/security.md",
       "doc:templates/project-memory/ARCHITECTURE.md",
@@ -17497,6 +18283,9 @@
     "sentence": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
     ],
+    "sequence": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "server": [
       "doc:examples/mcp/README.md",
       "doc:examples/mcp/server-config.example.json",
@@ -17518,6 +18307,7 @@
       "doc:memory/projects/README.md",
       "doc:memory/sessions/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/memory/session-memory.md",
       "doc:templates/project-memory/SESSION.md",
       "doc:templates/project-starters/automation/SESSION.md",
@@ -17570,6 +18360,12 @@
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:references/README.md",
       "doc:templates/memory/session-memory.md"
+    ],
+    "show": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "signals": [
+      "doc:specs/phase-9-professional-context/design.md"
     ],
     "simple": [
       "doc:.agent/skills/communication-skill/README.md"
@@ -17780,7 +18576,14 @@
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:prompts/deploy.prompt.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/specifications/deployment-plan.md"
+    ],
+    "snapshot": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "snapshots": [
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "so": [
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md"
@@ -17809,6 +18612,9 @@
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:profile/README.md",
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/memory/README.md",
       "doc:templates/memory/decision-memory.md",
       "doc:templates/memory/lesson-memory.md",
@@ -17824,6 +18630,9 @@
     "sp": [
       "doc:.kiro/README.md"
     ],
+    "spec": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "specific": [
       "doc:.github/README.md",
       "doc:.github/instructions/README.md",
@@ -17832,6 +18641,7 @@
       "doc:memory/projects/README.md"
     ],
     "specification": [
+      "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:AGENTS.md",
       "doc:CONTRIBUTING.md",
       "doc:ROADMAP.md",
@@ -17845,6 +18655,7 @@
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
       "doc:README.md",
+      "doc:specs/README.md",
       "doc:templates/README.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-starters/automation/AGENTS.md",
@@ -17881,8 +18692,18 @@
     "specs": [
       "doc:.kiro/README.md",
       "doc:.kiro/specs/README.md",
+      "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/structure.md",
-      "entity:document:.kiro/specs/README.md"
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
+      "entity:document:.kiro/specs/README.md",
+      "entity:document:.kiro/specs/phase-9-professional-context/README.md",
+      "entity:document:specs/README.md",
+      "entity:document:specs/phase-9-professional-context/design.md",
+      "entity:document:specs/phase-9-professional-context/requirements.md",
+      "entity:document:specs/phase-9-professional-context/tasks.md"
     ],
     "split": [
       "doc:docs/knowledge-health.md",
@@ -17908,8 +18729,12 @@
       "entity:skill:using-superpowers",
       "entity:skill:writing"
     ],
+    "staging": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "stale": [
-      "doc:knowledge/workflows/knowledge-maintenance.json"
+      "doc:knowledge/workflows/knowledge-maintenance.json",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "standard": [
       "doc:.kiro/steering/technology.md",
@@ -18247,6 +19072,7 @@
     "state": [
       "doc:.kiro/specs/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/project-memory/ARCHITECTURE.md",
       "doc:templates/project-starters/automation/ARCHITECTURE.md",
       "doc:templates/project-starters/documentation/ARCHITECTURE.md",
@@ -18259,6 +19085,7 @@
       "doc:templates/specifications/design.md"
     ],
     "statement": [
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md"
     ],
     "status": [
@@ -18309,7 +19136,8 @@
       "doc:GOVERNANCE.md"
     ],
     "stop": [
-      "doc:.agent/skills/system/using-superpowers/SKILL.md"
+      "doc:.agent/skills/system/using-superpowers/SKILL.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "storage": [
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
@@ -18331,10 +19159,18 @@
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md"
     ],
     "strategy": [
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/specifications/design.md"
+    ],
+    "strictly": [
+      "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:specs/phase-9-professional-context/requirements.md"
     ],
     "strings": [
       "doc:SECURITY.md"
+    ],
+    "structural": [
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "structure": [
       "doc:.agent/skills/communication-skill/SKILL.md",
@@ -18342,6 +19178,7 @@
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:profile/README.md",
       "doc:standards/accessibility.md",
       "doc:standards/documentation.md",
       "entity:document:.kiro/steering/structure.md",
@@ -18394,6 +19231,7 @@
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/memory/decision-memory.md",
       "doc:templates/memory/lesson-memory.md",
       "doc:templates/memory/permanent-memory.md",
@@ -18452,6 +19290,16 @@
     "survive": [
       "doc:memory/permanent/README.md"
     ],
+    "switch": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "switching": [
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "sync": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "system": [
       "doc:.agent/skills/system/README.md",
       "doc:.agent/skills/system/SKILL.md",
@@ -18477,6 +19325,9 @@
       "entity:tool:git",
       "entity:tool:mcp"
     ],
+    "tagging": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "takeaways": [
       "doc:.agent/skills/research/SKILL.md"
     ],
@@ -18485,6 +19336,7 @@
       "doc:docs/continuous-learning.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:references/kiro.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-memory/TASKS.md",
       "doc:templates/project-starters/automation/HANDOFF.md",
@@ -18514,6 +19366,8 @@
       "doc:WORKFLOW.md",
       "doc:prompts/execute.prompt.md",
       "doc:prompts/review.prompt.md",
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/TASKS.md",
       "doc:templates/project-starters/automation/TASKS.md",
       "doc:templates/project-starters/documentation/TASKS.md",
@@ -18524,6 +19378,7 @@
       "doc:templates/project-starters/python/TASKS.md",
       "doc:templates/project-starters/web-app/TASKS.md",
       "doc:templates/specifications/tasks.md",
+      "entity:document:specs/phase-9-professional-context/tasks.md",
       "entity:document:templates/project-memory/TASKS.md",
       "entity:document:templates/project-starters/automation/TASKS.md",
       "entity:document:templates/project-starters/documentation/TASKS.md",
@@ -18534,6 +19389,9 @@
       "entity:document:templates/project-starters/python/TASKS.md",
       "entity:document:templates/project-starters/web-app/TASKS.md",
       "entity:document:templates/specifications/tasks.md"
+    ],
+    "team": [
+      "doc:profile/README.md"
     ],
     "technical": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -18900,6 +19758,7 @@
     "test": [
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/specifications/README.md",
       "doc:templates/specifications/testing-plan.md"
     ],
@@ -18910,6 +19769,7 @@
       "doc:.agent/skills/system/testing/README.md",
       "doc:.agent/skills/system/testing/SKILL.md",
       "doc:prompts/design.prompt.md",
+      "doc:specs/phase-9-professional-context/design.md",
       "doc:standards/testing.md",
       "doc:templates/project-memory/DESIGN.md",
       "doc:templates/project-memory/SESSION.md",
@@ -18959,6 +19819,7 @@
       "doc:.github/instructions/specifications.instructions.md",
       "doc:prompts/deploy.prompt.md",
       "doc:references/copilot.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/code-review.md",
       "doc:standards/testing.md",
       "doc:templates/specifications/testing-plan.md"
@@ -18971,7 +19832,8 @@
       "doc:memory/permanent/README.md",
       "doc:memory/permanent/preferences/README.md",
       "doc:memory/permanent/principles/README.md",
-      "doc:memory/projects/README.md"
+      "doc:memory/projects/README.md",
+      "doc:specs/phase-9-professional-context/requirements.md"
     ],
     "the": [
       "doc:.agent/skills/design/browser/README.md",
@@ -18987,6 +19849,7 @@
       "doc:.agent/skills/system/using-superpowers/README.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:.kiro/README.md",
+      "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/README.md",
       "doc:.kiro/steering/workflow.md",
       "doc:agents/README.md",
@@ -19000,6 +19863,7 @@
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:knowledge/workflows/release-preparation.json",
       "doc:memory/README.md",
@@ -19007,6 +19871,10 @@
       "doc:prompts/debug.prompt.md",
       "doc:prompts/execute.prompt.md",
       "doc:prompts/review.prompt.md",
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-starters/automation/AGENTS.md",
       "doc:templates/project-starters/documentation/AGENTS.md",
@@ -19036,7 +19904,8 @@
       "doc:templates/specifications/README.md"
     ],
     "they": [
-      "doc:.github/instructions/README.md"
+      "doc:.github/instructions/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "thinking": [
       "doc:.agent/skills/thinking/README.md",
@@ -19062,6 +19931,9 @@
       "doc:.github/README.md",
       "doc:docs/continuous-learning.md",
       "doc:memory/README.md",
+      "doc:profile/README.md",
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-memory/SESSION.md",
       "doc:templates/project-starters/automation/AGENTS.md",
@@ -19081,12 +19953,18 @@
       "doc:templates/project-starters/web-app/AGENTS.md",
       "doc:templates/project-starters/web-app/SESSION.md"
     ],
+    "three": [
+      "doc:specs/phase-9-professional-context/design.md"
+    ],
     "through": [
       "doc:examples/mcp/README.md"
     ],
     "ticket": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/examples.md"
+    ],
+    "timestamped": [
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "title": [
       "doc:schemas/memory.schema.json",
@@ -19133,6 +20011,7 @@
       "doc:prompts/review.prompt.md",
       "doc:references/README.md",
       "doc:references/workflow-examples.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/testing.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/README.md",
@@ -19160,6 +20039,8 @@
       "doc:ARCHITECTURE.md",
       "doc:examples/mcp/README.md",
       "doc:references/README.md",
+      "doc:specs/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:tool:git",
       "entity:tool:mcp"
     ],
@@ -19173,6 +20054,8 @@
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:references/mcp.md",
       "doc:scripts/README.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:.agent/skills/references/codex-tools.md",
       "entity:document:.agent/skills/references/copilot-tools.md",
       "entity:document:.agent/skills/references/gemini-tools.md"
@@ -19182,6 +20065,9 @@
     ],
     "topic": [
       "doc:.agent/skills/research/SKILL.md"
+    ],
+    "touch": [
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "trace": [
       "doc:.github/instructions/specifications.instructions.md",
@@ -19206,11 +20092,15 @@
       "doc:prompts/qa.prompt.md",
       "doc:templates/specifications/README.md"
     ],
+    "traces": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "tracked": [
       "doc:docs/continuous-learning.md"
     ],
     "tracking": [
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:standards/documentation.md"
     ],
     "trail": [
@@ -19256,6 +20146,8 @@
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:memory/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
+      "doc:profile/README.md",
+      "doc:specs/README.md",
       "entity:memory:decision-memory-index-source-truth-001"
     ],
     "tube": [
@@ -19287,7 +20179,8 @@
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
-      "doc:knowledge/workflows/README.md"
+      "doc:knowledge/workflows/README.md",
+      "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "ui": [
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
@@ -19343,6 +20236,12 @@
     "unsa": [
       "doc:.kiro/steering/product.md"
     ],
+    "until": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "untracked": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "up": [
       "doc:templates/project-memory/RETROSPECTIVE.md",
       "doc:templates/project-starters/automation/RETROSPECTIVE.md",
@@ -19359,6 +20258,7 @@
       "doc:.github/instructions/skills.instructions.md",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:prompts/create-skill.prompt.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:knowledge/workflows/documentation-update.json"
     ],
     "updates": [
@@ -19375,6 +20275,9 @@
     ],
     "upload": [
       "doc:docs/feedback-and-audit.md"
+    ],
+    "usable": [
+      "doc:specs/README.md"
     ],
     "usage": [
       "doc:.agent/skills/research/README.md",
@@ -19411,11 +20314,14 @@
     ],
     "user": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:prompts/document.prompt.md",
       "doc:references/canva.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/testing-plan.md"
     ],
     "users": [
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md"
     ],
     "using": [
@@ -19454,6 +20360,7 @@
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:prompts/create-skill.prompt.md",
       "doc:prompts/execute.prompt.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "entity:memory:lesson-validate-generated-files-before-committing-001"
     ],
     "validated": [
@@ -19483,6 +20390,8 @@
       "doc:references/workflow-examples.md",
       "doc:scripts/README.md",
       "doc:scripts/knowledge_graph/README.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-memory/RELEASE_NOTES.md",
       "doc:templates/project-starters/automation/HANDOFF.md",
@@ -19515,6 +20424,9 @@
       "doc:examples/mcp/README.md",
       "doc:standards/release-management.md"
     ],
+    "verify": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "versatile": [
       "doc:.agent/skills/personal/writing/SKILL.md"
     ],
@@ -19525,6 +20437,7 @@
       "doc:config/ai-os.example.json",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:memory/registry.json",
+      "doc:profile/registry.json",
       "doc:prompts.json",
       "doc:references/README.md",
       "doc:skills.json",
@@ -19545,6 +20458,9 @@
       "doc:docs/knowledge-health.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "entity:memory:decision-memory-index-source-truth-001"
+    ],
+    "visibility": [
+      "doc:specs/phase-9-professional-context/requirements.md"
     ],
     "visual": [
       "doc:references/canva.md"
@@ -19626,6 +20542,7 @@
       "doc:knowledge/sharepoint/README.md",
       "doc:knowledge/vscode/README.md",
       "doc:memory/README.md",
+      "doc:profile/README.md",
       "doc:templates/project-memory/RETROSPECTIVE.md",
       "doc:templates/project-starters/automation/RETROSPECTIVE.md",
       "doc:templates/project-starters/documentation/RETROSPECTIVE.md",
@@ -19661,7 +20578,8 @@
       "doc:templates/project-starters/web-app/CLAUDE.md"
     ],
     "who": [
-      "doc:.kiro/steering/product.md"
+      "doc:.kiro/steering/product.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
     "why": [
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
@@ -19681,6 +20599,12 @@
     "windsurf": [
       "doc:.agent/skills/communication-skill/README.md"
     ],
+    "wire": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "wiring": [
+      "doc:specs/phase-9-professional-context/tasks.md"
+    ],
     "with": [
       "doc:.github/workflows/README.md",
       "doc:knowledge/workflows/bug-fix.json",
@@ -19690,6 +20614,7 @@
       "doc:prompts/review.prompt.md",
       "doc:prompts/specify.prompt.md",
       "doc:references/vercel.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
       "doc:standards/git.md",
       "doc:templates/memory/decision-memory.md",
       "doc:templates/memory/lesson-memory.md",
@@ -19729,8 +20654,12 @@
       "doc:ROADMAP.md",
       "doc:agents/README.md",
       "doc:docs/continuous-learning.md",
+      "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/sessions/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
+      "doc:specs/phase-9-professional-context/design.md",
+      "doc:specs/phase-9-professional-context/requirements.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/README.md",
       "doc:templates/memory/session-memory.md",
       "doc:templates/specifications/README.md",
@@ -19814,7 +20743,8 @@
       "entity:document:agents/documentation-writer.md"
     ],
     "writes": [
-      "doc:docs/memory-approval.md"
+      "doc:docs/memory-approval.md",
+      "doc:specs/phase-9-professional-context/requirements.md"
     ],
     "writing": [
       "doc:.agent/skills/communication-skill/SKILL.md",

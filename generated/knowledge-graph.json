@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T00:53:45Z",
+  "generatedAt": "2026-07-17T08:52:40Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 349,
-    "edges": 580,
+    "nodes": 357,
+    "edges": 611,
     "nodesByType": {
       "concept": 2,
-      "document": 311,
+      "document": 319,
       "memory": 5,
       "platform": 5,
       "project": 10,
@@ -18,10 +18,10 @@
       "belongs_to": 2,
       "contains": 129,
       "generated_from": 14,
-      "references": 194,
-      "related_to": 122,
+      "references": 204,
+      "related_to": 129,
       "supports": 4,
-      "uses": 115
+      "uses": 129
     }
   },
   "nodes": [
@@ -309,6 +309,15 @@
       "type": "document",
       "name": "Readme",
       "sourcePath": ".kiro/specs/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:.kiro/specs/phase-9-professional-context/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".kiro/specs/phase-9-professional-context/README.md",
       "metadata": {
         "extension": ".md"
       }
@@ -652,7 +661,7 @@
       "name": "Profile Index",
       "sourcePath": "generated/profile-index.json",
       "metadata": {
-        "supplemental": true
+        "extension": ".json"
       }
     },
     {
@@ -679,7 +688,7 @@
       "name": "Work Activity",
       "sourcePath": "generated/work-activity.json",
       "metadata": {
-        "supplemental": true
+        "extension": ".json"
       }
     },
     {
@@ -759,6 +768,15 @@
       "type": "document",
       "name": "Phase 8 Learning Orchestration",
       "sourcePath": "knowledge/architecture/phase-8-learning-orchestration.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:knowledge/architecture/phase-9-professional-context.md",
+      "type": "document",
+      "name": "Phase 9 Professional Context",
+      "sourcePath": "knowledge/architecture/phase-9-professional-context.md",
       "metadata": {
         "extension": ".md"
       }
@@ -1061,6 +1079,24 @@
       }
     },
     {
+      "id": "document:profile/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": "profile/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:profile/registry.json",
+      "type": "document",
+      "name": "Registry",
+      "sourcePath": "profile/registry.json",
+      "metadata": {
+        "extension": ".json"
+      }
+    },
+    {
       "id": "document:prompts.json",
       "type": "document",
       "name": "Prompts",
@@ -1328,6 +1364,42 @@
       "sourcePath": "skills.json",
       "metadata": {
         "extension": ".json"
+      }
+    },
+    {
+      "id": "document:specs/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": "specs/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:specs/phase-9-professional-context/design.md",
+      "type": "document",
+      "name": "Design",
+      "sourcePath": "specs/phase-9-professional-context/design.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:specs/phase-9-professional-context/requirements.md",
+      "type": "document",
+      "name": "Requirements",
+      "sourcePath": "specs/phase-9-professional-context/requirements.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:specs/phase-9-professional-context/tasks.md",
+      "type": "document",
+      "name": "Tasks",
+      "sourcePath": "specs/phase-9-professional-context/tasks.md",
+      "metadata": {
+        "extension": ".md"
       }
     },
     {
@@ -4737,10 +4809,37 @@
       }
     },
     {
+      "id": "edge:063522f183c3f61b",
+      "type": "references",
+      "from": "document:.kiro/README.md",
+      "to": "document:specs/README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:cc18eb1f03b1814b",
       "type": "references",
       "from": "document:.kiro/specs/README.md",
       "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:7d80d5f403314a0f",
+      "type": "references",
+      "from": "document:.kiro/specs/README.md",
+      "to": "document:specs/README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:04054568ab5719b5",
+      "type": "references",
+      "from": "document:.kiro/specs/phase-9-professional-context/README.md",
+      "to": "document:.kiro/specs/README.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -4795,6 +4894,15 @@
       "type": "references",
       "from": "document:ARCHITECTURE.md",
       "to": "document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:ec376f4fe60813f9",
+      "type": "references",
+      "from": "document:ARCHITECTURE.md",
+      "to": "document:knowledge/architecture/phase-9-professional-context.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -4935,6 +5043,15 @@
       }
     },
     {
+      "id": "edge:4d75bd8cfc1aac2f",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:knowledge/architecture/phase-9-professional-context.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:72ac53a11de10ef8",
       "type": "references",
       "from": "document:README.md",
@@ -4966,6 +5083,15 @@
       "type": "references",
       "from": "document:README.md",
       "to": "document:skills.json",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:c0ea751e3ecb1695",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:specs/README.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5448,6 +5574,15 @@
       }
     },
     {
+      "id": "edge:b791a42a80431856",
+      "type": "references",
+      "from": "document:knowledge/architecture/phase-9-professional-context.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:40262f8233604605",
       "type": "references",
       "from": "document:knowledge/best-practices/README.md",
@@ -5659,6 +5794,15 @@
       "type": "references",
       "from": "document:memory/sessions/README.md",
       "to": "document:memory/README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:a73159cac6533c64",
+      "type": "references",
+      "from": "document:profile/README.md",
+      "to": "document:README.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5884,6 +6028,24 @@
       "type": "references",
       "from": "document:scripts/knowledge_graph/README.md",
       "to": "document:scripts/README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:91ca2015a7c9a410",
+      "type": "references",
+      "from": "document:specs/README.md",
+      "to": "document:.kiro/specs/README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:17fc67922a47119b",
+      "type": "references",
+      "from": "document:specs/README.md",
+      "to": "document:README.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -6771,6 +6933,24 @@
       }
     },
     {
+      "id": "edge:91b158987d791be9",
+      "type": "related_to",
+      "from": "document:knowledge/architecture/phase-9-professional-context.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:589dee28ae2e0589",
+      "type": "related_to",
+      "from": "document:knowledge/architecture/phase-9-professional-context.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:11cab11d310f39dd",
       "type": "related_to",
       "from": "document:knowledge/workflows/README.md",
@@ -6793,6 +6973,15 @@
       "type": "related_to",
       "from": "document:memory/permanent/preferences/README.md",
       "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:f6ca084db5d854b9",
+      "type": "related_to",
+      "from": "document:profile/README.md",
+      "to": "concept:validation",
       "metadata": {
         "source": "document_text"
       }
@@ -6982,6 +7171,42 @@
       "type": "related_to",
       "from": "document:scripts/knowledge_graph/README.md",
       "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:54b78be515f121fb",
+      "type": "related_to",
+      "from": "document:specs/phase-9-professional-context/design.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:71da1a27f9f898cb",
+      "type": "related_to",
+      "from": "document:specs/phase-9-professional-context/requirements.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:ce87a12cde51b862",
+      "type": "related_to",
+      "from": "document:specs/phase-9-professional-context/tasks.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:0473f5b6fe379765",
+      "type": "related_to",
+      "from": "document:specs/phase-9-professional-context/tasks.md",
+      "to": "concept:workflow",
       "metadata": {
         "source": "document_text"
       }
@@ -7977,6 +8202,24 @@
       }
     },
     {
+      "id": "edge:937121daf33bcf79",
+      "type": "uses",
+      "from": "document:knowledge/architecture/phase-9-professional-context.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:a919fed9ea32ec32",
+      "type": "uses",
+      "from": "document:knowledge/architecture/phase-9-professional-context.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:09ce278e83586d47",
       "type": "uses",
       "from": "document:knowledge/git/README.md",
@@ -8151,6 +8394,114 @@
       "id": "edge:db291fd293d8fd4a",
       "type": "uses",
       "from": "document:scripts/README.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:8411e9b89b82aa15",
+      "type": "uses",
+      "from": "document:specs/README.md",
+      "to": "platform:claude",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:0187b07b3107e0a8",
+      "type": "uses",
+      "from": "document:specs/README.md",
+      "to": "platform:codex",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:be6e718ada685300",
+      "type": "uses",
+      "from": "document:specs/README.md",
+      "to": "platform:copilot",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:8a1b4f48b09bc4ab",
+      "type": "uses",
+      "from": "document:specs/phase-9-professional-context/design.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:5aeef50c8d29a355",
+      "type": "uses",
+      "from": "document:specs/phase-9-professional-context/design.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:3e9bb6e2b8b445c7",
+      "type": "uses",
+      "from": "document:specs/phase-9-professional-context/requirements.md",
+      "to": "platform:claude",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:9b95ad0fa700b098",
+      "type": "uses",
+      "from": "document:specs/phase-9-professional-context/requirements.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:be1aaa056e4a9b91",
+      "type": "uses",
+      "from": "document:specs/phase-9-professional-context/tasks.md",
+      "to": "platform:claude",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:748b1ad4c2e2bf4f",
+      "type": "uses",
+      "from": "document:specs/phase-9-professional-context/tasks.md",
+      "to": "platform:codex",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:a0bb84fa47c53f29",
+      "type": "uses",
+      "from": "document:specs/phase-9-professional-context/tasks.md",
+      "to": "platform:copilot",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:6f6c975e48dda258",
+      "type": "uses",
+      "from": "document:specs/phase-9-professional-context/tasks.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:030ed6dbb1de7cb5",
+      "type": "uses",
+      "from": "document:specs/phase-9-professional-context/tasks.md",
       "to": "tool:mcp",
       "metadata": {
         "source": "document_text"
@@ -8429,18 +8780,8 @@
   ],
   "unresolvedReferences": [
     {
-      "source": ".kiro/README.md",
-      "target": "specs/README.md",
-      "kind": "markdown"
-    },
-    {
-      "source": ".kiro/specs/README.md",
-      "target": "specs/README.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "ARCHITECTURE.md",
-      "target": "knowledge/architecture/phase-9-professional-context.md",
+      "source": ".kiro/specs/phase-9-professional-context/README.md",
+      "target": "specs/phase-9-professional-context",
       "kind": "markdown"
     },
     {
@@ -8481,16 +8822,6 @@
     {
       "source": "README.md",
       "target": "generated/memory-index.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": "knowledge/architecture/phase-9-professional-context.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": "specs/README.md",
       "kind": "markdown"
     }
   ]
