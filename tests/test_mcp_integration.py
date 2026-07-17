@@ -23,6 +23,7 @@ from ai_os_service.permissions import (
 )
 from ai_os_service.service import AiOsService
 from ai_os_service.utils import artifact_status, load_json_artifact
+from profile import registry as profile_registry
 from mcp_server import MCP_PROTOCOL_VERSION, SERVER_NAME
 from mcp_server.schemas import TOOLS, RESOURCES
 from mcp_server.adapter import McpAdapter
@@ -693,22 +694,36 @@ class Phase9ToolRegistrationTests(unittest.TestCase):
 
 
 class Phase9ServiceRealRepoTests(unittest.TestCase):
-    """Against the real repository: profile/registry.json is currently
-    empty, so these exercise the not-configured/empty-state paths safely
-    without ever populating the real registry."""
+    """Against the real repository's live profile/ state, whatever it
+    currently is (empty or populated). Never mutates the real registry --
+    these are read-only calls asserted against whichever state is actually
+    present."""
 
     def setUp(self):
         self.svc = AiOsService(ROOT)
 
-    def test_get_professional_profile_not_configured(self):
+    def test_get_professional_profile_reflects_real_registry_state(self):
         result = self.svc.get_professional_profile()
-        self.assertFalse(result["configured"])
-        self.assertIsNone(result["profile"])
+        registry = profile_registry.load_registry(ROOT)
+        active = profile_registry.active_profile(registry)
+        if active is None:
+            self.assertFalse(result["configured"])
+            self.assertIsNone(result["profile"])
+        else:
+            self.assertTrue(result["configured"])
+            self.assertEqual(result["profile"]["id"], active["id"])
+            self.assertTrue(result["profile"]["active"])
 
-    def test_list_expertise_not_configured(self):
+    def test_list_expertise_reflects_real_registry_state(self):
         result = self.svc.list_expertise()
-        self.assertFalse(result["configured"])
-        self.assertEqual(result["expertise"]["items"], [])
+        registry = profile_registry.load_registry(ROOT)
+        active = profile_registry.active_profile(registry)
+        if active is None:
+            self.assertFalse(result["configured"])
+            self.assertEqual(result["expertise"]["items"], [])
+        else:
+            self.assertTrue(result["configured"])
+            self.assertEqual(result["profileId"], active["id"])
 
     def test_get_work_activity_summary_structure(self):
         result = self.svc.get_work_activity_summary()

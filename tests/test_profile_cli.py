@@ -6,8 +6,9 @@ loads a fresh copy of scripts/ai-os.py and monkeypatches its module-level
 `ROOT` constant to an isolated temporary directory before calling `main()`,
 so `profile switch` and approval requests never touch this repo's real
 profile/registry.json or .ai-os/ state. Read-only smoke tests against the
-real repository (`_run_cli`) are restricted to paths that are safe given
-the real registry is currently empty (no profile has been authored).
+real repository (`_run_cli`) are restricted to non-mutating paths and
+assert against whatever the real registry currently contains (empty or
+populated) rather than assuming one specific state.
 """
 import importlib.util
 import io
@@ -24,6 +25,7 @@ if str(SCRIPTS) not in sys.path:
     sys.path.insert(0, str(SCRIPTS))
 
 from profile import SCHEMA_VERSION  # noqa: E402
+from profile import registry as profile_registry  # noqa: E402
 
 
 def _load_cli_module():
@@ -34,8 +36,9 @@ def _load_cli_module():
 
 
 def _run_cli(args):
-    """Run against the REAL repository root. Only ever use with commands
-    that are safe given the real profile/registry.json is currently empty."""
+    """Run against the REAL repository root. Only ever use with non-mutating
+    commands, and assert against whatever profile/registry.json currently
+    contains rather than assuming it is empty."""
     mod = _load_cli_module()
     stdout, stderr = io.StringIO(), io.StringIO()
     with redirect_stdout(stdout), redirect_stderr(stderr):
@@ -104,36 +107,51 @@ def _snapshot_files(root: Path):
 
 
 class RealRepoSafeSmokeTests(unittest.TestCase):
-    """Runs against the real repository. Every case here must remain safe
-    with an empty (not-yet-authored) profile/registry.json."""
+    """Runs against the real repository's live profile/ state, whatever it
+    currently is (empty or populated). Every case here must remain safe and
+    non-mutating either way -- these tests assert the general read-only
+    contract, not one specific registry state."""
 
     def test_help_lists_profile_command(self):
         code, out, _ = _run_cli(["help"])
         self.assertEqual(code, 0)
         self.assertIn("profile", out)
 
-    def test_list_on_empty_real_registry_is_safe(self):
+    def test_list_on_real_registry_is_safe(self):
         before = _snapshot_files(ROOT / "profile")
         code, out, _ = _run_cli(["profile", "list"])
         after = _snapshot_files(ROOT / "profile")
         self.assertEqual(code, 0)
-        self.assertIn("No professional profiles configured yet", out)
+        registry = profile_registry.load_registry(ROOT)
+        if registry.get("profiles"):
+            self.assertIn(": [", out)  # "<id>: [active|inactive] <path> ..."
+        else:
+            self.assertIn("No professional profiles configured yet", out)
         self.assertEqual(before, after)
 
-    def test_show_on_empty_real_registry_is_safe(self):
+    def test_show_on_real_registry_is_safe(self):
         before = _snapshot_files(ROOT / "profile")
         code, out, _ = _run_cli(["profile", "show"])
         after = _snapshot_files(ROOT / "profile")
         self.assertEqual(code, 0)
-        self.assertIn("No active professional profile", out)
+        registry = profile_registry.load_registry(ROOT)
+        active = profile_registry.active_profile(registry)
+        if active is None:
+            self.assertIn("No active professional profile", out)
+        else:
+            self.assertIn(f"id: {active['id']}", out)
         self.assertEqual(before, after)
 
-    def test_switch_on_empty_real_registry_fails_without_mutation(self):
+    def test_switch_to_unknown_id_on_real_registry_fails_without_mutation(self):
         before = _snapshot_files(ROOT / "profile")
-        code, _out, err = _run_cli(["profile", "switch", "primary"])
+        code, _out, err = _run_cli(["profile", "switch", "no-such-profile-id"])
         after = _snapshot_files(ROOT / "profile")
         self.assertEqual(code, 1)
-        self.assertIn("no profiles registered", err)
+        registry = profile_registry.load_registry(ROOT)
+        if registry.get("profiles"):
+            self.assertIn("unknown profile id", err)
+        else:
+            self.assertIn("no profiles registered", err)
         self.assertEqual(before, after)
 
     def test_unknown_profile_subcommand_shows_usage(self):

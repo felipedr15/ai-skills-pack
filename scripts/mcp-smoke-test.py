@@ -10,6 +10,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SERVER_SCRIPT = ROOT / "scripts" / "mcp-server.py"
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from profile import registry as profile_registry  # noqa: E402
+
 
 def send_request(proc, method: str, params: dict = None, req_id: int = 1) -> dict:
     """Send a JSON-RPC request and read the response."""
@@ -192,25 +198,40 @@ def main() -> int:
         resp = send_request(proc, "resources/read", {"uri": "ai-os://agents"}, req_id)
         check("read ai-os://agents", resp)
 
-        # 17g. Phase 9: get_professional_profile (real registry is empty -> "not configured")
+        # 17g. Phase 9: get_professional_profile reflects the real registry's
+        # current state (empty -> not configured, populated -> matches active profile)
+        registry = profile_registry.load_registry(ROOT)
+        active = profile_registry.active_profile(registry)
         req_id += 1
         resp = send_request(proc, "tools/call", {"name": "get_professional_profile", "arguments": {}}, req_id)
         content_text = resp.get("result", {}).get("content", [{}])[0].get("text", "{}")
         profile_data = json.loads(content_text)
-        if profile_data.get("configured") is False and profile_data.get("profile") is None:
-            print("  PASS get_professional_profile (not configured)")
+        if active is None:
+            profile_ok = profile_data.get("configured") is False and profile_data.get("profile") is None
         else:
-            failures.append("FAIL get_professional_profile did not report the empty-registry state cleanly")
+            profile_ok = (
+                profile_data.get("configured") is True
+                and profile_data.get("profile", {}).get("id") == active["id"]
+                and profile_data.get("profile", {}).get("active") is True
+            )
+        if profile_ok:
+            print("  PASS get_professional_profile (reflects real registry state)")
+        else:
+            failures.append("FAIL get_professional_profile did not reflect the real registry state")
 
-        # 17h. Phase 9: list_expertise (no active profile -> empty structured response)
+        # 17h. Phase 9: list_expertise reflects the real registry's current state
         req_id += 1
         resp = send_request(proc, "tools/call", {"name": "list_expertise", "arguments": {}}, req_id)
         content_text = resp.get("result", {}).get("content", [{}])[0].get("text", "{}")
         expertise_data = json.loads(content_text)
-        if expertise_data.get("configured") is False and expertise_data.get("expertise", {}).get("items") == []:
-            print("  PASS list_expertise (not configured)")
+        if active is None:
+            expertise_ok = expertise_data.get("configured") is False and expertise_data.get("expertise", {}).get("items") == []
         else:
-            failures.append("FAIL list_expertise did not report the empty-registry state cleanly")
+            expertise_ok = expertise_data.get("configured") is True and expertise_data.get("profileId") == active["id"]
+        if expertise_ok:
+            print("  PASS list_expertise (reflects real registry state)")
+        else:
+            failures.append("FAIL list_expertise did not reflect the real registry state")
 
         # 17i. Phase 9: get_work_activity_summary
         req_id += 1

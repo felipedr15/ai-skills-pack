@@ -4,5 +4,6 @@
 
 | ID | Role | Team | Active | Path |
 |---|---|---|---|---|
+| felipe-rojas | Senior IT Technical Support Analyst | Information Technology Support, Department of Consumer and Business Affairs (Los Angeles County) | true | profile/felipe-rojas.md |
 
-Total: 0 profile record(s).
+Total: 1 profile record(s).

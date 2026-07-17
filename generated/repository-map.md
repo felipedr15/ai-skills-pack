@@ -264,6 +264,12 @@
 - `knowledge/lessons-learned/README.md`
 - `knowledge/power-apps/README.md`
 - `knowledge/power-automate/README.md`
+- `knowledge/professional-context/career-history.md`
+- `knowledge/professional-context/expertise.md`
+- `knowledge/professional-context/overview.md`
+- `knowledge/professional-context/project-experience.md`
+- `knowledge/professional-context/responsibilities.md`
+- `knowledge/professional-context/systems-and-platforms.md`
 - `knowledge/prompt-engineering/README.md`
 - `knowledge/research-notes/README.md`
 - `knowledge/security/README.md`

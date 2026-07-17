@@ -3,23 +3,23 @@
 > Generated from repository state. This file is not a source of truth.
 
 Version: 0.9.0
-Generated at: 2026-07-17T19:37:45Z
+Generated at: 2026-07-17T22:10:13Z
 Generator: ai-os-release
 
 ## Repository
 
-- File count: 370
+- File count: 376
 
 ## Artifacts
 
 - `generated/skills.json` — present (11115 bytes)
 - `generated/skills.md` — present (2356 bytes)
-- `generated/repository-index.json` — present (75686 bytes)
-- `generated/repository-map.md` — present (16203 bytes)
+- `generated/repository-index.json` — present (76965 bytes)
+- `generated/repository-map.md` — present (16523 bytes)
 - `generated/memory-index.json` — present (4559 bytes)
 - `generated/memory-index.md` — present (1305 bytes)
-- `generated/profile-index.json` — present (68 bytes)
-- `generated/profile-index.md` — present (189 bytes)
+- `generated/profile-index.json` — present (340 bytes)
+- `generated/profile-index.md` — present (376 bytes)
 - `generated/knowledge-graph.json` — present (234092 bytes)
 - `generated/knowledge-graph.md` — present (1212 bytes)
 - `generated/discovery-index.json` — present (834658 bytes)
@@ -32,8 +32,8 @@ Generator: ai-os-release
 - `generated/knowledge-health.md` — present (2213 bytes)
 - `generated/work-activity.json` — present (3662 bytes)
 - `generated/work-activity.md` — present (914 bytes)
-- `generated/dashboard.html` — present (67300 bytes)
-- `generated/dashboard-data.json` — present (7981 bytes)
+- `generated/dashboard.html` — present (70839 bytes)
+- `generated/dashboard-data.json` — present (13294 bytes)
 
 ## Components
 

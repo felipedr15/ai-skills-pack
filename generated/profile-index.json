@@ -1,5 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "recordCount": 0,
-  "records": []
+  "recordCount": 1,
+  "records": [
+    {
+      "id": "felipe-rojas",
+      "path": "profile/felipe-rojas.md",
+      "role": "Senior IT Technical Support Analyst",
+      "team": "Information Technology Support, Department of Consumer and Business Affairs (Los Angeles County)",
+      "active": true
+    }
+  ]
 }

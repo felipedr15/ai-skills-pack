@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T19:37:45Z",
+  "generatedAt": "2026-07-17T20:05:33Z",
   "generator": "ai-os-dashboard",
   "repository": {
     "available": true,
@@ -11,11 +11,11 @@
       "project-starters": 129,
       "templates": 30,
       "standards": 9,
-      "knowledge": 32,
+      "knowledge": 38,
       "references": 11,
       "scripts": 103
     },
-    "totalFiles": 370
+    "totalFiles": 376
   },
   "skills": {
     "available": true,
@@ -244,7 +244,7 @@
         "generatedAt": null,
         "stale": false,
         "path": "repository-index.json",
-        "fileTimestamp": "2026-07-17T16:13:24Z"
+        "fileTimestamp": "2026-07-17T20:05:29Z"
       },
       {
         "exists": true,
@@ -298,16 +298,205 @@
   "professionalContext": {
     "profileIndexAvailable": true,
     "workActivityAvailable": true,
-    "configured": false,
-    "profileCount": 0,
-    "activeProfile": null,
-    "expertiseCount": 0,
+    "configured": true,
+    "profileCount": 1,
+    "activeProfile": {
+      "id": "felipe-rojas",
+      "role": "Senior IT Technical Support Analyst",
+      "team": "Information Technology Support, Department of Consumer and Business Affairs (Los Angeles County)"
+    },
+    "expertiseCount": 45,
     "expertiseByLevel": {
-      "foundational": [],
-      "working": [],
-      "proficient": [],
-      "advanced": [],
-      "lead": []
+      "foundational": [
+        {
+          "id": "expertise-coreview",
+          "name": "CoreView"
+        }
+      ],
+      "working": [
+        {
+          "id": "expertise-endpoint-compliance",
+          "name": "Endpoint Compliance"
+        },
+        {
+          "id": "expertise-exchange-online-support",
+          "name": "Exchange Online Support"
+        },
+        {
+          "id": "expertise-teams",
+          "name": "Microsoft Teams"
+        },
+        {
+          "id": "expertise-mfa",
+          "name": "Multi-Factor Authentication (MFA)"
+        },
+        {
+          "id": "expertise-project-planning",
+          "name": "Project Planning"
+        },
+        {
+          "id": "expertise-quality-assurance",
+          "name": "Quality Assurance"
+        },
+        {
+          "id": "expertise-requirements-gathering",
+          "name": "Requirements Gathering"
+        },
+        {
+          "id": "expertise-sharepoint",
+          "name": "SharePoint"
+        },
+        {
+          "id": "expertise-testing",
+          "name": "Testing"
+        }
+      ],
+      "proficient": [
+        {
+          "id": "expertise-active-directory",
+          "name": "Active Directory"
+        },
+        {
+          "id": "expertise-asset-lifecycle-management",
+          "name": "Asset Lifecycle Management"
+        },
+        {
+          "id": "expertise-bilingual-customer-support",
+          "name": "Bilingual Customer Support (English/Spanish)"
+        },
+        {
+          "id": "expertise-end-user-training",
+          "name": "End-User Training"
+        },
+        {
+          "id": "expertise-endpoint-deployment",
+          "name": "Endpoint Deployment"
+        },
+        {
+          "id": "expertise-endpoint-imaging",
+          "name": "Endpoint Imaging"
+        },
+        {
+          "id": "expertise-git-and-github",
+          "name": "Git and GitHub"
+        },
+        {
+          "id": "expertise-identity-and-access-management",
+          "name": "Identity and Access Management"
+        },
+        {
+          "id": "expertise-incident-resolution",
+          "name": "Incident Resolution"
+        },
+        {
+          "id": "expertise-internal-application-development",
+          "name": "Internal Application Development"
+        },
+        {
+          "id": "expertise-major-incident-coordination",
+          "name": "Major Incident Coordination"
+        },
+        {
+          "id": "expertise-microsoft-365-administration",
+          "name": "Microsoft 365 Administration"
+        },
+        {
+          "id": "expertise-microsoft-entra-id",
+          "name": "Microsoft Entra ID"
+        },
+        {
+          "id": "expertise-microsoft-intune",
+          "name": "Microsoft Intune"
+        },
+        {
+          "id": "expertise-power-apps",
+          "name": "Power Apps"
+        },
+        {
+          "id": "expertise-power-automate",
+          "name": "Power Automate"
+        },
+        {
+          "id": "expertise-procedure-development",
+          "name": "Procedure Development"
+        },
+        {
+          "id": "expertise-procurement-support",
+          "name": "Procurement Support"
+        },
+        {
+          "id": "expertise-project-implementation",
+          "name": "Project Implementation"
+        },
+        {
+          "id": "expertise-python",
+          "name": "Python"
+        },
+        {
+          "id": "expertise-release-validation-and-documentation",
+          "name": "Release Validation and Documentation"
+        },
+        {
+          "id": "expertise-software-licensing",
+          "name": "Software Licensing"
+        },
+        {
+          "id": "expertise-solarwinds-service-desk",
+          "name": "SolarWinds Service Desk"
+        },
+        {
+          "id": "expertise-stakeholder-communication",
+          "name": "Stakeholder Communication"
+        },
+        {
+          "id": "expertise-technical-documentation",
+          "name": "Technical Documentation"
+        },
+        {
+          "id": "expertise-user-lifecycle-administration",
+          "name": "User Lifecycle Administration"
+        },
+        {
+          "id": "expertise-vendor-coordination",
+          "name": "Vendor Coordination"
+        },
+        {
+          "id": "expertise-windows-administration",
+          "name": "Windows Administration"
+        },
+        {
+          "id": "expertise-workflow-automation",
+          "name": "Workflow Automation"
+        }
+      ],
+      "advanced": [
+        {
+          "id": "expertise-asset-inventory",
+          "name": "Asset Inventory"
+        },
+        {
+          "id": "expertise-hardware-troubleshooting",
+          "name": "Hardware Troubleshooting"
+        },
+        {
+          "id": "expertise-network-connectivity-troubleshooting",
+          "name": "Network Connectivity Troubleshooting"
+        },
+        {
+          "id": "expertise-software-troubleshooting",
+          "name": "Software Troubleshooting"
+        },
+        {
+          "id": "expertise-technical-support-and-diagnostics",
+          "name": "Technical Support and Diagnostics"
+        }
+      ],
+      "lead": [
+        {
+          "id": "expertise-lead-technical-support",
+          "name": "Lead Technical Support"
+        }
+      ]
     },
     "topFocusAreas": [
       {

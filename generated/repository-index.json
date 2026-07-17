@@ -7,7 +7,7 @@
     "project-starters": 129,
     "templates": 30,
     "standards": 9,
-    "knowledge": 32,
+    "knowledge": 38,
     "references": 11,
     "scripts": 103
   },
@@ -185,6 +185,42 @@
       "category": "knowledge",
       "size": 474,
       "sha256": "00942a418a8f2afd94c67f4069fdf844bb2476bd7fee029c7dd92525da3018b3"
+    },
+    {
+      "path": "knowledge/professional-context/career-history.md",
+      "category": "knowledge",
+      "size": 2314,
+      "sha256": "90cf1fb1d3b198ba27486c3294c26ff57fc9b948ea7521e2c1d5787524c2088a"
+    },
+    {
+      "path": "knowledge/professional-context/expertise.md",
+      "category": "knowledge",
+      "size": 3084,
+      "sha256": "6b39e8b66660fbada9011128651d8693d38d82e3d17ef4a0f70af95348b16c6d"
+    },
+    {
+      "path": "knowledge/professional-context/overview.md",
+      "category": "knowledge",
+      "size": 484,
+      "sha256": "e688b4246cb85c9f4766d1920c8f0e7ee5de791a72f6c3359055ce09b3cfe137"
+    },
+    {
+      "path": "knowledge/professional-context/project-experience.md",
+      "category": "knowledge",
+      "size": 4757,
+      "sha256": "bb8a7e93b6214dd2edfb5b5b29e550dd664cf45e8d1473419ec699575e1e6cf9"
+    },
+    {
+      "path": "knowledge/professional-context/responsibilities.md",
+      "category": "knowledge",
+      "size": 2212,
+      "sha256": "0e990aaa9906fe937e8595d3e428efb3577ca2ff02f3ef84e94721b0e373304c"
+    },
+    {
+      "path": "knowledge/professional-context/systems-and-platforms.md",
+      "category": "knowledge",
+      "size": 3416,
+      "sha256": "e5e34b3db46ea89d31fb523599058aaff8a951d707b35118bc37645741373f50"
     },
     {
       "path": "knowledge/prompt-engineering/README.md",
@@ -1449,8 +1485,8 @@
     {
       "path": "scripts/mcp-smoke-test.py",
       "category": "scripts",
-      "size": 12386,
-      "sha256": "e14affd8fff8ca3c0c57c76432ee1bc37e5ef4a24c6d0ad0fad4df3c6f06be54"
+      "size": 13290,
+      "sha256": "fea20d470e9eb32ec3238b9ec853d5956819b2d81bfb5e1a340fea5e1954c72d"
     },
     {
       "path": "scripts/mcp_server/__init__.py",
