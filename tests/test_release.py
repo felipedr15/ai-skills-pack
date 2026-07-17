@@ -126,7 +126,7 @@ class ConfigTests(unittest.TestCase):
 class StatusTests(unittest.TestCase):
     def test_status_from_real_repo(self):
         status = get_status(ROOT)
-        self.assertEqual(status["version"], "0.8.0")
+        self.assertEqual(status["version"], "0.9.0")
         self.assertIn("artifacts", status)
         self.assertIn("dashboard", status)
         self.assertIn("mcp", status)
@@ -161,18 +161,18 @@ class CLITests(unittest.TestCase):
     def test_version_command(self):
         code, out, _ = self._run_cli(["version"])
         self.assertEqual(code, 0)
-        self.assertIn("0.8.0", out)
+        self.assertIn("0.9.0", out)
 
     def test_status_command(self):
         code, out, _ = self._run_cli(["status"])
         self.assertEqual(code, 0)
-        self.assertIn("AI OS v0.8.0", out)
+        self.assertIn("AI OS v0.9.0", out)
 
     def test_status_json(self):
         code, out, _ = self._run_cli(["status", "--json"])
         self.assertEqual(code, 0)
         data = json.loads(out)
-        self.assertEqual(data["version"], "0.8.0")
+        self.assertEqual(data["version"], "0.9.0")
 
     def test_doctor_command(self):
         code, out, _ = self._run_cli(["doctor"])
@@ -323,7 +323,7 @@ class PackagingTests(unittest.TestCase):
     def test_package_dry_run(self):
         code, out, _ = self._run_cli(["package", "--dry-run"])
         self.assertEqual(code, 0)
-        self.assertIn("ai-os-0.8.0", out)
+        self.assertIn("ai-os-0.9.0", out)
         self.assertIn("Files:", out)
 
     def test_package_excludes_git(self):
@@ -341,10 +341,10 @@ class PackagingTests(unittest.TestCase):
             code, out, _ = self._run_cli(["package", "--output", tmp])
             self.assertEqual(code, 0)
             dist = Path(tmp)
-            self.assertTrue((dist / "ai-os-0.8.0.zip").is_file())
-            self.assertTrue((dist / "ai-os-0.8.0.tar.gz").is_file())
-            self.assertTrue((dist / "ai-os-0.8.0.sha256").is_file())
-            self.assertTrue((dist / "ai-os-0.8.0-files.txt").is_file())
+            self.assertTrue((dist / "ai-os-0.9.0.zip").is_file())
+            self.assertTrue((dist / "ai-os-0.9.0.tar.gz").is_file())
+            self.assertTrue((dist / "ai-os-0.9.0.sha256").is_file())
+            self.assertTrue((dist / "ai-os-0.9.0-files.txt").is_file())
 
 
 # ============================================================

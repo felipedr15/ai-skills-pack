@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T08:52:42Z",
+  "generatedAt": "2026-07-17T16:13:28Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
     "documents": 333,
     "entities": 357,
-    "terms": 1089,
+    "terms": 1087,
     "relationships": 611
   },
   "documents": [
@@ -989,7 +989,7 @@
       "category": "document",
       "headings": [
         "Changelog",
-        "Unreleased",
+        "[0.9.0] - 2026-07-17",
         "Added",
         "Changed",
         "[0.8.0] - 2026-07-15",
@@ -1000,7 +1000,7 @@
         "Removed",
         "Security"
       ],
-      "snippet": "- Phase 9 Professional Context and Work Intelligence (not yet released): canonical, explicitly-authored",
+      "snippet": "- Phase 9 Professional Context and Work Intelligence: canonical, explicitly-authored",
       "frontMatter": {}
     },
     {
@@ -9482,6 +9482,7 @@
       "doc:knowledge/architecture/phase-6-mcp-integration.md"
     ],
     "17": [
+      "doc:CHANGELOG.md",
       "doc:examples/mcp/README.md"
     ],
     "2026": [
@@ -15482,7 +15483,6 @@
       "doc:.github/workflows/README.md",
       "doc:.kiro/README.md",
       "doc:.kiro/specs/README.md",
-      "doc:CHANGELOG.md",
       "doc:docs/continuous-learning.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
@@ -17417,9 +17417,6 @@
       "entity:document:templates/project-starters/power-automate/RELEASE_NOTES.md",
       "entity:document:templates/project-starters/python/RELEASE_NOTES.md",
       "entity:document:templates/project-starters/web-app/RELEASE_NOTES.md"
-    ],
-    "released": [
-      "doc:CHANGELOG.md"
     ],
     "releasing": [
       "doc:specs/phase-9-professional-context/tasks.md"
@@ -20209,7 +20206,6 @@
       "doc:templates/specifications/testing-plan.md"
     ],
     "unreleased": [
-      "doc:CHANGELOG.md",
       "doc:templates/project-memory/CHANGELOG.md",
       "doc:templates/project-starters/automation/CHANGELOG.md",
       "doc:templates/project-starters/documentation/CHANGELOG.md",
@@ -20764,9 +20760,6 @@
     ],
     "yaml": [
       "doc:.kiro/steering/technology.md"
-    ],
-    "yet": [
-      "doc:CHANGELOG.md"
     ],
     "yml": [
       "doc:.github/workflows/README.md"

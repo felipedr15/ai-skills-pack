@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T08:52:44Z",
+  "generatedAt": "2026-07-17T16:13:30Z",
   "generator": "ai-os-dashboard",
   "repository": {
     "available": true,
@@ -225,7 +225,7 @@
     "available": true,
     "documents": 333,
     "entities": 357,
-    "terms": 1089,
+    "terms": 1087,
     "relationships": 611,
     "warnings": 0,
     "unindexedFiles": 0
@@ -244,7 +244,7 @@
         "generatedAt": null,
         "stale": false,
         "path": "repository-index.json",
-        "fileTimestamp": "2026-07-17T00:53:41Z"
+        "fileTimestamp": "2026-07-17T16:13:24Z"
       },
       {
         "exists": true,
@@ -262,10 +262,10 @@
       },
       {
         "exists": true,
-        "generatedAt": "2026-07-17T08:52:42Z",
+        "generatedAt": "2026-07-17T16:13:28Z",
         "stale": false,
         "path": "discovery-index.json",
-        "fileTimestamp": "2026-07-17T08:52:42Z"
+        "fileTimestamp": "2026-07-17T16:13:28Z"
       }
     ]
   },
