@@ -3,7 +3,7 @@
 > Generated from repository state. This file is not a source of truth.
 
 Version: 0.9.0
-Generated at: 2026-07-17T16:21:33Z
+Generated at: 2026-07-17T16:37:26Z
 Generator: ai-os-release
 
 ## Repository
@@ -20,9 +20,9 @@ Generator: ai-os-release
 - `generated/memory-index.md` — present (1305 bytes)
 - `generated/profile-index.json` — present (68 bytes)
 - `generated/profile-index.md` — present (189 bytes)
-- `generated/knowledge-graph.json` — present (231725 bytes)
+- `generated/knowledge-graph.json` — present (232592 bytes)
 - `generated/knowledge-graph.md` — present (1212 bytes)
-- `generated/discovery-index.json` — present (829581 bytes)
+- `generated/discovery-index.json` — present (831642 bytes)
 - `generated/discovery-index.md` — present (351 bytes)
 - `generated/agent-registry.json` — present (13553 bytes)
 - `generated/agent-registry.md` — present (4375 bytes)

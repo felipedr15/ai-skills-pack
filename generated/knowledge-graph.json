@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T08:52:40Z",
+  "generatedAt": "2026-07-17T16:37:23Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 357,
-    "edges": 611,
+    "nodes": 358,
+    "edges": 614,
     "nodesByType": {
       "concept": 2,
-      "document": 319,
+      "document": 320,
       "memory": 5,
       "platform": 5,
       "project": 10,
@@ -19,9 +19,9 @@
       "contains": 129,
       "generated_from": 14,
       "references": 204,
-      "related_to": 129,
+      "related_to": 130,
       "supports": 4,
-      "uses": 129
+      "uses": 131
     }
   },
   "nodes": [
@@ -435,6 +435,15 @@
       "type": "document",
       "name": "Release Notes V0.8.0",
       "sourcePath": "RELEASE_NOTES_v0.8.0.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:RELEASE_NOTES_v0.9.0.md",
+      "type": "document",
+      "name": "Release Notes V0.9.0",
+      "sourcePath": "RELEASE_NOTES_v0.9.0.md",
       "metadata": {
         "extension": ".md"
       }
@@ -6645,6 +6654,15 @@
       }
     },
     {
+      "id": "edge:a3bccc3cc2f315f4",
+      "type": "related_to",
+      "from": "document:RELEASE_NOTES_v0.9.0.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:683de0d52e3e7a73",
       "type": "related_to",
       "from": "document:ROADMAP.md",
@@ -7917,6 +7935,24 @@
       "id": "edge:c82ef8cbf1d991c3",
       "type": "uses",
       "from": "document:RELEASE_NOTES_v0.8.0.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:99e2c79ab07a45e7",
+      "type": "uses",
+      "from": "document:RELEASE_NOTES_v0.9.0.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:90fa948891cec1ed",
+      "type": "uses",
+      "from": "document:RELEASE_NOTES_v0.9.0.md",
       "to": "tool:mcp",
       "metadata": {
         "source": "document_text"

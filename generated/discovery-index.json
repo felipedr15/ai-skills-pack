@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T16:13:28Z",
+  "generatedAt": "2026-07-17T16:37:25Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 333,
-    "entities": 357,
-    "terms": 1087,
-    "relationships": 611
+    "documents": 334,
+    "entities": 358,
+    "terms": 1089,
+    "relationships": 614
   },
   "documents": [
     {
@@ -1086,6 +1086,21 @@
         "Final validation"
       ],
       "snippet": "* feat: add Phase 8 continuous learning and agent orchestration by @frojas15 in https://github.com/frojas15/ai-skills-pack/pull/2",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:RELEASE_NOTES_v0.9.0.md",
+      "sourcePath": "RELEASE_NOTES_v0.9.0.md",
+      "title": "AI OS v0.9.0 — Professional Context and Work Intelligence",
+      "category": "document",
+      "headings": [
+        "AI OS v0.9.0 — Professional Context and Work Intelligence",
+        "Highlights",
+        "Validation",
+        "Privacy and security",
+        "Known limitations"
+      ],
+      "snippet": "- Added a structured, local-first professional-context layer under `profile/`, structurally",
       "frontMatter": {}
     },
     {
@@ -6184,6 +6199,16 @@
       }
     },
     {
+      "id": "entity:document:RELEASE_NOTES_v0.9.0.md",
+      "nodeId": "document:RELEASE_NOTES_v0.9.0.md",
+      "type": "document",
+      "name": "Release Notes V0.9.0",
+      "sourcePath": "RELEASE_NOTES_v0.9.0.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "entity:document:ROADMAP.md",
       "nodeId": "document:ROADMAP.md",
       "type": "document",
@@ -9614,6 +9639,7 @@
     ],
     "added": [
       "doc:CHANGELOG.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:templates/project-memory/CHANGELOG.md",
       "doc:templates/project-starters/automation/CHANGELOG.md",
       "doc:templates/project-starters/documentation/CHANGELOG.md",
@@ -9840,6 +9866,7 @@
       "doc:ARCHITECTURE.md",
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
@@ -10001,6 +10028,7 @@
       "doc:GOVERNANCE.md",
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
@@ -11366,6 +11394,7 @@
       "doc:CHANGELOG.md",
       "doc:CLAUDE.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
@@ -12138,6 +12167,7 @@
       "entity:document:GOVERNANCE.md",
       "entity:document:README.md",
       "entity:document:RELEASE_NOTES_v0.8.0.md",
+      "entity:document:RELEASE_NOTES_v0.9.0.md",
       "entity:document:ROADMAP.md",
       "entity:document:SECURITY.md",
       "entity:document:WORKFLOW.md",
@@ -12927,6 +12957,7 @@
       "doc:.agent/skills/personal/clear-concise-writing/SKILL.md",
       "doc:.kiro/steering/workflow.md",
       "doc:AGENTS.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:specs/phase-9-professional-context/requirements.md",
@@ -13529,6 +13560,9 @@
       "doc:knowledge/vscode/README.md",
       "doc:specs/README.md"
     ],
+    "highlights": [
+      "doc:RELEASE_NOTES_v0.9.0.md"
+    ],
     "hold": [
       "doc:memory/sessions/README.md"
     ],
@@ -13795,6 +13829,7 @@
       "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:ROADMAP.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:specs/phase-9-professional-context/design.md",
@@ -14189,6 +14224,7 @@
       "entity:document:scripts/knowledge_graph/README.md"
     ],
     "known": [
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:docs/knowledge-health.md",
       "doc:templates/project-memory/KNOWN_ISSUES.md",
       "doc:templates/project-memory/RELEASE_NOTES.md",
@@ -14225,6 +14261,7 @@
       "doc:standards/documentation.md"
     ],
     "layer": [
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
@@ -14337,6 +14374,7 @@
       "doc:prompts/research.prompt.md"
     ],
     "limitations": [
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:agents/researcher.md"
     ],
     "linked": [
@@ -14364,6 +14402,7 @@
       "doc:memory/permanent/README.md"
     ],
     "local": [
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:docs/feedback-and-audit.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -14580,6 +14619,7 @@
       "doc:GOVERNANCE.md",
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
@@ -14883,6 +14923,7 @@
       "entity:document:GOVERNANCE.md",
       "entity:document:README.md",
       "entity:document:RELEASE_NOTES_v0.8.0.md",
+      "entity:document:RELEASE_NOTES_v0.9.0.md",
       "entity:document:ROADMAP.md",
       "entity:document:SECURITY.md",
       "entity:document:WORKFLOW.md",
@@ -15551,6 +15592,7 @@
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/README.md",
       "doc:knowledge/architecture/README.md",
@@ -15575,6 +15617,7 @@
       "doc:templates/project-starters/web-app/RELEASE_NOTES.md",
       "doc:templates/project-starters/web-app/SESSION.md",
       "entity:document:RELEASE_NOTES_v0.8.0.md",
+      "entity:document:RELEASE_NOTES_v0.9.0.md",
       "entity:document:knowledge/research-notes/README.md",
       "entity:document:templates/project-memory/RELEASE_NOTES.md",
       "entity:document:templates/project-starters/automation/RELEASE_NOTES.md",
@@ -15804,6 +15847,7 @@
       "doc:AGENTS.md",
       "doc:ARCHITECTURE.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
@@ -16314,6 +16358,7 @@
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
     ],
     "privacy": [
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md"
@@ -16370,6 +16415,7 @@
       "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
@@ -16385,6 +16431,7 @@
       "entity:document:specs/phase-9-professional-context/tasks.md"
     ],
     "profile": [
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:profile/README.md",
       "doc:profile/registry.json",
       "doc:specs/phase-9-professional-context/design.md",
@@ -17390,6 +17437,7 @@
     ],
     "release": [
       "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
@@ -17405,6 +17453,7 @@
       "doc:templates/project-starters/python/RELEASE_NOTES.md",
       "doc:templates/project-starters/web-app/RELEASE_NOTES.md",
       "entity:document:RELEASE_NOTES_v0.8.0.md",
+      "entity:document:RELEASE_NOTES_v0.9.0.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/workflows/release-preparation.json",
       "entity:document:standards/release-management.md",
@@ -18192,6 +18241,7 @@
       "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:agents/security-reviewer.md",
@@ -19169,6 +19219,9 @@
     "structural": [
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
+    "structurally": [
+      "doc:RELEASE_NOTES_v0.9.0.md"
+    ],
     "structure": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.kiro/steering/structure.md",
@@ -19182,6 +19235,7 @@
       "entity:memory:convention-documentation-structure-001"
     ],
     "structured": [
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:docs/feedback-and-audit.md",
       "doc:prompts/specify.prompt.md",
       "doc:references/kiro.md"
@@ -20193,6 +20247,7 @@
       "doc:.kiro/README.md",
       "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/structure.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:templates/memory/README.md"
     ],
     "unified": [
@@ -20341,9 +20396,11 @@
     ],
     "v0": [
       "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:references/v0.md",
       "doc:references/workflow-examples.md",
       "entity:document:RELEASE_NOTES_v0.8.0.md",
+      "entity:document:RELEASE_NOTES_v0.9.0.md",
       "entity:document:references/v0.md"
     ],
     "valid": [
@@ -20372,6 +20429,7 @@
       "doc:CLAUDE.md",
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:agents/qa.md",
@@ -20647,6 +20705,7 @@
       "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
       "doc:README.md",
+      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:ROADMAP.md",
       "doc:agents/README.md",
       "doc:docs/continuous-learning.md",
