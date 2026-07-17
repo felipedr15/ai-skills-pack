@@ -231,6 +231,9 @@ python scripts/generate-knowledge-graph.py
 
 The optional `--check` mode performs no writes and exits non-zero when generated files are missing or stale.
 
+See [Command Reference](docs/cli-reference.md) for a complete cheat sheet of CLI, validation, and
+release/Git workflow commands with descriptions and usage examples.
+
 ## Project Creation
 
 ```text
