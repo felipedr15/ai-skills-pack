@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T16:37:25Z",
+  "generatedAt": "2026-07-17T19:37:43Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 334,
-    "entities": 358,
-    "terms": 1089,
-    "relationships": 614
+    "documents": 335,
+    "entities": 359,
+    "terms": 1097,
+    "relationships": 620
   },
   "documents": [
     {
@@ -1418,6 +1418,25 @@
         "MCP and Dashboard"
       ],
       "snippet": "`generated/agent-registry.json` / `.md`, built from `agents/*.md` and `agents.json` by",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/cli-reference.md",
+      "sourcePath": "docs/cli-reference.md",
+      "title": "AI OS Command Reference",
+      "category": "document",
+      "headings": [
+        "AI OS Command Reference",
+        "Core CLI (`scripts/ai-os.py`)",
+        "Task Planning and Orchestration (Phase 8)",
+        "Professional Context / Profile (Phase 9)",
+        "Memory Engine (Phase 2)",
+        "Knowledge Graph and Semantic Discovery (Phases 3–4)",
+        "Validation and Release",
+        "Release and Git Workflow",
+        "Syncing another machine"
+      ],
+      "snippet": "A practical cheat sheet of the commands used most often when working in this repository —",
       "frontMatter": {}
     },
     {
@@ -6379,6 +6398,16 @@
       }
     },
     {
+      "id": "entity:document:docs/cli-reference.md",
+      "nodeId": "document:docs/cli-reference.md",
+      "type": "document",
+      "name": "Cli Reference",
+      "sourcePath": "docs/cli-reference.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "entity:document:docs/continuous-learning.md",
       "nodeId": "document:docs/continuous-learning.md",
       "type": "document",
@@ -9870,6 +9899,7 @@
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
+      "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/ai-workflows/README.md",
@@ -10041,6 +10071,7 @@
       "doc:agents/researcher.md",
       "doc:agents/security-reviewer.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/feedback-and-audit.md",
       "doc:docs/knowledge-health.md",
@@ -10144,6 +10175,9 @@
       "doc:templates/specifications/README.md",
       "doc:templates/specifications/design.md",
       "entity:document:docs/feedback-and-audit.md"
+    ],
+    "another": [
+      "doc:docs/cli-reference.md"
     ],
     "anti": [
       "doc:.agent/skills/communication-skill/SKILL.md",
@@ -10997,6 +11031,9 @@
       "doc:specs/README.md",
       "entity:document:references/chatgpt.md"
     ],
+    "cheat": [
+      "doc:docs/cli-reference.md"
+    ],
     "check": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
@@ -11090,8 +11127,10 @@
     "cli": [
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
+      "doc:docs/cli-reference.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
-      "doc:specs/phase-9-professional-context/tasks.md"
+      "doc:specs/phase-9-professional-context/tasks.md",
+      "entity:document:docs/cli-reference.md"
     ],
     "client": [
       "doc:examples/mcp/README.md",
@@ -11146,11 +11185,13 @@
       "doc:.agent/skills/thinking/SKILL.md"
     ],
     "command": [
+      "doc:docs/cli-reference.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "commands": [
       "doc:README.md",
+      "doc:docs/cli-reference.md",
       "doc:docs/knowledge-health.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -11398,6 +11439,7 @@
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
+      "doc:docs/cli-reference.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
@@ -11519,6 +11561,7 @@
       "doc:.kiro/steering/technology.md",
       "doc:README.md",
       "doc:ROADMAP.md",
+      "doc:docs/cli-reference.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "corporate": [
@@ -12059,6 +12102,7 @@
       "doc:ARCHITECTURE.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
+      "doc:docs/cli-reference.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:scripts/knowledge_graph/README.md",
@@ -12098,6 +12142,7 @@
     ],
     "docs": [
       "doc:docs/agent-orchestration.md",
+      "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/feedback-and-audit.md",
       "doc:docs/knowledge-health.md",
@@ -12105,6 +12150,7 @@
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:prompts/create-skill.prompt.md",
       "entity:document:docs/agent-orchestration.md",
+      "entity:document:docs/cli-reference.md",
       "entity:document:docs/continuous-learning.md",
       "entity:document:docs/feedback-and-audit.md",
       "entity:document:docs/knowledge-health.md",
@@ -12185,6 +12231,7 @@
       "entity:document:agents/security-reviewer.md",
       "entity:document:config/ai-os.example.json",
       "entity:document:docs/agent-orchestration.md",
+      "entity:document:docs/cli-reference.md",
       "entity:document:docs/continuous-learning.md",
       "entity:document:docs/feedback-and-audit.md",
       "entity:document:docs/knowledge-health.md",
@@ -12619,6 +12666,7 @@
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
+      "doc:docs/cli-reference.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:memory/README.md",
@@ -13280,6 +13328,7 @@
       "doc:.kiro/steering/technology.md",
       "doc:AGENTS.md",
       "doc:agents/reviewer.md",
+      "doc:docs/cli-reference.md",
       "doc:knowledge/git/README.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:prompts/review.prompt.md",
@@ -13361,6 +13410,7 @@
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
+      "doc:docs/cli-reference.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -13683,6 +13733,7 @@
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:.github/copilot-instructions.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/cli-reference.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -14140,6 +14191,7 @@
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
+      "doc:docs/cli-reference.md",
       "doc:docs/knowledge-health.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/README.md",
@@ -14452,6 +14504,9 @@
     "mac": [
       "doc:examples/mcp/README.md"
     ],
+    "machine": [
+      "doc:docs/cli-reference.md"
+    ],
     "maintainability": [
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:standards/code-review.md",
@@ -14635,6 +14690,7 @@
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/feedback-and-audit.md",
       "doc:docs/knowledge-health.md",
@@ -14939,6 +14995,7 @@
       "entity:document:agents/reviewer.md",
       "entity:document:agents/security-reviewer.md",
       "entity:document:docs/agent-orchestration.md",
+      "entity:document:docs/cli-reference.md",
       "entity:document:docs/continuous-learning.md",
       "entity:document:docs/feedback-and-audit.md",
       "entity:document:docs/knowledge-health.md",
@@ -15216,6 +15273,7 @@
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
+      "doc:docs/cli-reference.md",
       "doc:docs/memory-approval.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
@@ -15381,6 +15439,9 @@
       "doc:standards/release-management.md",
       "doc:templates/specifications/deployment-plan.md",
       "doc:templates/specifications/design.md"
+    ],
+    "most": [
+      "doc:docs/cli-reference.md"
     ],
     "moved": [
       "doc:.kiro/specs/phase-9-professional-context/README.md"
@@ -15676,6 +15737,7 @@
       "doc:.kiro/steering/workflow.md"
     ],
     "of": [
+      "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -15690,6 +15752,9 @@
       "doc:specs/phase-9-professional-context/design.md",
       "doc:specs/phase-9-professional-context/tasks.md",
       "entity:memory:decision-memory-index-source-truth-001"
+    ],
+    "often": [
+      "doc:docs/cli-reference.md"
     ],
     "old": [
       "doc:specs/phase-9-professional-context/tasks.md"
@@ -15823,6 +15888,7 @@
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/cli-reference.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/workflows/README.md",
@@ -15851,6 +15917,7 @@
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
+      "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -16072,6 +16139,7 @@
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/feedback-and-audit.md",
       "doc:docs/knowledge-health.md",
@@ -16100,6 +16168,7 @@
       "entity:document:specs/phase-9-professional-context/tasks.md"
     ],
     "phases": [
+      "doc:docs/cli-reference.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "phrases": [
@@ -16136,6 +16205,7 @@
     ],
     "planning": [
       "doc:docs/agent-orchestration.md",
+      "doc:docs/cli-reference.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:references/chatgpt.md",
       "doc:references/claude.md",
@@ -16280,6 +16350,9 @@
     "pr": [
       "doc:RELEASE_NOTES_v0.8.0.md"
     ],
+    "practical": [
+      "doc:docs/cli-reference.md"
+    ],
     "practices": [
       "doc:knowledge/best-practices/README.md",
       "entity:document:knowledge/best-practices/README.md"
@@ -16419,6 +16492,7 @@
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
+      "doc:docs/cli-reference.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:profile/README.md",
       "doc:specs/phase-9-professional-context/design.md",
@@ -16432,6 +16506,7 @@
     ],
     "profile": [
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/cli-reference.md",
       "doc:profile/README.md",
       "doc:profile/registry.json",
       "doc:specs/phase-9-professional-context/design.md",
@@ -16995,6 +17070,7 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "py": [
+      "doc:docs/cli-reference.md",
       "doc:knowledge/workflows/README.md",
       "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-starters/README.md"
@@ -17309,6 +17385,7 @@
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
+      "doc:docs/cli-reference.md",
       "doc:references/canva.md",
       "doc:references/chatgpt.md",
       "doc:references/claude.md",
@@ -17317,7 +17394,8 @@
       "doc:references/kiro.md",
       "doc:references/mcp.md",
       "doc:references/v0.md",
-      "doc:references/vercel.md"
+      "doc:references/vercel.md",
+      "entity:document:docs/cli-reference.md"
     ],
     "references": [
       "doc:.agent/skills/references/codex-tools.md",
@@ -17440,6 +17518,7 @@
       "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
+      "doc:docs/cli-reference.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/workflows/release-preparation.json",
       "doc:standards/release-management.md",
@@ -17538,6 +17617,7 @@
       "doc:AGENTS.md",
       "doc:ARCHITECTURE.md",
       "doc:README.md",
+      "doc:docs/cli-reference.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md",
@@ -18200,6 +18280,7 @@
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
     ],
     "scripts": [
+      "doc:docs/cli-reference.md",
       "doc:knowledge/workflows/README.md",
       "doc:scripts/README.md",
       "doc:scripts/knowledge_graph/README.md",
@@ -18316,6 +18397,7 @@
       "doc:ARCHITECTURE.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
+      "doc:docs/cli-reference.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:standards/accessibility.md",
@@ -18397,6 +18479,9 @@
       "doc:knowledge/sharepoint/README.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "entity:document:knowledge/sharepoint/README.md"
+    ],
+    "sheet": [
+      "doc:docs/cli-reference.md"
     ],
     "shell": [
       "doc:.kiro/steering/technology.md"
@@ -19351,6 +19436,9 @@
     "sync": [
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
+    "syncing": [
+      "doc:docs/cli-reference.md"
+    ],
     "system": [
       "doc:.agent/skills/system/README.md",
       "doc:.agent/skills/system/SKILL.md",
@@ -19384,6 +19472,7 @@
     ],
     "task": [
       "doc:docs/agent-orchestration.md",
+      "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:references/kiro.md",
@@ -19905,6 +19994,7 @@
       "doc:.kiro/steering/workflow.md",
       "doc:agents/README.md",
       "doc:agents/reviewer.md",
+      "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/knowledge-health.md",
       "doc:examples/mcp/README.md",
@@ -19980,6 +20070,7 @@
       "doc:.agent/skills/system/testing/README.md",
       "doc:.agent/skills/system/using-superpowers/README.md",
       "doc:.github/README.md",
+      "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:memory/README.md",
       "doc:profile/README.md",
@@ -20355,6 +20446,7 @@
       "doc:templates/project-starters/README.md"
     ],
     "used": [
+      "doc:docs/cli-reference.md",
       "doc:memory/sessions/session-memory-engine-example-001.md"
     ],
     "useful": [
@@ -20434,6 +20526,7 @@
       "doc:WORKFLOW.md",
       "doc:agents/qa.md",
       "doc:config/ai-os.example.json",
+      "doc:docs/cli-reference.md",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -20616,6 +20709,7 @@
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:.agent/skills/thinking/SKILL.md",
       "doc:CLAUDE.md",
+      "doc:docs/cli-reference.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:references/codex.md",
       "doc:references/copilot.md",
@@ -20742,6 +20836,7 @@
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/cli-reference.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/workflows/README.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -20782,7 +20877,8 @@
       "entity:document:knowledge/workflows/release-preparation.json"
     ],
     "working": [
-      "doc:CLAUDE.md"
+      "doc:CLAUDE.md",
+      "doc:docs/cli-reference.md"
     ],
     "workspace": [
       "doc:.kiro/specs/README.md"

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "version": "0.9.0",
-  "generatedAt": "2026-07-17T16:37:26Z",
+  "generatedAt": "2026-07-17T19:37:45Z",
   "generator": "ai-os-release",
   "repository": {
     "fileCount": 370
@@ -66,8 +66,8 @@
     {
       "path": "generated/knowledge-graph.json",
       "exists": true,
-      "size": 232592,
-      "checksum": "d42767b01d24e55d896ad38f12ed12d848c939d4c835846ad286ac8a9e865c8f",
+      "size": 234092,
+      "checksum": "909c46f604821e4c224fb73c542d486db3af788b0460b81a8c1297520759b430",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-knowledge-graph"
     },
@@ -75,13 +75,13 @@
       "path": "generated/knowledge-graph.md",
       "exists": true,
       "size": 1212,
-      "checksum": "02b1231a3be24cbdfed495eef942fbed1e24d40aeb3dce65791aecd1401fd560"
+      "checksum": "dbb05b4a4e4b7b9ec03e17a3e065942e05e3fcb07fe02116b0f793596a6b132e"
     },
     {
       "path": "generated/discovery-index.json",
       "exists": true,
-      "size": 831642,
-      "checksum": "5ff94c6d3fd3f4acc3897a3585f15465165c97ef3a5b679cf4e4a1a058fb0af1",
+      "size": 834658,
+      "checksum": "c9252cbbf623cd09101b7f77a08a039b852942417d4dc7f4055d95397e3f03b4",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-semantic-discovery"
     },
@@ -89,7 +89,7 @@
       "path": "generated/discovery-index.md",
       "exists": true,
       "size": 351,
-      "checksum": "ad0be20a6293fbf09c6be81463c15a9906385e4bccf973d97a138789df2d6dd8"
+      "checksum": "89df11231f5a597d49b533e673c20856ecae9fa86502eaa29e78420740ee5dc6"
     },
     {
       "path": "generated/agent-registry.json",
@@ -151,13 +151,13 @@
       "path": "generated/dashboard.html",
       "exists": true,
       "size": 67300,
-      "checksum": "c51dc2445d686cbbe1a69185b1b72bb08cae179c522e173d9e73cc4e58cb0ac8"
+      "checksum": "b3775122933fe9beeec105bbdc379958fae6c85235f630d22482701b41c7081a"
     },
     {
       "path": "generated/dashboard-data.json",
       "exists": true,
       "size": 7981,
-      "checksum": "70c277b3b5dc56c9d0ef496fb269771f2cda52ad27518ae1952cbbdf2a71502e",
+      "checksum": "41862c4e6e68c9728a11351e5950659a54c4f54b95a5e83c0c35ef2b096d7fde",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-dashboard"
     }

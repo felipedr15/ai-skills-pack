@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T16:37:23Z",
+  "generatedAt": "2026-07-17T19:37:42Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 358,
-    "edges": 614,
+    "nodes": 359,
+    "edges": 620,
     "nodesByType": {
       "concept": 2,
-      "document": 320,
+      "document": 321,
       "memory": 5,
       "platform": 5,
       "project": 10,
@@ -18,10 +18,10 @@
       "belongs_to": 2,
       "contains": 129,
       "generated_from": 14,
-      "references": 204,
-      "related_to": 130,
+      "references": 206,
+      "related_to": 132,
       "supports": 4,
-      "uses": 131
+      "uses": 133
     }
   },
   "nodes": [
@@ -597,6 +597,15 @@
       "type": "document",
       "name": "Agent Orchestration",
       "sourcePath": "docs/agent-orchestration.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/cli-reference.md",
+      "type": "document",
+      "name": "Cli Reference",
+      "sourcePath": "docs/cli-reference.md",
       "metadata": {
         "extension": ".md"
       }
@@ -4998,6 +5007,15 @@
       }
     },
     {
+      "id": "edge:50bacb1dae8109c7",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/cli-reference.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:41d740e78746687a",
       "type": "references",
       "from": "document:README.md",
@@ -5263,6 +5281,15 @@
       "type": "references",
       "from": "document:docs/agent-orchestration.md",
       "to": "document:knowledge/workflows/README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:fee765e696cb310e",
+      "type": "references",
+      "from": "document:docs/cli-reference.md",
+      "to": "document:README.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -6816,6 +6843,24 @@
       }
     },
     {
+      "id": "edge:9793c3e3fe63d2c8",
+      "type": "related_to",
+      "from": "document:docs/cli-reference.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:16c2667a6ec09b89",
+      "type": "related_to",
+      "from": "document:docs/cli-reference.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:35a86243ab272a00",
       "type": "related_to",
       "from": "document:docs/continuous-learning.md",
@@ -8043,6 +8088,24 @@
       "id": "edge:a67571ed0fbdffb5",
       "type": "uses",
       "from": "document:docs/agent-orchestration.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:7cc309edfaf60165",
+      "type": "uses",
+      "from": "document:docs/cli-reference.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:5a063418bfad7fbf",
+      "type": "uses",
+      "from": "document:docs/cli-reference.md",
       "to": "tool:mcp",
       "metadata": {
         "source": "document_text"
