@@ -286,6 +286,22 @@ class BuildTests(unittest.TestCase):
             self.assertTrue(label)
             self.assertTrue(script.endswith(".py"))
 
+    def test_phase9_generators_wired_into_generation_order(self):
+        scripts = dict(GENERATION_ORDER)
+        self.assertIn("scripts/generate-profile-index.py", scripts)
+        self.assertIn("scripts/generate-work-activity.py", scripts)
+        # profile index has no ordering dependency; work activity reads
+        # generated/knowledge-graph.json, so it must run after that step.
+        order = [script for script, _label in GENERATION_ORDER]
+        self.assertLess(
+            order.index("scripts/generate-knowledge-graph.py"),
+            order.index("scripts/generate-work-activity.py"),
+        )
+
+    def test_phase9_artifacts_in_generated_artifacts_list(self):
+        for name in ("profile-index.json", "profile-index.md", "work-activity.json", "work-activity.md"):
+            self.assertIn(name, GENERATED_ARTIFACTS)
+
 
 # ============================================================
 # Packaging Tests

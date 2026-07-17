@@ -51,6 +51,8 @@ def classify_document(path: str) -> str:
         return "skill"
     if path.startswith("memory/") and path.endswith(".md") and not path.lower().endswith("readme.md"):
         return "memory"
+    if path.startswith("profile/") and path.endswith(".md") and not path.lower().endswith("readme.md"):
+        return "profile"
     if path.startswith("templates/project-starters/"):
         return "project"
     return "document"
@@ -63,13 +65,42 @@ def discover_source_files(root: Path) -> list[Path]:
             continue
         rel = normalize_relpath(path, root)
         if rel.startswith("generated/"):
-            if rel not in {"generated/skills.json", "generated/repository-index.json", "generated/memory-index.json"}:
+            if rel not in {
+                "generated/skills.json", "generated/repository-index.json", "generated/memory-index.json",
+                "generated/profile-index.json", "generated/work-activity.json",
+            }:
                 continue
+        # Snapshots are dated historical checkpoints, never current professional
+        # truth (design.md Security) -- excluded from indexing entirely rather
+        # than risk a stale snapshot outranking or duplicating the curated
+        # knowledge/professional-context/overview.md it was taken from.
+        if rel.startswith("knowledge/professional-context/snapshots/"):
+            continue
         if path.suffix.lower() not in {".md", ".json"}:
             continue
         files.append(path)
     files.sort(key=lambda item: normalize_relpath(item, root))
     return files
+
+
+def load_active_profile_ids(root: Path) -> set[str]:
+    """Cross-reference profile/registry.json for which profile id(s) are
+    currently active, without ingesting any profile front-matter content.
+    An absent or empty registry is a valid state -> empty set, never a
+    failure (mirrors scripts/profile/registry.py's own not-yet-configured
+    handling).
+    """
+    from profile import registry as profile_registry
+
+    try:
+        data = profile_registry.load_registry(root)
+    except (OSError, ValueError):
+        return set()
+    return {
+        entry.get("id")
+        for entry in data.get("profiles", [])
+        if isinstance(entry, dict) and entry.get("active") is True and entry.get("id")
+    }
 
 
 def extract_mentions(text: str, values: set[str]) -> list[str]:

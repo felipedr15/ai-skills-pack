@@ -557,3 +557,136 @@ class AiOsService:
     def get_audit_summary(self) -> dict:
         from orchestration.audit import summary
         return summary(self.root)
+
+    # ── Phase 9: Professional Context (read-only) ──
+    # All methods below read only from generated/profile-index.json,
+    # generated/work-activity.json, and profile/<id>.expertise.json's
+    # already-schema-restricted fields (name/level/status/evidence type+ref).
+    # No profile prose, unrestricted front matter, or evidence dereferencing
+    # is ever returned. No method here can create, edit, or switch a
+    # profile, or touch approvals/sync-knowledge/snapshots -- those remain
+    # CLI-only, matching the Phase 8 approval/session posture.
+
+    def _load_profile_index(self) -> dict:
+        data = load_json_artifact(self._gen("profile-index.json"))
+        if data is None:
+            raise Unavailable("profile index not available")
+        if not isinstance(data.get("records"), list):
+            raise MalformedArtifact("profile index is malformed")
+        return data
+
+    def _find_profile_record(self, data: dict, profile_id: str = "") -> dict | None:
+        """Resolve a profile-index record by id, or the active record when
+        profile_id is omitted. Returns None (not an error) when no profile_id
+        was given and no profile is currently active -- a valid "not
+        configured" state, never fabricated."""
+        records = data.get("records", [])
+        if profile_id:
+            from profile.schema import is_normalized_identifier
+            if not is_normalized_identifier(profile_id):
+                raise InvalidRequest(f"profile_id must be a normalized identifier: {profile_id!r}")
+            for record in records:
+                if record.get("id") == profile_id:
+                    return record
+            raise NotFound(f"profile not found: {profile_id}")
+        for record in records:
+            if record.get("active") is True:
+                return record
+        return None
+
+    def get_professional_profile(self, *, profile_id: str = "") -> dict:
+        data = self._load_profile_index()
+        record = self._find_profile_record(data, profile_id)
+        if record is None:
+            return {"configured": False, "schemaVersion": data.get("schemaVersion"), "profile": None}
+        return {
+            "configured": True,
+            "schemaVersion": data.get("schemaVersion"),
+            "profile": {
+                "id": record.get("id", ""),
+                "role": record.get("role", ""),
+                "team": record.get("team", ""),
+                "active": bool(record.get("active", False)),
+            },
+        }
+
+    def _load_expertise_entries(self, profile_id: str) -> list:
+        """Load and validate profile/<id>.expertise.json, returning only
+        the summary fields design.md approves (name/level/status/evidence
+        type+ref) -- never the raw file, never more than that."""
+        path = self.root / "profile" / f"{profile_id}.expertise.json"
+        if not path.is_file():
+            return []
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            raise MalformedArtifact(f"profile expertise file is malformed: {profile_id}")
+
+        from profile.validate import validate_expertise_file
+        failures, _warnings = validate_expertise_file(data)
+        if failures:
+            raise MalformedArtifact(f"profile expertise file failed validation: {profile_id}")
+
+        results = []
+        for entry in data.get("entries", []):
+            if not isinstance(entry, dict):
+                continue
+            evidence = [
+                {"type": e.get("type", ""), "ref": e.get("ref", "")}
+                for e in entry.get("evidence", []) if isinstance(e, dict)
+            ]
+            results.append({
+                "id": entry.get("id", ""),
+                "name": entry.get("name", ""),
+                "level": entry.get("level", ""),
+                "status": entry.get("status", ""),
+                "evidence": evidence,
+            })
+        results.sort(key=lambda x: (x["name"].lower(), x["id"]))
+        return results
+
+    def list_expertise(self, *, profile_id: str = "", limit: int = DEFAULT_LIMIT, cursor: int = 0) -> dict:
+        data = self._load_profile_index()
+        record = self._find_profile_record(data, profile_id)
+        if record is None:
+            return {"configured": False, "profileId": None, "expertise": paginate([], limit, cursor)}
+        resolved_id = record.get("id", "")
+        entries = self._load_expertise_entries(resolved_id)
+        return {"configured": True, "profileId": resolved_id, "expertise": paginate(entries, limit, cursor)}
+
+    def get_work_activity_summary(self) -> dict:
+        data = load_json_artifact(self._gen("work-activity.json"))
+        if data is None:
+            raise Unavailable("work activity summary not available")
+        projects = data.get("projects")
+        focus_areas = data.get("focusAreas")
+        activity_summary = data.get("activitySummary")
+        if not isinstance(projects, list) or not isinstance(focus_areas, list) or not isinstance(activity_summary, dict):
+            raise MalformedArtifact("work activity summary is malformed")
+        return {
+            "schemaVersion": data.get("schemaVersion"),
+            "generatedAt": data.get("generatedAt"),
+            "generator": data.get("generator"),
+            "windowDays": data.get("windowDays"),
+            "projects": [
+                {
+                    "project": p.get("project", ""),
+                    "sessionCount": p.get("sessionCount", 0),
+                    "lastActiveAt": p.get("lastActiveAt"),
+                    "relatedEntities": list(p.get("relatedEntities", [])),
+                }
+                for p in projects if isinstance(p, dict)
+            ],
+            "focusAreas": [
+                {
+                    "term": f.get("term", ""),
+                    "weight": f.get("weight", 0),
+                    "sources": list(f.get("sources", [])),
+                }
+                for f in focus_areas if isinstance(f, dict)
+            ],
+            "activitySummary": {
+                "totalSessions": activity_summary.get("totalSessions", 0),
+                "totalMemoryRecords": activity_summary.get("totalMemoryRecords", 0),
+            },
+        }

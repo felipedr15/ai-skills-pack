@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-15T19:51:05Z",
+  "generatedAt": "2026-07-17T00:53:49Z",
   "generator": "ai-os-orchestration",
   "overallScore": 83,
   "categoryScores": {
-    "graphIntegrity": 93,
+    "graphIntegrity": 92,
     "projectDocumentation": 100,
     "skillDocumentation": 5,
     "memoryLinkage": 100,
@@ -116,6 +116,21 @@
   "staleItems": [],
   "unresolvedReferences": [
     {
+      "source": ".kiro/README.md",
+      "target": "specs/README.md",
+      "kind": "markdown"
+    },
+    {
+      "source": ".kiro/specs/README.md",
+      "target": "specs/README.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "ARCHITECTURE.md",
+      "target": "knowledge/architecture/phase-9-professional-context.md",
+      "kind": "markdown"
+    },
+    {
       "source": "README.md",
       "target": ".agent/skills/build/creator/SKILL.md",
       "kind": "markdown"
@@ -154,6 +169,16 @@
       "source": "README.md",
       "target": "generated/memory-index.md",
       "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "knowledge/architecture/phase-9-professional-context.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "specs/README.md",
+      "kind": "markdown"
     }
   ],
   "isolatedNodes": [
@@ -166,8 +191,10 @@
     "document:.github/instructions/templates.instructions.md",
     "document:config/ai-os.example.json",
     "document:examples/mcp/server-config.example.json",
+    "document:generated/profile-index.json",
     "document:generated/repository-index.json",
     "document:generated/skills.json",
+    "document:generated/work-activity.json",
     "document:knowledge/workflows/bug-fix.json",
     "document:knowledge/workflows/documentation-update.json",
     "document:knowledge/workflows/feature-development.json",

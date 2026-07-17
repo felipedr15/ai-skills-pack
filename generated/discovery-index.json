@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-15T20:00:00Z",
+  "generatedAt": "2026-07-17T00:53:47Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
     "documents": 325,
-    "entities": 347,
-    "terms": 990,
-    "relationships": 574
+    "entities": 349,
+    "terms": 992,
+    "relationships": 580
   },
   "documents": [
     {
@@ -819,7 +819,7 @@
       ],
       "snippet": "Trace requirements, design, tasks, tests, risks, approval, and handoffs. Do not implement from unapproved substantial specifications.",
       "frontMatter": {
-        "applyTo": "{.kiro/specs/**,templates/specifications/**}"
+        "applyTo": "{specs/**,templates/specifications/**}"
       }
     },
     {
@@ -854,7 +854,7 @@
       "headings": [
         "Kiro Guidance"
       ],
-      "snippet": "Reusable steering and specification context; behavior depends on the installed Kiro product and configuration.",
+      "snippet": "Reusable steering context; behavior depends on the installed Kiro product and configuration. Canonical specifications live under [specs/](../specs/README.md), not here — see [.kiro/specs/README.md](sp",
       "frontMatter": {}
     },
     {
@@ -865,7 +865,7 @@
       "headings": [
         "Feature Specifications"
       ],
-      "snippet": "Organize substantial features as:",
+      "snippet": "Canonical feature specifications (requirements, design, tasks) live under [`specs/`](../../specs/README.md), not here. `.kiro/` is reserved for Kiro-specific configuration, workspace state, prompts, o",
       "frontMatter": {}
     },
     {
@@ -898,7 +898,7 @@
       "headings": [
         "Structure Steering"
       ],
-      "snippet": "Five layers organize skills at `.agent/skills/`, core instructions/roles/prompts/standards, specifications and memory under `.kiro/specs/` and `templates/`, starters under `templates/project-starters/",
+      "snippet": "Five layers organize skills at `.agent/skills/`, core instructions/roles/prompts/standards, specifications under `specs/` and memory under `templates/`, starters under `templates/project-starters/`, a",
       "frontMatter": {}
     },
     {
@@ -961,6 +961,7 @@
         "Dashboard Architecture",
         "Memory Engine Architecture",
         "Continuous Learning and Agent Orchestration Architecture (Phase 8)",
+        "Professional Context and Work Intelligence Architecture (Phase 9)",
         "Models",
         "Validation and Security",
         "Tool Integration and Data Flow",
@@ -978,6 +979,7 @@
       "headings": [
         "Changelog",
         "Unreleased",
+        "Added",
         "Changed",
         "[0.8.0] - 2026-07-15",
         "Added",
@@ -987,7 +989,7 @@
         "Removed",
         "Security"
       ],
-      "snippet": "- Post-release repository maintenance: after `v0.8.0` was tagged, added a tracked copy of the release notes and regenerated the knowledge graph and discovery index to include that document. These docu",
+      "snippet": "- Phase 9 Professional Context and Work Intelligence (not yet released): canonical, explicitly-authored",
       "frontMatter": {}
     },
     {
@@ -1047,6 +1049,7 @@
         "Memory Commands",
         "Knowledge Graph (Phase 3)",
         "Continuous Learning and Agent Orchestration (Phase 8)",
+        "Professional Context and Work Intelligence (Phase 9)",
         "Quick Start",
         "Validation",
         "Project Creation",
@@ -1090,6 +1093,7 @@
         "Phase 6 — MCP Integration (Implemented)",
         "Phase 7 — Release Hardening (Implemented)",
         "Phase 8 — Continuous Learning and Agent Orchestration (Implemented)",
+        "Phase 9 — Professional Context and Work Intelligence (Implemented)",
         "Version 1.1 — Workflow Improvements (Proposed)",
         "Version 1.2 — Integration Improvements (Proposed)",
         "Version 2.0 — Advanced Automation (Proposed)"
@@ -1106,7 +1110,8 @@
         "Security Policy",
         "Memory Engine Rules",
         "Knowledge Graph Rules",
-        "Continuous Learning and Orchestration Rules (Phase 8)"
+        "Continuous Learning and Orchestration Rules (Phase 8)",
+        "Professional Context Rules (Phase 9)"
       ],
       "snippet": "Never store passwords, API keys, access tokens, private certificates, connection strings, authentication cookies, MFA codes, employee or customer personal data, government-protected data, confidential",
       "frontMatter": {}
@@ -1127,7 +1132,8 @@
         "Phase 5 Interactive Dashboard Workflow (Implemented)",
         "Phase 6 MCP Integration Workflow (Implemented)",
         "Phase 7 Release Hardening Workflow (Implemented)",
-        "Phase 8 Continuous Learning and Agent Orchestration Workflow (Implemented)"
+        "Phase 8 Continuous Learning and Agent Orchestration Workflow (Implemented)",
+        "Phase 9 Professional Context Workflow (Implemented)"
       ],
       "snippet": "Request → planner skill selection → requirements → design → tasks → executor handoff → implementation → validation → diff review → human validation → commit → deployment.",
       "frontMatter": {}
@@ -6222,6 +6228,16 @@
       }
     },
     {
+      "id": "entity:document:generated/profile-index.json",
+      "nodeId": "document:generated/profile-index.json",
+      "type": "document",
+      "name": "Profile Index",
+      "sourcePath": "generated/profile-index.json",
+      "metadata": {
+        "supplemental": true
+      }
+    },
+    {
       "id": "entity:document:generated/repository-index.json",
       "nodeId": "document:generated/repository-index.json",
       "type": "document",
@@ -6239,6 +6255,16 @@
       "sourcePath": "generated/skills.json",
       "metadata": {
         "extension": ".json"
+      }
+    },
+    {
+      "id": "entity:document:generated/work-activity.json",
+      "nodeId": "document:generated/work-activity.json",
+      "type": "document",
+      "name": "Work Activity",
+      "sourcePath": "generated/work-activity.json",
+      "metadata": {
+        "supplemental": true
       }
     },
     {
@@ -9205,6 +9231,9 @@
       "entity:memory:lesson-validate-generated-files-before-committing-001",
       "entity:memory:session-memory-engine-example-001"
     ],
+    "activity": [
+      "entity:document:generated/work-activity.json"
+    ],
     "adaptation": [
       "doc:.agent/skills/system/SKILL.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
@@ -9260,7 +9289,6 @@
       "doc:ROADMAP.md"
     ],
     "after": [
-      "doc:CHANGELOG.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:templates/memory/session-memory.md"
     ],
@@ -9963,9 +9991,6 @@
       "doc:knowledge/workflows/release-preparation.json",
       "doc:references/workflow-examples.md"
     ],
-    "as": [
-      "doc:.kiro/specs/README.md"
-    ],
     "assess": [
       "doc:agents/security-reviewer.md",
       "doc:prompts/deploy.prompt.md"
@@ -10034,6 +10059,7 @@
       "doc:SECURITY.md"
     ],
     "authored": [
+      "doc:CHANGELOG.md",
       "doc:knowledge/workflows/README.md"
     ],
     "authoritative": [
@@ -10357,6 +10383,11 @@
     ],
     "cannot": [
       "doc:memory/decisions/decision-memory-index-source-truth-001.md"
+    ],
+    "canonical": [
+      "doc:.kiro/README.md",
+      "doc:.kiro/specs/README.md",
+      "doc:CHANGELOG.md"
     ],
     "canva": [
       "doc:references/canva.md",
@@ -10810,6 +10841,7 @@
     "configuration": [
       "doc:.github/README.md",
       "doc:.kiro/README.md",
+      "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/README.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
@@ -10879,7 +10911,13 @@
     "context": [
       "doc:.kiro/README.md",
       "doc:.kiro/steering/README.md",
+      "doc:ARCHITECTURE.md",
+      "doc:CHANGELOG.md",
       "doc:CLAUDE.md",
+      "doc:README.md",
+      "doc:ROADMAP.md",
+      "doc:SECURITY.md",
+      "doc:WORKFLOW.md",
       "doc:examples/mcp/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
@@ -10980,7 +11018,6 @@
       "entity:platform:copilot"
     ],
     "copy": [
-      "doc:CHANGELOG.md",
       "doc:templates/project-starters/README.md",
       "doc:templates/specifications/README.md"
     ],
@@ -11360,6 +11397,7 @@
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md",
       "doc:.github/copilot-instructions.md",
       "doc:.github/instructions/specifications.instructions.md",
+      "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/workflow.md",
       "doc:WORKFLOW.md",
       "doc:agents/architect.md",
@@ -11501,7 +11539,6 @@
     ],
     "discovery": [
       "doc:ARCHITECTURE.md",
-      "doc:CHANGELOG.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -11556,11 +11593,7 @@
     "doctor": [
       "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
-    "docu": [
-      "doc:CHANGELOG.md"
-    ],
     "document": [
-      "doc:CHANGELOG.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
@@ -11636,8 +11669,10 @@
       "entity:document:examples/mcp/README.md",
       "entity:document:examples/mcp/server-config.example.json",
       "entity:document:generated/memory-index.json",
+      "entity:document:generated/profile-index.json",
       "entity:document:generated/repository-index.json",
       "entity:document:generated/skills.json",
+      "entity:document:generated/work-activity.json",
       "entity:document:knowledge/README.md",
       "entity:document:knowledge/ai-workflows/README.md",
       "entity:document:knowledge/architecture/README.md",
@@ -12221,6 +12256,7 @@
     ],
     "explicitly": [
       "doc:.kiro/steering/technology.md",
+      "doc:CHANGELOG.md",
       "doc:CLAUDE.md",
       "doc:references/mcp.md",
       "doc:templates/project-memory/CLAUDE.md",
@@ -12291,9 +12327,6 @@
       "doc:.kiro/specs/README.md",
       "doc:knowledge/workflows/feature-development.json",
       "entity:document:knowledge/workflows/feature-development.json"
-    ],
-    "features": [
-      "doc:.kiro/specs/README.md"
     ],
     "feedback": [
       "doc:docs/feedback-and-audit.md",
@@ -12503,6 +12536,7 @@
       "doc:.agent/skills/thinking/README.md",
       "doc:.agent/skills/thinking/SKILL.md",
       "doc:.github/instructions/README.md",
+      "doc:.kiro/specs/README.md",
       "doc:ARCHITECTURE.md",
       "doc:README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -12613,8 +12647,10 @@
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "entity:document:generated/memory-index.json",
+      "entity:document:generated/profile-index.json",
       "entity:document:generated/repository-index.json",
       "entity:document:generated/skills.json",
+      "entity:document:generated/work-activity.json",
       "entity:memory:decision-memory-index-source-truth-001",
       "entity:memory:lesson-validate-generated-files-before-committing-001"
     ],
@@ -12741,7 +12777,6 @@
     ],
     "graph": [
       "doc:ARCHITECTURE.md",
-      "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
@@ -12914,6 +12949,8 @@
       "doc:memory/decisions/decision-memory-index-source-truth-001.md"
     ],
     "here": [
+      "doc:.kiro/README.md",
+      "doc:.kiro/specs/README.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/best-practices/README.md",
@@ -13059,9 +13096,6 @@
       "doc:knowledge/workflows/incident-response.json",
       "entity:document:knowledge/workflows/incident-response.json"
     ],
-    "include": [
-      "doc:CHANGELOG.md"
-    ],
     "included": [
       "doc:RELEASE_NOTES_v0.8.0.md"
     ],
@@ -13077,10 +13111,10 @@
       "doc:.kiro/steering/product.md"
     ],
     "index": [
-      "doc:CHANGELOG.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "entity:document:generated/memory-index.json",
+      "entity:document:generated/profile-index.json",
       "entity:document:generated/repository-index.json",
       "entity:memory:decision-memory-index-source-truth-001"
     ],
@@ -13183,6 +13217,12 @@
       "doc:.kiro/steering/technology.md",
       "doc:references/mcp.md"
     ],
+    "intelligence": [
+      "doc:ARCHITECTURE.md",
+      "doc:CHANGELOG.md",
+      "doc:README.md",
+      "doc:ROADMAP.md"
+    ],
     "intent": [
       "doc:knowledge/workflows/bug-fix.json",
       "doc:knowledge/workflows/documentation-update.json",
@@ -13274,6 +13314,7 @@
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
     ],
     "is": [
+      "doc:.kiro/specs/README.md",
       "doc:ARCHITECTURE.md",
       "doc:README.md",
       "doc:agents/README.md",
@@ -13410,8 +13451,10 @@
       "entity:document:config/ai-os.example.json",
       "entity:document:examples/mcp/server-config.example.json",
       "entity:document:generated/memory-index.json",
+      "entity:document:generated/profile-index.json",
       "entity:document:generated/repository-index.json",
       "entity:document:generated/skills.json",
+      "entity:document:generated/work-activity.json",
       "entity:document:knowledge/workflows/bug-fix.json",
       "entity:document:knowledge/workflows/documentation-update.json",
       "entity:document:knowledge/workflows/feature-development.json",
@@ -13467,7 +13510,6 @@
     ],
     "knowledge": [
       "doc:ARCHITECTURE.md",
-      "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
@@ -13713,6 +13755,10 @@
     "listing": [
       "doc:scripts/README.md"
     ],
+    "live": [
+      "doc:.kiro/README.md",
+      "doc:.kiro/specs/README.md"
+    ],
     "lived": [
       "doc:memory/permanent/README.md"
     ],
@@ -13769,7 +13815,6 @@
       "doc:GOVERNANCE.md"
     ],
     "maintenance": [
-      "doc:CHANGELOG.md",
       "doc:knowledge/workflows/knowledge-maintenance.json",
       "entity:document:knowledge/workflows/knowledge-maintenance.json"
     ],
@@ -14791,6 +14836,9 @@
       "doc:.github/instructions/README.md",
       "doc:.github/instructions/specifications.instructions.md",
       "doc:.github/workflows/README.md",
+      "doc:.kiro/README.md",
+      "doc:.kiro/specs/README.md",
+      "doc:CHANGELOG.md",
       "doc:docs/continuous-learning.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
@@ -14856,7 +14904,6 @@
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/research/SKILL.md",
-      "doc:CHANGELOG.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/README.md",
@@ -14939,7 +14986,6 @@
       "doc:.kiro/steering/workflow.md"
     ],
     "of": [
-      "doc:CHANGELOG.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -15080,7 +15126,6 @@
       "doc:AGENTS.md"
     ],
     "organize": [
-      "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/structure.md"
     ],
     "os": [
@@ -15296,6 +15341,7 @@
     ],
     "phase": [
       "doc:ARCHITECTURE.md",
+      "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
@@ -15404,9 +15450,6 @@
     "portable": [
       "doc:.kiro/steering/product.md",
       "doc:ARCHITECTURE.md"
-    ],
-    "post": [
-      "doc:CHANGELOG.md"
     ],
     "power": [
       "doc:.kiro/steering/technology.md",
@@ -15617,7 +15660,16 @@
       "doc:references/README.md"
     ],
     "professional": [
-      "doc:.agent/skills/personal/writing/SKILL.md"
+      "doc:.agent/skills/personal/writing/SKILL.md",
+      "doc:ARCHITECTURE.md",
+      "doc:CHANGELOG.md",
+      "doc:README.md",
+      "doc:ROADMAP.md",
+      "doc:SECURITY.md",
+      "doc:WORKFLOW.md"
+    ],
+    "profile": [
+      "entity:document:generated/profile-index.json"
     ],
     "progress": [
       "doc:memory/sessions/README.md",
@@ -16000,6 +16052,7 @@
     "prompts": [
       "doc:.github/copilot-instructions.md",
       "doc:.github/instructions/prompts.instructions.md",
+      "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
       "doc:prompts.json",
@@ -16537,9 +16590,6 @@
     "regenerate": [
       "doc:knowledge/workflows/README.md"
     ],
-    "regenerated": [
-      "doc:CHANGELOG.md"
-    ],
     "registered": [
       "doc:examples/mcp/README.md"
     ],
@@ -16586,7 +16636,6 @@
       "doc:.github/instructions/templates.instructions.md"
     ],
     "release": [
-      "doc:CHANGELOG.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
@@ -16615,6 +16664,9 @@
       "entity:document:templates/project-starters/power-automate/RELEASE_NOTES.md",
       "entity:document:templates/project-starters/python/RELEASE_NOTES.md",
       "entity:document:templates/project-starters/web-app/RELEASE_NOTES.md"
+    ],
+    "released": [
+      "doc:CHANGELOG.md"
     ],
     "reliability": [
       "doc:standards/code-review.md",
@@ -16680,7 +16732,6 @@
       "doc:.kiro/steering/README.md",
       "doc:AGENTS.md",
       "doc:ARCHITECTURE.md",
-      "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -16791,6 +16842,7 @@
     "requirements": [
       "doc:.github/copilot-instructions.md",
       "doc:.github/instructions/specifications.instructions.md",
+      "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/workflow.md",
       "doc:AGENTS.md",
       "doc:WORKFLOW.md",
@@ -16874,6 +16926,9 @@
     "researcher": [
       "doc:agents/researcher.md",
       "entity:document:agents/researcher.md"
+    ],
+    "reserved": [
+      "doc:.kiro/specs/README.md"
     ],
     "resolution": [
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
@@ -17410,6 +17465,7 @@
       "entity:document:standards/security.md"
     ],
     "see": [
+      "doc:.kiro/README.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/knowledge-health.md",
       "doc:prompts/README.md"
@@ -17765,14 +17821,17 @@
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:prompts/research.prompt.md"
     ],
+    "sp": [
+      "doc:.kiro/README.md"
+    ],
     "specific": [
       "doc:.github/README.md",
       "doc:.github/instructions/README.md",
       "doc:.github/instructions/templates.instructions.md",
+      "doc:.kiro/specs/README.md",
       "doc:memory/projects/README.md"
     ],
     "specification": [
-      "doc:.kiro/README.md",
       "doc:AGENTS.md",
       "doc:CONTRIBUTING.md",
       "doc:ROADMAP.md",
@@ -17781,6 +17840,7 @@
     ],
     "specifications": [
       "doc:.github/instructions/specifications.instructions.md",
+      "doc:.kiro/README.md",
       "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
@@ -17819,6 +17879,7 @@
       "entity:document:prompts/specify.prompt.md"
     ],
     "specs": [
+      "doc:.kiro/README.md",
       "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/structure.md",
       "entity:document:.kiro/specs/README.md"
@@ -18184,6 +18245,7 @@
       "doc:knowledge/architecture/phase-6-mcp-integration.md"
     ],
     "state": [
+      "doc:.kiro/specs/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:templates/project-memory/ARCHITECTURE.md",
       "doc:templates/project-starters/automation/ARCHITECTURE.md",
@@ -18297,8 +18359,7 @@
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
     ],
     "substantial": [
-      "doc:.github/instructions/specifications.instructions.md",
-      "doc:.kiro/specs/README.md"
+      "doc:.github/instructions/specifications.instructions.md"
     ],
     "sufficient": [
       "doc:standards/accessibility.md"
@@ -18416,9 +18477,6 @@
       "entity:tool:git",
       "entity:tool:mcp"
     ],
-    "tagged": [
-      "doc:CHANGELOG.md"
-    ],
     "takeaways": [
       "doc:.agent/skills/research/SKILL.md"
     ],
@@ -18451,6 +18509,7 @@
     "tasks": [
       "doc:.github/copilot-instructions.md",
       "doc:.github/instructions/specifications.instructions.md",
+      "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/workflow.md",
       "doc:WORKFLOW.md",
       "doc:prompts/execute.prompt.md",
@@ -18909,7 +18968,6 @@
     ],
     "that": [
       "doc:.agent/skills/communication-skill/SKILL.md",
-      "doc:CHANGELOG.md",
       "doc:memory/permanent/README.md",
       "doc:memory/permanent/preferences/README.md",
       "doc:memory/permanent/principles/README.md",
@@ -18931,7 +18989,6 @@
       "doc:.kiro/README.md",
       "doc:.kiro/steering/README.md",
       "doc:.kiro/steering/workflow.md",
-      "doc:CHANGELOG.md",
       "doc:agents/README.md",
       "doc:agents/reviewer.md",
       "doc:docs/continuous-learning.md",
@@ -18975,7 +19032,6 @@
     "these": [
       "doc:.github/instructions/README.md",
       "doc:.kiro/steering/README.md",
-      "doc:CHANGELOG.md",
       "doc:templates/memory/README.md",
       "doc:templates/specifications/README.md"
     ],
@@ -19067,7 +19123,6 @@
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:.agent/skills/thinking/SKILL.md",
-      "doc:CHANGELOG.md",
       "doc:CONTRIBUTING.md",
       "doc:docs/knowledge-health.md",
       "doc:knowledge/workflows/README.md",
@@ -19152,7 +19207,6 @@
       "doc:templates/specifications/README.md"
     ],
     "tracked": [
-      "doc:CHANGELOG.md",
       "doc:docs/continuous-learning.md"
     ],
     "tracking": [
@@ -19246,6 +19300,8 @@
       "doc:.github/instructions/specifications.instructions.md"
     ],
     "under": [
+      "doc:.kiro/README.md",
+      "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/structure.md",
       "doc:templates/memory/README.md"
     ],
@@ -19382,7 +19438,6 @@
       "entity:skill:ui-ux-pro-max"
     ],
     "v0": [
-      "doc:CHANGELOG.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:references/v0.md",
       "doc:references/workflow-examples.md",
@@ -19506,9 +19561,6 @@
     "vscode": [
       "doc:knowledge/vscode/README.md",
       "entity:document:knowledge/vscode/README.md"
-    ],
-    "was": [
-      "doc:CHANGELOG.md"
     ],
     "ways": [
       "doc:docs/knowledge-health.md"
@@ -19671,13 +19723,18 @@
       "doc:.agent/skills/system/superpower/SKILL.md",
       "doc:.agent/skills/system/testing/SKILL.md",
       "doc:.kiro/steering/workflow.md",
+      "doc:ARCHITECTURE.md",
+      "doc:CHANGELOG.md",
+      "doc:README.md",
+      "doc:ROADMAP.md",
       "doc:agents/README.md",
       "doc:docs/continuous-learning.md",
       "doc:memory/sessions/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:standards/README.md",
       "doc:templates/memory/session-memory.md",
-      "doc:templates/specifications/README.md"
+      "doc:templates/specifications/README.md",
+      "entity:document:generated/work-activity.json"
     ],
     "worked": [
       "doc:templates/project-memory/RETROSPECTIVE.md",
@@ -19743,6 +19800,9 @@
     "working": [
       "doc:CLAUDE.md"
     ],
+    "workspace": [
+      "doc:.kiro/specs/README.md"
+    ],
     "wrappers": [
       "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
@@ -19774,6 +19834,9 @@
     ],
     "yaml": [
       "doc:.kiro/steering/technology.md"
+    ],
+    "yet": [
+      "doc:CHANGELOG.md"
     ],
     "yml": [
       "doc:.github/workflows/README.md"

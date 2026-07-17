@@ -255,6 +255,7 @@
 - `knowledge/architecture/phase-6-mcp-integration.md`
 - `knowledge/architecture/phase-7-release-hardening.md`
 - `knowledge/architecture/phase-8-learning-orchestration.md`
+- `knowledge/architecture/phase-9-professional-context.md`
 - `knowledge/best-practices/README.md`
 - `knowledge/documentation/README.md`
 - `knowledge/future-ideas/README.md`
@@ -321,7 +322,9 @@
 - `scripts/generate-knowledge-graph.py`
 - `scripts/generate-knowledge-health.py`
 - `scripts/generate-memory-index.py`
+- `scripts/generate-profile-index.py`
 - `scripts/generate-skill-registry.py`
+- `scripts/generate-work-activity.py`
 - `scripts/generate-workflow-registry.py`
 - `scripts/index-repository.py`
 - `scripts/knowledge-build.py`
@@ -364,6 +367,14 @@
 - `scripts/orchestration/utils.py`
 - `scripts/orchestration/validate.py`
 - `scripts/orchestration/workflow.py`
+- `scripts/profile/__init__.py`
+- `scripts/profile/record.py`
+- `scripts/profile/registry.py`
+- `scripts/profile/sanitize.py`
+- `scripts/profile/schema.py`
+- `scripts/profile/switch.py`
+- `scripts/profile/sync_knowledge.py`
+- `scripts/profile/validate.py`
 - `scripts/release/__init__.py`
 - `scripts/release/config.py`
 - `scripts/release/manifest.py`

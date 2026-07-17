@@ -42,3 +42,22 @@ python scripts/orchestration-validate.py
 
 Session, approval, memory-suggestion, feedback, and audit data under `.ai-os/` are local runtime
 state, never source of truth, and never committed.
+
+Professional Context (Phase 9): `profile/*.md` records and `profile/registry.json` are
+authoritative; never hand-edit `generated/profile-index.json` or `generated/work-activity.json`.
+Never store raw resumes, evaluations, or personal contact/identifier data anywhere under `profile/`
+or `knowledge/professional-context/` — see [SECURITY.md](SECURITY.md). After changing a profile
+record, run:
+
+```text
+python scripts/generate-profile-index.py
+python scripts/generate-work-activity.py
+```
+
+`knowledge/professional-context/overview.md` is curated, human-owned content — edit it directly;
+`python scripts/ai-os.py profile sync-knowledge` only scaffolds it if absent, and
+`--force-refresh` only ever adds a dated snapshot under
+`knowledge/professional-context/snapshots/`, never rewriting `overview.md`. `profile switch` is
+the only path allowed to change which profile is active, and it requires an explicitly approved
+`profile-switch` approval — never bypass it by hand-editing `profile/registry.json`'s `active`
+flags.

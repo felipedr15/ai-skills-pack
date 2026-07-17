@@ -17,6 +17,7 @@ from .extract import (
     extract_markdown_metadata,
     extract_memory_relationships,
     extract_mentions,
+    load_active_profile_ids,
     markdown_links,
     project_name_from_path,
     read_json,
@@ -54,6 +55,7 @@ def build_graph(root: Path):
     skill_id_to_node: dict[str, str] = {}
     wiki_index: dict[str, str] = {}
     unresolved_refs: list[dict] = []
+    active_profile_ids = load_active_profile_ids(root)
 
     # Pass 1: create core nodes from source files.
     for path in files:
@@ -162,6 +164,34 @@ def build_graph(root: Path):
                 _add_edge(edges, "belongs_to", mid, pid, {"source": "memory_project"})
             continue
 
+        if category == "profile":
+            # High-sensitivity, explicitly-authored identity data (design.md
+            # Security). Only structural, non-free-text fields are ingested
+            # here -- never role/team/responsibilities/reportingTo or the
+            # prose body, so generic graph traversal can't become a second,
+            # uncurated exposure path alongside the purpose-built, redaction-
+            # aware generated/profile-index.json (Task 005). Never dropped or
+            # inflated: a profile record with no evidence/expertise data is
+            # still a valid, minimal node.
+            front, _body = extract_markdown_metadata(path)
+            profile_id = str(front.get("id") or slug(rel))
+            pid = node_id("profile", profile_id)
+            _add_node(
+                nodes,
+                {
+                    "id": pid,
+                    "type": "profile",
+                    "name": profile_id,
+                    "sourcePath": rel,
+                    "metadata": {
+                        "schemaVersion": front.get("schemaVersion"),
+                        "active": profile_id in active_profile_ids,
+                    },
+                },
+            )
+            path_to_node[rel] = pid
+            continue
+
         # Fallback document node.
         did = node_id("document", rel)
         _add_node(
@@ -178,7 +208,10 @@ def build_graph(root: Path):
         wiki_index[canonical_wiki_key(display_name_from_path(rel))] = did
 
     # Pass 1b: include referenced generated registries as supplemental docs if present.
-    for rel in ["generated/skills.json", "generated/repository-index.json", "generated/memory-index.json"]:
+    for rel in [
+        "generated/skills.json", "generated/repository-index.json", "generated/memory-index.json",
+        "generated/profile-index.json", "generated/work-activity.json",
+    ]:
         p = root / rel
         if p.is_file():
             did = node_id("document", rel)
@@ -188,6 +221,13 @@ def build_graph(root: Path):
     # Pass 2: relationships from links and text mentions.
     for path in files:
         rel = normalize_relpath(path, root)
+        if classify_document(rel) == "profile":
+            # Never mine profile prose bodies for mentions/links (design.md
+            # Security): pass 2's generic text-mining would otherwise expose
+            # fragments of role/responsibilities free text as platform/tool/
+            # concept edges. The profile node itself was already added in
+            # pass 1; it simply has no outgoing edges from this pass.
+            continue
         source = path_to_node.get(rel)
         if not source:
             continue

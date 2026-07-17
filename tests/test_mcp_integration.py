@@ -14,7 +14,7 @@ if str(SCRIPTS) not in sys.path:
 from ai_os_service import SERVICE_VERSION, MAX_TRAVERSAL_DEPTH, MAX_EXCERPT_CHARS
 from ai_os_service.errors import (
     InvalidRequest, NotFound, Forbidden, PathRejected,
-    LimitExceeded, Unavailable, ServiceError,
+    LimitExceeded, MalformedArtifact, Unavailable, ServiceError,
 )
 from ai_os_service.pagination import clamp_limit, paginate
 from ai_os_service.permissions import (
@@ -322,7 +322,7 @@ class PaginationTests(unittest.TestCase):
 
 class McpRegistrationTests(unittest.TestCase):
     def test_expected_tool_count(self):
-        self.assertEqual(len(TOOLS), 29)
+        self.assertEqual(len(TOOLS), 32)
 
     def test_expected_resource_count(self):
         self.assertEqual(len(RESOURCES), 17)
@@ -431,7 +431,7 @@ class McpStdioTests(unittest.TestCase):
             self._send(proc, "initialize", {"protocolVersion": "2024-11-05", "capabilities": {}, "clientInfo": {"name": "test"}})
             resp = self._send(proc, "tools/list", {}, 2)
             tools = resp["result"]["tools"]
-            self.assertEqual(len(tools), 29)
+            self.assertEqual(len(tools), 32)
         finally:
             proc.kill()
 
@@ -655,6 +655,308 @@ class Phase8SessionRedactionTests(unittest.TestCase):
             session = result["items"][0]
             self.assertNotIn("transcript", session)
             self.assertNotIn("abcdefghijklmnopqrst12345", json.dumps(session))
+
+
+# ============================================================
+# Phase 9: Professional Context and Work Intelligence (read-only)
+# ============================================================
+
+class Phase9ToolRegistrationTests(unittest.TestCase):
+    def test_new_tools_registered(self):
+        names = {t["name"] for t in TOOLS}
+        for expected in ("get_professional_profile", "list_expertise", "get_work_activity_summary"):
+            self.assertIn(expected, names)
+
+    def test_every_new_tool_has_adapter_handler(self):
+        adapter = McpAdapter(ROOT)
+        for name in ("get_professional_profile", "list_expertise", "get_work_activity_summary"):
+            self.assertTrue(hasattr(adapter, f"_tool_{name}"), name)
+
+    def test_no_profile_mutating_tool_exposed(self):
+        names = {t["name"] for t in TOOLS}
+        for forbidden in ("switch_profile", "write_profile", "edit_profile", "sync_knowledge",
+                           "create_profile", "approve_profile_switch", "force_refresh_profile"):
+            self.assertNotIn(forbidden, names)
+
+    def test_no_new_resources_registered_this_task_group(self):
+        # design.md's Interfaces section lists Phase 9 MCP tools only, no
+        # new resource URIs.
+        self.assertEqual(len(RESOURCES), 17)
+
+    def test_new_tool_schemas_well_formed(self):
+        by_name = {t["name"]: t for t in TOOLS}
+        for name in ("get_professional_profile", "list_expertise", "get_work_activity_summary"):
+            tool = by_name[name]
+            self.assertIn("description", tool)
+            self.assertEqual(tool["inputSchema"]["type"], "object")
+            self.assertEqual(tool["inputSchema"]["required"], [])
+
+
+class Phase9ServiceRealRepoTests(unittest.TestCase):
+    """Against the real repository: profile/registry.json is currently
+    empty, so these exercise the not-configured/empty-state paths safely
+    without ever populating the real registry."""
+
+    def setUp(self):
+        self.svc = AiOsService(ROOT)
+
+    def test_get_professional_profile_not_configured(self):
+        result = self.svc.get_professional_profile()
+        self.assertFalse(result["configured"])
+        self.assertIsNone(result["profile"])
+
+    def test_list_expertise_not_configured(self):
+        result = self.svc.list_expertise()
+        self.assertFalse(result["configured"])
+        self.assertEqual(result["expertise"]["items"], [])
+
+    def test_get_work_activity_summary_structure(self):
+        result = self.svc.get_work_activity_summary()
+        self.assertIn("projects", result)
+        self.assertIn("focusAreas", result)
+        self.assertIn("activitySummary", result)
+
+    def test_invalid_profile_id_rejected(self):
+        with self.assertRaises(InvalidRequest):
+            self.svc.get_professional_profile(profile_id="Not Valid!")
+
+    def test_unknown_profile_id_not_found(self):
+        with self.assertRaises(NotFound):
+            self.svc.get_professional_profile(profile_id="does-not-exist")
+
+    def test_deterministic_output(self):
+        r1 = self.svc.get_work_activity_summary()
+        r2 = self.svc.get_work_activity_summary()
+        self.assertEqual(r1, r2)
+
+
+class Phase9SyntheticFixtureTests(unittest.TestCase):
+    """Synthetic temp-dir fixtures only -- never populates the real registry."""
+
+    def _seed(self, root, records, expertise=None):
+        gen = root / "generated"
+        gen.mkdir(parents=True, exist_ok=True)
+        (gen / "profile-index.json").write_text(json.dumps({
+            "schemaVersion": "1.0.0", "recordCount": len(records), "records": records,
+        }), encoding="utf-8")
+        if expertise is not None:
+            (root / "profile").mkdir(parents=True, exist_ok=True)
+            for profile_id, data in expertise.items():
+                (root / "profile" / f"{profile_id}.expertise.json").write_text(json.dumps(data), encoding="utf-8")
+
+    def _record(self, profile_id, role="Senior IT Technical Support Analyst", team="IT Support", active=True):
+        return {"id": profile_id, "path": f"profile/{profile_id}.md", "role": role, "team": team, "active": active}
+
+    def _expertise_entry(self, entry_id="expertise-windows-11", name="Windows 11 Deployment", level="advanced"):
+        return {
+            "id": entry_id, "name": name, "level": level,
+            "evidence": [{"type": "project", "ref": "windows-11-autopilot-deployment"}],
+            "source": "user", "status": "approved",
+            "createdAt": "2026-07-15T00:00:00Z", "updatedAt": "2026-07-15T00:00:00Z",
+        }
+
+    def test_active_profile_returned(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._seed(root, [self._record("primary", active=True)])
+            svc = AiOsService(root)
+            result = svc.get_professional_profile()
+            self.assertTrue(result["configured"])
+            self.assertEqual(result["profile"]["id"], "primary")
+            self.assertEqual(result["profile"]["role"], "Senior IT Technical Support Analyst")
+            self.assertTrue(result["profile"]["active"])
+
+    def test_specific_profile_id_returned_regardless_of_active_flag(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._seed(root, [self._record("primary", active=True), self._record("secondary", role="Contractor", active=False)])
+            svc = AiOsService(root)
+            result = svc.get_professional_profile(profile_id="secondary")
+            self.assertTrue(result["configured"])
+            self.assertEqual(result["profile"]["id"], "secondary")
+            self.assertFalse(result["profile"]["active"])
+
+    def test_multiple_profiles_one_active(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._seed(root, [self._record("primary", active=True), self._record("secondary", active=False)])
+            svc = AiOsService(root)
+            result = svc.get_professional_profile()
+            self.assertEqual(result["profile"]["id"], "primary")
+
+    def test_expertise_entries_returned_for_active_profile(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            expertise_file = {
+                "schemaVersion": "1.0.0", "profileId": "primary", "updatedAt": "2026-07-15T00:00:00Z",
+                "entries": [self._expertise_entry()],
+            }
+            self._seed(root, [self._record("primary")], expertise={"primary": expertise_file})
+            svc = AiOsService(root)
+            result = svc.list_expertise()
+            self.assertTrue(result["configured"])
+            self.assertEqual(result["profileId"], "primary")
+            items = result["expertise"]["items"]
+            self.assertEqual(len(items), 1)
+            self.assertEqual(items[0]["name"], "Windows 11 Deployment")
+            self.assertEqual(items[0]["level"], "advanced")
+            self.assertEqual(items[0]["evidence"], [{"type": "project", "ref": "windows-11-autopilot-deployment"}])
+
+    def test_expertise_level_restricted_to_fixed_enum(self):
+        # Structural proof: the fixed enum is enforced by
+        # scripts/profile/validate.py (Task 003), which this service method
+        # reuses via validate_expertise_file -- not re-implemented here.
+        from profile.schema import PROFICIENCY_LEVELS
+        self.assertEqual(
+            PROFICIENCY_LEVELS,
+            ["foundational", "working", "proficient", "advanced", "lead"])
+
+    def test_no_expertise_entries_returns_valid_empty_response(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._seed(root, [self._record("primary")])  # no expertise file at all
+            svc = AiOsService(root)
+            result = svc.list_expertise()
+            self.assertTrue(result["configured"])
+            self.assertEqual(result["expertise"]["items"], [])
+
+    def test_missing_profile_index_raises_unavailable(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "generated").mkdir()
+            svc = AiOsService(root)
+            with self.assertRaises(Unavailable):
+                svc.get_professional_profile()
+
+    def test_invalid_profile_index_raises_malformed_artifact(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            gen = root / "generated"
+            gen.mkdir()
+            (gen / "profile-index.json").write_text(json.dumps({"schemaVersion": "1.0.0"}), encoding="utf-8")  # no "records"
+            svc = AiOsService(root)
+            with self.assertRaises(MalformedArtifact):
+                svc.get_professional_profile()
+
+    def test_malformed_expertise_file_raises_malformed_artifact(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._seed(root, [self._record("primary")])
+            (root / "profile").mkdir(exist_ok=True)
+            (root / "profile" / "primary.expertise.json").write_text("{not valid json", encoding="utf-8")
+            svc = AiOsService(root)
+            with self.assertRaises(MalformedArtifact):
+                svc.list_expertise()
+
+    def test_invalid_expertise_entry_raises_malformed_artifact(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            bad_entry = self._expertise_entry(level="expert")  # not in the fixed enum
+            expertise_file = {"schemaVersion": "1.0.0", "profileId": "primary", "updatedAt": "2026-07-15T00:00:00Z", "entries": [bad_entry]}
+            self._seed(root, [self._record("primary")], expertise={"primary": expertise_file})
+            svc = AiOsService(root)
+            with self.assertRaises(MalformedArtifact):
+                svc.list_expertise()
+
+    def test_unresolved_evidence_never_drops_the_claim(self):
+        # Phase 9 does not require evidence refs to resolve (design.md); this
+        # service never dereferences or filters by resolution -- the claim
+        # is always returned as authored.
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry = self._expertise_entry()
+            entry["evidence"] = [{"type": "project", "ref": "some-project-that-does-not-exist-anywhere"}]
+            expertise_file = {"schemaVersion": "1.0.0", "profileId": "primary", "updatedAt": "2026-07-15T00:00:00Z", "entries": [entry]}
+            self._seed(root, [self._record("primary")], expertise={"primary": expertise_file})
+            svc = AiOsService(root)
+            result = svc.list_expertise()
+            self.assertEqual(len(result["expertise"]["items"]), 1)
+
+    def test_no_evidence_dereferencing_only_type_and_ref(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            expertise_file = {
+                "schemaVersion": "1.0.0", "profileId": "primary", "updatedAt": "2026-07-15T00:00:00Z",
+                "entries": [self._expertise_entry()],
+            }
+            self._seed(root, [self._record("primary")], expertise={"primary": expertise_file})
+            svc = AiOsService(root)
+            result = svc.list_expertise()
+            evidence_entry = result["expertise"]["items"][0]["evidence"][0]
+            self.assertEqual(set(evidence_entry), {"type", "ref"})
+
+    def test_no_raw_prose_or_unrestricted_front_matter_in_profile_summary(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._seed(root, [self._record("primary")])
+            svc = AiOsService(root)
+            result = svc.get_professional_profile()
+            self.assertEqual(set(result["profile"]), {"id", "role", "team", "active"})
+
+    def test_no_arbitrary_path_access(self):
+        # profile_id is validated as a normalized identifier -- it cannot
+        # contain '/', '..', or whitespace, so it can never be used to read
+        # outside profile/<id>.expertise.json.
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._seed(root, [self._record("primary")])
+            svc = AiOsService(root)
+            with self.assertRaises(InvalidRequest):
+                svc.get_professional_profile(profile_id="../../etc/passwd")
+
+    def test_deterministic_repeated_calls(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            expertise_file = {
+                "schemaVersion": "1.0.0", "profileId": "primary", "updatedAt": "2026-07-15T00:00:00Z",
+                "entries": [self._expertise_entry()],
+            }
+            self._seed(root, [self._record("primary")], expertise={"primary": expertise_file})
+            svc = AiOsService(root)
+            self.assertEqual(svc.get_professional_profile(), svc.get_professional_profile())
+            self.assertEqual(svc.list_expertise(), svc.list_expertise())
+
+    def test_no_prohibited_fixture_values_in_error_messages(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            secret_marker = "SECRET_PROHIBITED_VALUE_MARKER"
+            bad_entry = self._expertise_entry(name=secret_marker, level="expert")  # invalid level
+            expertise_file = {"schemaVersion": "1.0.0", "profileId": "primary", "updatedAt": "2026-07-15T00:00:00Z", "entries": [bad_entry]}
+            self._seed(root, [self._record("primary")], expertise={"primary": expertise_file})
+            svc = AiOsService(root)
+            try:
+                svc.list_expertise()
+                self.fail("expected MalformedArtifact")
+            except MalformedArtifact as exc:
+                self.assertNotIn(secret_marker, str(exc))
+
+
+class Phase9McpAdapterTests(unittest.TestCase):
+    def setUp(self):
+        self.adapter = McpAdapter(ROOT)
+
+    def test_get_professional_profile_via_adapter(self):
+        result = self.adapter.call_tool("get_professional_profile", {})
+        self.assertIn("result", result)
+
+    def test_list_expertise_via_adapter(self):
+        result = self.adapter.call_tool("list_expertise", {})
+        self.assertIn("result", result)
+
+    def test_get_work_activity_summary_via_adapter(self):
+        result = self.adapter.call_tool("get_work_activity_summary", {})
+        self.assertIn("result", result)
+        self.assertIn("projects", result["result"])
+
+    def test_invalid_profile_id_via_adapter_fails_safely(self):
+        result = self.adapter.call_tool("get_professional_profile", {"profile_id": "not valid"})
+        self.assertIn("error", result)
+        self.assertEqual(result["error"]["error"], "invalid_request")
+
+    def test_deterministic_tool_output(self):
+        r1 = self.adapter.call_tool("get_work_activity_summary", {})
+        r2 = self.adapter.call_tool("get_work_activity_summary", {})
+        self.assertEqual(r1, r2)
 
 
 if __name__ == "__main__":

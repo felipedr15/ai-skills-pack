@@ -41,7 +41,7 @@ def validate_dashboard_data(data: object) -> tuple[list[str], list[str]]:
         if not isinstance(value, str) or not value.strip():
             failures.append(f"{field} must be a nonempty string")
 
-    for section in ("repository", "skills", "memory", "knowledgeGraph", "discovery", "artifacts", "orchestration"):
+    for section in ("repository", "skills", "memory", "knowledgeGraph", "discovery", "artifacts", "orchestration", "professionalContext"):
         if not isinstance(data.get(section), dict):
             failures.append(f"{section} must be an object")
 

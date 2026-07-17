@@ -39,6 +39,17 @@ boundary, memory-suggestion generation gated on explicit approval, knowledge-gap
 detection, local feedback capture, and a hash-chained audit trail. 14 new read-only MCP tools, 8
 new resources, and 8 new dashboard pages. No execution engine — planning and tracking only.
 
+## Phase 9 — Professional Context and Work Intelligence (Implemented)
+
+A strictly local-first, privacy-first layer capturing the user's own professional role/organizational
+context as canonical authored records (`profile/`), deriving work-activity signals purely from
+data Phases 2 and 8 already capture (`generated/work-activity.json`), and maintaining an
+evidence-based expertise list. Exactly one profile may be active at a time, and switching is
+always an explicit, approval-gated action — never automatic. Minimal knowledge-graph and
+semantic-discovery integration classifies profile records without exposing role/team/prose through
+generic traversal. 3 new read-only MCP tools and 1 new dashboard page, both summary-only. No
+professional profile is included with the repository; `profile/registry.json` ships empty.
+
 ## Version 1.1 — Workflow Improvements (Proposed)
 Improved bootstrap, deeper validation, more examples, and expanded Power Apps, Power Automate, and web deployment guidance.
 

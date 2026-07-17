@@ -4,9 +4,23 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from datetime import date
 from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
+
+_SCRIPT_DIR = Path(__file__).resolve().parent
+if str(_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPT_DIR))
+
+from profile.schema import RESERVED_PROFILE_KEYS  # noqa: E402 (see boundary note below)
+
+# memory/ is reserved for approval-gated *learned* memory (lessons, decisions,
+# session artifacts). profile/ is reserved for canonical, explicitly-authored
+# professional identity data (role, team, reporting relationships). A memory
+# record must never carry these profile-only fields (Phase 9 REQ-001/REQ-005)
+# — imported from scripts/profile/schema.py so the reserved-key list is
+# defined exactly once, shared between both validators.
 
 ALLOWED_TYPES = {"convention", "preference", "principle", "project", "session", "decision", "lesson"}
 ALLOWED_SCOPES = {"global", "project", "session"}
@@ -325,6 +339,12 @@ def validate_metadata(metadata: Dict[str, object]) -> List[str]:
         ensure_safe_content_path(str(metadata.get("contentPath", "")))
     except ValueError as exc:
         errors.append(str(exc))
+    reserved_present = sorted(key for key in RESERVED_PROFILE_KEYS if key in metadata)
+    if reserved_present:
+        errors.append(
+            "memory records must not store canonical profile data; move "
+            f"reserved profile-only field(s) to profile/ instead: {', '.join(reserved_present)}"
+        )
     return errors
 
 

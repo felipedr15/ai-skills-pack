@@ -1,5 +1,5 @@
 ---
-applyTo: "{.kiro/specs/**,templates/specifications/**}"
+applyTo: "{specs/**,templates/specifications/**}"
 ---
 
 # Specifications Instructions

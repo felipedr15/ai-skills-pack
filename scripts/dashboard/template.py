@@ -124,6 +124,7 @@ footer { margin-top: 3rem; padding: 1rem 0; border-top: 1px solid var(--border);
 <li><a href="#knowledge-health" data-view="knowledge-health" tabindex="0">Knowledge Health</a></li>
 <li><a href="#feedback" data-view="feedback" tabindex="0">Feedback</a></li>
 <li><a href="#audit" data-view="audit" tabindex="0">Audit</a></li>
+<li><a href="#professional-context" data-view="professional-context" tabindex="0">Professional Context</a></li>
 </ul>
 <div class="theme-toggle"><button id="theme-btn" aria-label="Toggle dark/light mode">Toggle Theme</button></div>
 </nav>
@@ -188,6 +189,7 @@ function renderView(view) {
     case 'knowledge-health': renderKnowledgeHealth(container); break;
     case 'feedback': renderFeedbackView(container); break;
     case 'audit': renderAudit(container); break;
+    case 'professional-context': renderProfessionalContext(container); break;
     default: container.innerHTML = '<div class="error">Unknown view</div>';
   }
 }
@@ -824,6 +826,69 @@ function renderAudit(container) {
       <div class="card"><h2>Event Summary</h2>${typeCounts||'None'}</div>
       <div class="card"><h2>Recent Events</h2><table><thead><tr><th>Time</th><th>Event</th></tr></thead><tbody>${recent}</tbody></table></div>`;
   }).catch(() => { const el = document.getElementById('au-results'); if (el) el.innerHTML = '<div class="error">Failed to load audit summary.</div>'; });
+}
+
+// ── Professional Context (Phase 9) ──
+// Fully static: reads only DATA.professionalContext (embedded at build time
+// from generated/profile-index.json + generated/work-activity.json). No
+// browser-side network calls, no raw profile prose -- see design.md Security.
+function renderProfessionalContext(container) {
+  const pc = DATA.professionalContext || {};
+
+  if (!pc.profileIndexAvailable) {
+    container.innerHTML = '<h2>Professional Context</h2><div class="error">Profile index not available. Run the generator.</div>';
+    return;
+  }
+
+  let html = '<h2>Professional Context</h2>';
+
+  if (!pc.configured) {
+    html += '<div class="empty-state">No professional profile is configured yet. Author <code>profile/&lt;id&gt;.md</code> and register it in <code>profile/registry.json</code>.</div>';
+  } else {
+    const active = pc.activeProfile || {};
+    html += `<div class="card"><h2>Active Profile</h2>
+      <div class="meta-row"><span>ID:</span><strong>${esc(active.id)}</strong>
+      <span>Role:</span><strong>${esc(active.role)}</strong>
+      <span>Team:</span><strong>${esc(active.team)}</strong></div></div>`;
+  }
+
+  html += `<div class="grid">
+    <div class="stat-card"><div class="big">${pc.profileCount||0}</div><div class="label">Profiles</div></div>
+    <div class="stat-card"><div class="big">${pc.expertiseCount||0}</div><div class="label">Expertise Entries</div></div>
+    <div class="stat-card"><div class="big">${pc.activeProjectCount||0}</div><div class="label">Active Projects</div></div>
+    <div class="stat-card"><div class="big">${pc.totalProjectCount||0}</div><div class="label">Tracked Projects</div></div>
+  </div>`;
+
+  const levels = ['foundational', 'working', 'proficient', 'advanced', 'lead'];
+  const byLevel = pc.expertiseByLevel || {};
+  const hasExpertise = levels.some(l => (byLevel[l]||[]).length > 0);
+  html += '<div class="card"><h2>Expertise by Level</h2>';
+  if (!hasExpertise) {
+    html += '<div class="empty-state">No expertise entries recorded.</div>';
+  } else {
+    html += levels.map(l => {
+      const items = byLevel[l] || [];
+      if (items.length === 0) return '';
+      const tags = items.map(e => `<span class="tag">${esc(e.name)}</span>`).join(' ');
+      return `<div class="detail-section"><h3>${esc(l)}</h3><div>${tags}</div></div>`;
+    }).join('');
+  }
+  html += '</div>';
+
+  html += '<div class="card"><h2>Work Activity Highlights</h2>';
+  if (!pc.workActivityAvailable) {
+    html += '<div class="warning">Work activity summary not available. Run the generator.</div>';
+  } else {
+    const activity = pc.activitySummary || {};
+    const focusAreas = pc.topFocusAreas || [];
+    const focusTags = focusAreas.map(f => `<span class="tag">${esc(f.term)} (${f.weight})</span>`).join(' ');
+    html += `<div class="meta-row"><span>Total Sessions:</span><strong>${activity.totalSessions||0}</strong>
+      <span>Total Memory Records:</span><strong>${activity.totalMemoryRecords||0}</strong></div>
+      <div class="detail-section"><h3>Top Focus Areas</h3><div>${focusTags || '<span style="color:var(--text-muted)">None recorded.</span>'}</div></div>`;
+  }
+  html += '</div>';
+
+  container.innerHTML = html;
 }
 
 // ── Utilities ──

@@ -310,6 +310,35 @@ TOOLS = [
         "description": "Get a summary of the local audit trail (event counts and chain validity, not raw events).",
         "inputSchema": {"type": "object", "properties": {}, "required": []},
     },
+    {
+        "name": "get_professional_profile",
+        "description": "Get the active (or a specified) professional profile summary (id, role, team, active status). Read-only; never creates, edits, or switches a profile.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "profile_id": {"type": "string", "description": "Profile id (normalized identifier); defaults to the active profile"},
+            },
+            "required": [],
+        },
+    },
+    {
+        "name": "list_expertise",
+        "description": "List validated expertise entries (name, level, status, evidence type/ref) for the active (or a specified) professional profile. Summary-only; never dereferences evidence into source content.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "profile_id": {"type": "string", "description": "Profile id (normalized identifier); defaults to the active profile"},
+                "limit": {"type": "integer", "description": "Maximum results"},
+                "cursor": {"type": "integer", "description": "Pagination cursor"},
+            },
+            "required": [],
+        },
+    },
+    {
+        "name": "get_work_activity_summary",
+        "description": "Get the deterministic, repository-stable work-activity summary (projects, focus areas, activity counts).",
+        "inputSchema": {"type": "object", "properties": {}, "required": []},
+    },
 ]
 
 RESOURCES = [

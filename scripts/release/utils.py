@@ -70,11 +70,13 @@ GENERATED_ARTIFACTS = [
     "skills.json", "skills.md",
     "repository-index.json", "repository-map.md",
     "memory-index.json", "memory-index.md",
+    "profile-index.json", "profile-index.md",
     "knowledge-graph.json", "knowledge-graph.md",
     "discovery-index.json", "discovery-index.md",
     "agent-registry.json", "agent-registry.md",
     "workflow-registry.json", "workflow-registry.md",
     "knowledge-health.json", "knowledge-health.md",
+    "work-activity.json", "work-activity.md",
     "dashboard.html", "dashboard-data.json",
     "release-manifest.json", "release-manifest.md",
 ]
@@ -82,11 +84,13 @@ GENERATED_ARTIFACTS = [
 GENERATION_ORDER = [
     ("scripts/generate-skill-registry.py", "skill registry"),
     ("scripts/generate-memory-index.py", "memory index"),
+    ("scripts/generate-profile-index.py", "profile index"),
     ("scripts/index-repository.py", "repository index"),
     ("scripts/generate-knowledge-graph.py", "knowledge graph"),
     ("scripts/discovery-build.py", "discovery index"),
     ("scripts/generate-agent-registry.py", "agent registry"),
     ("scripts/generate-workflow-registry.py", "workflow registry"),
     ("scripts/generate-knowledge-health.py", "knowledge health"),
+    ("scripts/generate-work-activity.py", "work activity"),
     ("scripts/dashboard-build.py", "dashboard"),
 ]

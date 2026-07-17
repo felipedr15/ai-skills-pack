@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-15T19:51:03Z",
+  "generatedAt": "2026-07-17T00:53:45Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 347,
-    "edges": 574,
+    "nodes": 349,
+    "edges": 580,
     "nodesByType": {
       "concept": 2,
-      "document": 309,
+      "document": 311,
       "memory": 5,
       "platform": 5,
       "project": 10,
@@ -18,10 +18,10 @@
       "belongs_to": 2,
       "contains": 129,
       "generated_from": 14,
-      "references": 193,
-      "related_to": 121,
+      "references": 194,
+      "related_to": 122,
       "supports": 4,
-      "uses": 111
+      "uses": 115
     }
   },
   "nodes": [
@@ -647,6 +647,15 @@
       }
     },
     {
+      "id": "document:generated/profile-index.json",
+      "type": "document",
+      "name": "Profile Index",
+      "sourcePath": "generated/profile-index.json",
+      "metadata": {
+        "supplemental": true
+      }
+    },
+    {
       "id": "document:generated/repository-index.json",
       "type": "document",
       "name": "Repository Index",
@@ -662,6 +671,15 @@
       "sourcePath": "generated/skills.json",
       "metadata": {
         "extension": ".json"
+      }
+    },
+    {
+      "id": "document:generated/work-activity.json",
+      "type": "document",
+      "name": "Work Activity",
+      "sourcePath": "generated/work-activity.json",
+      "metadata": {
+        "supplemental": true
       }
     },
     {
@@ -4701,6 +4719,15 @@
       }
     },
     {
+      "id": "edge:6709813249555ce8",
+      "type": "references",
+      "from": "document:.kiro/README.md",
+      "to": "document:.kiro/specs/README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:e19dcecf9901c48c",
       "type": "references",
       "from": "document:.kiro/README.md",
@@ -4773,10 +4800,10 @@
       }
     },
     {
-      "id": "edge:bf683130432cbed0",
+      "id": "edge:9d78c2b53a90d57a",
       "type": "references",
-      "from": "document:README.md",
-      "to": "document:.kiro/specs/README.md",
+      "from": "document:CONTRIBUTING.md",
+      "to": "document:SECURITY.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -6474,6 +6501,15 @@
       }
     },
     {
+      "id": "edge:eeb42838dfe026cd",
+      "type": "related_to",
+      "from": "document:SECURITY.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:15bfb0541e8f552b",
       "type": "related_to",
       "from": "document:WORKFLOW.md",
@@ -7509,6 +7545,33 @@
       }
     },
     {
+      "id": "edge:205346e3691dc6c4",
+      "type": "uses",
+      "from": "document:.kiro/specs/README.md",
+      "to": "platform:claude",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:d74a31a7b7750007",
+      "type": "uses",
+      "from": "document:.kiro/specs/README.md",
+      "to": "platform:codex",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:31db393b6e904c73",
+      "type": "uses",
+      "from": "document:.kiro/specs/README.md",
+      "to": "platform:copilot",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:5c2aaabd87c68972",
       "type": "uses",
       "from": "document:.kiro/steering/technology.md",
@@ -7603,6 +7666,15 @@
       "type": "uses",
       "from": "document:README.md",
       "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:ed34ec3f7afeea60",
+      "type": "uses",
+      "from": "document:README.md",
+      "to": "tool:mcp",
       "metadata": {
         "source": "document_text"
       }
@@ -8357,6 +8429,21 @@
   ],
   "unresolvedReferences": [
     {
+      "source": ".kiro/README.md",
+      "target": "specs/README.md",
+      "kind": "markdown"
+    },
+    {
+      "source": ".kiro/specs/README.md",
+      "target": "specs/README.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "ARCHITECTURE.md",
+      "target": "knowledge/architecture/phase-9-professional-context.md",
+      "kind": "markdown"
+    },
+    {
       "source": "README.md",
       "target": ".agent/skills/build/creator/SKILL.md",
       "kind": "markdown"
@@ -8394,6 +8481,16 @@
     {
       "source": "README.md",
       "target": "generated/memory-index.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "knowledge/architecture/phase-9-professional-context.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "specs/README.md",
       "kind": "markdown"
     }
   ]

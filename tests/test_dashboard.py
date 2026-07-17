@@ -167,6 +167,7 @@ class AggregationTests(unittest.TestCase):
             self.assertIn("discovery", data)
             self.assertIn("artifacts", data)
             self.assertIn("orchestration", data)
+            self.assertIn("professionalContext", data)
 
 
 # ============================================================
@@ -233,6 +234,199 @@ class Phase8DashboardValidationTests(unittest.TestCase):
 
 
 # ============================================================
+# Phase 9: Professional Context Aggregation Tests
+# ============================================================
+
+def _valid_expertise_entry(entry_id="expertise-windows-11", name="Windows 11 Deployment", level="advanced"):
+    return {
+        "id": entry_id, "name": name, "level": level,
+        "evidence": [{"type": "project", "ref": "windows-11-autopilot-deployment"}],
+        "source": "user", "status": "approved",
+        "createdAt": "2026-07-15T00:00:00Z", "updatedAt": "2026-07-15T00:00:00Z",
+    }
+
+
+def _seed_profile_fixture(root: Path, records: list, expertise: dict | None = None) -> None:
+    gen = root / "generated"
+    gen.mkdir(parents=True, exist_ok=True)
+    (gen / "profile-index.json").write_text(json.dumps({
+        "schemaVersion": "1.0.0", "recordCount": len(records), "records": records,
+    }), encoding="utf-8")
+    if expertise is not None:
+        (root / "profile").mkdir(parents=True, exist_ok=True)
+        for profile_id, data in expertise.items():
+            (root / "profile" / f"{profile_id}.expertise.json").write_text(json.dumps(data), encoding="utf-8")
+
+
+class Phase9AggregationTests(unittest.TestCase):
+    def test_missing_artifacts_report_unavailable_not_configured(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "generated").mkdir()
+            result = db_aggregate.aggregate_professional_context(root)
+            self.assertFalse(result["profileIndexAvailable"])
+            self.assertFalse(result["workActivityAvailable"])
+            self.assertFalse(result["configured"])
+            self.assertEqual(result["profileCount"], 0)
+            self.assertIsNone(result["activeProfile"])
+            self.assertEqual(result["expertiseCount"], 0)
+            for level in db_aggregate.EXPERTISE_LEVELS:
+                self.assertEqual(result["expertiseByLevel"][level], [])
+
+    def test_empty_registry_is_valid_not_configured_state(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _seed_profile_fixture(root, [])
+            result = db_aggregate.aggregate_professional_context(root)
+            self.assertTrue(result["profileIndexAvailable"])
+            self.assertFalse(result["configured"])
+            self.assertEqual(result["profileCount"], 0)
+
+    def test_active_profile_and_expertise_grouping(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            expertise_file = {
+                "schemaVersion": "1.0.0", "profileId": "primary", "updatedAt": "2026-07-15T00:00:00Z",
+                "entries": [_valid_expertise_entry(), _valid_expertise_entry("expertise-power-apps", "Power Apps", "proficient")],
+            }
+            _seed_profile_fixture(
+                root,
+                [{"id": "primary", "path": "profile/primary.md", "role": "Senior IT Technical Support Analyst", "team": "IT Support", "active": True},
+                 {"id": "secondary", "path": "profile/secondary.md", "role": "Contractor", "team": "Consulting", "active": False}],
+                expertise={"primary": expertise_file},
+            )
+            result = db_aggregate.aggregate_professional_context(root)
+            self.assertTrue(result["configured"])
+            self.assertEqual(result["profileCount"], 2)
+            self.assertEqual(result["activeProfile"]["id"], "primary")
+            self.assertEqual(result["activeProfile"]["role"], "Senior IT Technical Support Analyst")
+            self.assertEqual(result["expertiseCount"], 2)
+            self.assertEqual(len(result["expertiseByLevel"]["advanced"]), 1)
+            self.assertEqual(len(result["expertiseByLevel"]["proficient"]), 1)
+            self.assertEqual(result["expertiseByLevel"]["advanced"][0]["name"], "Windows 11 Deployment")
+
+    def test_malformed_profile_index_handled_gracefully(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            gen = root / "generated"
+            gen.mkdir()
+            (gen / "profile-index.json").write_text("{not valid json", encoding="utf-8")
+            result = db_aggregate.aggregate_professional_context(root)
+            self.assertFalse(result["profileIndexAvailable"])
+            self.assertFalse(result["configured"])
+
+    def test_malformed_expertise_file_handled_gracefully(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _seed_profile_fixture(root, [{"id": "primary", "path": "profile/primary.md", "role": "x", "team": "y", "active": True}])
+            (root / "profile").mkdir(parents=True, exist_ok=True)
+            (root / "profile" / "primary.expertise.json").write_text("{not valid json", encoding="utf-8")
+            result = db_aggregate.aggregate_professional_context(root)
+            self.assertTrue(result["configured"])
+            self.assertEqual(result["expertiseCount"], 0)
+
+    def test_invalid_expertise_entries_excluded_not_crashed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            bad_entry = _valid_expertise_entry(level="expert")  # not in the fixed enum
+            expertise_file = {"schemaVersion": "1.0.0", "profileId": "primary", "updatedAt": "2026-07-15T00:00:00Z", "entries": [bad_entry]}
+            _seed_profile_fixture(
+                root, [{"id": "primary", "path": "profile/primary.md", "role": "x", "team": "y", "active": True}],
+                expertise={"primary": expertise_file})
+            result = db_aggregate.aggregate_professional_context(root)
+            self.assertEqual(result["expertiseCount"], 0)  # whole file rejected, never partially trusted
+
+    def test_work_activity_highlights(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            gen = root / "generated"
+            gen.mkdir(parents=True)
+            (gen / "profile-index.json").write_text(json.dumps({"schemaVersion": "1.0.0", "recordCount": 0, "records": []}), encoding="utf-8")
+            (gen / "work-activity.json").write_text(json.dumps({
+                "schemaVersion": "1.0.0", "generatedAt": "x", "generator": "ai-os-work-activity", "windowDays": 90,
+                "projects": [{"project": "ai-os", "sessionCount": 3, "lastActiveAt": "2026-07-15", "relatedEntities": []},
+                             {"project": "idle-project", "sessionCount": 0, "lastActiveAt": None, "relatedEntities": []}],
+                "focusAreas": [{"term": "memory", "weight": 2, "sources": []}, {"term": "validation", "weight": 1, "sources": []}],
+                "activitySummary": {"totalSessions": 3, "totalMemoryRecords": 10},
+            }), encoding="utf-8")
+            result = db_aggregate.aggregate_professional_context(root)
+            self.assertTrue(result["workActivityAvailable"])
+            self.assertEqual(result["activeProjectCount"], 1)
+            self.assertEqual(result["totalProjectCount"], 2)
+            self.assertEqual(result["activitySummary"]["totalSessions"], 3)
+            self.assertEqual(result["topFocusAreas"][0]["term"], "memory")
+
+    def test_no_local_runtime_state_in_aggregation(self):
+        # aggregate_professional_context must never import local-runtime-state
+        # modules (session/approvals) -- only committed generated/ artifacts
+        # and profile/<id>.expertise.json's schema-restricted fields.
+        import inspect
+        source = inspect.getsource(db_aggregate.aggregate_professional_context) + inspect.getsource(db_aggregate._load_expertise_summary)
+        for banned in ("orchestration.session", "orchestration.approvals", "runtime_dir", ".md\"", "primary.md"):
+            self.assertNotIn(banned, source)
+
+    def test_no_prohibited_data_in_aggregated_output(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            secret_marker = "SECRET_RESPONSIBILITY_TEXT_MARKER"
+            _seed_profile_fixture(root, [{"id": "primary", "path": "profile/primary.md", "role": "Analyst", "team": "IT", "active": True}])
+            # Even if a raw record existed with sensitive prose, aggregation
+            # never reads profile/*.md -- only the generated index.
+            (root / "profile" / "primary.md").parent.mkdir(parents=True, exist_ok=True)
+            (root / "profile" / "primary.md").write_text(f"---\nid: primary\n---\n# Notes\n{secret_marker}\n", encoding="utf-8")
+            result = db_aggregate.aggregate_professional_context(root)
+            self.assertNotIn(secret_marker, json.dumps(result))
+
+    def test_deterministic_output(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            expertise_file = {
+                "schemaVersion": "1.0.0", "profileId": "primary", "updatedAt": "2026-07-15T00:00:00Z",
+                "entries": [_valid_expertise_entry()],
+            }
+            _seed_profile_fixture(
+                root, [{"id": "primary", "path": "profile/primary.md", "role": "x", "team": "y", "active": True}],
+                expertise={"primary": expertise_file})
+            r1 = db_aggregate.aggregate_professional_context(root)
+            r2 = db_aggregate.aggregate_professional_context(root)
+            self.assertEqual(r1, r2)
+
+
+class Phase9DashboardValidationTests(unittest.TestCase):
+    def test_missing_professional_context_section_rejected(self):
+        data = {
+            "schemaVersion": SCHEMA_VERSION, "generatedAt": "x", "generator": GENERATOR,
+            "repository": {}, "skills": {}, "memory": {}, "knowledgeGraph": {},
+            "discovery": {}, "artifacts": {}, "orchestration": {},
+        }
+        failures, _warnings = db_validate.validate_dashboard_data(data)
+        self.assertTrue(any("professionalContext" in f for f in failures))
+
+
+class Phase9RenderTests(unittest.TestCase):
+    def test_professional_context_section_present_in_rendered_html(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            _make_fixture(root)
+            data = db_aggregate.build_dashboard_data(root)
+            html = db_render.render_dashboard_html(data)
+            self.assertIn("professional-context", html)
+            self.assertIn("renderProfessionalContext", html)
+            self.assertNotIn("__DASHBOARD_DATA__", html)
+
+    def test_html_escaping_helper_used_for_profile_fields(self):
+        # The professional-context render function must route every
+        # DATA-derived string through esc() before HTML injection.
+        import re
+        from dashboard.template import DASHBOARD_HTML
+        match = re.search(r"function renderProfessionalContext\(container\) \{.*?\n\}\n", DASHBOARD_HTML, re.DOTALL)
+        self.assertIsNotNone(match)
+        body = match.group(0)
+        for field in ("active.id", "active.role", "active.team", "e.name", "f.term", "l"):
+            self.assertIn(f"esc({field})", body)
+
+
+# ============================================================
 # Render Tests
 # ============================================================
 
@@ -290,6 +484,7 @@ class ValidationTests(unittest.TestCase):
             "discovery": {"available": True},
             "artifacts": {"artifacts": []},
             "orchestration": {"available": True},
+            "professionalContext": {"configured": False},
         }
 
     def test_valid_data_passes(self):

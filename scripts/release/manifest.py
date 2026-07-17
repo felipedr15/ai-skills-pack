@@ -20,6 +20,8 @@ TRACKED_ARTIFACTS = [
     "generated/repository-map.md",
     "generated/memory-index.json",
     "generated/memory-index.md",
+    "generated/profile-index.json",
+    "generated/profile-index.md",
     "generated/knowledge-graph.json",
     "generated/knowledge-graph.md",
     "generated/discovery-index.json",
@@ -30,6 +32,8 @@ TRACKED_ARTIFACTS = [
     "generated/workflow-registry.md",
     "generated/knowledge-health.json",
     "generated/knowledge-health.md",
+    "generated/work-activity.json",
+    "generated/work-activity.md",
     "generated/dashboard.html",
     "generated/dashboard-data.json",
 ]

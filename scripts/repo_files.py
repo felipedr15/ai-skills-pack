@@ -32,6 +32,7 @@ FALLBACK_ALLOWED_PREFIXES = (
     "generated/",
     "knowledge/",
     "memory/",
+    "profile/",
     "prompts/",
     "references/",
     "scripts/",

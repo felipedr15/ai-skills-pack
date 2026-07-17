@@ -69,7 +69,7 @@ def main() -> int:
         # 2. Tool list
         req_id += 1
         resp = send_request(proc, "tools/list", {}, req_id)
-        check("tools/list", resp, lambda r: len(r.get("result", {}).get("tools", [])) == 29)
+        check("tools/list", resp, lambda r: len(r.get("result", {}).get("tools", [])) == 32)
 
         # 3. Resource list
         req_id += 1
@@ -192,6 +192,60 @@ def main() -> int:
         resp = send_request(proc, "resources/read", {"uri": "ai-os://agents"}, req_id)
         check("read ai-os://agents", resp)
 
+        # 17g. Phase 9: get_professional_profile (real registry is empty -> "not configured")
+        req_id += 1
+        resp = send_request(proc, "tools/call", {"name": "get_professional_profile", "arguments": {}}, req_id)
+        content_text = resp.get("result", {}).get("content", [{}])[0].get("text", "{}")
+        profile_data = json.loads(content_text)
+        if profile_data.get("configured") is False and profile_data.get("profile") is None:
+            print("  PASS get_professional_profile (not configured)")
+        else:
+            failures.append("FAIL get_professional_profile did not report the empty-registry state cleanly")
+
+        # 17h. Phase 9: list_expertise (no active profile -> empty structured response)
+        req_id += 1
+        resp = send_request(proc, "tools/call", {"name": "list_expertise", "arguments": {}}, req_id)
+        content_text = resp.get("result", {}).get("content", [{}])[0].get("text", "{}")
+        expertise_data = json.loads(content_text)
+        if expertise_data.get("configured") is False and expertise_data.get("expertise", {}).get("items") == []:
+            print("  PASS list_expertise (not configured)")
+        else:
+            failures.append("FAIL list_expertise did not report the empty-registry state cleanly")
+
+        # 17i. Phase 9: get_work_activity_summary
+        req_id += 1
+        resp = send_request(proc, "tools/call", {"name": "get_work_activity_summary", "arguments": {}}, req_id)
+        content_text = resp.get("result", {}).get("content", [{}])[0].get("text", "{}")
+        work_activity_data = json.loads(content_text)
+        if "projects" in work_activity_data and "focusAreas" in work_activity_data and "activitySummary" in work_activity_data:
+            print("  PASS get_work_activity_summary")
+        else:
+            failures.append("FAIL get_work_activity_summary missing expected fields")
+
+        # 17j. Phase 9: invalid profile_id fails safely (not a normalized identifier)
+        req_id += 1
+        resp = send_request(proc, "tools/call", {"name": "get_professional_profile", "arguments": {"profile_id": "Not A Valid Id!"}}, req_id)
+        content = json.loads(resp.get("result", {}).get("content", [{}])[0].get("text", "{}"))
+        if content.get("error") == "invalid_request":
+            print("  PASS invalid profile_id rejected")
+        else:
+            failures.append("FAIL invalid profile_id NOT rejected")
+
+        # 17k. Phase 9: no profile-mutating tool is registered (switch/write/sync-knowledge/approve)
+        req_id += 1
+        mutating_absent = True
+        for forbidden in ("switch_profile", "write_profile", "edit_profile", "sync_knowledge",
+                           "create_profile", "approve_profile_switch"):
+            resp = send_request(proc, "tools/call", {"name": forbidden, "arguments": {}}, req_id)
+            content = json.loads(resp.get("result", {}).get("content", [{}])[0].get("text", "{}"))
+            if content.get("code") != "unknown_tool":
+                mutating_absent = False
+            req_id += 1
+        if mutating_absent:
+            print("  PASS no profile-mutating tool exposed")
+        else:
+            failures.append("FAIL a profile-mutating tool appears to be exposed")
+
         # 18. Unknown tool
         req_id += 1
         resp = send_request(proc, "tools/call", {"name": "nonexistent_tool", "arguments": {}}, req_id)
@@ -210,7 +264,7 @@ def main() -> int:
         failures.append(f"FAIL unexpected error: {exc}")
         proc.kill()
 
-    print(f"\nSmoke test complete: {24 - len(failures)} PASS, {len(failures)} FAIL")
+    print(f"\nSmoke test complete: {29 - len(failures)} PASS, {len(failures)} FAIL")
     for f in failures:
         print(f"  {f}")
     return 1 if failures else 0

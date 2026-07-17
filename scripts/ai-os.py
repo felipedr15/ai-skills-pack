@@ -32,6 +32,13 @@ from orchestration.planner import create_plan
 from orchestration.router import classify_task
 from orchestration.workflow import build_workflow_registry
 
+from profile import record as profile_record
+from profile import registry as profile_registry
+from profile import switch as profile_switch
+from profile import sync_knowledge as profile_sync_knowledge
+from profile import validate as profile_validate
+from profile.sanitize import SanitizationError
+
 
 def cmd_version(args):
     """Print AI OS version."""
@@ -753,6 +760,115 @@ def cmd_approval(args):
     return 1
 
 
+def cmd_profile(args):
+    """Professional profile, expertise, explicit switching, and sync-knowledge
+    (Phase 9, Tasks 001-014). `list`/`show` are read-only and never modify
+    profile/registry.json, memory/, approvals, sessions, or generated
+    artifacts. `switch` is the only code path allowed to change which
+    profile is active, is always explicit, and requires an approved
+    'profile-switch' approval (requested automatically, never auto-approved)
+    before any mutation occurs.
+    """
+    try:
+        if args.profile_cmd == "list":
+            data = profile_registry.load_registry(ROOT)
+            failures, _warnings = profile_validate.validate_registry_shape(data)
+            if failures:
+                print("FAIL invalid profile registry: " + "; ".join(failures), file=sys.stderr)
+                return 1
+            profiles = data.get("profiles", [])
+            if args.json:
+                print(json.dumps(profiles, indent=2))
+                return 0
+            if not profiles:
+                print("No professional profiles configured yet. See profile/README.md to author one.")
+                return 0
+            for entry in profiles:
+                status = "active" if entry.get("active") else "inactive"
+                print(f"{entry['id']}: [{status}] {entry.get('path', '')} "
+                      f"(schemaVersion {data.get('schemaVersion', '')})")
+            return 0
+
+        if args.profile_cmd == "show":
+            data = profile_registry.load_registry(ROOT)
+            failures, _warnings = profile_validate.validate_registry_shape(data)
+            if failures:
+                print("FAIL invalid profile registry: " + "; ".join(failures), file=sys.stderr)
+                return 1
+
+            if args.profile_id:
+                entry = profile_registry.find_profile(data, args.profile_id)
+                if entry is None:
+                    print(f"FAIL unknown profile id: {args.profile_id}", file=sys.stderr)
+                    return 1
+            else:
+                entry = profile_registry.active_profile(data)
+                if entry is None:
+                    print("No active professional profile is configured yet.")
+                    return 0
+
+            summary = profile_record.load_profile_summary(ROOT, entry)
+            if args.json:
+                print(json.dumps(summary, indent=2))
+            else:
+                print(f"id: {summary['id']}")
+                print(f"active: {summary['active']}")
+                print(f"role: {summary.get('role', '')}")
+                print(f"team: {summary.get('team', '')}")
+                print(f"reportingTo: {summary.get('reportingTo') or ''}")
+                responsibilities = summary.get("responsibilities") or []
+                print(f"responsibilities: {', '.join(responsibilities) if responsibilities else '(none)'}")
+                print(f"sensitivity: {summary.get('sensitivity', '')}")
+                print(f"schemaVersion: {summary.get('schemaVersion', '')}")
+                print(f"updatedAt: {summary.get('updatedAt', '')}")
+            return 0
+
+        if args.profile_cmd == "switch":
+            target_id = args.profile_id
+            data = profile_registry.load_registry(ROOT)
+            failures, _warnings = profile_validate.validate_registry_shape(data)
+            if failures:
+                print("FAIL invalid profile registry: " + "; ".join(failures), file=sys.stderr)
+                return 1
+            if not data.get("profiles"):
+                print("FAIL no profiles registered; nothing to switch", file=sys.stderr)
+                return 1
+            if profile_registry.find_profile(data, target_id) is None:
+                print(f"FAIL unknown profile id: {target_id}", file=sys.stderr)
+                return 1
+
+            if not orch_approvals.is_approved(ROOT, approval_type="profile-switch", target=target_id):
+                approval = orch_approvals.request_approval(
+                    ROOT, approval_type="profile-switch", target=target_id,
+                    reason=f"explicit profile switch requested: {target_id}")
+                orch_audit.append_event(ROOT, "approval-requested",
+                                         details={"approvalId": approval["approvalId"], "type": "profile-switch"})
+                print(f"FAIL profile switch to {target_id!r} requires approval; requested "
+                      f"{approval['approvalId']} (pending) -- approve it with "
+                      f"`ai-os.py approval approve {approval['approvalId']}` and re-run", file=sys.stderr)
+                return 1
+
+            activated = profile_switch.switch(ROOT, target_id)
+            print(f"Active profile switched to: {activated['id']}")
+            return 0
+
+        if args.profile_cmd == "sync-knowledge":
+            if args.force_refresh:
+                result = profile_sync_knowledge.force_refresh(ROOT)
+            else:
+                result = profile_sync_knowledge.sync(ROOT)
+            print(f"{result['status'].upper()}: {result['message']}")
+            return 0
+    except (profile_switch.SwitchError, profile_sync_knowledge.SyncKnowledgeError,
+            profile_record.ProfileRecordError, SanitizationError,
+            orch_approvals.ApprovalError, ValueError) as exc:
+        print(f"FAIL {exc}", file=sys.stderr)
+        return 1
+
+    print("Usage: ai-os.py profile {list,show,switch,sync-knowledge}", file=sys.stderr)
+    return 1
+
+
 def cmd_memory_suggestions(args):
     """List, show, approve, reject, or export memory suggestions."""
     try:
@@ -941,6 +1057,7 @@ def cmd_help(args):
     print("  workflow             list|show workflow registry entries")
     print("  session              list|show|start|validate|complete|archive a local session")
     print("  approval             list|show|approve|reject an approval gate")
+    print("  profile              list|show|switch|sync-knowledge a professional profile")
     print("  memory-suggestions   list|show|approve|reject|export a memory suggestion")
     print("  knowledge-health     Show the live knowledge health summary")
     print("  knowledge-gaps       Show detected knowledge gaps")
@@ -1069,6 +1186,18 @@ def main(argv=None) -> int:
     apr.add_argument("approval_id")
     apr.add_argument("--reason", default="")
 
+    p = sub.add_parser("profile", help="Professional profile and expertise")
+    profile_sub = p.add_subparsers(dest="profile_cmd")
+    pl = profile_sub.add_parser("list", help="List registered professional profiles (read-only)")
+    pl.add_argument("--json", action="store_true")
+    ps = profile_sub.add_parser("show", help="Show a profile, or the active profile if no id is given (read-only)")
+    ps.add_argument("profile_id", nargs="?", default=None)
+    ps.add_argument("--json", action="store_true")
+    pw = profile_sub.add_parser("switch", help="Explicitly switch the active profile (requires approval)")
+    pw.add_argument("profile_id")
+    psk = profile_sub.add_parser("sync-knowledge", help="Scaffold or snapshot the professional-context overview")
+    psk.add_argument("--force-refresh", action="store_true", help="Snapshot the current curated overview; never overwrites overview.md")
+
     p = sub.add_parser("memory-suggestions", help="Memory suggestions")
     ms_sub = p.add_subparsers(dest="memory_suggestions_cmd")
     msl = ms_sub.add_parser("list", help="List memory suggestions")
@@ -1155,6 +1284,7 @@ def main(argv=None) -> int:
         "workflow": cmd_workflow,
         "session": cmd_session,
         "approval": cmd_approval,
+        "profile": cmd_profile,
         "memory-suggestions": cmd_memory_suggestions,
         "knowledge-health": cmd_knowledge_health,
         "knowledge-gaps": cmd_knowledge_gaps,

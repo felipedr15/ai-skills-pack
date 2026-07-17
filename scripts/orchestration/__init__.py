@@ -8,6 +8,8 @@ memory-suggestion promotion (see `memory_suggestions.approve`).
 """
 from __future__ import annotations
 
+from profile.schema import APPROVAL_TARGET_TYPES
+
 SCHEMA_VERSION = "1.0.0"
 GENERATOR = "ai-os-orchestration"
 
@@ -91,7 +93,7 @@ APPROVAL_TYPES = [
     "workflow-continuation",
     "controlled-validation",
     "session-completion",
-]
+] + APPROVAL_TARGET_TYPES  # profile-write, expertise-write, profile-switch (Phase 9, Task 014)
 
 APPROVAL_STATUSES = ["pending", "approved", "rejected", "expired", "cancelled"]
 

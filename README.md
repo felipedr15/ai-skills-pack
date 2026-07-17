@@ -47,7 +47,7 @@ Planner, architect, researcher, builder, reviewer, QA, documentation writer, sec
 
 ## Specifications
 
-Substantial work moves through approved requirements, design, and task documents. Start with [specification templates](templates/specifications/README.md) or organize a feature under [.kiro/specs/](.kiro/specs/README.md).
+Substantial work moves through approved requirements, design, and task documents. Start with [specification templates](templates/specifications/README.md) or organize a feature under [specs/](specs/README.md).
 
 ## Project Memory
 
@@ -158,6 +158,36 @@ See [Continuous Learning](docs/continuous-learning.md), [Agent Orchestration](do
 [Memory Approval](docs/memory-approval.md), [Knowledge Health](docs/knowledge-health.md),
 [Feedback and Audit](docs/feedback-and-audit.md), and
 [Phase 8 Architecture](knowledge/architecture/phase-8-learning-orchestration.md).
+
+## Professional Context and Work Intelligence (Phase 9)
+
+A strictly local-first, privacy-first layer for the user's own professional identity and work
+patterns — canonical, explicitly-authored profile records in `profile/` (never inferred or
+guessed), an evidence-based expertise list, and deterministic work-activity signals aggregated
+from data Phases 2 and 8 already capture. `profile/` (canonical structured source),
+`knowledge/professional-context/` (curated, human-owned prose, scaffolded once and never
+silently overwritten), `memory/` (approval-gated learned records — never professional identity
+data), and `generated/` (deterministic derived artifacts) each have a distinct, enforced role.
+Profile switching is always an explicit, approval-gated action; nothing here auto-selects or
+auto-switches a profile, and MCP/dashboard exposure is read-only and summary-only.
+
+```text
+python scripts/ai-os.py profile list
+python scripts/ai-os.py profile show
+python scripts/ai-os.py profile switch <profile-id>
+python scripts/ai-os.py approval approve <id>
+python scripts/ai-os.py profile sync-knowledge
+python scripts/ai-os.py profile sync-knowledge --force-refresh
+```
+
+`profile/registry.json` starts empty — no profile is fabricated by any tool. `profile switch`
+requires an explicitly approved `profile-switch` approval before it changes anything; running it
+first requests that approval and stops. `profile sync-knowledge` scaffolds
+`knowledge/professional-context/overview.md` only if it doesn't already exist; `--force-refresh`
+never rewrites `overview.md` — it checkpoints the current curated content into a timestamped file
+under `knowledge/professional-context/snapshots/`.
+
+See [Phase 9 Architecture](knowledge/architecture/phase-9-professional-context.md).
 
 ## Quick Start
 

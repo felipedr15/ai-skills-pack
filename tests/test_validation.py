@@ -26,6 +26,14 @@ class ValidationTests(unittest.TestCase):
         with contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(results.report(), 1)
 
+    def test_phase9_generator_checks_wired_in(self):
+        # Cheap regression guard for Task 007's wiring, without re-running
+        # the full (slow) validate-all.py pipeline inside the unit test suite.
+        source = (ROOT / "scripts" / "validate-all.py").read_text(encoding="utf-8")
+        self.assertIn("scripts/generate-profile-index.py", source)
+        self.assertIn("--check", source)
+        self.assertIn("scripts/generate-work-activity.py", source)
+
 
 if __name__ == "__main__":
     unittest.main()

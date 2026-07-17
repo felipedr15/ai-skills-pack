@@ -43,3 +43,30 @@ Knowledge Graph generation must remain local and repository-based.
   are CLI-only.
 - The audit trail is hash-chained so tampering with `.ai-os/audit/` is detectable via
   `python scripts/ai-os.py audit validate`.
+
+## Professional Context Rules (Phase 9)
+
+Professional-context and expertise data is high-sensitivity personal data about the user, not
+project knowledge, and is treated more conservatively than every other content type in this
+repository.
+
+- Never store raw resumes, raw performance evaluations, personal phone numbers, personal email
+  addresses, home addresses, ZIP codes, employee IDs, credentials, asset/customer/employee
+  records, internal IP addresses, or confidential/County-security-marked content anywhere under
+  `profile/` or `knowledge/professional-context/`.
+- `profile/` is reserved for canonical, explicitly-authored identity data; `memory/` validation
+  actively rejects any record whose front matter carries the reserved profile-only keys `role`,
+  `team`, or `reportingTo` — this boundary is enforced structurally, not by convention.
+- Evidence pointers (`{type, ref}`) must be normalized identifiers, never free text, file paths,
+  or contact information; validation rejects anything else.
+- `overview.md` and every snapshot under `knowledge/professional-context/snapshots/` are passed
+  through deterministic, regex-based sanitization before being written — this reduces risk but is
+  not a substitute for human privacy review, exactly like the memory-security scan above.
+- No profile is ever created, edited, or switched automatically. `profile switch` requires an
+  explicitly approved `profile-switch` approval before any mutation; no CLI flag or invocation
+  implies approval.
+- Generic knowledge-graph and semantic-discovery traversal never expose role, team,
+  responsibilities, or profile prose — only a profile's normalized id and active status are
+  visible outside the approval-gated CLI and the summary-only MCP tools.
+- No network calls, no telemetry, no arbitrary shell execution, and no automatic promotion into
+  permanent memory originates from any Phase 9 code path.

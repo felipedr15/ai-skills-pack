@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-15T22:52:55Z",
+  "generator": "ai-os-work-activity",
+  "windowDays": 90,
+  "projects": [
+    {
+      "project": "README.md",
+      "sessionCount": 0,
+      "lastActiveAt": null,
+      "relatedEntities": []
+    },
+    {
+      "project": "ai-os",
+      "sessionCount": 1,
+      "lastActiveAt": "2026-07-12",
+      "relatedEntities": [
+        "memory:decision-memory-index-source-truth-001",
+        "memory:session-memory-engine-example-001"
+      ]
+    },
+    {
+      "project": "automation",
+      "sessionCount": 0,
+      "lastActiveAt": null,
+      "relatedEntities": []
+    },
+    {
+      "project": "documentation",
+      "sessionCount": 0,
+      "lastActiveAt": null,
+      "relatedEntities": []
+    },
+    {
+      "project": "generic-project",
+      "sessionCount": 0,
+      "lastActiveAt": null,
+      "relatedEntities": []
+    },
+    {
+      "project": "internal-it",
+      "sessionCount": 0,
+      "lastActiveAt": null,
+      "relatedEntities": []
+    },
+    {
+      "project": "power-apps",
+      "sessionCount": 0,
+      "lastActiveAt": null,
+      "relatedEntities": []
+    },
+    {
+      "project": "power-automate",
+      "sessionCount": 0,
+      "lastActiveAt": null,
+      "relatedEntities": []
+    },
+    {
+      "project": "python",
+      "sessionCount": 0,
+      "lastActiveAt": null,
+      "relatedEntities": []
+    },
+    {
+      "project": "web-app",
+      "sessionCount": 0,
+      "lastActiveAt": null,
+      "relatedEntities": []
+    }
+  ],
+  "focusAreas": [
+    {
+      "term": "memory",
+      "weight": 2,
+      "sources": [
+        "memory:decision-memory-index-source-truth-001",
+        "memory:session-memory-engine-example-001"
+      ]
+    },
+    {
+      "term": "convention",
+      "weight": 1,
+      "sources": [
+        "memory:convention-documentation-structure-001"
+      ]
+    },
+    {
+      "term": "documentation",
+      "weight": 1,
+      "sources": [
+        "memory:convention-documentation-structure-001"
+      ]
+    },
+    {
+      "term": "example",
+      "weight": 1,
+      "sources": [
+        "memory:session-memory-engine-example-001"
+      ]
+    },
+    {
+      "term": "git",
+      "weight": 1,
+      "sources": [
+        "memory:lesson-validate-generated-files-before-committing-001"
+      ]
+    },
+    {
+      "term": "governance",
+      "weight": 1,
+      "sources": [
+        "memory:decision-memory-index-source-truth-001"
+      ]
+    },
+    {
+      "term": "indexing",
+      "weight": 1,
+      "sources": [
+        "memory:decision-memory-index-source-truth-001"
+      ]
+    },
+    {
+      "term": "power-apps",
+      "weight": 1,
+      "sources": [
+        "memory:lesson-powerapps-refresh-001"
+      ]
+    },
+    {
+      "term": "refresh",
+      "weight": 1,
+      "sources": [
+        "memory:lesson-powerapps-refresh-001"
+      ]
+    },
+    {
+      "term": "session",
+      "weight": 1,
+      "sources": [
+        "memory:session-memory-engine-example-001"
+      ]
+    },
+    {
+      "term": "sharepoint",
+      "weight": 1,
+      "sources": [
+        "memory:lesson-powerapps-refresh-001"
+      ]
+    },
+    {
+      "term": "structure",
+      "weight": 1,
+      "sources": [
+        "memory:convention-documentation-structure-001"
+      ]
+    },
+    {
+      "term": "validation",
+      "weight": 1,
+      "sources": [
+        "memory:lesson-validate-generated-files-before-committing-001"
+      ]
+    },
+    {
+      "term": "workflow",
+      "weight": 1,
+      "sources": [
+        "memory:lesson-validate-generated-files-before-committing-001"
+      ]
+    }
+  ],
+  "activitySummary": {
+    "totalSessions": 1,
+    "totalMemoryRecords": 5
+  }
+}

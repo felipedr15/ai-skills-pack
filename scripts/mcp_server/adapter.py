@@ -193,6 +193,20 @@ class McpAdapter:
     def _tool_get_audit_summary(self, args: dict) -> dict:
         return self.service.get_audit_summary()
 
+    # ── Phase 9: Professional Context (read-only) ──
+    # No profile-mutating tool (create/edit/switch, sync-knowledge,
+    # force-refresh, approval actions) is registered here by design.
+
+    def _tool_get_professional_profile(self, args: dict) -> dict:
+        return self.service.get_professional_profile(profile_id=args.get("profile_id", ""))
+
+    def _tool_list_expertise(self, args: dict) -> dict:
+        return self.service.list_expertise(
+            profile_id=args.get("profile_id", ""), limit=args.get("limit", 20), cursor=args.get("cursor", 0))
+
+    def _tool_get_work_activity_summary(self, args: dict) -> dict:
+        return self.service.get_work_activity_summary()
+
     # ── Resource Handlers ──
 
     def _resource_handlers(self) -> dict:

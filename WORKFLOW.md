@@ -135,3 +135,19 @@ GET /api/repository?category=&q=&limit=
 10. Record feedback and inspect the audit trail: `feedback add`, `audit list`, `audit validate`.
 11. Run unified validation to confirm no regressions across all phases.
 10. Clean: `python scripts/ai-os.py clean-generated --confirm`
+
+## Phase 9 Professional Context Workflow (Implemented)
+
+1. List configured profiles (read-only): `python scripts/ai-os.py profile list`
+2. Show the active profile, or a specific one, (read-only): `python scripts/ai-os.py profile show
+   [profile-id]`
+3. Switch profiles (explicit, approval-gated): `python scripts/ai-os.py profile switch
+   <profile-id>` — the first run requests a `profile-switch` approval and stops; approve it with
+   `python scripts/ai-os.py approval approve <id>`, then re-run the switch to activate it.
+4. Scaffold the curated overview once (safe, no-overwrite): `python scripts/ai-os.py profile
+   sync-knowledge`.
+5. Checkpoint the current curated overview into a dated snapshot (never rewrites `overview.md`):
+   `python scripts/ai-os.py profile sync-knowledge --force-refresh`.
+6. Query professional context read-only via MCP: `get_professional_profile`, `list_expertise`,
+   `get_work_activity_summary`.
+7. Run unified validation to confirm no regressions across all phases.

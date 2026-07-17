@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+### Added
+- Phase 9 Professional Context and Work Intelligence (not yet released): canonical, explicitly-authored
+  professional profile records under `profile/`, structurally parallel to `memory/` but never stored
+  inside it; an evidence-based expertise list restricted to `foundational|working|proficient|advanced|lead`
+  proficiency levels with `{type, ref}` evidence pointers; deterministic `generated/profile-index.json`
+  and `generated/work-activity.json` (the latter aggregated purely from existing `memory/` and
+  knowledge-graph data, excluding local `.ai-os/sessions/` runtime state); safe `profile sync-knowledge`
+  scaffolding and explicit `--force-refresh` timestamped snapshots that never rewrite the curated
+  `knowledge/professional-context/overview.md`; read-only `profile list`/`profile show` CLI commands;
+  explicit, approval-gated `profile switch` (new `profile-write`, `expertise-write`, and `profile-switch`
+  approval types reusing the existing Phase 8 approval engine); minimal knowledge-graph classification of
+  `profile/*.md` as node type `profile` and matching semantic-discovery integration, both withholding
+  role/team/responsibilities/prose from generic traversal; 3 new read-only, summary-only MCP tools
+  (`get_professional_profile`, `list_expertise`, `get_work_activity_summary`); 1 new dashboard page; and
+  261 dedicated tests. `profile/registry.json` ships empty — no professional profile is included.
+
 ### Changed
 - Post-release repository maintenance: after `v0.8.0` was tagged, added a tracked copy of the release notes and regenerated the knowledge graph and discovery index to include that document. These documentation and generated-artifact updates are present on `main` but do not change the released Phase 8 runtime behavior.
 

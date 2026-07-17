@@ -19,9 +19,19 @@ def discover_source_files(root: Path) -> list[Path]:
         rel = path.relative_to(root)
         if path_is_excluded(rel):
             continue
-        # Skip generated directory (derived artifacts)
+        # Skip generated directory (derived artifacts). generated/profile-index.json
+        # and generated/work-activity.json are intentionally NOT allowlisted here
+        # like knowledge_graph/extract.py's discover_source_files() does: they
+        # already surface as discovery "entities" via the knowledge graph's own
+        # supplemental-document nodes (build.py), so indexing them again as raw
+        # "documents" here would duplicate the same fact through two paths.
         rel_posix = rel.as_posix()
         if rel_posix.startswith("generated/"):
+            continue
+        # Snapshots are dated historical checkpoints, never current professional
+        # truth (design.md Security) -- excluded so a search never surfaces a
+        # stale snapshot as if it were the current curated overview.
+        if rel_posix.startswith("knowledge/professional-context/snapshots/"):
             continue
         # Only index Markdown and JSON
         if path.suffix.lower() not in {".md", ".json"}:
@@ -158,7 +168,20 @@ def extract_file_metadata(path: Path, root: Path) -> dict:
     """Extract metadata from a source file based on its type."""
     rel = normalize_path(str(path.relative_to(root)))
 
-    if path.suffix.lower() == ".md":
+    is_profile_record = (
+        rel.startswith("profile/")
+        and rel.rsplit("/", 1)[-1].lower() != "readme.md"
+        and path.suffix.lower() == ".md"
+    )
+
+    if is_profile_record:
+        # High-sensitivity, explicitly-authored identity data (design.md
+        # Security). Never extract title/headings/snippet/frontMatter from
+        # profile record prose -- discovery must not become a second,
+        # uncurated exposure path for role/team/responsibilities alongside
+        # the purpose-built, redaction-aware generated/profile-index.json.
+        meta = {"title": path.stem, "headings": [], "frontMatter": {}, "snippet": ""}
+    elif path.suffix.lower() == ".md":
         meta = extract_markdown_metadata(path)
     elif path.suffix.lower() == ".json":
         meta = extract_json_metadata(path)
@@ -173,6 +196,8 @@ def extract_file_metadata(path: Path, root: Path) -> dict:
         meta["category"] = "skill"
     elif rel.startswith("memory/"):
         meta["category"] = "memory"
+    elif rel.startswith("profile/"):
+        meta["category"] = "profile"
     elif rel.startswith("templates/project-starters/"):
         meta["category"] = "project"
     elif rel.startswith("knowledge/"):

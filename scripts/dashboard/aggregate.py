@@ -163,6 +163,95 @@ def aggregate_orchestration(root: Path) -> dict:
     }
 
 
+EXPERTISE_LEVELS = ["foundational", "working", "proficient", "advanced", "lead"]
+
+
+def _load_expertise_summary(root: Path, profile_id: str) -> list[dict]:
+    """Load and validate profile/<id>.expertise.json, returning [] on any
+    missing/invalid state rather than raising -- dashboard generation must
+    never crash on invalid Phase 9 source data. Only name/level (the fields
+    design.md approves for summary display) are returned, never evidence
+    detail or the raw file.
+    """
+    if not profile_id:
+        return []
+    data = _load_json(root / "profile" / f"{profile_id}.expertise.json")
+    if data is None:
+        return []
+    from profile.validate import validate_expertise_file
+    failures, _warnings = validate_expertise_file(data)
+    if failures:
+        return []
+    results = []
+    for entry in data.get("entries", []):
+        if not isinstance(entry, dict):
+            continue
+        results.append({"id": entry.get("id", ""), "name": entry.get("name", ""), "level": entry.get("level", "")})
+    results.sort(key=lambda x: (x["name"].lower(), x["id"]))
+    return results
+
+
+def aggregate_professional_context(root: Path) -> dict:
+    """Aggregate Phase 9 professional-context stats.
+
+    Sourced only from generated/profile-index.json and
+    generated/work-activity.json (already redaction-aware, deterministic
+    artifacts) plus profile/<id>.expertise.json's approved summary fields
+    -- never raw profile/*.md prose or unrestricted front matter. Snapshots
+    under knowledge/professional-context/snapshots/ are never read here;
+    only the generated, current-state artifacts are.
+    """
+    profile_index = _load_json(root / "generated" / "profile-index.json")
+    work_activity = _load_json(root / "generated" / "work-activity.json")
+
+    records = profile_index.get("records", []) if isinstance(profile_index, dict) else []
+    records = records if isinstance(records, list) else []
+    active_records = [r for r in records if isinstance(r, dict) and r.get("active") is True]
+    active_profile = active_records[0] if active_records else None
+
+    expertise_entries: list = []
+    if active_profile:
+        expertise_entries = _load_expertise_summary(root, active_profile.get("id", ""))
+    expertise_by_level = {level: [] for level in EXPERTISE_LEVELS}
+    for entry in expertise_entries:
+        level = entry.get("level")
+        if level in expertise_by_level:
+            expertise_by_level[level].append({"id": entry["id"], "name": entry["name"]})
+
+    projects = work_activity.get("projects", []) if isinstance(work_activity, dict) else []
+    projects = projects if isinstance(projects, list) else []
+    focus_areas = work_activity.get("focusAreas", []) if isinstance(work_activity, dict) else []
+    focus_areas = focus_areas if isinstance(focus_areas, list) else []
+    activity_summary = work_activity.get("activitySummary", {}) if isinstance(work_activity, dict) else {}
+    activity_summary = activity_summary if isinstance(activity_summary, dict) else {}
+
+    active_projects = [p for p in projects if isinstance(p, dict) and (p.get("sessionCount") or 0) > 0]
+    top_focus_areas = sorted(
+        (f for f in focus_areas if isinstance(f, dict)),
+        key=lambda x: (-(x.get("weight") or 0), x.get("term", "")),
+    )[:10]
+
+    return {
+        "profileIndexAvailable": profile_index is not None,
+        "workActivityAvailable": work_activity is not None,
+        "configured": active_profile is not None,
+        "profileCount": len(records),
+        "activeProfile": (
+            {"id": active_profile.get("id", ""), "role": active_profile.get("role", ""), "team": active_profile.get("team", "")}
+            if active_profile else None
+        ),
+        "expertiseCount": len(expertise_entries),
+        "expertiseByLevel": expertise_by_level,
+        "topFocusAreas": [{"term": f.get("term", ""), "weight": f.get("weight", 0)} for f in top_focus_areas],
+        "activeProjectCount": len(active_projects),
+        "totalProjectCount": len(projects),
+        "activitySummary": {
+            "totalSessions": activity_summary.get("totalSessions", 0),
+            "totalMemoryRecords": activity_summary.get("totalMemoryRecords", 0),
+        },
+    }
+
+
 def build_dashboard_data(root: Path) -> dict:
     """Build the complete dashboard data payload."""
     return {
@@ -176,4 +265,5 @@ def build_dashboard_data(root: Path) -> dict:
         "discovery": aggregate_discovery(root),
         "artifacts": aggregate_artifacts(root),
         "orchestration": aggregate_orchestration(root),
+        "professionalContext": aggregate_professional_context(root),
     }

@@ -117,6 +117,29 @@ into `memory/` is the only write path, and it is blocked until a human explicitl
 see [Phase 8 Architecture](knowledge/architecture/phase-8-learning-orchestration.md) for the full
 design.
 
+## Professional Context and Work Intelligence Architecture (Phase 9)
+
+Four directories, four distinct roles, strictly enforced:
+
+| Directory | Role | Mutation path |
+|---|---|---|
+| `profile/` | Canonical, explicitly-authored profile records (structurally parallel to `memory/`, never inside it) | `profile switch` (approval-gated); direct authoring is manual, never automatic |
+| `knowledge/professional-context/` | Curated, human-owned prose derived from profile + work-activity state | `profile sync-knowledge` (scaffold-once) and `--force-refresh` (snapshot-only, never rewrites `overview.md`) |
+| `memory/` | Approval-gated *learned* records — a validation guard actively rejects any record carrying reserved profile-only keys (`role`, `team`, `reportingTo`) | Unchanged from Phase 2/8; never a professional-identity store |
+| `generated/` | Deterministic derived artifacts (`profile-index.json/.md`, `work-activity.json/.md`) | `ai-os.py generate`; never touches `knowledge/professional-context/` |
+
+`generated/work-activity.json` aggregates purely from `memory/`, `generated/knowledge-graph.json`,
+and committed profile state — no new raw data collection, and `.ai-os/sessions/` (local,
+git-ignored runtime state) is deliberately excluded so the committed artifact stays identical
+across machines. The knowledge graph classifies `profile/*.md` as node type `profile` with
+structural-only metadata (id, active status) — never role/team/responsibilities/prose — and
+semantic discovery derives profile entities from that same graph rather than re-indexing raw
+profile records a second time. Three read-only MCP tools (`get_professional_profile`,
+`list_expertise`, `get_work_activity_summary`) and one dashboard page expose summary-only views;
+none of profile authoring, switching, sync-knowledge, or approvals is reachable through MCP or the
+dashboard. See [Phase 9 Architecture](knowledge/architecture/phase-9-professional-context.md) for
+the full design.
+
 ## Models
 Skills are versioned Markdown instructions with metadata and stable IDs. Agents define bounded responsibilities and handoffs. Prompts are reusable entry points. Specifications express intent and traceability. Project memory separates durable decisions from temporary session context.
 
