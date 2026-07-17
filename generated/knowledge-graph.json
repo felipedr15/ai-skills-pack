@@ -1,15 +1,16 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T19:37:42Z",
+  "generatedAt": "2026-07-17T22:30:47Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 359,
-    "edges": 620,
+    "nodes": 367,
+    "edges": 635,
     "nodesByType": {
       "concept": 2,
-      "document": 321,
+      "document": 328,
       "memory": 5,
       "platform": 5,
+      "profile": 1,
       "project": 10,
       "skill": 14,
       "tool": 2
@@ -19,9 +20,9 @@
       "contains": 129,
       "generated_from": 14,
       "references": 206,
-      "related_to": 132,
+      "related_to": 136,
       "supports": 4,
-      "uses": 133
+      "uses": 144
     }
   },
   "nodes": [
@@ -872,6 +873,60 @@
       }
     },
     {
+      "id": "document:knowledge/professional-context/career-history.md",
+      "type": "document",
+      "name": "Career History",
+      "sourcePath": "knowledge/professional-context/career-history.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:knowledge/professional-context/expertise.md",
+      "type": "document",
+      "name": "Expertise",
+      "sourcePath": "knowledge/professional-context/expertise.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:knowledge/professional-context/overview.md",
+      "type": "document",
+      "name": "Overview",
+      "sourcePath": "knowledge/professional-context/overview.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:knowledge/professional-context/project-experience.md",
+      "type": "document",
+      "name": "Project Experience",
+      "sourcePath": "knowledge/professional-context/project-experience.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:knowledge/professional-context/responsibilities.md",
+      "type": "document",
+      "name": "Responsibilities",
+      "sourcePath": "knowledge/professional-context/responsibilities.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:knowledge/professional-context/systems-and-platforms.md",
+      "type": "document",
+      "name": "Systems And Platforms",
+      "sourcePath": "knowledge/professional-context/systems-and-platforms.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "document:knowledge/prompt-engineering/README.md",
       "type": "document",
       "name": "Readme",
@@ -1103,6 +1158,15 @@
       "sourcePath": "profile/README.md",
       "metadata": {
         "extension": ".md"
+      }
+    },
+    {
+      "id": "document:profile/felipe-rojas.expertise.json",
+      "type": "document",
+      "name": "Felipe Rojas.Expertise",
+      "sourcePath": "profile/felipe-rojas.expertise.json",
+      "metadata": {
+        "extension": ".json"
       }
     },
     {
@@ -3030,6 +3094,16 @@
       "sourcePath": ".agent/skills/communication-skill/SKILL.md",
       "metadata": {
         "kind": "mention"
+      }
+    },
+    {
+      "id": "profile:felipe-rojas",
+      "type": "profile",
+      "name": "felipe-rojas",
+      "sourcePath": "profile/felipe-rojas.md",
+      "metadata": {
+        "schemaVersion": "1.0.0",
+        "active": true
       }
     },
     {
@@ -7014,6 +7088,42 @@
       }
     },
     {
+      "id": "edge:345fbdc5b2449316",
+      "type": "related_to",
+      "from": "document:knowledge/professional-context/expertise.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:b375f521adbf6e41",
+      "type": "related_to",
+      "from": "document:knowledge/professional-context/expertise.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:83fc428cae9236c5",
+      "type": "related_to",
+      "from": "document:knowledge/professional-context/project-experience.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:81b30350bd8e7f80",
+      "type": "related_to",
+      "from": "document:knowledge/professional-context/responsibilities.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:11cab11d310f39dd",
       "type": "related_to",
       "from": "document:knowledge/workflows/README.md",
@@ -8350,6 +8460,105 @@
       "type": "uses",
       "from": "document:knowledge/power-automate/README.md",
       "to": "platform:power-automate",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:6de0f0efe7327c38",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/expertise.md",
+      "to": "platform:power-apps",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:8af85e4ab31f3215",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/expertise.md",
+      "to": "platform:power-automate",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:917b5303dce752b7",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/expertise.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:7a4eebae306e8ca4",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/overview.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:3a1305cdd293e025",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/project-experience.md",
+      "to": "platform:power-apps",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:a055c6d46539c0b7",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/project-experience.md",
+      "to": "platform:power-automate",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:407c9b7944df456c",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/project-experience.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:62f7b2f0052e07a6",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/project-experience.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:36bc8b0024c7ed87",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/systems-and-platforms.md",
+      "to": "platform:power-apps",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:fd5d0b9e3823fccd",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/systems-and-platforms.md",
+      "to": "platform:power-automate",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:352f3e7928848025",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/systems-and-platforms.md",
+      "to": "tool:git",
       "metadata": {
         "source": "document_text"
       }

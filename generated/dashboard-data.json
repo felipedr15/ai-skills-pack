@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T20:05:33Z",
+  "generatedAt": "2026-07-17T22:30:52Z",
   "generator": "ai-os-dashboard",
   "repository": {
     "available": true,
@@ -199,13 +199,14 @@
   },
   "knowledgeGraph": {
     "available": true,
-    "totalNodes": 359,
-    "totalEdges": 620,
+    "totalNodes": 367,
+    "totalEdges": 635,
     "nodesByType": {
       "concept": 2,
-      "document": 321,
+      "document": 328,
       "memory": 5,
       "platform": 5,
+      "profile": 1,
       "project": 10,
       "skill": 14,
       "tool": 2
@@ -215,18 +216,18 @@
       "contains": 129,
       "generated_from": 14,
       "references": 206,
-      "related_to": 132,
+      "related_to": 136,
       "supports": 4,
-      "uses": 133
+      "uses": 144
     },
     "unresolvedReferences": 9
   },
   "discovery": {
     "available": true,
-    "documents": 335,
-    "entities": 359,
-    "terms": 1097,
-    "relationships": 620,
+    "documents": 343,
+    "entities": 367,
+    "terms": 1167,
+    "relationships": 635,
     "warnings": 0,
     "unindexedFiles": 0
   },
@@ -244,7 +245,7 @@
         "generatedAt": null,
         "stale": false,
         "path": "repository-index.json",
-        "fileTimestamp": "2026-07-17T20:05:29Z"
+        "fileTimestamp": "2026-07-17T20:24:10Z"
       },
       {
         "exists": true,
@@ -255,17 +256,17 @@
       },
       {
         "exists": true,
-        "generatedAt": "2026-07-17T19:37:42Z",
+        "generatedAt": "2026-07-17T22:30:47Z",
         "stale": false,
         "path": "knowledge-graph.json",
-        "fileTimestamp": "2026-07-17T19:37:42Z"
+        "fileTimestamp": "2026-07-17T22:30:47Z"
       },
       {
         "exists": true,
-        "generatedAt": "2026-07-17T19:37:43Z",
+        "generatedAt": "2026-07-17T22:30:49Z",
         "stale": false,
         "path": "discovery-index.json",
-        "fileTimestamp": "2026-07-17T19:37:43Z"
+        "fileTimestamp": "2026-07-17T22:30:49Z"
       }
     ]
   },

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T08:52:43Z",
+  "generatedAt": "2026-07-17T22:30:51Z",
   "generator": "ai-os-orchestration",
   "overallScore": 83,
   "categoryScores": {
@@ -175,6 +175,7 @@
     "document:generated/repository-index.json",
     "document:generated/skills.json",
     "document:generated/work-activity.json",
+    "document:knowledge/professional-context/career-history.md",
     "document:knowledge/workflows/bug-fix.json",
     "document:knowledge/workflows/documentation-update.json",
     "document:knowledge/workflows/feature-development.json",
@@ -183,6 +184,7 @@
     "document:knowledge/workflows/procedure-creation.json",
     "document:knowledge/workflows/project-onboarding.json",
     "document:knowledge/workflows/release-preparation.json",
+    "document:profile/felipe-rojas.expertise.json",
     "document:profile/registry.json",
     "document:schemas/memory.schema.json",
     "document:schemas/project.schema.json",
@@ -208,7 +210,8 @@
     "document:templates/specifications/requirements.md",
     "document:templates/specifications/retrospective.md",
     "document:templates/specifications/testing-plan.md",
-    "memory:lesson-powerapps-refresh-001"
+    "memory:lesson-powerapps-refresh-001",
+    "profile:felipe-rojas"
   ],
   "reviewDueItems": [],
   "conflicts": [],

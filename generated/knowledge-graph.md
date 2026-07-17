@@ -2,17 +2,18 @@
 
 > Generated from repository source files. This file is not a source of truth.
 
-Generated at: 2026-07-17T19:37:42Z
+Generated at: 2026-07-17T22:30:47Z
 
-Nodes: 359
-Edges: 620
+Nodes: 367
+Edges: 635
 
 ## Node Counts By Type
 
 - concept: 2
-- document: 321
+- document: 328
 - memory: 5
 - platform: 5
+- profile: 1
 - project: 10
 - skill: 14
 - tool: 2
@@ -23,9 +24,9 @@ Edges: 620
 - contains: 129
 - generated_from: 14
 - references: 206
-- related_to: 132
+- related_to: 136
 - supports: 4
-- uses: 133
+- uses: 144
 
 ## Unresolved References
 
@@ -44,8 +45,8 @@ Count: 9
 ## Relationship Overview
 
 - references: 206
-- uses: 133
-- related_to: 132
+- uses: 144
+- related_to: 136
 - contains: 129
 - generated_from: 14
 - supports: 4

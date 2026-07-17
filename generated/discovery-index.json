@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T19:37:43Z",
+  "generatedAt": "2026-07-17T22:30:49Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 335,
-    "entities": 359,
-    "terms": 1097,
-    "relationships": 620
+    "documents": 343,
+    "entities": 367,
+    "terms": 1167,
+    "relationships": 635
   },
   "documents": [
     {
@@ -1860,6 +1860,104 @@
       "frontMatter": {}
     },
     {
+      "id": "doc:knowledge/professional-context/career-history.md",
+      "sourcePath": "knowledge/professional-context/career-history.md",
+      "title": "Career History",
+      "category": "knowledge",
+      "headings": [
+        "Career History",
+        "Role Timeline",
+        "Education and Credentials",
+        "Notes on Scope"
+      ],
+      "snippet": "**Senior IT Technical Support Analyst** — September 2022 to present",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/professional-context/expertise.md",
+      "sourcePath": "knowledge/professional-context/expertise.md",
+      "title": "Expertise",
+      "category": "knowledge",
+      "headings": [
+        "Expertise",
+        "Lead (1)",
+        "Advanced (5)",
+        "Proficient (29)",
+        "Working (9)",
+        "Foundational (1)",
+        "Not Evidenced — No Entry Drafted (5)",
+        "Lowest-Confidence Entries"
+      ],
+      "snippet": "45 evidence-based entries, grouped by proficiency level.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/professional-context/overview.md",
+      "sourcePath": "knowledge/professional-context/overview.md",
+      "title": "Professional Context Overview",
+      "category": "knowledge",
+      "headings": [
+        "Professional Context Overview",
+        "Professional Profile",
+        "Work Activity Summary"
+      ],
+      "snippet": "- Active profile id: `felipe-rojas`",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/professional-context/project-experience.md",
+      "sourcePath": "knowledge/professional-context/project-experience.md",
+      "title": "Project Experience",
+      "category": "knowledge",
+      "headings": [
+        "Project Experience",
+        "Confirmed Projects",
+        "Windows 11 Device Upgrade (2025)",
+        "QLess Implementation",
+        "Wrike Implementation",
+        "SolarWinds Service Desk Workflow Improvement",
+        "Printer Fleet Modernization (MPS 1.0 → 2.0)",
+        "Office Renovations and Relocations",
+        "MFA Implementation",
+        "Workday Time-Tracking Project",
+        "Annual Asset Inventory and Lifecycle",
+        "AI OS Development Through v0.9.0",
+        "Unconfirmed / Flagged Projects"
+      ],
+      "snippet": "Phased, multi-wave upgrade of a departmental device fleet from Windows 10",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/professional-context/responsibilities.md",
+      "sourcePath": "knowledge/professional-context/responsibilities.md",
+      "title": "Responsibilities",
+      "category": "knowledge",
+      "headings": [
+        "Responsibilities",
+        "Support and Diagnostics",
+        "Lead Direction and Incident Coordination",
+        "Systems and Identity Administration",
+        "Documentation and Standards",
+        "Asset and Procurement",
+        "Project and Vendor Coordination",
+        "Security and Compliance (Scoped)"
+      ],
+      "snippet": "Troubleshoots, diagnoses, resolves, and documents difficult hardware,",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/professional-context/systems-and-platforms.md",
+      "sourcePath": "knowledge/professional-context/systems-and-platforms.md",
+      "title": "Systems and Platforms",
+      "category": "knowledge",
+      "headings": [
+        "Systems and Platforms",
+        "Draft-matrix-only platforms (excluded entirely)"
+      ],
+      "snippet": "Evidence tiers, from strongest to weakest:",
+      "frontMatter": {}
+    },
+    {
       "id": "doc:knowledge/prompt-engineering/README.md",
       "sourcePath": "knowledge/prompt-engineering/README.md",
       "title": "Prompt Engineering Knowledge",
@@ -2494,6 +2592,29 @@
         "Commands"
       ],
       "snippet": "Canonical, explicitly-authored professional context: role, team, responsibilities, reporting relationships, and an evidence-based expertise profile.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:profile/felipe-rojas.expertise.json",
+      "sourcePath": "profile/felipe-rojas.expertise.json",
+      "title": "felipe-rojas.expertise",
+      "category": "profile",
+      "headings": [
+        "schemaVersion",
+        "profileId",
+        "updatedAt",
+        "entries"
+      ],
+      "snippet": "",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:profile/felipe-rojas.md",
+      "sourcePath": "profile/felipe-rojas.md",
+      "title": "felipe-rojas",
+      "category": "profile",
+      "headings": [],
+      "snippet": "",
       "frontMatter": {}
     },
     {
@@ -6698,6 +6819,66 @@
       }
     },
     {
+      "id": "entity:document:knowledge/professional-context/career-history.md",
+      "nodeId": "document:knowledge/professional-context/career-history.md",
+      "type": "document",
+      "name": "Career History",
+      "sourcePath": "knowledge/professional-context/career-history.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/professional-context/expertise.md",
+      "nodeId": "document:knowledge/professional-context/expertise.md",
+      "type": "document",
+      "name": "Expertise",
+      "sourcePath": "knowledge/professional-context/expertise.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/professional-context/overview.md",
+      "nodeId": "document:knowledge/professional-context/overview.md",
+      "type": "document",
+      "name": "Overview",
+      "sourcePath": "knowledge/professional-context/overview.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/professional-context/project-experience.md",
+      "nodeId": "document:knowledge/professional-context/project-experience.md",
+      "type": "document",
+      "name": "Project Experience",
+      "sourcePath": "knowledge/professional-context/project-experience.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/professional-context/responsibilities.md",
+      "nodeId": "document:knowledge/professional-context/responsibilities.md",
+      "type": "document",
+      "name": "Responsibilities",
+      "sourcePath": "knowledge/professional-context/responsibilities.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/professional-context/systems-and-platforms.md",
+      "nodeId": "document:knowledge/professional-context/systems-and-platforms.md",
+      "type": "document",
+      "name": "Systems And Platforms",
+      "sourcePath": "knowledge/professional-context/systems-and-platforms.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "entity:document:knowledge/prompt-engineering/README.md",
       "nodeId": "document:knowledge/prompt-engineering/README.md",
       "type": "document",
@@ -6955,6 +7136,16 @@
       "sourcePath": "profile/README.md",
       "metadata": {
         "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:profile/felipe-rojas.expertise.json",
+      "nodeId": "document:profile/felipe-rojas.expertise.json",
+      "type": "document",
+      "name": "Felipe Rojas.Expertise",
+      "sourcePath": "profile/felipe-rojas.expertise.json",
+      "metadata": {
+        "extension": ".json"
       }
     },
     {
@@ -9098,6 +9289,17 @@
       }
     },
     {
+      "id": "entity:profile:felipe-rojas",
+      "nodeId": "profile:felipe-rojas",
+      "type": "profile",
+      "name": "felipe-rojas",
+      "sourcePath": "profile/felipe-rojas.md",
+      "metadata": {
+        "schemaVersion": "1.0.0",
+        "active": true
+      }
+    },
+    {
       "id": "entity:project:ai-os",
       "nodeId": "project:ai-os",
       "type": "project",
@@ -9529,7 +9731,11 @@
       "doc:CHANGELOG.md"
     ],
     "10": [
-      "doc:knowledge/architecture/phase-9-professional-context.md"
+      "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
+    "11": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "15": [
       "doc:CHANGELOG.md",
@@ -9539,11 +9745,21 @@
       "doc:CHANGELOG.md",
       "doc:examples/mcp/README.md"
     ],
+    "2022": [
+      "doc:knowledge/professional-context/career-history.md"
+    ],
+    "2025": [
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
     "2026": [
       "doc:CHANGELOG.md"
     ],
     "29": [
-      "doc:examples/mcp/README.md"
+      "doc:examples/mcp/README.md",
+      "doc:knowledge/professional-context/expertise.md"
+    ],
+    "45": [
+      "doc:knowledge/professional-context/expertise.md"
     ],
     "about": [
       "doc:knowledge/ai-workflows/README.md",
@@ -9640,6 +9856,7 @@
       "doc:templates/specifications/retrospective.md"
     ],
     "active": [
+      "doc:knowledge/professional-context/overview.md",
       "doc:knowledge/workflows/incident-response.json",
       "doc:memory/sessions/README.md",
       "entity:memory:convention-documentation-structure-001",
@@ -9649,6 +9866,7 @@
       "entity:memory:session-memory-engine-example-001"
     ],
     "activity": [
+      "doc:knowledge/professional-context/overview.md",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:specs/phase-9-professional-context/tasks.md",
@@ -9696,6 +9914,9 @@
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:specs/phase-9-professional-context/design.md"
     ],
+    "administration": [
+      "doc:knowledge/professional-context/responsibilities.md"
+    ],
     "administrator": [
       "doc:prompts/document.prompt.md"
     ],
@@ -9712,7 +9933,8 @@
       "doc:templates/project-starters/web-app/decisions.md"
     ],
     "advanced": [
-      "doc:ROADMAP.md"
+      "doc:ROADMAP.md",
+      "doc:knowledge/professional-context/expertise.md"
     ],
     "after": [
       "doc:RELEASE_NOTES_v0.8.0.md",
@@ -9904,6 +10126,7 @@
       "doc:examples/mcp/README.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "doc:knowledge/professional-context/project-experience.md",
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:memory/README.md",
       "doc:schemas/memory.schema.json",
@@ -9999,7 +10222,8 @@
       "doc:templates/project-starters/web-app/CLAUDE.md"
     ],
     "analyst": [
-      "doc:CLAUDE.md"
+      "doc:CLAUDE.md",
+      "doc:knowledge/professional-context/career-history.md"
     ],
     "analysts": [
       "doc:.kiro/steering/product.md"
@@ -10094,6 +10318,10 @@
       "doc:knowledge/lessons-learned/README.md",
       "doc:knowledge/power-apps/README.md",
       "doc:knowledge/power-automate/README.md",
+      "doc:knowledge/professional-context/career-history.md",
+      "doc:knowledge/professional-context/project-experience.md",
+      "doc:knowledge/professional-context/responsibilities.md",
+      "doc:knowledge/professional-context/systems-and-platforms.md",
       "doc:knowledge/prompt-engineering/README.md",
       "doc:knowledge/research-notes/README.md",
       "doc:knowledge/security/README.md",
@@ -10174,7 +10402,11 @@
       "doc:templates/project-starters/web-app/CLAUDE.md",
       "doc:templates/specifications/README.md",
       "doc:templates/specifications/design.md",
-      "entity:document:docs/feedback-and-audit.md"
+      "entity:document:docs/feedback-and-audit.md",
+      "entity:document:knowledge/professional-context/systems-and-platforms.md"
+    ],
+    "annual": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "another": [
       "doc:docs/cli-reference.md"
@@ -10462,6 +10694,10 @@
       "doc:agents/security-reviewer.md",
       "doc:prompts/deploy.prompt.md"
     ],
+    "asset": [
+      "doc:knowledge/professional-context/project-experience.md",
+      "doc:knowledge/professional-context/responsibilities.md"
+    ],
     "assigned": [
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/automation/HANDOFF.md",
@@ -10504,7 +10740,8 @@
     ],
     "at": [
       "doc:.kiro/specs/phase-9-professional-context/README.md",
-      "doc:.kiro/steering/structure.md"
+      "doc:.kiro/steering/structure.md",
+      "doc:profile/felipe-rojas.expertise.json"
     ],
     "audience": [
       "doc:agents/documentation-writer.md",
@@ -10694,6 +10931,7 @@
     "based": [
       "doc:.agent/skills/personal/analytical/SKILL.md",
       "doc:README.md",
+      "doc:knowledge/professional-context/expertise.md",
       "doc:memory/README.md",
       "doc:profile/README.md",
       "doc:specs/phase-9-professional-context/design.md"
@@ -10854,6 +11092,7 @@
     "by": [
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:docs/agent-orchestration.md",
+      "doc:knowledge/professional-context/expertise.md",
       "doc:knowledge/workflows/README.md",
       "doc:references/README.md",
       "doc:specs/README.md"
@@ -10921,6 +11160,10 @@
     ],
     "capturing": [
       "doc:knowledge/architecture/phase-9-professional-context.md"
+    ],
+    "career": [
+      "doc:knowledge/professional-context/career-history.md",
+      "entity:document:knowledge/professional-context/career-history.md"
     ],
     "categories": [
       "doc:docs/knowledge-health.md"
@@ -11285,6 +11528,9 @@
       "doc:knowledge/workflows/release-preparation.json",
       "doc:templates/memory/session-memory.md"
     ],
+    "compliance": [
+      "doc:knowledge/professional-context/responsibilities.md"
+    ],
     "components": [
       "doc:agents/architect.md",
       "doc:prompts/design.prompt.md",
@@ -11339,7 +11585,8 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "confidence": [
-      "doc:.agent/skills/communication-skill/SKILL.md"
+      "doc:.agent/skills/communication-skill/SKILL.md",
+      "doc:knowledge/professional-context/expertise.md"
     ],
     "confidential": [
       "doc:SECURITY.md",
@@ -11372,6 +11619,9 @@
       "doc:references/codex.md",
       "doc:references/copilot.md",
       "doc:references/mcp.md"
+    ],
+    "confirmed": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "conflict": [
       "doc:prompts/research.prompt.md"
@@ -11442,6 +11692,12 @@
       "doc:docs/cli-reference.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:knowledge/professional-context/career-history.md",
+      "doc:knowledge/professional-context/expertise.md",
+      "doc:knowledge/professional-context/overview.md",
+      "doc:knowledge/professional-context/project-experience.md",
+      "doc:knowledge/professional-context/responsibilities.md",
+      "doc:knowledge/professional-context/systems-and-platforms.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/projects/README.md",
@@ -11478,6 +11734,12 @@
       "doc:templates/project-starters/web-app/SESSION.md",
       "entity:document:.kiro/specs/phase-9-professional-context/README.md",
       "entity:document:knowledge/architecture/phase-9-professional-context.md",
+      "entity:document:knowledge/professional-context/career-history.md",
+      "entity:document:knowledge/professional-context/expertise.md",
+      "entity:document:knowledge/professional-context/overview.md",
+      "entity:document:knowledge/professional-context/project-experience.md",
+      "entity:document:knowledge/professional-context/responsibilities.md",
+      "entity:document:knowledge/professional-context/systems-and-platforms.md",
       "entity:document:specs/phase-9-professional-context/design.md",
       "entity:document:specs/phase-9-professional-context/requirements.md",
       "entity:document:specs/phase-9-professional-context/tasks.md"
@@ -11538,6 +11800,9 @@
     "coordinating": [
       "doc:README.md"
     ],
+    "coordination": [
+      "doc:knowledge/professional-context/responsibilities.md"
+    ],
     "copilot": [
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/references/copilot-tools.md",
@@ -11595,6 +11860,9 @@
       "doc:knowledge/workflows/procedure-creation.json",
       "doc:scripts/README.md",
       "entity:document:knowledge/workflows/procedure-creation.json"
+    ],
+    "credentials": [
+      "doc:knowledge/professional-context/career-history.md"
     ],
     "credible": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -11855,6 +12123,9 @@
     "demonstrate": [
       "doc:memory/sessions/session-memory-engine-example-001.md"
     ],
+    "departmental": [
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
     "dependencies": [
       "doc:prompts/plan.prompt.md",
       "doc:prompts/specify.prompt.md",
@@ -12012,6 +12283,9 @@
     "designer": [
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md"
     ],
+    "desk": [
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
     "desktop": [
       "doc:examples/mcp/README.md"
     ],
@@ -12062,11 +12336,21 @@
       "doc:ARCHITECTURE.md",
       "doc:README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "doc:knowledge/professional-context/project-experience.md",
       "doc:knowledge/workflows/feature-development.json",
       "entity:document:knowledge/workflows/feature-development.json"
     ],
+    "device": [
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
     "diagnose": [
       "doc:knowledge/workflows/bug-fix.json"
+    ],
+    "diagnoses": [
+      "doc:knowledge/professional-context/responsibilities.md"
+    ],
+    "diagnostics": [
+      "doc:knowledge/professional-context/responsibilities.md"
     ],
     "diagrams": [
       "doc:references/canva.md"
@@ -12092,6 +12376,12 @@
     ],
     "differently": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
+    ],
+    "difficult": [
+      "doc:knowledge/professional-context/responsibilities.md"
+    ],
+    "direction": [
+      "doc:knowledge/professional-context/responsibilities.md"
     ],
     "directory": [
       "doc:ARCHITECTURE.md",
@@ -12261,6 +12551,12 @@
       "entity:document:knowledge/lessons-learned/README.md",
       "entity:document:knowledge/power-apps/README.md",
       "entity:document:knowledge/power-automate/README.md",
+      "entity:document:knowledge/professional-context/career-history.md",
+      "entity:document:knowledge/professional-context/expertise.md",
+      "entity:document:knowledge/professional-context/overview.md",
+      "entity:document:knowledge/professional-context/project-experience.md",
+      "entity:document:knowledge/professional-context/responsibilities.md",
+      "entity:document:knowledge/professional-context/systems-and-platforms.md",
       "entity:document:knowledge/prompt-engineering/README.md",
       "entity:document:knowledge/research-notes/README.md",
       "entity:document:knowledge/security/README.md",
@@ -12287,6 +12583,7 @@
       "entity:document:memory/registry.json",
       "entity:document:memory/sessions/README.md",
       "entity:document:profile/README.md",
+      "entity:document:profile/felipe-rojas.expertise.json",
       "entity:document:profile/registry.json",
       "entity:document:prompts.json",
       "entity:document:prompts/README.md",
@@ -12501,6 +12798,7 @@
       "doc:ROADMAP.md",
       "doc:agents/documentation-writer.md",
       "doc:knowledge/documentation/README.md",
+      "doc:knowledge/professional-context/responsibilities.md",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:memory/permanent/conventions/README.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
@@ -12561,7 +12859,8 @@
       "doc:.kiro/steering/technology.md"
     ],
     "documents": [
-      "doc:.kiro/steering/README.md"
+      "doc:.kiro/steering/README.md",
+      "doc:knowledge/professional-context/responsibilities.md"
     ],
     "does": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
@@ -12583,7 +12882,11 @@
       "doc:knowledge/vscode/README.md"
     ],
     "draft": [
+      "doc:knowledge/professional-context/systems-and-platforms.md",
       "doc:knowledge/workflows/procedure-creation.json"
+    ],
+    "drafted": [
+      "doc:knowledge/professional-context/expertise.md"
     ],
     "driven": [
       "doc:references/kiro.md"
@@ -12647,6 +12950,9 @@
     "editor": [
       "doc:.github/README.md"
     ],
+    "education": [
+      "doc:knowledge/professional-context/career-history.md"
+    ],
     "email": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
@@ -12681,7 +12987,15 @@
       "doc:knowledge/prompt-engineering/README.md",
       "entity:document:knowledge/prompt-engineering/README.md"
     ],
+    "entirely": [
+      "doc:knowledge/professional-context/systems-and-platforms.md"
+    ],
+    "entries": [
+      "doc:knowledge/professional-context/expertise.md",
+      "doc:profile/felipe-rojas.expertise.json"
+    ],
     "entry": [
+      "doc:knowledge/professional-context/expertise.md",
       "doc:prompts/README.md"
     ],
     "environment": [
@@ -12726,6 +13040,8 @@
       "doc:agents/builder.md",
       "doc:agents/researcher.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:knowledge/professional-context/expertise.md",
+      "doc:knowledge/professional-context/systems-and-platforms.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -12744,6 +13060,9 @@
       "doc:templates/memory/project-memory.md",
       "doc:templates/memory/session-memory.md",
       "doc:templates/specifications/README.md"
+    ],
+    "evidenced": [
+      "doc:knowledge/professional-context/expertise.md"
     ],
     "examined": [
       "doc:memory/sessions/session-memory-engine-example-001.md",
@@ -12777,6 +13096,9 @@
       "entity:document:examples/mcp/README.md",
       "entity:document:examples/mcp/server-config.example.json",
       "entity:document:references/workflow-examples.md"
+    ],
+    "excluded": [
+      "doc:knowledge/professional-context/systems-and-platforms.md"
     ],
     "exclusions": [
       "doc:prompts/specify.prompt.md"
@@ -12830,14 +13152,22 @@
       "doc:agents/security-reviewer.md",
       "doc:examples/mcp/README.md"
     ],
+    "experience": [
+      "doc:knowledge/professional-context/project-experience.md",
+      "entity:document:knowledge/professional-context/project-experience.md"
+    ],
     "expert": [
       "doc:.agent/skills/personal/simplify/SKILL.md"
     ],
     "expertise": [
+      "doc:knowledge/professional-context/expertise.md",
       "doc:profile/README.md",
+      "doc:profile/felipe-rojas.expertise.json",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:specs/phase-9-professional-context/requirements.md",
-      "doc:specs/phase-9-professional-context/tasks.md"
+      "doc:specs/phase-9-professional-context/tasks.md",
+      "entity:document:knowledge/professional-context/expertise.md",
+      "entity:document:profile/felipe-rojas.expertise.json"
     ],
     "explanation": [
       "doc:.agent/skills/thinking/SKILL.md"
@@ -12934,6 +13264,13 @@
     ],
     "feels": [
       "doc:.agent/skills/communication-skill/SKILL.md"
+    ],
+    "felipe": [
+      "doc:knowledge/professional-context/overview.md",
+      "doc:profile/felipe-rojas.expertise.json",
+      "doc:profile/felipe-rojas.md",
+      "entity:document:profile/felipe-rojas.expertise.json",
+      "entity:profile:felipe-rojas"
     ],
     "fields": [
       "doc:knowledge/architecture/phase-4-semantic-discovery.md"
@@ -13035,8 +13372,14 @@
     "fixes": [
       "doc:RELEASE_NOTES_v0.8.0.md"
     ],
+    "flagged": [
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
     "flags": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
+    ],
+    "fleet": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "flow": [
       "doc:ARCHITECTURE.md",
@@ -13184,6 +13527,9 @@
     "foundation": [
       "doc:ROADMAP.md"
     ],
+    "foundational": [
+      "doc:knowledge/professional-context/expertise.md"
+    ],
     "fragmented": [
       "doc:.kiro/steering/product.md"
     ],
@@ -13202,6 +13548,8 @@
       "doc:.github/instructions/specifications.instructions.md",
       "doc:docs/agent-orchestration.md",
       "doc:knowledge/README.md",
+      "doc:knowledge/professional-context/project-experience.md",
+      "doc:knowledge/professional-context/systems-and-platforms.md",
       "doc:knowledge/workflows/procedure-creation.json",
       "doc:memory/lessons/README.md"
     ],
@@ -13423,6 +13771,7 @@
       "entity:document:scripts/knowledge_graph/README.md"
     ],
     "grouped": [
+      "doc:knowledge/professional-context/expertise.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "guarantee": [
@@ -13576,6 +13925,9 @@
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md"
     ],
+    "hardware": [
+      "doc:knowledge/professional-context/responsibilities.md"
+    ],
     "have": [
       "doc:references/README.md"
     ],
@@ -13612,6 +13964,10 @@
     ],
     "highlights": [
       "doc:RELEASE_NOTES_v0.9.0.md"
+    ],
+    "history": [
+      "doc:knowledge/professional-context/career-history.md",
+      "entity:document:knowledge/professional-context/career-history.md"
     ],
     "hold": [
       "doc:memory/sessions/README.md"
@@ -13661,6 +14017,7 @@
       "doc:standards/naming.md"
     ],
     "id": [
+      "doc:knowledge/professional-context/overview.md",
       "doc:knowledge/workflows/bug-fix.json",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/feature-development.json",
@@ -13669,6 +14026,7 @@
       "doc:knowledge/workflows/procedure-creation.json",
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:knowledge/workflows/release-preparation.json",
+      "doc:profile/felipe-rojas.expertise.json",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json",
@@ -13684,6 +14042,9 @@
     "identify": [
       "doc:.github/instructions/prompts.instructions.md",
       "doc:prompts/debug.prompt.md"
+    ],
+    "identity": [
+      "doc:knowledge/professional-context/responsibilities.md"
     ],
     "impact": [
       "doc:standards/code-review.md",
@@ -13712,6 +14073,7 @@
     ],
     "implementation": [
       "doc:WORKFLOW.md",
+      "doc:knowledge/professional-context/project-experience.md",
       "doc:references/kiro.md",
       "doc:specs/README.md",
       "doc:specs/phase-9-professional-context/tasks.md"
@@ -13725,6 +14087,9 @@
     ],
     "improve": [
       "doc:memory/permanent/preferences/README.md"
+    ],
+    "improvement": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "improvements": [
       "doc:ROADMAP.md"
@@ -13749,6 +14114,7 @@
       "doc:templates/memory/session-memory.md"
     ],
     "incident": [
+      "doc:knowledge/professional-context/responsibilities.md",
       "doc:knowledge/workflows/incident-response.json",
       "entity:document:knowledge/workflows/incident-response.json"
     ],
@@ -13976,6 +14342,9 @@
     "introductions": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
     ],
+    "inventory": [
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
     "invocation": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
     ],
@@ -14040,6 +14409,7 @@
       "doc:.kiro/steering/product.md",
       "doc:README.md",
       "doc:docs/continuous-learning.md",
+      "doc:knowledge/professional-context/career-history.md",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
@@ -14112,6 +14482,7 @@
       "doc:knowledge/workflows/release-preparation.json",
       "doc:memory/README.md",
       "doc:memory/registry.json",
+      "doc:profile/felipe-rojas.expertise.json",
       "doc:profile/registry.json",
       "doc:prompts.json",
       "doc:prompts/README.md",
@@ -14136,6 +14507,7 @@
       "entity:document:knowledge/workflows/project-onboarding.json",
       "entity:document:knowledge/workflows/release-preparation.json",
       "entity:document:memory/registry.json",
+      "entity:document:profile/felipe-rojas.expertise.json",
       "entity:document:profile/registry.json",
       "entity:document:prompts.json",
       "entity:document:schemas/memory.schema.json",
@@ -14212,6 +14584,12 @@
       "doc:knowledge/lessons-learned/README.md",
       "doc:knowledge/power-apps/README.md",
       "doc:knowledge/power-automate/README.md",
+      "doc:knowledge/professional-context/career-history.md",
+      "doc:knowledge/professional-context/expertise.md",
+      "doc:knowledge/professional-context/overview.md",
+      "doc:knowledge/professional-context/project-experience.md",
+      "doc:knowledge/professional-context/responsibilities.md",
+      "doc:knowledge/professional-context/systems-and-platforms.md",
       "doc:knowledge/prompt-engineering/README.md",
       "doc:knowledge/research-notes/README.md",
       "doc:knowledge/security/README.md",
@@ -14259,6 +14637,12 @@
       "entity:document:knowledge/lessons-learned/README.md",
       "entity:document:knowledge/power-apps/README.md",
       "entity:document:knowledge/power-automate/README.md",
+      "entity:document:knowledge/professional-context/career-history.md",
+      "entity:document:knowledge/professional-context/expertise.md",
+      "entity:document:knowledge/professional-context/overview.md",
+      "entity:document:knowledge/professional-context/project-experience.md",
+      "entity:document:knowledge/professional-context/responsibilities.md",
+      "entity:document:knowledge/professional-context/systems-and-platforms.md",
       "entity:document:knowledge/prompt-engineering/README.md",
       "entity:document:knowledge/research-notes/README.md",
       "entity:document:knowledge/security/README.md",
@@ -14324,6 +14708,10 @@
       "doc:.kiro/steering/structure.md",
       "doc:ARCHITECTURE.md"
     ],
+    "lead": [
+      "doc:knowledge/professional-context/expertise.md",
+      "doc:knowledge/professional-context/responsibilities.md"
+    ],
     "learned": [
       "doc:knowledge/lessons-learned/README.md",
       "doc:memory/lessons/README.md",
@@ -14354,6 +14742,9 @@
     "least": [
       "doc:.github/README.md",
       "doc:standards/security.md"
+    ],
+    "less": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "lesson": [
       "doc:knowledge/workflows/bug-fix.json",
@@ -14402,6 +14793,7 @@
       "doc:.kiro/steering/workflow.md"
     ],
     "level": [
+      "doc:knowledge/professional-context/expertise.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "library": [
@@ -14411,7 +14803,8 @@
     ],
     "lifecycle": [
       "doc:WORKFLOW.md",
-      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "lifecycles": [
       "doc:GOVERNANCE.md"
@@ -14501,6 +14894,9 @@
       "doc:CONTRIBUTING.md",
       "doc:standards/naming.md"
     ],
+    "lowest": [
+      "doc:knowledge/professional-context/expertise.md"
+    ],
     "mac": [
       "doc:examples/mcp/README.md"
     ],
@@ -14566,6 +14962,9 @@
       "doc:memory/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "entity:document:.github/instructions/markdown.instructions.md"
+    ],
+    "matrix": [
+      "doc:knowledge/professional-context/systems-and-platforms.md"
     ],
     "matter": [
       "doc:.github/instructions/prompts.instructions.md",
@@ -14714,6 +15113,12 @@
       "doc:knowledge/lessons-learned/README.md",
       "doc:knowledge/power-apps/README.md",
       "doc:knowledge/power-automate/README.md",
+      "doc:knowledge/professional-context/career-history.md",
+      "doc:knowledge/professional-context/expertise.md",
+      "doc:knowledge/professional-context/overview.md",
+      "doc:knowledge/professional-context/project-experience.md",
+      "doc:knowledge/professional-context/responsibilities.md",
+      "doc:knowledge/professional-context/systems-and-platforms.md",
       "doc:knowledge/prompt-engineering/README.md",
       "doc:knowledge/research-notes/README.md",
       "doc:knowledge/security/README.md",
@@ -14736,6 +15141,7 @@
       "doc:memory/sessions/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:profile/README.md",
+      "doc:profile/felipe-rojas.md",
       "doc:prompts/README.md",
       "doc:prompts/create-skill.prompt.md",
       "doc:prompts/debug.prompt.md",
@@ -15019,6 +15425,12 @@
       "entity:document:knowledge/lessons-learned/README.md",
       "entity:document:knowledge/power-apps/README.md",
       "entity:document:knowledge/power-automate/README.md",
+      "entity:document:knowledge/professional-context/career-history.md",
+      "entity:document:knowledge/professional-context/expertise.md",
+      "entity:document:knowledge/professional-context/overview.md",
+      "entity:document:knowledge/professional-context/project-experience.md",
+      "entity:document:knowledge/professional-context/responsibilities.md",
+      "entity:document:knowledge/professional-context/systems-and-platforms.md",
       "entity:document:knowledge/prompt-engineering/README.md",
       "entity:document:knowledge/research-notes/README.md",
       "entity:document:knowledge/security/README.md",
@@ -15243,6 +15655,7 @@
       "entity:platform:copilot",
       "entity:platform:power-apps",
       "entity:platform:power-automate",
+      "entity:profile:felipe-rojas",
       "entity:project:readme-md",
       "entity:skill:analytical",
       "entity:skill:browser",
@@ -15399,7 +15812,8 @@
       "doc:CLAUDE.md"
     ],
     "mfa": [
-      "doc:SECURITY.md"
+      "doc:SECURITY.md",
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "minimization": [
       "doc:standards/security.md"
@@ -15422,6 +15836,9 @@
     ],
     "models": [
       "doc:ARCHITECTURE.md"
+    ],
+    "modernization": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "modes": [
       "doc:.agent/skills/communication-skill/SKILL.md",
@@ -15446,7 +15863,11 @@
     "moved": [
       "doc:.kiro/specs/phase-9-professional-context/README.md"
     ],
+    "mps": [
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
     "multi": [
+      "doc:knowledge/professional-context/project-experience.md",
       "doc:standards/naming.md"
     ],
     "must": [
@@ -15553,6 +15974,7 @@
     "no": [
       "doc:docs/feedback-and-audit.md",
       "doc:docs/knowledge-health.md",
+      "doc:knowledge/professional-context/expertise.md",
       "doc:scripts/README.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
@@ -15597,6 +16019,7 @@
       "doc:knowledge/lessons-learned/README.md",
       "doc:knowledge/power-apps/README.md",
       "doc:knowledge/power-automate/README.md",
+      "doc:knowledge/professional-context/expertise.md",
       "doc:knowledge/prompt-engineering/README.md",
       "doc:knowledge/research-notes/README.md",
       "doc:knowledge/security/README.md",
@@ -15657,6 +16080,7 @@
       "doc:docs/memory-approval.md",
       "doc:knowledge/README.md",
       "doc:knowledge/architecture/README.md",
+      "doc:knowledge/professional-context/career-history.md",
       "doc:knowledge/research-notes/README.md",
       "doc:standards/release-management.md",
       "doc:templates/project-memory/RELEASE_NOTES.md",
@@ -15745,6 +16169,7 @@
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/professional-context/project-experience.md",
       "doc:memory/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:profile/README.md",
@@ -15752,6 +16177,9 @@
       "doc:specs/phase-9-professional-context/design.md",
       "doc:specs/phase-9-professional-context/tasks.md",
       "entity:memory:decision-memory-index-source-truth-001"
+    ],
+    "office": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "often": [
       "doc:docs/cli-reference.md"
@@ -15763,7 +16191,8 @@
       "doc:.github/README.md",
       "doc:.kiro/README.md",
       "doc:.kiro/steering/README.md",
-      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/professional-context/career-history.md"
     ],
     "onboarding": [
       "doc:knowledge/workflows/project-onboarding.json",
@@ -15781,6 +16210,7 @@
       "doc:.github/workflows/README.md",
       "doc:CLAUDE.md",
       "doc:agents/builder.md",
+      "doc:knowledge/professional-context/systems-and-platforms.md",
       "doc:prompts/execute.prompt.md",
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:specs/phase-9-professional-context/tasks.md",
@@ -15921,6 +16351,7 @@
       "doc:docs/continuous-learning.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "doc:knowledge/professional-context/project-experience.md",
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:memory/README.md",
       "doc:schemas/memory.schema.json",
@@ -16004,6 +16435,7 @@
     "overview": [
       "doc:README.md",
       "doc:examples/mcp/README.md",
+      "doc:knowledge/professional-context/overview.md",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:specs/phase-9-professional-context/tasks.md",
       "doc:templates/project-memory/DESIGN.md",
@@ -16015,7 +16447,8 @@
       "doc:templates/project-starters/power-automate/DESIGN.md",
       "doc:templates/project-starters/python/DESIGN.md",
       "doc:templates/project-starters/web-app/DESIGN.md",
-      "doc:templates/specifications/design.md"
+      "doc:templates/specifications/design.md",
+      "entity:document:knowledge/professional-context/overview.md"
     ],
     "own": [
       "doc:GOVERNANCE.md"
@@ -16167,6 +16600,9 @@
       "entity:document:specs/phase-9-professional-context/requirements.md",
       "entity:document:specs/phase-9-professional-context/tasks.md"
     ],
+    "phased": [
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
     "phases": [
       "doc:docs/cli-reference.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
@@ -16231,6 +16667,10 @@
       "entity:platform:copilot",
       "entity:platform:power-apps",
       "entity:platform:power-automate"
+    ],
+    "platforms": [
+      "doc:knowledge/professional-context/systems-and-platforms.md",
+      "entity:document:knowledge/professional-context/systems-and-platforms.md"
     ],
     "plus": [
       "doc:specs/phase-9-professional-context/design.md"
@@ -16391,6 +16831,9 @@
       "doc:agents/deployment-manager.md",
       "doc:knowledge/workflows/release-preparation.json"
     ],
+    "present": [
+      "doc:knowledge/professional-context/career-history.md"
+    ],
     "presentations": [
       "doc:references/canva.md"
     ],
@@ -16422,6 +16865,9 @@
       "doc:ARCHITECTURE.md",
       "doc:memory/permanent/principles/README.md",
       "entity:document:memory/permanent/principles/README.md"
+    ],
+    "printer": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "priorities": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -16467,6 +16913,9 @@
     "process": [
       "doc:memory/decisions/README.md"
     ],
+    "procurement": [
+      "doc:knowledge/professional-context/responsibilities.md"
+    ],
     "product": [
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md",
       "doc:.github/README.md",
@@ -16494,27 +16943,50 @@
       "doc:WORKFLOW.md",
       "doc:docs/cli-reference.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:knowledge/professional-context/career-history.md",
+      "doc:knowledge/professional-context/expertise.md",
+      "doc:knowledge/professional-context/overview.md",
+      "doc:knowledge/professional-context/project-experience.md",
+      "doc:knowledge/professional-context/responsibilities.md",
+      "doc:knowledge/professional-context/systems-and-platforms.md",
       "doc:profile/README.md",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:.kiro/specs/phase-9-professional-context/README.md",
       "entity:document:knowledge/architecture/phase-9-professional-context.md",
+      "entity:document:knowledge/professional-context/career-history.md",
+      "entity:document:knowledge/professional-context/expertise.md",
+      "entity:document:knowledge/professional-context/overview.md",
+      "entity:document:knowledge/professional-context/project-experience.md",
+      "entity:document:knowledge/professional-context/responsibilities.md",
+      "entity:document:knowledge/professional-context/systems-and-platforms.md",
       "entity:document:specs/phase-9-professional-context/design.md",
       "entity:document:specs/phase-9-professional-context/requirements.md",
       "entity:document:specs/phase-9-professional-context/tasks.md"
     ],
+    "proficiency": [
+      "doc:knowledge/professional-context/expertise.md"
+    ],
+    "proficient": [
+      "doc:knowledge/professional-context/expertise.md"
+    ],
     "profile": [
       "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:docs/cli-reference.md",
+      "doc:knowledge/professional-context/overview.md",
       "doc:profile/README.md",
+      "doc:profile/felipe-rojas.expertise.json",
+      "doc:profile/felipe-rojas.md",
       "doc:profile/registry.json",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:generated/profile-index.json",
       "entity:document:profile/README.md",
-      "entity:document:profile/registry.json"
+      "entity:document:profile/felipe-rojas.expertise.json",
+      "entity:document:profile/registry.json",
+      "entity:profile:felipe-rojas"
     ],
     "profiles": [
       "doc:profile/registry.json"
@@ -16531,6 +17003,8 @@
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:agents/project-manager.md",
+      "doc:knowledge/professional-context/project-experience.md",
+      "doc:knowledge/professional-context/responsibilities.md",
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:memory/projects/README.md",
       "doc:schemas/project.schema.json",
@@ -16684,6 +17158,7 @@
       "doc:templates/project-starters/web-app/TESTING.md",
       "doc:templates/project-starters/web-app/decisions.md",
       "entity:document:agents/project-manager.md",
+      "entity:document:knowledge/professional-context/project-experience.md",
       "entity:document:knowledge/workflows/project-onboarding.json",
       "entity:document:schemas/project.schema.json",
       "entity:document:templates/memory/project-memory.md",
@@ -16845,6 +17320,7 @@
       "entity:project:web-app"
     ],
     "projects": [
+      "doc:knowledge/professional-context/project-experience.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -17557,6 +18033,9 @@
     "reliable": [
       "doc:ARCHITECTURE.md"
     ],
+    "relocations": [
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
     "remain": [
       "doc:.kiro/steering/technology.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
@@ -17571,6 +18050,9 @@
     ],
     "rendering": [
       "doc:scripts/knowledge_graph/README.md"
+    ],
+    "renovations": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "replace": [
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
@@ -17831,6 +18313,9 @@
       "doc:knowledge/workflows/bug-fix.json",
       "doc:knowledge/workflows/incident-response.json"
     ],
+    "resolves": [
+      "doc:knowledge/professional-context/responsibilities.md"
+    ],
     "resource": [
       "doc:examples/mcp/README.md"
     ],
@@ -17864,7 +18349,9 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
-      "doc:profile/README.md"
+      "doc:knowledge/professional-context/responsibilities.md",
+      "doc:profile/README.md",
+      "entity:document:knowledge/professional-context/responsibilities.md"
     ],
     "restore": [
       "doc:knowledge/architecture/phase-7-release-hardening.md"
@@ -18092,6 +18579,13 @@
       "entity:document:templates/project-starters/python/ROADMAP.md",
       "entity:document:templates/project-starters/web-app/ROADMAP.md"
     ],
+    "rojas": [
+      "doc:knowledge/professional-context/overview.md",
+      "doc:profile/felipe-rojas.expertise.json",
+      "doc:profile/felipe-rojas.md",
+      "entity:document:profile/felipe-rojas.expertise.json",
+      "entity:profile:felipe-rojas"
+    ],
     "role": [
       "doc:.github/instructions/prompts.instructions.md",
       "doc:agents/README.md",
@@ -18105,6 +18599,7 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
+      "doc:knowledge/professional-context/career-history.md",
       "doc:profile/README.md",
       "doc:references/canva.md",
       "doc:references/chatgpt.md",
@@ -18229,6 +18724,7 @@
       "doc:config/ai-os.example.json",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/registry.json",
+      "doc:profile/felipe-rojas.expertise.json",
       "doc:profile/registry.json",
       "doc:prompts.json",
       "doc:schemas/memory.schema.json",
@@ -18254,6 +18750,7 @@
       "doc:CLAUDE.md",
       "doc:agents/builder.md",
       "doc:agents/planner.md",
+      "doc:knowledge/professional-context/career-history.md",
       "doc:prompts/execute.prompt.md",
       "doc:prompts/plan.prompt.md",
       "doc:prompts/research.prompt.md",
@@ -18271,7 +18768,8 @@
       "doc:templates/specifications/testing-plan.md"
     ],
     "scoped": [
-      "doc:.github/instructions/README.md"
+      "doc:.github/instructions/README.md",
+      "doc:knowledge/professional-context/responsibilities.md"
     ],
     "scoring": [
       "doc:docs/knowledge-health.md"
@@ -18334,6 +18832,7 @@
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:knowledge/professional-context/responsibilities.md",
       "doc:knowledge/security/README.md",
       "doc:memory/README.md",
       "doc:profile/README.md",
@@ -18404,13 +18903,17 @@
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md"
     ],
     "senior": [
-      "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md"
+      "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md",
+      "doc:knowledge/professional-context/career-history.md"
     ],
     "sent": [
       "doc:docs/feedback-and-audit.md"
     ],
     "sentence": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
+    ],
+    "september": [
+      "doc:knowledge/professional-context/career-history.md"
     ],
     "sequence": [
       "doc:specs/phase-9-professional-context/tasks.md"
@@ -18428,7 +18931,8 @@
       "doc:.kiro/steering/product.md"
     ],
     "service": [
-      "doc:knowledge/architecture/phase-6-mcp-integration.md"
+      "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "session": [
       "doc:knowledge/README.md",
@@ -18720,6 +19224,9 @@
     "so": [
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md"
     ],
+    "solar": [
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
     "solves": [
       "doc:.kiro/steering/product.md"
     ],
@@ -18884,6 +19391,7 @@
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
       "doc:knowledge/README.md",
+      "doc:knowledge/professional-context/responsibilities.md",
       "doc:memory/permanent/README.md",
       "doc:standards/README.md",
       "doc:standards/accessibility.md",
@@ -19301,6 +19809,9 @@
     "strings": [
       "doc:SECURITY.md"
     ],
+    "strongest": [
+      "doc:knowledge/professional-context/systems-and-platforms.md"
+    ],
     "structural": [
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
@@ -19362,6 +19873,7 @@
     "summary": [
       "doc:.agent/skills/communication-skill/examples.md",
       "doc:.agent/skills/research/SKILL.md",
+      "doc:knowledge/professional-context/overview.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -19402,6 +19914,8 @@
       "entity:tool:mcp"
     ],
     "support": [
+      "doc:knowledge/professional-context/career-history.md",
+      "doc:knowledge/professional-context/responsibilities.md",
       "doc:references/copilot.md"
     ],
     "supported": [
@@ -19463,6 +19977,11 @@
       "entity:skill:using-superpowers",
       "entity:tool:git",
       "entity:tool:mcp"
+    ],
+    "systems": [
+      "doc:knowledge/professional-context/responsibilities.md",
+      "doc:knowledge/professional-context/systems-and-platforms.md",
+      "entity:document:knowledge/professional-context/systems-and-platforms.md"
     ],
     "tagging": [
       "doc:specs/phase-9-professional-context/tasks.md"
@@ -19534,7 +20053,8 @@
       "doc:profile/README.md"
     ],
     "technical": [
-      "doc:.agent/skills/communication-skill/SKILL.md"
+      "doc:.agent/skills/communication-skill/SKILL.md",
+      "doc:knowledge/professional-context/career-history.md"
     ],
     "technology": [
       "doc:.kiro/steering/technology.md",
@@ -20099,11 +20619,21 @@
       "doc:specs/phase-9-professional-context/design.md"
     ],
     "through": [
-      "doc:examples/mcp/README.md"
+      "doc:examples/mcp/README.md",
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "ticket": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/examples.md"
+    ],
+    "tiers": [
+      "doc:knowledge/professional-context/systems-and-platforms.md"
+    ],
+    "time": [
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
+    "timeline": [
+      "doc:knowledge/professional-context/career-history.md"
     ],
     "timestamped": [
       "doc:specs/phase-9-professional-context/tasks.md"
@@ -20145,6 +20675,8 @@
       "doc:.agent/skills/thinking/SKILL.md",
       "doc:CONTRIBUTING.md",
       "doc:docs/knowledge-health.md",
+      "doc:knowledge/professional-context/career-history.md",
+      "doc:knowledge/professional-context/systems-and-platforms.md",
       "doc:knowledge/workflows/README.md",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/feature-development.json",
@@ -20242,6 +20774,7 @@
     ],
     "tracking": [
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/professional-context/project-experience.md",
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:standards/documentation.md"
     ],
@@ -20279,6 +20812,9 @@
       "doc:memory/lessons/README.md",
       "doc:references/chatgpt.md",
       "doc:references/workflow-examples.md"
+    ],
+    "troubleshoots": [
+      "doc:knowledge/professional-context/responsibilities.md"
     ],
     "truth": [
       "doc:docs/memory-approval.md",
@@ -20333,6 +20869,9 @@
     ],
     "unapproved": [
       "doc:.github/instructions/specifications.instructions.md"
+    ],
+    "unconfirmed": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "under": [
       "doc:.kiro/README.md",
@@ -20403,6 +20942,9 @@
       "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:knowledge/workflows/documentation-update.json"
     ],
+    "updated": [
+      "doc:profile/felipe-rojas.expertise.json"
+    ],
     "updates": [
       "doc:templates/project-memory/RETROSPECTIVE.md",
       "doc:templates/project-starters/automation/RETROSPECTIVE.md",
@@ -20414,6 +20956,9 @@
       "doc:templates/project-starters/python/RETROSPECTIVE.md",
       "doc:templates/project-starters/web-app/RETROSPECTIVE.md",
       "doc:templates/specifications/retrospective.md"
+    ],
+    "upgrade": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "upload": [
       "doc:docs/feedback-and-audit.md"
@@ -20489,6 +21034,7 @@
     "v0": [
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:knowledge/professional-context/project-experience.md",
       "doc:references/v0.md",
       "doc:references/workflow-examples.md",
       "entity:document:RELEASE_NOTES_v0.8.0.md",
@@ -20562,6 +21108,9 @@
     "vary": [
       "doc:references/README.md"
     ],
+    "vendor": [
+      "doc:knowledge/professional-context/responsibilities.md"
+    ],
     "vercel": [
       "doc:references/vercel.md",
       "doc:references/workflow-examples.md",
@@ -20584,6 +21133,7 @@
       "doc:config/ai-os.example.json",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:memory/registry.json",
+      "doc:profile/felipe-rojas.expertise.json",
       "doc:profile/registry.json",
       "doc:prompts.json",
       "doc:references/README.md",
@@ -20625,12 +21175,18 @@
       "doc:knowledge/vscode/README.md",
       "entity:document:knowledge/vscode/README.md"
     ],
+    "wave": [
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
     "ways": [
       "doc:docs/knowledge-health.md"
     ],
     "weak": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:.kiro/steering/product.md"
+    ],
+    "weakest": [
+      "doc:knowledge/professional-context/systems-and-platforms.md"
     ],
     "web": [
       "doc:references/v0.md",
@@ -20742,7 +21298,11 @@
       "doc:templates/memory/session-memory.md"
     ],
     "windows": [
-      "doc:examples/mcp/README.md"
+      "doc:examples/mcp/README.md",
+      "doc:knowledge/professional-context/project-experience.md"
+    ],
+    "winds": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "windsurf": [
       "doc:.agent/skills/communication-skill/README.md"
@@ -20804,6 +21364,7 @@
       "doc:agents/README.md",
       "doc:docs/continuous-learning.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:knowledge/professional-context/overview.md",
       "doc:memory/sessions/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:specs/phase-9-professional-context/design.md",
@@ -20813,6 +21374,9 @@
       "doc:templates/memory/session-memory.md",
       "doc:templates/specifications/README.md",
       "entity:document:generated/work-activity.json"
+    ],
+    "workday": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "worked": [
       "doc:templates/project-memory/RETROSPECTIVE.md",
@@ -20838,6 +21402,7 @@
       "doc:docs/agent-orchestration.md",
       "doc:docs/cli-reference.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/professional-context/project-experience.md",
       "doc:knowledge/workflows/README.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:memory/permanent/conventions/README.md",
@@ -20878,13 +21443,17 @@
     ],
     "working": [
       "doc:CLAUDE.md",
-      "doc:docs/cli-reference.md"
+      "doc:docs/cli-reference.md",
+      "doc:knowledge/professional-context/expertise.md"
     ],
     "workspace": [
       "doc:.kiro/specs/README.md"
     ],
     "wrappers": [
       "doc:knowledge/architecture/phase-7-release-hardening.md"
+    ],
+    "wrike": [
+      "doc:knowledge/professional-context/project-experience.md"
     ],
     "write": [
       "doc:.github/instructions/markdown.instructions.md"
