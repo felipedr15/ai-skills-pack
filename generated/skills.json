@@ -441,6 +441,30 @@
       "path": ".agent/skills/personal/writing/SKILL.md",
       "replaces": null,
       "deprecatedBy": null
+    },
+    {
+      "id": "powerapps-yaml-format",
+      "name": "Power Apps YAML Format",
+      "version": "1.0.0",
+      "description": "Reference for the YAML-based code format Power Apps accepts for screen definitions, control hierarchies, and property expressions.",
+      "triggers": [
+        "powerapps",
+        "power apps",
+        "power apps code",
+        "pa.yaml",
+        "power apps yaml"
+      ],
+      "inputs": [
+        "power apps screen or control requirements"
+      ],
+      "outputs": [
+        "valid power apps yaml code"
+      ],
+      "dependencies": [],
+      "status": "stable",
+      "path": ".agent/skills/references/powerapps-yaml-format.md",
+      "replaces": null,
+      "deprecatedBy": null
     }
   ]
 }
