@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T22:30:47Z",
+  "generatedAt": "2026-07-29T04:11:34Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 367,
-    "edges": 635,
+    "nodes": 369,
+    "edges": 638,
     "nodesByType": {
       "concept": 2,
-      "document": 328,
+      "document": 330,
       "memory": 5,
       "platform": 5,
       "profile": 1,
@@ -22,7 +22,7 @@
       "references": 206,
       "related_to": 136,
       "supports": 4,
-      "uses": 144
+      "uses": 147
     }
   },
   "nodes": [
@@ -157,6 +157,15 @@
       "type": "document",
       "name": "Gemini Tools",
       "sourcePath": ".agent/skills/references/gemini-tools.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:.agent/skills/references/powerapps-yaml-format.md",
+      "type": "document",
+      "name": "Powerapps Yaml Format",
+      "sourcePath": ".agent/skills/references/powerapps-yaml-format.md",
       "metadata": {
         "extension": ".md"
       }
@@ -859,6 +868,15 @@
       "type": "document",
       "name": "Readme",
       "sourcePath": "knowledge/power-apps/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:knowledge/power-apps/powerapps-yaml-code-format.md",
+      "type": "document",
+      "name": "Powerapps Yaml Code Format",
+      "sourcePath": "knowledge/power-apps/powerapps-yaml-code-format.md",
       "metadata": {
         "extension": ".md"
       }
@@ -7880,6 +7898,15 @@
       }
     },
     {
+      "id": "edge:23fc6380115951d8",
+      "type": "uses",
+      "from": "document:.agent/skills/references/powerapps-yaml-format.md",
+      "to": "platform:power-apps",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:0499af5a0e8faa79",
       "type": "uses",
       "from": "document:.github/README.md",
@@ -7965,6 +7992,15 @@
       "type": "uses",
       "from": "document:.kiro/specs/README.md",
       "to": "platform:copilot",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:66c27fc9d864fe7c",
+      "type": "uses",
+      "from": "document:.kiro/steering/technology.md",
+      "to": "platform:power-apps",
       "metadata": {
         "source": "document_text"
       }
@@ -8450,6 +8486,15 @@
       "id": "edge:c1a43231f618dfce",
       "type": "uses",
       "from": "document:knowledge/power-apps/README.md",
+      "to": "platform:power-apps",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:7943e914f80fdc7f",
+      "type": "uses",
+      "from": "document:knowledge/power-apps/powerapps-yaml-code-format.md",
       "to": "platform:power-apps",
       "metadata": {
         "source": "document_text"

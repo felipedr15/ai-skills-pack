@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
   "counts": {
-    "skills": 33,
+    "skills": 34,
     "agents": 11,
     "prompts": 12,
     "project-starters": 129,
     "templates": 30,
     "standards": 9,
-    "knowledge": 38,
+    "knowledge": 39,
     "references": 11,
     "scripts": 103
   },
@@ -179,6 +179,12 @@
       "category": "knowledge",
       "size": 466,
       "sha256": "cac4a92a9556ddc152deff2c0cd3988198ae1f2fd0f22a303dd561d2ffe2088d"
+    },
+    {
+      "path": "knowledge/power-apps/powerapps-yaml-code-format.md",
+      "category": "knowledge",
+      "size": 7818,
+      "sha256": "219a106649f82a7fd76524e4a30ec7980dd83d2d382246bce7d23e093e400abe"
     },
     {
       "path": "knowledge/power-automate/README.md",
@@ -1961,6 +1967,12 @@
       "category": "skills",
       "size": 574,
       "sha256": "df3ce4e18b31ad5d22a797ca16cb378cdadeb6051f8bfa08b978180455ab677a"
+    },
+    {
+      "path": ".agent/skills/references/powerapps-yaml-format.md",
+      "category": "skills",
+      "size": 7841,
+      "sha256": "edfd8ebfaa19e3d6b460888f1cfc200b48ebf87c18d4cf618d7f62116ee2847a"
     },
     {
       "path": ".agent/skills/research/README.md",

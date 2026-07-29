@@ -25,6 +25,7 @@
 - `.agent/skills/references/codex-tools.md`
 - `.agent/skills/references/copilot-tools.md`
 - `.agent/skills/references/gemini-tools.md`
+- `.agent/skills/references/powerapps-yaml-format.md`
 - `.agent/skills/research/README.md`
 - `.agent/skills/research/SKILL.md`
 - `.agent/skills/system/README.md`
@@ -263,6 +264,7 @@
 - `knowledge/github/README.md`
 - `knowledge/lessons-learned/README.md`
 - `knowledge/power-apps/README.md`
+- `knowledge/power-apps/powerapps-yaml-code-format.md`
 - `knowledge/power-automate/README.md`
 - `knowledge/professional-context/career-history.md`
 - `knowledge/professional-context/expertise.md`

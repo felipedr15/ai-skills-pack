@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T22:30:49Z",
+  "generatedAt": "2026-07-29T04:11:35Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 343,
-    "entities": 367,
-    "terms": 1167,
-    "relationships": 635
+    "documents": 345,
+    "entities": 369,
+    "terms": 1212,
+    "relationships": 638
   },
   "documents": [
     {
@@ -448,6 +448,67 @@
       ],
       "snippet": "Skills may reference Claude Code tool names. When using Gemini CLI, map them like this:",
       "frontMatter": {}
+    },
+    {
+      "id": "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "sourcePath": ".agent/skills/references/powerapps-yaml-format.md",
+      "title": "Power Apps YAML Code Format Reference",
+      "category": "skill",
+      "headings": [
+        "Power Apps YAML Code Format Reference",
+        "Purpose",
+        "File Structure",
+        "Expression Syntax",
+        "Single-line",
+        "Multi-line (block scalars)",
+        "Control Types",
+        "Modern Controls (no prefix)",
+        "Classic Controls (prefix `Classic/`)",
+        "Container Layout System",
+        "Layout Properties",
+        "Enums Reference",
+        "Layout",
+        "Display",
+        "Icons",
+        "Data",
+        "Color Functions",
+        "Gallery Pattern",
+        "Common Power Fx in Properties",
+        "Conditional",
+        "Data operations",
+        "String formatting",
+        "Self / Parent references",
+        "Error handling",
+        "Patching SharePoint",
+        "Naming Conventions",
+        "Variable Conventions",
+        "Critical Rules",
+        "Source"
+      ],
+      "snippet": "Define the exact YAML-based coding input format that Power Apps accepts. Use this when generating, editing, or reviewing Power Apps source files (`.pa.yaml`).",
+      "frontMatter": {
+        "name": "Power Apps YAML Format",
+        "id": "powerapps-yaml-format",
+        "version": "1.0.0",
+        "description": "Reference for the YAML-based code format Power Apps accepts for screen definitions, control hierarchies, and property expressions.",
+        "triggers": [
+          "powerapps",
+          "power apps",
+          "power apps code",
+          "pa.yaml",
+          "power apps yaml"
+        ],
+        "inputs": [
+          "power apps screen or control requirements"
+        ],
+        "outputs": [
+          "valid power apps yaml code"
+        ],
+        "dependencies": [],
+        "status": "stable",
+        "replaces": null,
+        "deprecatedBy": null
+      }
     },
     {
       "id": "doc:.agent/skills/research/README.md",
@@ -920,7 +981,7 @@
       "headings": [
         "Technology Steering"
       ],
-      "snippet": "Core formats are Markdown, JSON, YAML front matter, Python standard library, PowerShell, Git, and GitHub Actions. Optional future integrations must remain explicitly configured, documented, and non-re",
+      "snippet": "Core formats are Markdown, JSON, YAML front matter, Python standard library, PowerShell, Git, and GitHub Actions. Power Apps uses a YAML-based source format (`.pa.yaml`) with Power Fx expressions; ref",
       "frontMatter": {}
     },
     {
@@ -1842,6 +1903,40 @@
         "Naming Guidance"
       ],
       "snippet": "Capture reusable, reviewed lessons and references about power apps.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
+      "sourcePath": "knowledge/power-apps/powerapps-yaml-code-format.md",
+      "title": "Power Apps YAML Code Format Reference",
+      "category": "knowledge",
+      "headings": [
+        "Power Apps YAML Code Format Reference",
+        "Purpose",
+        "File Structure",
+        "Key Syntax Rules",
+        "1. Property Expressions",
+        "2. Multi-line Expressions",
+        "3. Control Declaration",
+        "4. Classic vs Modern Controls",
+        "5. Container Controls",
+        "6. Gallery Template Children",
+        "7. Enums and Constants",
+        "8. Color Functions",
+        "9. Screen-Level Properties",
+        "Common Layout Properties",
+        "Common Power Fx Patterns in Properties",
+        "Conditional logic",
+        "Data operations",
+        "String formatting",
+        "Self-references",
+        "Parent references",
+        "Naming Conventions (observed)",
+        "Variable Naming Conventions (observed)",
+        "Notes",
+        "Source"
+      ],
+      "snippet": "Document the exact YAML-based coding input format that Power Apps accepts for screen definitions, control hierarchies, and property expressions. This is the format used in Power Apps source files (`.p",
       "frontMatter": {}
     },
     {
@@ -6029,6 +6124,16 @@
       }
     },
     {
+      "id": "entity:document:.agent/skills/references/powerapps-yaml-format.md",
+      "nodeId": "document:.agent/skills/references/powerapps-yaml-format.md",
+      "type": "document",
+      "name": "Powerapps Yaml Format",
+      "sourcePath": ".agent/skills/references/powerapps-yaml-format.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "entity:document:.agent/skills/research/README.md",
       "nodeId": "document:.agent/skills/research/README.md",
       "type": "document",
@@ -6804,6 +6909,16 @@
       "type": "document",
       "name": "Readme",
       "sourcePath": "knowledge/power-apps/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:knowledge/power-apps/powerapps-yaml-code-format.md",
+      "nodeId": "document:knowledge/power-apps/powerapps-yaml-code-format.md",
+      "type": "document",
+      "name": "Powerapps Yaml Code Format",
+      "sourcePath": "knowledge/power-apps/powerapps-yaml-code-format.md",
       "metadata": {
         "extension": ".md"
       }
@@ -9802,6 +9917,10 @@
       "doc:templates/project-starters/web-app/REQUIREMENTS.md",
       "doc:templates/specifications/testing-plan.md"
     ],
+    "accepts": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
     "access": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:SECURITY.md",
@@ -9965,6 +10084,7 @@
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/README.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/README.md",
@@ -10023,6 +10143,7 @@
       "entity:document:.agent/skills/references/codex-tools.md",
       "entity:document:.agent/skills/references/copilot-tools.md",
       "entity:document:.agent/skills/references/gemini-tools.md",
+      "entity:document:.agent/skills/references/powerapps-yaml-format.md",
       "entity:document:.agent/skills/research/README.md",
       "entity:document:.agent/skills/system/README.md",
       "entity:document:.agent/skills/system/superpower/README.md",
@@ -10250,6 +10371,7 @@
       "doc:.agent/skills/personal/problem-solving/README.md",
       "doc:.agent/skills/personal/simplify/README.md",
       "doc:.agent/skills/personal/writing/README.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/README.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/README.md",
@@ -10317,6 +10439,7 @@
       "doc:knowledge/github/README.md",
       "doc:knowledge/lessons-learned/README.md",
       "doc:knowledge/power-apps/README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/power-automate/README.md",
       "doc:knowledge/professional-context/career-history.md",
       "doc:knowledge/professional-context/project-experience.md",
@@ -10547,7 +10670,10 @@
       "doc:templates/project-starters/web-app/AGENTS.md"
     ],
     "apps": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:.kiro/steering/technology.md",
       "doc:knowledge/power-apps/README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:references/workflow-examples.md",
       "doc:templates/project-starters/power-apps/AGENTS.md",
@@ -10567,6 +10693,7 @@
       "doc:templates/project-starters/power-apps/TESTING.md",
       "doc:templates/project-starters/power-apps/decisions.md",
       "entity:document:knowledge/power-apps/README.md",
+      "entity:document:knowledge/power-apps/powerapps-yaml-code-format.md",
       "entity:document:templates/project-starters/power-apps/AGENTS.md",
       "entity:document:templates/project-starters/power-apps/ARCHITECTURE.md",
       "entity:document:templates/project-starters/power-apps/CHANGELOG.md",
@@ -10930,7 +11057,10 @@
     ],
     "based": [
       "doc:.agent/skills/personal/analytical/SKILL.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:.kiro/steering/technology.md",
       "doc:README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/professional-context/expertise.md",
       "doc:memory/README.md",
       "doc:profile/README.md",
@@ -11014,6 +11144,9 @@
     ],
     "binding": [
       "doc:knowledge/README.md"
+    ],
+    "block": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
     ],
     "blockers": [
       "doc:memory/sessions/session-memory-engine-example-001.md",
@@ -11300,6 +11433,9 @@
     "checks": [
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md"
     ],
+    "children": [
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
     "choices": [
       "doc:memory/permanent/principles/README.md"
     ],
@@ -11314,6 +11450,10 @@
     ],
     "clarity": [
       "doc:.agent/skills/personal/clear-concise-writing/SKILL.md"
+    ],
+    "classic": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "classification": [
       "doc:docs/agent-orchestration.md",
@@ -11390,10 +11530,13 @@
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.github/instructions/README.md",
       "doc:examples/mcp/README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:references/copilot.md",
       "doc:standards/code-review.md",
+      "entity:document:knowledge/power-apps/powerapps-yaml-code-format.md",
       "entity:document:standards/code-review.md"
     ],
     "codes": [
@@ -11408,12 +11551,18 @@
       "entity:platform:codex"
     ],
     "coding": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/permanent/conventions/README.md",
       "doc:references/codex.md"
     ],
     "collections": [
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "entity:memory:lesson-powerapps-refresh-001"
+    ],
+    "color": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "com": [
       "doc:RELEASE_NOTES_v0.8.0.md"
@@ -11468,7 +11617,9 @@
       "entity:memory:lesson-validate-generated-files-before-committing-001"
     ],
     "common": [
-      "doc:.agent/skills/communication-skill/anti-ai-writing.md"
+      "doc:.agent/skills/communication-skill/anti-ai-writing.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "communication": [
       "doc:.agent/skills/communication-skill/README.md",
@@ -11584,6 +11735,10 @@
     "condition": [
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
+    "conditional": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
     "confidence": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:knowledge/professional-context/expertise.md"
@@ -11615,7 +11770,6 @@
       "doc:.github/instructions/README.md"
     ],
     "configured": [
-      "doc:.kiro/steering/technology.md",
       "doc:references/codex.md",
       "doc:references/copilot.md",
       "doc:references/mcp.md"
@@ -11645,6 +11799,9 @@
     "consistent": [
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md"
     ],
+    "constants": [
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
     "constraints": [
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md"
@@ -11654,6 +11811,10 @@
     ],
     "consumed": [
       "doc:knowledge/workflows/README.md"
+    ],
+    "container": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "contains": [
       "doc:.agent/skills/design/browser/README.md",
@@ -11769,7 +11930,13 @@
       "doc:specs/README.md"
     ],
     "control": [
-      "doc:AGENTS.md"
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:AGENTS.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
+    "controls": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "convention": [
       "doc:memory/README.md",
@@ -11778,6 +11945,8 @@
       "entity:memory:convention-documentation-structure-001"
     ],
     "conventions": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/workflows/procedure-creation.json",
       "doc:memory/permanent/conventions/README.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
@@ -11897,6 +12066,9 @@
       "doc:templates/project-starters/web-app/HANDOFF.md",
       "doc:templates/project-starters/web-app/REQUIREMENTS.md"
     ],
+    "critical": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
+    ],
     "cross": [
       "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
@@ -11957,11 +12129,13 @@
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
     "data": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:ARCHITECTURE.md",
       "doc:SECURITY.md",
       "doc:agents/security-reviewer.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:prompts/design.prompt.md",
       "doc:specs/phase-9-professional-context/design.md",
@@ -12093,6 +12267,9 @@
       "entity:document:templates/project-starters/web-app/decisions.md",
       "entity:memory:decision-memory-index-source-truth-001"
     ],
+    "declaration": [
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
     "defect": [
       "doc:knowledge/workflows/bug-fix.json"
     ],
@@ -12100,13 +12277,16 @@
       "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
     "define": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:prompts/design.prompt.md",
       "doc:prompts/plan.prompt.md",
       "doc:prompts/research.prompt.md",
       "doc:standards/documentation.md"
     ],
     "definitions": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:agents/README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/workflows/README.md"
     ],
     "deletion": [
@@ -12399,6 +12579,9 @@
       "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md"
     ],
+    "display": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
+    ],
     "distinct": [
       "doc:knowledge/README.md"
     ],
@@ -12454,6 +12637,7 @@
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/workflows/knowledge-maintenance.json",
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:prompts/deploy.prompt.md",
@@ -12472,6 +12656,7 @@
       "entity:document:.agent/skills/references/codex-tools.md",
       "entity:document:.agent/skills/references/copilot-tools.md",
       "entity:document:.agent/skills/references/gemini-tools.md",
+      "entity:document:.agent/skills/references/powerapps-yaml-format.md",
       "entity:document:.agent/skills/research/README.md",
       "entity:document:.agent/skills/system/README.md",
       "entity:document:.agent/skills/system/superpower/README.md",
@@ -12550,6 +12735,7 @@
       "entity:document:knowledge/github/README.md",
       "entity:document:knowledge/lessons-learned/README.md",
       "entity:document:knowledge/power-apps/README.md",
+      "entity:document:knowledge/power-apps/powerapps-yaml-code-format.md",
       "entity:document:knowledge/power-automate/README.md",
       "entity:document:knowledge/professional-context/career-history.md",
       "entity:document:knowledge/professional-context/expertise.md",
@@ -12855,9 +13041,6 @@
       "entity:memory:convention-documentation-structure-001",
       "entity:project:documentation"
     ],
-    "documented": [
-      "doc:.kiro/steering/technology.md"
-    ],
     "documents": [
       "doc:.kiro/steering/README.md",
       "doc:knowledge/professional-context/responsibilities.md"
@@ -12945,6 +13128,7 @@
       "doc:templates/project-starters/web-app/CLAUDE.md"
     ],
     "editing": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:references/copilot.md"
     ],
     "editor": [
@@ -12998,6 +13182,10 @@
       "doc:knowledge/professional-context/expertise.md",
       "doc:prompts/README.md"
     ],
+    "enums": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
     "environment": [
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:references/README.md",
@@ -13005,6 +13193,7 @@
       "doc:templates/specifications/deployment-plan.md"
     ],
     "error": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/specifications/design.md"
     ],
@@ -13063,6 +13252,10 @@
     ],
     "evidenced": [
       "doc:knowledge/professional-context/expertise.md"
+    ],
+    "exact": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "examined": [
       "doc:memory/sessions/session-memory-engine-example-001.md",
@@ -13177,7 +13370,6 @@
       "doc:references/vercel.md"
     ],
     "explicitly": [
-      "doc:.kiro/steering/technology.md",
       "doc:CHANGELOG.md",
       "doc:CLAUDE.md",
       "doc:profile/README.md",
@@ -13203,6 +13395,14 @@
     ],
     "exposure": [
       "doc:specs/phase-9-professional-context/requirements.md"
+    ],
+    "expression": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
+    ],
+    "expressions": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:.kiro/steering/technology.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "extend": [
       "doc:knowledge/workflows/documentation-update.json",
@@ -13277,8 +13477,10 @@
     ],
     "file": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:docs/memory-approval.md",
       "doc:examples/mcp/README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:templates/project-memory/SESSION.md",
       "doc:templates/project-starters/automation/SESSION.md",
       "doc:templates/project-starters/documentation/SESSION.md",
@@ -13295,9 +13497,11 @@
     ],
     "files": [
       "doc:.agent/skills/communication-skill/README.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.github/instructions/README.md",
       "doc:.github/instructions/templates.instructions.md",
       "doc:CLAUDE.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:templates/memory/session-memory.md",
@@ -13476,6 +13680,7 @@
       "doc:.agent/skills/personal/problem-solving/SKILL.md",
       "doc:.agent/skills/personal/simplify/SKILL.md",
       "doc:.agent/skills/personal/writing/SKILL.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/README.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/README.md",
@@ -13489,6 +13694,7 @@
       "doc:ARCHITECTURE.md",
       "doc:README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/workflows/release-preparation.json",
       "doc:memory/archive/README.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
@@ -13518,11 +13724,20 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "format": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/thinking/SKILL.md",
-      "doc:knowledge/workflows/README.md"
+      "doc:.kiro/steering/technology.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
+      "doc:knowledge/workflows/README.md",
+      "entity:document:.agent/skills/references/powerapps-yaml-format.md",
+      "entity:document:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "formats": [
       "doc:.kiro/steering/technology.md"
+    ],
+    "formatting": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "foundation": [
       "doc:ROADMAP.md"
@@ -13566,8 +13781,11 @@
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md"
     ],
+    "functions": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
     "future": [
-      "doc:.kiro/steering/technology.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
@@ -13582,6 +13800,15 @@
       "doc:templates/project-starters/python/ROADMAP.md",
       "doc:templates/project-starters/web-app/ROADMAP.md",
       "entity:document:knowledge/future-ideas/README.md"
+    ],
+    "fx": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:.kiro/steering/technology.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
+    "gallery": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "gap": [
       "doc:docs/knowledge-health.md",
@@ -13620,6 +13847,9 @@
       "entity:document:generated/work-activity.json",
       "entity:memory:decision-memory-index-source-truth-001",
       "entity:memory:lesson-validate-generated-files-before-committing-001"
+    ],
+    "generating": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
     ],
     "generation": [
       "doc:config/ai-os.example.json",
@@ -13855,6 +14085,7 @@
       "doc:knowledge/workflows/README.md"
     ],
     "handling": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:standards/security.md",
       "doc:templates/specifications/deployment-plan.md",
@@ -13962,6 +14193,10 @@
       "doc:knowledge/vscode/README.md",
       "doc:specs/README.md"
     ],
+    "hierarchies": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
     "highlights": [
       "doc:RELEASE_NOTES_v0.9.0.md"
     ],
@@ -14015,6 +14250,9 @@
     "hyphenated": [
       "doc:CONTRIBUTING.md",
       "doc:standards/naming.md"
+    ],
+    "icons": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
     ],
     "id": [
       "doc:knowledge/professional-context/overview.md",
@@ -14096,6 +14334,7 @@
     ],
     "in": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.github/copilot-instructions.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:docs/cli-reference.md",
@@ -14105,6 +14344,7 @@
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/README.md",
       "doc:memory/decisions/README.md",
       "doc:memory/sessions/README.md",
@@ -14158,6 +14398,10 @@
     "information": [
       "doc:.agent/skills/research/README.md",
       "doc:.agent/skills/research/SKILL.md"
+    ],
+    "input": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "inputs": [
       "doc:.github/instructions/prompts.instructions.md",
@@ -14239,7 +14483,6 @@
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md"
     ],
     "integrations": [
-      "doc:.kiro/steering/technology.md",
       "doc:references/mcp.md"
     ],
     "intelligence": [
@@ -14357,6 +14600,7 @@
       "doc:docs/continuous-learning.md",
       "doc:docs/knowledge-health.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:profile/README.md",
@@ -14525,7 +14769,8 @@
     ],
     "key": [
       "doc:.agent/skills/research/SKILL.md",
-      "doc:knowledge/architecture/phase-8-learning-orchestration.md"
+      "doc:knowledge/architecture/phase-8-learning-orchestration.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "keyboard": [
       "doc:standards/accessibility.md"
@@ -14583,6 +14828,7 @@
       "doc:knowledge/github/README.md",
       "doc:knowledge/lessons-learned/README.md",
       "doc:knowledge/power-apps/README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/power-automate/README.md",
       "doc:knowledge/professional-context/career-history.md",
       "doc:knowledge/professional-context/expertise.md",
@@ -14636,6 +14882,7 @@
       "entity:document:knowledge/github/README.md",
       "entity:document:knowledge/lessons-learned/README.md",
       "entity:document:knowledge/power-apps/README.md",
+      "entity:document:knowledge/power-apps/powerapps-yaml-code-format.md",
       "entity:document:knowledge/power-automate/README.md",
       "entity:document:knowledge/professional-context/career-history.md",
       "entity:document:knowledge/professional-context/expertise.md",
@@ -14707,6 +14954,10 @@
     "layers": [
       "doc:.kiro/steering/structure.md",
       "doc:ARCHITECTURE.md"
+    ],
+    "layout": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "lead": [
       "doc:knowledge/professional-context/expertise.md",
@@ -14793,6 +15044,7 @@
       "doc:.kiro/steering/workflow.md"
     ],
     "level": [
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/professional-context/expertise.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
@@ -14821,6 +15073,10 @@
     "limitations": [
       "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:agents/researcher.md"
+    ],
+    "line": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "linked": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
@@ -14865,6 +15121,9 @@
     "logging": [
       "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/specifications/design.md"
+    ],
+    "logic": [
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "logical": [
       "doc:ARCHITECTURE.md"
@@ -15036,6 +15295,7 @@
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/README.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/README.md",
@@ -15112,6 +15372,7 @@
       "doc:knowledge/github/README.md",
       "doc:knowledge/lessons-learned/README.md",
       "doc:knowledge/power-apps/README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/power-automate/README.md",
       "doc:knowledge/professional-context/career-history.md",
       "doc:knowledge/professional-context/expertise.md",
@@ -15354,6 +15615,7 @@
       "entity:document:.agent/skills/references/codex-tools.md",
       "entity:document:.agent/skills/references/copilot-tools.md",
       "entity:document:.agent/skills/references/gemini-tools.md",
+      "entity:document:.agent/skills/references/powerapps-yaml-format.md",
       "entity:document:.agent/skills/research/README.md",
       "entity:document:.agent/skills/system/README.md",
       "entity:document:.agent/skills/system/superpower/README.md",
@@ -15424,6 +15686,7 @@
       "entity:document:knowledge/github/README.md",
       "entity:document:knowledge/lessons-learned/README.md",
       "entity:document:knowledge/power-apps/README.md",
+      "entity:document:knowledge/power-apps/powerapps-yaml-code-format.md",
       "entity:document:knowledge/power-automate/README.md",
       "entity:document:knowledge/professional-context/career-history.md",
       "entity:document:knowledge/professional-context/expertise.md",
@@ -15837,6 +16100,10 @@
     "models": [
       "doc:ARCHITECTURE.md"
     ],
+    "modern": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
     "modernization": [
       "doc:knowledge/professional-context/project-experience.md"
     ],
@@ -15867,12 +16134,13 @@
       "doc:knowledge/professional-context/project-experience.md"
     ],
     "multi": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/professional-context/project-experience.md",
       "doc:standards/naming.md"
     ],
     "must": [
       "doc:.github/instructions/prompts.instructions.md",
-      "doc:.kiro/steering/technology.md",
       "doc:templates/project-memory/SESSION.md",
       "doc:templates/project-starters/automation/SESSION.md",
       "doc:templates/project-starters/documentation/SESSION.md",
@@ -15909,6 +16177,7 @@
       "doc:standards/naming.md"
     ],
     "naming": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/best-practices/README.md",
@@ -15918,6 +16187,7 @@
       "doc:knowledge/github/README.md",
       "doc:knowledge/lessons-learned/README.md",
       "doc:knowledge/power-apps/README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/power-automate/README.md",
       "doc:knowledge/prompt-engineering/README.md",
       "doc:knowledge/research-notes/README.md",
@@ -15972,6 +16242,7 @@
       "doc:templates/project-starters/web-app/ROADMAP.md"
     ],
     "no": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:docs/feedback-and-audit.md",
       "doc:docs/knowledge-health.md",
       "doc:knowledge/professional-context/expertise.md",
@@ -15982,7 +16253,6 @@
       "doc:knowledge/architecture/phase-3-knowledge-graph.md"
     ],
     "non": [
-      "doc:.kiro/steering/technology.md",
       "doc:ARCHITECTURE.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:prompts/specify.prompt.md",
@@ -16080,6 +16350,7 @@
       "doc:docs/memory-approval.md",
       "doc:knowledge/README.md",
       "doc:knowledge/architecture/README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/professional-context/career-history.md",
       "doc:knowledge/research-notes/README.md",
       "doc:standards/release-management.md",
@@ -16156,6 +16427,9 @@
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:templates/memory/lesson-memory.md"
+    ],
+    "observed": [
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "obtain": [
       "doc:.kiro/steering/workflow.md"
@@ -16251,13 +16525,14 @@
       "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
     "operations": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:scripts/README.md"
     ],
     "opinion": [
       "doc:references/claude.md"
     ],
     "optional": [
-      "doc:.kiro/steering/technology.md",
       "doc:knowledge/workflows/bug-fix.json",
       "doc:references/mcp.md"
     ],
@@ -16265,6 +16540,7 @@
       "doc:.agent/skills/personal/analytical/SKILL.md"
     ],
     "or": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.github/workflows/README.md",
       "doc:CLAUDE.md",
       "doc:CONTRIBUTING.md",
@@ -16458,6 +16734,10 @@
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:standards/documentation.md"
     ],
+    "pa": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:.kiro/steering/technology.md"
+    ],
     "pack": [
       "doc:RELEASE_NOTES_v0.8.0.md"
     ],
@@ -16476,6 +16756,8 @@
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
     "parent": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-starters/automation/AGENTS.md",
       "doc:templates/project-starters/documentation/AGENTS.md",
@@ -16492,6 +16774,9 @@
     "passwords": [
       "doc:SECURITY.md"
     ],
+    "patching": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
+    ],
     "path": [
       "doc:.github/README.md",
       "doc:.github/instructions/README.md",
@@ -16502,8 +16787,12 @@
       "doc:.github/instructions/skills.instructions.md",
       "doc:standards/naming.md"
     ],
+    "pattern": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
+    ],
     "patterns": [
-      "doc:.agent/skills/communication-skill/anti-ai-writing.md"
+      "doc:.agent/skills/communication-skill/anti-ai-writing.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "perform": [
       "doc:agents/qa.md",
@@ -16675,6 +16964,9 @@
     "plus": [
       "doc:specs/phase-9-professional-context/design.md"
     ],
+    "point": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
+    ],
     "pointer": [
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
@@ -16704,8 +16996,10 @@
       "doc:ARCHITECTURE.md"
     ],
     "power": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.kiro/steering/technology.md",
       "doc:knowledge/power-apps/README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/power-automate/README.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:references/workflow-examples.md",
@@ -16742,6 +17036,7 @@
       "doc:templates/project-starters/power-automate/TESTING.md",
       "doc:templates/project-starters/power-automate/decisions.md",
       "entity:document:knowledge/power-apps/README.md",
+      "entity:document:knowledge/power-apps/powerapps-yaml-code-format.md",
       "entity:document:knowledge/power-automate/README.md",
       "entity:document:templates/project-starters/power-apps/AGENTS.md",
       "entity:document:templates/project-starters/power-apps/ARCHITECTURE.md",
@@ -16781,7 +17076,11 @@
       "entity:project:power-automate"
     ],
     "powerapps": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
+      "entity:document:.agent/skills/references/powerapps-yaml-format.md",
+      "entity:document:knowledge/power-apps/powerapps-yaml-code-format.md",
       "entity:memory:lesson-powerapps-refresh-001"
     ],
     "powershell": [
@@ -16821,6 +17120,9 @@
     ],
     "preferred": [
       "doc:CLAUDE.md"
+    ],
+    "prefix": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
     ],
     "preparation": [
       "doc:knowledge/workflows/release-preparation.json",
@@ -17409,9 +17711,15 @@
       "entity:document:prompts/specify.prompt.md"
     ],
     "properties": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json"
+    ],
+    "property": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "propose": [
       "doc:GOVERNANCE.md"
@@ -17461,6 +17769,7 @@
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/SKILL.md",
       "doc:.agent/skills/thinking/SKILL.md",
@@ -17493,6 +17802,7 @@
       "doc:knowledge/github/README.md",
       "doc:knowledge/lessons-learned/README.md",
       "doc:knowledge/power-apps/README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/power-automate/README.md",
       "doc:knowledge/prompt-engineering/README.md",
       "doc:knowledge/research-notes/README.md",
@@ -17618,9 +17928,6 @@
     ],
     "ranking": [
       "doc:knowledge/architecture/phase-4-semantic-discovery.md"
-    ],
-    "re": [
-      "doc:.kiro/steering/technology.md"
     ],
     "react": [
       "doc:references/v0.md"
@@ -17853,6 +18160,9 @@
     "red": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
     ],
+    "ref": [
+      "doc:.kiro/steering/technology.md"
+    ],
     "refactoring": [
       "doc:references/copilot.md"
     ],
@@ -17861,7 +18171,9 @@
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:docs/cli-reference.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:references/canva.md",
       "doc:references/chatgpt.md",
       "doc:references/claude.md",
@@ -17877,6 +18189,7 @@
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:README.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
@@ -17887,6 +18200,7 @@
       "doc:knowledge/github/README.md",
       "doc:knowledge/lessons-learned/README.md",
       "doc:knowledge/power-apps/README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/power-automate/README.md",
       "doc:knowledge/prompt-engineering/README.md",
       "doc:knowledge/research-notes/README.md",
@@ -17918,6 +18232,7 @@
       "entity:document:.agent/skills/references/codex-tools.md",
       "entity:document:.agent/skills/references/copilot-tools.md",
       "entity:document:.agent/skills/references/gemini-tools.md",
+      "entity:document:.agent/skills/references/powerapps-yaml-format.md",
       "entity:document:references/README.md",
       "entity:document:references/canva.md",
       "entity:document:references/chatgpt.md",
@@ -18037,7 +18352,6 @@
       "doc:knowledge/professional-context/project-experience.md"
     ],
     "remain": [
-      "doc:.kiro/steering/technology.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:specs/phase-9-professional-context/tasks.md"
@@ -18519,6 +18833,9 @@
       "entity:document:agents/reviewer.md",
       "entity:document:agents/security-reviewer.md"
     ],
+    "reviewing": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
+    ],
     "rhythm": [
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
@@ -18680,9 +18997,11 @@
     ],
     "rules": [
       "doc:.agent/skills/communication-skill/SKILL.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:AGENTS.md",
-      "doc:SECURITY.md"
+      "doc:SECURITY.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "run": [
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -18715,6 +19034,9 @@
     "scaffold": [
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "scalars": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
     ],
     "scan": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -18773,6 +19095,10 @@
     ],
     "scoring": [
       "doc:docs/knowledge-health.md"
+    ],
+    "screen": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "script": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
@@ -18892,6 +19218,10 @@
       "doc:AGENTS.md",
       "doc:WORKFLOW.md"
     ],
+    "self": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
     "semantic": [
       "doc:ARCHITECTURE.md",
       "doc:ROADMAP.md",
@@ -18974,6 +19304,9 @@
     "setup": [
       "doc:.agent/skills/communication-skill/README.md"
     ],
+    "share": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
+    ],
     "shared": [
       "doc:AGENTS.md",
       "doc:GOVERNANCE.md",
@@ -19017,6 +19350,9 @@
       "doc:.agent/skills/thinking/SKILL.md",
       "entity:document:.agent/skills/personal/simplify/README.md",
       "entity:skill:simplify"
+    ],
+    "single": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md"
     ],
     "situation": [
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
@@ -19112,6 +19448,7 @@
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/README.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/README.md",
@@ -19171,6 +19508,7 @@
       "entity:document:.agent/skills/references/codex-tools.md",
       "entity:document:.agent/skills/references/copilot-tools.md",
       "entity:document:.agent/skills/references/gemini-tools.md",
+      "entity:document:.agent/skills/references/powerapps-yaml-format.md",
       "entity:document:.agent/skills/research/README.md",
       "entity:document:.agent/skills/system/README.md",
       "entity:document:.agent/skills/system/superpower/README.md",
@@ -19239,12 +19577,15 @@
       "entity:skill:problem-solving"
     ],
     "source": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/SKILL.md",
+      "doc:.kiro/steering/technology.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
@@ -19806,6 +20147,10 @@
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:specs/phase-9-professional-context/requirements.md"
     ],
+    "string": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
     "strings": [
       "doc:SECURITY.md"
     ],
@@ -19820,7 +20165,9 @@
     ],
     "structure": [
       "doc:.agent/skills/communication-skill/SKILL.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.kiro/steering/structure.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
@@ -19953,7 +20300,12 @@
     "syncing": [
       "doc:docs/cli-reference.md"
     ],
+    "syntax": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
     "system": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/system/README.md",
       "doc:.agent/skills/system/SKILL.md",
       "doc:.agent/skills/system/superpower/README.md",
@@ -20062,6 +20414,9 @@
     ],
     "telemetry": [
       "doc:docs/feedback-and-audit.md"
+    ],
+    "template": [
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "templates": [
       "doc:.github/instructions/templates.instructions.md",
@@ -20489,6 +20844,8 @@
     ],
     "that": [
       "doc:.agent/skills/communication-skill/SKILL.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/permanent/README.md",
       "doc:memory/permanent/preferences/README.md",
       "doc:memory/permanent/principles/README.md",
@@ -20504,6 +20861,7 @@
       "doc:.agent/skills/personal/problem-solving/README.md",
       "doc:.agent/skills/personal/simplify/README.md",
       "doc:.agent/skills/personal/writing/README.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/system/superpower/README.md",
       "doc:.agent/skills/system/testing/README.md",
       "doc:.agent/skills/system/using-superpowers/README.md",
@@ -20525,6 +20883,7 @@
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:knowledge/workflows/release-preparation.json",
       "doc:memory/README.md",
@@ -20586,12 +20945,14 @@
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/system/superpower/README.md",
       "doc:.agent/skills/system/testing/README.md",
       "doc:.agent/skills/system/using-superpowers/README.md",
       "doc:.github/README.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/README.md",
       "doc:profile/README.md",
       "doc:specs/README.md",
@@ -20854,6 +21215,7 @@
       "doc:templates/project-starters/web-app/README.md"
     ],
     "types": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -20974,6 +21336,7 @@
     "use": [
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/personal/analytical/SKILL.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:.agent/skills/thinking/SKILL.md",
@@ -20992,6 +21355,7 @@
     ],
     "used": [
       "doc:docs/cli-reference.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/sessions/session-memory-engine-example-001.md"
     ],
     "useful": [
@@ -21011,6 +21375,9 @@
     "users": [
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md"
+    ],
+    "uses": [
+      "doc:.kiro/steering/technology.md"
     ],
     "using": [
       "doc:.agent/skills/references/codex-tools.md",
@@ -21105,6 +21472,10 @@
       "doc:templates/project-starters/web-app/RELEASE_NOTES.md",
       "entity:concept:validation"
     ],
+    "variable": [
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+    ],
     "vary": [
       "doc:references/README.md"
     ],
@@ -21169,6 +21540,7 @@
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.github/instructions/README.md",
       "doc:examples/mcp/README.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:references/copilot.md"
     ],
     "vscode": [
@@ -21261,6 +21633,7 @@
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:.agent/skills/thinking/SKILL.md",
@@ -21315,6 +21688,7 @@
     ],
     "with": [
       "doc:.github/workflows/README.md",
+      "doc:.kiro/steering/technology.md",
       "doc:knowledge/workflows/bug-fix.json",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/incident-response.json",
@@ -21483,7 +21857,11 @@
       "entity:skill:writing"
     ],
     "yaml": [
-      "doc:.kiro/steering/technology.md"
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:.kiro/steering/technology.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
+      "entity:document:.agent/skills/references/powerapps-yaml-format.md",
+      "entity:document:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "yml": [
       "doc:.github/workflows/README.md"
