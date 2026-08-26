@@ -23,7 +23,10 @@ def _store_path(root: Path) -> Path:
 
 
 def _load_all(root: Path) -> list:
-    return load_json(_store_path(root), []) or []
+    data = load_json(_store_path(root), []) or []
+    if not isinstance(data, list):
+        raise ApprovalError("approval store must be a list")
+    return data
 
 
 def _save_all(root: Path, approvals: list) -> None:
@@ -34,7 +37,12 @@ def request_approval(root: Path, *, approval_type: str, target: str, reason: str
     if approval_type not in APPROVAL_TYPES:
         raise ApprovalError(f"invalid approval type: {approval_type} (allowed: {APPROVAL_TYPES})")
     approvals = _load_all(root)
-    approval_id = next_sequential_id([a["approvalId"] for a in approvals], "approval", target or approval_type)
+    existing_ids = [
+        a.get("approvalId")
+        for a in approvals
+        if isinstance(a, dict) and isinstance(a.get("approvalId"), str)
+    ]
+    approval_id = next_sequential_id(existing_ids, "approval", target or approval_type)
     approval = {
         "approvalId": approval_id,
         "type": approval_type,
@@ -57,15 +65,15 @@ def request_approval(root: Path, *, approval_type: str, target: str, reason: str
 def list_approvals(root: Path, *, status: str | None = None, approval_type: str | None = None) -> list:
     approvals = _load_all(root)
     if status:
-        approvals = [a for a in approvals if a.get("status") == status]
+        approvals = [a for a in approvals if isinstance(a, dict) and a.get("status") == status]
     if approval_type:
-        approvals = [a for a in approvals if a.get("type") == approval_type]
-    return sorted(approvals, key=lambda a: a["approvalId"])
+        approvals = [a for a in approvals if isinstance(a, dict) and a.get("type") == approval_type]
+    return sorted(approvals, key=lambda a: a.get("approvalId", "") if isinstance(a, dict) else "")
 
 
 def get_approval(root: Path, approval_id: str) -> dict:
     for approval in _load_all(root):
-        if approval["approvalId"] == approval_id:
+        if isinstance(approval, dict) and approval.get("approvalId") == approval_id:
             return approval
     raise ApprovalError(f"approval not found: {approval_id}")
 
@@ -73,9 +81,10 @@ def get_approval(root: Path, approval_id: str) -> dict:
 def _update(root: Path, approval_id: str, new_status: str, approved_by: str | None) -> dict:
     approvals = _load_all(root)
     for approval in approvals:
-        if approval["approvalId"] == approval_id:
-            if approval["status"] != "pending":
-                raise ApprovalError(f"approval {approval_id} is not pending (status: {approval['status']})")
+        if isinstance(approval, dict) and approval.get("approvalId") == approval_id:
+            status = approval.get("status")
+            if status != "pending":
+                raise ApprovalError(f"approval {approval_id} is not pending (status: {status})")
             approval["status"] = new_status
             approval["approvedAt"] = now_iso()
             approval["approvedBy"] = sanitize_text(approved_by or "local-user", 100)
@@ -95,7 +104,7 @@ def reject(root: Path, approval_id: str, *, reason: str = "", approved_by: str |
         approval["reason"] = sanitize_text(reason, 500)
         approvals = _load_all(root)
         for item in approvals:
-            if item["approvalId"] == approval_id:
+            if isinstance(item, dict) and item.get("approvalId") == approval_id:
                 item["reason"] = approval["reason"]
         _save_all(root, approvals)
     return approval
@@ -108,6 +117,11 @@ def cancel(root: Path, approval_id: str) -> dict:
 def is_approved(root: Path, *, approval_type: str, target: str) -> bool:
     """True only if an explicitly approved approval exists for this target."""
     for approval in _load_all(root):
-        if approval["type"] == approval_type and approval["target"] == target and approval["status"] == "approved":
+        if (
+            isinstance(approval, dict)
+            and approval.get("type") == approval_type
+            and approval.get("target") == target
+            and approval.get("status") == "approved"
+        ):
             return True
     return False

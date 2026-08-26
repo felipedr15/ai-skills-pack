@@ -77,6 +77,34 @@ class ApprovalTests(unittest.TestCase):
         approvals.approve(self.root, approval["approvalId"])
         self.assertTrue(approvals.is_approved(self.root, approval_type="permanent-memory", target="suggestion-1"))
 
+    def test_malformed_approval_record_does_not_crash_read_operations(self):
+        store_path = self.root / ".ai-os" / "approvals" / "approvals.json"
+        store_path.parent.mkdir(parents=True)
+        store_path.write_text(json.dumps([{"status": "approved"}, "not-a-record"]), encoding="utf-8")
+
+        self.assertEqual(len(approvals.list_approvals(self.root)), 2)
+        self.assertFalse(approvals.is_approved(self.root, approval_type="plan", target="session-1"))
+        with self.assertRaises(approvals.ApprovalError):
+            approvals.get_approval(self.root, "approval-missing-001")
+
+    def test_request_approval_preserves_malformed_records_and_generates_id(self):
+        store_path = self.root / ".ai-os" / "approvals" / "approvals.json"
+        store_path.parent.mkdir(parents=True)
+        store_path.write_text(
+            json.dumps([
+                {"approvalId": "approval-session-001", "status": "approved"},
+                {"target": "session-2"},
+            ]),
+            encoding="utf-8",
+        )
+
+        approval = approvals.request_approval(self.root, approval_type="plan", target="session")
+        data = json.loads(store_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(approval["approvalId"], "approval-session-002")
+        self.assertEqual(len(data), 3)
+        self.assertEqual(data[1], {"target": "session-2"})
+
 
 class ProfileApprovalTypeTests(unittest.TestCase):
     """Task 014: profile-write, expertise-write, and profile-switch are

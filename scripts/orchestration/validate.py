@@ -108,7 +108,7 @@ def validate_memory_suggestions(root: Path) -> tuple:
         return failures, warnings
 
     approvals = list_approvals(root, status="approved", approval_type="permanent-memory")
-    approved_targets = {a["target"] for a in approvals}
+    approved_targets = {a.get("target") for a in approvals if isinstance(a, dict) and a.get("target")}
 
     approved_paths: dict = {}
     for path in sorted(directory.glob("*.json")):
