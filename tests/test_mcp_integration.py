@@ -1,5 +1,7 @@
 """Comprehensive tests for Phase 6 MCP Integration Layer."""
 import json
+import importlib.util
+import os
 import subprocess
 import sys
 import tempfile
@@ -524,6 +526,37 @@ class McpStdioTests(unittest.TestCase):
             self.assertEqual(resp["jsonrpc"], "2.0")
         finally:
             proc.kill()
+
+
+class McpLauncherTests(unittest.TestCase):
+    def test_resolve_root_falls_back_when_ai_os_home_invalid(self):
+        spec = importlib.util.spec_from_file_location("mcp_server_entry", SCRIPTS / "mcp-server.py")
+        mod = importlib.util.module_from_spec(spec)
+        original = os.environ.get("AI_OS_HOME")
+        os.environ["AI_OS_HOME"] = str(ROOT / "does-not-exist")
+        try:
+            spec.loader.exec_module(mod)
+            self.assertEqual(mod.resolve_root(), ROOT)
+        finally:
+            if original is None:
+                os.environ.pop("AI_OS_HOME", None)
+            else:
+                os.environ["AI_OS_HOME"] = original
+
+    def test_ai_os_mcp_check_command(self):
+        spec = importlib.util.spec_from_file_location("ai_os_cli", SCRIPTS / "ai-os.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        import io
+        from contextlib import redirect_stdout, redirect_stderr
+
+        stdout = io.StringIO()
+        stderr = io.StringIO()
+        with redirect_stdout(stdout), redirect_stderr(stderr):
+            code = mod.main(["mcp", "check"])
+
+        self.assertEqual(code, 0)
+        self.assertIn("Smoke test complete", stdout.getvalue())
 
 
 # ============================================================

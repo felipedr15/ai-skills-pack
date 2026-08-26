@@ -65,7 +65,7 @@ For VS Code extensions that support MCP, configure the server command:
 ```json
 {
   "command": "python",
-  "args": ["C:/Users/username/repos/ai-skills-pack/scripts/mcp-server.py"]
+  "args": ["<REPOSITORY_ROOT>/scripts/mcp-server.py"]
 }
 ```
 
@@ -74,9 +74,13 @@ For VS Code extensions that support MCP, configure the server command:
 ```json
 {
   "command": "python3",
-  "args": ["/home/username/repos/ai-skills-pack/scripts/mcp-server.py"]
+  "args": ["<REPOSITORY_ROOT>/scripts/mcp-server.py"]
 }
 ```
+
+`<REPOSITORY_ROOT>` is the directory where this repository is cloned. The MCP launcher also honors
+`AI_OS_HOME` when it points at a valid AI OS repository root, then safely falls back to the script's
+own repository root.
 
 ## Registered Tools (29)
 
@@ -195,6 +199,7 @@ This verifies all tools, resources, security boundaries, and clean shutdown.
 ## Troubleshooting
 
 - **Server not starting**: Ensure Python 3.10+ is available and the repository root contains `generated/` artifacts.
+- **Moved the repository**: Update the client `args` path or set `AI_OS_HOME` to the new clone root.
 - **Tools returning errors**: Run `python scripts/validate-all.py` to check artifact freshness.
 - **Missing search results**: Rebuild indexes with `python scripts/discovery-build.py`.
 - **Permission errors**: The server is read-only. No write operations are available by default.

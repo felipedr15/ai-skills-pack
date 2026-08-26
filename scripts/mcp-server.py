@@ -3,13 +3,23 @@
 from __future__ import annotations
 
 import sys
+import os
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
-ROOT = Path(__file__).resolve().parents[1]
+def resolve_root() -> Path:
+    env_root = os.environ.get("AI_OS_HOME", "").strip()
+    if env_root:
+        candidate = Path(env_root).expanduser().resolve()
+        if (candidate / "VERSION").is_file() and (candidate / "scripts" / "mcp-server.py").is_file():
+            return candidate
+    return Path(__file__).resolve().parents[1]
+
+
+ROOT = resolve_root()
 
 from mcp_server.server import McpStdioServer
 
