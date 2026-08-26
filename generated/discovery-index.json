@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-26T17:59:46Z",
+  "generatedAt": "2026-08-26T18:13:46Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 345,
-    "entities": 369,
-    "terms": 1223,
-    "relationships": 639
+    "documents": 351,
+    "entities": 375,
+    "terms": 1258,
+    "relationships": 661
   },
   "documents": [
     {
@@ -1170,6 +1170,28 @@
       "frontMatter": {}
     },
     {
+      "id": "doc:RELEASE_NOTES_v1.0.0.md",
+      "sourcePath": "RELEASE_NOTES_v1.0.0.md",
+      "title": "AI OS v1.0.0 — Production Hardening & Unified Experience",
+      "category": "document",
+      "headings": [
+        "AI OS v1.0.0 — Production Hardening & Unified Experience",
+        "Overview",
+        "Major Improvements",
+        "Portability",
+        "CI Improvements",
+        "Technical Debt Fixes",
+        "Validation Results",
+        "Security And Privacy",
+        "Known Limitations",
+        "Upgrade Instructions",
+        "Fresh Clone Instructions",
+        "Release Status"
+      ],
+      "snippet": "AI OS v1.0.0 prepares the existing AI development operating system for its first production-quality release. This release focuses on hardening, portability, validation, repository ownership cleanup, a",
+      "frontMatter": {}
+    },
+    {
       "id": "doc:ROADMAP.md",
       "sourcePath": "ROADMAP.md",
       "title": "AI OS Roadmap",
@@ -1563,6 +1585,113 @@
         "Security Notes"
       ],
       "snippet": "Nothing in Phase 8 writes a source-of-truth document, modifies a file, or creates a permanent",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/multi-device-setup.md",
+      "sourcePath": "docs/multi-device-setup.md",
+      "title": "AI OS Multi-Device Setup",
+      "category": "document",
+      "headings": [
+        "AI OS Multi-Device Setup",
+        "Clone",
+        "Python Setup",
+        "Environment Setup",
+        "MCP Setup",
+        "VS Code Setup",
+        "Validation",
+        "Troubleshooting"
+      ],
+      "snippet": "AI OS is designed to run from any clone of `felipedr15/ai-skills-pack` without requiring the same Windows username or directory on every device.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/repository-migration.md",
+      "sourcePath": "docs/repository-migration.md",
+      "title": "Repository Migration",
+      "category": "document",
+      "headings": [
+        "Repository Migration",
+        "Canonical Repository",
+        "Updated References",
+        "Intentional Historical References",
+        "Verification"
+      ],
+      "snippet": "Date: 2026-08-26",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/v1.0-acceptance-criteria.md",
+      "sourcePath": "docs/v1.0-acceptance-criteria.md",
+      "title": "AI OS v1.0 Acceptance Criteria",
+      "category": "document",
+      "headings": [
+        "AI OS v1.0 Acceptance Criteria",
+        "Repository",
+        "Core Validation",
+        "Memory",
+        "Knowledge",
+        "Orchestration",
+        "Professional Context",
+        "MCP",
+        "Dashboard",
+        "Fresh Clone",
+        "Documentation",
+        "Final Gate Table"
+      ],
+      "snippet": "AI OS is v1.0-ready only when the gates below are verified from actual commands and review evidence.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/v1.0-baseline-audit.md",
+      "sourcePath": "docs/v1.0-baseline-audit.md",
+      "title": "AI OS v1.0 Baseline Audit",
+      "category": "document",
+      "headings": [
+        "AI OS v1.0 Baseline Audit",
+        "Repository State",
+        "Environment",
+        "Existing Automation",
+        "Baseline Validation Results",
+        "Passing Areas",
+        "Failing Areas",
+        "Knowledge Graph and Semantic Discovery",
+        "MCP and Multi-Device Portability",
+        "Repository Migration Findings",
+        "CI Issues",
+        "Documentation Inconsistencies",
+        "Known Technical Debt",
+        "Recommended Remediation"
+      ],
+      "snippet": "Date: 2026-08-26",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/v1.0-technical-debt.md",
+      "sourcePath": "docs/v1.0-technical-debt.md",
+      "title": "AI OS v1.0 Technical Debt",
+      "category": "document",
+      "headings": [
+        "AI OS v1.0 Technical Debt",
+        "Critical For v1.0",
+        "Malformed approval-store records",
+        "Status command reports release readiness from file existence only",
+        "Recommended For v1.0",
+        "Stale generated artifacts",
+        "CI trigger and Python-version hardening",
+        "Portable MCP setup",
+        "Repository ownership references",
+        "Sanitization language",
+        "Deferred After v1.0",
+        "Approval expiration",
+        "`scripts/profile/` shadows Python standard-library `profile`",
+        "Live `.ai-os/sessions/` excluded from committed work activity",
+        "`windowDays` is descriptive metadata",
+        "Richer role/team/expertise graph relationships",
+        "Evidence-resolution status in MCP/dashboard",
+        "Environment Issue Tracked From Baseline"
+      ],
+      "snippet": "Date: 2026-08-26",
       "frontMatter": {}
     },
     {
@@ -6459,6 +6588,16 @@
       }
     },
     {
+      "id": "entity:document:RELEASE_NOTES_v1.0.0.md",
+      "nodeId": "document:RELEASE_NOTES_v1.0.0.md",
+      "type": "document",
+      "name": "Release Notes V1.0.0",
+      "sourcePath": "RELEASE_NOTES_v1.0.0.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "entity:document:ROADMAP.md",
       "nodeId": "document:ROADMAP.md",
       "type": "document",
@@ -6674,6 +6813,56 @@
       "type": "document",
       "name": "Memory Approval",
       "sourcePath": "docs/memory-approval.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/multi-device-setup.md",
+      "nodeId": "document:docs/multi-device-setup.md",
+      "type": "document",
+      "name": "Multi Device Setup",
+      "sourcePath": "docs/multi-device-setup.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/repository-migration.md",
+      "nodeId": "document:docs/repository-migration.md",
+      "type": "document",
+      "name": "Repository Migration",
+      "sourcePath": "docs/repository-migration.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/v1.0-acceptance-criteria.md",
+      "nodeId": "document:docs/v1.0-acceptance-criteria.md",
+      "type": "document",
+      "name": "V1.0 Acceptance Criteria",
+      "sourcePath": "docs/v1.0-acceptance-criteria.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/v1.0-baseline-audit.md",
+      "nodeId": "document:docs/v1.0-baseline-audit.md",
+      "type": "document",
+      "name": "V1.0 Baseline Audit",
+      "sourcePath": "docs/v1.0-baseline-audit.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/v1.0-technical-debt.md",
+      "nodeId": "document:docs/v1.0-technical-debt.md",
+      "type": "document",
+      "name": "V1.0 Technical Debt",
+      "sourcePath": "docs/v1.0-technical-debt.md",
       "metadata": {
         "extension": ".md"
       }
@@ -9851,7 +10040,10 @@
       "doc:CHANGELOG.md"
     ],
     "08": [
-      "doc:CHANGELOG.md"
+      "doc:CHANGELOG.md",
+      "doc:docs/repository-migration.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "10": [
       "doc:knowledge/architecture/phase-9-professional-context.md",
@@ -9875,10 +10067,16 @@
       "doc:knowledge/professional-context/project-experience.md"
     ],
     "2026": [
-      "doc:CHANGELOG.md"
+      "doc:CHANGELOG.md",
+      "doc:docs/repository-migration.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "26": [
-      "doc:CHANGELOG.md"
+      "doc:CHANGELOG.md",
+      "doc:docs/repository-migration.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "29": [
       "doc:examples/mcp/README.md",
@@ -9906,6 +10104,7 @@
     ],
     "acceptance": [
       "doc:CHANGELOG.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:prompts/plan.prompt.md",
       "doc:prompts/specify.prompt.md",
       "doc:specs/phase-9-professional-context/tasks.md",
@@ -9927,7 +10126,8 @@
       "doc:templates/project-starters/python/REQUIREMENTS.md",
       "doc:templates/project-starters/web-app/HANDOFF.md",
       "doc:templates/project-starters/web-app/REQUIREMENTS.md",
-      "doc:templates/specifications/testing-plan.md"
+      "doc:templates/specifications/testing-plan.md",
+      "entity:document:docs/v1.0-acceptance-criteria.md"
     ],
     "accepts": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
@@ -9998,11 +10198,15 @@
       "entity:memory:session-memory-engine-example-001"
     ],
     "activity": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/professional-context/overview.md",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:generated/work-activity.json"
+    ],
+    "actual": [
+      "doc:docs/v1.0-acceptance-criteria.md"
     ],
     "adaptation": [
       "doc:.agent/skills/system/SKILL.md",
@@ -10070,6 +10274,7 @@
     ],
     "after": [
       "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:templates/memory/session-memory.md"
     ],
     "against": [
@@ -10253,11 +10458,16 @@
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -10420,6 +10630,7 @@
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
@@ -10437,6 +10648,9 @@
       "doc:docs/feedback-and-audit.md",
       "doc:docs/knowledge-health.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/README.md",
       "doc:knowledge/ai-workflows/README.md",
@@ -10565,7 +10779,8 @@
       "doc:.agent/skills/system/superpower/README.md",
       "doc:.agent/skills/system/testing/README.md",
       "doc:.agent/skills/system/using-superpowers/README.md",
-      "doc:.agent/skills/system/using-superpowers/SKILL.md"
+      "doc:.agent/skills/system/using-superpowers/SKILL.md",
+      "doc:docs/multi-device-setup.md"
     ],
     "anywhere": [
       "doc:docs/feedback-and-audit.md"
@@ -10646,6 +10861,7 @@
       "doc:.kiro/steering/workflow.md",
       "doc:GOVERNANCE.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:prompts/deploy.prompt.md",
       "doc:references/vercel.md",
@@ -10812,13 +11028,18 @@
       "doc:.kiro/steering/technology.md",
       "doc:CLAUDE.md",
       "doc:docs/knowledge-health.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:references/README.md",
       "doc:specs/phase-9-professional-context/tasks.md",
       "entity:memory:decision-memory-index-source-truth-001"
     ],
+    "areas": [
+      "doc:docs/v1.0-baseline-audit.md"
+    ],
     "artifacts": [
       "doc:agents/reviewer.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/workflows/bug-fix.json",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/feature-development.json",
@@ -10893,6 +11114,7 @@
     "audit": [
       "doc:CHANGELOG.md",
       "doc:docs/feedback-and-audit.md",
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/workflows/bug-fix.json",
       "doc:knowledge/workflows/documentation-update.json",
@@ -10902,7 +11124,8 @@
       "doc:knowledge/workflows/procedure-creation.json",
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:knowledge/workflows/release-preparation.json",
-      "entity:document:docs/feedback-and-audit.md"
+      "entity:document:docs/feedback-and-audit.md",
+      "entity:document:docs/v1.0-baseline-audit.md"
     ],
     "authentication": [
       "doc:SECURITY.md"
@@ -10995,6 +11218,7 @@
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:templates/project-starters/automation/AGENTS.md",
       "doc:templates/project-starters/automation/ARCHITECTURE.md",
       "doc:templates/project-starters/automation/CHANGELOG.md",
@@ -11084,7 +11308,10 @@
       "doc:specs/phase-9-professional-context/design.md"
     ],
     "baseline": [
-      "doc:CHANGELOG.md"
+      "doc:CHANGELOG.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
+      "entity:document:docs/v1.0-baseline-audit.md"
     ],
     "be": [
       "doc:memory/sessions/session-memory-engine-example-001.md",
@@ -11153,6 +11380,9 @@
       "doc:knowledge/security/README.md",
       "doc:knowledge/sharepoint/README.md",
       "doc:knowledge/vscode/README.md"
+    ],
+    "below": [
+      "doc:docs/v1.0-acceptance-criteria.md"
     ],
     "best": [
       "doc:.agent/skills/communication-skill/README.md",
@@ -11263,6 +11493,7 @@
       "doc:.kiro/README.md",
       "doc:.kiro/specs/README.md",
       "doc:.kiro/specs/phase-9-professional-context/README.md",
+      "doc:docs/repository-migration.md",
       "doc:profile/README.md",
       "doc:specs/phase-9-professional-context/design.md"
     ],
@@ -11460,7 +11691,10 @@
     ],
     "ci": [
       "doc:.github/workflows/README.md",
-      "doc:README.md"
+      "doc:README.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "claims": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -11518,6 +11752,9 @@
       "entity:document:templates/project-starters/web-app/CLAUDE.md",
       "entity:platform:claude"
     ],
+    "cleanup": [
+      "doc:RELEASE_NOTES_v1.0.0.md"
+    ],
     "clear": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/personal/clear-concise-writing/README.md",
@@ -11549,6 +11786,11 @@
     "cline": [
       "doc:.agent/skills/communication-skill/README.md"
     ],
+    "clone": [
+      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/v1.0-acceptance-criteria.md"
+    ],
     "code": [
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/references/codex-tools.md",
@@ -11556,6 +11798,7 @@
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.github/instructions/README.md",
+      "doc:docs/multi-device-setup.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:references/copilot.md",
@@ -11603,6 +11846,7 @@
     ],
     "command": [
       "doc:docs/cli-reference.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
@@ -11610,6 +11854,7 @@
       "doc:README.md",
       "doc:docs/cli-reference.md",
       "doc:docs/knowledge-health.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -11634,6 +11879,9 @@
     ],
     "commits": [
       "doc:standards/git.md"
+    ],
+    "committed": [
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "committing": [
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -11875,6 +12123,7 @@
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/professional-context/career-history.md",
@@ -12017,6 +12266,7 @@
       "doc:README.md",
       "doc:ROADMAP.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "corporate": [
@@ -12059,6 +12309,7 @@
     ],
     "criteria": [
       "doc:CHANGELOG.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:knowledge/workflows/bug-fix.json",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/feature-development.json",
@@ -12086,10 +12337,12 @@
       "doc:templates/project-starters/python/HANDOFF.md",
       "doc:templates/project-starters/python/REQUIREMENTS.md",
       "doc:templates/project-starters/web-app/HANDOFF.md",
-      "doc:templates/project-starters/web-app/REQUIREMENTS.md"
+      "doc:templates/project-starters/web-app/REQUIREMENTS.md",
+      "entity:document:docs/v1.0-acceptance-criteria.md"
     ],
     "critical": [
-      "doc:.agent/skills/references/powerapps-yaml-format.md"
+      "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "cross": [
       "doc:knowledge/architecture/phase-7-release-hardening.md"
@@ -12145,6 +12398,8 @@
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:specs/phase-9-professional-context/tasks.md",
@@ -12189,6 +12444,9 @@
       "doc:memory/lessons/lesson-powerapps-refresh-001.md"
     ],
     "date": [
+      "doc:docs/repository-migration.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -12209,11 +12467,18 @@
       "doc:templates/project-starters/python/decisions.md",
       "doc:templates/project-starters/web-app/decisions.md"
     ],
+    "days": [
+      "doc:docs/v1.0-technical-debt.md"
+    ],
     "de": [
       "doc:.kiro/steering/workflow.md"
     ],
     "debt": [
-      "doc:CHANGELOG.md"
+      "doc:CHANGELOG.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
+      "entity:document:docs/v1.0-technical-debt.md"
     ],
     "debug": [
       "doc:prompts/debug.prompt.md",
@@ -12299,6 +12564,7 @@
       "doc:knowledge/workflows/bug-fix.json"
     ],
     "deferred": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
     "define": [
@@ -12421,6 +12687,9 @@
       "doc:knowledge/workflows/release-preparation.json",
       "doc:templates/specifications/requirements.md"
     ],
+    "descriptive": [
+      "doc:docs/v1.0-technical-debt.md"
+    ],
     "design": [
       "doc:.agent/skills/design/browser/README.md",
       "doc:.agent/skills/design/browser/SKILL.md",
@@ -12486,6 +12755,9 @@
       "entity:skill:browser",
       "entity:skill:ui-ux-pro-max"
     ],
+    "designed": [
+      "doc:docs/multi-device-setup.md"
+    ],
     "designer": [
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md"
     ],
@@ -12540,6 +12812,7 @@
     ],
     "development": [
       "doc:ARCHITECTURE.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/professional-context/project-experience.md",
       "doc:knowledge/workflows/feature-development.json",
@@ -12547,7 +12820,10 @@
     ],
     "device": [
       "doc:CHANGELOG.md",
-      "doc:knowledge/professional-context/project-experience.md"
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:knowledge/professional-context/project-experience.md",
+      "entity:document:docs/multi-device-setup.md"
     ],
     "diagnose": [
       "doc:knowledge/workflows/bug-fix.json"
@@ -12591,6 +12867,7 @@
     ],
     "directory": [
       "doc:ARCHITECTURE.md",
+      "doc:docs/multi-device-setup.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
@@ -12599,6 +12876,7 @@
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:scripts/knowledge_graph/README.md",
@@ -12649,6 +12927,11 @@
       "doc:docs/feedback-and-audit.md",
       "doc:docs/knowledge-health.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/repository-migration.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:prompts/create-skill.prompt.md",
       "entity:document:docs/agent-orchestration.md",
@@ -12656,7 +12939,12 @@
       "entity:document:docs/continuous-learning.md",
       "entity:document:docs/feedback-and-audit.md",
       "entity:document:docs/knowledge-health.md",
-      "entity:document:docs/memory-approval.md"
+      "entity:document:docs/memory-approval.md",
+      "entity:document:docs/multi-device-setup.md",
+      "entity:document:docs/repository-migration.md",
+      "entity:document:docs/v1.0-acceptance-criteria.md",
+      "entity:document:docs/v1.0-baseline-audit.md",
+      "entity:document:docs/v1.0-technical-debt.md"
     ],
     "doctor": [
       "doc:knowledge/architecture/phase-7-release-hardening.md"
@@ -12718,6 +13006,7 @@
       "entity:document:README.md",
       "entity:document:RELEASE_NOTES_v0.8.0.md",
       "entity:document:RELEASE_NOTES_v0.9.0.md",
+      "entity:document:RELEASE_NOTES_v1.0.0.md",
       "entity:document:ROADMAP.md",
       "entity:document:SECURITY.md",
       "entity:document:WORKFLOW.md",
@@ -12740,6 +13029,11 @@
       "entity:document:docs/feedback-and-audit.md",
       "entity:document:docs/knowledge-health.md",
       "entity:document:docs/memory-approval.md",
+      "entity:document:docs/multi-device-setup.md",
+      "entity:document:docs/repository-migration.md",
+      "entity:document:docs/v1.0-acceptance-criteria.md",
+      "entity:document:docs/v1.0-baseline-audit.md",
+      "entity:document:docs/v1.0-technical-debt.md",
       "entity:document:examples/mcp/README.md",
       "entity:document:examples/mcp/server-config.example.json",
       "entity:document:generated/memory-index.json",
@@ -13011,6 +13305,8 @@
       "doc:CLAUDE.md",
       "doc:ROADMAP.md",
       "doc:agents/documentation-writer.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:knowledge/documentation/README.md",
       "doc:knowledge/professional-context/responsibilities.md",
       "doc:knowledge/workflows/documentation-update.json",
@@ -13214,6 +13510,9 @@
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "environment": [
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:references/README.md",
       "doc:references/vercel.md",
@@ -13250,11 +13549,16 @@
     "evaluator": [
       "doc:CLAUDE.md"
     ],
+    "every": [
+      "doc:docs/multi-device-setup.md"
+    ],
     "evidence": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/personal/analytical/SKILL.md",
       "doc:agents/builder.md",
       "doc:agents/researcher.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/professional-context/expertise.md",
       "doc:knowledge/professional-context/systems-and-platforms.md",
@@ -13318,6 +13622,7 @@
       "entity:document:references/workflow-examples.md"
     ],
     "excluded": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/professional-context/systems-and-platforms.md"
     ],
     "exclusions": [
@@ -13351,8 +13656,13 @@
       "doc:templates/project-starters/python/HANDOFF.md",
       "doc:templates/project-starters/web-app/HANDOFF.md"
     ],
+    "existence": [
+      "doc:docs/v1.0-technical-debt.md"
+    ],
     "existing": [
       "doc:CONTRIBUTING.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/procedure-creation.json"
     ],
@@ -13373,6 +13683,7 @@
       "doc:examples/mcp/README.md"
     ],
     "experience": [
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/professional-context/project-experience.md",
       "entity:document:knowledge/professional-context/project-experience.md"
     ],
@@ -13380,6 +13691,7 @@
       "doc:.agent/skills/personal/simplify/SKILL.md"
     ],
     "expertise": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/professional-context/expertise.md",
       "doc:profile/README.md",
       "doc:profile/felipe-rojas.expertise.json",
@@ -13388,6 +13700,9 @@
       "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:knowledge/professional-context/expertise.md",
       "entity:document:profile/felipe-rojas.expertise.json"
+    ],
+    "expiration": [
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "explanation": [
       "doc:.agent/skills/thinking/SKILL.md"
@@ -13451,6 +13766,9 @@
     "fact": [
       "doc:prompts/research.prompt.md"
     ],
+    "failing": [
+      "doc:docs/v1.0-baseline-audit.md"
+    ],
     "failure": [
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/workflows/bug-fix.json",
@@ -13499,7 +13817,8 @@
       "entity:profile:felipe-rojas"
     ],
     "felipedr15": [
-      "doc:README.md"
+      "doc:README.md",
+      "doc:docs/multi-device-setup.md"
     ],
     "fields": [
       "doc:knowledge/architecture/phase-4-semantic-discovery.md"
@@ -13508,6 +13827,7 @@
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:templates/project-memory/SESSION.md",
@@ -13557,6 +13877,7 @@
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:GOVERNANCE.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "find": [
@@ -13568,6 +13889,7 @@
     ],
     "findings": [
       "doc:.agent/skills/research/SKILL.md",
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:templates/memory/session-memory.md"
     ],
@@ -13576,6 +13898,7 @@
       "doc:.kiro/steering/workflow.md",
       "doc:AGENTS.md",
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:specs/phase-9-professional-context/requirements.md",
@@ -13603,7 +13926,8 @@
       "doc:templates/project-starters/web-app/CHANGELOG.md"
     ],
     "fixes": [
-      "doc:RELEASE_NOTES_v0.8.0.md"
+      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:RELEASE_NOTES_v1.0.0.md"
     ],
     "flagged": [
       "doc:knowledge/professional-context/project-experience.md"
@@ -13655,6 +13979,9 @@
       "doc:GOVERNANCE.md",
       "doc:agents/documentation-writer.md",
       "doc:standards/git.md"
+    ],
+    "focuses": [
+      "doc:RELEASE_NOTES_v1.0.0.md"
     ],
     "folder": [
       "doc:.agent/skills/design/browser/README.md",
@@ -13721,6 +14048,8 @@
       "doc:.github/instructions/README.md",
       "doc:.kiro/specs/README.md",
       "doc:ARCHITECTURE.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/workflows/release-preparation.json",
@@ -13783,6 +14112,10 @@
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:ARCHITECTURE.md"
     ],
+    "fresh": [
+      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/v1.0-acceptance-criteria.md"
+    ],
     "freshness": [
       "doc:docs/knowledge-health.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
@@ -13793,6 +14126,9 @@
     "from": [
       "doc:.github/instructions/specifications.instructions.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/README.md",
       "doc:knowledge/professional-context/project-experience.md",
       "doc:knowledge/professional-context/systems-and-platforms.md",
@@ -13848,12 +14184,16 @@
     "gaps": [
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
+    "gate": [
+      "doc:docs/v1.0-acceptance-criteria.md"
+    ],
     "gated": [
       "doc:specs/phase-9-professional-context/requirements.md"
     ],
     "gates": [
       "doc:WORKFLOW.md",
-      "doc:agents/project-manager.md"
+      "doc:agents/project-manager.md",
+      "doc:docs/v1.0-acceptance-criteria.md"
     ],
     "gather": [
       "doc:agents/researcher.md",
@@ -13869,6 +14209,7 @@
     ],
     "generated": [
       "doc:docs/agent-orchestration.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "entity:document:generated/memory-index.json",
@@ -14021,6 +14362,8 @@
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -14184,8 +14527,10 @@
       "doc:agents/README.md"
     ],
     "hardening": [
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md"
     ],
@@ -14232,6 +14577,9 @@
     ],
     "highlights": [
       "doc:RELEASE_NOTES_v0.9.0.md"
+    ],
+    "historical": [
+      "doc:docs/repository-migration.md"
     ],
     "history": [
       "doc:knowledge/professional-context/career-history.md",
@@ -14364,6 +14712,7 @@
       "doc:knowledge/professional-context/project-experience.md"
     ],
     "improvements": [
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:ROADMAP.md"
     ],
     "in": [
@@ -14373,6 +14722,7 @@
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:docs/cli-reference.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -14402,6 +14752,9 @@
     ],
     "including": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
+    ],
+    "inconsistencies": [
+      "doc:docs/v1.0-baseline-audit.md"
     ],
     "inconsistent": [
       "doc:.kiro/steering/product.md"
@@ -14485,6 +14838,7 @@
       "doc:.kiro/steering/product.md",
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:ROADMAP.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-starters/automation/AGENTS.md",
@@ -14538,6 +14892,9 @@
       "doc:knowledge/workflows/procedure-creation.json",
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:knowledge/workflows/release-preparation.json"
+    ],
+    "intentional": [
+      "doc:docs/repository-migration.md"
     ],
     "interactions": [
       "doc:standards/accessibility.md"
@@ -14632,6 +14989,9 @@
       "doc:agents/README.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/knowledge-health.md",
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/README.md",
@@ -14641,6 +15001,7 @@
       "doc:templates/memory/session-memory.md"
     ],
     "issue": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/workflows/incident-response.json",
       "doc:templates/project-memory/KNOWN_ISSUES.md",
       "doc:templates/project-starters/automation/KNOWN_ISSUES.md",
@@ -14653,6 +15014,7 @@
       "doc:templates/project-starters/web-app/KNOWN_ISSUES.md"
     ],
     "issues": [
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:templates/project-memory/KNOWN_ISSUES.md",
       "doc:templates/project-memory/RELEASE_NOTES.md",
       "doc:templates/project-starters/automation/KNOWN_ISSUES.md",
@@ -14731,6 +15093,9 @@
       "entity:document:templates/project-starters/internal-it/TESTING.md",
       "entity:document:templates/project-starters/internal-it/decisions.md",
       "entity:project:internal-it"
+    ],
+    "its": [
+      "doc:RELEASE_NOTES_v1.0.0.md"
     ],
     "itself": [
       "doc:knowledge/workflows/release-preparation.json"
@@ -14842,6 +15207,8 @@
       "doc:WORKFLOW.md",
       "doc:docs/cli-reference.md",
       "doc:docs/knowledge-health.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/README.md",
       "doc:knowledge/ai-workflows/README.md",
@@ -14940,7 +15307,9 @@
     ],
     "known": [
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:docs/knowledge-health.md",
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:templates/project-memory/KNOWN_ISSUES.md",
       "doc:templates/project-memory/RELEASE_NOTES.md",
       "doc:templates/project-starters/automation/KNOWN_ISSUES.md",
@@ -14973,6 +15342,7 @@
       "doc:standards/accessibility.md"
     ],
     "language": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:standards/documentation.md"
     ],
     "layer": [
@@ -15083,6 +15453,7 @@
     "library": [
       "doc:.kiro/steering/technology.md",
       "doc:ROADMAP.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:prompts/README.md"
     ],
     "lifecycle": [
@@ -15104,6 +15475,7 @@
     ],
     "limitations": [
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:agents/researcher.md"
     ],
     "line": [
@@ -15129,7 +15501,8 @@
     ],
     "live": [
       "doc:.kiro/README.md",
-      "doc:.kiro/specs/README.md"
+      "doc:.kiro/specs/README.md",
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "lived": [
       "doc:memory/permanent/README.md"
@@ -15210,8 +15583,14 @@
       "doc:knowledge/workflows/knowledge-maintenance.json",
       "entity:document:knowledge/workflows/knowledge-maintenance.json"
     ],
+    "major": [
+      "doc:RELEASE_NOTES_v1.0.0.md"
+    ],
     "make": [
       "doc:prompts/debug.prompt.md"
+    ],
+    "malformed": [
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "management": [
       "doc:references/vercel.md",
@@ -15296,6 +15675,10 @@
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:examples/mcp/server-config.example.json",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
@@ -15370,6 +15753,7 @@
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
@@ -15390,6 +15774,11 @@
       "doc:docs/feedback-and-audit.md",
       "doc:docs/knowledge-health.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/repository-migration.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/README.md",
       "doc:knowledge/ai-workflows/README.md",
@@ -15684,6 +16073,7 @@
       "entity:document:README.md",
       "entity:document:RELEASE_NOTES_v0.8.0.md",
       "entity:document:RELEASE_NOTES_v0.9.0.md",
+      "entity:document:RELEASE_NOTES_v1.0.0.md",
       "entity:document:ROADMAP.md",
       "entity:document:SECURITY.md",
       "entity:document:WORKFLOW.md",
@@ -15704,6 +16094,11 @@
       "entity:document:docs/feedback-and-audit.md",
       "entity:document:docs/knowledge-health.md",
       "entity:document:docs/memory-approval.md",
+      "entity:document:docs/multi-device-setup.md",
+      "entity:document:docs/repository-migration.md",
+      "entity:document:docs/v1.0-acceptance-criteria.md",
+      "entity:document:docs/v1.0-baseline-audit.md",
+      "entity:document:docs/v1.0-technical-debt.md",
       "entity:document:examples/mcp/README.md",
       "entity:document:knowledge/README.md",
       "entity:document:knowledge/ai-workflows/README.md",
@@ -15987,6 +16382,7 @@
       "doc:WORKFLOW.md",
       "doc:docs/cli-reference.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/workflows/bug-fix.json",
@@ -16105,6 +16501,7 @@
     ],
     "metadata": [
       "doc:CONTRIBUTING.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:prompts/create-skill.prompt.md"
     ],
     "method": [
@@ -16115,7 +16512,10 @@
       "doc:knowledge/professional-context/project-experience.md"
     ],
     "migration": [
-      "doc:CHANGELOG.md"
+      "doc:CHANGELOG.md",
+      "doc:docs/repository-migration.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "entity:document:docs/repository-migration.md"
     ],
     "minimization": [
       "doc:standards/security.md"
@@ -16175,9 +16575,12 @@
     "multi": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:CHANGELOG.md",
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/professional-context/project-experience.md",
-      "doc:standards/naming.md"
+      "doc:standards/naming.md",
+      "entity:document:docs/multi-device-setup.md"
     ],
     "must": [
       "doc:.github/instructions/prompts.instructions.md",
@@ -16387,6 +16790,7 @@
       "doc:CHANGELOG.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/README.md",
       "doc:knowledge/architecture/README.md",
@@ -16414,6 +16818,7 @@
       "doc:templates/project-starters/web-app/SESSION.md",
       "entity:document:RELEASE_NOTES_v0.8.0.md",
       "entity:document:RELEASE_NOTES_v0.9.0.md",
+      "entity:document:RELEASE_NOTES_v1.0.0.md",
       "entity:document:knowledge/research-notes/README.md",
       "entity:document:templates/project-memory/RELEASE_NOTES.md",
       "entity:document:templates/project-starters/automation/RELEASE_NOTES.md",
@@ -16478,6 +16883,7 @@
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/multi-device-setup.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -16506,6 +16912,8 @@
       "doc:.github/workflows/README.md",
       "doc:.kiro/README.md",
       "doc:.kiro/steering/README.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/multi-device-setup.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/professional-context/career-history.md"
     ],
@@ -16524,6 +16932,8 @@
     "only": [
       "doc:CLAUDE.md",
       "doc:agents/builder.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/professional-context/systems-and-platforms.md",
       "doc:prompts/execute.prompt.md",
       "doc:specs/phase-9-professional-context/requirements.md",
@@ -16558,6 +16968,9 @@
     "operable": [
       "doc:standards/accessibility.md"
     ],
+    "operating": [
+      "doc:RELEASE_NOTES_v1.0.0.md"
+    ],
     "operational": [
       "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
@@ -16582,6 +16995,7 @@
       "doc:CONTRIBUTING.md",
       "doc:SECURITY.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/multi-device-setup.md",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/incident-response.json",
       "doc:knowledge/workflows/knowledge-maintenance.json",
@@ -16631,6 +17045,7 @@
       "doc:WORKFLOW.md",
       "doc:docs/agent-orchestration.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/workflows/README.md",
@@ -16657,11 +17072,16 @@
       "doc:ARCHITECTURE.md",
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/professional-context/project-experience.md",
@@ -16747,6 +17167,7 @@
     ],
     "overview": [
       "doc:README.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/professional-context/overview.md",
       "doc:specs/phase-9-professional-context/design.md",
@@ -16767,7 +17188,9 @@
       "doc:GOVERNANCE.md"
     ],
     "ownership": [
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:agents/project-manager.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:standards/documentation.md"
     ],
@@ -16777,7 +17200,8 @@
     ],
     "pack": [
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md"
+      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/multi-device-setup.md"
     ],
     "package": [
       "doc:.agent/skills/communication-skill/README.md",
@@ -16808,6 +17232,9 @@
     ],
     "pass": [
       "doc:.agent/skills/communication-skill/SKILL.md"
+    ],
+    "passing": [
+      "doc:docs/v1.0-baseline-audit.md"
     ],
     "passwords": [
       "doc:SECURITY.md"
@@ -17025,9 +17452,14 @@
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:knowledge/workflows/release-preparation.json"
     ],
+    "portability": [
+      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/v1.0-baseline-audit.md"
+    ],
     "portable": [
       "doc:.kiro/steering/product.md",
-      "doc:ARCHITECTURE.md"
+      "doc:ARCHITECTURE.md",
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "power": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
@@ -17167,6 +17599,9 @@
       "doc:agents/deployment-manager.md",
       "doc:knowledge/workflows/release-preparation.json"
     ],
+    "prepares": [
+      "doc:RELEASE_NOTES_v1.0.0.md"
+    ],
     "present": [
       "doc:knowledge/professional-context/career-history.md"
     ],
@@ -17214,6 +17649,7 @@
     ],
     "privacy": [
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md"
@@ -17261,6 +17697,7 @@
       "entity:document:.kiro/steering/product.md"
     ],
     "production": [
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:references/vercel.md"
     ],
@@ -17277,6 +17714,7 @@
       "doc:SECURITY.md",
       "doc:WORKFLOW.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/professional-context/career-history.md",
       "doc:knowledge/professional-context/expertise.md",
@@ -17309,6 +17747,7 @@
     "profile": [
       "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/professional-context/overview.md",
       "doc:profile/README.md",
       "doc:profile/felipe-rojas.expertise.json",
@@ -17897,6 +18336,8 @@
     ],
     "python": [
       "doc:.kiro/steering/technology.md",
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:templates/project-starters/python/AGENTS.md",
       "doc:templates/project-starters/python/ARCHITECTURE.md",
       "doc:templates/project-starters/python/CHANGELOG.md",
@@ -17940,6 +18381,7 @@
       "entity:document:prompts/qa.prompt.md"
     ],
     "quality": [
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:memory/permanent/preferences/README.md"
     ],
     "query": [
@@ -17982,6 +18424,7 @@
       "doc:templates/project-starters/web-app/HANDOFF.md"
     ],
     "readiness": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:prompts/deploy.prompt.md",
       "doc:references/workflow-examples.md"
     ],
@@ -18146,6 +18589,7 @@
       "entity:project:readme-md"
     ],
     "ready": [
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:prompts/plan.prompt.md"
     ],
     "reason": [
@@ -18163,6 +18607,8 @@
     "recommended": [
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/personal/analytical/SKILL.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:references/README.md",
       "doc:references/canva.md",
       "doc:references/chatgpt.md",
@@ -18182,6 +18628,7 @@
       "doc:standards/testing.md"
     ],
     "records": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:memory/README.md",
       "doc:memory/archive/README.md",
       "doc:memory/decisions/README.md",
@@ -18224,6 +18671,8 @@
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:README.md",
+      "doc:docs/repository-migration.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/best-practices/README.md",
@@ -18331,6 +18780,7 @@
       "doc:templates/memory/session-memory.md"
     ],
     "relationships": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:profile/README.md"
     ],
     "relative": [
@@ -18341,9 +18791,11 @@
       "doc:CHANGELOG.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/workflows/release-preparation.json",
       "doc:standards/release-management.md",
@@ -18358,6 +18810,7 @@
       "doc:templates/project-starters/web-app/RELEASE_NOTES.md",
       "entity:document:RELEASE_NOTES_v0.8.0.md",
       "entity:document:RELEASE_NOTES_v0.9.0.md",
+      "entity:document:RELEASE_NOTES_v1.0.0.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/workflows/release-preparation.json",
       "entity:document:standards/release-management.md",
@@ -18389,6 +18842,9 @@
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "remediation": [
+      "doc:docs/v1.0-baseline-audit.md"
     ],
     "removal": [
       "doc:.agent/skills/communication-skill/SKILL.md"
@@ -18441,12 +18897,20 @@
       "doc:CLAUDE.md",
       "doc:profile/README.md"
     ],
+    "reports": [
+      "doc:docs/v1.0-technical-debt.md"
+    ],
     "repository": [
       "doc:.kiro/steering/README.md",
       "doc:AGENTS.md",
       "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/repository-migration.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/README.md",
@@ -18455,6 +18919,7 @@
       "doc:references/codex.md",
       "doc:references/copilot.md",
       "doc:specs/phase-9-professional-context/tasks.md",
+      "entity:document:docs/repository-migration.md",
       "entity:document:generated/repository-index.json"
     ],
     "reproduce": [
@@ -18627,7 +19092,8 @@
       "doc:.github/instructions/skills.instructions.md"
     ],
     "requiring": [
-      "doc:.agent/skills/system/using-superpowers/SKILL.md"
+      "doc:.agent/skills/system/using-superpowers/SKILL.md",
+      "doc:docs/multi-device-setup.md"
     ],
     "research": [
       "doc:.agent/skills/design/browser/SKILL.md",
@@ -18653,6 +19119,7 @@
       "doc:.kiro/specs/README.md"
     ],
     "resolution": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:templates/memory/lesson-memory.md"
@@ -18719,6 +19186,8 @@
       "doc:profile/README.md"
     ],
     "results": [
+      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:prompts/qa.prompt.md",
       "doc:standards/testing.md",
       "doc:templates/project-memory/TESTING.md",
@@ -18810,6 +19279,7 @@
       "doc:GOVERNANCE.md",
       "doc:WORKFLOW.md",
       "doc:docs/knowledge-health.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/release-preparation.json",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
@@ -18871,6 +19341,9 @@
     ],
     "rhythm": [
       "doc:.agent/skills/communication-skill/SKILL.md"
+    ],
+    "richer": [
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "risk": [
       "doc:CLAUDE.md",
@@ -18949,6 +19422,7 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/professional-context/career-history.md",
       "doc:profile/README.md",
       "doc:references/canva.md",
@@ -19037,6 +19511,7 @@
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "run": [
+      "doc:docs/multi-device-setup.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
@@ -19058,10 +19533,14 @@
     "safety": [
       "doc:knowledge/architecture/phase-3-knowledge-graph.md"
     ],
+    "same": [
+      "doc:docs/multi-device-setup.md"
+    ],
     "sample": [
       "doc:examples/mcp/README.md"
     ],
     "sanitization": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "scaffold": [
@@ -19138,6 +19617,7 @@
     ],
     "scripts": [
       "doc:docs/cli-reference.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/workflows/README.md",
       "doc:scripts/README.md",
       "doc:scripts/knowledge_graph/README.md",
@@ -19180,6 +19660,7 @@
       "doc:CHANGELOG.md",
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:agents/security-reviewer.md",
@@ -19260,6 +19741,7 @@
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:standards/accessibility.md",
@@ -19328,6 +19810,7 @@
     ],
     "sessions": [
       "doc:docs/agent-orchestration.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:memory/permanent/README.md",
       "doc:memory/sessions/README.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
@@ -19336,7 +19819,13 @@
     ],
     "setup": [
       "doc:.agent/skills/communication-skill/README.md",
-      "doc:CHANGELOG.md"
+      "doc:CHANGELOG.md",
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/v1.0-technical-debt.md",
+      "entity:document:docs/multi-device-setup.md"
+    ],
+    "shadows": [
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "share": [
       "doc:.agent/skills/references/powerapps-yaml-format.md"
@@ -19513,6 +20002,7 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
+      "doc:docs/multi-device-setup.md",
       "doc:examples/mcp/README.md",
       "doc:prompts/create-skill.prompt.md",
       "doc:prompts/document.prompt.md",
@@ -19747,12 +20237,14 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "stale": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/workflows/knowledge-maintenance.json",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "standard": [
       "doc:.kiro/steering/technology.md",
       "doc:README.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:standards/accessibility.md",
       "doc:standards/code-review.md",
       "doc:standards/documentation.md",
@@ -20086,6 +20578,7 @@
     ],
     "state": [
       "doc:.kiro/specs/README.md",
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/project-memory/ARCHITECTURE.md",
@@ -20105,7 +20598,9 @@
     ],
     "status": [
       "doc:README.md",
-      "doc:agents/project-manager.md"
+      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:agents/project-manager.md",
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "stdio": [
       "doc:examples/mcp/README.md"
@@ -20159,6 +20654,7 @@
     ],
     "store": [
       "doc:SECURITY.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:memory/permanent/README.md",
       "doc:memory/permanent/principles/README.md",
       "doc:memory/projects/README.md",
@@ -20352,6 +20848,7 @@
       "doc:.agent/skills/system/using-superpowers/README.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:ARCHITECTURE.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "entity:document:.agent/skills/system/README.md",
       "entity:document:.agent/skills/system/superpower/README.md",
       "entity:document:.agent/skills/system/testing/README.md",
@@ -20370,6 +20867,9 @@
       "doc:knowledge/professional-context/responsibilities.md",
       "doc:knowledge/professional-context/systems-and-platforms.md",
       "entity:document:knowledge/professional-context/systems-and-platforms.md"
+    ],
+    "table": [
+      "doc:docs/v1.0-acceptance-criteria.md"
     ],
     "tagging": [
       "doc:specs/phase-9-professional-context/tasks.md"
@@ -20438,12 +20938,17 @@
       "entity:document:templates/specifications/tasks.md"
     ],
     "team": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:profile/README.md"
     ],
     "technical": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:CHANGELOG.md",
-      "doc:knowledge/professional-context/career-history.md"
+      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
+      "doc:knowledge/professional-context/career-history.md",
+      "entity:document:docs/v1.0-technical-debt.md"
     ],
     "technology": [
       "doc:.kiro/steering/technology.md",
@@ -20907,11 +21412,14 @@
       "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/README.md",
       "doc:.kiro/steering/workflow.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:agents/README.md",
       "doc:agents/reviewer.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/knowledge-health.md",
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -20987,6 +21495,7 @@
       "doc:.agent/skills/system/testing/README.md",
       "doc:.agent/skills/system/using-superpowers/README.md",
       "doc:.github/README.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
@@ -21074,6 +21583,7 @@
       "doc:.github/workflows/README.md",
       "doc:CONTRIBUTING.md",
       "doc:docs/knowledge-health.md",
+      "doc:docs/multi-device-setup.md",
       "doc:knowledge/professional-context/career-history.md",
       "doc:knowledge/professional-context/systems-and-platforms.md",
       "doc:knowledge/workflows/README.md",
@@ -21169,7 +21679,8 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "tracked": [
-      "doc:docs/continuous-learning.md"
+      "doc:docs/continuous-learning.md",
+      "doc:docs/v1.0-technical-debt.md"
     ],
     "tracking": [
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
@@ -21195,6 +21706,7 @@
       "doc:knowledge/workflows/incident-response.json"
     ],
     "trigger": [
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/workflows/bug-fix.json",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/feature-development.json",
@@ -21206,6 +21718,7 @@
     ],
     "troubleshooting": [
       "doc:docs/feedback-and-audit.md",
+      "doc:docs/multi-device-setup.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:memory/lessons/README.md",
@@ -21281,6 +21794,7 @@
       "doc:templates/memory/README.md"
     ],
     "unified": [
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "uniqueness": [
@@ -21343,6 +21857,7 @@
       "entity:document:knowledge/workflows/documentation-update.json"
     ],
     "updated": [
+      "doc:docs/repository-migration.md",
       "doc:profile/felipe-rojas.expertise.json"
     ],
     "updates": [
@@ -21358,6 +21873,7 @@
       "doc:templates/specifications/retrospective.md"
     ],
     "upgrade": [
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/professional-context/project-experience.md"
     ],
     "upload": [
@@ -21410,6 +21926,9 @@
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/testing-plan.md"
     ],
+    "username": [
+      "doc:docs/multi-device-setup.md"
+    ],
     "users": [
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md"
@@ -21447,7 +21966,15 @@
       "entity:document:references/v0.md"
     ],
     "v1": [
-      "doc:CHANGELOG.md"
+      "doc:CHANGELOG.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-technical-debt.md",
+      "entity:document:RELEASE_NOTES_v1.0.0.md",
+      "entity:document:docs/v1.0-acceptance-criteria.md",
+      "entity:document:docs/v1.0-baseline-audit.md",
+      "entity:document:docs/v1.0-technical-debt.md"
     ],
     "valid": [
       "doc:CONTRIBUTING.md"
@@ -21476,11 +22003,15 @@
       "doc:README.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:agents/qa.md",
       "doc:config/ai-os.example.json",
       "doc:docs/cli-reference.md",
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-baseline-audit.md",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -21529,8 +22060,12 @@
       "entity:document:references/vercel.md"
     ],
     "verification": [
+      "doc:docs/repository-migration.md",
       "doc:examples/mcp/README.md",
       "doc:standards/release-management.md"
+    ],
+    "verified": [
+      "doc:docs/v1.0-acceptance-criteria.md"
     ],
     "verify": [
       "doc:specs/phase-9-professional-context/tasks.md"
@@ -21543,6 +22078,7 @@
       "doc:ROADMAP.md",
       "doc:agents.json",
       "doc:config/ai-os.example.json",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:memory/registry.json",
       "doc:profile/felipe-rojas.expertise.json",
@@ -21580,6 +22116,7 @@
     "vs": [
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.github/instructions/README.md",
+      "doc:docs/multi-device-setup.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:references/copilot.md"
@@ -21680,6 +22217,7 @@
       "doc:.agent/skills/thinking/SKILL.md",
       "doc:CLAUDE.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/v1.0-acceptance-criteria.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:references/codex.md",
       "doc:references/copilot.md",
@@ -21711,7 +22249,11 @@
       "doc:templates/memory/project-memory.md",
       "doc:templates/memory/session-memory.md"
     ],
+    "window": [
+      "doc:docs/v1.0-technical-debt.md"
+    ],
     "windows": [
+      "doc:docs/multi-device-setup.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/professional-context/project-experience.md"
     ],
@@ -21749,6 +22291,7 @@
     ],
     "without": [
       "doc:.github/instructions/skills.instructions.md",
+      "doc:docs/multi-device-setup.md",
       "doc:memory/archive/README.md",
       "doc:prompts/execute.prompt.md",
       "doc:prompts/plan.prompt.md"
@@ -21776,6 +22319,7 @@
       "doc:ROADMAP.md",
       "doc:agents/README.md",
       "doc:docs/continuous-learning.md",
+      "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/professional-context/overview.md",
       "doc:memory/sessions/README.md",

@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-26T17:59:43Z",
+  "generatedAt": "2026-08-26T18:13:43Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 369,
-    "edges": 639,
+    "nodes": 375,
+    "edges": 661,
     "nodesByType": {
       "concept": 2,
-      "document": 330,
+      "document": 336,
       "memory": 5,
       "platform": 5,
       "profile": 1,
@@ -19,10 +19,10 @@
       "belongs_to": 2,
       "contains": 129,
       "generated_from": 14,
-      "references": 206,
-      "related_to": 136,
+      "references": 208,
+      "related_to": 145,
       "supports": 4,
-      "uses": 148
+      "uses": 159
     }
   },
   "nodes": [
@@ -459,6 +459,15 @@
       }
     },
     {
+      "id": "document:RELEASE_NOTES_v1.0.0.md",
+      "type": "document",
+      "name": "Release Notes V1.0.0",
+      "sourcePath": "RELEASE_NOTES_v1.0.0.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "document:ROADMAP.md",
       "type": "document",
       "name": "Roadmap",
@@ -652,6 +661,51 @@
       "type": "document",
       "name": "Memory Approval",
       "sourcePath": "docs/memory-approval.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/multi-device-setup.md",
+      "type": "document",
+      "name": "Multi Device Setup",
+      "sourcePath": "docs/multi-device-setup.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/repository-migration.md",
+      "type": "document",
+      "name": "Repository Migration",
+      "sourcePath": "docs/repository-migration.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/v1.0-acceptance-criteria.md",
+      "type": "document",
+      "name": "V1.0 Acceptance Criteria",
+      "sourcePath": "docs/v1.0-acceptance-criteria.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/v1.0-baseline-audit.md",
+      "type": "document",
+      "name": "V1.0 Baseline Audit",
+      "sourcePath": "docs/v1.0-baseline-audit.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/v1.0-technical-debt.md",
+      "type": "document",
+      "name": "V1.0 Technical Debt",
+      "sourcePath": "docs/v1.0-technical-debt.md",
       "metadata": {
         "extension": ".md"
       }
@@ -5144,6 +5198,24 @@
       }
     },
     {
+      "id": "edge:ed60ed919da33a89",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/multi-device-setup.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:2b173fb046f4691c",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/v1.0-acceptance-criteria.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:6f00b10322cded96",
       "type": "references",
       "from": "document:README.md",
@@ -6782,6 +6854,24 @@
       }
     },
     {
+      "id": "edge:12f34bf206757a0d",
+      "type": "related_to",
+      "from": "document:RELEASE_NOTES_v1.0.0.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:4d7e729e8302d153",
+      "type": "related_to",
+      "from": "document:RELEASE_NOTES_v1.0.0.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:683de0d52e3e7a73",
       "type": "related_to",
       "from": "document:ROADMAP.md",
@@ -7020,6 +7110,69 @@
       "type": "related_to",
       "from": "document:docs/memory-approval.md",
       "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:4d3ca0f8879759f4",
+      "type": "related_to",
+      "from": "document:docs/multi-device-setup.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:35518e38cc386969",
+      "type": "related_to",
+      "from": "document:docs/multi-device-setup.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:0b00c83070bbe1cb",
+      "type": "related_to",
+      "from": "document:docs/v1.0-acceptance-criteria.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:d088a592ce6d2eeb",
+      "type": "related_to",
+      "from": "document:docs/v1.0-acceptance-criteria.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:75880e04fb54fad7",
+      "type": "related_to",
+      "from": "document:docs/v1.0-baseline-audit.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:6a9804c586b0e981",
+      "type": "related_to",
+      "from": "document:docs/v1.0-baseline-audit.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:a1826226c8fe0b14",
+      "type": "related_to",
+      "from": "document:docs/v1.0-technical-debt.md",
+      "to": "concept:validation",
       "metadata": {
         "source": "document_text"
       }
@@ -8159,6 +8312,24 @@
       }
     },
     {
+      "id": "edge:0c55fc41bb2ae659",
+      "type": "uses",
+      "from": "document:RELEASE_NOTES_v1.0.0.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:7364cfb7f552d706",
+      "type": "uses",
+      "from": "document:RELEASE_NOTES_v1.0.0.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:5d454adbb2f28c11",
       "type": "uses",
       "from": "document:ROADMAP.md",
@@ -8298,6 +8469,87 @@
       "type": "uses",
       "from": "document:docs/memory-approval.md",
       "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:a8cefc8c419412aa",
+      "type": "uses",
+      "from": "document:docs/multi-device-setup.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:0eba5ab5d836d97d",
+      "type": "uses",
+      "from": "document:docs/multi-device-setup.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:d029f7060d7605b6",
+      "type": "uses",
+      "from": "document:docs/repository-migration.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:3f48503a173cddba",
+      "type": "uses",
+      "from": "document:docs/v1.0-acceptance-criteria.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:93d7d714cbdca563",
+      "type": "uses",
+      "from": "document:docs/v1.0-acceptance-criteria.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:d1a0bce628c7500f",
+      "type": "uses",
+      "from": "document:docs/v1.0-baseline-audit.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:f3a1d71e634804a2",
+      "type": "uses",
+      "from": "document:docs/v1.0-baseline-audit.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:4b2fea663239472f",
+      "type": "uses",
+      "from": "document:docs/v1.0-technical-debt.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:e2ab18e66313b019",
+      "type": "uses",
+      "from": "document:docs/v1.0-technical-debt.md",
+      "to": "tool:mcp",
       "metadata": {
         "source": "document_text"
       }
@@ -9174,16 +9426,6 @@
     {
       "source": "README.md",
       "target": ".agent/skills/build/web-design-guidelines/SKILL.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": "docs/multi-device-setup.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": "docs/v1.0-acceptance-criteria.md",
       "kind": "markdown"
     },
     {
