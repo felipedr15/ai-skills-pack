@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-26T18:13:47Z",
+  "generatedAt": "2026-08-26T22:16:10Z",
   "generator": "ai-os-orchestration",
   "overallScore": 83,
   "categoryScores": {
@@ -169,6 +169,7 @@
     "document:.github/instructions/skills.instructions.md",
     "document:.github/instructions/specifications.instructions.md",
     "document:.github/instructions/templates.instructions.md",
+    "document:.kiro/settings/mcp.json",
     "document:config/ai-os.example.json",
     "document:examples/mcp/server-config.example.json",
     "document:generated/profile-index.json",

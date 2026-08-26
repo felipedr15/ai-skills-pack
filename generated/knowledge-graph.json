@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-26T18:13:43Z",
+  "generatedAt": "2026-08-26T22:16:05Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 375,
+    "nodes": 376,
     "edges": 661,
     "nodesByType": {
       "concept": 2,
-      "document": 336,
+      "document": 337,
       "memory": 5,
       "platform": 5,
       "profile": 1,
@@ -312,6 +312,15 @@
       "sourcePath": ".kiro/README.md",
       "metadata": {
         "extension": ".md"
+      }
+    },
+    {
+      "id": "document:.kiro/settings/mcp.json",
+      "type": "document",
+      "name": "Mcp",
+      "sourcePath": ".kiro/settings/mcp.json",
+      "metadata": {
+        "extension": ".json"
       }
     },
     {

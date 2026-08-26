@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "ai-os": {
+      "command": "python",
+      "args": [
+        "C:/Users/Lupe/Documents/GitHub/ai-skills-pack/scripts/mcp-server.py"
+      ],
+      "disabled": false
+    }
+  }
+}

@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-26T18:13:46Z",
+  "generatedAt": "2026-08-26T22:16:08Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 351,
-    "entities": 375,
-    "terms": 1258,
+    "documents": 352,
+    "entities": 376,
+    "terms": 1259,
     "relationships": 661
   },
   "documents": [
@@ -916,6 +916,17 @@
         "Kiro Guidance"
       ],
       "snippet": "Reusable steering context; behavior depends on the installed Kiro product and configuration. Canonical specifications live under [specs/](../specs/README.md), not here — see [.kiro/specs/README.md](sp",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:.kiro/settings/mcp.json",
+      "sourcePath": ".kiro/settings/mcp.json",
+      "title": "mcp",
+      "category": "document",
+      "headings": [
+        "mcpServers"
+      ],
+      "snippet": "",
       "frontMatter": {}
     },
     {
@@ -6425,6 +6436,16 @@
       "sourcePath": ".kiro/README.md",
       "metadata": {
         "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:.kiro/settings/mcp.json",
+      "nodeId": "document:.kiro/settings/mcp.json",
+      "type": "document",
+      "name": "Mcp",
+      "sourcePath": ".kiro/settings/mcp.json",
+      "metadata": {
+        "extension": ".json"
       }
     },
     {
@@ -12990,6 +13011,7 @@
       "entity:document:.github/instructions/templates.instructions.md",
       "entity:document:.github/workflows/README.md",
       "entity:document:.kiro/README.md",
+      "entity:document:.kiro/settings/mcp.json",
       "entity:document:.kiro/specs/README.md",
       "entity:document:.kiro/specs/phase-9-professional-context/README.md",
       "entity:document:.kiro/steering/README.md",
@@ -15107,6 +15129,7 @@
       "doc:.github/copilot-instructions.md",
       "doc:.github/instructions/prompts.instructions.md",
       "doc:.github/instructions/skills.instructions.md",
+      "doc:.kiro/settings/mcp.json",
       "doc:.kiro/steering/technology.md",
       "doc:agents.json",
       "doc:agents/README.md",
@@ -15131,6 +15154,7 @@
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json",
       "doc:skills.json",
+      "entity:document:.kiro/settings/mcp.json",
       "entity:document:agents.json",
       "entity:document:config/ai-os.example.json",
       "entity:document:examples/mcp/server-config.example.json",
@@ -15178,6 +15202,7 @@
     "kiro": [
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.kiro/README.md",
+      "doc:.kiro/settings/mcp.json",
       "doc:.kiro/specs/README.md",
       "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/README.md",
@@ -15190,6 +15215,7 @@
       "doc:specs/README.md",
       "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:.kiro/README.md",
+      "entity:document:.kiro/settings/mcp.json",
       "entity:document:.kiro/specs/README.md",
       "entity:document:.kiro/specs/phase-9-professional-context/README.md",
       "entity:document:.kiro/steering/README.md",
@@ -15671,6 +15697,7 @@
       "doc:references/mcp.md"
     ],
     "mcp": [
+      "doc:.kiro/settings/mcp.json",
       "doc:ROADMAP.md",
       "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
@@ -15686,6 +15713,7 @@
       "doc:specs/phase-9-professional-context/design.md",
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:specs/phase-9-professional-context/tasks.md",
+      "entity:document:.kiro/settings/mcp.json",
       "entity:document:examples/mcp/README.md",
       "entity:document:examples/mcp/server-config.example.json",
       "entity:document:knowledge/architecture/phase-6-mcp-integration.md",
@@ -19770,6 +19798,7 @@
       "entity:document:examples/mcp/server-config.example.json"
     ],
     "servers": [
+      "doc:.kiro/settings/mcp.json",
       "doc:examples/mcp/server-config.example.json"
     ],
     "serves": [
@@ -19816,6 +19845,10 @@
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "entity:document:memory/sessions/README.md",
       "entity:memory:session-memory-engine-example-001"
+    ],
+    "settings": [
+      "doc:.kiro/settings/mcp.json",
+      "entity:document:.kiro/settings/mcp.json"
     ],
     "setup": [
       "doc:.agent/skills/communication-skill/README.md",
