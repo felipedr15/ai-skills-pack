@@ -2,15 +2,15 @@
 
 > Generated from repository source files. This file is not a source of truth.
 
-Generated at: 2026-07-17T22:30:47Z
+Generated at: 2026-08-26T17:59:43Z
 
-Nodes: 367
-Edges: 635
+Nodes: 369
+Edges: 639
 
 ## Node Counts By Type
 
 - concept: 2
-- document: 328
+- document: 330
 - memory: 5
 - platform: 5
 - profile: 1
@@ -26,11 +26,11 @@ Edges: 635
 - references: 206
 - related_to: 136
 - supports: 4
-- uses: 144
+- uses: 148
 
 ## Unresolved References
 
-Count: 9
+Count: 11
 
 - markdown: .kiro/specs/phase-9-professional-context/README.md -> specs/phase-9-professional-context
 - markdown: README.md -> .agent/skills/build/creator/SKILL.md
@@ -39,13 +39,15 @@ Count: 9
 - markdown: README.md -> .agent/skills/build/vercel-agent/SKILL.md
 - markdown: README.md -> .agent/skills/build/vercel-react/SKILL.md
 - markdown: README.md -> .agent/skills/build/web-design-guidelines/SKILL.md
+- markdown: README.md -> docs/multi-device-setup.md
+- markdown: README.md -> docs/v1.0-acceptance-criteria.md
 - markdown: README.md -> generated/README.md
 - markdown: README.md -> generated/memory-index.md
 
 ## Relationship Overview
 
 - references: 206
-- uses: 144
+- uses: 148
 - related_to: 136
 - contains: 129
 - generated_from: 14

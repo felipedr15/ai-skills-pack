@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-17T22:30:51Z",
+  "generatedAt": "2026-08-26T17:59:47Z",
   "generator": "ai-os-orchestration",
   "overallScore": 83,
   "categoryScores": {
@@ -148,6 +148,16 @@
     {
       "source": "README.md",
       "target": ".agent/skills/build/web-design-guidelines/SKILL.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/multi-device-setup.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/v1.0-acceptance-criteria.md",
       "kind": "markdown"
     },
     {

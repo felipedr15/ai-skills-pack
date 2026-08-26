@@ -2,38 +2,38 @@
 
 > Generated from repository state. This file is not a source of truth.
 
-Version: 0.9.0
-Generated at: 2026-07-17T22:30:52Z
+Version: 1.0.0
+Generated at: 2026-08-26T18:11:42Z
 Generator: ai-os-release
 
 ## Repository
 
-- File count: 376
+- File count: 378
 
 ## Artifacts
 
 - `generated/skills.json` — present (11115 bytes)
 - `generated/skills.md` — present (2356 bytes)
-- `generated/repository-index.json` — present (76965 bytes)
-- `generated/repository-map.md` — present (16523 bytes)
+- `generated/repository-index.json` — present (77404 bytes)
+- `generated/repository-map.md` — present (16632 bytes)
 - `generated/memory-index.json` — present (4559 bytes)
 - `generated/memory-index.md` — present (1305 bytes)
 - `generated/profile-index.json` — present (340 bytes)
 - `generated/profile-index.md` — present (376 bytes)
-- `generated/knowledge-graph.json` — present (239878 bytes)
-- `generated/knowledge-graph.md` — present (1225 bytes)
-- `generated/discovery-index.json` — present (857571 bytes)
+- `generated/knowledge-graph.json` — present (241604 bytes)
+- `generated/knowledge-graph.md` — present (1336 bytes)
+- `generated/discovery-index.json` — present (874639 bytes)
 - `generated/discovery-index.md` — present (351 bytes)
 - `generated/agent-registry.json` — present (13553 bytes)
 - `generated/agent-registry.md` — present (4375 bytes)
 - `generated/workflow-registry.json` — present (23378 bytes)
 - `generated/workflow-registry.md` — present (6035 bytes)
-- `generated/knowledge-health.json` — present (7724 bytes)
+- `generated/knowledge-health.json` — present (7956 bytes)
 - `generated/knowledge-health.md` — present (2213 bytes)
 - `generated/work-activity.json` — present (3662 bytes)
 - `generated/work-activity.md` — present (914 bytes)
-- `generated/dashboard.html` — present (70853 bytes)
-- `generated/dashboard-data.json` — present (13314 bytes)
+- `generated/dashboard.html` — present (70854 bytes)
+- `generated/dashboard-data.json` — present (13315 bytes)
 
 ## Components
 
