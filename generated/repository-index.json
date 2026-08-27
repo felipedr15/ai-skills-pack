@@ -1233,8 +1233,8 @@
     {
       "path": "scripts/ai-os.py",
       "category": "scripts",
-      "size": 55457,
-      "sha256": "6bfa35b17fd44b597c7f46c955760f20b8347e20adfbf82b84b616dd6ec22b06"
+      "size": 56726,
+      "sha256": "13277902561e176daf7627805dd79f87384a765aa9f9c40e0458658873244327"
     },
     {
       "path": "scripts/ai_os_service/__init__.py",
@@ -1413,8 +1413,8 @@
     {
       "path": "scripts/index-repository.py",
       "category": "scripts",
-      "size": 3991,
-      "sha256": "45e8163184c6e0ab4f378d88cee2f3c19c056b64ae79c9fab581b955fb6efe4c"
+      "size": 4308,
+      "sha256": "07d7975ccf3e1c2e54015a3fb6405e4227a3b4672b75e8cb248fb30427f95540"
     },
     {
       "path": "scripts/knowledge-build.py",
@@ -1485,8 +1485,8 @@
     {
       "path": "scripts/mcp-server.py",
       "category": "scripts",
-      "size": 573,
-      "sha256": "6da29b6957f4ce799ee1395a97f39b2111a1e6a618a43cee09feaa68884fe5bf"
+      "size": 901,
+      "sha256": "9584a8d6339f8e6501573ba5378c283044c4feb73c1111b096a590766665b365"
     },
     {
       "path": "scripts/mcp-smoke-test.py",
@@ -1569,8 +1569,8 @@
     {
       "path": "scripts/orchestration/approvals.py",
       "category": "scripts",
-      "size": 4246,
-      "sha256": "ed951ff1d59b9c4155deb81411abe533f4ffce61f08f5858108accaea85a5f3a"
+      "size": 4799,
+      "sha256": "a48f0105fcec4980060e28066d2ddac9a7e55288acd0379776fb8bf53b620961"
     },
     {
       "path": "scripts/orchestration/audit.py",
@@ -1647,8 +1647,8 @@
     {
       "path": "scripts/orchestration/validate.py",
       "category": "scripts",
-      "size": 9213,
-      "sha256": "6b705513bd44d6d339b32717bc7115d3609fff174d0c57dfb9c5b027bf7de52e"
+      "size": 9260,
+      "sha256": "6b65a963bf946c929e1bb80d2b067a68106085406a6a7ffd64b62e95552d89db"
     },
     {
       "path": "scripts/orchestration/workflow.py",
@@ -1725,8 +1725,8 @@
     {
       "path": "scripts/release/status.py",
       "category": "scripts",
-      "size": 1898,
-      "sha256": "f77ea36da9bbc15969872512760343f90f08afde377aa31c15961d740426b1fd"
+      "size": 4203,
+      "sha256": "8d1cb6bbc79452146bcda5c5e0dc1ca60bb7cd5c4642dc3668841f8a5425af03"
     },
     {
       "path": "scripts/release/utils.py",

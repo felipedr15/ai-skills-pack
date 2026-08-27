@@ -1,30 +1,68 @@
-name: Validate AI OS
+name: AI OS CI
+
 on:
   push:
+    branches: [main]
   pull_request:
+    branches: [main]
+  workflow_dispatch:
+
 permissions:
   contents: read
+
+concurrency:
+  group: ai-os-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  validate:
+  repository-validation:
+    name: Repository Validation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
-      - name: Check generated skill registry
-        run: python scripts/generate-skill-registry.py --check
-      - name: Check generated repository index
-        run: python scripts/index-repository.py --check
-      - name: Check generated memory index
-        run: python scripts/generate-memory-index.py --check
-      - name: Check generated knowledge graph
-        run: python scripts/generate-knowledge-graph.py --check
-      - name: Validate generated knowledge graph
-        run: python scripts/validate-knowledge-graph.py
-      - name: Validate memory security
-        run: python scripts/validate-memory-security.py
-      - name: Run unified validation
+          python-version: "3.12"
+      - name: Validate generated artifacts and repository rules
         run: python scripts/validate-all.py
+
+  unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
+
+  mcp-smoke:
+    name: MCP Smoke Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run MCP smoke test
+        run: python scripts/ai-os.py mcp check
+
+  release-readiness:
+    name: Release Readiness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run release check
+        run: python scripts/ai-os.py release-check
+
+  diff-hygiene:
+    name: Diff Hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check whitespace
+        run: git diff --check

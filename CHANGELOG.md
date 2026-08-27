@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.0.0] - 2026-08-26
+
+### Added
+- Formal v1.0 baseline audit, technical-debt classification, repository migration notes, multi-device setup guide, and release acceptance criteria.
+- `AI_OS_HOME` support for the MCP launcher with safe fallback to the repository containing `scripts/mcp-server.py`.
+- `python scripts/ai-os.py mcp check` and `python scripts/ai-os.py mcp start` convenience commands.
+- Real generated-artifact freshness checks in the unified `status` command.
+- Hardened GitHub Actions workflow with explicit `main` push/PR triggers, manual dispatch, concurrency cancellation, pinned Python 3.12, named validation jobs, MCP smoke tests, release readiness, and whitespace hygiene.
+
+### Changed
+- Prepared version metadata for `v1.0.0`.
+- Updated canonical repository references to `felipedr15/ai-skills-pack`.
+- Updated MCP examples to avoid canonical committed absolute user paths.
+- Updated status output to report subsystem health and `Overall: HEALTHY` or `Overall: NOT READY`.
+
+### Fixed
+- Malformed approval records no longer crash normal approval read/update paths with unsafe direct-key assumptions.
+- Release status no longer reports readiness based only on generated file existence.
+
+### Security
+- Preserved local-first, privacy-first, read-only MCP behavior.
+- Preserved explicit approval gates and no automatic memory or professional-profile promotion.
+
 ## [0.9.0] - 2026-07-17
 
 ### Added

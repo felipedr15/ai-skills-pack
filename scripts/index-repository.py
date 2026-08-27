@@ -38,6 +38,21 @@ def is_excluded(path):
     return name in EXCLUDED_NAMES or name.startswith(".env.") or name.lower().endswith(tuple(EXCLUDED_SUFFIXES)) or name.endswith("~")
 
 
+def canonical_bytes(path):
+    """Return deterministic bytes for repository indexing across platforms."""
+    data = path.read_bytes()
+
+    if b"\x00" in data:
+        return data
+
+    try:
+        data.decode("utf-8")
+    except UnicodeDecodeError:
+        return data
+
+    return data.replace(b"\r\n", b"\n")
+
+
 def build_index(root=ROOT):
     entries = []
     for path in root.rglob("*"):
@@ -47,7 +62,7 @@ def build_index(root=ROOT):
         category = category_for(rel)
         if not category or is_excluded(rel):
             continue
-        data = path.read_bytes()
+        data = canonical_bytes(path)
         entries.append({"path": rel.as_posix(), "category": category, "size": len(data), "sha256": hashlib.sha256(data).hexdigest()})
     entries.sort(key=lambda item: (item["category"], item["path"]))
     counts = {category: sum(item["category"] == category for item in entries) for category in CATEGORIES}

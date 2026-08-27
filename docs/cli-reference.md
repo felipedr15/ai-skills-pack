@@ -10,16 +10,18 @@ scripts (`scripts/generate-*.py`, `scripts/validate-*.py`, etc.) exist for direc
 | Command | What it does | Example |
 |---|---|---|
 | `version` | Print the current AI OS version (reads `VERSION`). | `python scripts/ai-os.py version` |
-| `status` | Show repository status: version, config validity, dashboard/MCP availability. | `python scripts/ai-os.py status --json` |
+| `status` | Show subsystem health backed by generated-artifact freshness checks. | `python scripts/ai-os.py status --json` |
 | `doctor` | Run environment diagnostics (Python version, Git, artifacts present, port availability). | `python scripts/ai-os.py doctor` |
 | `bootstrap` | One-command setup for a fresh clone (generates artifacts, checks environment). | `python scripts/ai-os.py bootstrap` |
 | `validate` | Run unified validation (wraps `validate-all.py`). | `python scripts/ai-os.py validate` |
 | `test` | Run the unit test suite. | `python scripts/ai-os.py test` |
 | `build` / `generate` | Generate all derived artifacts in dependency order. | `python scripts/ai-os.py generate` |
 | `generate --check` | Verify generated artifacts are current without writing anything; fails if stale. | `python scripts/ai-os.py generate --check` |
-| `start-dashboard` | Start the local read-only web dashboard (default port 8080). | `python scripts/ai-os.py start-dashboard` |
+| `dashboard` / `start-dashboard` | Start the local read-only web dashboard (default port 8080). | `python scripts/ai-os.py dashboard` |
 | `start-mcp` | Start the MCP server over stdio. | `python scripts/ai-os.py start-mcp` |
 | `smoke-test` | Run the MCP smoke test. | `python scripts/ai-os.py smoke-test` |
+| `mcp check` | Run the MCP smoke test through the unified MCP command group. | `python scripts/ai-os.py mcp check` |
+| `mcp start` | Start the MCP server through the unified MCP command group. | `python scripts/ai-os.py mcp start` |
 | `release-check` | Run the full release-readiness gate (version, artifacts, MCP, validation). | `python scripts/ai-os.py release-check` |
 | `package` | Build a release package (zip/tar + checksums) under `dist/`. | `python scripts/ai-os.py package` |
 | `package --dry-run` | Preview what `package` would include without writing files. | `python scripts/ai-os.py package --dry-run` |
@@ -111,7 +113,7 @@ repository (see `CHANGELOG.md`/`RELEASE_NOTES_v*.md` for what each release conta
 | `git diff --stat` / `--cached --stat` | Summarize unstaged/staged changes by file. | `git diff --cached --stat` |
 | `git diff --check` / `--cached --check` | Fail if the (staged) diff contains whitespace errors. | `git diff --cached --check` |
 | `git add <path> [<path> ...]` | Stage specific reviewed files (prefer explicit paths over `-A`). | `git add VERSION CHANGELOG.md` |
-| `git commit -m "<message>"` | Create a new commit (never amend/squash existing pushed commits without being asked). | `git commit -m "chore: prepare AI OS v0.9.0 release"` |
+| `git commit -m "<message>"` | Create a new commit (never amend/squash existing pushed commits without being asked). | `git commit -m "chore: prepare AI OS v1.0.0 release"` |
 | `git push origin main` | Push commits on `main` (never force-push without explicit instruction). | `git push origin main` |
 | `git tag -a vX.Y.Z -m "<message>"` | Create an annotated tag on the current commit. | `git tag -a v0.9.0 -m "AI OS v0.9.0 — ..."` |
 | `git push origin vX.Y.Z` | Push a single tag (prefer this over `git push --tags`). | `git push origin v0.9.0` |
@@ -141,7 +143,7 @@ python scripts/validate-all.py
 
 **New clone:**
 ```bash
-git clone https://github.com/frojas15/ai-skills-pack.git
+git clone https://github.com/felipedr15/ai-skills-pack.git
 cd ai-skills-pack
 git fetch --tags
 git switch main

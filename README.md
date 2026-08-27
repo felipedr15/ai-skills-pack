@@ -1,5 +1,7 @@
 # AI OS
 
+[![AI OS CI](https://github.com/felipedr15/ai-skills-pack/actions/workflows/validate.yml/badge.svg)](https://github.com/felipedr15/ai-skills-pack/actions/workflows/validate.yml)
+
 ## Overview
 
 AI OS is a repository-based **AI Development Operating System** for coordinating AI tools, reusable skills, specifications, project memory, validation, documentation, and deployment workflows. It is not a traditional computer operating system. It is the evolution of the original AI Skills Pack, whose existing skills remain in their integration-safe locations.
@@ -69,7 +71,8 @@ Generated files [generated/memory-index.json](generated/memory-index.json) and [
 
 AI OS memory is explicit repository content. It is not automatic access to ChatGPT, Claude, Copilot, or Kiro histories. Tools only receive memory when configured or instructed to read it.
 
-The repository does not currently expose a unified AI OS CLI module for memory commands, so Phase 2 uses standalone scripts. Future CLI consolidation remains proposed.
+Memory commands remain available as standalone scripts for compatibility. Common release, validation,
+orchestration, profile, dashboard, and MCP operations are consolidated under `python scripts/ai-os.py`.
 
 ### Memory Commands
 
@@ -192,20 +195,17 @@ See [Phase 9 Architecture](knowledge/architecture/phase-9-professional-context.m
 ## Quick Start
 
 1. Clone or open AI OS.
-2. Run repository validation.
-3. Select a project starter.
-4. Generate a project with `create-project.py`.
-5. Complete its README.
-6. Create requirements.
-7. Create the design.
-8. Create implementation tasks.
-9. Prepare `HANDOFF.md`.
-10. Execute approved work.
-11. Run validation.
-12. Review the Git diff.
-13. Complete human testing.
-14. Commit approved changes.
-15. Deploy when applicable.
+2. Run `python scripts/ai-os.py doctor`.
+3. Run `python scripts/ai-os.py status`.
+4. Run `python scripts/ai-os.py validate`.
+5. Select a project starter or AI OS workflow.
+6. Create requirements, design, tasks, and handoff documentation for substantial work.
+7. Execute approved work.
+8. Regenerate derived artifacts when sources change.
+9. Run validation and `git diff --check`.
+10. Review the Git diff and complete human testing.
+11. Commit approved changes.
+12. Deploy only when applicable and explicitly approved.
 
 ## Validation
 
@@ -218,6 +218,7 @@ python scripts/validate-knowledge-graph.py
 python scripts/validate-memory-security.py
 python scripts/validate-all.py
 python scripts/list-skills.py
+python scripts/ai-os.py mcp check
 ```
 
 Regenerate derived files after changing skills, memory records, or indexed content:
@@ -233,6 +234,10 @@ The optional `--check` mode performs no writes and exits non-zero when generated
 
 See [Command Reference](docs/cli-reference.md) for a complete cheat sheet of CLI, validation, and
 release/Git workflow commands with descriptions and usage examples.
+
+For portable setup across Windows devices and future clones, see
+[Multi-Device Setup](docs/multi-device-setup.md). For v1.0 release gates, see
+[AI OS v1.0 Acceptance Criteria](docs/v1.0-acceptance-criteria.md).
 
 ## Project Creation
 

@@ -59,4 +59,4 @@ empty scaffold, and no curated `knowledge/professional-context/` content exists.
 - Richer role/team/expertise graph relationships are deferred to a later phase.
 - Evidence-resolution status is not shown through MCP or the dashboard.
 
-**Full Changelog**: https://github.com/frojas15/ai-skills-pack/compare/v0.8.0...v0.9.0
+**Full Changelog**: https://github.com/felipedr15/ai-skills-pack/compare/v0.8.0...v0.9.0

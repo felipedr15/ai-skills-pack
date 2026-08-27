@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-29T04:11:37Z",
+  "generatedAt": "2026-08-26T22:16:11Z",
   "generator": "ai-os-dashboard",
   "repository": {
     "available": true,
@@ -199,11 +199,11 @@
   },
   "knowledgeGraph": {
     "available": true,
-    "totalNodes": 369,
-    "totalEdges": 638,
+    "totalNodes": 376,
+    "totalEdges": 661,
     "nodesByType": {
       "concept": 2,
-      "document": 330,
+      "document": 337,
       "memory": 5,
       "platform": 5,
       "profile": 1,
@@ -215,19 +215,19 @@
       "belongs_to": 2,
       "contains": 129,
       "generated_from": 14,
-      "references": 206,
-      "related_to": 136,
+      "references": 208,
+      "related_to": 145,
       "supports": 4,
-      "uses": 147
+      "uses": 159
     },
     "unresolvedReferences": 9
   },
   "discovery": {
     "available": true,
-    "documents": 345,
-    "entities": 369,
-    "terms": 1212,
-    "relationships": 638,
+    "documents": 352,
+    "entities": 376,
+    "terms": 1259,
+    "relationships": 661,
     "warnings": 0,
     "unindexedFiles": 0
   },
@@ -238,35 +238,35 @@
         "generatedAt": null,
         "stale": false,
         "path": "skills.json",
-        "fileTimestamp": "2026-07-29T04:11:24Z"
+        "fileTimestamp": "2026-08-26T17:59:38Z"
       },
       {
         "exists": true,
         "generatedAt": null,
         "stale": false,
         "path": "repository-index.json",
-        "fileTimestamp": "2026-07-29T04:11:30Z"
+        "fileTimestamp": "2026-08-26T22:16:01Z"
       },
       {
         "exists": true,
         "generatedAt": null,
         "stale": false,
         "path": "memory-index.json",
-        "fileTimestamp": "2026-07-29T04:04:02Z"
+        "fileTimestamp": "2026-07-20T16:56:12Z"
       },
       {
         "exists": true,
-        "generatedAt": "2026-07-29T04:11:34Z",
+        "generatedAt": "2026-08-26T22:16:05Z",
         "stale": false,
         "path": "knowledge-graph.json",
-        "fileTimestamp": "2026-07-29T04:11:34Z"
+        "fileTimestamp": "2026-08-26T22:16:05Z"
       },
       {
         "exists": true,
-        "generatedAt": "2026-07-29T04:11:35Z",
+        "generatedAt": "2026-08-26T22:16:08Z",
         "stale": false,
         "path": "discovery-index.json",
-        "fileTimestamp": "2026-07-29T04:11:35Z"
+        "fileTimestamp": "2026-08-26T22:16:08Z"
       }
     ]
   },

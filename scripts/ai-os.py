@@ -54,15 +54,25 @@ def cmd_status(args):
     else:
         print(f"AI OS v{status['version']}")
         print(f"Repository: {status['repository']}")
-        print(f"Config valid: {status['configuration']['valid']}")
-        print(f"Dashboard: {'ready' if status['dashboard']['htmlPresent'] else 'not built'}")
-        print(f"MCP: {'ready' if status['mcp']['serverPresent'] else 'not available'} (read-only: {status['mcp']['readOnly']})")
+        summary = status.get("summary", {})
+        print()
+        print(f"Repository ........ {summary.get('repository', 'UNKNOWN')}")
+        print(f"Configuration ..... {summary.get('configuration', 'UNKNOWN')}")
+        print(f"Generated Files ... {summary.get('generatedFiles', 'UNKNOWN')}")
+        print(f"Dashboard ......... {summary.get('dashboard', 'UNKNOWN')}")
+        print(f"MCP ............... {summary.get('mcp', 'UNKNOWN')} (read-only: {status['mcp']['readOnly']})")
         missing = [a['path'] for a in status['artifacts'] if not a['exists']]
         if missing:
             print(f"Missing artifacts: {', '.join(missing)}")
-        else:
-            print("All artifacts present")
-        print(f"Release ready: {status['releaseReady']}")
+        failed = [c for c in status.get("generationChecks", []) if c["status"] != "PASS"]
+        if failed:
+            print()
+            print("Generated file checks needing attention:")
+            for check in failed:
+                detail = f" — {check['detail']}" if check.get("detail") else ""
+                print(f"  {check['status']:7} {check['name']}{detail}")
+        print()
+        print(f"Overall: {'HEALTHY' if status['releaseReady'] else 'NOT READY'}")
     return 0
 
 
@@ -304,6 +314,16 @@ def cmd_smoke_test(args):
     rc, out, err = run_python_script("scripts/mcp-smoke-test.py", [], ROOT, timeout=30)
     print((out + err).strip())
     return rc
+
+
+def cmd_mcp(args):
+    """MCP convenience commands."""
+    if args.mcp_cmd == "check":
+        return cmd_smoke_test(args)
+    if args.mcp_cmd == "start":
+        return cmd_start_mcp(args)
+    print("Usage: ai-os.py mcp {check,start}", file=sys.stderr)
+    return 1
 
 
 def cmd_release_check(args):
@@ -1040,9 +1060,11 @@ def cmd_help(args):
     print("  test             Run unit tests")
     print("  build            Generate all artifacts")
     print("  generate         Alias for build")
+    print("  dashboard        Start the dashboard server")
     print("  start-dashboard  Start the dashboard server")
     print("  start-mcp        Start the MCP server")
     print("  smoke-test       Run MCP smoke test")
+    print("  mcp              check|start MCP")
     print("  release-check    Run release readiness checks")
     print("  package          Create a release package")
     print("  backup           Back up local state")
@@ -1100,8 +1122,14 @@ def main(argv=None) -> int:
     p.add_argument("--json", action="store_true")
 
     sub.add_parser("start-dashboard", help="Start dashboard")
+    sub.add_parser("dashboard", help="Start dashboard")
     sub.add_parser("start-mcp", help="Start MCP server")
     sub.add_parser("smoke-test", help="MCP smoke test")
+
+    p = sub.add_parser("mcp", help="MCP commands")
+    mcp_sub = p.add_subparsers(dest="mcp_cmd")
+    mcp_sub.add_parser("check", help="Run MCP smoke test")
+    mcp_sub.add_parser("start", help="Start MCP server")
 
     p = sub.add_parser("release-check", help="Release readiness")
     p.add_argument("--json", action="store_true")
@@ -1269,9 +1297,11 @@ def main(argv=None) -> int:
         "test": cmd_test,
         "build": cmd_build,
         "generate": cmd_build,
+        "dashboard": cmd_start_dashboard,
         "start-dashboard": cmd_start_dashboard,
         "start-mcp": cmd_start_mcp,
         "smoke-test": cmd_smoke_test,
+        "mcp": cmd_mcp,
         "release-check": cmd_release_check,
         "package": cmd_package,
         "backup": cmd_backup,
