@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "version": "1.0.0",
-  "generatedAt": "2026-08-26T23:40:04Z",
+  "generatedAt": "2026-08-27T15:35:12Z",
   "generator": "ai-os-release",
   "repository": {
     "fileCount": 378
@@ -24,8 +24,8 @@
     {
       "path": "generated/repository-index.json",
       "exists": true,
-      "size": 77404,
-      "checksum": "a83cfc9ba563a643fa001ee92729611f2306b9653b3051851124f277429de3e1",
+      "size": 77391,
+      "checksum": "59f1d94008e7f06556f57cc12febb05d28227df930e2e9756105849ad8a515ae",
       "schemaVersion": "1.0.0",
       "generator": null
     },

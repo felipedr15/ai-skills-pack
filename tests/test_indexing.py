@@ -41,6 +41,21 @@ class IndexingTests(unittest.TestCase):
             with self.assertRaises(indexer.IndexError):
                 indexer.write_or_check({output: "expected\n"}, check=True, root=root)
 
+    def test_line_endings_produce_same_index(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / "scripts" / "sample.py"
+            path.parent.mkdir(parents=True, exist_ok=True)
+
+            path.write_bytes(b"print('one')\r\nprint('two')\r\n")
+            crlf = indexer.build_index(root)["files"][0]
+
+            path.write_bytes(b"print('one')\nprint('two')\n")
+            lf = indexer.build_index(root)["files"][0]
+
+            self.assertEqual(crlf["size"], lf["size"])
+            self.assertEqual(crlf["sha256"], lf["sha256"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -3,7 +3,7 @@
 > Generated from repository state. This file is not a source of truth.
 
 Version: 1.0.0
-Generated at: 2026-08-26T23:40:04Z
+Generated at: 2026-08-27T15:35:12Z
 Generator: ai-os-release
 
 ## Repository
@@ -14,7 +14,7 @@ Generator: ai-os-release
 
 - `generated/skills.json` — present (11115 bytes)
 - `generated/skills.md` — present (2356 bytes)
-- `generated/repository-index.json` — present (77404 bytes)
+- `generated/repository-index.json` — present (77391 bytes)
 - `generated/repository-map.md` — present (16632 bytes)
 - `generated/memory-index.json` — present (4559 bytes)
 - `generated/memory-index.md` — present (1305 bytes)
