@@ -34,6 +34,10 @@ def normalize_path(path: str) -> str:
     return path.replace("\\", "/")
 
 
+def _is_under_skills(parts: tuple) -> bool:
+    return len(parts) >= 2 and parts[0] == ".agent" and parts[1] == "skills"
+
+
 def validate_path(path: str, root: Path) -> Path:
     """Validate and resolve a repository-relative path.
 
@@ -54,10 +58,14 @@ def validate_path(path: str, root: Path) -> Path:
     if ".." in parts:
         raise PathRejected("path traversal is not allowed", {"path": normalized})
 
-    # Reject blocked directories
-    for part in parts:
-        if part.lower() in BLOCKED_DIRS:
-            raise PathRejected(f"access to '{part}' is blocked", {"path": normalized})
+    # Reject blocked directories. `.agent/skills/` is explicitly-tracked
+    # source content whose taxonomy uses category directory names (e.g.
+    # "build") that can collide with BLOCKED_DIRS' generic build-artifact
+    # directory names -- skill content must never be blocked on that basis.
+    if not _is_under_skills(parts):
+        for part in parts:
+            if part.lower() in BLOCKED_DIRS:
+                raise PathRejected(f"access to '{part}' is blocked", {"path": normalized})
 
     # Reject blocked file names
     filename = PurePosixPath(normalized).name.lower()
@@ -96,9 +104,10 @@ def is_secret_like(path: str) -> bool:
         return True
     if suffix in BLOCKED_SUFFIXES:
         return True
-    for part in parts:
-        if part.lower() in BLOCKED_DIRS:
-            return True
+    if not _is_under_skills(parts):
+        for part in parts:
+            if part.lower() in BLOCKED_DIRS:
+                return True
     return False
 
 

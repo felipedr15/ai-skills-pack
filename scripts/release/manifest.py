@@ -160,12 +160,45 @@ def render_manifest_md(manifest: dict) -> str:
 
 
 def write_manifest(manifest: dict, root: Path) -> None:
-    """Write manifest artifacts."""
+    """Write manifest artifacts unconditionally."""
     json_path = root / MANIFEST_JSON
     md_path = root / MANIFEST_MD
     json_path.parent.mkdir(parents=True, exist_ok=True)
     json_path.write_text(render_manifest_json(manifest), encoding="utf-8", newline="\n")
     md_path.write_text(render_manifest_md(manifest), encoding="utf-8", newline="\n")
+
+
+def _strip_md_timestamp(content: str) -> str:
+    """Blank the `Generated at:` line so Markdown comparisons ignore it."""
+    lines = content.splitlines()
+    return "\n".join("Generated at: <ignored>" if l.startswith("Generated at: ") else l for l in lines)
+
+
+def write_manifest_if_changed(manifest: dict, root: Path) -> bool:
+    """Write manifest artifacts only if their normalized content changed.
+
+    Compares the newly built manifest with the existing files, ignoring
+    generatedAt (and artifact checksum/size, which shift whenever any
+    underlying artifact is rewritten with a fresh timestamp). If normalized
+    content is already current, the existing files -- and their committed
+    timestamps -- are left untouched. Returns True if files were written.
+    """
+    json_path = root / MANIFEST_JSON
+    md_path = root / MANIFEST_MD
+
+    if json_path.is_file() and md_path.is_file():
+        try:
+            saved = load_manifest(json_path)
+        except (OSError, ValueError):
+            saved = None
+        if saved is not None and compare_manifests_ignoring_generated_at(manifest, saved):
+            expected_md = render_manifest_md(manifest)
+            saved_md = md_path.read_text(encoding="utf-8")
+            if _strip_md_timestamp(saved_md) == _strip_md_timestamp(expected_md):
+                return False
+
+    write_manifest(manifest, root)
+    return True
 
 
 def validate_manifest(manifest: object) -> tuple[list[str], list[str]]:
@@ -259,9 +292,5 @@ def check_manifest(manifest: dict, root: Path) -> None:
     expected_md = render_manifest_md(manifest)
     saved_md = md_path.read_text(encoding="utf-8")
 
-    def strip_timestamp(content: str) -> str:
-        lines = content.splitlines()
-        return "\n".join("Generated at: <ignored>" if l.startswith("Generated at: ") else l for l in lines)
-
-    if strip_timestamp(saved_md) != strip_timestamp(expected_md):
+    if _strip_md_timestamp(saved_md) != _strip_md_timestamp(expected_md):
         raise ValueError("stale: generated/release-manifest.md")

@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-26T22:16:11Z",
+  "generatedAt": "2026-09-02T23:36:02Z",
   "generator": "ai-os-dashboard",
   "repository": {
     "available": true,
     "counts": {
-      "skills": 34,
+      "skills": 48,
       "agents": 11,
       "prompts": 12,
       "project-starters": 129,
@@ -15,7 +15,7 @@
       "references": 11,
       "scripts": 103
     },
-    "totalFiles": 378
+    "totalFiles": 392
   },
   "skills": {
     "available": true,
@@ -199,35 +199,35 @@
   },
   "knowledgeGraph": {
     "available": true,
-    "totalNodes": 376,
-    "totalEdges": 661,
+    "totalNodes": 393,
+    "totalEdges": 751,
     "nodesByType": {
       "concept": 2,
-      "document": 337,
+      "document": 345,
       "memory": 5,
-      "platform": 5,
+      "platform": 7,
       "profile": 1,
       "project": 10,
-      "skill": 14,
+      "skill": 21,
       "tool": 2
     },
     "edgesByType": {
       "belongs_to": 2,
       "contains": 129,
-      "generated_from": 14,
-      "references": 208,
-      "related_to": 145,
-      "supports": 4,
-      "uses": 159
+      "generated_from": 21,
+      "references": 233,
+      "related_to": 150,
+      "supports": 6,
+      "uses": 210
     },
-    "unresolvedReferences": 9
+    "unresolvedReferences": 3
   },
   "discovery": {
     "available": true,
-    "documents": 352,
-    "entities": 376,
-    "terms": 1259,
-    "relationships": 661,
+    "documents": 367,
+    "entities": 393,
+    "terms": 1283,
+    "relationships": 751,
     "warnings": 0,
     "unindexedFiles": 0
   },
@@ -237,36 +237,31 @@
         "exists": true,
         "generatedAt": null,
         "stale": false,
-        "path": "skills.json",
-        "fileTimestamp": "2026-08-26T17:59:38Z"
+        "path": "skills.json"
       },
       {
         "exists": true,
         "generatedAt": null,
         "stale": false,
-        "path": "repository-index.json",
-        "fileTimestamp": "2026-08-26T22:16:01Z"
+        "path": "repository-index.json"
       },
       {
         "exists": true,
         "generatedAt": null,
         "stale": false,
-        "path": "memory-index.json",
-        "fileTimestamp": "2026-07-20T16:56:12Z"
+        "path": "memory-index.json"
       },
       {
         "exists": true,
-        "generatedAt": "2026-08-26T22:16:05Z",
+        "generatedAt": "2026-09-02T23:35:58Z",
         "stale": false,
-        "path": "knowledge-graph.json",
-        "fileTimestamp": "2026-08-26T22:16:05Z"
+        "path": "knowledge-graph.json"
       },
       {
         "exists": true,
-        "generatedAt": "2026-08-26T22:16:08Z",
+        "generatedAt": "2026-09-02T23:36:00Z",
         "stale": false,
-        "path": "discovery-index.json",
-        "fileTimestamp": "2026-08-26T22:16:08Z"
+        "path": "discovery-index.json"
       }
     ]
   },
@@ -288,7 +283,7 @@
     },
     "knowledgeHealthScore": 83,
     "knowledgeHealthCategories": {
-      "graphIntegrity": 92,
+      "graphIntegrity": 93,
       "projectDocumentation": 100,
       "skillDocumentation": 5,
       "memoryLinkage": 100,

@@ -23,6 +23,10 @@ from release.utils import (
     GENERATED_ARTIFACTS, GENERATION_ORDER,
     ensure_directory, now_iso, load_json_safe,
 )
+from release.manifest import (
+    build_manifest, write_manifest, write_manifest_if_changed,
+    check_manifest, load_manifest,
+)
 
 
 # ============================================================
@@ -148,6 +152,114 @@ class StatusTests(unittest.TestCase):
         if failed:
             self.assertFalse(status["releaseReady"])
             self.assertEqual(status["summary"]["generatedFiles"], "FAIL")
+
+
+# ============================================================
+# Release Manifest Idempotency Tests
+# ============================================================
+
+class ManifestIdempotencyTests(unittest.TestCase):
+    """Regression coverage for deterministic, idempotent manifest regeneration."""
+
+    def _make_repo(self, tmp: str) -> Path:
+        root = Path(tmp)
+        (root / "VERSION").write_text("1.0.0\n", encoding="utf-8")
+        gen = root / "generated"
+        gen.mkdir(parents=True)
+        (gen / "repository-index.json").write_text(
+            json.dumps({"schemaVersion": "1.0.0", "counts": {"scripts": 3}}), encoding="utf-8")
+        (gen / "knowledge-graph.json").write_text(
+            json.dumps({"schemaVersion": "1.0.0", "generator": "ai-os-knowledge-graph"}), encoding="utf-8")
+        return root
+
+    def test_second_write_produces_no_change(self):
+        """Writing the same manifest content twice must not rewrite the files."""
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self._make_repo(tmp)
+            manifest = build_manifest(root)
+            changed_first = write_manifest_if_changed(manifest, root)
+            self.assertTrue(changed_first)
+
+            json_before = (root / "generated" / "release-manifest.json").read_text(encoding="utf-8")
+            md_before = (root / "generated" / "release-manifest.md").read_text(encoding="utf-8")
+
+            # Rebuild from identical source state -- only generatedAt differs.
+            manifest2 = build_manifest(root)
+            changed_second = write_manifest_if_changed(manifest2, root)
+            self.assertFalse(changed_second)
+
+            json_after = (root / "generated" / "release-manifest.json").read_text(encoding="utf-8")
+            md_after = (root / "generated" / "release-manifest.md").read_text(encoding="utf-8")
+            self.assertEqual(json_before, json_after)
+            self.assertEqual(md_before, md_after)
+
+    def test_timestamp_only_regeneration_preserves_committed_file(self):
+        """A rebuild where only generatedAt would differ must leave the
+        already-committed timestamp untouched (not overwrite it with a
+        fresh wall-clock value)."""
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self._make_repo(tmp)
+            manifest = build_manifest(root)
+            write_manifest_if_changed(manifest, root)
+            saved = load_manifest(root / "generated" / "release-manifest.json")
+            original_generated_at = saved["generatedAt"]
+
+            # Simulate time passing (forced, since a same-second rerun would
+            # otherwise produce an identical generatedAt by coincidence) and
+            # rebuilding with otherwise-unchanged sources.
+            manifest2 = build_manifest(root)
+            manifest2["generatedAt"] = "2099-01-01T00:00:00Z"
+            self.assertNotEqual(manifest2["generatedAt"], original_generated_at)
+            write_manifest_if_changed(manifest2, root)
+
+            saved_after = load_manifest(root / "generated" / "release-manifest.json")
+            self.assertEqual(saved_after["generatedAt"], original_generated_at)
+
+    def test_meaningful_change_still_triggers_write(self):
+        """A real source change (new tracked artifact) must still be picked up."""
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self._make_repo(tmp)
+            manifest = build_manifest(root)
+            write_manifest_if_changed(manifest, root)
+
+            # Meaningful change: an artifact that was missing now exists.
+            (root / "generated" / "skills.json").write_text(
+                json.dumps({"schemaVersion": "1.0.0", "generator": "ai-os-skill-registry"}), encoding="utf-8")
+            manifest2 = build_manifest(root)
+            changed = write_manifest_if_changed(manifest2, root)
+            self.assertTrue(changed)
+            saved = load_manifest(root / "generated" / "release-manifest.json")
+            entry = next(a for a in saved["artifacts"] if a["path"] == "generated/skills.json")
+            self.assertTrue(entry["exists"])
+
+    def test_check_still_fails_on_meaningful_staleness(self):
+        """--check must not be weakened by the write-skip optimization."""
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self._make_repo(tmp)
+            manifest = build_manifest(root)
+            write_manifest_if_changed(manifest, root)
+
+            (root / "generated" / "skills.json").write_text(
+                json.dumps({"schemaVersion": "1.0.0"}), encoding="utf-8")
+            manifest2 = build_manifest(root)
+            with self.assertRaises(ValueError):
+                check_manifest(manifest2, root)
+
+    def test_write_manifest_if_changed_matches_unconditional_write(self):
+        """The skip-aware writer must produce byte-identical output to the
+        unconditional writer when it does decide to write."""
+        with tempfile.TemporaryDirectory() as tmp1, tempfile.TemporaryDirectory() as tmp2:
+            root1 = self._make_repo(tmp1)
+            root2 = self._make_repo(tmp2)
+            manifest1 = build_manifest(root1)
+            manifest2 = dict(manifest1)
+            manifest2["generatedAt"] = manifest1["generatedAt"]
+            write_manifest(manifest1, root1)
+            write_manifest_if_changed(manifest2, root2)
+            self.assertEqual(
+                (root1 / "generated" / "release-manifest.json").read_text(encoding="utf-8"),
+                (root2 / "generated" / "release-manifest.json").read_text(encoding="utf-8"),
+            )
 
 
 # ============================================================
@@ -311,6 +423,19 @@ class BuildTests(unittest.TestCase):
     def test_phase9_artifacts_in_generated_artifacts_list(self):
         for name in ("profile-index.json", "profile-index.md", "work-activity.json", "work-activity.md"):
             self.assertIn(name, GENERATED_ARTIFACTS)
+
+    def test_build_second_run_no_git_diff(self):
+        """Running `build` twice in a row must not change the working tree
+        on the second run -- volatile timestamps alone must never dirty Git.
+        Runs against the real repo (converging it first), matching the
+        existing live-repo pattern in BootstrapTests.test_bootstrap_no_git_mutation.
+        """
+        import subprocess
+        self._run_cli(["build"])
+        before = subprocess.run(["git", "diff", "--stat"], capture_output=True, text=True, cwd=str(ROOT)).stdout
+        self._run_cli(["build"])
+        after = subprocess.run(["git", "diff", "--stat"], capture_output=True, text=True, cwd=str(ROOT)).stdout
+        self.assertEqual(before, after)
 
 
 # ============================================================

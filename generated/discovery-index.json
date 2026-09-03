@@ -1,15 +1,322 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-26T22:16:08Z",
+  "generatedAt": "2026-09-02T23:36:00Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 352,
-    "entities": 376,
-    "terms": 1259,
-    "relationships": 661
+    "documents": 367,
+    "entities": 393,
+    "terms": 1283,
+    "relationships": 751
   },
   "documents": [
+    {
+      "id": "doc:.agent/skills/build/README.md",
+      "sourcePath": ".agent/skills/build/README.md",
+      "title": "Build Skill",
+      "category": "skill",
+      "headings": [
+        "Build Skill",
+        "Includes",
+        "Usage",
+        "Best For"
+      ],
+      "snippet": "Combined skill for building and improving web apps.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:.agent/skills/build/SKILL.md",
+      "sourcePath": ".agent/skills/build/SKILL.md",
+      "title": "Build Skill",
+      "category": "skill",
+      "headings": [
+        "Build Skill",
+        "Purpose",
+        "When To Use",
+        "Core Workflow",
+        "Creator Mode",
+        "Frontend Design Mode",
+        "UI/UX Pro Max Mode",
+        "Testing Mode",
+        "Performance Optimization Mode",
+        "Vercel Agent Mode",
+        "Vercel React Best Practices",
+        "Web Design Guidelines Mode",
+        "Build Skill Output Format"
+      ],
+      "snippet": "Combined skill for building apps, interfaces, deployments, and production-ready web work.",
+      "frontMatter": {
+        "name": "Build",
+        "id": "build",
+        "version": "1.0.0",
+        "description": "Combined guidance for building, testing, optimizing, and deploying applications.",
+        "triggers": [
+          "build",
+          "build skill"
+        ],
+        "inputs": [
+          "task context"
+        ],
+        "outputs": [
+          "structured result"
+        ],
+        "dependencies": [],
+        "status": "stable",
+        "replaces": null,
+        "deprecatedBy": null
+      }
+    },
+    {
+      "id": "doc:.agent/skills/build/creator/README.md",
+      "sourcePath": ".agent/skills/build/creator/README.md",
+      "title": "Creator",
+      "category": "skill",
+      "headings": [
+        "Creator"
+      ],
+      "snippet": "This folder contains the [Creator skill](SKILL.md) and any supporting resources.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:.agent/skills/build/creator/SKILL.md",
+      "sourcePath": ".agent/skills/build/creator/SKILL.md",
+      "title": "Creator Skill",
+      "category": "skill",
+      "headings": [
+        "Creator Skill"
+      ],
+      "snippet": "You are a builder.",
+      "frontMatter": {
+        "name": "Creator",
+        "id": "creator",
+        "version": "1.0.0",
+        "description": "Reusable guidance for creator work.",
+        "triggers": [
+          "creator",
+          "creator"
+        ],
+        "inputs": [
+          "task context"
+        ],
+        "outputs": [
+          "structured result"
+        ],
+        "dependencies": [],
+        "status": "stable",
+        "replaces": null,
+        "deprecatedBy": null
+      }
+    },
+    {
+      "id": "doc:.agent/skills/build/frontend/README.md",
+      "sourcePath": ".agent/skills/build/frontend/README.md",
+      "title": "Frontend",
+      "category": "skill",
+      "headings": [
+        "Frontend"
+      ],
+      "snippet": "This folder contains the [Frontend skill](SKILL.md) and any supporting resources.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:.agent/skills/build/frontend/SKILL.md",
+      "sourcePath": ".agent/skills/build/frontend/SKILL.md",
+      "title": "Frontend Design Skill",
+      "category": "skill",
+      "headings": [
+        "Frontend Design Skill"
+      ],
+      "snippet": "You are a UI/UX engineer.",
+      "frontMatter": {
+        "name": "Frontend",
+        "id": "frontend",
+        "version": "1.0.0",
+        "description": "Reusable guidance for frontend work.",
+        "triggers": [
+          "frontend",
+          "frontend"
+        ],
+        "inputs": [
+          "task context"
+        ],
+        "outputs": [
+          "structured result"
+        ],
+        "dependencies": [],
+        "status": "stable",
+        "replaces": null,
+        "deprecatedBy": null
+      }
+    },
+    {
+      "id": "doc:.agent/skills/build/performance-optimization/README.md",
+      "sourcePath": ".agent/skills/build/performance-optimization/README.md",
+      "title": "Performance Optimization",
+      "category": "skill",
+      "headings": [
+        "Performance Optimization"
+      ],
+      "snippet": "This folder contains the [Performance Optimization skill](SKILL.md) and any supporting resources.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "sourcePath": ".agent/skills/build/performance-optimization/SKILL.md",
+      "title": "Performance Optimization Skill",
+      "category": "skill",
+      "headings": [
+        "Performance Optimization Skill"
+      ],
+      "snippet": "You are a performance optimization expert.",
+      "frontMatter": {
+        "name": "Performance Optimization",
+        "id": "performance-optimization",
+        "version": "1.0.0",
+        "description": "Reusable guidance for performance optimization work.",
+        "triggers": [
+          "performance-optimization",
+          "performance optimization"
+        ],
+        "inputs": [
+          "task context"
+        ],
+        "outputs": [
+          "structured result"
+        ],
+        "dependencies": [],
+        "status": "stable",
+        "replaces": null,
+        "deprecatedBy": null
+      }
+    },
+    {
+      "id": "doc:.agent/skills/build/vercel-agent/README.md",
+      "sourcePath": ".agent/skills/build/vercel-agent/README.md",
+      "title": "Vercel Agent",
+      "category": "skill",
+      "headings": [
+        "Vercel Agent"
+      ],
+      "snippet": "This folder contains the [Vercel Agent skill](SKILL.md) and any supporting resources.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:.agent/skills/build/vercel-agent/SKILL.md",
+      "sourcePath": ".agent/skills/build/vercel-agent/SKILL.md",
+      "title": "Vercel Agent Skill",
+      "category": "skill",
+      "headings": [
+        "Vercel Agent Skill"
+      ],
+      "snippet": "You are a Vercel deployment and frontend delivery expert.",
+      "frontMatter": {
+        "name": "Vercel Agent",
+        "id": "vercel-agent",
+        "version": "1.0.0",
+        "description": "Reusable guidance for vercel agent work.",
+        "triggers": [
+          "vercel-agent",
+          "vercel agent"
+        ],
+        "inputs": [
+          "task context"
+        ],
+        "outputs": [
+          "structured result"
+        ],
+        "dependencies": [],
+        "status": "stable",
+        "replaces": null,
+        "deprecatedBy": null
+      }
+    },
+    {
+      "id": "doc:.agent/skills/build/vercel-react/README.md",
+      "sourcePath": ".agent/skills/build/vercel-react/README.md",
+      "title": "Vercel React",
+      "category": "skill",
+      "headings": [
+        "Vercel React"
+      ],
+      "snippet": "This folder contains the [Vercel React skill](SKILL.md) and any supporting resources.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:.agent/skills/build/vercel-react/SKILL.md",
+      "sourcePath": ".agent/skills/build/vercel-react/SKILL.md",
+      "title": "Vercel React Best Practices",
+      "category": "skill",
+      "headings": [
+        "Vercel React Best Practices"
+      ],
+      "snippet": "Goal:",
+      "frontMatter": {
+        "name": "Vercel React",
+        "id": "vercel-react",
+        "version": "1.0.0",
+        "description": "Reusable guidance for vercel react work.",
+        "triggers": [
+          "vercel-react",
+          "vercel react"
+        ],
+        "inputs": [
+          "task context"
+        ],
+        "outputs": [
+          "structured result"
+        ],
+        "dependencies": [],
+        "status": "stable",
+        "replaces": null,
+        "deprecatedBy": null
+      }
+    },
+    {
+      "id": "doc:.agent/skills/build/web-design-guidelines/README.md",
+      "sourcePath": ".agent/skills/build/web-design-guidelines/README.md",
+      "title": "web-design-guidelines",
+      "category": "skill",
+      "headings": [
+        "web-design-guidelines"
+      ],
+      "snippet": "This folder contains the [web-design-guidelines skill](SKILL.md) and any supporting resources.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
+      "sourcePath": ".agent/skills/build/web-design-guidelines/SKILL.md",
+      "title": "Web Interface Guidelines",
+      "category": "skill",
+      "headings": [
+        "Web Interface Guidelines",
+        "How It Works",
+        "Guidelines Source",
+        "Usage"
+      ],
+      "snippet": "Review files for compliance with Web Interface Guidelines.",
+      "frontMatter": {
+        "name": "web-design-guidelines",
+        "id": "web-design-guidelines",
+        "version": "1.0.0",
+        "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+        "metadata": [],
+        "argument-hint": "<file-or-pattern>",
+        "triggers": [
+          "web-design-guidelines",
+          "web-design-guidelines"
+        ],
+        "inputs": [
+          "task context"
+        ],
+        "outputs": [
+          "structured result"
+        ],
+        "dependencies": [],
+        "status": "stable",
+        "replaces": null,
+        "deprecatedBy": null
+      }
+    },
     {
       "id": "doc:.agent/skills/communication-skill/README.md",
       "sourcePath": ".agent/skills/communication-skill/README.md",
@@ -1194,7 +1501,7 @@
         "Technical Debt Fixes",
         "Validation Results",
         "Security And Privacy",
-        "Known Limitations",
+        "Known Limitations (Deferred Post-v1.0)",
         "Upgrade Instructions",
         "Fresh Clone Instructions",
         "Release Status"
@@ -1675,6 +1982,27 @@
         "Recommended Remediation"
       ],
       "snippet": "Date: 2026-08-26",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/v1.0-final-acceptance.md",
+      "sourcePath": "docs/v1.0-final-acceptance.md",
+      "title": "AI OS v1.0 Final Acceptance Report",
+      "category": "document",
+      "headings": [
+        "AI OS v1.0 Final Acceptance Report",
+        "Environment",
+        "Final Gate Table",
+        "Knowledge Graph Warnings",
+        "Unresolved references (3, down from 9)",
+        "Isolated nodes (51, unchanged)",
+        "MCP Portability",
+        "Repository Ownership",
+        "Fresh-Clone Readiness",
+        "Test Totals",
+        "Remaining Warnings / Blockers"
+      ],
+      "snippet": "Date: 2026-09-02",
       "frontMatter": {}
     },
     {
@@ -6133,9 +6461,79 @@
       "nodeId": "concept:workflow",
       "type": "concept",
       "name": "workflow",
-      "sourcePath": ".agent/skills/research/SKILL.md",
+      "sourcePath": ".agent/skills/build/SKILL.md",
       "metadata": {
         "kind": "mention"
+      }
+    },
+    {
+      "id": "entity:document:.agent/skills/build/README.md",
+      "nodeId": "document:.agent/skills/build/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:.agent/skills/build/creator/README.md",
+      "nodeId": "document:.agent/skills/build/creator/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/creator/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:.agent/skills/build/frontend/README.md",
+      "nodeId": "document:.agent/skills/build/frontend/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/frontend/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:.agent/skills/build/performance-optimization/README.md",
+      "nodeId": "document:.agent/skills/build/performance-optimization/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/performance-optimization/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:.agent/skills/build/vercel-agent/README.md",
+      "nodeId": "document:.agent/skills/build/vercel-agent/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/vercel-agent/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:.agent/skills/build/vercel-react/README.md",
+      "nodeId": "document:.agent/skills/build/vercel-react/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/vercel-react/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:.agent/skills/build/web-design-guidelines/README.md",
+      "nodeId": "document:.agent/skills/build/web-design-guidelines/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/web-design-guidelines/README.md",
+      "metadata": {
+        "extension": ".md"
       }
     },
     {
@@ -6874,6 +7272,16 @@
       "type": "document",
       "name": "V1.0 Baseline Audit",
       "sourcePath": "docs/v1.0-baseline-audit.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/v1.0-final-acceptance.md",
+      "nodeId": "document:docs/v1.0-final-acceptance.md",
+      "type": "document",
+      "name": "V1.0 Final Acceptance",
+      "sourcePath": "docs/v1.0-final-acceptance.md",
       "metadata": {
         "extension": ".md"
       }
@@ -9599,6 +10007,16 @@
       }
     },
     {
+      "id": "entity:platform:github",
+      "nodeId": "platform:github",
+      "type": "platform",
+      "name": "github",
+      "sourcePath": ".agent/skills/build/web-design-guidelines/SKILL.md",
+      "metadata": {
+        "kind": "mention"
+      }
+    },
+    {
       "id": "entity:platform:power-apps",
       "nodeId": "platform:power-apps",
       "type": "platform",
@@ -9614,6 +10032,16 @@
       "type": "platform",
       "name": "power automate",
       "sourcePath": ".agent/skills/communication-skill/SKILL.md",
+      "metadata": {
+        "kind": "mention"
+      }
+    },
+    {
+      "id": "entity:platform:vercel",
+      "nodeId": "platform:vercel",
+      "type": "platform",
+      "name": "vercel",
+      "sourcePath": ".agent/skills/build/SKILL.md",
       "metadata": {
         "kind": "mention"
       }
@@ -9754,6 +10182,18 @@
       }
     },
     {
+      "id": "entity:skill:build",
+      "nodeId": "skill:build",
+      "type": "skill",
+      "name": "Build",
+      "sourcePath": ".agent/skills/build/SKILL.md",
+      "metadata": {
+        "skillId": "build",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
       "id": "entity:skill:clear-concise-writing",
       "nodeId": "skill:clear-concise-writing",
       "type": "skill",
@@ -9773,6 +10213,42 @@
       "sourcePath": ".agent/skills/communication-skill/SKILL.md",
       "metadata": {
         "skillId": "communication-skill",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "entity:skill:creator",
+      "nodeId": "skill:creator",
+      "type": "skill",
+      "name": "Creator",
+      "sourcePath": ".agent/skills/build/creator/SKILL.md",
+      "metadata": {
+        "skillId": "creator",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "entity:skill:frontend",
+      "nodeId": "skill:frontend",
+      "type": "skill",
+      "name": "Frontend",
+      "sourcePath": ".agent/skills/build/frontend/SKILL.md",
+      "metadata": {
+        "skillId": "frontend",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "entity:skill:performance-optimization",
+      "nodeId": "skill:performance-optimization",
+      "type": "skill",
+      "name": "Performance Optimization",
+      "sourcePath": ".agent/skills/build/performance-optimization/SKILL.md",
+      "metadata": {
+        "skillId": "performance-optimization",
         "status": "stable",
         "version": "1.0.0"
       }
@@ -9886,6 +10362,42 @@
       }
     },
     {
+      "id": "entity:skill:vercel-agent",
+      "nodeId": "skill:vercel-agent",
+      "type": "skill",
+      "name": "Vercel Agent",
+      "sourcePath": ".agent/skills/build/vercel-agent/SKILL.md",
+      "metadata": {
+        "skillId": "vercel-agent",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "entity:skill:vercel-react",
+      "nodeId": "skill:vercel-react",
+      "type": "skill",
+      "name": "Vercel React",
+      "sourcePath": ".agent/skills/build/vercel-react/SKILL.md",
+      "metadata": {
+        "skillId": "vercel-react",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "entity:skill:web-design-guidelines",
+      "nodeId": "skill:web-design-guidelines",
+      "type": "skill",
+      "name": "web-design-guidelines",
+      "sourcePath": ".agent/skills/build/web-design-guidelines/SKILL.md",
+      "metadata": {
+        "skillId": "web-design-guidelines",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
       "id": "entity:skill:writing",
       "nodeId": "skill:writing",
       "type": "skill",
@@ -9902,7 +10414,7 @@
       "nodeId": "tool:git",
       "type": "tool",
       "name": "git",
-      "sourcePath": ".agent/skills/system/using-superpowers/SKILL.md",
+      "sourcePath": ".agent/skills/build/web-design-guidelines/SKILL.md",
       "metadata": {
         "kind": "mention"
       }
@@ -10027,6 +10539,9 @@
     "019": [
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
+    "02": [
+      "doc:docs/v1.0-final-acceptance.md"
+    ],
     "020": [
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
@@ -10066,6 +10581,9 @@
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-technical-debt.md"
     ],
+    "09": [
+      "doc:docs/v1.0-final-acceptance.md"
+    ],
     "10": [
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/professional-context/project-experience.md"
@@ -10091,6 +10609,7 @@
       "doc:CHANGELOG.md",
       "doc:docs/repository-migration.md",
       "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md"
     ],
     "26": [
@@ -10105,6 +10624,9 @@
     ],
     "45": [
       "doc:knowledge/professional-context/expertise.md"
+    ],
+    "51": [
+      "doc:docs/v1.0-final-acceptance.md"
     ],
     "about": [
       "doc:knowledge/ai-workflows/README.md",
@@ -10126,6 +10648,7 @@
     "acceptance": [
       "doc:CHANGELOG.md",
       "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:prompts/plan.prompt.md",
       "doc:prompts/specify.prompt.md",
       "doc:specs/phase-9-professional-context/tasks.md",
@@ -10148,7 +10671,8 @@
       "doc:templates/project-starters/web-app/HANDOFF.md",
       "doc:templates/project-starters/web-app/REQUIREMENTS.md",
       "doc:templates/specifications/testing-plan.md",
-      "entity:document:docs/v1.0-acceptance-criteria.md"
+      "entity:document:docs/v1.0-acceptance-criteria.md",
+      "entity:document:docs/v1.0-final-acceptance.md"
     ],
     "accepts": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
@@ -10160,6 +10684,7 @@
       "doc:agents/security-reviewer.md"
     ],
     "accessibility": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:standards/accessibility.md",
       "doc:templates/specifications/requirements.md",
       "doc:templates/specifications/testing-plan.md",
@@ -10299,9 +10824,24 @@
       "doc:templates/memory/session-memory.md"
     ],
     "against": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:agents/reviewer.md"
     ],
     "agent": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/creator/SKILL.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
@@ -10369,6 +10909,13 @@
       "doc:templates/project-starters/web-app/HANDOFF.md",
       "entity:concept:validation",
       "entity:concept:workflow",
+      "entity:document:.agent/skills/build/README.md",
+      "entity:document:.agent/skills/build/creator/README.md",
+      "entity:document:.agent/skills/build/frontend/README.md",
+      "entity:document:.agent/skills/build/performance-optimization/README.md",
+      "entity:document:.agent/skills/build/vercel-agent/README.md",
+      "entity:document:.agent/skills/build/vercel-react/README.md",
+      "entity:document:.agent/skills/build/web-design-guidelines/README.md",
       "entity:document:.agent/skills/communication-skill/README.md",
       "entity:document:.agent/skills/communication-skill/anti-ai-writing.md",
       "entity:document:.agent/skills/communication-skill/examples.md",
@@ -10393,12 +10940,18 @@
       "entity:platform:claude",
       "entity:platform:codex",
       "entity:platform:copilot",
+      "entity:platform:github",
       "entity:platform:power-apps",
       "entity:platform:power-automate",
+      "entity:platform:vercel",
       "entity:skill:analytical",
       "entity:skill:browser",
+      "entity:skill:build",
       "entity:skill:clear-concise-writing",
       "entity:skill:communication-skill",
+      "entity:skill:creator",
+      "entity:skill:frontend",
+      "entity:skill:performance-optimization",
       "entity:skill:problem-solving",
       "entity:skill:research",
       "entity:skill:simplify",
@@ -10408,6 +10961,9 @@
       "entity:skill:thinking",
       "entity:skill:ui-ux-pro-max",
       "entity:skill:using-superpowers",
+      "entity:skill:vercel-agent",
+      "entity:skill:vercel-react",
+      "entity:skill:web-design-guidelines",
       "entity:skill:writing",
       "entity:tool:git",
       "entity:tool:mcp"
@@ -10488,6 +11044,7 @@
       "doc:docs/multi-device-setup.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/ai-workflows/README.md",
@@ -10604,6 +11161,15 @@
       "doc:prompts/plan.prompt.md"
     ],
     "and": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/design/browser/README.md",
@@ -10790,6 +11356,12 @@
       "entity:document:.agent/skills/communication-skill/anti-ai-writing.md"
     ],
     "any": [
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
       "doc:.agent/skills/design/browser/README.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
       "doc:.agent/skills/personal/analytical/README.md",
@@ -10871,6 +11443,9 @@
     "application": [
       "doc:references/workflow-examples.md"
     ],
+    "applications": [
+      "doc:.agent/skills/build/SKILL.md"
+    ],
     "apply": [
       "doc:standards/security.md"
     ],
@@ -10922,6 +11497,8 @@
       "doc:templates/project-starters/web-app/AGENTS.md"
     ],
     "apps": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/SKILL.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.kiro/steering/technology.md",
       "doc:knowledge/power-apps/README.md",
@@ -11040,6 +11617,10 @@
       "doc:templates/memory/session-memory.md"
     ],
     "are": [
+      "doc:.agent/skills/build/creator/SKILL.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
       "doc:.agent/skills/design/browser/SKILL.md",
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md",
       "doc:.agent/skills/personal/clear-concise-writing/SKILL.md",
@@ -11073,6 +11654,9 @@
     ],
     "as": [
       "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "asked": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md"
     ],
     "assess": [
       "doc:agents/security-reviewer.md",
@@ -11133,6 +11717,7 @@
       "doc:standards/documentation.md"
     ],
     "audit": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:CHANGELOG.md",
       "doc:docs/feedback-and-audit.md",
       "doc:docs/v1.0-baseline-audit.md",
@@ -11406,6 +11991,10 @@
       "doc:docs/v1.0-acceptance-criteria.md"
     ],
     "best": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/research/README.md",
       "doc:.agent/skills/system/README.md",
@@ -11420,6 +12009,7 @@
       "doc:.agent/skills/references/powerapps-yaml-format.md"
     ],
     "blockers": [
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:templates/memory/session-memory.md"
     ],
@@ -11468,19 +12058,54 @@
       "entity:document:knowledge/workflows/bug-fix.json"
     ],
     "build": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/creator/SKILL.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:CLAUDE.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/workflows/README.md",
       "doc:prompts/qa.prompt.md",
-      "doc:references/workflow-examples.md"
+      "doc:references/workflow-examples.md",
+      "entity:concept:workflow",
+      "entity:document:.agent/skills/build/README.md",
+      "entity:document:.agent/skills/build/creator/README.md",
+      "entity:document:.agent/skills/build/frontend/README.md",
+      "entity:document:.agent/skills/build/performance-optimization/README.md",
+      "entity:document:.agent/skills/build/vercel-agent/README.md",
+      "entity:document:.agent/skills/build/vercel-react/README.md",
+      "entity:document:.agent/skills/build/web-design-guidelines/README.md",
+      "entity:platform:github",
+      "entity:platform:vercel",
+      "entity:skill:build",
+      "entity:skill:creator",
+      "entity:skill:frontend",
+      "entity:skill:performance-optimization",
+      "entity:skill:vercel-agent",
+      "entity:skill:vercel-react",
+      "entity:skill:web-design-guidelines",
+      "entity:tool:git"
     ],
     "builder": [
+      "doc:.agent/skills/build/creator/SKILL.md",
       "doc:agents/builder.md",
       "doc:references/workflow-examples.md",
       "entity:document:agents/builder.md"
     ],
     "building": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/SKILL.md",
       "doc:references/workflow-examples.md"
     ],
     "built": [
@@ -11682,6 +12307,7 @@
       "doc:docs/cli-reference.md"
     ],
     "check": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:specs/phase-9-professional-context/tasks.md",
@@ -11810,9 +12436,11 @@
     "clone": [
       "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:docs/multi-device-setup.md",
-      "doc:docs/v1.0-acceptance-criteria.md"
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-final-acceptance.md"
     ],
     "code": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
@@ -11860,6 +12488,8 @@
       "doc:.agent/skills/system/superpower/SKILL.md"
     ],
     "combined": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/SKILL.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/SKILL.md",
       "doc:.agent/skills/thinking/README.md",
@@ -11974,6 +12604,7 @@
       "doc:templates/memory/session-memory.md"
     ],
     "compliance": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:knowledge/professional-context/responsibilities.md"
     ],
     "components": [
@@ -12111,6 +12742,12 @@
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "contains": [
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
       "doc:.agent/skills/design/browser/README.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
       "doc:.agent/skills/personal/analytical/README.md",
@@ -12281,6 +12918,7 @@
       "doc:templates/specifications/README.md"
     ],
     "core": [
+      "doc:.agent/skills/build/SKILL.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.kiro/steering/structure.md",
       "doc:.kiro/steering/technology.md",
@@ -12321,6 +12959,13 @@
       "doc:knowledge/workflows/procedure-creation.json",
       "doc:scripts/README.md",
       "entity:document:knowledge/workflows/procedure-creation.json"
+    ],
+    "creator": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/creator/SKILL.md",
+      "entity:document:.agent/skills/build/creator/README.md",
+      "entity:skill:creator"
     ],
     "credentials": [
       "doc:knowledge/professional-context/career-history.md"
@@ -12467,6 +13112,7 @@
     "date": [
       "doc:docs/repository-migration.md",
       "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
@@ -12585,6 +13231,7 @@
       "doc:knowledge/workflows/bug-fix.json"
     ],
     "deferred": [
+      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
@@ -12612,6 +13259,7 @@
       "doc:standards/release-management.md"
     ],
     "delivery": [
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
       "doc:memory/lessons/README.md",
       "doc:memory/permanent/principles/README.md"
     ],
@@ -12661,7 +13309,11 @@
       "doc:templates/project-starters/web-app/AGENTS.md",
       "entity:document:prompts/deploy.prompt.md"
     ],
+    "deploying": [
+      "doc:.agent/skills/build/SKILL.md"
+    ],
     "deployment": [
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
       "doc:WORKFLOW.md",
       "doc:agents/deployment-manager.md",
       "doc:agents/security-reviewer.md",
@@ -12683,6 +13335,9 @@
       "doc:templates/specifications/design.md",
       "entity:document:agents/deployment-manager.md",
       "entity:document:templates/specifications/deployment-plan.md"
+    ],
+    "deployments": [
+      "doc:.agent/skills/build/SKILL.md"
     ],
     "deprecated": [
       "doc:CHANGELOG.md"
@@ -12712,6 +13367,10 @@
       "doc:docs/v1.0-technical-debt.md"
     ],
     "design": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/design/browser/README.md",
       "doc:.agent/skills/design/browser/SKILL.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
@@ -12759,6 +13418,7 @@
       "doc:templates/project-starters/web-app/HANDOFF.md",
       "doc:templates/project-starters/web-app/SESSION.md",
       "doc:templates/specifications/design.md",
+      "entity:document:.agent/skills/build/web-design-guidelines/README.md",
       "entity:document:.agent/skills/design/browser/README.md",
       "entity:document:.agent/skills/design/ui-ux-pro-max/README.md",
       "entity:document:prompts/design.prompt.md",
@@ -12773,8 +13433,11 @@
       "entity:document:templates/project-starters/python/DESIGN.md",
       "entity:document:templates/project-starters/web-app/DESIGN.md",
       "entity:document:templates/specifications/design.md",
+      "entity:platform:github",
       "entity:skill:browser",
-      "entity:skill:ui-ux-pro-max"
+      "entity:skill:ui-ux-pro-max",
+      "entity:skill:web-design-guidelines",
+      "entity:tool:git"
     ],
     "designed": [
       "doc:docs/multi-device-setup.md"
@@ -12952,6 +13615,7 @@
       "doc:docs/repository-migration.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:prompts/create-skill.prompt.md",
@@ -12965,6 +13629,7 @@
       "entity:document:docs/repository-migration.md",
       "entity:document:docs/v1.0-acceptance-criteria.md",
       "entity:document:docs/v1.0-baseline-audit.md",
+      "entity:document:docs/v1.0-final-acceptance.md",
       "entity:document:docs/v1.0-technical-debt.md"
     ],
     "doctor": [
@@ -12981,6 +13646,13 @@
       "doc:prompts/deploy.prompt.md",
       "doc:prompts/document.prompt.md",
       "doc:specs/phase-9-professional-context/tasks.md",
+      "entity:document:.agent/skills/build/README.md",
+      "entity:document:.agent/skills/build/creator/README.md",
+      "entity:document:.agent/skills/build/frontend/README.md",
+      "entity:document:.agent/skills/build/performance-optimization/README.md",
+      "entity:document:.agent/skills/build/vercel-agent/README.md",
+      "entity:document:.agent/skills/build/vercel-react/README.md",
+      "entity:document:.agent/skills/build/web-design-guidelines/README.md",
       "entity:document:.agent/skills/communication-skill/README.md",
       "entity:document:.agent/skills/communication-skill/anti-ai-writing.md",
       "entity:document:.agent/skills/communication-skill/examples.md",
@@ -13055,6 +13727,7 @@
       "entity:document:docs/repository-migration.md",
       "entity:document:docs/v1.0-acceptance-criteria.md",
       "entity:document:docs/v1.0-baseline-audit.md",
+      "entity:document:docs/v1.0-final-acceptance.md",
       "entity:document:docs/v1.0-technical-debt.md",
       "entity:document:examples/mcp/README.md",
       "entity:document:examples/mcp/server-config.example.json",
@@ -13409,6 +14082,9 @@
       "doc:knowledge/sharepoint/README.md",
       "doc:knowledge/vscode/README.md"
     ],
+    "down": [
+      "doc:docs/v1.0-final-acceptance.md"
+    ],
     "draft": [
       "doc:knowledge/professional-context/systems-and-platforms.md",
       "doc:knowledge/workflows/procedure-creation.json"
@@ -13510,6 +14186,7 @@
       "entity:memory:session-memory-engine-example-001"
     ],
     "engineer": [
+      "doc:.agent/skills/build/frontend/SKILL.md",
       "doc:.agent/skills/system/testing/SKILL.md"
     ],
     "engineering": [
@@ -13534,6 +14211,7 @@
     "environment": [
       "doc:docs/multi-device-setup.md",
       "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:references/README.md",
@@ -13710,6 +14388,8 @@
       "entity:document:knowledge/professional-context/project-experience.md"
     ],
     "expert": [
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
       "doc:.agent/skills/personal/simplify/SKILL.md"
     ],
     "expertise": [
@@ -13867,6 +14547,7 @@
       "doc:standards/naming.md"
     ],
     "files": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.github/instructions/README.md",
@@ -13900,7 +14581,9 @@
       "doc:GOVERNANCE.md",
       "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
-      "doc:specs/phase-9-professional-context/tasks.md"
+      "doc:docs/v1.0-final-acceptance.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
+      "entity:document:docs/v1.0-final-acceptance.md"
     ],
     "find": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
@@ -14006,6 +14689,12 @@
       "doc:RELEASE_NOTES_v1.0.0.md"
     ],
     "folder": [
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
       "doc:.agent/skills/design/browser/README.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
       "doc:.agent/skills/personal/analytical/README.md",
@@ -14049,6 +14738,14 @@
       "doc:references/workflow-examples.md"
     ],
     "for": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/creator/SKILL.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/design/browser/SKILL.md",
@@ -14106,6 +14803,7 @@
       "doc:CHANGELOG.md"
     ],
     "format": [
+      "doc:.agent/skills/build/SKILL.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/thinking/SKILL.md",
       "doc:.kiro/steering/technology.md",
@@ -14136,7 +14834,8 @@
     ],
     "fresh": [
       "doc:RELEASE_NOTES_v1.0.0.md",
-      "doc:docs/v1.0-acceptance-criteria.md"
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-final-acceptance.md"
     ],
     "freshness": [
       "doc:docs/knowledge-health.md",
@@ -14150,6 +14849,7 @@
       "doc:docs/agent-orchestration.md",
       "doc:docs/multi-device-setup.md",
       "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/README.md",
       "doc:knowledge/professional-context/project-experience.md",
@@ -14161,6 +14861,14 @@
       "doc:.github/instructions/prompts.instructions.md",
       "doc:.github/instructions/skills.instructions.md",
       "doc:.kiro/steering/technology.md"
+    ],
+    "frontend": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
+      "entity:document:.agent/skills/build/frontend/README.md",
+      "entity:skill:frontend"
     ],
     "full": [
       "doc:specs/phase-9-professional-context/tasks.md"
@@ -14207,7 +14915,8 @@
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "gate": [
-      "doc:docs/v1.0-acceptance-criteria.md"
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-final-acceptance.md"
     ],
     "gated": [
       "doc:specs/phase-9-professional-context/requirements.md"
@@ -14335,7 +15044,8 @@
       "entity:document:.github/instructions/specifications.instructions.md",
       "entity:document:.github/instructions/templates.instructions.md",
       "entity:document:.github/workflows/README.md",
-      "entity:document:knowledge/github/README.md"
+      "entity:document:knowledge/github/README.md",
+      "entity:platform:github"
     ],
     "global": [
       "entity:memory:convention-documentation-structure-001",
@@ -14343,6 +15053,7 @@
       "entity:memory:lesson-validate-generated-files-before-committing-001"
     ],
     "goal": [
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
       "doc:.agent/skills/personal/problem-solving/SKILL.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:templates/memory/session-memory.md"
@@ -14385,6 +15096,7 @@
       "doc:WORKFLOW.md",
       "doc:docs/cli-reference.md",
       "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -14411,6 +15123,12 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "guidance": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/creator/SKILL.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/design/browser/SKILL.md",
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md",
@@ -14472,6 +15190,15 @@
     "guide": [
       "doc:CHANGELOG.md",
       "doc:memory/permanent/principles/README.md"
+    ],
+    "guidelines": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
+      "entity:document:.agent/skills/build/web-design-guidelines/README.md",
+      "entity:platform:github",
+      "entity:skill:web-design-guidelines",
+      "entity:tool:git"
     ],
     "guides": [
       "doc:references/canva.md"
@@ -14614,6 +15341,7 @@
       "doc:references/vercel.md"
     ],
     "how": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
       "doc:docs/continuous-learning.md"
     ],
@@ -14737,6 +15465,9 @@
       "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:ROADMAP.md"
     ],
+    "improving": [
+      "doc:.agent/skills/build/README.md"
+    ],
     "in": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
@@ -14768,6 +15499,7 @@
       "doc:RELEASE_NOTES_v0.8.0.md"
     ],
     "includes": [
+      "doc:.agent/skills/build/README.md",
       "doc:.agent/skills/research/README.md",
       "doc:.agent/skills/system/README.md",
       "doc:.agent/skills/thinking/README.md"
@@ -14928,9 +15660,11 @@
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
     "interface": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md"
     ],
     "interfaces": [
+      "doc:.agent/skills/build/SKILL.md",
       "doc:agents/architect.md",
       "doc:prompts/design.prompt.md",
       "doc:specs/phase-9-professional-context/design.md",
@@ -15022,6 +15756,9 @@
       "doc:specs/README.md",
       "doc:templates/memory/session-memory.md"
     ],
+    "isolated": [
+      "doc:docs/v1.0-final-acceptance.md"
+    ],
     "issue": [
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/workflows/incident-response.json",
@@ -15066,6 +15803,7 @@
       "entity:document:templates/project-starters/web-app/KNOWN_ISSUES.md"
     ],
     "it": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/product.md",
       "doc:docs/continuous-learning.md",
@@ -15235,6 +15973,7 @@
       "doc:docs/knowledge-health.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/README.md",
       "doc:knowledge/ai-workflows/README.md",
@@ -15684,6 +16423,7 @@
       "doc:templates/memory/session-memory.md"
     ],
     "max": [
+      "doc:.agent/skills/build/SKILL.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md",
       "entity:document:.agent/skills/design/ui-ux-pro-max/README.md",
@@ -15705,6 +16445,7 @@
       "doc:docs/multi-device-setup.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:examples/mcp/server-config.example.json",
@@ -15721,6 +16462,20 @@
       "entity:tool:mcp"
     ],
     "md": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/creator/SKILL.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
@@ -15806,6 +16561,7 @@
       "doc:docs/repository-migration.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/README.md",
@@ -16055,6 +16811,13 @@
       "doc:templates/specifications/testing-plan.md",
       "entity:concept:validation",
       "entity:concept:workflow",
+      "entity:document:.agent/skills/build/README.md",
+      "entity:document:.agent/skills/build/creator/README.md",
+      "entity:document:.agent/skills/build/frontend/README.md",
+      "entity:document:.agent/skills/build/performance-optimization/README.md",
+      "entity:document:.agent/skills/build/vercel-agent/README.md",
+      "entity:document:.agent/skills/build/vercel-react/README.md",
+      "entity:document:.agent/skills/build/web-design-guidelines/README.md",
       "entity:document:.agent/skills/communication-skill/README.md",
       "entity:document:.agent/skills/communication-skill/anti-ai-writing.md",
       "entity:document:.agent/skills/communication-skill/examples.md",
@@ -16126,6 +16889,7 @@
       "entity:document:docs/repository-migration.md",
       "entity:document:docs/v1.0-acceptance-criteria.md",
       "entity:document:docs/v1.0-baseline-audit.md",
+      "entity:document:docs/v1.0-final-acceptance.md",
       "entity:document:docs/v1.0-technical-debt.md",
       "entity:document:examples/mcp/README.md",
       "entity:document:knowledge/README.md",
@@ -16375,14 +17139,20 @@
       "entity:platform:claude",
       "entity:platform:codex",
       "entity:platform:copilot",
+      "entity:platform:github",
       "entity:platform:power-apps",
       "entity:platform:power-automate",
+      "entity:platform:vercel",
       "entity:profile:felipe-rojas",
       "entity:project:readme-md",
       "entity:skill:analytical",
       "entity:skill:browser",
+      "entity:skill:build",
       "entity:skill:clear-concise-writing",
       "entity:skill:communication-skill",
+      "entity:skill:creator",
+      "entity:skill:frontend",
+      "entity:skill:performance-optimization",
       "entity:skill:problem-solving",
       "entity:skill:research",
       "entity:skill:simplify",
@@ -16392,6 +17162,9 @@
       "entity:skill:thinking",
       "entity:skill:ui-ux-pro-max",
       "entity:skill:using-superpowers",
+      "entity:skill:vercel-agent",
+      "entity:skill:vercel-react",
+      "entity:skill:web-design-guidelines",
       "entity:skill:writing",
       "entity:tool:git",
       "entity:tool:mcp"
@@ -16513,8 +17286,10 @@
       "entity:platform:claude",
       "entity:platform:codex",
       "entity:platform:copilot",
+      "entity:platform:github",
       "entity:platform:power-apps",
       "entity:platform:power-automate",
+      "entity:platform:vercel",
       "entity:tool:git",
       "entity:tool:mcp"
     ],
@@ -16549,6 +17324,7 @@
       "doc:standards/security.md"
     ],
     "mode": [
+      "doc:.agent/skills/build/SKILL.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/system/SKILL.md",
       "doc:.agent/skills/thinking/SKILL.md",
@@ -16621,6 +17397,9 @@
       "doc:templates/project-starters/power-automate/SESSION.md",
       "doc:templates/project-starters/python/SESSION.md",
       "doc:templates/project-starters/web-app/SESSION.md"
+    ],
+    "my": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md"
     ],
     "name": [
       "doc:knowledge/workflows/bug-fix.json",
@@ -16722,6 +17501,9 @@
     ],
     "node": [
       "doc:knowledge/architecture/phase-3-knowledge-graph.md"
+    ],
+    "nodes": [
+      "doc:docs/v1.0-final-acceptance.md"
     ],
     "non": [
       "doc:ARCHITECTURE.md",
@@ -17010,6 +17792,16 @@
     "opinion": [
       "doc:references/claude.md"
     ],
+    "optimization": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "entity:document:.agent/skills/build/performance-optimization/README.md",
+      "entity:skill:performance-optimization"
+    ],
+    "optimizing": [
+      "doc:.agent/skills/build/SKILL.md"
+    ],
     "optional": [
       "doc:knowledge/workflows/bug-fix.json",
       "doc:references/mcp.md"
@@ -17018,6 +17810,7 @@
       "doc:.agent/skills/personal/analytical/SKILL.md"
     ],
     "or": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:CLAUDE.md",
       "doc:CONTRIBUTING.md",
@@ -17109,6 +17902,7 @@
       "doc:docs/multi-device-setup.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -17159,6 +17953,7 @@
       "doc:memory/projects/README.md"
     ],
     "output": [
+      "doc:.agent/skills/build/SKILL.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/SKILL.md",
       "doc:.agent/skills/thinking/SKILL.md",
@@ -17218,6 +18013,7 @@
     "ownership": [
       "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:agents/project-manager.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:standards/documentation.md"
@@ -17292,7 +18088,12 @@
       "doc:scripts/README.md"
     ],
     "performance": [
-      "doc:templates/specifications/requirements.md"
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "doc:templates/specifications/requirements.md",
+      "entity:document:.agent/skills/build/performance-optimization/README.md",
+      "entity:skill:performance-optimization"
     ],
     "permanent": [
       "doc:docs/memory-approval.md",
@@ -17443,8 +18244,10 @@
       "entity:platform:claude",
       "entity:platform:codex",
       "entity:platform:copilot",
+      "entity:platform:github",
       "entity:platform:power-apps",
-      "entity:platform:power-automate"
+      "entity:platform:power-automate",
+      "entity:platform:vercel"
     ],
     "platforms": [
       "doc:knowledge/professional-context/systems-and-platforms.md",
@@ -17482,12 +18285,16 @@
     ],
     "portability": [
       "doc:RELEASE_NOTES_v1.0.0.md",
-      "doc:docs/v1.0-baseline-audit.md"
+      "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-final-acceptance.md"
     ],
     "portable": [
       "doc:.kiro/steering/product.md",
       "doc:ARCHITECTURE.md",
       "doc:docs/v1.0-technical-debt.md"
+    ],
+    "post": [
+      "doc:RELEASE_NOTES_v1.0.0.md"
     ],
     "power": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
@@ -17587,6 +18394,9 @@
       "doc:docs/cli-reference.md"
     ],
     "practices": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:knowledge/best-practices/README.md",
       "entity:document:knowledge/best-practices/README.md"
     ],
@@ -17690,6 +18500,7 @@
       "doc:standards/security.md"
     ],
     "pro": [
+      "doc:.agent/skills/build/SKILL.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md",
       "entity:document:.agent/skills/design/ui-ux-pro-max/README.md",
@@ -17725,6 +18536,7 @@
       "entity:document:.kiro/steering/product.md"
     ],
     "production": [
+      "doc:.agent/skills/build/SKILL.md",
       "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:references/vercel.md"
@@ -18264,6 +19076,7 @@
       "doc:RELEASE_NOTES_v0.8.0.md"
     ],
     "purpose": [
+      "doc:.agent/skills/build/SKILL.md",
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
@@ -18434,7 +19247,12 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md"
     ],
     "react": [
-      "doc:references/v0.md"
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
+      "doc:references/v0.md",
+      "entity:document:.agent/skills/build/vercel-react/README.md",
+      "entity:skill:vercel-react"
     ],
     "read": [
       "doc:.github/copilot-instructions.md",
@@ -18452,6 +19270,7 @@
       "doc:templates/project-starters/web-app/HANDOFF.md"
     ],
     "readiness": [
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:prompts/deploy.prompt.md",
       "doc:references/workflow-examples.md"
@@ -18471,6 +19290,13 @@
       "doc:agents/security-reviewer.md"
     ],
     "readme": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/design/browser/README.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
@@ -18543,6 +19369,13 @@
       "doc:templates/project-starters/python/README.md",
       "doc:templates/project-starters/web-app/README.md",
       "doc:templates/specifications/README.md",
+      "entity:document:.agent/skills/build/README.md",
+      "entity:document:.agent/skills/build/creator/README.md",
+      "entity:document:.agent/skills/build/frontend/README.md",
+      "entity:document:.agent/skills/build/performance-optimization/README.md",
+      "entity:document:.agent/skills/build/vercel-agent/README.md",
+      "entity:document:.agent/skills/build/vercel-react/README.md",
+      "entity:document:.agent/skills/build/web-design-guidelines/README.md",
       "entity:document:.agent/skills/communication-skill/README.md",
       "entity:document:.agent/skills/design/browser/README.md",
       "entity:document:.agent/skills/design/ui-ux-pro-max/README.md",
@@ -18617,6 +19450,7 @@
       "entity:project:readme-md"
     ],
     "ready": [
+      "doc:.agent/skills/build/SKILL.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:prompts/plan.prompt.md"
     ],
@@ -18700,6 +19534,7 @@
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:README.md",
       "doc:docs/repository-migration.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
@@ -18871,6 +19706,9 @@
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
+    "remaining": [
+      "doc:docs/v1.0-final-acceptance.md"
+    ],
     "remediation": [
       "doc:docs/v1.0-baseline-audit.md"
     ],
@@ -18905,6 +19743,7 @@
       "doc:templates/project-starters/web-app/SESSION.md"
     ],
     "report": [
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:prompts/execute.prompt.md",
       "doc:references/workflow-examples.md",
       "doc:templates/project-memory/HANDOFF.md",
@@ -18938,6 +19777,7 @@
       "doc:docs/repository-migration.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -19133,7 +19973,6 @@
       "doc:prompts/research.prompt.md",
       "doc:references/chatgpt.md",
       "doc:references/workflow-examples.md",
-      "entity:concept:workflow",
       "entity:document:.agent/skills/research/README.md",
       "entity:document:knowledge/research-notes/README.md",
       "entity:document:prompts/research.prompt.md",
@@ -19163,6 +20002,12 @@
       "doc:examples/mcp/README.md"
     ],
     "resources": [
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
       "doc:.agent/skills/design/browser/README.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
       "doc:.agent/skills/personal/analytical/README.md",
@@ -19261,6 +20106,11 @@
       "doc:prompts/review.prompt.md"
     ],
     "reusable": [
+      "doc:.agent/skills/build/creator/SKILL.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/design/browser/SKILL.md",
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md",
@@ -19303,6 +20153,7 @@
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "review": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.kiro/steering/workflow.md",
       "doc:GOVERNANCE.md",
       "doc:WORKFLOW.md",
@@ -19910,12 +20761,29 @@
     "single": [
       "doc:.agent/skills/references/powerapps-yaml-format.md"
     ],
+    "site": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md"
+    ],
     "situation": [
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:templates/memory/lesson-memory.md"
     ],
     "skill": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/creator/SKILL.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
@@ -19963,12 +20831,18 @@
       "entity:platform:claude",
       "entity:platform:codex",
       "entity:platform:copilot",
+      "entity:platform:github",
       "entity:platform:power-apps",
       "entity:platform:power-automate",
+      "entity:platform:vercel",
       "entity:skill:analytical",
       "entity:skill:browser",
+      "entity:skill:build",
       "entity:skill:clear-concise-writing",
       "entity:skill:communication-skill",
+      "entity:skill:creator",
+      "entity:skill:frontend",
+      "entity:skill:performance-optimization",
       "entity:skill:problem-solving",
       "entity:skill:research",
       "entity:skill:simplify",
@@ -19978,11 +20852,28 @@
       "entity:skill:thinking",
       "entity:skill:ui-ux-pro-max",
       "entity:skill:using-superpowers",
+      "entity:skill:vercel-agent",
+      "entity:skill:vercel-react",
+      "entity:skill:web-design-guidelines",
       "entity:skill:writing",
       "entity:tool:git",
       "entity:tool:mcp"
     ],
     "skills": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/creator/SKILL.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
@@ -20052,6 +20943,13 @@
       "doc:templates/project-starters/web-app/HANDOFF.md",
       "entity:concept:validation",
       "entity:concept:workflow",
+      "entity:document:.agent/skills/build/README.md",
+      "entity:document:.agent/skills/build/creator/README.md",
+      "entity:document:.agent/skills/build/frontend/README.md",
+      "entity:document:.agent/skills/build/performance-optimization/README.md",
+      "entity:document:.agent/skills/build/vercel-agent/README.md",
+      "entity:document:.agent/skills/build/vercel-react/README.md",
+      "entity:document:.agent/skills/build/web-design-guidelines/README.md",
       "entity:document:.agent/skills/communication-skill/README.md",
       "entity:document:.agent/skills/communication-skill/anti-ai-writing.md",
       "entity:document:.agent/skills/communication-skill/examples.md",
@@ -20078,12 +20976,18 @@
       "entity:platform:claude",
       "entity:platform:codex",
       "entity:platform:copilot",
+      "entity:platform:github",
       "entity:platform:power-apps",
       "entity:platform:power-automate",
+      "entity:platform:vercel",
       "entity:skill:analytical",
       "entity:skill:browser",
+      "entity:skill:build",
       "entity:skill:clear-concise-writing",
       "entity:skill:communication-skill",
+      "entity:skill:creator",
+      "entity:skill:frontend",
+      "entity:skill:performance-optimization",
       "entity:skill:problem-solving",
       "entity:skill:research",
       "entity:skill:simplify",
@@ -20093,6 +20997,9 @@
       "entity:skill:thinking",
       "entity:skill:ui-ux-pro-max",
       "entity:skill:using-superpowers",
+      "entity:skill:vercel-agent",
+      "entity:skill:vercel-react",
+      "entity:skill:web-design-guidelines",
       "entity:skill:writing",
       "entity:tool:git",
       "entity:tool:mcp"
@@ -20134,6 +21041,7 @@
       "entity:skill:problem-solving"
     ],
     "source": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.kiro/steering/technology.md",
@@ -20253,8 +21161,12 @@
       "doc:standards/naming.md",
       "entity:skill:analytical",
       "entity:skill:browser",
+      "entity:skill:build",
       "entity:skill:clear-concise-writing",
       "entity:skill:communication-skill",
+      "entity:skill:creator",
+      "entity:skill:frontend",
+      "entity:skill:performance-optimization",
       "entity:skill:problem-solving",
       "entity:skill:research",
       "entity:skill:simplify",
@@ -20264,6 +21176,9 @@
       "entity:skill:thinking",
       "entity:skill:ui-ux-pro-max",
       "entity:skill:using-superpowers",
+      "entity:skill:vercel-agent",
+      "entity:skill:vercel-react",
+      "entity:skill:web-design-guidelines",
       "entity:skill:writing"
     ],
     "staging": [
@@ -20820,7 +21735,6 @@
       "entity:document:.agent/skills/system/using-superpowers/README.md",
       "entity:platform:claude",
       "entity:skill:using-superpowers",
-      "entity:tool:git",
       "entity:tool:mcp"
     ],
     "support": [
@@ -20833,6 +21747,12 @@
       "doc:references/mcp.md"
     ],
     "supporting": [
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
       "doc:.agent/skills/design/browser/README.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
       "doc:.agent/skills/personal/analytical/README.md",
@@ -20893,7 +21813,6 @@
       "entity:skill:system",
       "entity:skill:testing",
       "entity:skill:using-superpowers",
-      "entity:tool:git",
       "entity:tool:mcp"
     ],
     "systems": [
@@ -20902,7 +21821,8 @@
       "entity:document:knowledge/professional-context/systems-and-platforms.md"
     ],
     "table": [
-      "doc:docs/v1.0-acceptance-criteria.md"
+      "doc:docs/v1.0-acceptance-criteria.md",
+      "doc:docs/v1.0-final-acceptance.md"
     ],
     "tagging": [
       "doc:specs/phase-9-professional-context/tasks.md"
@@ -21346,6 +22266,7 @@
       "doc:memory/permanent/principles/README.md"
     ],
     "test": [
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:specs/phase-9-professional-context/tasks.md",
@@ -21356,6 +22277,7 @@
       "doc:prompts/specify.prompt.md"
     ],
     "testing": [
+      "doc:.agent/skills/build/SKILL.md",
       "doc:.agent/skills/system/testing/README.md",
       "doc:.agent/skills/system/testing/SKILL.md",
       "doc:prompts/design.prompt.md",
@@ -21428,6 +22350,12 @@
       "doc:specs/phase-9-professional-context/requirements.md"
     ],
     "the": [
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
       "doc:.agent/skills/design/browser/README.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
       "doc:.agent/skills/personal/analytical/README.md",
@@ -21512,6 +22440,12 @@
       "entity:skill:thinking"
     ],
     "this": [
+      "doc:.agent/skills/build/creator/README.md",
+      "doc:.agent/skills/build/frontend/README.md",
+      "doc:.agent/skills/build/performance-optimization/README.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:.agent/skills/design/browser/README.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
@@ -21609,6 +22543,8 @@
       "doc:templates/specifications/tasks.md"
     ],
     "to": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/personal/analytical/SKILL.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
@@ -21681,6 +22617,9 @@
     ],
     "topic": [
       "doc:.agent/skills/research/SKILL.md"
+    ],
+    "totals": [
+      "doc:docs/v1.0-final-acceptance.md"
     ],
     "touch": [
       "doc:specs/phase-9-professional-context/tasks.md"
@@ -21807,6 +22746,9 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "ui": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md",
       "doc:references/v0.md",
@@ -21815,6 +22757,9 @@
     ],
     "unapproved": [
       "doc:.github/instructions/specifications.instructions.md"
+    ],
+    "unchanged": [
+      "doc:docs/v1.0-final-acceptance.md"
     ],
     "unconfirmed": [
       "doc:knowledge/professional-context/project-experience.md"
@@ -21849,6 +22794,7 @@
       "doc:templates/project-starters/web-app/CHANGELOG.md"
     ],
     "unresolved": [
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:prompts/qa.prompt.md",
       "doc:standards/testing.md",
       "doc:templates/project-memory/TESTING.md",
@@ -21916,11 +22862,15 @@
       "doc:specs/README.md"
     ],
     "usage": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/research/README.md",
       "doc:.agent/skills/system/README.md",
       "doc:.agent/skills/thinking/README.md"
     ],
     "use": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.agent/skills/personal/analytical/SKILL.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
@@ -21979,10 +22929,12 @@
       "entity:document:.agent/skills/system/using-superpowers/README.md",
       "entity:platform:claude",
       "entity:skill:using-superpowers",
-      "entity:tool:git",
       "entity:tool:mcp"
     ],
     "ux": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/design/ui-ux-pro-max/README.md",
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md",
       "entity:document:.agent/skills/design/ui-ux-pro-max/README.md",
@@ -22003,10 +22955,12 @@
       "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
+      "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "entity:document:RELEASE_NOTES_v1.0.0.md",
       "entity:document:docs/v1.0-acceptance-criteria.md",
       "entity:document:docs/v1.0-baseline-audit.md",
+      "entity:document:docs/v1.0-final-acceptance.md",
       "entity:document:docs/v1.0-technical-debt.md"
     ],
     "valid": [
@@ -22088,9 +23042,19 @@
       "doc:knowledge/professional-context/responsibilities.md"
     ],
     "vercel": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/README.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/README.md",
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
       "doc:references/vercel.md",
       "doc:references/workflow-examples.md",
-      "entity:document:references/vercel.md"
+      "entity:document:.agent/skills/build/vercel-agent/README.md",
+      "entity:document:.agent/skills/build/vercel-react/README.md",
+      "entity:document:references/vercel.md",
+      "entity:platform:vercel",
+      "entity:skill:vercel-agent",
+      "entity:skill:vercel-react"
     ],
     "verification": [
       "doc:docs/repository-migration.md",
@@ -22158,6 +23122,9 @@
       "doc:knowledge/vscode/README.md",
       "entity:document:knowledge/vscode/README.md"
     ],
+    "warnings": [
+      "doc:docs/v1.0-final-acceptance.md"
+    ],
     "wave": [
       "doc:knowledge/professional-context/project-experience.md"
     ],
@@ -22172,6 +23139,10 @@
       "doc:knowledge/professional-context/systems-and-platforms.md"
     ],
     "web": [
+      "doc:.agent/skills/build/README.md",
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/README.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:references/v0.md",
       "doc:references/workflow-examples.md",
       "doc:templates/project-starters/web-app/AGENTS.md",
@@ -22190,6 +23161,7 @@
       "doc:templates/project-starters/web-app/TASKS.md",
       "doc:templates/project-starters/web-app/TESTING.md",
       "doc:templates/project-starters/web-app/decisions.md",
+      "entity:document:.agent/skills/build/web-design-guidelines/README.md",
       "entity:document:templates/project-starters/web-app/AGENTS.md",
       "entity:document:templates/project-starters/web-app/ARCHITECTURE.md",
       "entity:document:templates/project-starters/web-app/CHANGELOG.md",
@@ -22206,7 +23178,10 @@
       "entity:document:templates/project-starters/web-app/TASKS.md",
       "entity:document:templates/project-starters/web-app/TESTING.md",
       "entity:document:templates/project-starters/web-app/decisions.md",
-      "entity:project:web-app"
+      "entity:platform:github",
+      "entity:project:web-app",
+      "entity:skill:web-design-guidelines",
+      "entity:tool:git"
     ],
     "what": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
@@ -22241,6 +23216,8 @@
       "doc:templates/specifications/retrospective.md"
     ],
     "when": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
@@ -22303,6 +23280,7 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "with": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.kiro/steering/technology.md",
       "doc:knowledge/workflows/bug-fix.json",
       "doc:knowledge/workflows/documentation-update.json",
@@ -22336,6 +23314,12 @@
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
     ],
     "work": [
+      "doc:.agent/skills/build/SKILL.md",
+      "doc:.agent/skills/build/creator/SKILL.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
+      "doc:.agent/skills/build/vercel-react/SKILL.md",
       "doc:.agent/skills/design/browser/SKILL.md",
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md",
       "doc:.agent/skills/personal/analytical/SKILL.md",
@@ -22381,6 +23365,7 @@
       "doc:templates/specifications/retrospective.md"
     ],
     "workflow": [
+      "doc:.agent/skills/build/SKILL.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/README.md",
       "doc:.github/README.md",
@@ -22437,6 +23422,9 @@
       "doc:docs/cli-reference.md",
       "doc:knowledge/professional-context/expertise.md"
     ],
+    "works": [
+      "doc:.agent/skills/build/web-design-guidelines/SKILL.md"
+    ],
     "workspace": [
       "doc:.kiro/specs/README.md"
     ],
@@ -22485,6 +23473,10 @@
       "doc:README.md"
     ],
     "you": [
+      "doc:.agent/skills/build/creator/SKILL.md",
+      "doc:.agent/skills/build/frontend/SKILL.md",
+      "doc:.agent/skills/build/performance-optimization/SKILL.md",
+      "doc:.agent/skills/build/vercel-agent/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:.agent/skills/design/browser/SKILL.md",
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md",

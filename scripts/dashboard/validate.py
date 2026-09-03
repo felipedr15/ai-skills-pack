@@ -87,10 +87,13 @@ def validate_dashboard_html(path: Path) -> tuple[list[str], list[str]]:
 def _strip_volatile_fields(data: dict) -> dict:
     """Return a copy of dashboard data with non-reproducible fields blanked.
 
-    generatedAt and per-artifact fileTimestamp reflect wall-clock/filesystem
-    mtime, which git does not preserve across checkouts, so they must be
-    excluded from staleness comparisons or the check can never pass on a
-    fresh clone.
+    generatedAt reflects wall-clock time and must be excluded from staleness
+    comparisons or the check can never pass on a fresh clone or a rerun.
+    Per-artifact fileTimestamp (filesystem mtime) is no longer emitted by
+    the aggregator -- git does not preserve mtimes across checkouts, so it
+    must never become committed content -- but this also blanks the key if
+    it is still present in an older saved artifact, so comparisons against
+    pre-existing committed files stay stable through the transition.
     """
     result = dict(data)
     result["generatedAt"] = "<ignored>"

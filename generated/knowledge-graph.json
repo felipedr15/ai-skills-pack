@@ -1,28 +1,28 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-26T22:16:05Z",
+  "generatedAt": "2026-09-02T23:35:58Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 376,
-    "edges": 661,
+    "nodes": 393,
+    "edges": 751,
     "nodesByType": {
       "concept": 2,
-      "document": 337,
+      "document": 345,
       "memory": 5,
-      "platform": 5,
+      "platform": 7,
       "profile": 1,
       "project": 10,
-      "skill": 14,
+      "skill": 21,
       "tool": 2
     },
     "edgesByType": {
       "belongs_to": 2,
       "contains": 129,
-      "generated_from": 14,
-      "references": 208,
-      "related_to": 145,
-      "supports": 4,
-      "uses": 159
+      "generated_from": 21,
+      "references": 233,
+      "related_to": 150,
+      "supports": 6,
+      "uses": 210
     }
   },
   "nodes": [
@@ -39,9 +39,72 @@
       "id": "concept:workflow",
       "type": "concept",
       "name": "workflow",
-      "sourcePath": ".agent/skills/research/SKILL.md",
+      "sourcePath": ".agent/skills/build/SKILL.md",
       "metadata": {
         "kind": "mention"
+      }
+    },
+    {
+      "id": "document:.agent/skills/build/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:.agent/skills/build/creator/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/creator/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:.agent/skills/build/frontend/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/frontend/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:.agent/skills/build/performance-optimization/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/performance-optimization/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:.agent/skills/build/vercel-agent/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/vercel-agent/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:.agent/skills/build/vercel-react/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/vercel-react/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:.agent/skills/build/web-design-guidelines/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": ".agent/skills/build/web-design-guidelines/README.md",
+      "metadata": {
+        "extension": ".md"
       }
     },
     {
@@ -706,6 +769,15 @@
       "type": "document",
       "name": "V1.0 Baseline Audit",
       "sourcePath": "docs/v1.0-baseline-audit.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/v1.0-final-acceptance.md",
+      "type": "document",
+      "name": "V1.0 Final Acceptance",
+      "sourcePath": "docs/v1.0-final-acceptance.md",
       "metadata": {
         "extension": ".md"
       }
@@ -3160,6 +3232,15 @@
       }
     },
     {
+      "id": "platform:github",
+      "type": "platform",
+      "name": "github",
+      "sourcePath": ".agent/skills/build/web-design-guidelines/SKILL.md",
+      "metadata": {
+        "kind": "mention"
+      }
+    },
+    {
       "id": "platform:power-apps",
       "type": "platform",
       "name": "power apps",
@@ -3173,6 +3254,15 @@
       "type": "platform",
       "name": "power automate",
       "sourcePath": ".agent/skills/communication-skill/SKILL.md",
+      "metadata": {
+        "kind": "mention"
+      }
+    },
+    {
+      "id": "platform:vercel",
+      "type": "platform",
+      "name": "vercel",
+      "sourcePath": ".agent/skills/build/SKILL.md",
       "metadata": {
         "kind": "mention"
       }
@@ -3300,6 +3390,17 @@
       }
     },
     {
+      "id": "skill:build",
+      "type": "skill",
+      "name": "Build",
+      "sourcePath": ".agent/skills/build/SKILL.md",
+      "metadata": {
+        "skillId": "build",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
       "id": "skill:clear-concise-writing",
       "type": "skill",
       "name": "Clear Concise Writing",
@@ -3317,6 +3418,39 @@
       "sourcePath": ".agent/skills/communication-skill/SKILL.md",
       "metadata": {
         "skillId": "communication-skill",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "skill:creator",
+      "type": "skill",
+      "name": "Creator",
+      "sourcePath": ".agent/skills/build/creator/SKILL.md",
+      "metadata": {
+        "skillId": "creator",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "skill:frontend",
+      "type": "skill",
+      "name": "Frontend",
+      "sourcePath": ".agent/skills/build/frontend/SKILL.md",
+      "metadata": {
+        "skillId": "frontend",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "skill:performance-optimization",
+      "type": "skill",
+      "name": "Performance Optimization",
+      "sourcePath": ".agent/skills/build/performance-optimization/SKILL.md",
+      "metadata": {
+        "skillId": "performance-optimization",
         "status": "stable",
         "version": "1.0.0"
       }
@@ -3421,6 +3555,39 @@
       }
     },
     {
+      "id": "skill:vercel-agent",
+      "type": "skill",
+      "name": "Vercel Agent",
+      "sourcePath": ".agent/skills/build/vercel-agent/SKILL.md",
+      "metadata": {
+        "skillId": "vercel-agent",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "skill:vercel-react",
+      "type": "skill",
+      "name": "Vercel React",
+      "sourcePath": ".agent/skills/build/vercel-react/SKILL.md",
+      "metadata": {
+        "skillId": "vercel-react",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "skill:web-design-guidelines",
+      "type": "skill",
+      "name": "web-design-guidelines",
+      "sourcePath": ".agent/skills/build/web-design-guidelines/SKILL.md",
+      "metadata": {
+        "skillId": "web-design-guidelines",
+        "status": "stable",
+        "version": "1.0.0"
+      }
+    },
+    {
       "id": "skill:writing",
       "type": "skill",
       "name": "Writing",
@@ -3435,7 +3602,7 @@
       "id": "tool:git",
       "type": "tool",
       "name": "git",
-      "sourcePath": ".agent/skills/system/using-superpowers/SKILL.md",
+      "sourcePath": ".agent/skills/build/web-design-guidelines/SKILL.md",
       "metadata": {
         "kind": "mention"
       }
@@ -4649,6 +4816,15 @@
       }
     },
     {
+      "id": "edge:09676d68130317cd",
+      "type": "generated_from",
+      "from": "skill:build",
+      "to": "document:skills.json",
+      "metadata": {
+        "source": "skills_registry"
+      }
+    },
+    {
       "id": "edge:6abd6d60320b82ad",
       "type": "generated_from",
       "from": "skill:clear-concise-writing",
@@ -4661,6 +4837,33 @@
       "id": "edge:ff943dcf436ab1d9",
       "type": "generated_from",
       "from": "skill:communication-skill",
+      "to": "document:skills.json",
+      "metadata": {
+        "source": "skills_registry"
+      }
+    },
+    {
+      "id": "edge:ca59d5730d0cc47c",
+      "type": "generated_from",
+      "from": "skill:creator",
+      "to": "document:skills.json",
+      "metadata": {
+        "source": "skills_registry"
+      }
+    },
+    {
+      "id": "edge:3a3e5f4e54050906",
+      "type": "generated_from",
+      "from": "skill:frontend",
+      "to": "document:skills.json",
+      "metadata": {
+        "source": "skills_registry"
+      }
+    },
+    {
+      "id": "edge:7805b532bb65cd7f",
+      "type": "generated_from",
+      "from": "skill:performance-optimization",
       "to": "document:skills.json",
       "metadata": {
         "source": "skills_registry"
@@ -4748,12 +4951,147 @@
       }
     },
     {
+      "id": "edge:93777aa886a6693b",
+      "type": "generated_from",
+      "from": "skill:vercel-agent",
+      "to": "document:skills.json",
+      "metadata": {
+        "source": "skills_registry"
+      }
+    },
+    {
+      "id": "edge:93b83b5d0504ebbd",
+      "type": "generated_from",
+      "from": "skill:vercel-react",
+      "to": "document:skills.json",
+      "metadata": {
+        "source": "skills_registry"
+      }
+    },
+    {
+      "id": "edge:9ae7ceb1ea7ac20f",
+      "type": "generated_from",
+      "from": "skill:web-design-guidelines",
+      "to": "document:skills.json",
+      "metadata": {
+        "source": "skills_registry"
+      }
+    },
+    {
       "id": "edge:a1385b037aca63ee",
       "type": "generated_from",
       "from": "skill:writing",
       "to": "document:skills.json",
       "metadata": {
         "source": "skills_registry"
+      }
+    },
+    {
+      "id": "edge:35475839cc98035d",
+      "type": "references",
+      "from": "document:.agent/skills/build/creator/README.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:e846b034d6c1e1dc",
+      "type": "references",
+      "from": "document:.agent/skills/build/creator/README.md",
+      "to": "skill:creator",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:4eb01962c36b2616",
+      "type": "references",
+      "from": "document:.agent/skills/build/frontend/README.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:fe04158f2f4c1e41",
+      "type": "references",
+      "from": "document:.agent/skills/build/frontend/README.md",
+      "to": "skill:frontend",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:398987d7baf59c92",
+      "type": "references",
+      "from": "document:.agent/skills/build/performance-optimization/README.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:0fb59a2eac9af951",
+      "type": "references",
+      "from": "document:.agent/skills/build/performance-optimization/README.md",
+      "to": "skill:performance-optimization",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:efd6d53f56db734d",
+      "type": "references",
+      "from": "document:.agent/skills/build/vercel-agent/README.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:c412f9561a573d70",
+      "type": "references",
+      "from": "document:.agent/skills/build/vercel-agent/README.md",
+      "to": "skill:vercel-agent",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:6162788ad62b5cd4",
+      "type": "references",
+      "from": "document:.agent/skills/build/vercel-react/README.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:6f93b2e9ebca8631",
+      "type": "references",
+      "from": "document:.agent/skills/build/vercel-react/README.md",
+      "to": "skill:vercel-react",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:3a5f961cbd4f4bbd",
+      "type": "references",
+      "from": "document:.agent/skills/build/web-design-guidelines/README.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:2ad7c7c947fdcaaa",
+      "type": "references",
+      "from": "document:.agent/skills/build/web-design-guidelines/README.md",
+      "to": "skill:web-design-guidelines",
+      "metadata": {
+        "kind": "markdown"
       }
     },
     {
@@ -5342,6 +5680,33 @@
       }
     },
     {
+      "id": "edge:a09b7dcefc7b9700",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "skill:creator",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:93aed7076a7b3210",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "skill:frontend",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:8c66675dea34c963",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "skill:performance-optimization",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:8942a060b168663f",
       "type": "references",
       "from": "document:README.md",
@@ -5396,10 +5761,55 @@
       }
     },
     {
+      "id": "edge:5492490b6ccc671f",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "skill:vercel-agent",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:636e764e84fb6e37",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "skill:vercel-react",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:7e787ddf2ba1d7c1",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "skill:web-design-guidelines",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:44911b81821e8c24",
       "type": "references",
       "from": "document:README.md",
       "to": "skill:writing",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:1f2bda1671a002fa",
+      "type": "references",
+      "from": "document:RELEASE_NOTES_v1.0.0.md",
+      "to": "document:docs/v1.0-final-acceptance.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:362071bfe876e5f9",
+      "type": "references",
+      "from": "document:RELEASE_NOTES_v1.0.0.md",
+      "to": "document:docs/v1.0-technical-debt.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5553,6 +5963,51 @@
       "type": "references",
       "from": "document:docs/memory-approval.md",
       "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:b679edb4ea9b0d42",
+      "type": "references",
+      "from": "document:docs/v1.0-acceptance-criteria.md",
+      "to": "document:docs/v1.0-final-acceptance.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:74abe0cf4e3b7022",
+      "type": "references",
+      "from": "document:docs/v1.0-final-acceptance.md",
+      "to": "document:RELEASE_NOTES_v1.0.0.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:4ffeeeb27f362041",
+      "type": "references",
+      "from": "document:docs/v1.0-final-acceptance.md",
+      "to": "document:docs/v1.0-baseline-audit.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:9b5372c7754d8dd5",
+      "type": "references",
+      "from": "document:docs/v1.0-final-acceptance.md",
+      "to": "document:docs/v1.0-technical-debt.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:75a492162f30e224",
+      "type": "references",
+      "from": "document:docs/v1.0-technical-debt.md",
+      "to": "document:docs/v1.0-final-acceptance.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -7178,10 +7633,37 @@
       }
     },
     {
+      "id": "edge:ae74883d02e893c1",
+      "type": "related_to",
+      "from": "document:docs/v1.0-final-acceptance.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:fbfab9b12f016e4d",
+      "type": "related_to",
+      "from": "document:docs/v1.0-final-acceptance.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:a1826226c8fe0b14",
       "type": "related_to",
       "from": "document:docs/v1.0-technical-debt.md",
       "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:57e0843f321b099d",
+      "type": "related_to",
+      "from": "document:docs/v1.0-technical-debt.md",
+      "to": "concept:workflow",
       "metadata": {
         "source": "document_text"
       }
@@ -7898,10 +8380,28 @@
       }
     },
     {
+      "id": "edge:e2f1d412d77c3fbb",
+      "type": "related_to",
+      "from": "skill:build",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:5c8e9d3026b6529e",
       "type": "related_to",
       "from": "skill:communication-skill",
       "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:64250364fa5c1a5a",
+      "type": "related_to",
+      "from": "skill:performance-optimization",
+      "to": "concept:workflow",
       "metadata": {
         "source": "document_text"
       }
@@ -7934,10 +8434,28 @@
       }
     },
     {
+      "id": "edge:58910a7dfa1f2e55",
+      "type": "supports",
+      "from": "skill:build",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "skill_text"
+      }
+    },
+    {
       "id": "edge:b0b9d64364e8cc16",
       "type": "supports",
       "from": "skill:communication-skill",
       "to": "concept:validation",
+      "metadata": {
+        "source": "skill_text"
+      }
+    },
+    {
+      "id": "edge:9a49de7541a50c6f",
+      "type": "supports",
+      "from": "skill:performance-optimization",
+      "to": "concept:workflow",
       "metadata": {
         "source": "skill_text"
       }
@@ -7967,6 +8485,33 @@
       "to": "concept:workflow",
       "metadata": {
         "source": "skill_text"
+      }
+    },
+    {
+      "id": "edge:24b95f5498545f03",
+      "type": "uses",
+      "from": "document:.agent/skills/build/README.md",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:960c356a2a4f44db",
+      "type": "uses",
+      "from": "document:.agent/skills/build/vercel-agent/README.md",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:5cd4c86c6bbc72c9",
+      "type": "uses",
+      "from": "document:.agent/skills/build/vercel-react/README.md",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "document_text"
       }
     },
     {
@@ -8078,6 +8623,15 @@
       }
     },
     {
+      "id": "edge:72fdf4b513088cda",
+      "type": "uses",
+      "from": "document:.github/README.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:bd95bb47275a6f76",
       "type": "uses",
       "from": "document:.github/README.md",
@@ -8091,6 +8645,15 @@
       "type": "uses",
       "from": "document:.github/copilot-instructions.md",
       "to": "platform:copilot",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:50bfe1b16dfce6b3",
+      "type": "uses",
+      "from": "document:.github/copilot-instructions.md",
+      "to": "platform:github",
       "metadata": {
         "source": "document_text"
       }
@@ -8114,10 +8677,28 @@
       }
     },
     {
+      "id": "edge:b7837dfb67ddcfe8",
+      "type": "uses",
+      "from": "document:.github/instructions/README.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:cd2bc9ce204f6161",
       "type": "uses",
       "from": "document:.github/instructions/README.md",
       "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:f083bfaf510c5a14",
+      "type": "uses",
+      "from": "document:.github/workflows/README.md",
+      "to": "platform:github",
       "metadata": {
         "source": "document_text"
       }
@@ -8168,6 +8749,15 @@
       }
     },
     {
+      "id": "edge:891f190bdabda5b1",
+      "type": "uses",
+      "from": "document:.kiro/steering/technology.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:66c27fc9d864fe7c",
       "type": "uses",
       "from": "document:.kiro/steering/technology.md",
@@ -8208,6 +8798,15 @@
       "type": "uses",
       "from": "document:ARCHITECTURE.md",
       "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:8d41e852f721d07b",
+      "type": "uses",
+      "from": "document:CHANGELOG.md",
+      "to": "platform:github",
       "metadata": {
         "source": "document_text"
       }
@@ -8267,6 +8866,24 @@
       }
     },
     {
+      "id": "edge:672cc9e5b4544356",
+      "type": "uses",
+      "from": "document:README.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:9494ae8954b5251b",
+      "type": "uses",
+      "from": "document:README.md",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:3b60247ecb6411d4",
       "type": "uses",
       "from": "document:README.md",
@@ -8280,6 +8897,15 @@
       "type": "uses",
       "from": "document:README.md",
       "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:6a11ad28f77d8390",
+      "type": "uses",
+      "from": "document:RELEASE_NOTES_v0.8.0.md",
+      "to": "platform:github",
       "metadata": {
         "source": "document_text"
       }
@@ -8303,6 +8929,15 @@
       }
     },
     {
+      "id": "edge:aed0e53213ab30e7",
+      "type": "uses",
+      "from": "document:RELEASE_NOTES_v0.9.0.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:99e2c79ab07a45e7",
       "type": "uses",
       "from": "document:RELEASE_NOTES_v0.9.0.md",
@@ -8316,6 +8951,24 @@
       "type": "uses",
       "from": "document:RELEASE_NOTES_v0.9.0.md",
       "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:c94bc7d69888de6d",
+      "type": "uses",
+      "from": "document:RELEASE_NOTES_v1.0.0.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:7e7ce9a1aa6a0187",
+      "type": "uses",
+      "from": "document:RELEASE_NOTES_v1.0.0.md",
+      "to": "platform:vercel",
       "metadata": {
         "source": "document_text"
       }
@@ -8402,6 +9055,15 @@
       }
     },
     {
+      "id": "edge:72811476055fa037",
+      "type": "uses",
+      "from": "document:agents/deployment-manager.md",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:649a83a21118f7e3",
       "type": "uses",
       "from": "document:agents/reviewer.md",
@@ -8424,6 +9086,15 @@
       "type": "uses",
       "from": "document:docs/agent-orchestration.md",
       "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:87c61ca07fabed8e",
+      "type": "uses",
+      "from": "document:docs/cli-reference.md",
+      "to": "platform:github",
       "metadata": {
         "source": "document_text"
       }
@@ -8483,6 +9154,15 @@
       }
     },
     {
+      "id": "edge:c8ce02719db6f8a9",
+      "type": "uses",
+      "from": "document:docs/multi-device-setup.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:a8cefc8c419412aa",
       "type": "uses",
       "from": "document:docs/multi-device-setup.md",
@@ -8501,10 +9181,28 @@
       }
     },
     {
+      "id": "edge:2bba824cb85b8171",
+      "type": "uses",
+      "from": "document:docs/repository-migration.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:d029f7060d7605b6",
       "type": "uses",
       "from": "document:docs/repository-migration.md",
       "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:0b2eb0c2e13a8e77",
+      "type": "uses",
+      "from": "document:docs/v1.0-acceptance-criteria.md",
+      "to": "platform:github",
       "metadata": {
         "source": "document_text"
       }
@@ -8528,6 +9226,15 @@
       }
     },
     {
+      "id": "edge:ceb1409797994a92",
+      "type": "uses",
+      "from": "document:docs/v1.0-baseline-audit.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:d1a0bce628c7500f",
       "type": "uses",
       "from": "document:docs/v1.0-baseline-audit.md",
@@ -8541,6 +9248,60 @@
       "type": "uses",
       "from": "document:docs/v1.0-baseline-audit.md",
       "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:bf739c39c494334f",
+      "type": "uses",
+      "from": "document:docs/v1.0-final-acceptance.md",
+      "to": "platform:copilot",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:6131f6fbdf659a7d",
+      "type": "uses",
+      "from": "document:docs/v1.0-final-acceptance.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:93721b5b7f50b836",
+      "type": "uses",
+      "from": "document:docs/v1.0-final-acceptance.md",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:ea7590c6d61ad121",
+      "type": "uses",
+      "from": "document:docs/v1.0-final-acceptance.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:e9532f326eb2ec32",
+      "type": "uses",
+      "from": "document:docs/v1.0-final-acceptance.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:61addaa7b15807f6",
+      "type": "uses",
+      "from": "document:docs/v1.0-technical-debt.md",
+      "to": "platform:github",
       "metadata": {
         "source": "document_text"
       }
@@ -8591,6 +9352,15 @@
       }
     },
     {
+      "id": "edge:bf78feefdb8da22e",
+      "type": "uses",
+      "from": "document:knowledge/README.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:df4d5a1f4a70768a",
       "type": "uses",
       "from": "document:knowledge/README.md",
@@ -8622,6 +9392,15 @@
       "type": "uses",
       "from": "document:knowledge/architecture/phase-3-knowledge-graph.md",
       "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:0777d45c3b7d48c8",
+      "type": "uses",
+      "from": "document:knowledge/architecture/phase-4-semantic-discovery.md",
+      "to": "platform:github",
       "metadata": {
         "source": "document_text"
       }
@@ -8744,6 +9523,15 @@
       }
     },
     {
+      "id": "edge:f5aa8b101de4e65e",
+      "type": "uses",
+      "from": "document:knowledge/github/README.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:f9213727b706afd1",
       "type": "uses",
       "from": "document:knowledge/github/README.md",
@@ -8775,6 +9563,15 @@
       "type": "uses",
       "from": "document:knowledge/power-automate/README.md",
       "to": "platform:power-automate",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:469fdaf1bbb1bcda",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/expertise.md",
+      "to": "platform:github",
       "metadata": {
         "source": "document_text"
       }
@@ -8816,6 +9613,15 @@
       }
     },
     {
+      "id": "edge:1419c5d60029163f",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/project-experience.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:3a1305cdd293e025",
       "type": "uses",
       "from": "document:knowledge/professional-context/project-experience.md",
@@ -8847,6 +9653,15 @@
       "type": "uses",
       "from": "document:knowledge/professional-context/project-experience.md",
       "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:92b0d15f8f2fe9a6",
+      "type": "uses",
+      "from": "document:knowledge/professional-context/systems-and-platforms.md",
+      "to": "platform:github",
       "metadata": {
         "source": "document_text"
       }
@@ -8897,6 +9712,15 @@
       }
     },
     {
+      "id": "edge:88fd0513436f2f0d",
+      "type": "uses",
+      "from": "document:prompts/deploy.prompt.md",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:dc84be9ac1e5e3cc",
       "type": "uses",
       "from": "document:prompts/review.prompt.md",
@@ -8928,6 +9752,15 @@
       "type": "uses",
       "from": "document:references/README.md",
       "to": "platform:copilot",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:89081f4c44f0baa6",
+      "type": "uses",
+      "from": "document:references/README.md",
+      "to": "platform:vercel",
       "metadata": {
         "source": "document_text"
       }
@@ -8969,6 +9802,15 @@
       }
     },
     {
+      "id": "edge:d42bccd4d0b9bafb",
+      "type": "uses",
+      "from": "document:references/copilot.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:39587a0cd86a3bb3",
       "type": "uses",
       "from": "document:references/copilot.md",
@@ -8987,6 +9829,15 @@
       }
     },
     {
+      "id": "edge:34197e7199f54efb",
+      "type": "uses",
+      "from": "document:references/vercel.md",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:0468bada765cc9aa",
       "type": "uses",
       "from": "document:references/workflow-examples.md",
@@ -9000,6 +9851,15 @@
       "type": "uses",
       "from": "document:references/workflow-examples.md",
       "to": "platform:power-automate",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:9284c9bf5fb88250",
+      "type": "uses",
+      "from": "document:references/workflow-examples.md",
+      "to": "platform:vercel",
       "metadata": {
         "source": "document_text"
       }
@@ -9230,10 +10090,37 @@
       }
     },
     {
+      "id": "edge:64791d41744a8ba6",
+      "type": "uses",
+      "from": "document:templates/project-starters/web-app/README.md",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:7ef008aaf6c9799b",
       "type": "uses",
       "from": "memory:lesson-validate-generated-files-before-committing-001",
       "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:438589ae396f4adc",
+      "type": "uses",
+      "from": "skill:build",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "skill_text"
+      }
+    },
+    {
+      "id": "edge:a1686cee9d7eb4ac",
+      "type": "uses",
+      "from": "skill:build",
+      "to": "platform:vercel",
       "metadata": {
         "source": "document_text"
       }
@@ -9399,42 +10286,102 @@
       "metadata": {
         "source": "skill_text"
       }
+    },
+    {
+      "id": "edge:8b296e99d5aecdce",
+      "type": "uses",
+      "from": "skill:vercel-agent",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:966781d596f2ee96",
+      "type": "uses",
+      "from": "skill:vercel-agent",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "skill_text"
+      }
+    },
+    {
+      "id": "edge:18d11be8bdfd7fbd",
+      "type": "uses",
+      "from": "skill:vercel-react",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "skill_text"
+      }
+    },
+    {
+      "id": "edge:a7116661e51d96ae",
+      "type": "uses",
+      "from": "skill:vercel-react",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:291a09928a6a2a3d",
+      "type": "uses",
+      "from": "skill:web-design-guidelines",
+      "to": "platform:github",
+      "metadata": {
+        "source": "skill_text"
+      }
+    },
+    {
+      "id": "edge:302bde48256614b4",
+      "type": "uses",
+      "from": "skill:web-design-guidelines",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:0895dc94b5e3c325",
+      "type": "uses",
+      "from": "skill:web-design-guidelines",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:bcbda525ed8ec251",
+      "type": "uses",
+      "from": "skill:web-design-guidelines",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "skill_text"
+      }
+    },
+    {
+      "id": "edge:3fd148f9fe95d0a6",
+      "type": "uses",
+      "from": "skill:web-design-guidelines",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:7808016c9945916d",
+      "type": "uses",
+      "from": "skill:web-design-guidelines",
+      "to": "tool:git",
+      "metadata": {
+        "source": "skill_text"
+      }
     }
   ],
   "unresolvedReferences": [
     {
       "source": ".kiro/specs/phase-9-professional-context/README.md",
       "target": "specs/phase-9-professional-context",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": ".agent/skills/build/creator/SKILL.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": ".agent/skills/build/frontend/SKILL.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": ".agent/skills/build/performance-optimization/SKILL.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": ".agent/skills/build/vercel-agent/SKILL.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": ".agent/skills/build/vercel-react/SKILL.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": ".agent/skills/build/web-design-guidelines/SKILL.md",
       "kind": "markdown"
     },
     {

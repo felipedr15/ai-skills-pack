@@ -18,15 +18,6 @@ def _load_json(path: Path) -> dict | None:
         return None
 
 
-def _file_timestamp(path: Path) -> str | None:
-    """Get ISO timestamp of file modification time."""
-    if not path.is_file():
-        return None
-    mtime = path.stat().st_mtime
-    dt = datetime.fromtimestamp(mtime, tz=timezone.utc)
-    return dt.replace(microsecond=0).isoformat().replace("+00:00", "Z")
-
-
 def _check_staleness(data: dict | None, path: Path) -> dict:
     """Check if a generated artifact exists and extract its generatedAt."""
     if data is None:
@@ -135,7 +126,6 @@ def aggregate_artifacts(root: Path) -> dict:
     for name, path in artifacts:
         data = _load_json(path)
         info = _check_staleness(data, path)
-        info["fileTimestamp"] = _file_timestamp(path)
         result.append(info)
     return {"artifacts": result}
 

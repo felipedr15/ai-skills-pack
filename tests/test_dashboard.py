@@ -19,6 +19,13 @@ from dashboard import render as db_render
 from dashboard import validate as db_validate
 from dashboard import server as db_server
 
+import importlib.util
+
+_BUILD_SPEC = importlib.util.spec_from_file_location(
+    "dashboard_build_cli", ROOT / "scripts" / "dashboard-build.py")
+db_build_cli = importlib.util.module_from_spec(_BUILD_SPEC)
+_BUILD_SPEC.loader.exec_module(db_build_cli)
+
 
 def _make_fixture(root: Path):
     """Create a minimal fixture repository with generated artifacts."""
@@ -465,6 +472,104 @@ class RenderTests(unittest.TestCase):
             db_render.write_dashboard(data, root)
             self.assertTrue((root / "generated" / "dashboard.html").is_file())
             self.assertTrue((root / "generated" / "dashboard-data.json").is_file())
+
+
+# ============================================================
+# Idempotency / Determinism Tests
+# ============================================================
+
+class DashboardIdempotencyTests(unittest.TestCase):
+    """Regression coverage: regenerating the dashboard must not dirty the
+    working tree unless source content meaningfully changed."""
+
+    def setUp(self):
+        self._tmpdir = tempfile.TemporaryDirectory()
+        self.root = Path(self._tmpdir.name)
+        _make_fixture(self.root)
+        # dashboard-build.py's CLI (main/write_dashboard) writes through the
+        # module-level ROOT constant, while staleness checks read through
+        # DATA_PATH/HTML_PATH -- all three must be redirected to the fixture
+        # so these tests never touch the real repository's generated/ files.
+        self._orig_root = db_build_cli.ROOT
+        self._orig_data_path = db_build_cli.DATA_PATH
+        self._orig_html_path = db_build_cli.HTML_PATH
+        db_build_cli.ROOT = self.root
+        db_build_cli.DATA_PATH = self.root / "generated" / "dashboard-data.json"
+        db_build_cli.HTML_PATH = self.root / "generated" / "dashboard.html"
+
+    def tearDown(self):
+        db_build_cli.ROOT = self._orig_root
+        db_build_cli.DATA_PATH = self._orig_data_path
+        db_build_cli.HTML_PATH = self._orig_html_path
+        self._tmpdir.cleanup()
+
+    def test_no_filetimestamp_in_generated_output(self):
+        # Rule: filesystem modification times must never become committed
+        # content, since they vary across clones and computers.
+        data = db_aggregate.build_dashboard_data(self.root)
+        self.assertNotIn("fileTimestamp", json.dumps(data))
+
+    def test_fresh_clone_mtime_difference_does_not_alter_artifacts(self):
+        """Identical source content with different filesystem mtimes (as a
+        fresh clone on another machine would have) must aggregate to
+        identical data once the only genuinely volatile field is ignored."""
+        import os
+        data1 = db_aggregate.build_dashboard_data(self.root)
+        for name in ("skills.json", "repository-index.json", "memory-index.json",
+                     "knowledge-graph.json", "discovery-index.json"):
+            path = self.root / "generated" / name
+            os.utime(path, (1000000000, 1000000000))
+        data2 = db_aggregate.build_dashboard_data(self.root)
+        d1, d2 = dict(data1), dict(data2)
+        d1["generatedAt"] = d2["generatedAt"] = "<ignored>"
+        self.assertEqual(d1, d2)
+
+    def test_second_write_produces_byte_identical_files(self):
+        data = db_aggregate.build_dashboard_data(self.root)
+        db_render.write_dashboard(data, self.root)
+        json_before = db_build_cli.DATA_PATH.read_bytes()
+        html_before = db_build_cli.HTML_PATH.read_bytes()
+
+        data2 = db_aggregate.build_dashboard_data(self.root)  # fresh generatedAt only
+        self.assertTrue(db_build_cli._is_current(data2))
+        if not db_build_cli._is_current(data2):  # would only run on a real bug
+            db_render.write_dashboard(data2, self.root)
+
+        self.assertEqual(json_before, db_build_cli.DATA_PATH.read_bytes())
+        self.assertEqual(html_before, db_build_cli.HTML_PATH.read_bytes())
+
+    def test_meaningful_change_is_detected_as_not_current(self):
+        data = db_aggregate.build_dashboard_data(self.root)
+        db_render.write_dashboard(data, self.root)
+
+        skills_path = self.root / "generated" / "skills.json"
+        skills_data = json.loads(skills_path.read_text(encoding="utf-8"))
+        skills_data["skills"].append({
+            "id": "new-skill", "name": "New Skill", "version": "1.0.0", "status": "stable",
+            "description": "A new skill", "triggers": ["new"], "inputs": [], "outputs": [],
+            "dependencies": [], "path": ".agent/skills/test/new.md", "replaces": None, "deprecatedBy": None,
+        })
+        skills_path.write_text(json.dumps(skills_data), encoding="utf-8")
+
+        data2 = db_aggregate.build_dashboard_data(self.root)
+        self.assertFalse(db_build_cli._is_current(data2))
+
+    def test_cli_second_full_run_no_diff(self):
+        rc1 = db_build_cli.main([])
+        self.assertEqual(rc1, 0)
+        json_before = db_build_cli.DATA_PATH.read_bytes()
+        html_before = db_build_cli.HTML_PATH.read_bytes()
+
+        rc2 = db_build_cli.main([])
+        self.assertEqual(rc2, 0)
+        self.assertEqual(json_before, db_build_cli.DATA_PATH.read_bytes())
+        self.assertEqual(html_before, db_build_cli.HTML_PATH.read_bytes())
+
+    def test_cli_check_passes_after_build_and_fails_on_missing(self):
+        db_build_cli.main([])
+        self.assertEqual(db_build_cli.main(["--check"]), 0)
+        db_build_cli.DATA_PATH.unlink()
+        self.assertEqual(db_build_cli.main(["--check"]), 1)
 
 
 # ============================================================

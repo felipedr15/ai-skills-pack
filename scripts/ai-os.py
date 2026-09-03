@@ -272,18 +272,10 @@ def cmd_build(args):
             return 1
 
     # Generate release manifest last (depends on all other artifacts)
-    from release.manifest import build_manifest, write_manifest, check_manifest
+    from release.manifest import build_manifest, write_manifest_if_changed
     manifest = build_manifest(ROOT)
-    if args.check:
-        try:
-            check_manifest(manifest, ROOT)
-            print_result("release manifest", True)
-        except (ValueError, FileNotFoundError):
-            print_result("release manifest", False)
-            return 1
-    else:
-        write_manifest(manifest, ROOT)
-        print_result("release manifest", True, "generated")
+    changed = write_manifest_if_changed(manifest, ROOT)
+    print_result("release manifest", True, "generated" if changed else "current")
 
     print("\nAll artifacts generated.")
     return 0
