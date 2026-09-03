@@ -31,9 +31,15 @@ def category_for(path):
 
 def is_excluded(path):
     parts = path.parts
-    lowered = {part.lower() for part in parts}
-    if any(name.lower() in lowered for name in EXCLUDED_DIRS):
-        return True
+    # `.agent/skills/` is explicitly-tracked source content whose taxonomy
+    # uses category directory names (e.g. "build") that can collide with
+    # EXCLUDED_DIRS' generic build-artifact-directory names below. Skill
+    # content must never be excluded on that basis.
+    under_skills = len(parts) >= 2 and parts[0] == ".agent" and parts[1] == "skills"
+    if not under_skills:
+        lowered = {part.lower() for part in parts}
+        if any(name.lower() in lowered for name in EXCLUDED_DIRS):
+            return True
     name = path.name
     return name in EXCLUDED_NAMES or name.startswith(".env.") or name.lower().endswith(tuple(EXCLUDED_SUFFIXES)) or name.endswith("~")
 

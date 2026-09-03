@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "counts": {
-    "skills": 34,
+    "skills": 48,
     "agents": 11,
     "prompts": 12,
     "project-starters": 129,
@@ -1233,8 +1233,8 @@
     {
       "path": "scripts/ai-os.py",
       "category": "scripts",
-      "size": 56726,
-      "sha256": "13277902561e176daf7627805dd79f87384a765aa9f9c40e0458658873244327"
+      "size": 56503,
+      "sha256": "5bf127e3c12a6f48a1f01c2d3dab46cc29e4cc1486d8457c9cd4968f4a642ad7"
     },
     {
       "path": "scripts/ai_os_service/__init__.py",
@@ -1257,8 +1257,8 @@
     {
       "path": "scripts/ai_os_service/permissions.py",
       "category": "scripts",
-      "size": 3499,
-      "sha256": "c5086c236c1db65ffa50641e872ae5ebd3e029420a4959f4dc046dabf0c1e496"
+      "size": 3980,
+      "sha256": "c6f11a927d326741ea5917e33a38f02dfa831b3f1517fa18f4d7eb44349dbf14"
     },
     {
       "path": "scripts/ai_os_service/service.py",
@@ -1281,8 +1281,8 @@
     {
       "path": "scripts/dashboard-build.py",
       "category": "scripts",
-      "size": 2404,
-      "sha256": "bf82f40c9c4ef0a3077476698e4a59c4b75674686afb81fd97c337bb4f797675"
+      "size": 2729,
+      "sha256": "c5b385e3efe42e49a48f800dd0103318286cbed15c04f7560fa4c5c16f875e01"
     },
     {
       "path": "scripts/dashboard-check.py",
@@ -1311,8 +1311,8 @@
     {
       "path": "scripts/dashboard/aggregate.py",
       "category": "scripts",
-      "size": 11336,
-      "sha256": "d3e26156edd3b18543a6a8e31d6942434ed4107e15a6a35df575b19a8129f3f1"
+      "size": 10970,
+      "sha256": "285df54d7b40bcef5e1f46d5ebdc6ff587cf40894f69d4766190e43fcb97b64b"
     },
     {
       "path": "scripts/dashboard/render.py",
@@ -1335,8 +1335,8 @@
     {
       "path": "scripts/dashboard/validate.py",
       "category": "scripts",
-      "size": 4004,
-      "sha256": "bc877ff7c162bf34e7c94bd58f2981eb4789867dc620a2566be10ebac7e35f25"
+      "size": 4282,
+      "sha256": "a7a0a0af81195e300de80c079e54b5a6b96b07b153e102bdb9a6f5f30ba2a722"
     },
     {
       "path": "scripts/discover.py",
@@ -1413,8 +1413,8 @@
     {
       "path": "scripts/index-repository.py",
       "category": "scripts",
-      "size": 4308,
-      "sha256": "07d7975ccf3e1c2e54015a3fb6405e4227a3b4672b75e8cb248fb30427f95540"
+      "size": 4703,
+      "sha256": "853eabb0f39fb145f6bc7ebc0784cabc3b9f3921aac93914e76914f335deb852"
     },
     {
       "path": "scripts/knowledge-build.py",
@@ -1467,8 +1467,8 @@
     {
       "path": "scripts/knowledge_graph/utils.py",
       "category": "scripts",
-      "size": 2895,
-      "sha256": "ada13d33eaf7958229adfc12dfdb7a2de4f66bc9168f0fdffcb049bee06ff439"
+      "size": 3304,
+      "sha256": "53cb6a89483b98ab9c7302144b86a3e0b875c02a4a033c6b7d89abbf72a3d46d"
     },
     {
       "path": "scripts/knowledge_graph/validate.py",
@@ -1719,8 +1719,8 @@
     {
       "path": "scripts/release/manifest.py",
       "category": "scripts",
-      "size": 9869,
-      "sha256": "afd9b4e6a10315996e976396391e754fd69b2cc592fff3a5b8a9927865241030"
+      "size": 11090,
+      "sha256": "3cf72450d8e2d7f864fecff35e88369a5fd86b737b3987a5f1c7945d327f65fa"
     },
     {
       "path": "scripts/release/status.py",
@@ -1803,8 +1803,8 @@
     {
       "path": "scripts/semantic_discovery/utils.py",
       "category": "scripts",
-      "size": 2602,
-      "sha256": "5f12788a133a93eedfe22c2aa69a11cf93cd738384c50da13a60363f2ddd4e4e"
+      "size": 3011,
+      "sha256": "b83ce77e8909c0266c03bb1b986dfc285716591afe0876a58838ad19fc7d68be"
     },
     {
       "path": "scripts/semantic_discovery/validate.py",
@@ -1841,6 +1841,90 @@
       "category": "scripts",
       "size": 18517,
       "sha256": "064b57d318ac859caf95313513e4ffe0efb0e9866a091f26f5605e4d434e986b"
+    },
+    {
+      "path": ".agent/skills/build/README.md",
+      "category": "skills",
+      "size": 375,
+      "sha256": "964f83615a1018375393a2a16f65e98bf09da1b671246da9fbc239427e026b68"
+    },
+    {
+      "path": ".agent/skills/build/SKILL.md",
+      "category": "skills",
+      "size": 5413,
+      "sha256": "eff89bc3646b34322b8b0f613486e33fef74110c83b18caae48fd534c669d215"
+    },
+    {
+      "path": ".agent/skills/build/creator/README.md",
+      "category": "skills",
+      "size": 132,
+      "sha256": "be6fcffbf027d2b97b266aedbb6319f5d620b7d38638fe89c53a6a45ec03c7a3"
+    },
+    {
+      "path": ".agent/skills/build/creator/SKILL.md",
+      "category": "skills",
+      "size": 600,
+      "sha256": "98c1a12bbdda74b834f7e6ca9f3133cfa36e6f66360478fad3e6f224e39908e3"
+    },
+    {
+      "path": ".agent/skills/build/frontend/README.md",
+      "category": "skills",
+      "size": 134,
+      "sha256": "d46b397c0395bd583c302b75b8a40b1f4255e90f3fbf70b12319eeb592348053"
+    },
+    {
+      "path": ".agent/skills/build/frontend/SKILL.md",
+      "category": "skills",
+      "size": 526,
+      "sha256": "a815b810c224c8a2c8f8bf9d0b4928ea181e8ecaec90fb48fc65d185785d18e6"
+    },
+    {
+      "path": ".agent/skills/build/performance-optimization/README.md",
+      "category": "skills",
+      "size": 166,
+      "sha256": "f1961581b4812f4096c0c9a64e0623d01d63947812d9852881c0f33f7f74da49"
+    },
+    {
+      "path": ".agent/skills/build/performance-optimization/SKILL.md",
+      "category": "skills",
+      "size": 1272,
+      "sha256": "31a7a6d75372175d6b4cfbb4385144ef42fad6db8f2683aeeff9308324ad0270"
+    },
+    {
+      "path": ".agent/skills/build/vercel-agent/README.md",
+      "category": "skills",
+      "size": 142,
+      "sha256": "1f4c9cb3af0578162a0f42c6cf8af381b5c96658d3023d423908e155defbc50b"
+    },
+    {
+      "path": ".agent/skills/build/vercel-agent/SKILL.md",
+      "category": "skills",
+      "size": 1281,
+      "sha256": "ae6a08e8895d6bbd8342a7ba6c7c7cdd7a22d704ba423a821a523783e45c8b82"
+    },
+    {
+      "path": ".agent/skills/build/vercel-react/README.md",
+      "category": "skills",
+      "size": 142,
+      "sha256": "d4c0c5ca3081af2d3abd8fa47a696975a1356d56af6f703644c429f1e8c8187e"
+    },
+    {
+      "path": ".agent/skills/build/vercel-react/SKILL.md",
+      "category": "skills",
+      "size": 600,
+      "sha256": "e66b463f06d6dfe6c798d0c0a3ea94d6c5f11c218ea9d22928d396d3bfd94a8f"
+    },
+    {
+      "path": ".agent/skills/build/web-design-guidelines/README.md",
+      "category": "skills",
+      "size": 160,
+      "sha256": "f03e2a29c13856ece6565d3bdd5f3fa2f4273c46b3d93047d0349745f69c6bed"
+    },
+    {
+      "path": ".agent/skills/build/web-design-guidelines/SKILL.md",
+      "category": "skills",
+      "size": 1434,
+      "sha256": "837520fc239bd73669614e6f9ccd03b2c7966ff507c7fe5dbf0e2227347ac051"
     },
     {
       "path": ".agent/skills/communication-skill/README.md",

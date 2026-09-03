@@ -61,9 +61,16 @@ def edge_id(edge_type: str, source: str, target: str, extra: str = "") -> str:
 
 
 def path_is_excluded(path: Path) -> bool:
-    lowered = {part.lower() for part in path.parts}
-    if any(item.lower() in lowered for item in SKIP_DIRS):
-        return True
+    parts = path.parts
+    # `.agent/skills/` is explicitly-tracked source content whose taxonomy
+    # uses category directory names (e.g. "build") that can collide with
+    # SKIP_DIRS' generic build-artifact-directory names below. Skill content
+    # must never be excluded on that basis.
+    under_skills = len(parts) >= 2 and parts[0] == ".agent" and parts[1] == "skills"
+    if not under_skills:
+        lowered = {part.lower() for part in parts}
+        if any(item.lower() in lowered for item in SKIP_DIRS):
+            return True
     suffix = path.suffix.lower()
     if suffix in SECRET_LIKE_SUFFIXES:
         return True

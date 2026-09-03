@@ -4,6 +4,20 @@
 
 ## Skills
 
+- `.agent/skills/build/README.md`
+- `.agent/skills/build/SKILL.md`
+- `.agent/skills/build/creator/README.md`
+- `.agent/skills/build/creator/SKILL.md`
+- `.agent/skills/build/frontend/README.md`
+- `.agent/skills/build/frontend/SKILL.md`
+- `.agent/skills/build/performance-optimization/README.md`
+- `.agent/skills/build/performance-optimization/SKILL.md`
+- `.agent/skills/build/vercel-agent/README.md`
+- `.agent/skills/build/vercel-agent/SKILL.md`
+- `.agent/skills/build/vercel-react/README.md`
+- `.agent/skills/build/vercel-react/SKILL.md`
+- `.agent/skills/build/web-design-guidelines/README.md`
+- `.agent/skills/build/web-design-guidelines/SKILL.md`
 - `.agent/skills/communication-skill/README.md`
 - `.agent/skills/communication-skill/SKILL.md`
 - `.agent/skills/communication-skill/anti-ai-writing.md`

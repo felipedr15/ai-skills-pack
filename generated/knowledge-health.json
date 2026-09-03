@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-26T22:16:10Z",
+  "generatedAt": "2026-09-02T23:36:01Z",
   "generator": "ai-os-orchestration",
   "overallScore": 83,
   "categoryScores": {
-    "graphIntegrity": 92,
+    "graphIntegrity": 93,
     "projectDocumentation": 100,
     "skillDocumentation": 5,
     "memoryLinkage": 100,
@@ -118,36 +118,6 @@
     {
       "source": ".kiro/specs/phase-9-professional-context/README.md",
       "target": "specs/phase-9-professional-context",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": ".agent/skills/build/creator/SKILL.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": ".agent/skills/build/frontend/SKILL.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": ".agent/skills/build/performance-optimization/SKILL.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": ".agent/skills/build/vercel-agent/SKILL.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": ".agent/skills/build/vercel-react/SKILL.md",
-      "kind": "markdown"
-    },
-    {
-      "source": "README.md",
-      "target": ".agent/skills/build/web-design-guidelines/SKILL.md",
       "kind": "markdown"
     },
     {
