@@ -23,6 +23,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
       - name: Validate generated artifacts and repository rules
         run: python scripts/validate-all.py
 
@@ -34,6 +35,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
 
@@ -45,6 +47,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
       - name: Run MCP smoke test
         run: python scripts/ai-os.py mcp check
 
@@ -56,6 +59,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
       - name: Run release check
         run: python scripts/ai-os.py release-check
 
@@ -66,3 +70,13 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check whitespace
         run: git diff --check
+
+  secrets-scan:
+    name: Secrets Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run secrets pattern scan
+        run: python scripts/validate-memory-security.py && python scripts/validate-all.py --check secrets-pattern
