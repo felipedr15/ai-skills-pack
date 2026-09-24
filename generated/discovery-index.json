@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-24T19:33:05Z",
+  "generatedAt": "2026-09-24T19:42:59Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
     "documents": 371,
     "entities": 397,
-    "terms": 1293,
-    "relationships": 801
+    "terms": 1302,
+    "relationships": 810
   },
   "documents": [
     {
@@ -1111,9 +1111,17 @@
       "title": "GitHub Configuration",
       "category": "document",
       "headings": [
-        "GitHub Configuration"
+        "GitHub Configuration",
+        "Workflows",
+        "`validate.yml` — Continuous Integration",
+        "Branch Protection",
+        "Guidance for Contributors",
+        "Before Pushing",
+        "Creating a Pull Request",
+        "Monitoring Workflow Status",
+        "Copilot Integration"
       ],
-      "snippet": "This folder contains Copilot guidance, path-specific instructions, and a least-privilege validation workflow. Product behavior depends on GitHub and editor configuration.",
+      "snippet": "This folder contains Copilot guidance, path-specific instructions, and repository automation.",
       "frontMatter": {}
     },
     {
@@ -1380,9 +1388,33 @@
       "title": "Contributing",
       "category": "document",
       "headings": [
-        "Contributing"
+        "Contributing",
+        "Quick Reference",
+        "Contribution Types",
+        "Adding a Skill",
+        "Adding an Agent",
+        "Adding a Prompt",
+        "Adding Memory",
+        "Adding Knowledge or References",
+        "Adding a Template or Example",
+        "Adding a Specification or Standard",
+        "Registry and Generated File Rules",
+        "Validation Checklist",
+        "Regenerate derived files if you changed source content",
+        "Validate everything",
+        "Check for secrets in memory",
+        "Optional: validate in check mode (no writing)",
+        "Naming Conventions",
+        "Pull Request Template",
+        "Special Rules",
+        "Getting Help",
+        "Memory Command Examples",
+        "Knowledge Graph Command Examples",
+        "Orchestration (Phase 8)",
+        "Professional Context (Phase 9)",
+        "Questions or Issues?"
       ],
-      "snippet": "Use lowercase, hyphenated folders, stable IDs, predictable filenames, and valid metadata. Before adding a skill, agent, prompt, starter, or specification, inspect existing content to prevent duplicati",
+      "snippet": "Welcome! This guide explains how to contribute to `ai-skills-pack`. Start with [CONTENT_PLACEMENT_RULES.md](docs/CONTENT_PLACEMENT_RULES.md) to understand where content belongs, then follow the checkl",
       "frontMatter": {}
     },
     {
@@ -11152,6 +11184,7 @@
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/product.md",
       "doc:AGENTS.md",
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:config/ai-os.example.json",
       "doc:docs/README.md",
@@ -11253,6 +11286,7 @@
       "doc:templates/specifications/design.md"
     ],
     "an": [
+      "doc:CONTRIBUTING.md",
       "doc:knowledge/workflows/incident-response.json",
       "doc:profile/README.md",
       "doc:specs/phase-9-professional-context/design.md"
@@ -11949,6 +11983,7 @@
       "doc:templates/project-starters/web-app/AGENTS.md"
     ],
     "automation": [
+      "doc:.github/README.md",
       "doc:README.md",
       "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/process/WORKFLOW.md",
@@ -12052,7 +12087,7 @@
     ],
     "before": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
-      "doc:CONTRIBUTING.md",
+      "doc:.github/README.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:specs/phase-9-professional-context/tasks.md",
@@ -12066,7 +12101,6 @@
     "behavior": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/system/SKILL.md",
-      "doc:.github/README.md",
       "doc:.kiro/README.md",
       "doc:.kiro/steering/README.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
@@ -12097,6 +12131,7 @@
       "doc:knowledge/vscode/README.md"
     ],
     "belongs": [
+      "doc:CONTRIBUTING.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/best-practices/README.md",
@@ -12170,6 +12205,9 @@
       "doc:.kiro/steering/workflow.md",
       "doc:agents/README.md",
       "doc:prompts/README.md"
+    ],
+    "branch": [
+      "doc:.github/README.md"
     ],
     "branches": [
       "doc:standards/git.md"
@@ -12361,6 +12399,7 @@
     ],
     "changed": [
       "doc:CHANGELOG.md",
+      "doc:CONTRIBUTING.md",
       "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:templates/project-memory/CHANGELOG.md",
       "doc:templates/project-memory/HANDOFF.md",
@@ -12436,11 +12475,16 @@
       "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
+      "doc:CONTRIBUTING.md",
       "doc:specs/phase-9-professional-context/tasks.md",
       "doc:standards/code-review.md"
     ],
+    "checkl": [
+      "doc:CONTRIBUTING.md"
+    ],
     "checklist": [
       "doc:.agent/skills/communication-skill/SKILL.md",
+      "doc:CONTRIBUTING.md",
       "doc:agents/architect.md",
       "doc:agents/builder.md",
       "doc:agents/deployment-manager.md",
@@ -12623,6 +12667,7 @@
       "doc:.agent/skills/thinking/SKILL.md"
     ],
     "command": [
+      "doc:CONTRIBUTING.md",
       "doc:docs/cli-reference.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
@@ -12914,6 +12959,7 @@
       "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/README.md",
       "doc:CLAUDE.md",
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:SECURITY.md",
       "doc:docs/architecture/ARCHITECTURE.md",
@@ -12977,6 +13023,7 @@
       "entity:document:specs/phase-9-professional-context/tasks.md"
     ],
     "continuous": [
+      "doc:.github/README.md",
       "doc:README.md",
       "doc:SECURITY.md",
       "doc:docs/architecture/ARCHITECTURE.md",
@@ -12990,15 +13037,20 @@
     "contrast": [
       "doc:standards/accessibility.md"
     ],
+    "contribute": [
+      "doc:CONTRIBUTING.md"
+    ],
     "contributing": [
       "doc:CONTRIBUTING.md",
       "doc:README.md",
       "entity:document:CONTRIBUTING.md"
     ],
     "contribution": [
+      "doc:CONTRIBUTING.md",
       "doc:docs/REPOSITORY_STRUCTURE.md"
     ],
     "contributors": [
+      "doc:.github/README.md",
       "doc:docs/governance/GOVERNANCE.md",
       "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:specs/README.md"
@@ -13020,6 +13072,7 @@
     ],
     "conventions": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:CONTRIBUTING.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/workflows/procedure-creation.json",
       "doc:memory/permanent/conventions/README.md",
@@ -13098,6 +13151,9 @@
     "creates": [
       "doc:docs/memory-approval.md",
       "doc:knowledge/workflows/release-preparation.json"
+    ],
+    "creating": [
+      "doc:.github/README.md"
     ],
     "creation": [
       "doc:README.md",
@@ -13437,7 +13493,6 @@
       "doc:memory/lessons/lesson-powerapps-refresh-001.md"
     ],
     "depends": [
-      "doc:.github/README.md",
       "doc:.kiro/README.md",
       "doc:.kiro/steering/README.md"
     ],
@@ -13488,6 +13543,7 @@
       "doc:CHANGELOG.md"
     ],
     "derived": [
+      "doc:CONTRIBUTING.md",
       "doc:docs/source-of-truth.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:specs/phase-9-professional-context/design.md",
@@ -13755,6 +13811,7 @@
     ],
     "docs": [
       "doc:.github/copilot-instructions.md",
+      "doc:CONTRIBUTING.md",
       "doc:docs/CONTENT_PLACEMENT_RULES.md",
       "doc:docs/README.md",
       "doc:docs/REPOSITORY_STRUCTURE.md",
@@ -14276,7 +14333,6 @@
     ],
     "ds": [
       "doc:.github/instructions/skills.instructions.md",
-      "doc:CONTRIBUTING.md",
       "doc:standards/naming.md",
       "doc:templates/specifications/README.md"
     ],
@@ -14285,9 +14341,6 @@
     ],
     "duplicate": [
       "doc:.github/instructions/markdown.instructions.md"
-    ],
-    "duplicati": [
-      "doc:CONTRIBUTING.md"
     ],
     "duplicating": [
       "doc:.github/instructions/skills.instructions.md"
@@ -14330,9 +14383,6 @@
     "editing": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:references/copilot.md"
-    ],
-    "editor": [
-      "doc:.github/README.md"
     ],
     "education": [
       "doc:knowledge/professional-context/career-history.md"
@@ -14431,6 +14481,9 @@
     "every": [
       "doc:docs/multi-device-setup.md"
     ],
+    "everything": [
+      "doc:CONTRIBUTING.md"
+    ],
     "evidence": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/personal/analytical/SKILL.md",
@@ -14473,6 +14526,7 @@
     ],
     "example": [
       "doc:.agent/skills/communication-skill/examples.md",
+      "doc:CONTRIBUTING.md",
       "doc:config/ai-os.example.json",
       "doc:examples/mcp/server-config.example.json",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
@@ -14490,6 +14544,7 @@
     ],
     "examples": [
       "doc:.agent/skills/communication-skill/examples.md",
+      "doc:CONTRIBUTING.md",
       "doc:docs/source-of-truth.md",
       "doc:examples/mcp/README.md",
       "doc:examples/mcp/server-config.example.json",
@@ -14540,7 +14595,6 @@
       "doc:docs/v1.0-technical-debt.md"
     ],
     "existing": [
-      "doc:CONTRIBUTING.md",
       "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:knowledge/workflows/documentation-update.json",
@@ -14588,6 +14642,9 @@
     ],
     "expiration": [
       "doc:docs/v1.0-technical-debt.md"
+    ],
+    "explains": [
+      "doc:CONTRIBUTING.md"
     ],
     "explanation": [
       "doc:.agent/skills/thinking/SKILL.md"
@@ -14710,6 +14767,7 @@
     "file": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:CONTRIBUTING.md",
       "doc:docs/memory-approval.md",
       "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-technical-debt.md",
@@ -14726,7 +14784,6 @@
       "doc:templates/project-starters/web-app/SESSION.md"
     ],
     "filenames": [
-      "doc:CONTRIBUTING.md",
       "doc:standards/naming.md"
     ],
     "files": [
@@ -14736,6 +14793,7 @@
       "doc:.github/instructions/README.md",
       "doc:.github/instructions/templates.instructions.md",
       "doc:CLAUDE.md",
+      "doc:CONTRIBUTING.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
@@ -14895,11 +14953,11 @@
       "doc:docs/source-of-truth.md"
     ],
     "folders": [
-      "doc:CONTRIBUTING.md",
       "doc:memory/README.md",
       "doc:standards/naming.md"
     ],
     "follow": [
+      "doc:CONTRIBUTING.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-memory/RETROSPECTIVE.md",
       "doc:templates/project-starters/automation/AGENTS.md",
@@ -14950,8 +15008,10 @@
       "doc:.agent/skills/system/testing/SKILL.md",
       "doc:.agent/skills/thinking/README.md",
       "doc:.agent/skills/thinking/SKILL.md",
+      "doc:.github/README.md",
       "doc:.github/instructions/README.md",
       "doc:.kiro/specs/README.md",
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:docs/README.md",
       "doc:docs/architecture/ARCHITECTURE.md",
@@ -15127,6 +15187,7 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "generated": [
+      "doc:CONTRIBUTING.md",
       "doc:docs/agent-orchestration.md",
       "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-technical-debt.md",
@@ -15189,6 +15250,9 @@
       "entity:document:templates/project-starters/generic-project/TESTING.md",
       "entity:document:templates/project-starters/generic-project/decisions.md",
       "entity:project:generic-project"
+    ],
+    "getting": [
+      "doc:CONTRIBUTING.md"
     ],
     "git": [
       "doc:.github/README.md",
@@ -15278,6 +15342,7 @@
       "doc:specs/README.md"
     ],
     "graph": [
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:SECURITY.md",
       "doc:docs/architecture/ARCHITECTURE.md",
@@ -15378,6 +15443,7 @@
     ],
     "guide": [
       "doc:CHANGELOG.md",
+      "doc:CONTRIBUTING.md",
       "doc:memory/permanent/principles/README.md"
     ],
     "guidelines": [
@@ -15487,6 +15553,7 @@
       "entity:document:docs/knowledge-health.md"
     ],
     "help": [
+      "doc:CONTRIBUTING.md",
       "doc:docs/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md"
     ],
@@ -15535,6 +15602,7 @@
     "how": [
       "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
+      "doc:CONTRIBUTING.md",
       "doc:docs/continuous-learning.md"
     ],
     "https": [
@@ -15571,7 +15639,6 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "hyphenated": [
-      "doc:CONTRIBUTING.md",
       "doc:standards/naming.md"
     ],
     "icons": [
@@ -15606,6 +15673,9 @@
     ],
     "identity": [
       "doc:knowledge/professional-context/responsibilities.md"
+    ],
+    "if": [
+      "doc:CONTRIBUTING.md"
     ],
     "impact": [
       "doc:standards/code-review.md",
@@ -15663,6 +15733,7 @@
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.github/copilot-instructions.md",
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:docs/cli-reference.md",
       "doc:docs/memory-approval.md",
@@ -15761,7 +15832,6 @@
       "doc:knowledge/workflows/release-preparation.json"
     ],
     "inspect": [
-      "doc:CONTRIBUTING.md",
       "doc:prompts/create-skill.prompt.md"
     ],
     "installed": [
@@ -15805,6 +15875,7 @@
       "entity:document:.github/instructions/templates.instructions.md"
     ],
     "integration": [
+      "doc:.github/README.md",
       "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/process/WORKFLOW.md",
       "doc:docs/project/ROADMAP.md",
@@ -15968,6 +16039,7 @@
       "doc:templates/project-starters/web-app/KNOWN_ISSUES.md"
     ],
     "issues": [
+      "doc:CONTRIBUTING.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:templates/project-memory/KNOWN_ISSUES.md",
       "doc:templates/project-memory/RELEASE_NOTES.md",
@@ -16160,6 +16232,7 @@
       "entity:document:references/kiro.md"
     ],
     "knowledge": [
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:SECURITY.md",
       "doc:docs/architecture/ARCHITECTURE.md",
@@ -16355,7 +16428,6 @@
       "entity:document:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "least": [
-      "doc:.github/README.md",
       "doc:standards/security.md"
     ],
     "less": [
@@ -16518,7 +16590,6 @@
       "doc:.kiro/steering/product.md"
     ],
     "lowercase": [
-      "doc:CONTRIBUTING.md",
       "doc:standards/naming.md"
     ],
     "lowest": [
@@ -17389,6 +17460,7 @@
       "doc:.github/instructions/templates.instructions.md",
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:SECURITY.md",
       "doc:docs/architecture/ARCHITECTURE.md",
@@ -17517,7 +17589,6 @@
       "doc:standards/git.md"
     ],
     "metadata": [
-      "doc:CONTRIBUTING.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:prompts/create-skill.prompt.md"
     ],
@@ -17543,6 +17614,7 @@
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/system/SKILL.md",
       "doc:.agent/skills/thinking/SKILL.md",
+      "doc:CONTRIBUTING.md",
       "doc:references/copilot.md"
     ],
     "model": [
@@ -17576,6 +17648,7 @@
       "doc:scripts/knowledge_graph/README.md"
     ],
     "monitoring": [
+      "doc:.github/README.md",
       "doc:prompts/deploy.prompt.md",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:standards/release-management.md",
@@ -17643,6 +17716,7 @@
     ],
     "naming": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:CONTRIBUTING.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/best-practices/README.md",
@@ -17709,6 +17783,7 @@
     ],
     "no": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:CONTRIBUTING.md",
       "doc:docs/feedback-and-audit.md",
       "doc:docs/knowledge-health.md",
       "doc:knowledge/professional-context/expertise.md",
@@ -17938,7 +18013,6 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "on": [
-      "doc:.github/README.md",
       "doc:.github/workflows/README.md",
       "doc:.kiro/README.md",
       "doc:.kiro/steering/README.md",
@@ -18026,6 +18100,7 @@
       "doc:.agent/skills/build/SKILL.md"
     ],
     "optional": [
+      "doc:CONTRIBUTING.md",
       "doc:knowledge/workflows/bug-fix.json",
       "doc:references/mcp.md"
     ],
@@ -18081,6 +18156,7 @@
     "orchestration": [
       "doc:.agent/skills/system/README.md",
       "doc:.agent/skills/system/SKILL.md",
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:SECURITY.md",
       "doc:docs/agent-orchestration.md",
@@ -18245,6 +18321,7 @@
       "doc:.kiro/steering/technology.md"
     ],
     "pack": [
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:docs/README.md",
       "doc:docs/multi-device-setup.md",
@@ -18367,6 +18444,7 @@
     ],
     "phase": [
       "doc:.kiro/specs/phase-9-professional-context/README.md",
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:SECURITY.md",
       "doc:docs/agent-orchestration.md",
@@ -18423,6 +18501,7 @@
       "doc:templates/project-starters/README.md"
     ],
     "placement": [
+      "doc:CONTRIBUTING.md",
       "doc:docs/CONTENT_PLACEMENT_RULES.md",
       "doc:docs/REPOSITORY_STRUCTURE.md",
       "entity:document:docs/CONTENT_PLACEMENT_RULES.md"
@@ -18632,7 +18711,6 @@
       "doc:templates/specifications/deployment-plan.md"
     ],
     "predictable": [
-      "doc:CONTRIBUTING.md",
       "doc:standards/naming.md"
     ],
     "prefer": [
@@ -18681,9 +18759,6 @@
       "doc:standards/naming.md",
       "doc:standards/testing.md"
     ],
-    "prevent": [
-      "doc:CONTRIBUTING.md"
-    ],
     "preventive": [
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -18725,7 +18800,6 @@
       "doc:SECURITY.md"
     ],
     "privilege": [
-      "doc:.github/README.md",
       "doc:standards/security.md"
     ],
     "pro": [
@@ -18761,7 +18835,6 @@
     ],
     "product": [
       "doc:.agent/skills/design/ui-ux-pro-max/SKILL.md",
-      "doc:.github/README.md",
       "doc:.kiro/README.md",
       "doc:.kiro/steering/README.md",
       "doc:.kiro/steering/product.md",
@@ -18779,6 +18852,7 @@
     "professional": [
       "doc:.agent/skills/personal/writing/SKILL.md",
       "doc:.kiro/specs/phase-9-professional-context/README.md",
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:SECURITY.md",
       "doc:docs/architecture/ARCHITECTURE.md",
@@ -19292,6 +19366,9 @@
     "protected": [
       "doc:SECURITY.md"
     ],
+    "protection": [
+      "doc:.github/README.md"
+    ],
     "protocol": [
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
@@ -19308,7 +19385,9 @@
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
     "pull": [
+      "doc:.github/README.md",
       "doc:.github/workflows/README.md",
+      "doc:CONTRIBUTING.md",
       "doc:docs/releases/RELEASE_NOTES_v0.8.0.md"
     ],
     "purpose": [
@@ -19403,6 +19482,7 @@
       "doc:.github/workflows/README.md"
     ],
     "pushing": [
+      "doc:.github/README.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "py": [
@@ -19471,12 +19551,14 @@
     "questions": [
       "doc:.agent/skills/research/SKILL.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
+      "doc:CONTRIBUTING.md",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/design.md",
       "doc:templates/specifications/requirements.md"
     ],
     "quick": [
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:docs/README.md"
     ],
@@ -19755,6 +19837,7 @@
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:CONTRIBUTING.md",
       "doc:docs/cli-reference.md",
       "doc:docs/source-of-truth.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
@@ -19774,6 +19857,7 @@
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:CONTRIBUTING.md",
       "doc:docs/repository-migration.md",
       "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-final-acceptance.md",
@@ -19838,6 +19922,7 @@
       "entity:memory:lesson-powerapps-refresh-001"
     ],
     "regenerate": [
+      "doc:CONTRIBUTING.md",
       "doc:knowledge/workflows/README.md"
     ],
     "registered": [
@@ -19848,6 +19933,7 @@
       "doc:prompts/create-skill.prompt.md"
     ],
     "registry": [
+      "doc:CONTRIBUTING.md",
       "doc:agents/README.md",
       "doc:docs/agent-orchestration.md",
       "doc:docs/source-of-truth.md",
@@ -20023,6 +20109,7 @@
       "doc:README.md"
     ],
     "repository": [
+      "doc:.github/README.md",
       "doc:.kiro/steering/README.md",
       "doc:AGENTS.md",
       "doc:CHANGELOG.md",
@@ -20068,6 +20155,8 @@
       "doc:templates/specifications/requirements.md"
     ],
     "request": [
+      "doc:.github/README.md",
+      "doc:CONTRIBUTING.md",
       "doc:docs/process/WORKFLOW.md",
       "doc:references/workflow-examples.md"
     ],
@@ -20646,6 +20735,7 @@
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:AGENTS.md",
+      "doc:CONTRIBUTING.md",
       "doc:SECURITY.md",
       "doc:docs/CONTENT_PLACEMENT_RULES.md",
       "doc:docs/REPOSITORY_STRUCTURE.md",
@@ -20788,6 +20878,7 @@
     ],
     "secrets": [
       "doc:.github/instructions/markdown.instructions.md",
+      "doc:CONTRIBUTING.md",
       "doc:standards/git.md",
       "doc:templates/specifications/deployment-plan.md"
     ],
@@ -21180,6 +21271,7 @@
       "doc:.github/instructions/skills.instructions.md",
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:agents/architect.md",
       "doc:agents/builder.md",
@@ -21314,6 +21406,7 @@
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.kiro/steering/technology.md",
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:docs/memory-approval.md",
       "doc:docs/source-of-truth.md",
@@ -21349,6 +21442,9 @@
     ],
     "spec": [
       "doc:specs/phase-9-professional-context/tasks.md"
+    ],
+    "special": [
+      "doc:CONTRIBUTING.md"
     ],
     "specific": [
       "doc:.github/README.md",
@@ -21428,7 +21524,6 @@
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "stable": [
-      "doc:CONTRIBUTING.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/permanent/preferences/README.md",
       "doc:standards/naming.md",
@@ -21464,6 +21559,7 @@
     ],
     "standard": [
       "doc:.kiro/steering/technology.md",
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:standards/accessibility.md",
@@ -21503,13 +21599,13 @@
       "entity:document:standards/testing.md"
     ],
     "start": [
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:docs/CONTENT_PLACEMENT_RULES.md",
       "doc:docs/REPOSITORY_STRUCTURE.md"
     ],
     "starter": [
       "doc:.github/instructions/templates.instructions.md",
-      "doc:CONTRIBUTING.md",
       "doc:templates/project-starters/README.md",
       "entity:project:automation",
       "entity:project:documentation",
@@ -21822,6 +21918,7 @@
       "doc:templates/specifications/requirements.md"
     ],
     "status": [
+      "doc:.github/README.md",
       "doc:README.md",
       "doc:agents/project-manager.md",
       "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
@@ -22193,6 +22290,7 @@
       "doc:docs/feedback-and-audit.md"
     ],
     "template": [
+      "doc:CONTRIBUTING.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "templates": [
@@ -22657,6 +22755,7 @@
       "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/README.md",
       "doc:.kiro/steering/workflow.md",
+      "doc:CONTRIBUTING.md",
       "doc:agents/README.md",
       "doc:agents/reviewer.md",
       "doc:docs/cli-reference.md",
@@ -22703,6 +22802,7 @@
     ],
     "then": [
       "doc:.kiro/steering/workflow.md",
+      "doc:CONTRIBUTING.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md"
     ],
     "there": [
@@ -22747,6 +22847,7 @@
       "doc:.agent/skills/system/testing/README.md",
       "doc:.agent/skills/system/using-superpowers/README.md",
       "doc:.github/README.md",
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:docs/README.md",
       "doc:docs/cli-reference.md",
@@ -23035,6 +23136,7 @@
     "types": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
+      "doc:CONTRIBUTING.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/workflows/README.md",
@@ -23065,6 +23167,9 @@
       "doc:.kiro/steering/structure.md",
       "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:templates/memory/README.md"
+    ],
+    "understand": [
+      "doc:CONTRIBUTING.md"
     ],
     "unified": [
       "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
@@ -23174,7 +23279,6 @@
       "doc:.agent/skills/thinking/SKILL.md",
       "doc:.github/instructions/markdown.instructions.md",
       "doc:.kiro/steering/workflow.md",
-      "doc:CONTRIBUTING.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:scripts/README.md",
       "doc:standards/accessibility.md",
@@ -23258,12 +23362,11 @@
       "entity:document:docs/v1.0-final-acceptance.md",
       "entity:document:docs/v1.0-technical-debt.md"
     ],
-    "valid": [
-      "doc:CONTRIBUTING.md"
-    ],
     "validate": [
+      "doc:.github/README.md",
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/workflow.md",
+      "doc:CONTRIBUTING.md",
       "doc:knowledge/workflows/feature-development.json",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:prompts/create-skill.prompt.md",
@@ -23277,9 +23380,9 @@
     ],
     "validation": [
       "doc:.agent/skills/communication-skill/SKILL.md",
-      "doc:.github/README.md",
       "doc:AGENTS.md",
       "doc:CLAUDE.md",
+      "doc:CONTRIBUTING.md",
       "doc:README.md",
       "doc:agents/qa.md",
       "doc:config/ai-os.example.json",
@@ -23479,6 +23582,9 @@
       "entity:skill:web-design-guidelines",
       "entity:tool:git"
     ],
+    "welcome": [
+      "doc:CONTRIBUTING.md"
+    ],
     "what": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:README.md",
@@ -23542,6 +23648,9 @@
       "doc:templates/project-starters/python/CLAUDE.md",
       "doc:templates/project-starters/web-app/CLAUDE.md"
     ],
+    "where": [
+      "doc:CONTRIBUTING.md"
+    ],
     "which": [
       "doc:docs/source-of-truth.md"
     ],
@@ -23585,6 +23694,7 @@
     "with": [
       "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.kiro/steering/technology.md",
+      "doc:CONTRIBUTING.md",
       "doc:knowledge/workflows/bug-fix.json",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/incident-response.json",
@@ -23694,6 +23804,7 @@
     ],
     "workflows": [
       "doc:.agent/skills/system/SKILL.md",
+      "doc:.github/README.md",
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/product.md",
       "doc:knowledge/ai-workflows/README.md",
@@ -23756,6 +23867,7 @@
       "doc:.agent/skills/personal/writing/SKILL.md",
       "doc:.agent/skills/thinking/README.md",
       "doc:.agent/skills/thinking/SKILL.md",
+      "doc:CONTRIBUTING.md",
       "doc:references/workflow-examples.md",
       "entity:document:.agent/skills/communication-skill/anti-ai-writing.md",
       "entity:document:.agent/skills/personal/clear-concise-writing/README.md",
@@ -23771,6 +23883,7 @@
       "entity:document:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "yml": [
+      "doc:.github/README.md",
       "doc:.github/workflows/README.md"
     ],
     "you": [
@@ -23785,7 +23898,8 @@
       "doc:.agent/skills/personal/simplify/SKILL.md",
       "doc:.agent/skills/personal/writing/SKILL.md",
       "doc:.agent/skills/system/superpower/SKILL.md",
-      "doc:.agent/skills/system/testing/SKILL.md"
+      "doc:.agent/skills/system/testing/SKILL.md",
+      "doc:CONTRIBUTING.md"
     ]
   },
   "diagnostics": {

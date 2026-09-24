@@ -2,10 +2,10 @@
 
 > Generated from repository source files. This file is not a source of truth.
 
-Generated at: 2026-09-24T19:36:49Z
+Generated at: 2026-09-24T19:49:47Z
 
 Nodes: 397
-Edges: 801
+Edges: 810
 
 ## Node Counts By Type
 
@@ -23,16 +23,17 @@ Edges: 801
 - belongs_to: 2
 - contains: 129
 - generated_from: 21
-- references: 266
+- references: 274
 - related_to: 158
 - supports: 6
-- uses: 219
+- uses: 220
 
 ## Unresolved References
 
-Count: 10
+Count: 11
 
 - markdown: .kiro/specs/phase-9-professional-context/README.md -> specs/phase-9-professional-context
+- markdown: CONTRIBUTING.md -> docs
 - markdown: README.md -> VERSION
 - markdown: README.md -> bootstrap.ps1
 - markdown: README.md -> bootstrap.sh
@@ -45,8 +46,8 @@ Count: 10
 
 ## Relationship Overview
 
-- references: 266
-- uses: 219
+- references: 274
+- uses: 220
 - related_to: 158
 - contains: 129
 - generated_from: 21

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-24T19:33:06Z",
+  "generatedAt": "2026-09-24T19:43:00Z",
   "generator": "ai-os-orchestration",
   "overallScore": 83,
   "categoryScores": {
@@ -118,6 +118,11 @@
     {
       "source": ".kiro/specs/phase-9-professional-context/README.md",
       "target": "specs/phase-9-professional-context",
+      "kind": "markdown"
+    },
+    {
+      "source": "CONTRIBUTING.md",
+      "target": "docs",
       "kind": "markdown"
     },
     {
