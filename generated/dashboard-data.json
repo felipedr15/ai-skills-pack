@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-24T19:43:00Z",
+  "generatedAt": "2026-09-24T19:53:33Z",
   "generator": "ai-os-dashboard",
   "repository": {
     "available": true,
@@ -253,7 +253,7 @@
       },
       {
         "exists": true,
-        "generatedAt": "2026-09-24T19:42:56Z",
+        "generatedAt": "2026-09-24T19:49:47Z",
         "stale": false,
         "path": "knowledge-graph.json"
       },
