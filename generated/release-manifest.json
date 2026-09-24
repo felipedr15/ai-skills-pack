@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "version": "1.0.0",
-  "generatedAt": "2026-09-24T16:56:19Z",
+  "generatedAt": "2026-09-24T19:33:07Z",
   "generator": "ai-os-release",
   "repository": {
     "fileCount": 392
@@ -66,22 +66,22 @@
     {
       "path": "generated/knowledge-graph.json",
       "exists": true,
-      "size": 277356,
-      "checksum": "2644a91409ab96bd9b9c2769efc61c1aa8d9d94edb1deecb66a08c0335b1e6ec",
+      "size": 284726,
+      "checksum": "7ae8450e17fcb0e0e8ac3b04afc29bf82ee6a55bd5992efda0f1ea0fcf48e40e",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-knowledge-graph"
     },
     {
       "path": "generated/knowledge-graph.md",
       "exists": true,
-      "size": 1044,
-      "checksum": "9c4c8c39e37af3944b8ad78b512a1776f113afae6cdbb330ae077d82c0788536"
+      "size": 1083,
+      "checksum": "de68260f7f4b53da3b7df502fb0b344b595f2b462c7e6f2bf5aff4fc75373ff4"
     },
     {
       "path": "generated/discovery-index.json",
       "exists": true,
-      "size": 942582,
-      "checksum": "d06dbe1ef04af96443a1c43ccb2ba050fcd95c2a1df97f72c1e9c9f79cddf970",
+      "size": 948064,
+      "checksum": "f56472dee88fa7ccabf073150e42b6a6eae0c9061b7f03eec8cf9de2cee97d9e",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-semantic-discovery"
     },
@@ -89,7 +89,7 @@
       "path": "generated/discovery-index.md",
       "exists": true,
       "size": 351,
-      "checksum": "51c23adb0d12e8aea98b67db71f4b74291f5986f18cffff595e9f64b030b1835"
+      "checksum": "97ca67bc1dcc1e450d277ff71b3146fd9bbc579707e37eb8481a40665b49ed1f"
     },
     {
       "path": "generated/agent-registry.json",
@@ -122,8 +122,8 @@
     {
       "path": "generated/knowledge-health.json",
       "exists": true,
-      "size": 7583,
-      "checksum": "4a1e67b1413e870b7b04d519cdababbcd547c9c00e95646fa906d23ab29b2892",
+      "size": 7682,
+      "checksum": "d689255c196c302321cc31b81ba8a83c04463729e4fd7b7879dd41e88bc4a557",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-orchestration"
     },
@@ -131,7 +131,7 @@
       "path": "generated/knowledge-health.md",
       "exists": true,
       "size": 2213,
-      "checksum": "cc122563085e2fa5b1a3216612bef470bdf52f47e53c4af688aa4c2249b99ed5"
+      "checksum": "795fabc9cc27f5a8e6192b31f557ca125ef5b577dbf344f7bd0e1d34bff5254b"
     },
     {
       "path": "generated/work-activity.json",
@@ -150,14 +150,14 @@
     {
       "path": "generated/dashboard.html",
       "exists": true,
-      "size": 70648,
-      "checksum": "7d34598b945087bbf5c5350f4e9ce3e1b9da1c3ae0f19da4721dacc29e8232d8"
+      "size": 70649,
+      "checksum": "d61561ad7f3613d05c082459edaa41cd5d1e39a40b1ebbebf14c23980ded100a"
     },
     {
       "path": "generated/dashboard-data.json",
       "exists": true,
-      "size": 13069,
-      "checksum": "91b442dfda3d9d99420a6513be60c17ca6786fbf7275f19e8a9a7e2a9da6fd74",
+      "size": 13070,
+      "checksum": "d214bb62e28e472ffae0dab9f7a133c96e4f40b99ca3f78e8e7d7ea32244d2b1",
       "schemaVersion": "1.0.0",
       "generator": "ai-os-dashboard"
     }

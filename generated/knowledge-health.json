@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-24T16:56:01Z",
+  "generatedAt": "2026-09-24T19:33:06Z",
   "generator": "ai-os-orchestration",
   "overallScore": 83,
   "categoryScores": {
@@ -147,7 +147,7 @@
     },
     {
       "source": "README.md",
-      "target": "generated/README.md",
+      "target": "docs/releases",
       "kind": "markdown"
     },
     {
@@ -158,6 +158,11 @@
     {
       "source": "README.md",
       "target": "generated/memory-index.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "docs/README.md",
+      "target": "docs/releases",
       "kind": "markdown"
     }
   ],

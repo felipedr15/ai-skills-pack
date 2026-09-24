@@ -2,15 +2,15 @@
 
 > Generated from repository source files. This file is not a source of truth.
 
-Generated at: 2026-09-24T16:56:01Z
+Generated at: 2026-09-24T19:36:49Z
 
-Nodes: 395
-Edges: 770
+Nodes: 397
+Edges: 801
 
 ## Node Counts By Type
 
 - concept: 2
-- document: 347
+- document: 349
 - memory: 5
 - platform: 7
 - profile: 1
@@ -23,14 +23,14 @@ Edges: 770
 - belongs_to: 2
 - contains: 129
 - generated_from: 21
-- references: 241
-- related_to: 154
+- references: 266
+- related_to: 158
 - supports: 6
-- uses: 217
+- uses: 219
 
 ## Unresolved References
 
-Count: 9
+Count: 10
 
 - markdown: .kiro/specs/phase-9-professional-context/README.md -> specs/phase-9-professional-context
 - markdown: README.md -> VERSION
@@ -38,15 +38,16 @@ Count: 9
 - markdown: README.md -> bootstrap.sh
 - markdown: README.md -> docs/releases
 - markdown: README.md -> docs/releases
-- markdown: README.md -> generated/README.md
+- markdown: README.md -> docs/releases
 - markdown: README.md -> generated/README.md
 - markdown: README.md -> generated/memory-index.md
+- markdown: docs/README.md -> docs/releases
 
 ## Relationship Overview
 
-- references: 241
-- uses: 217
-- related_to: 154
+- references: 266
+- uses: 219
+- related_to: 158
 - contains: 129
 - generated_from: 21
 - supports: 6

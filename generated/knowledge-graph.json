@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-24T16:56:01Z",
+  "generatedAt": "2026-09-24T19:36:49Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 395,
-    "edges": 770,
+    "nodes": 397,
+    "edges": 801,
     "nodesByType": {
       "concept": 2,
-      "document": 347,
+      "document": 349,
       "memory": 5,
       "platform": 7,
       "profile": 1,
@@ -19,10 +19,10 @@
       "belongs_to": 2,
       "contains": 129,
       "generated_from": 21,
-      "references": 241,
-      "related_to": 154,
+      "references": 266,
+      "related_to": 158,
       "supports": 6,
-      "uses": 217
+      "uses": 219
     }
   },
   "nodes": [
@@ -630,6 +630,15 @@
       }
     },
     {
+      "id": "document:docs/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": "docs/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "document:docs/REPOSITORY_STRUCTURE.md",
       "type": "document",
       "name": "Repository Structure",
@@ -769,6 +778,15 @@
       "type": "document",
       "name": "Repository Migration",
       "sourcePath": "docs/repository-migration.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/source-of-truth.md",
+      "type": "document",
+      "name": "Source Of Truth",
+      "sourcePath": "docs/source-of-truth.md",
       "metadata": {
         "extension": ".md"
       }
@@ -5428,10 +5446,28 @@
       }
     },
     {
+      "id": "edge:fe73ad5afeb5e131",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:AGENTS.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:a7c4139992e68636",
       "type": "references",
       "from": "document:README.md",
       "to": "document:CHANGELOG.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:a7f3dd220f3c73d3",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:CLAUDE.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5477,6 +5513,15 @@
       "type": "references",
       "from": "document:README.md",
       "to": "document:docs/CONTENT_PLACEMENT_RULES.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:ed8ef8179f23f6d5",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/README.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5585,6 +5630,15 @@
       "type": "references",
       "from": "document:README.md",
       "to": "document:docs/project/ROADMAP.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:940380d59b43f275",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/source-of-truth.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5860,6 +5914,186 @@
       }
     },
     {
+      "id": "edge:a94d8fbc84312b77",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:CONTRIBUTING.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:02e21162c2344421",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/CONTENT_PLACEMENT_RULES.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:2c3b51436e894749",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/REPOSITORY_STRUCTURE.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:939f04bc9a363772",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/agent-orchestration.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:499dfeba0c633226",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/architecture/ARCHITECTURE.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:84212ebe417e46e8",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/cli-reference.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:a87889edc40db24c",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/continuous-learning.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:33be4eaf7c73fb04",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/feedback-and-audit.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:becfc2596847e4c4",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/governance/GOVERNANCE.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:bf0d5967337dba4c",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/knowledge-health.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:a0b61096c5bea7ed",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/memory-approval.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:12a8d230301e91fd",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/multi-device-setup.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:09db416f1a035860",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/process/WORKFLOW.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:64cf673e1409bc99",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/project/ROADMAP.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:f6be3c2ef1a2395f",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/repository-migration.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:f9cd07c942573b17",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/source-of-truth.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:4dbd8d0af9fd1202",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/v1.0-acceptance-criteria.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:ee2d0f83f8bd0d62",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/v1.0-baseline-audit.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:36e74fbdf97c7159",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/v1.0-final-acceptance.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:d70534b1a451c6e9",
+      "type": "references",
+      "from": "document:docs/README.md",
+      "to": "document:docs/v1.0-technical-debt.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:1758f958f279730a",
       "type": "references",
       "from": "document:docs/REPOSITORY_STRUCTURE.md",
@@ -6053,6 +6287,15 @@
       "type": "references",
       "from": "document:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "to": "document:docs/v1.0-technical-debt.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:d3f78e785e7451a0",
+      "type": "references",
+      "from": "document:docs/source-of-truth.md",
+      "to": "document:CONTRIBUTING.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -7480,6 +7723,24 @@
       }
     },
     {
+      "id": "edge:7b7c3d09662f5c59",
+      "type": "related_to",
+      "from": "document:docs/README.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:08b76483de95d975",
+      "type": "related_to",
+      "from": "document:docs/README.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:f5683960d793d58e",
       "type": "related_to",
       "from": "document:docs/REPOSITORY_STRUCTURE.md",
@@ -7717,6 +7978,24 @@
       "id": "edge:3496b6845b412d2b",
       "type": "related_to",
       "from": "document:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:f0e4e7c7fed5cde7",
+      "type": "related_to",
+      "from": "document:docs/source-of-truth.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:13a6504589016e6d",
+      "type": "related_to",
+      "from": "document:docs/source-of-truth.md",
       "to": "concept:workflow",
       "metadata": {
         "source": "document_text"
@@ -9388,6 +9667,24 @@
       }
     },
     {
+      "id": "edge:0001e0e0f1cb4f1c",
+      "type": "uses",
+      "from": "document:docs/source-of-truth.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:89c4a83e5f70847f",
+      "type": "uses",
+      "from": "document:docs/source-of-truth.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:0b2eb0c2e13a8e77",
       "type": "uses",
       "from": "document:docs/v1.0-acceptance-criteria.md",
@@ -10600,7 +10897,7 @@
     },
     {
       "source": "README.md",
-      "target": "generated/README.md",
+      "target": "docs/releases",
       "kind": "markdown"
     },
     {
@@ -10611,6 +10908,11 @@
     {
       "source": "README.md",
       "target": "generated/memory-index.md",
+      "kind": "markdown"
+    },
+    {
+      "source": "docs/README.md",
+      "target": "docs/releases",
       "kind": "markdown"
     }
   ]

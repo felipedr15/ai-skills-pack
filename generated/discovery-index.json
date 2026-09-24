@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-24T16:56:01Z",
+  "generatedAt": "2026-09-24T19:33:05Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 369,
-    "entities": 395,
-    "terms": 1286,
-    "relationships": 770
+    "documents": 371,
+    "entities": 397,
+    "terms": 1293,
+    "relationships": 801
   },
   "documents": [
     {
@@ -1400,6 +1400,12 @@
         "Key Concepts",
         "Source of Truth",
         "Setup",
+        "Documentation Map",
+        "Core Repository Documentation",
+        "Architecture, Design, and Governance",
+        "Content and Repositories",
+        "Setup, Operations, and Releases",
+        "Advanced Topics",
         "Documentation",
         "Contributing",
         "Security",
@@ -1690,6 +1696,26 @@
       "frontMatter": {}
     },
     {
+      "id": "doc:docs/README.md",
+      "sourcePath": "docs/README.md",
+      "title": "Documentation",
+      "category": "document",
+      "headings": [
+        "Documentation",
+        "Contents",
+        "Core Documentation",
+        "Setup & Operations",
+        "Architecture & Design",
+        "Project Management",
+        "Advanced Topics",
+        "Migration & Maintenance",
+        "Quick Links",
+        "Need Help?"
+      ],
+      "snippet": "This folder contains supporting documentation for `ai-skills-pack`.",
+      "frontMatter": {}
+    },
+    {
       "id": "doc:docs/REPOSITORY_STRUCTURE.md",
       "sourcePath": "docs/REPOSITORY_STRUCTURE.md",
       "title": "Repository structure",
@@ -1965,6 +1991,29 @@
         "Verification"
       ],
       "snippet": "Date: 2026-08-26",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/source-of-truth.md",
+      "sourcePath": "docs/source-of-truth.md",
+      "title": "Source of Truth",
+      "category": "document",
+      "headings": [
+        "Source of Truth",
+        "Core Principle",
+        "Agents",
+        "Skills",
+        "Prompts",
+        "Memory",
+        "Knowledge & References",
+        "Standards, Specs, and Schemas",
+        "Templates and Examples",
+        "Configuration & Generated Content",
+        "Manifest Registry Alignment",
+        "Derived vs. Authored: Reference Table",
+        "Summary"
+      ],
+      "snippet": "This document defines what content is **authoritative** in the repository and what is **derived**. When content exists in both a folder and a registry file, this clarifies which is the source.",
       "frontMatter": {}
     },
     {
@@ -7146,6 +7195,16 @@
       }
     },
     {
+      "id": "entity:document:docs/README.md",
+      "nodeId": "document:docs/README.md",
+      "type": "document",
+      "name": "Readme",
+      "sourcePath": "docs/README.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "entity:document:docs/REPOSITORY_STRUCTURE.md",
       "nodeId": "document:docs/REPOSITORY_STRUCTURE.md",
       "type": "document",
@@ -7301,6 +7360,16 @@
       "type": "document",
       "name": "Repository Migration",
       "sourcePath": "docs/repository-migration.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/source-of-truth.md",
+      "nodeId": "document:docs/source-of-truth.md",
+      "type": "document",
+      "name": "Source Of Truth",
+      "sourcePath": "docs/source-of-truth.md",
       "metadata": {
         "extension": ".md"
       }
@@ -10863,6 +10932,8 @@
       "doc:templates/project-starters/web-app/decisions.md"
     ],
     "advanced": [
+      "doc:README.md",
+      "doc:docs/README.md",
       "doc:docs/project/ROADMAP.md",
       "doc:knowledge/professional-context/expertise.md"
     ],
@@ -11034,6 +11105,7 @@
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/source-of-truth.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-starters/automation/AGENTS.md",
       "doc:templates/project-starters/documentation/AGENTS.md",
@@ -11082,6 +11154,7 @@
       "doc:AGENTS.md",
       "doc:README.md",
       "doc:config/ai-os.example.json",
+      "doc:docs/README.md",
       "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
@@ -11131,6 +11204,9 @@
     ],
     "aligned": [
       "doc:.github/instructions/prompts.instructions.md"
+    ],
+    "alignment": [
+      "doc:docs/source-of-truth.md"
     ],
     "alike": [
       "doc:specs/README.md"
@@ -11284,6 +11360,7 @@
       "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-technical-debt.md",
@@ -11601,6 +11678,8 @@
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "architecture": [
+      "doc:README.md",
+      "doc:docs/README.md",
       "doc:docs/architecture/ARCHITECTURE.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -11785,10 +11864,12 @@
       "doc:SECURITY.md"
     ],
     "authored": [
+      "doc:docs/source-of-truth.md",
       "doc:knowledge/workflows/README.md",
       "doc:profile/README.md"
     ],
     "authoritative": [
+      "doc:docs/source-of-truth.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md"
     ],
     "authority": [
@@ -12065,6 +12146,7 @@
       "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "both": [
+      "doc:docs/source-of-truth.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "boundaries": [
@@ -12388,6 +12470,9 @@
     ],
     "claims": [
       "doc:.agent/skills/communication-skill/SKILL.md"
+    ],
+    "clarifies": [
+      "doc:docs/source-of-truth.md"
     ],
     "clarify": [
       "doc:.agent/skills/personal/analytical/SKILL.md"
@@ -12728,6 +12813,7 @@
       "doc:.kiro/README.md",
       "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/README.md",
+      "doc:docs/source-of-truth.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
@@ -12803,7 +12889,8 @@
       "doc:.agent/skills/system/superpower/README.md",
       "doc:.agent/skills/system/testing/README.md",
       "doc:.agent/skills/system/using-superpowers/README.md",
-      "doc:.github/README.md"
+      "doc:.github/README.md",
+      "doc:docs/README.md"
     ],
     "conte": [
       "doc:specs/phase-9-professional-context/requirements.md"
@@ -12812,10 +12899,15 @@
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.github/instructions/markdown.instructions.md",
       "doc:CONTRIBUTING.md",
+      "doc:README.md",
       "doc:docs/CONTENT_PLACEMENT_RULES.md",
       "doc:docs/REPOSITORY_STRUCTURE.md",
+      "doc:docs/source-of-truth.md",
       "doc:specs/phase-9-professional-context/tasks.md",
       "entity:document:docs/CONTENT_PLACEMENT_RULES.md"
+    ],
+    "contents": [
+      "doc:docs/README.md"
     ],
     "context": [
       "doc:.kiro/README.md",
@@ -12973,8 +13065,11 @@
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.kiro/steering/structure.md",
       "doc:.kiro/steering/technology.md",
+      "doc:README.md",
+      "doc:docs/README.md",
       "doc:docs/cli-reference.md",
       "doc:docs/project/ROADMAP.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
@@ -13292,7 +13387,8 @@
       "doc:standards/documentation.md"
     ],
     "defines": [
-      "doc:.github/workflows/README.md"
+      "doc:.github/workflows/README.md",
+      "doc:docs/source-of-truth.md"
     ],
     "definitions": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
@@ -13392,6 +13488,7 @@
       "doc:CHANGELOG.md"
     ],
     "derived": [
+      "doc:docs/source-of-truth.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:specs/phase-9-professional-context/design.md",
       "entity:memory:decision-memory-index-source-truth-001"
@@ -13428,7 +13525,9 @@
       "doc:.github/instructions/specifications.instructions.md",
       "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/workflow.md",
+      "doc:README.md",
       "doc:agents/architect.md",
+      "doc:docs/README.md",
       "doc:docs/process/WORKFLOW.md",
       "doc:knowledge/workflows/feature-development.json",
       "doc:prompts/design.prompt.md",
@@ -13657,6 +13756,7 @@
     "docs": [
       "doc:.github/copilot-instructions.md",
       "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "doc:docs/README.md",
       "doc:docs/REPOSITORY_STRUCTURE.md",
       "doc:docs/agent-orchestration.md",
       "doc:docs/architecture/ARCHITECTURE.md",
@@ -13673,6 +13773,7 @@
       "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/repository-migration.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-final-acceptance.md",
@@ -13680,6 +13781,7 @@
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:prompts/create-skill.prompt.md",
       "entity:document:docs/CONTENT_PLACEMENT_RULES.md",
+      "entity:document:docs/README.md",
       "entity:document:docs/REPOSITORY_STRUCTURE.md",
       "entity:document:docs/agent-orchestration.md",
       "entity:document:docs/architecture/ARCHITECTURE.md",
@@ -13696,6 +13798,7 @@
       "entity:document:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "entity:document:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "entity:document:docs/repository-migration.md",
+      "entity:document:docs/source-of-truth.md",
       "entity:document:docs/v1.0-acceptance-criteria.md",
       "entity:document:docs/v1.0-baseline-audit.md",
       "entity:document:docs/v1.0-final-acceptance.md",
@@ -13706,6 +13809,7 @@
     ],
     "document": [
       "doc:docs/memory-approval.md",
+      "doc:docs/source-of-truth.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
@@ -13780,6 +13884,7 @@
       "entity:document:agents/security-reviewer.md",
       "entity:document:config/ai-os.example.json",
       "entity:document:docs/CONTENT_PLACEMENT_RULES.md",
+      "entity:document:docs/README.md",
       "entity:document:docs/REPOSITORY_STRUCTURE.md",
       "entity:document:docs/agent-orchestration.md",
       "entity:document:docs/architecture/ARCHITECTURE.md",
@@ -13796,6 +13901,7 @@
       "entity:document:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "entity:document:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "entity:document:docs/repository-migration.md",
+      "entity:document:docs/source-of-truth.md",
       "entity:document:docs/v1.0-acceptance-criteria.md",
       "entity:document:docs/v1.0-baseline-audit.md",
       "entity:document:docs/v1.0-final-acceptance.md",
@@ -14071,6 +14177,7 @@
       "doc:CLAUDE.md",
       "doc:README.md",
       "doc:agents/documentation-writer.md",
+      "doc:docs/README.md",
       "doc:docs/project/ROADMAP.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
@@ -14383,6 +14490,7 @@
     ],
     "examples": [
       "doc:.agent/skills/communication-skill/examples.md",
+      "doc:docs/source-of-truth.md",
       "doc:examples/mcp/README.md",
       "doc:examples/mcp/server-config.example.json",
       "doc:knowledge/architecture/phase-9-professional-context.md",
@@ -14437,6 +14545,9 @@
       "doc:docs/v1.0-baseline-audit.md",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/procedure-creation.json"
+    ],
+    "exists": [
+      "doc:docs/source-of-truth.md"
     ],
     "expectations": [
       "doc:standards/README.md"
@@ -14600,6 +14711,7 @@
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
@@ -14778,7 +14890,9 @@
       "doc:.agent/skills/system/testing/README.md",
       "doc:.agent/skills/system/using-superpowers/README.md",
       "doc:.github/README.md",
-      "doc:.github/instructions/skills.instructions.md"
+      "doc:.github/instructions/skills.instructions.md",
+      "doc:docs/README.md",
+      "doc:docs/source-of-truth.md"
     ],
     "folders": [
       "doc:CONTRIBUTING.md",
@@ -14839,6 +14953,7 @@
       "doc:.github/instructions/README.md",
       "doc:.kiro/specs/README.md",
       "doc:README.md",
+      "doc:docs/README.md",
       "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-technical-debt.md",
@@ -15013,6 +15128,7 @@
     ],
     "generated": [
       "doc:docs/agent-orchestration.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -15149,6 +15265,7 @@
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
     "governance": [
+      "doc:README.md",
       "doc:docs/governance/GOVERNANCE.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "entity:document:docs/governance/GOVERNANCE.md"
@@ -15370,6 +15487,7 @@
       "entity:document:docs/knowledge-health.md"
     ],
     "help": [
+      "doc:docs/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md"
     ],
     "here": [
@@ -15549,6 +15667,7 @@
       "doc:docs/cli-reference.md",
       "doc:docs/memory-approval.md",
       "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -15821,6 +15940,7 @@
       "doc:docs/continuous-learning.md",
       "doc:docs/knowledge-health.md",
       "doc:docs/multi-device-setup.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
@@ -16047,6 +16167,7 @@
       "doc:docs/knowledge-health.md",
       "doc:docs/process/WORKFLOW.md",
       "doc:docs/project/ROADMAP.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-final-acceptance.md",
@@ -16329,7 +16450,8 @@
     "links": [
       "doc:.agent/skills/research/SKILL.md",
       "doc:.github/instructions/markdown.instructions.md",
-      "doc:.github/instructions/templates.instructions.md"
+      "doc:.github/instructions/templates.instructions.md",
+      "doc:docs/README.md"
     ],
     "linux": [
       "doc:examples/mcp/README.md"
@@ -16424,6 +16546,7 @@
       "doc:docs/governance/GOVERNANCE.md"
     ],
     "maintenance": [
+      "doc:docs/README.md",
       "doc:knowledge/workflows/knowledge-maintenance.json",
       "entity:document:knowledge/workflows/knowledge-maintenance.json"
     ],
@@ -16437,6 +16560,7 @@
       "doc:docs/v1.0-technical-debt.md"
     ],
     "management": [
+      "doc:docs/README.md",
       "doc:references/vercel.md",
       "doc:standards/release-management.md",
       "entity:document:standards/release-management.md"
@@ -16448,6 +16572,7 @@
       "entity:document:agents/project-manager.md"
     ],
     "manifest": [
+      "doc:docs/source-of-truth.md",
       "doc:schemas/project.schema.json"
     ],
     "manual": [
@@ -16467,6 +16592,7 @@
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
+      "doc:README.md",
       "doc:docs/architecture/ARCHITECTURE.md"
     ],
     "mapping": [
@@ -16624,6 +16750,7 @@
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
       "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "doc:docs/README.md",
       "doc:docs/REPOSITORY_STRUCTURE.md",
       "doc:docs/agent-orchestration.md",
       "doc:docs/architecture/ARCHITECTURE.md",
@@ -16640,6 +16767,7 @@
       "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/repository-migration.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-final-acceptance.md",
@@ -16954,6 +17082,7 @@
       "entity:document:agents/reviewer.md",
       "entity:document:agents/security-reviewer.md",
       "entity:document:docs/CONTENT_PLACEMENT_RULES.md",
+      "entity:document:docs/README.md",
       "entity:document:docs/REPOSITORY_STRUCTURE.md",
       "entity:document:docs/agent-orchestration.md",
       "entity:document:docs/architecture/ARCHITECTURE.md",
@@ -16970,6 +17099,7 @@
       "entity:document:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "entity:document:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "entity:document:docs/repository-migration.md",
+      "entity:document:docs/source-of-truth.md",
       "entity:document:docs/v1.0-acceptance-criteria.md",
       "entity:document:docs/v1.0-baseline-audit.md",
       "entity:document:docs/v1.0-final-acceptance.md",
@@ -17266,6 +17396,7 @@
       "doc:docs/memory-approval.md",
       "doc:docs/process/WORKFLOW.md",
       "doc:docs/project/ROADMAP.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
@@ -17399,6 +17530,7 @@
     ],
     "migration": [
       "doc:CHANGELOG.md",
+      "doc:docs/README.md",
       "doc:docs/repository-migration.md",
       "doc:docs/v1.0-baseline-audit.md",
       "entity:document:docs/repository-migration.md"
@@ -17536,7 +17668,8 @@
       "doc:standards/documentation.md"
     ],
     "need": [
-      "doc:.kiro/steering/product.md"
+      "doc:.kiro/steering/product.md",
+      "doc:docs/README.md"
     ],
     "neutral": [
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
@@ -17779,6 +17912,7 @@
       "doc:docs/continuous-learning.md",
       "doc:docs/memory-approval.md",
       "doc:docs/multi-device-setup.md",
+      "doc:docs/source-of-truth.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -17791,6 +17925,7 @@
       "doc:specs/README.md",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:specs/phase-9-professional-context/tasks.md",
+      "entity:document:docs/source-of-truth.md",
       "entity:memory:decision-memory-index-source-truth-001"
     ],
     "office": [
@@ -17873,6 +18008,7 @@
     "operations": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:README.md",
+      "doc:docs/README.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:scripts/README.md"
     ],
@@ -18110,6 +18246,7 @@
     ],
     "pack": [
       "doc:README.md",
+      "doc:docs/README.md",
       "doc:docs/multi-device-setup.md",
       "doc:docs/releases/RELEASE_NOTES_v0.8.0.md"
     ],
@@ -18559,7 +18696,8 @@
       "doc:specs/phase-9-professional-context/design.md"
     ],
     "principle": [
-      "doc:.agent/skills/communication-skill/SKILL.md"
+      "doc:.agent/skills/communication-skill/SKILL.md",
+      "doc:docs/source-of-truth.md"
     ],
     "principles": [
       "doc:docs/architecture/ARCHITECTURE.md",
@@ -18710,6 +18848,7 @@
       "doc:AGENTS.md",
       "doc:README.md",
       "doc:agents/project-manager.md",
+      "doc:docs/README.md",
       "doc:docs/project/ROADMAP.md",
       "doc:knowledge/professional-context/project-experience.md",
       "doc:knowledge/professional-context/responsibilities.md",
@@ -19090,6 +19229,7 @@
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
       "doc:README.md",
+      "doc:docs/source-of-truth.md",
       "doc:prompts.json",
       "doc:prompts/README.md",
       "doc:prompts/create-skill.prompt.md",
@@ -19337,7 +19477,8 @@
       "doc:templates/specifications/requirements.md"
     ],
     "quick": [
-      "doc:README.md"
+      "doc:README.md",
+      "doc:docs/README.md"
     ],
     "ranking": [
       "doc:knowledge/architecture/phase-4-semantic-discovery.md"
@@ -19418,6 +19559,7 @@
       "doc:README.md",
       "doc:agents/README.md",
       "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "doc:docs/README.md",
       "doc:docs/REPOSITORY_STRUCTURE.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/README.md",
@@ -19497,6 +19639,7 @@
       "entity:document:.kiro/steering/README.md",
       "entity:document:README.md",
       "entity:document:agents/README.md",
+      "entity:document:docs/README.md",
       "entity:document:examples/mcp/README.md",
       "entity:document:knowledge/README.md",
       "entity:document:knowledge/ai-workflows/README.md",
@@ -19613,6 +19756,7 @@
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/source-of-truth.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:references/canva.md",
       "doc:references/chatgpt.md",
@@ -19631,6 +19775,7 @@
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:docs/repository-migration.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/ai-workflows/README.md",
@@ -19705,6 +19850,7 @@
     "registry": [
       "doc:agents/README.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/source-of-truth.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
@@ -19873,6 +20019,9 @@
     "reports": [
       "doc:docs/v1.0-technical-debt.md"
     ],
+    "repositories": [
+      "doc:README.md"
+    ],
     "repository": [
       "doc:.kiro/steering/README.md",
       "doc:AGENTS.md",
@@ -19884,6 +20033,7 @@
       "doc:docs/cli-reference.md",
       "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/repository-migration.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-final-acceptance.md",
@@ -20564,6 +20714,7 @@
     ],
     "schemas": [
       "doc:README.md",
+      "doc:docs/source-of-truth.md",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json",
@@ -20819,6 +20970,7 @@
       "doc:.agent/skills/communication-skill/README.md",
       "doc:CHANGELOG.md",
       "doc:README.md",
+      "doc:docs/README.md",
       "doc:docs/multi-device-setup.md",
       "doc:docs/v1.0-technical-debt.md",
       "entity:document:docs/multi-device-setup.md"
@@ -21039,9 +21191,11 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
+      "doc:docs/README.md",
       "doc:docs/multi-device-setup.md",
       "doc:docs/project/ROADMAP.md",
       "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/source-of-truth.md",
       "doc:examples/mcp/README.md",
       "doc:prompts/create-skill.prompt.md",
       "doc:prompts/document.prompt.md",
@@ -21162,6 +21316,7 @@
       "doc:.kiro/steering/technology.md",
       "doc:README.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/source-of-truth.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -21182,6 +21337,7 @@
       "doc:templates/memory/permanent-memory.md",
       "doc:templates/memory/project-memory.md",
       "doc:templates/memory/session-memory.md",
+      "entity:document:docs/source-of-truth.md",
       "entity:memory:decision-memory-index-source-truth-001"
     ],
     "sources": [
@@ -21255,6 +21411,7 @@
       "doc:.kiro/specs/README.md",
       "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/structure.md",
+      "doc:docs/source-of-truth.md",
       "doc:specs/README.md",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:specs/phase-9-professional-context/requirements.md",
@@ -21322,6 +21479,7 @@
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
       "doc:README.md",
+      "doc:docs/source-of-truth.md",
       "doc:knowledge/README.md",
       "doc:knowledge/professional-context/responsibilities.md",
       "doc:memory/permanent/README.md",
@@ -21822,6 +21980,7 @@
     "summary": [
       "doc:.agent/skills/communication-skill/examples.md",
       "doc:.agent/skills/research/SKILL.md",
+      "doc:docs/source-of-truth.md",
       "doc:knowledge/professional-context/overview.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
@@ -21886,7 +22045,8 @@
       "doc:.agent/skills/personal/writing/README.md",
       "doc:.agent/skills/system/superpower/README.md",
       "doc:.agent/skills/system/testing/README.md",
-      "doc:.agent/skills/system/using-superpowers/README.md"
+      "doc:.agent/skills/system/using-superpowers/README.md",
+      "doc:docs/README.md"
     ],
     "supports": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md"
@@ -21942,6 +22102,7 @@
       "entity:document:knowledge/professional-context/systems-and-platforms.md"
     ],
     "table": [
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-final-acceptance.md"
     ],
@@ -22039,6 +22200,7 @@
       "doc:.kiro/steering/structure.md",
       "doc:README.md",
       "doc:docs/project/ROADMAP.md",
+      "doc:docs/source-of-truth.md",
       "doc:templates/README.md",
       "doc:templates/memory/README.md",
       "doc:templates/memory/decision-memory.md",
@@ -22502,6 +22664,7 @@
       "doc:docs/knowledge-health.md",
       "doc:docs/multi-device-setup.md",
       "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -22585,9 +22748,11 @@
       "doc:.agent/skills/system/using-superpowers/README.md",
       "doc:.github/README.md",
       "doc:README.md",
+      "doc:docs/README.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/source-of-truth.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/README.md",
       "doc:profile/README.md",
@@ -22741,6 +22906,10 @@
     "topic": [
       "doc:.agent/skills/research/SKILL.md"
     ],
+    "topics": [
+      "doc:README.md",
+      "doc:docs/README.md"
+    ],
     "totals": [
       "doc:docs/v1.0-final-acceptance.md"
     ],
@@ -22826,6 +22995,7 @@
     "truth": [
       "doc:README.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/source-of-truth.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -22834,6 +23004,7 @@
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:profile/README.md",
       "doc:specs/README.md",
+      "entity:document:docs/source-of-truth.md",
       "entity:memory:decision-memory-index-source-truth-001"
     ],
     "tube": [
@@ -23238,6 +23409,7 @@
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.github/instructions/README.md",
       "doc:docs/multi-device-setup.md",
+      "doc:docs/source-of-truth.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:references/copilot.md"
@@ -23312,6 +23484,7 @@
       "doc:README.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/source-of-truth.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/best-practices/README.md",
@@ -23352,6 +23525,7 @@
       "doc:.agent/skills/thinking/SKILL.md",
       "doc:CLAUDE.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/source-of-truth.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:references/codex.md",
@@ -23367,6 +23541,9 @@
       "doc:templates/project-starters/power-automate/CLAUDE.md",
       "doc:templates/project-starters/python/CLAUDE.md",
       "doc:templates/project-starters/web-app/CLAUDE.md"
+    ],
+    "which": [
+      "doc:docs/source-of-truth.md"
     ],
     "who": [
       "doc:.kiro/steering/product.md",

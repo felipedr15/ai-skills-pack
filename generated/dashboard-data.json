@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-24T16:56:02Z",
+  "generatedAt": "2026-09-24T19:33:07Z",
   "generator": "ai-os-dashboard",
   "repository": {
     "available": true,
@@ -199,11 +199,11 @@
   },
   "knowledgeGraph": {
     "available": true,
-    "totalNodes": 395,
-    "totalEdges": 770,
+    "totalNodes": 397,
+    "totalEdges": 801,
     "nodesByType": {
       "concept": 2,
-      "document": 347,
+      "document": 349,
       "memory": 5,
       "platform": 7,
       "profile": 1,
@@ -215,19 +215,19 @@
       "belongs_to": 2,
       "contains": 129,
       "generated_from": 21,
-      "references": 241,
-      "related_to": 154,
+      "references": 266,
+      "related_to": 158,
       "supports": 6,
-      "uses": 217
+      "uses": 219
     },
-    "unresolvedReferences": 9
+    "unresolvedReferences": 10
   },
   "discovery": {
     "available": true,
-    "documents": 369,
-    "entities": 395,
-    "terms": 1286,
-    "relationships": 770,
+    "documents": 371,
+    "entities": 397,
+    "terms": 1293,
+    "relationships": 801,
     "warnings": 0,
     "unindexedFiles": 0
   },
@@ -253,13 +253,13 @@
       },
       {
         "exists": true,
-        "generatedAt": "2026-09-24T16:56:01Z",
+        "generatedAt": "2026-09-24T19:33:03Z",
         "stale": false,
         "path": "knowledge-graph.json"
       },
       {
         "exists": true,
-        "generatedAt": "2026-09-24T16:56:01Z",
+        "generatedAt": "2026-09-24T19:33:05Z",
         "stale": false,
         "path": "discovery-index.json"
       }
