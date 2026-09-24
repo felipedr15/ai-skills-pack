@@ -53,10 +53,14 @@ See the [full repository structure guide](docs/REPOSITORY_STRUCTURE.md).
 
 ## Source of Truth
 
-- Agent instructions are in `agents/`; the manually maintained `agents.json` registers their IDs and paths. Update both when changing a role.
-- Prompt text is in `prompts/`; the manually maintained `prompts.json` registers its IDs and paths. Update both when changing a prompt.
-- Skill `SKILL.md` front matter under `.agent/skills/` drives the generated skill registry. Root `skills.json` is a legacy compatibility registry; `skills/` contains supporting content.
-- Memory source records and `memory/registry.json` are authoritative. Outputs in `generated/` are derived and should be rebuilt with the commands in [generated/README.md](generated/README.md).
+See [docs/source-of-truth.md](docs/source-of-truth.md) for the complete guide. In brief:
+
+- **Authored content is authoritative** — folder content in `.md` files and registry files (agents, prompts, memory)
+- **Registry files must stay in sync** — when adding/changing source, update the corresponding `.json` registry
+- **Generated content is derived** — never hand-edit files in `generated/`; run the generation scripts instead
+- **Validation ensures alignment** — run generators and validators before committing
+
+Key locations: Agent instructions → `agents/*.md` + `agents.json` | Prompts → `prompts/*.md` + `prompts.json` | Skills → `.agent/skills/*/SKILL.md` + generated index | Memory → `memory/*.md` + `memory/registry.json`
 
 ## Setup
 
@@ -64,11 +68,14 @@ The root [bootstrap.sh](bootstrap.sh) and [bootstrap.ps1](bootstrap.ps1) call th
 
 ## Documentation
 
+**Start here:** [docs/README.md](docs/README.md) is the docs index and your entry point.
+
 | Topic | Document |
 | --- | --- |
-| Architecture and structure | [Architecture](docs/architecture/ARCHITECTURE.md) · [Structure](docs/REPOSITORY_STRUCTURE.md) |
+| Authoritative content | [Source of Truth](docs/source-of-truth.md) — what's authoritative vs. derived |
+| Architecture and structure | [Architecture](docs/architecture/ARCHITECTURE.md) · [Repository Structure](docs/REPOSITORY_STRUCTURE.md) |
 | Workflow and governance | [Workflow](docs/process/WORKFLOW.md) · [Governance](docs/governance/GOVERNANCE.md) |
-| Contributions and security | [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) |
+| Contributions and security | [Contributing](CONTRIBUTING.md) · [Content Placement](docs/CONTENT_PLACEMENT_RULES.md) · [Security](SECURITY.md) |
 | Plans and history | [Roadmap](docs/project/ROADMAP.md) · [Changelog](CHANGELOG.md) · [Release notes](docs/releases/) |
 | Commands and setup | [CLI reference](docs/cli-reference.md) · [Multi-device setup](docs/multi-device-setup.md) |
 
