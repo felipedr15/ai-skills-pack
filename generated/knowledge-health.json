@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-02T23:36:01Z",
+  "generatedAt": "2026-09-24T16:56:01Z",
   "generator": "ai-os-orchestration",
   "overallScore": 83,
   "categoryScores": {
-    "graphIntegrity": 93,
+    "graphIntegrity": 92,
     "projectDocumentation": 100,
     "skillDocumentation": 5,
     "memoryLinkage": 100,
@@ -118,6 +118,36 @@
     {
       "source": ".kiro/specs/phase-9-professional-context/README.md",
       "target": "specs/phase-9-professional-context",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "VERSION",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "bootstrap.ps1",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "bootstrap.sh",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/releases",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/releases",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "generated/README.md",
       "kind": "markdown"
     },
     {

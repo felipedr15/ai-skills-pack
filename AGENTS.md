@@ -6,8 +6,8 @@ AI OS coordinates reusable skills, specifications, project memory, roles, prompt
 ## Required Reading Order
 1. `README.md`
 2. `AGENTS.md`
-3. `WORKFLOW.md`
-4. `ARCHITECTURE.md` when architecture is relevant
+3. `docs/process/WORKFLOW.md`
+4. `docs/architecture/ARCHITECTURE.md` when architecture is relevant
 5. `skills.json`
 6. `agents.json`
 7. `prompts.json`

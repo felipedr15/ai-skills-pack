@@ -1,18 +1,101 @@
-# AI OS
+# ai-skills-pack
+
+A structured AI operations repository for reusable agents, skills, prompts, knowledge, memory, standards, templates, schemas, and workflow automation.
 
 [![AI OS CI](https://github.com/felipedr15/ai-skills-pack/actions/workflows/validate.yml/badge.svg)](https://github.com/felipedr15/ai-skills-pack/actions/workflows/validate.yml)
 
 ## Overview
 
-AI OS is a repository-based **AI Development Operating System** for coordinating AI tools, reusable skills, specifications, project memory, validation, documentation, and deployment workflows. It is not a traditional computer operating system. It is the evolution of the original AI Skills Pack, whose existing skills remain in their integration-safe locations.
+`ai-skills-pack` (AI OS) organizes reusable AI working assets and local automation. It coordinates instructions, project context, specifications, and validation across supported tools. Each tool needs its own configuration to read the relevant files; cloning the repository alone does not connect it to every tool.
+
+## What's in This Repository
+
+- Agent roles, skill definitions, and reusable prompts
+- Curated knowledge, supporting references, and structured memory
+- Standards, project specifications, schemas, templates, and examples
+- Bootstrap scripts, tests, generated indexes, and repository documentation
+
+## Who This Is For
+
+Maintainers managing reusable AI assets, contributors adding prompts or skills, and people setting up consistent AI-assisted work across devices and tools.
+
+## Quick Start
+
+1. Clone the repository and read the [structure guide](docs/REPOSITORY_STRUCTURE.md).
+2. Review [CONTRIBUTING.md](CONTRIBUTING.md) and the [placement rules](docs/CONTENT_PLACEMENT_RULES.md) before editing.
+3. Read the [architecture](docs/architecture/ARCHITECTURE.md) and [workflow](docs/process/WORKFLOW.md) for design and process guidance.
+4. Run `./bootstrap.sh` (macOS/Linux) or `./bootstrap.ps1` (PowerShell) if setup automation is needed.
+5. Run `python scripts/ai-os.py doctor`, then `python scripts/ai-os.py validate` to inspect the environment and validate the repository.
+
+See [multi-device setup](docs/multi-device-setup.md) and the [CLI reference](docs/cli-reference.md) for details.
+
+## Repository Structure
+
+| Path | Purpose |
+| --- | --- |
+| `agents/` | Role instructions; `agents.json` registers them |
+| `.agent/skills/`, `skills/` | Skill definitions and supporting skill content |
+| `prompts/` | Prompt text; `prompts.json` registers it |
+| `knowledge/`, `references/` | Stable subject knowledge and supporting references |
+| `memory/`, `profile/` | Explicit working context and optional authored profile data |
+| `standards/`, `specs/`, `schemas/` | Conventions, feature specifications, and validation structures |
+| `templates/`, `examples/` | Reusable starters and completed samples |
+| `config/`, `.github/`, `.kiro/` | Configuration and platform integrations |
+| `scripts/`, `tests/` | Automation and verification |
+| `generated/` | Derived indexes and dashboards; regenerate rather than edit |
+| `docs/` | Human documentation, including architecture, workflow, releases, and setup |
+
+See the [full repository structure guide](docs/REPOSITORY_STRUCTURE.md).
+
+## Key Concepts
+
+`knowledge/` holds reusable information; `memory/` holds evolving context. `standards/` defines conventions, `specs/` captures requirements and design, and `schemas/` defines machine-readable validation. `templates/` contains starting points; `examples/` demonstrates use. The [placement rules](docs/CONTENT_PLACEMENT_RULES.md) cover the other boundaries.
+
+## Source of Truth
+
+- Agent instructions are in `agents/`; the manually maintained `agents.json` registers their IDs and paths. Update both when changing a role.
+- Prompt text is in `prompts/`; the manually maintained `prompts.json` registers its IDs and paths. Update both when changing a prompt.
+- Skill `SKILL.md` front matter under `.agent/skills/` drives the generated skill registry. Root `skills.json` is a legacy compatibility registry; `skills/` contains supporting content.
+- Memory source records and `memory/registry.json` are authoritative. Outputs in `generated/` are derived and should be rebuilt with the commands in [generated/README.md](generated/README.md).
+
+## Setup
+
+The root [bootstrap.sh](bootstrap.sh) and [bootstrap.ps1](bootstrap.ps1) call the repository's Python setup command. Review the script for your platform before running it. Core commands use Python 3.10 or newer; see [setup guidance](docs/multi-device-setup.md).
+
+## Documentation
+
+| Topic | Document |
+| --- | --- |
+| Architecture and structure | [Architecture](docs/architecture/ARCHITECTURE.md) · [Structure](docs/REPOSITORY_STRUCTURE.md) |
+| Workflow and governance | [Workflow](docs/process/WORKFLOW.md) · [Governance](docs/governance/GOVERNANCE.md) |
+| Contributions and security | [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) |
+| Plans and history | [Roadmap](docs/project/ROADMAP.md) · [Changelog](CHANGELOG.md) · [Release notes](docs/releases/) |
+| Commands and setup | [CLI reference](docs/cli-reference.md) · [Multi-device setup](docs/multi-device-setup.md) |
+
+## Contributing
+
+Follow [CONTRIBUTING.md](CONTRIBUTING.md), use the [placement rules](docs/CONTENT_PLACEMENT_RULES.md), keep edits scoped, and update documentation and generated artifacts when source paths or behavior change.
+
+## Security
+
+Report security issues using [SECURITY.md](SECURITY.md). Do not commit secrets, credentials, tokens, or sensitive data.
+
+## Releases and Versioning
+
+The current version is in [VERSION](VERSION); [CHANGELOG.md](CHANGELOG.md) tracks changes and [release notes](docs/releases/) document releases.
+
+## Maintainer Notes
+
+Keep registered paths aligned with content, regenerate derived output after source changes, and run the [validation suite](#validation) before proposing changes.
+
+## Operational Details
+
+The sections below describe implemented capabilities and commands in more detail.
+
 
 ## Supported Tools
 
 AI OS provides guidance for ChatGPT (planning, research, troubleshooting, documentation, review), Claude (architecture and long-context review), GitHub Copilot and VS Code Agent mode (repository implementation), Kiro (specification-oriented work), Codex (repository execution and validation), v0 (web UI ideation), Vercel (hosting and deployment), and Canva (visual communication). Support depends on product, plan, version, integration, configuration, and the instructions supplied; tools do not automatically read every repository file.
-
-## Core Capabilities
-
-Skills, agents, prompts, specifications, project memory, structured repository memory, project starters, standards, a knowledge base, validation, security guidance, and deployment guidance.
 
 ## Available Skills
 
@@ -35,13 +118,13 @@ Skills, agents, prompts, specifications, project memory, structured repository m
 | Testing | `testing` | [.agent/skills/system/testing/SKILL.md](.agent/skills/system/testing/SKILL.md) | 1.0.0 | stable | Reusable guidance for testing work. |
 | using-superpowers | `using-superpowers` | [.agent/skills/system/using-superpowers/SKILL.md](.agent/skills/system/using-superpowers/SKILL.md) | 1.0.0 | stable | Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions |
 
-Skill `SKILL.md` front matter is the source of truth. Files under [generated/](generated/README.md), including the generated registry and repository index, are deterministic outputs and must never be edited as sources of truth. The legacy [skills.json](skills.json) remains available for compatibility during Phase 1.
+Skill `SKILL.md` front matter is the source of truth. Files under [generated/](generated/README.md), including the generated registry and repository index, are deterministic outputs and must never be edited as sources of truth. The legacy [skills.json](skills.json) remains available for compatibility during Phase 1. Role and prompt files live in `agents/` and `prompts/`; their root JSON registries are maintained alongside them. See [content placement rules](docs/CONTENT_PLACEMENT_RULES.md).
 
 ## Standard Workflow
 
 Request → Planning → Requirements → Design → Tasks → Execution → Validation → Review → Human approval → Commit → Deployment
 
-See [WORKFLOW.md](WORKFLOW.md) for gates and handoffs.
+See [WORKFLOW.md](docs/process/WORKFLOW.md) for gates and handoffs.
 
 ## Agent Roles
 
@@ -192,21 +275,6 @@ under `knowledge/professional-context/snapshots/`.
 
 See [Phase 9 Architecture](knowledge/architecture/phase-9-professional-context.md).
 
-## Quick Start
-
-1. Clone or open AI OS.
-2. Run `python scripts/ai-os.py doctor`.
-3. Run `python scripts/ai-os.py status`.
-4. Run `python scripts/ai-os.py validate`.
-5. Select a project starter or AI OS workflow.
-6. Create requirements, design, tasks, and handoff documentation for substantial work.
-7. Execute approved work.
-8. Regenerate derived artifacts when sources change.
-9. Run validation and `git diff --check`.
-10. Review the Git diff and complete human testing.
-11. Commit approved changes.
-12. Deploy only when applicable and explicitly approved.
-
 ## Validation
 
 ```text
@@ -252,23 +320,3 @@ The command copies a starter, replaces safe placeholders, creates `project.yaml`
 ## Automation Status
 
 Phase 1 core automation implements registry generation, repository indexing, unified validation, and project bootstrap. Phase 2 implements the structured local Memory Engine. Phase 3 implements the local repository Knowledge Graph.
-
-## Security
-
-Follow [SECURITY.md](SECURITY.md).
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Roadmap
-
-See [ROADMAP.md](ROADMAP.md).
-
-## Architecture
-
-See [ARCHITECTURE.md](ARCHITECTURE.md).
-
-## References
-
-Platform notes and examples are in [references/](references/README.md).

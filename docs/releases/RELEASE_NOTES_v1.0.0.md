@@ -37,7 +37,7 @@ AI OS v1.0.0 prepares the existing AI development operating system for its first
   `python scripts/dashboard-build.py` no longer rewrite committed artifacts (and dirty the working
   tree) on a rerun with no meaningful source change. The dashboard's filesystem-mtime-derived
   `fileTimestamp` field, which varied across clones and computers, was removed from committed
-  output entirely. See [docs/v1.0-technical-debt.md](docs/v1.0-technical-debt.md#stale-generated-artifacts).
+  output entirely. See [docs/v1.0-technical-debt.md](../../docs/v1.0-technical-debt.md#stale-generated-artifacts).
 - Fixed a repository-indexing/knowledge-graph/semantic-discovery/MCP-path-permission bug where the
   `.agent/skills/build/` skill category collided with a generic "skip build-output directories"
   exclusion rule, silently hiding all 7 files under that category (creator, frontend,
@@ -62,7 +62,7 @@ Final results, recorded on this machine (Windows, Python 3.12.10) after the fixe
 - `git diff --check`: PASS.
 
 Full detail, including the knowledge-graph warning breakdown, is in
-[docs/v1.0-final-acceptance.md](docs/v1.0-final-acceptance.md).
+[docs/v1.0-final-acceptance.md](../../docs/v1.0-final-acceptance.md).
 
 ## Security And Privacy
 
@@ -81,7 +81,7 @@ Full detail, including the knowledge-graph warning breakdown, is in
 - Evidence-resolution visibility in MCP/dashboard remains deferred.
 - The knowledge graph reports 3 unresolved references and 51 isolated nodes; both are reviewed and
   documented as intentional/by-design, not defects -- see
-  [docs/v1.0-final-acceptance.md](docs/v1.0-final-acceptance.md#knowledge-graph-warnings).
+  [docs/v1.0-final-acceptance.md](../../docs/v1.0-final-acceptance.md#knowledge-graph-warnings).
 - Local test execution inside some managed/sandboxed environments on Windows can hit
   temporary-directory permission errors unrelated to application code; running directly (as done
   for this release's validation) does not reproduce this.
@@ -127,7 +127,7 @@ modified by this document or by the work described here.
 This document distinguishes four separate things:
 
 1. **Technical validation status**: complete and passing as of this update -- see Validation
-   Results above and [docs/v1.0-final-acceptance.md](docs/v1.0-final-acceptance.md) for the full
+   Results above and [docs/v1.0-final-acceptance.md](../../docs/v1.0-final-acceptance.md) for the full
    PASS/FAIL table, run after the idempotency and indexing fixes described under Technical Debt
    Fixes.
 2. **Existing tag/release status**: unchanged. The `v1.0.0` tag and GitHub Release were created
@@ -136,7 +136,7 @@ This document distinguishes four separate things:
    the updated text over manually through the normal GitHub Release edit flow -- this repository's
    tooling does not do that automatically.
 3. **Remaining documentation/process cleanup**: this file and
-   [docs/v1.0-technical-debt.md](docs/v1.0-technical-debt.md) have been corrected to match actual
+   [docs/v1.0-technical-debt.md](../../docs/v1.0-technical-debt.md) have been corrected to match actual
    repository state as of this update.
 4. **Deferred post-v1.0 technical debt**: see Known Limitations above -- none of these block v1.0
    and all are explicitly deferred, not silently dropped.

@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-02T23:36:00Z",
+  "generatedAt": "2026-09-24T16:56:01Z",
   "generator": "ai-os-semantic-discovery",
   "sourceGraph": "generated/knowledge-graph.json",
   "stats": {
-    "documents": 367,
-    "entities": 393,
-    "terms": 1283,
-    "relationships": 751
+    "documents": 369,
+    "entities": 395,
+    "terms": 1286,
+    "relationships": 770
   },
   "documents": [
     {
@@ -1124,7 +1124,7 @@
       "headings": [
         "GitHub Copilot Instructions"
       ],
-      "snippet": "Read in order: `AGENTS.md`, `WORKFLOW.md`, `skills.json`, `agents.json`, `prompts.json`, applicable `.agent/skills/**/SKILL.md`, approved requirements, design, tasks, `HANDOFF.md`, and `decisions.md`.",
+      "snippet": "Read in order: `AGENTS.md`, `docs/process/WORKFLOW.md`, `skills.json`, `agents.json`, `prompts.json`, applicable `.agent/skills/**/SKILL.md`, approved requirements, design, tasks, `HANDOFF.md`, and `d",
       "frontMatter": {}
     },
     {
@@ -1335,33 +1335,6 @@
       "frontMatter": {}
     },
     {
-      "id": "doc:ARCHITECTURE.md",
-      "sourcePath": "ARCHITECTURE.md",
-      "title": "AI OS Architecture",
-      "category": "document",
-      "headings": [
-        "AI OS Architecture",
-        "System Purpose",
-        "Architectural Principles",
-        "Logical Layers",
-        "Directory Map",
-        "Phase 1 Automation",
-        "Knowledge Graph Architecture",
-        "Semantic Discovery Architecture",
-        "Dashboard Architecture",
-        "Memory Engine Architecture",
-        "Continuous Learning and Agent Orchestration Architecture (Phase 8)",
-        "Professional Context and Work Intelligence Architecture (Phase 9)",
-        "Models",
-        "Validation and Security",
-        "Tool Integration and Data Flow",
-        "Extension Points",
-        "Non-Goals"
-      ],
-      "snippet": "AI OS is a portable repository framework for reliable AI-assisted development.",
-      "frontMatter": {}
-    },
-    {
       "id": "doc:CHANGELOG.md",
       "sourcePath": "CHANGELOG.md",
       "title": "Changelog",
@@ -1413,28 +1386,27 @@
       "frontMatter": {}
     },
     {
-      "id": "doc:GOVERNANCE.md",
-      "sourcePath": "GOVERNANCE.md",
-      "title": "Governance",
-      "category": "document",
-      "headings": [
-        "Governance",
-        "Lifecycles",
-        "Approval and Review"
-      ],
-      "snippet": "Humans own final decisions. Maintainers steward registries and shared guidance; contributors propose focused changes.",
-      "frontMatter": {}
-    },
-    {
       "id": "doc:README.md",
       "sourcePath": "README.md",
-      "title": "AI OS",
+      "title": "ai-skills-pack",
       "category": "document",
       "headings": [
-        "AI OS",
+        "ai-skills-pack",
         "Overview",
+        "What's in This Repository",
+        "Who This Is For",
+        "Quick Start",
+        "Repository Structure",
+        "Key Concepts",
+        "Source of Truth",
+        "Setup",
+        "Documentation",
+        "Contributing",
+        "Security",
+        "Releases and Versioning",
+        "Maintainer Notes",
+        "Operational Details",
         "Supported Tools",
-        "Core Capabilities",
         "Available Skills",
         "Standard Workflow",
         "Agent Roles",
@@ -1445,92 +1417,11 @@
         "Knowledge Graph (Phase 3)",
         "Continuous Learning and Agent Orchestration (Phase 8)",
         "Professional Context and Work Intelligence (Phase 9)",
-        "Quick Start",
         "Validation",
         "Project Creation",
-        "Automation Status",
-        "Security",
-        "Contributing",
-        "Roadmap",
-        "Architecture",
-        "References"
+        "Automation Status"
       ],
-      "snippet": "[![AI OS CI](https://github.com/felipedr15/ai-skills-pack/actions/workflows/validate.yml/badge.svg)](https://github.com/felipedr15/ai-skills-pack/actions/workflows/validate.yml)",
-      "frontMatter": {}
-    },
-    {
-      "id": "doc:RELEASE_NOTES_v0.8.0.md",
-      "sourcePath": "RELEASE_NOTES_v0.8.0.md",
-      "title": "RELEASE_NOTES_v0.8.0",
-      "category": "document",
-      "headings": [
-        "What's Changed",
-        "New Contributors",
-        "Additional fixes included after PR #2",
-        "Final validation"
-      ],
-      "snippet": "* feat: add Phase 8 continuous learning and agent orchestration by @frojas15 in https://github.com/frojas15/ai-skills-pack/pull/2",
-      "frontMatter": {}
-    },
-    {
-      "id": "doc:RELEASE_NOTES_v0.9.0.md",
-      "sourcePath": "RELEASE_NOTES_v0.9.0.md",
-      "title": "AI OS v0.9.0 — Professional Context and Work Intelligence",
-      "category": "document",
-      "headings": [
-        "AI OS v0.9.0 — Professional Context and Work Intelligence",
-        "Highlights",
-        "Validation",
-        "Privacy and security",
-        "Known limitations"
-      ],
-      "snippet": "- Added a structured, local-first professional-context layer under `profile/`, structurally",
-      "frontMatter": {}
-    },
-    {
-      "id": "doc:RELEASE_NOTES_v1.0.0.md",
-      "sourcePath": "RELEASE_NOTES_v1.0.0.md",
-      "title": "AI OS v1.0.0 — Production Hardening & Unified Experience",
-      "category": "document",
-      "headings": [
-        "AI OS v1.0.0 — Production Hardening & Unified Experience",
-        "Overview",
-        "Major Improvements",
-        "Portability",
-        "CI Improvements",
-        "Technical Debt Fixes",
-        "Validation Results",
-        "Security And Privacy",
-        "Known Limitations (Deferred Post-v1.0)",
-        "Upgrade Instructions",
-        "Fresh Clone Instructions",
-        "Release Status"
-      ],
-      "snippet": "AI OS v1.0.0 prepares the existing AI development operating system for its first production-quality release. This release focuses on hardening, portability, validation, repository ownership cleanup, a",
-      "frontMatter": {}
-    },
-    {
-      "id": "doc:ROADMAP.md",
-      "sourcePath": "ROADMAP.md",
-      "title": "AI OS Roadmap",
-      "category": "document",
-      "headings": [
-        "AI OS Roadmap",
-        "Version 1.0 — Foundation",
-        "Phase 1 — Core Automation (Implemented)",
-        "Phase 2 — Memory Engine (Implemented)",
-        "Phase 3 — Knowledge Graph (Implemented)",
-        "Phase 4 — Semantic Discovery (Implemented)",
-        "Phase 5 — Interactive Dashboard (Implemented)",
-        "Phase 6 — MCP Integration (Implemented)",
-        "Phase 7 — Release Hardening (Implemented)",
-        "Phase 8 — Continuous Learning and Agent Orchestration (Implemented)",
-        "Phase 9 — Professional Context and Work Intelligence (Implemented)",
-        "Version 1.1 — Workflow Improvements (Proposed)",
-        "Version 1.2 — Integration Improvements (Proposed)",
-        "Version 2.0 — Advanced Automation (Proposed)"
-      ],
-      "snippet": "Implemented foundation: core skills, agent roles, shared instructions, prompt library, specification templates, project memory, project starters, security, validation, and documentation.",
+      "snippet": "A structured AI operations repository for reusable agents, skills, prompts, knowledge, memory, standards, templates, schemas, and workflow automation.",
       "frontMatter": {}
     },
     {
@@ -1546,28 +1437,6 @@
         "Professional Context Rules (Phase 9)"
       ],
       "snippet": "Never store passwords, API keys, access tokens, private certificates, connection strings, authentication cookies, MFA codes, employee or customer personal data, government-protected data, confidential",
-      "frontMatter": {}
-    },
-    {
-      "id": "doc:WORKFLOW.md",
-      "sourcePath": "WORKFLOW.md",
-      "title": "AI OS Workflow",
-      "category": "document",
-      "headings": [
-        "AI OS Workflow",
-        "Lifecycle",
-        "Gates",
-        "Phase 1 Automation Workflow",
-        "Phase 2 Memory Workflow (Implemented)",
-        "Phase 3 Knowledge Graph Workflow (Implemented)",
-        "Phase 4 Semantic Discovery Workflow (Implemented)",
-        "Phase 5 Interactive Dashboard Workflow (Implemented)",
-        "Phase 6 MCP Integration Workflow (Implemented)",
-        "Phase 7 Release Hardening Workflow (Implemented)",
-        "Phase 8 Continuous Learning and Agent Orchestration Workflow (Implemented)",
-        "Phase 9 Professional Context Workflow (Implemented)"
-      ],
-      "snippet": "Request → planner skill selection → requirements → design → tasks → executor handoff → implementation → validation → diff review → human validation → commit → deployment.",
       "frontMatter": {}
     },
     {
@@ -1810,6 +1679,29 @@
       "frontMatter": {}
     },
     {
+      "id": "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "sourcePath": "docs/CONTENT_PLACEMENT_RULES.md",
+      "title": "Content placement rules",
+      "category": "document",
+      "headings": [
+        "Content placement rules"
+      ],
+      "snippet": "[Structure](REPOSITORY_STRUCTURE.md) · [Start here](../README.md)",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/REPOSITORY_STRUCTURE.md",
+      "sourcePath": "docs/REPOSITORY_STRUCTURE.md",
+      "title": "Repository structure",
+      "category": "document",
+      "headings": [
+        "Repository structure",
+        "First contribution"
+      ],
+      "snippet": "[Start here](../README.md) · [Placement rules](CONTENT_PLACEMENT_RULES.md)",
+      "frontMatter": {}
+    },
+    {
       "id": "doc:docs/agent-orchestration.md",
       "sourcePath": "docs/agent-orchestration.md",
       "title": "Agent Orchestration (Phase 8)",
@@ -1824,6 +1716,33 @@
         "MCP and Dashboard"
       ],
       "snippet": "`generated/agent-registry.json` / `.md`, built from `agents/*.md` and `agents.json` by",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/architecture/ARCHITECTURE.md",
+      "sourcePath": "docs/architecture/ARCHITECTURE.md",
+      "title": "AI OS Architecture",
+      "category": "document",
+      "headings": [
+        "AI OS Architecture",
+        "System Purpose",
+        "Architectural Principles",
+        "Logical Layers",
+        "Directory Map",
+        "Phase 1 Automation",
+        "Knowledge Graph Architecture",
+        "Semantic Discovery Architecture",
+        "Dashboard Architecture",
+        "Memory Engine Architecture",
+        "Continuous Learning and Agent Orchestration Architecture (Phase 8)",
+        "Professional Context and Work Intelligence Architecture (Phase 9)",
+        "Models",
+        "Validation and Security",
+        "Tool Integration and Data Flow",
+        "Extension Points",
+        "Non-Goals"
+      ],
+      "snippet": "AI OS is a portable repository framework for reliable AI-assisted development.",
       "frontMatter": {}
     },
     {
@@ -1874,6 +1793,19 @@
       "frontMatter": {}
     },
     {
+      "id": "doc:docs/governance/GOVERNANCE.md",
+      "sourcePath": "docs/governance/GOVERNANCE.md",
+      "title": "Governance",
+      "category": "document",
+      "headings": [
+        "Governance",
+        "Lifecycles",
+        "Approval and Review"
+      ],
+      "snippet": "Humans own final decisions. Maintainers steward registries and shared guidance; contributors propose focused changes.",
+      "frontMatter": {}
+    },
+    {
       "id": "doc:docs/knowledge-health.md",
       "sourcePath": "docs/knowledge-health.md",
       "title": "Knowledge Health (Phase 8)",
@@ -1921,6 +1853,103 @@
         "Troubleshooting"
       ],
       "snippet": "AI OS is designed to run from any clone of `felipedr15/ai-skills-pack` without requiring the same Windows username or directory on every device.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/process/WORKFLOW.md",
+      "sourcePath": "docs/process/WORKFLOW.md",
+      "title": "AI OS Workflow",
+      "category": "document",
+      "headings": [
+        "AI OS Workflow",
+        "Lifecycle",
+        "Gates",
+        "Phase 1 Automation Workflow",
+        "Phase 2 Memory Workflow (Implemented)",
+        "Phase 3 Knowledge Graph Workflow (Implemented)",
+        "Phase 4 Semantic Discovery Workflow (Implemented)",
+        "Phase 5 Interactive Dashboard Workflow (Implemented)",
+        "Phase 6 MCP Integration Workflow (Implemented)",
+        "Phase 7 Release Hardening Workflow (Implemented)",
+        "Phase 8 Continuous Learning and Agent Orchestration Workflow (Implemented)",
+        "Phase 9 Professional Context Workflow (Implemented)"
+      ],
+      "snippet": "Request → planner skill selection → requirements → design → tasks → executor handoff → implementation → validation → diff review → human validation → commit → deployment.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/project/ROADMAP.md",
+      "sourcePath": "docs/project/ROADMAP.md",
+      "title": "AI OS Roadmap",
+      "category": "document",
+      "headings": [
+        "AI OS Roadmap",
+        "Version 1.0 — Foundation",
+        "Phase 1 — Core Automation (Implemented)",
+        "Phase 2 — Memory Engine (Implemented)",
+        "Phase 3 — Knowledge Graph (Implemented)",
+        "Phase 4 — Semantic Discovery (Implemented)",
+        "Phase 5 — Interactive Dashboard (Implemented)",
+        "Phase 6 — MCP Integration (Implemented)",
+        "Phase 7 — Release Hardening (Implemented)",
+        "Phase 8 — Continuous Learning and Agent Orchestration (Implemented)",
+        "Phase 9 — Professional Context and Work Intelligence (Implemented)",
+        "Version 1.1 — Workflow Improvements (Proposed)",
+        "Version 1.2 — Integration Improvements (Proposed)",
+        "Version 2.0 — Advanced Automation (Proposed)"
+      ],
+      "snippet": "Implemented foundation: core skills, agent roles, shared instructions, prompt library, specification templates, project memory, project starters, security, validation, and documentation.",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "sourcePath": "docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "title": "RELEASE_NOTES_v0.8.0",
+      "category": "document",
+      "headings": [
+        "What's Changed",
+        "New Contributors",
+        "Additional fixes included after PR #2",
+        "Final validation"
+      ],
+      "snippet": "* feat: add Phase 8 continuous learning and agent orchestration by @frojas15 in https://github.com/frojas15/ai-skills-pack/pull/2",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "sourcePath": "docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "title": "AI OS v0.9.0 — Professional Context and Work Intelligence",
+      "category": "document",
+      "headings": [
+        "AI OS v0.9.0 — Professional Context and Work Intelligence",
+        "Highlights",
+        "Validation",
+        "Privacy and security",
+        "Known limitations"
+      ],
+      "snippet": "- Added a structured, local-first professional-context layer under `profile/`, structurally",
+      "frontMatter": {}
+    },
+    {
+      "id": "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "sourcePath": "docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "title": "AI OS v1.0.0 — Production Hardening & Unified Experience",
+      "category": "document",
+      "headings": [
+        "AI OS v1.0.0 — Production Hardening & Unified Experience",
+        "Overview",
+        "Major Improvements",
+        "Portability",
+        "CI Improvements",
+        "Technical Debt Fixes",
+        "Validation Results",
+        "Security And Privacy",
+        "Known Limitations (Deferred Post-v1.0)",
+        "Upgrade Instructions",
+        "Fresh Clone Instructions",
+        "Release Status"
+      ],
+      "snippet": "AI OS v1.0.0 prepares the existing AI development operating system for its first production-quality release. This release focuses on hardening, portability, validation, repository ownership cleanup, a",
       "frontMatter": {}
     },
     {
@@ -6927,16 +6956,6 @@
       }
     },
     {
-      "id": "entity:document:ARCHITECTURE.md",
-      "nodeId": "document:ARCHITECTURE.md",
-      "type": "document",
-      "name": "Architecture",
-      "sourcePath": "ARCHITECTURE.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
       "id": "entity:document:CHANGELOG.md",
       "nodeId": "document:CHANGELOG.md",
       "type": "document",
@@ -6967,16 +6986,6 @@
       }
     },
     {
-      "id": "entity:document:GOVERNANCE.md",
-      "nodeId": "document:GOVERNANCE.md",
-      "type": "document",
-      "name": "Governance",
-      "sourcePath": "GOVERNANCE.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
       "id": "entity:document:README.md",
       "nodeId": "document:README.md",
       "type": "document",
@@ -6987,61 +6996,11 @@
       }
     },
     {
-      "id": "entity:document:RELEASE_NOTES_v0.8.0.md",
-      "nodeId": "document:RELEASE_NOTES_v0.8.0.md",
-      "type": "document",
-      "name": "Release Notes V0.8.0",
-      "sourcePath": "RELEASE_NOTES_v0.8.0.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
-      "id": "entity:document:RELEASE_NOTES_v0.9.0.md",
-      "nodeId": "document:RELEASE_NOTES_v0.9.0.md",
-      "type": "document",
-      "name": "Release Notes V0.9.0",
-      "sourcePath": "RELEASE_NOTES_v0.9.0.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
-      "id": "entity:document:RELEASE_NOTES_v1.0.0.md",
-      "nodeId": "document:RELEASE_NOTES_v1.0.0.md",
-      "type": "document",
-      "name": "Release Notes V1.0.0",
-      "sourcePath": "RELEASE_NOTES_v1.0.0.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
-      "id": "entity:document:ROADMAP.md",
-      "nodeId": "document:ROADMAP.md",
-      "type": "document",
-      "name": "Roadmap",
-      "sourcePath": "ROADMAP.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
       "id": "entity:document:SECURITY.md",
       "nodeId": "document:SECURITY.md",
       "type": "document",
       "name": "Security",
       "sourcePath": "SECURITY.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
-      "id": "entity:document:WORKFLOW.md",
-      "nodeId": "document:WORKFLOW.md",
-      "type": "document",
-      "name": "Workflow",
-      "sourcePath": "WORKFLOW.md",
       "metadata": {
         "extension": ".md"
       }
@@ -7177,11 +7136,41 @@
       }
     },
     {
+      "id": "entity:document:docs/CONTENT_PLACEMENT_RULES.md",
+      "nodeId": "document:docs/CONTENT_PLACEMENT_RULES.md",
+      "type": "document",
+      "name": "Content Placement Rules",
+      "sourcePath": "docs/CONTENT_PLACEMENT_RULES.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/REPOSITORY_STRUCTURE.md",
+      "nodeId": "document:docs/REPOSITORY_STRUCTURE.md",
+      "type": "document",
+      "name": "Repository Structure",
+      "sourcePath": "docs/REPOSITORY_STRUCTURE.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "entity:document:docs/agent-orchestration.md",
       "nodeId": "document:docs/agent-orchestration.md",
       "type": "document",
       "name": "Agent Orchestration",
       "sourcePath": "docs/agent-orchestration.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/architecture/ARCHITECTURE.md",
+      "nodeId": "document:docs/architecture/ARCHITECTURE.md",
+      "type": "document",
+      "name": "Architecture",
+      "sourcePath": "docs/architecture/ARCHITECTURE.md",
       "metadata": {
         "extension": ".md"
       }
@@ -7217,6 +7206,16 @@
       }
     },
     {
+      "id": "entity:document:docs/governance/GOVERNANCE.md",
+      "nodeId": "document:docs/governance/GOVERNANCE.md",
+      "type": "document",
+      "name": "Governance",
+      "sourcePath": "docs/governance/GOVERNANCE.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "entity:document:docs/knowledge-health.md",
       "nodeId": "document:docs/knowledge-health.md",
       "type": "document",
@@ -7242,6 +7241,56 @@
       "type": "document",
       "name": "Multi Device Setup",
       "sourcePath": "docs/multi-device-setup.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/process/WORKFLOW.md",
+      "nodeId": "document:docs/process/WORKFLOW.md",
+      "type": "document",
+      "name": "Workflow",
+      "sourcePath": "docs/process/WORKFLOW.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/project/ROADMAP.md",
+      "nodeId": "document:docs/project/ROADMAP.md",
+      "type": "document",
+      "name": "Roadmap",
+      "sourcePath": "docs/project/ROADMAP.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "nodeId": "document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "type": "document",
+      "name": "Release Notes V0.8.0",
+      "sourcePath": "docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "nodeId": "document:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "type": "document",
+      "name": "Release Notes V0.9.0",
+      "sourcePath": "docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "entity:document:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "nodeId": "document:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "type": "document",
+      "name": "Release Notes V1.0.0",
+      "sourcePath": "docs/releases/RELEASE_NOTES_v1.0.0.md",
       "metadata": {
         "extension": ".md"
       }
@@ -10713,7 +10762,6 @@
     ],
     "actions": [
       "doc:.kiro/steering/technology.md",
-      "doc:README.md",
       "doc:knowledge/workflows/bug-fix.json",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/feature-development.json",
@@ -10760,7 +10808,7 @@
     ],
     "add": [
       "doc:.agent/skills/communication-skill/SKILL.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:prompts/debug.prompt.md",
       "doc:references/workflow-examples.md",
@@ -10768,7 +10816,7 @@
     ],
     "added": [
       "doc:CHANGELOG.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:templates/project-memory/CHANGELOG.md",
       "doc:templates/project-starters/automation/CHANGELOG.md",
       "doc:templates/project-starters/documentation/CHANGELOG.md",
@@ -10784,7 +10832,7 @@
       "doc:knowledge/architecture/phase-4-semantic-discovery.md"
     ],
     "additional": [
-      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json"
@@ -10815,11 +10863,11 @@
       "doc:templates/project-starters/web-app/decisions.md"
     ],
     "advanced": [
-      "doc:ROADMAP.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:knowledge/professional-context/expertise.md"
     ],
     "after": [
-      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:templates/memory/session-memory.md"
     ],
@@ -10879,14 +10927,14 @@
       "doc:.github/copilot-instructions.md",
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
-      "doc:ARCHITECTURE.md",
       "doc:CONTRIBUTING.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
       "doc:agents/README.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:references/copilot.md",
       "doc:templates/project-memory/AGENTS.md",
@@ -10972,6 +11020,7 @@
       "doc:.github/copilot-instructions.md",
       "doc:.github/instructions/README.md",
       "doc:AGENTS.md",
+      "doc:README.md",
       "doc:agents.json",
       "doc:agents/README.md",
       "doc:agents/architect.md",
@@ -11031,17 +11080,17 @@
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/product.md",
       "doc:AGENTS.md",
-      "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/multi-device-setup.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-final-acceptance.md",
@@ -11209,18 +11258,11 @@
       "doc:.kiro/steering/technology.md",
       "doc:.kiro/steering/workflow.md",
       "doc:AGENTS.md",
-      "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
       "doc:CLAUDE.md",
       "doc:CONTRIBUTING.md",
-      "doc:GOVERNANCE.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
-      "doc:ROADMAP.md",
       "doc:SECURITY.md",
-      "doc:WORKFLOW.md",
       "doc:agents/README.md",
       "doc:agents/architect.md",
       "doc:agents/builder.md",
@@ -11230,11 +11272,18 @@
       "doc:agents/researcher.md",
       "doc:agents/security-reviewer.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/feedback-and-audit.md",
+      "doc:docs/governance/GOVERNANCE.md",
       "doc:docs/knowledge-health.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-technical-debt.md",
@@ -11455,7 +11504,7 @@
     "approval": [
       "doc:.github/instructions/specifications.instructions.md",
       "doc:.kiro/steering/workflow.md",
-      "doc:GOVERNANCE.md",
+      "doc:docs/governance/GOVERNANCE.md",
       "doc:docs/memory-approval.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
@@ -11548,12 +11597,11 @@
       "entity:document:agents/architect.md"
     ],
     "architectural": [
-      "doc:ARCHITECTURE.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "architecture": [
-      "doc:ARCHITECTURE.md",
-      "doc:README.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -11587,7 +11635,7 @@
       "doc:templates/project-starters/web-app/ARCHITECTURE.md",
       "doc:templates/project-starters/web-app/CLAUDE.md",
       "doc:templates/specifications/design.md",
-      "entity:document:ARCHITECTURE.md",
+      "entity:document:docs/architecture/ARCHITECTURE.md",
       "entity:document:knowledge/architecture/README.md",
       "entity:document:knowledge/architecture/phase-3-knowledge-graph.md",
       "entity:document:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -11683,7 +11731,7 @@
       "doc:.agent/skills/personal/writing/SKILL.md"
     ],
     "assisted": [
-      "doc:ARCHITECTURE.md"
+      "doc:docs/architecture/ARCHITECTURE.md"
     ],
     "assumed": [
       "doc:references/README.md"
@@ -11820,10 +11868,10 @@
       "doc:templates/project-starters/web-app/AGENTS.md"
     ],
     "automation": [
-      "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:templates/project-starters/automation/AGENTS.md",
       "doc:templates/project-starters/automation/ARCHITECTURE.md",
@@ -11887,9 +11935,6 @@
     ],
     "bad": [
       "doc:.agent/skills/communication-skill/examples.md"
-    ],
-    "badge": [
-      "doc:README.md"
     ],
     "base": [
       "doc:templates/project-memory/RETROSPECTIVE.md",
@@ -12119,8 +12164,8 @@
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
     "by": [
-      "doc:RELEASE_NOTES_v0.8.0.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/professional-context/expertise.md",
       "doc:knowledge/workflows/README.md",
       "doc:references/README.md",
@@ -12148,7 +12193,6 @@
       "entity:document:references/canva.md"
     ],
     "capabilities": [
-      "doc:README.md",
       "doc:references/README.md"
     ],
     "capability": [
@@ -12235,7 +12279,7 @@
     ],
     "changed": [
       "doc:CHANGELOG.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:templates/project-memory/CHANGELOG.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/automation/CHANGELOG.md",
@@ -12279,7 +12323,7 @@
       "entity:document:templates/project-starters/web-app/CHANGELOG.md"
     ],
     "changes": [
-      "doc:GOVERNANCE.md",
+      "doc:docs/governance/GOVERNANCE.md",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:prompts/review.prompt.md",
       "doc:templates/project-memory/RELEASE_NOTES.md",
@@ -12338,8 +12382,7 @@
     ],
     "ci": [
       "doc:.github/workflows/README.md",
-      "doc:README.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-technical-debt.md"
     ],
@@ -12400,7 +12443,7 @@
       "entity:platform:claude"
     ],
     "cleanup": [
-      "doc:RELEASE_NOTES_v1.0.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md"
     ],
     "clear": [
       "doc:.agent/skills/communication-skill/SKILL.md",
@@ -12434,8 +12477,8 @@
       "doc:.agent/skills/communication-skill/README.md"
     ],
     "clone": [
-      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:docs/multi-device-setup.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-final-acceptance.md"
     ],
@@ -12481,8 +12524,7 @@
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "com": [
-      "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md"
     ],
     "combine": [
       "doc:.agent/skills/system/superpower/SKILL.md"
@@ -12514,7 +12556,7 @@
     ],
     "commit": [
       "doc:.kiro/steering/workflow.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:prompts/create-skill.prompt.md",
       "doc:references/workflow-examples.md",
       "doc:standards/git.md",
@@ -12634,6 +12676,9 @@
     "concept": [
       "entity:concept:validation",
       "entity:concept:workflow"
+    ],
+    "concepts": [
+      "doc:README.md"
     ],
     "concise": [
       "doc:.agent/skills/personal/clear-concise-writing/README.md",
@@ -12767,20 +12812,23 @@
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.github/instructions/markdown.instructions.md",
       "doc:CONTRIBUTING.md",
-      "doc:specs/phase-9-professional-context/tasks.md"
+      "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "doc:docs/REPOSITORY_STRUCTURE.md",
+      "doc:specs/phase-9-professional-context/tasks.md",
+      "entity:document:docs/CONTENT_PLACEMENT_RULES.md"
     ],
     "context": [
       "doc:.kiro/README.md",
       "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/README.md",
-      "doc:ARCHITECTURE.md",
       "doc:CLAUDE.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:ROADMAP.md",
       "doc:SECURITY.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
@@ -12837,13 +12885,13 @@
       "entity:document:specs/phase-9-professional-context/tasks.md"
     ],
     "continuous": [
-      "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:ROADMAP.md",
       "doc:SECURITY.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/continuous-learning.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "entity:document:docs/continuous-learning.md"
     ],
@@ -12855,9 +12903,12 @@
       "doc:README.md",
       "entity:document:CONTRIBUTING.md"
     ],
+    "contribution": [
+      "doc:docs/REPOSITORY_STRUCTURE.md"
+    ],
     "contributors": [
-      "doc:GOVERNANCE.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/governance/GOVERNANCE.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:specs/README.md"
     ],
     "control": [
@@ -12922,9 +12973,8 @@
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.kiro/steering/structure.md",
       "doc:.kiro/steering/technology.md",
-      "doc:README.md",
-      "doc:ROADMAP.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
@@ -13059,11 +13109,11 @@
       "doc:specs/phase-9-professional-context/design.md"
     ],
     "dashboard": [
-      "doc:ARCHITECTURE.md",
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -13073,9 +13123,9 @@
     ],
     "data": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
-      "doc:ARCHITECTURE.md",
       "doc:SECURITY.md",
       "doc:agents/security-reviewer.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
@@ -13142,7 +13192,7 @@
     ],
     "debt": [
       "doc:CHANGELOG.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-technical-debt.md",
       "entity:document:docs/v1.0-technical-debt.md"
@@ -13170,10 +13220,9 @@
       "entity:memory:decision-memory-index-source-truth-001"
     ],
     "decisions": [
-      "doc:.github/copilot-instructions.md",
       "doc:.kiro/steering/product.md",
-      "doc:GOVERNANCE.md",
       "doc:agents/project-manager.md",
+      "doc:docs/governance/GOVERNANCE.md",
       "doc:memory/decisions/README.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
@@ -13231,7 +13280,7 @@
       "doc:knowledge/workflows/bug-fix.json"
     ],
     "deferred": [
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
@@ -13314,9 +13363,9 @@
     ],
     "deployment": [
       "doc:.agent/skills/build/vercel-agent/SKILL.md",
-      "doc:WORKFLOW.md",
       "doc:agents/deployment-manager.md",
       "doc:agents/security-reviewer.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:prompts/design.prompt.md",
       "doc:references/vercel.md",
       "doc:references/workflow-examples.md",
@@ -13379,8 +13428,8 @@
       "doc:.github/instructions/specifications.instructions.md",
       "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/workflow.md",
-      "doc:WORKFLOW.md",
       "doc:agents/architect.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:knowledge/workflows/feature-development.json",
       "doc:prompts/design.prompt.md",
       "doc:prompts/execute.prompt.md",
@@ -13467,6 +13516,7 @@
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
     "details": [
+      "doc:README.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:templates/memory/permanent-memory.md",
@@ -13495,8 +13545,8 @@
       "doc:.kiro/steering/product.md"
     ],
     "development": [
-      "doc:ARCHITECTURE.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/professional-context/project-experience.md",
       "doc:knowledge/workflows/feature-development.json",
@@ -13535,8 +13585,8 @@
     ],
     "diff": [
       "doc:.kiro/steering/workflow.md",
-      "doc:WORKFLOW.md",
       "doc:agents/reviewer.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:prompts/execute.prompt.md",
       "doc:prompts/review.prompt.md"
     ],
@@ -13550,16 +13600,16 @@
       "doc:knowledge/professional-context/responsibilities.md"
     ],
     "directory": [
-      "doc:ARCHITECTURE.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/multi-device-setup.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "discovery": [
-      "doc:ARCHITECTURE.md",
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
@@ -13605,13 +13655,23 @@
       "doc:templates/project-starters/web-app/HANDOFF.md"
     ],
     "docs": [
+      "doc:.github/copilot-instructions.md",
+      "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "doc:docs/REPOSITORY_STRUCTURE.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/feedback-and-audit.md",
+      "doc:docs/governance/GOVERNANCE.md",
       "doc:docs/knowledge-health.md",
       "doc:docs/memory-approval.md",
       "doc:docs/multi-device-setup.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/repository-migration.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
@@ -13619,13 +13679,22 @@
       "doc:docs/v1.0-technical-debt.md",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
       "doc:prompts/create-skill.prompt.md",
+      "entity:document:docs/CONTENT_PLACEMENT_RULES.md",
+      "entity:document:docs/REPOSITORY_STRUCTURE.md",
       "entity:document:docs/agent-orchestration.md",
+      "entity:document:docs/architecture/ARCHITECTURE.md",
       "entity:document:docs/cli-reference.md",
       "entity:document:docs/continuous-learning.md",
       "entity:document:docs/feedback-and-audit.md",
+      "entity:document:docs/governance/GOVERNANCE.md",
       "entity:document:docs/knowledge-health.md",
       "entity:document:docs/memory-approval.md",
       "entity:document:docs/multi-device-setup.md",
+      "entity:document:docs/process/WORKFLOW.md",
+      "entity:document:docs/project/ROADMAP.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "entity:document:docs/repository-migration.md",
       "entity:document:docs/v1.0-acceptance-criteria.md",
       "entity:document:docs/v1.0-baseline-audit.md",
@@ -13692,18 +13761,11 @@
       "entity:document:.kiro/steering/technology.md",
       "entity:document:.kiro/steering/workflow.md",
       "entity:document:AGENTS.md",
-      "entity:document:ARCHITECTURE.md",
       "entity:document:CHANGELOG.md",
       "entity:document:CLAUDE.md",
       "entity:document:CONTRIBUTING.md",
-      "entity:document:GOVERNANCE.md",
       "entity:document:README.md",
-      "entity:document:RELEASE_NOTES_v0.8.0.md",
-      "entity:document:RELEASE_NOTES_v0.9.0.md",
-      "entity:document:RELEASE_NOTES_v1.0.0.md",
-      "entity:document:ROADMAP.md",
       "entity:document:SECURITY.md",
-      "entity:document:WORKFLOW.md",
       "entity:document:agents.json",
       "entity:document:agents/README.md",
       "entity:document:agents/architect.md",
@@ -13717,13 +13779,22 @@
       "entity:document:agents/reviewer.md",
       "entity:document:agents/security-reviewer.md",
       "entity:document:config/ai-os.example.json",
+      "entity:document:docs/CONTENT_PLACEMENT_RULES.md",
+      "entity:document:docs/REPOSITORY_STRUCTURE.md",
       "entity:document:docs/agent-orchestration.md",
+      "entity:document:docs/architecture/ARCHITECTURE.md",
       "entity:document:docs/cli-reference.md",
       "entity:document:docs/continuous-learning.md",
       "entity:document:docs/feedback-and-audit.md",
+      "entity:document:docs/governance/GOVERNANCE.md",
       "entity:document:docs/knowledge-health.md",
       "entity:document:docs/memory-approval.md",
       "entity:document:docs/multi-device-setup.md",
+      "entity:document:docs/process/WORKFLOW.md",
+      "entity:document:docs/project/ROADMAP.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "entity:document:docs/repository-migration.md",
       "entity:document:docs/v1.0-acceptance-criteria.md",
       "entity:document:docs/v1.0-baseline-audit.md",
@@ -13998,8 +14069,9 @@
     "documentation": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:CLAUDE.md",
-      "doc:ROADMAP.md",
+      "doc:README.md",
       "doc:agents/documentation-writer.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:knowledge/documentation/README.md",
@@ -14173,11 +14245,11 @@
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
     "engine": [
-      "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:ROADMAP.md",
       "doc:SECURITY.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:memory/README.md",
@@ -14344,7 +14416,7 @@
       "doc:prompts/document.prompt.md"
     ],
     "executor": [
-      "doc:WORKFLOW.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:prompts/plan.prompt.md",
       "doc:templates/project-memory/HANDOFF.md",
       "doc:templates/project-starters/automation/HANDOFF.md",
@@ -14361,7 +14433,7 @@
     ],
     "existing": [
       "doc:CONTRIBUTING.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/procedure-creation.json"
@@ -14383,7 +14455,7 @@
       "doc:examples/mcp/README.md"
     ],
     "experience": [
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/professional-context/project-experience.md",
       "entity:document:knowledge/professional-context/project-experience.md"
     ],
@@ -14453,7 +14525,7 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "extension": [
-      "doc:ARCHITECTURE.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:references/README.md"
@@ -14496,7 +14568,7 @@
       "doc:templates/project-starters/web-app/TESTING.md"
     ],
     "feat": [
-      "doc:RELEASE_NOTES_v0.8.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md"
     ],
     "feature": [
       "doc:.kiro/specs/README.md",
@@ -14519,7 +14591,6 @@
       "entity:profile:felipe-rojas"
     ],
     "felipedr15": [
-      "doc:README.md",
       "doc:docs/multi-device-setup.md"
     ],
     "fields": [
@@ -14578,8 +14649,8 @@
     "final": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
-      "doc:GOVERNANCE.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/governance/GOVERNANCE.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-final-acceptance.md",
       "doc:specs/phase-9-professional-context/tasks.md",
@@ -14602,8 +14673,9 @@
       "doc:.agent/skills/personal/clear-concise-writing/SKILL.md",
       "doc:.kiro/steering/workflow.md",
       "doc:AGENTS.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/REPOSITORY_STRUCTURE.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/lessons/lesson-powerapps-refresh-001.md",
       "doc:specs/phase-9-professional-context/requirements.md",
@@ -14631,8 +14703,8 @@
       "doc:templates/project-starters/web-app/CHANGELOG.md"
     ],
     "fixes": [
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:RELEASE_NOTES_v1.0.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md"
     ],
     "flagged": [
       "doc:knowledge/professional-context/project-experience.md"
@@ -14644,7 +14716,7 @@
       "doc:knowledge/professional-context/project-experience.md"
     ],
     "flow": [
-      "doc:ARCHITECTURE.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:memory/sessions/session-memory-engine-example-001.md",
       "doc:prompts/design.prompt.md",
@@ -14681,12 +14753,12 @@
       "doc:templates/project-starters/web-app/SESSION.md"
     ],
     "focused": [
-      "doc:GOVERNANCE.md",
       "doc:agents/documentation-writer.md",
+      "doc:docs/governance/GOVERNANCE.md",
       "doc:standards/git.md"
     ],
     "focuses": [
-      "doc:RELEASE_NOTES_v1.0.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md"
     ],
     "folder": [
       "doc:.agent/skills/build/creator/README.md",
@@ -14766,8 +14838,9 @@
       "doc:.agent/skills/thinking/SKILL.md",
       "doc:.github/instructions/README.md",
       "doc:.kiro/specs/README.md",
-      "doc:ARCHITECTURE.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:README.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
@@ -14820,7 +14893,7 @@
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "foundation": [
-      "doc:ROADMAP.md"
+      "doc:docs/project/ROADMAP.md"
     ],
     "foundational": [
       "doc:knowledge/professional-context/expertise.md"
@@ -14830,10 +14903,10 @@
     ],
     "framework": [
       "doc:.agent/skills/communication-skill/SKILL.md",
-      "doc:ARCHITECTURE.md"
+      "doc:docs/architecture/ARCHITECTURE.md"
     ],
     "fresh": [
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-final-acceptance.md"
     ],
@@ -14842,7 +14915,7 @@
       "doc:knowledge/architecture/phase-8-learning-orchestration.md"
     ],
     "frojas15": [
-      "doc:RELEASE_NOTES_v0.8.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md"
     ],
     "from": [
       "doc:.github/instructions/specifications.instructions.md",
@@ -14922,8 +14995,8 @@
       "doc:specs/phase-9-professional-context/requirements.md"
     ],
     "gates": [
-      "doc:WORKFLOW.md",
       "doc:agents/project-manager.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:docs/v1.0-acceptance-criteria.md"
     ],
     "gather": [
@@ -15031,8 +15104,7 @@
       "doc:.github/instructions/templates.instructions.md",
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/technology.md",
-      "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/github/README.md",
       "doc:references/copilot.md",
       "entity:document:.github/README.md",
@@ -15059,7 +15131,7 @@
       "doc:templates/memory/session-memory.md"
     ],
     "goals": [
-      "doc:ARCHITECTURE.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/project-memory/REQUIREMENTS.md",
@@ -15077,9 +15149,9 @@
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
     "governance": [
-      "doc:GOVERNANCE.md",
+      "doc:docs/governance/GOVERNANCE.md",
       "doc:memory/decisions/decision-memory-index-source-truth-001.md",
-      "entity:document:GOVERNANCE.md"
+      "entity:document:docs/governance/GOVERNANCE.md"
     ],
     "government": [
       "doc:SECURITY.md"
@@ -15089,12 +15161,12 @@
       "doc:specs/README.md"
     ],
     "graph": [
-      "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:ROADMAP.md",
       "doc:SECURITY.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
@@ -15148,8 +15220,8 @@
       "doc:.kiro/README.md",
       "doc:.kiro/steering/README.md",
       "doc:CLAUDE.md",
-      "doc:GOVERNANCE.md",
       "doc:agents/deployment-manager.md",
+      "doc:docs/governance/GOVERNANCE.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/best-practices/README.md",
@@ -15219,7 +15291,6 @@
     "handoff": [
       "doc:.github/copilot-instructions.md",
       "doc:.kiro/steering/workflow.md",
-      "doc:WORKFLOW.md",
       "doc:agents/architect.md",
       "doc:agents/builder.md",
       "doc:agents/deployment-manager.md",
@@ -15230,6 +15301,7 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:prompts/execute.prompt.md",
       "doc:prompts/review.prompt.md",
       "doc:references/workflow-examples.md",
@@ -15276,9 +15348,9 @@
       "doc:agents/README.md"
     ],
     "hardening": [
-      "doc:RELEASE_NOTES_v1.0.0.md",
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md"
@@ -15303,6 +15375,8 @@
     "here": [
       "doc:.kiro/README.md",
       "doc:.kiro/specs/README.md",
+      "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "doc:docs/REPOSITORY_STRUCTURE.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/best-practices/README.md",
@@ -15325,7 +15399,7 @@
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "highlights": [
-      "doc:RELEASE_NOTES_v0.9.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md"
     ],
     "historical": [
       "doc:docs/repository-migration.md"
@@ -15346,8 +15420,7 @@
       "doc:docs/continuous-learning.md"
     ],
     "https": [
-      "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md"
     ],
     "hub": [
       "doc:.github/README.md",
@@ -15362,10 +15435,10 @@
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:.kiro/steering/workflow.md",
-      "doc:WORKFLOW.md",
       "doc:agents/project-manager.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:knowledge/workflows/release-preparation.json",
       "doc:prompts/deploy.prompt.md",
       "doc:references/workflow-examples.md",
@@ -15374,7 +15447,7 @@
       "doc:standards/security.md"
     ],
     "humans": [
-      "doc:GOVERNANCE.md"
+      "doc:docs/governance/GOVERNANCE.md"
     ],
     "hygiene": [
       "doc:specs/phase-9-professional-context/tasks.md"
@@ -15442,15 +15515,15 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "implementation": [
-      "doc:WORKFLOW.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:knowledge/professional-context/project-experience.md",
       "doc:references/kiro.md",
       "doc:specs/README.md",
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "implemented": [
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md"
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md"
     ],
     "implementing": [
       "doc:prompts/plan.prompt.md"
@@ -15462,8 +15535,8 @@
       "doc:knowledge/professional-context/project-experience.md"
     ],
     "improvements": [
-      "doc:RELEASE_NOTES_v1.0.0.md",
-      "doc:ROADMAP.md"
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md"
     ],
     "improving": [
       "doc:.agent/skills/build/README.md"
@@ -15472,9 +15545,10 @@
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.github/copilot-instructions.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:README.md",
       "doc:docs/cli-reference.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -15496,7 +15570,7 @@
       "entity:document:knowledge/workflows/incident-response.json"
     ],
     "included": [
-      "doc:RELEASE_NOTES_v0.8.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md"
     ],
     "includes": [
       "doc:.agent/skills/build/README.md",
@@ -15592,8 +15666,8 @@
       "doc:.kiro/steering/product.md",
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
-      "doc:ROADMAP.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:templates/project-memory/AGENTS.md",
       "doc:templates/project-starters/automation/AGENTS.md",
       "doc:templates/project-starters/documentation/AGENTS.md",
@@ -15612,9 +15686,9 @@
       "entity:document:.github/instructions/templates.instructions.md"
     ],
     "integration": [
-      "doc:ARCHITECTURE.md",
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
@@ -15628,10 +15702,10 @@
       "doc:references/mcp.md"
     ],
     "intelligence": [
-      "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:ROADMAP.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:specs/phase-9-professional-context/requirements.md",
@@ -15654,8 +15728,8 @@
       "doc:standards/accessibility.md"
     ],
     "interactive": [
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "entity:document:knowledge/architecture/phase-5-interactive-dashboard.md"
     ],
@@ -15741,8 +15815,9 @@
     "is": [
       "doc:.kiro/specs/README.md",
       "doc:.kiro/specs/phase-9-professional-context/README.md",
-      "doc:ARCHITECTURE.md",
+      "doc:README.md",
       "doc:agents/README.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/knowledge-health.md",
       "doc:docs/multi-device-setup.md",
@@ -15855,7 +15930,7 @@
       "entity:project:internal-it"
     ],
     "its": [
-      "doc:RELEASE_NOTES_v1.0.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md"
     ],
     "itself": [
       "doc:knowledge/workflows/release-preparation.json"
@@ -15928,6 +16003,7 @@
     ],
     "key": [
       "doc:.agent/skills/research/SKILL.md",
+      "doc:README.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
@@ -15964,13 +16040,13 @@
       "entity:document:references/kiro.md"
     ],
     "knowledge": [
-      "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:ROADMAP.md",
       "doc:SECURITY.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
       "doc:docs/knowledge-health.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-final-acceptance.md",
@@ -16071,9 +16147,9 @@
       "entity:document:scripts/knowledge_graph/README.md"
     ],
     "known": [
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:docs/knowledge-health.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:templates/project-memory/KNOWN_ISSUES.md",
       "doc:templates/project-memory/RELEASE_NOTES.md",
@@ -16111,7 +16187,7 @@
       "doc:standards/documentation.md"
     ],
     "layer": [
-      "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
@@ -16120,7 +16196,7 @@
     ],
     "layers": [
       "doc:.kiro/steering/structure.md",
-      "doc:ARCHITECTURE.md"
+      "doc:docs/architecture/ARCHITECTURE.md"
     ],
     "layout": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
@@ -16146,13 +16222,13 @@
       "entity:document:knowledge/lessons-learned/README.md"
     ],
     "learning": [
-      "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:ROADMAP.md",
       "doc:SECURITY.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/continuous-learning.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "entity:document:docs/continuous-learning.md",
       "entity:document:knowledge/architecture/phase-8-learning-orchestration.md"
@@ -16217,17 +16293,17 @@
     ],
     "library": [
       "doc:.kiro/steering/technology.md",
-      "doc:ROADMAP.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:prompts/README.md"
     ],
     "lifecycle": [
-      "doc:WORKFLOW.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/professional-context/project-experience.md"
     ],
     "lifecycles": [
-      "doc:GOVERNANCE.md"
+      "doc:docs/governance/GOVERNANCE.md"
     ],
     "like": [
       "doc:.agent/skills/references/codex-tools.md",
@@ -16239,9 +16315,9 @@
       "doc:prompts/research.prompt.md"
     ],
     "limitations": [
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
-      "doc:agents/researcher.md"
+      "doc:agents/researcher.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md"
     ],
     "line": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
@@ -16273,8 +16349,8 @@
       "doc:memory/permanent/README.md"
     ],
     "local": [
-      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:docs/feedback-and-audit.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -16296,7 +16372,7 @@
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "logical": [
-      "doc:ARCHITECTURE.md"
+      "doc:docs/architecture/ARCHITECTURE.md"
     ],
     "long": [
       "doc:CLAUDE.md",
@@ -16340,16 +16416,19 @@
       "doc:standards/code-review.md",
       "doc:templates/specifications/requirements.md"
     ],
+    "maintainer": [
+      "doc:README.md"
+    ],
     "maintainers": [
       "doc:.kiro/steering/product.md",
-      "doc:GOVERNANCE.md"
+      "doc:docs/governance/GOVERNANCE.md"
     ],
     "maintenance": [
       "doc:knowledge/workflows/knowledge-maintenance.json",
       "entity:document:knowledge/workflows/knowledge-maintenance.json"
     ],
     "major": [
-      "doc:RELEASE_NOTES_v1.0.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md"
     ],
     "make": [
       "doc:prompts/debug.prompt.md"
@@ -16388,7 +16467,7 @@
       "doc:.agent/skills/references/codex-tools.md",
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
-      "doc:ARCHITECTURE.md"
+      "doc:docs/architecture/ARCHITECTURE.md"
     ],
     "mapping": [
       "doc:.agent/skills/references/codex-tools.md",
@@ -16438,11 +16517,11 @@
     ],
     "mcp": [
       "doc:.kiro/settings/mcp.json",
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
       "doc:docs/agent-orchestration.md",
       "doc:docs/multi-device-setup.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-final-acceptance.md",
@@ -16528,18 +16607,11 @@
       "doc:.kiro/steering/technology.md",
       "doc:.kiro/steering/workflow.md",
       "doc:AGENTS.md",
-      "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
       "doc:CLAUDE.md",
       "doc:CONTRIBUTING.md",
-      "doc:GOVERNANCE.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
-      "doc:ROADMAP.md",
       "doc:SECURITY.md",
-      "doc:WORKFLOW.md",
       "doc:agents/README.md",
       "doc:agents/architect.md",
       "doc:agents/builder.md",
@@ -16551,13 +16623,22 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
+      "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "doc:docs/REPOSITORY_STRUCTURE.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/feedback-and-audit.md",
+      "doc:docs/governance/GOVERNANCE.md",
       "doc:docs/knowledge-health.md",
       "doc:docs/memory-approval.md",
       "doc:docs/multi-device-setup.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/repository-migration.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
@@ -16856,18 +16937,11 @@
       "entity:document:.kiro/steering/technology.md",
       "entity:document:.kiro/steering/workflow.md",
       "entity:document:AGENTS.md",
-      "entity:document:ARCHITECTURE.md",
       "entity:document:CHANGELOG.md",
       "entity:document:CLAUDE.md",
       "entity:document:CONTRIBUTING.md",
-      "entity:document:GOVERNANCE.md",
       "entity:document:README.md",
-      "entity:document:RELEASE_NOTES_v0.8.0.md",
-      "entity:document:RELEASE_NOTES_v0.9.0.md",
-      "entity:document:RELEASE_NOTES_v1.0.0.md",
-      "entity:document:ROADMAP.md",
       "entity:document:SECURITY.md",
-      "entity:document:WORKFLOW.md",
       "entity:document:agents/README.md",
       "entity:document:agents/architect.md",
       "entity:document:agents/builder.md",
@@ -16879,13 +16953,22 @@
       "entity:document:agents/researcher.md",
       "entity:document:agents/reviewer.md",
       "entity:document:agents/security-reviewer.md",
+      "entity:document:docs/CONTENT_PLACEMENT_RULES.md",
+      "entity:document:docs/REPOSITORY_STRUCTURE.md",
       "entity:document:docs/agent-orchestration.md",
+      "entity:document:docs/architecture/ARCHITECTURE.md",
       "entity:document:docs/cli-reference.md",
       "entity:document:docs/continuous-learning.md",
       "entity:document:docs/feedback-and-audit.md",
+      "entity:document:docs/governance/GOVERNANCE.md",
       "entity:document:docs/knowledge-health.md",
       "entity:document:docs/memory-approval.md",
       "entity:document:docs/multi-device-setup.md",
+      "entity:document:docs/process/WORKFLOW.md",
+      "entity:document:docs/project/ROADMAP.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "entity:document:docs/repository-migration.md",
       "entity:document:docs/v1.0-acceptance-criteria.md",
       "entity:document:docs/v1.0-baseline-audit.md",
@@ -17176,13 +17259,13 @@
       "doc:.github/instructions/templates.instructions.md",
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
-      "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:ROADMAP.md",
       "doc:SECURITY.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
@@ -17341,7 +17424,7 @@
       "doc:templates/specifications/design.md"
     ],
     "models": [
-      "doc:ARCHITECTURE.md"
+      "doc:docs/architecture/ARCHITECTURE.md"
     ],
     "modern": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
@@ -17467,7 +17550,7 @@
       "doc:standards/git.md"
     ],
     "new": [
-      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/workflows/feature-development.json",
       "doc:knowledge/workflows/procedure-creation.json",
@@ -17506,7 +17589,7 @@
       "doc:docs/v1.0-final-acceptance.md"
     ],
     "non": [
-      "doc:ARCHITECTURE.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:prompts/specify.prompt.md",
       "doc:specs/phase-9-professional-context/requirements.md",
@@ -17598,10 +17681,11 @@
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:CHANGELOG.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:README.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
@@ -17626,9 +17710,9 @@
       "doc:templates/project-starters/python/SESSION.md",
       "doc:templates/project-starters/web-app/RELEASE_NOTES.md",
       "doc:templates/project-starters/web-app/SESSION.md",
-      "entity:document:RELEASE_NOTES_v0.8.0.md",
-      "entity:document:RELEASE_NOTES_v0.9.0.md",
-      "entity:document:RELEASE_NOTES_v1.0.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "entity:document:knowledge/research-notes/README.md",
       "entity:document:templates/project-memory/RELEASE_NOTES.md",
       "entity:document:templates/project-starters/automation/RELEASE_NOTES.md",
@@ -17690,6 +17774,7 @@
       "doc:.kiro/steering/workflow.md"
     ],
     "of": [
+      "doc:README.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/memory-approval.md",
@@ -17722,8 +17807,8 @@
       "doc:.github/workflows/README.md",
       "doc:.kiro/README.md",
       "doc:.kiro/steering/README.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:docs/multi-device-setup.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/professional-context/career-history.md"
     ],
@@ -17779,13 +17864,15 @@
       "doc:standards/accessibility.md"
     ],
     "operating": [
-      "doc:RELEASE_NOTES_v1.0.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md"
     ],
     "operational": [
+      "doc:README.md",
       "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
     "operations": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
+      "doc:README.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:scripts/README.md"
     ],
@@ -17858,14 +17945,14 @@
     "orchestration": [
       "doc:.agent/skills/system/README.md",
       "doc:.agent/skills/system/SKILL.md",
-      "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:ROADMAP.md",
       "doc:SECURITY.md",
-      "doc:WORKFLOW.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
@@ -17890,16 +17977,15 @@
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/product.md",
       "doc:AGENTS.md",
-      "doc:ARCHITECTURE.md",
-      "doc:README.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
       "doc:config/ai-os.example.json",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/multi-device-setup.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-final-acceptance.md",
@@ -17990,7 +18076,7 @@
     ],
     "overview": [
       "doc:README.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/professional-context/overview.md",
       "doc:specs/phase-9-professional-context/design.md",
@@ -18008,11 +18094,11 @@
       "entity:document:knowledge/professional-context/overview.md"
     ],
     "own": [
-      "doc:GOVERNANCE.md"
+      "doc:docs/governance/GOVERNANCE.md"
     ],
     "ownership": [
-      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:agents/project-manager.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
@@ -18024,8 +18110,8 @@
     ],
     "pack": [
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:docs/multi-device-setup.md"
+      "doc:docs/multi-device-setup.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md"
     ],
     "package": [
       "doc:.agent/skills/communication-skill/README.md",
@@ -18144,18 +18230,18 @@
     ],
     "phase": [
       "doc:.kiro/specs/phase-9-professional-context/README.md",
-      "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:ROADMAP.md",
       "doc:SECURITY.md",
-      "doc:WORKFLOW.md",
       "doc:docs/agent-orchestration.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/feedback-and-audit.md",
       "doc:docs/knowledge-health.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -18199,6 +18285,11 @@
       "doc:.github/instructions/templates.instructions.md",
       "doc:templates/project-starters/README.md"
     ],
+    "placement": [
+      "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "doc:docs/REPOSITORY_STRUCTURE.md",
+      "entity:document:docs/CONTENT_PLACEMENT_RULES.md"
+    ],
     "plan": [
       "doc:agents/qa.md",
       "doc:knowledge/workflows/feature-development.json",
@@ -18213,8 +18304,8 @@
     ],
     "planner": [
       "doc:CLAUDE.md",
-      "doc:WORKFLOW.md",
       "doc:agents/planner.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:references/workflow-examples.md",
       "entity:document:agents/planner.md"
     ],
@@ -18263,7 +18354,7 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "points": [
-      "doc:ARCHITECTURE.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:knowledge/architecture/phase-6-mcp-integration.md",
       "doc:prompts/README.md"
@@ -18284,17 +18375,17 @@
       "doc:knowledge/workflows/release-preparation.json"
     ],
     "portability": [
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-final-acceptance.md"
     ],
     "portable": [
       "doc:.kiro/steering/product.md",
-      "doc:ARCHITECTURE.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/v1.0-technical-debt.md"
     ],
     "post": [
-      "doc:RELEASE_NOTES_v1.0.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md"
     ],
     "power": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
@@ -18388,7 +18479,7 @@
       "doc:.kiro/steering/technology.md"
     ],
     "pr": [
-      "doc:RELEASE_NOTES_v0.8.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md"
     ],
     "practical": [
       "doc:docs/cli-reference.md"
@@ -18438,7 +18529,7 @@
       "doc:knowledge/workflows/release-preparation.json"
     ],
     "prepares": [
-      "doc:RELEASE_NOTES_v1.0.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md"
     ],
     "present": [
       "doc:knowledge/professional-context/career-history.md"
@@ -18471,7 +18562,7 @@
       "doc:.agent/skills/communication-skill/SKILL.md"
     ],
     "principles": [
-      "doc:ARCHITECTURE.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:memory/permanent/principles/README.md",
       "entity:document:memory/permanent/principles/README.md"
     ],
@@ -18486,8 +18577,8 @@
       "doc:.agent/skills/system/using-superpowers/SKILL.md"
     ],
     "privacy": [
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:specs/phase-9-professional-context/requirements.md",
       "doc:templates/specifications/requirements.md"
@@ -18522,7 +18613,10 @@
       "entity:document:knowledge/workflows/procedure-creation.json"
     ],
     "process": [
-      "doc:memory/decisions/README.md"
+      "doc:.github/copilot-instructions.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:memory/decisions/README.md",
+      "entity:document:docs/process/WORKFLOW.md"
     ],
     "procurement": [
       "doc:knowledge/professional-context/responsibilities.md"
@@ -18537,7 +18631,7 @@
     ],
     "production": [
       "doc:.agent/skills/build/SKILL.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
       "doc:references/vercel.md"
     ],
@@ -18547,13 +18641,13 @@
     "professional": [
       "doc:.agent/skills/personal/writing/SKILL.md",
       "doc:.kiro/specs/phase-9-professional-context/README.md",
-      "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:ROADMAP.md",
       "doc:SECURITY.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/professional-context/career-history.md",
@@ -18585,8 +18679,8 @@
       "doc:knowledge/professional-context/expertise.md"
     ],
     "profile": [
-      "doc:RELEASE_NOTES_v0.9.0.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/professional-context/overview.md",
       "doc:profile/README.md",
@@ -18615,8 +18709,8 @@
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
       "doc:README.md",
-      "doc:ROADMAP.md",
       "doc:agents/project-manager.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:knowledge/professional-context/project-experience.md",
       "doc:knowledge/professional-context/responsibilities.md",
       "doc:knowledge/workflows/project-onboarding.json",
@@ -18772,6 +18866,7 @@
       "doc:templates/project-starters/web-app/TESTING.md",
       "doc:templates/project-starters/web-app/decisions.md",
       "entity:document:agents/project-manager.md",
+      "entity:document:docs/project/ROADMAP.md",
       "entity:document:knowledge/professional-context/project-experience.md",
       "entity:document:knowledge/workflows/project-onboarding.json",
       "entity:document:schemas/project.schema.json",
@@ -18961,7 +19056,7 @@
       "doc:.agent/skills/communication-skill/README.md",
       "doc:.github/instructions/prompts.instructions.md",
       "doc:CONTRIBUTING.md",
-      "doc:ROADMAP.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:knowledge/prompt-engineering/README.md",
       "doc:prompts/README.md",
       "doc:prompts/create-skill.prompt.md",
@@ -18994,6 +19089,7 @@
       "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
+      "doc:README.md",
       "doc:prompts.json",
       "doc:prompts/README.md",
       "doc:prompts/create-skill.prompt.md",
@@ -19034,10 +19130,10 @@
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "propose": [
-      "doc:GOVERNANCE.md"
+      "doc:docs/governance/GOVERNANCE.md"
     ],
     "proposed": [
-      "doc:ROADMAP.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:specs/phase-9-professional-context/design.md",
       "doc:templates/project-memory/ROADMAP.md",
       "doc:templates/project-starters/automation/ROADMAP.md",
@@ -19073,7 +19169,7 @@
     ],
     "pull": [
       "doc:.github/workflows/README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md"
     ],
     "purpose": [
       "doc:.agent/skills/build/SKILL.md",
@@ -19086,7 +19182,6 @@
       "doc:.agent/skills/thinking/SKILL.md",
       "doc:.github/instructions/prompts.instructions.md",
       "doc:AGENTS.md",
-      "doc:ARCHITECTURE.md",
       "doc:agents/architect.md",
       "doc:agents/builder.md",
       "doc:agents/deployment-manager.md",
@@ -19097,6 +19192,7 @@
       "doc:agents/researcher.md",
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -19222,7 +19318,7 @@
       "entity:document:prompts/qa.prompt.md"
     ],
     "quality": [
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:memory/permanent/preferences/README.md"
     ],
     "query": [
@@ -19321,6 +19417,8 @@
       "doc:.kiro/steering/README.md",
       "doc:README.md",
       "doc:agents/README.md",
+      "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "doc:docs/REPOSITORY_STRUCTURE.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/README.md",
       "doc:knowledge/ai-workflows/README.md",
@@ -19532,7 +19630,6 @@
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
-      "doc:README.md",
       "doc:docs/repository-migration.md",
       "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
@@ -19602,7 +19699,7 @@
       "doc:examples/mcp/README.md"
     ],
     "registries": [
-      "doc:GOVERNANCE.md",
+      "doc:docs/governance/GOVERNANCE.md",
       "doc:prompts/create-skill.prompt.md"
     ],
     "registry": [
@@ -19652,12 +19749,12 @@
     ],
     "release": [
       "doc:CHANGELOG.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:knowledge/workflows/release-preparation.json",
@@ -19671,9 +19768,9 @@
       "doc:templates/project-starters/power-automate/RELEASE_NOTES.md",
       "doc:templates/project-starters/python/RELEASE_NOTES.md",
       "doc:templates/project-starters/web-app/RELEASE_NOTES.md",
-      "entity:document:RELEASE_NOTES_v0.8.0.md",
-      "entity:document:RELEASE_NOTES_v0.9.0.md",
-      "entity:document:RELEASE_NOTES_v1.0.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "entity:document:knowledge/architecture/phase-7-release-hardening.md",
       "entity:document:knowledge/workflows/release-preparation.json",
       "entity:document:standards/release-management.md",
@@ -19687,6 +19784,15 @@
       "entity:document:templates/project-starters/python/RELEASE_NOTES.md",
       "entity:document:templates/project-starters/web-app/RELEASE_NOTES.md"
     ],
+    "releases": [
+      "doc:README.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v1.0.0.md"
+    ],
     "releasing": [
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
@@ -19696,7 +19802,7 @@
       "doc:templates/specifications/requirements.md"
     ],
     "reliable": [
-      "doc:ARCHITECTURE.md"
+      "doc:docs/architecture/ARCHITECTURE.md"
     ],
     "relocations": [
       "doc:knowledge/professional-context/project-experience.md"
@@ -19770,10 +19876,13 @@
     "repository": [
       "doc:.kiro/steering/README.md",
       "doc:AGENTS.md",
-      "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:README.md",
+      "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "doc:docs/REPOSITORY_STRUCTURE.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/repository-migration.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
@@ -19787,6 +19896,7 @@
       "doc:references/codex.md",
       "doc:references/copilot.md",
       "doc:specs/phase-9-professional-context/tasks.md",
+      "entity:document:docs/REPOSITORY_STRUCTURE.md",
       "entity:document:docs/repository-migration.md",
       "entity:document:generated/repository-index.json"
     ],
@@ -19808,7 +19918,7 @@
       "doc:templates/specifications/requirements.md"
     ],
     "request": [
-      "doc:WORKFLOW.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:references/workflow-examples.md"
     ],
     "requested": [
@@ -19896,7 +20006,7 @@
       "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/workflow.md",
       "doc:AGENTS.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:prompts/execute.prompt.md",
       "doc:prompts/review.prompt.md",
       "doc:prompts/specify.prompt.md",
@@ -20059,7 +20169,7 @@
       "doc:profile/README.md"
     ],
     "results": [
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:prompts/qa.prompt.md",
       "doc:standards/testing.md",
@@ -20124,6 +20234,7 @@
       "doc:.kiro/README.md",
       "doc:.kiro/steering/README.md",
       "doc:AGENTS.md",
+      "doc:README.md",
       "doc:knowledge/README.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
@@ -20155,9 +20266,9 @@
     "review": [
       "doc:.agent/skills/build/web-design-guidelines/SKILL.md",
       "doc:.kiro/steering/workflow.md",
-      "doc:GOVERNANCE.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/governance/GOVERNANCE.md",
       "doc:docs/knowledge-health.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:knowledge/workflows/documentation-update.json",
       "doc:knowledge/workflows/release-preparation.json",
@@ -20259,8 +20370,7 @@
       "doc:templates/specifications/requirements.md"
     ],
     "roadmap": [
-      "doc:README.md",
-      "doc:ROADMAP.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:templates/project-memory/ROADMAP.md",
       "doc:templates/project-starters/automation/ROADMAP.md",
       "doc:templates/project-starters/documentation/ROADMAP.md",
@@ -20270,7 +20380,7 @@
       "doc:templates/project-starters/power-automate/ROADMAP.md",
       "doc:templates/project-starters/python/ROADMAP.md",
       "doc:templates/project-starters/web-app/ROADMAP.md",
-      "entity:document:ROADMAP.md",
+      "entity:document:docs/project/ROADMAP.md",
       "entity:document:templates/project-memory/ROADMAP.md",
       "entity:document:templates/project-starters/automation/ROADMAP.md",
       "entity:document:templates/project-starters/documentation/ROADMAP.md",
@@ -20329,8 +20439,8 @@
       "doc:AGENTS.md",
       "doc:CLAUDE.md",
       "doc:README.md",
-      "doc:ROADMAP.md",
       "doc:agents/README.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:references/README.md"
     ],
     "rollback": [
@@ -20387,7 +20497,10 @@
       "doc:.agent/skills/research/SKILL.md",
       "doc:AGENTS.md",
       "doc:SECURITY.md",
-      "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
+      "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "doc:docs/REPOSITORY_STRUCTURE.md",
+      "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
+      "entity:document:docs/CONTENT_PLACEMENT_RULES.md"
     ],
     "run": [
       "doc:docs/multi-device-setup.md",
@@ -20450,6 +20563,7 @@
       "entity:document:schemas/skill.schema.json"
     ],
     "schemas": [
+      "doc:README.md",
       "doc:schemas/memory.schema.json",
       "doc:schemas/project.schema.json",
       "doc:schemas/skill.schema.json",
@@ -20535,15 +20649,15 @@
     ],
     "security": [
       "doc:AGENTS.md",
-      "doc:ARCHITECTURE.md",
       "doc:CHANGELOG.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
-      "doc:ROADMAP.md",
       "doc:SECURITY.md",
       "doc:agents/security-reviewer.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/memory-approval.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
       "doc:knowledge/architecture/phase-5-interactive-dashboard.md",
@@ -20609,17 +20723,17 @@
     "selection": [
       "doc:.agent/skills/system/SKILL.md",
       "doc:AGENTS.md",
-      "doc:WORKFLOW.md"
+      "doc:docs/process/WORKFLOW.md"
     ],
     "self": [
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "semantic": [
-      "doc:ARCHITECTURE.md",
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -20704,6 +20818,7 @@
     "setup": [
       "doc:.agent/skills/communication-skill/README.md",
       "doc:CHANGELOG.md",
+      "doc:README.md",
       "doc:docs/multi-device-setup.md",
       "doc:docs/v1.0-technical-debt.md",
       "entity:document:docs/multi-device-setup.md"
@@ -20716,8 +20831,8 @@
     ],
     "shared": [
       "doc:AGENTS.md",
-      "doc:GOVERNANCE.md",
-      "doc:ROADMAP.md"
+      "doc:docs/governance/GOVERNANCE.md",
+      "doc:docs/project/ROADMAP.md"
     ],
     "sharepoint": [
       "doc:knowledge/sharepoint/README.md",
@@ -20818,7 +20933,7 @@
       "doc:.github/instructions/skills.instructions.md",
       "doc:AGENTS.md",
       "doc:CONTRIBUTING.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:prompts/create-skill.prompt.md",
       "doc:schemas/skill.schema.json",
       "entity:concept:validation",
@@ -20914,8 +21029,6 @@
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:ROADMAP.md",
       "doc:agents/architect.md",
       "doc:agents/builder.md",
       "doc:agents/deployment-manager.md",
@@ -20927,6 +21040,8 @@
       "doc:agents/reviewer.md",
       "doc:agents/security-reviewer.md",
       "doc:docs/multi-device-setup.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:examples/mcp/README.md",
       "doc:prompts/create-skill.prompt.md",
       "doc:prompts/document.prompt.md",
@@ -21045,6 +21160,7 @@
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.agent/skills/research/SKILL.md",
       "doc:.kiro/steering/technology.md",
+      "doc:README.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -21089,7 +21205,7 @@
       "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:AGENTS.md",
       "doc:CONTRIBUTING.md",
-      "doc:ROADMAP.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:references/kiro.md",
       "doc:templates/specifications/README.md"
     ],
@@ -21205,6 +21321,7 @@
     "standards": [
       "doc:.kiro/steering/structure.md",
       "doc:AGENTS.md",
+      "doc:README.md",
       "doc:knowledge/README.md",
       "doc:knowledge/professional-context/responsibilities.md",
       "doc:memory/permanent/README.md",
@@ -21228,7 +21345,9 @@
       "entity:document:standards/testing.md"
     ],
     "start": [
-      "doc:README.md"
+      "doc:README.md",
+      "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "doc:docs/REPOSITORY_STRUCTURE.md"
     ],
     "starter": [
       "doc:.github/instructions/templates.instructions.md",
@@ -21246,7 +21365,7 @@
     ],
     "starters": [
       "doc:.kiro/steering/structure.md",
-      "doc:ROADMAP.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:templates/README.md",
       "doc:templates/project-starters/README.md",
       "doc:templates/project-starters/automation/AGENTS.md",
@@ -21546,8 +21665,8 @@
     ],
     "status": [
       "doc:README.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:agents/project-manager.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-technical-debt.md"
     ],
     "stdio": [
@@ -21591,7 +21710,7 @@
       "doc:templates/specifications/deployment-plan.md"
     ],
     "steward": [
-      "doc:GOVERNANCE.md"
+      "doc:docs/governance/GOVERNANCE.md"
     ],
     "stop": [
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
@@ -21639,12 +21758,15 @@
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
     "structurally": [
-      "doc:RELEASE_NOTES_v0.9.0.md"
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md"
     ],
     "structure": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.agent/skills/references/powerapps-yaml-format.md",
       "doc:.kiro/steering/structure.md",
+      "doc:README.md",
+      "doc:docs/CONTENT_PLACEMENT_RULES.md",
+      "doc:docs/REPOSITORY_STRUCTURE.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:knowledge/workflows/project-onboarding.json",
       "doc:memory/permanent/conventions/convention-documentation-structure-001.md",
@@ -21653,11 +21775,13 @@
       "doc:standards/accessibility.md",
       "doc:standards/documentation.md",
       "entity:document:.kiro/steering/structure.md",
+      "entity:document:docs/REPOSITORY_STRUCTURE.md",
       "entity:memory:convention-documentation-structure-001"
     ],
     "structured": [
-      "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:README.md",
       "doc:docs/feedback-and-audit.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:prompts/specify.prompt.md",
       "doc:references/kiro.md"
     ],
@@ -21770,9 +21894,6 @@
     "survive": [
       "doc:memory/permanent/README.md"
     ],
-    "svg": [
-      "doc:README.md"
-    ],
     "switch": [
       "doc:specs/phase-9-professional-context/tasks.md"
     ],
@@ -21800,8 +21921,8 @@
       "doc:.agent/skills/system/testing/SKILL.md",
       "doc:.agent/skills/system/using-superpowers/README.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
-      "doc:ARCHITECTURE.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "entity:document:.agent/skills/system/README.md",
       "entity:document:.agent/skills/system/superpower/README.md",
       "entity:document:.agent/skills/system/testing/README.md",
@@ -21863,7 +21984,7 @@
       "doc:.github/instructions/specifications.instructions.md",
       "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/workflow.md",
-      "doc:WORKFLOW.md",
+      "doc:docs/process/WORKFLOW.md",
       "doc:prompts/execute.prompt.md",
       "doc:prompts/review.prompt.md",
       "doc:specs/README.md",
@@ -21897,7 +22018,7 @@
     "technical": [
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:CHANGELOG.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/professional-context/career-history.md",
@@ -21916,7 +22037,8 @@
     "templates": [
       "doc:.github/instructions/templates.instructions.md",
       "doc:.kiro/steering/structure.md",
-      "doc:ROADMAP.md",
+      "doc:README.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:templates/README.md",
       "doc:templates/memory/README.md",
       "doc:templates/memory/decision-memory.md",
@@ -22373,13 +22495,13 @@
       "doc:.kiro/specs/phase-9-professional-context/README.md",
       "doc:.kiro/steering/README.md",
       "doc:.kiro/steering/workflow.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
       "doc:agents/README.md",
       "doc:agents/reviewer.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
       "doc:docs/knowledge-health.md",
       "doc:docs/multi-device-setup.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:examples/mcp/README.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
@@ -22462,9 +22584,10 @@
       "doc:.agent/skills/system/testing/README.md",
       "doc:.agent/skills/system/using-superpowers/README.md",
       "doc:.github/README.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:README.md",
       "doc:docs/cli-reference.md",
       "doc:docs/continuous-learning.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/power-apps/powerapps-yaml-code-format.md",
       "doc:memory/README.md",
       "doc:profile/README.md",
@@ -22588,7 +22711,7 @@
       "doc:.agent/skills/references/copilot-tools.md",
       "doc:.agent/skills/references/gemini-tools.md",
       "doc:.agent/skills/system/using-superpowers/SKILL.md",
-      "doc:ARCHITECTURE.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:examples/mcp/README.md",
       "doc:references/README.md",
       "doc:specs/README.md",
@@ -22701,6 +22824,7 @@
       "doc:knowledge/professional-context/responsibilities.md"
     ],
     "truth": [
+      "doc:README.md",
       "doc:docs/memory-approval.md",
       "doc:knowledge/architecture/phase-3-knowledge-graph.md",
       "doc:knowledge/architecture/phase-4-semantic-discovery.md",
@@ -22768,11 +22892,11 @@
       "doc:.kiro/README.md",
       "doc:.kiro/specs/README.md",
       "doc:.kiro/steering/structure.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:templates/memory/README.md"
     ],
     "unified": [
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md"
     ],
     "uniqueness": [
@@ -22852,7 +22976,7 @@
       "doc:templates/specifications/retrospective.md"
     ],
     "upgrade": [
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:knowledge/professional-context/project-experience.md"
     ],
     "upload": [
@@ -22941,23 +23065,23 @@
       "entity:skill:ui-ux-pro-max"
     ],
     "v0": [
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:knowledge/professional-context/project-experience.md",
       "doc:references/v0.md",
       "doc:references/workflow-examples.md",
-      "entity:document:RELEASE_NOTES_v0.8.0.md",
-      "entity:document:RELEASE_NOTES_v0.9.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "entity:document:references/v0.md"
     ],
     "v1": [
       "doc:CHANGELOG.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:docs/v1.0-final-acceptance.md",
       "doc:docs/v1.0-technical-debt.md",
-      "entity:document:RELEASE_NOTES_v1.0.0.md",
+      "entity:document:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "entity:document:docs/v1.0-acceptance-criteria.md",
       "entity:document:docs/v1.0-baseline-audit.md",
       "entity:document:docs/v1.0-final-acceptance.md",
@@ -22969,7 +23093,6 @@
     "validate": [
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/workflow.md",
-      "doc:README.md",
       "doc:knowledge/workflows/feature-development.json",
       "doc:memory/lessons/lesson-validate-generated-files-before-committing-001.md",
       "doc:prompts/create-skill.prompt.md",
@@ -22985,18 +23108,18 @@
       "doc:.agent/skills/communication-skill/SKILL.md",
       "doc:.github/README.md",
       "doc:AGENTS.md",
-      "doc:ARCHITECTURE.md",
       "doc:CLAUDE.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:RELEASE_NOTES_v1.0.0.md",
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
       "doc:agents/qa.md",
       "doc:config/ai-os.example.json",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/cli-reference.md",
       "doc:docs/multi-device-setup.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "doc:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "doc:docs/v1.0-acceptance-criteria.md",
       "doc:docs/v1.0-baseline-audit.md",
       "doc:knowledge/workflows/documentation-update.json",
@@ -23072,9 +23195,9 @@
     ],
     "version": [
       "doc:.kiro/steering/README.md",
-      "doc:ROADMAP.md",
       "doc:agents.json",
       "doc:config/ai-os.example.json",
+      "doc:docs/project/ROADMAP.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-7-release-hardening.md",
       "doc:memory/registry.json",
@@ -23094,6 +23217,7 @@
       "doc:templates/project-starters/web-app/RELEASE_NOTES.md"
     ],
     "versioning": [
+      "doc:README.md",
       "doc:standards/release-management.md"
     ],
     "views": [
@@ -23185,8 +23309,9 @@
     ],
     "what": [
       "doc:.agent/skills/communication-skill/anti-ai-writing.md",
-      "doc:RELEASE_NOTES_v0.8.0.md",
+      "doc:README.md",
       "doc:docs/continuous-learning.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.8.0.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/architecture/README.md",
       "doc:knowledge/best-practices/README.md",
@@ -23245,6 +23370,7 @@
     ],
     "who": [
       "doc:.kiro/steering/product.md",
+      "doc:README.md",
       "doc:knowledge/architecture/phase-9-professional-context.md"
     ],
     "why": [
@@ -23330,12 +23456,12 @@
       "doc:.agent/skills/system/superpower/SKILL.md",
       "doc:.agent/skills/system/testing/SKILL.md",
       "doc:.kiro/steering/workflow.md",
-      "doc:ARCHITECTURE.md",
       "doc:README.md",
-      "doc:RELEASE_NOTES_v0.9.0.md",
-      "doc:ROADMAP.md",
       "doc:agents/README.md",
+      "doc:docs/architecture/ARCHITECTURE.md",
       "doc:docs/continuous-learning.md",
+      "doc:docs/project/ROADMAP.md",
+      "doc:docs/releases/RELEASE_NOTES_v0.9.0.md",
       "doc:docs/v1.0-technical-debt.md",
       "doc:knowledge/architecture/phase-9-professional-context.md",
       "doc:knowledge/professional-context/overview.md",
@@ -23373,10 +23499,10 @@
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/workflow.md",
       "doc:README.md",
-      "doc:ROADMAP.md",
-      "doc:WORKFLOW.md",
       "doc:docs/agent-orchestration.md",
       "doc:docs/cli-reference.md",
+      "doc:docs/process/WORKFLOW.md",
+      "doc:docs/project/ROADMAP.md",
       "doc:knowledge/architecture/phase-8-learning-orchestration.md",
       "doc:knowledge/professional-context/project-experience.md",
       "doc:knowledge/workflows/README.md",
@@ -23386,14 +23512,13 @@
       "doc:references/workflow-examples.md",
       "entity:concept:workflow",
       "entity:document:.kiro/steering/workflow.md",
-      "entity:document:WORKFLOW.md",
+      "entity:document:docs/process/WORKFLOW.md",
       "entity:document:references/workflow-examples.md"
     ],
     "workflows": [
       "doc:.agent/skills/system/SKILL.md",
       "doc:.github/workflows/README.md",
       "doc:.kiro/steering/product.md",
-      "doc:README.md",
       "doc:knowledge/ai-workflows/README.md",
       "doc:knowledge/workflows/README.md",
       "doc:knowledge/workflows/bug-fix.json",
@@ -23469,8 +23594,7 @@
       "entity:document:knowledge/power-apps/powerapps-yaml-code-format.md"
     ],
     "yml": [
-      "doc:.github/workflows/README.md",
-      "doc:README.md"
+      "doc:.github/workflows/README.md"
     ],
     "you": [
       "doc:.agent/skills/build/creator/SKILL.md",

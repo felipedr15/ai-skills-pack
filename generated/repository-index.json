@@ -1503,8 +1503,8 @@
     {
       "path": "scripts/mcp_server/adapter.py",
       "category": "scripts",
-      "size": 12026,
-      "sha256": "f95e3e0d7768589407162a65987325edfebec8e6c49f8ef4b46abb95f7f8f862"
+      "size": 12052,
+      "sha256": "3d7ded59f86bcc6cfc7317df1b54d025ba71e478d2239f98e3aa45fb1c0e033a"
     },
     {
       "path": "scripts/mcp_server/schemas.py",
@@ -1839,8 +1839,8 @@
     {
       "path": "scripts/validate-repo.py",
       "category": "scripts",
-      "size": 18517,
-      "sha256": "064b57d318ac859caf95313513e4ffe0efb0e9866a091f26f5605e4d434e986b"
+      "size": 18577,
+      "sha256": "1bbd989f307a4dc0dbf7183784e647643b9ecc460add98843bd6a23018260ffa"
     },
     {
       "path": ".agent/skills/build/README.md",

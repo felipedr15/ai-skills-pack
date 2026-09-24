@@ -241,7 +241,7 @@ class McpAdapter:
         return json.dumps(self.service.get_repository_status(), indent=2), "application/json"
 
     def _res_architecture(self):
-        path = self.root / "ARCHITECTURE.md"
+        path = self.root / "docs" / "architecture" / "ARCHITECTURE.md"
         if not path.is_file():
             return "# Architecture\n\nNot available.\n", "text/markdown"
         return path.read_text(encoding="utf-8", errors="replace")[:8000], "text/markdown"

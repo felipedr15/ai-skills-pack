@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-02T23:35:58Z",
+  "generatedAt": "2026-09-24T16:56:01Z",
   "generator": "ai-os-knowledge-graph",
   "stats": {
-    "nodes": 393,
-    "edges": 751,
+    "nodes": 395,
+    "edges": 770,
     "nodesByType": {
       "concept": 2,
-      "document": 345,
+      "document": 347,
       "memory": 5,
       "platform": 7,
       "profile": 1,
@@ -19,10 +19,10 @@
       "belongs_to": 2,
       "contains": 129,
       "generated_from": 21,
-      "references": 233,
-      "related_to": 150,
+      "references": 241,
+      "related_to": 154,
       "supports": 6,
-      "uses": 210
+      "uses": 217
     }
   },
   "nodes": [
@@ -459,15 +459,6 @@
       }
     },
     {
-      "id": "document:ARCHITECTURE.md",
-      "type": "document",
-      "name": "Architecture",
-      "sourcePath": "ARCHITECTURE.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
       "id": "document:CHANGELOG.md",
       "type": "document",
       "name": "Changelog",
@@ -495,15 +486,6 @@
       }
     },
     {
-      "id": "document:GOVERNANCE.md",
-      "type": "document",
-      "name": "Governance",
-      "sourcePath": "GOVERNANCE.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
       "id": "document:README.md",
       "type": "document",
       "name": "Readme",
@@ -513,55 +495,10 @@
       }
     },
     {
-      "id": "document:RELEASE_NOTES_v0.8.0.md",
-      "type": "document",
-      "name": "Release Notes V0.8.0",
-      "sourcePath": "RELEASE_NOTES_v0.8.0.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
-      "id": "document:RELEASE_NOTES_v0.9.0.md",
-      "type": "document",
-      "name": "Release Notes V0.9.0",
-      "sourcePath": "RELEASE_NOTES_v0.9.0.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
-      "id": "document:RELEASE_NOTES_v1.0.0.md",
-      "type": "document",
-      "name": "Release Notes V1.0.0",
-      "sourcePath": "RELEASE_NOTES_v1.0.0.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
-      "id": "document:ROADMAP.md",
-      "type": "document",
-      "name": "Roadmap",
-      "sourcePath": "ROADMAP.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
       "id": "document:SECURITY.md",
       "type": "document",
       "name": "Security",
       "sourcePath": "SECURITY.md",
-      "metadata": {
-        "extension": ".md"
-      }
-    },
-    {
-      "id": "document:WORKFLOW.md",
-      "type": "document",
-      "name": "Workflow",
-      "sourcePath": "WORKFLOW.md",
       "metadata": {
         "extension": ".md"
       }
@@ -684,10 +621,37 @@
       }
     },
     {
+      "id": "document:docs/CONTENT_PLACEMENT_RULES.md",
+      "type": "document",
+      "name": "Content Placement Rules",
+      "sourcePath": "docs/CONTENT_PLACEMENT_RULES.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/REPOSITORY_STRUCTURE.md",
+      "type": "document",
+      "name": "Repository Structure",
+      "sourcePath": "docs/REPOSITORY_STRUCTURE.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "document:docs/agent-orchestration.md",
       "type": "document",
       "name": "Agent Orchestration",
       "sourcePath": "docs/agent-orchestration.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/architecture/ARCHITECTURE.md",
+      "type": "document",
+      "name": "Architecture",
+      "sourcePath": "docs/architecture/ARCHITECTURE.md",
       "metadata": {
         "extension": ".md"
       }
@@ -720,6 +684,15 @@
       }
     },
     {
+      "id": "document:docs/governance/GOVERNANCE.md",
+      "type": "document",
+      "name": "Governance",
+      "sourcePath": "docs/governance/GOVERNANCE.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
       "id": "document:docs/knowledge-health.md",
       "type": "document",
       "name": "Knowledge Health",
@@ -742,6 +715,51 @@
       "type": "document",
       "name": "Multi Device Setup",
       "sourcePath": "docs/multi-device-setup.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/process/WORKFLOW.md",
+      "type": "document",
+      "name": "Workflow",
+      "sourcePath": "docs/process/WORKFLOW.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/project/ROADMAP.md",
+      "type": "document",
+      "name": "Roadmap",
+      "sourcePath": "docs/project/ROADMAP.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "type": "document",
+      "name": "Release Notes V0.8.0",
+      "sourcePath": "docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "type": "document",
+      "name": "Release Notes V0.9.0",
+      "sourcePath": "docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "metadata": {
+        "extension": ".md"
+      }
+    },
+    {
+      "id": "document:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "type": "document",
+      "name": "Release Notes V1.0.0",
+      "sourcePath": "docs/releases/RELEASE_NOTES_v1.0.0.md",
       "metadata": {
         "extension": ".md"
       }
@@ -5401,24 +5419,6 @@
       }
     },
     {
-      "id": "edge:01c1416308e28130",
-      "type": "references",
-      "from": "document:ARCHITECTURE.md",
-      "to": "document:knowledge/architecture/phase-8-learning-orchestration.md",
-      "metadata": {
-        "kind": "markdown"
-      }
-    },
-    {
-      "id": "edge:ec376f4fe60813f9",
-      "type": "references",
-      "from": "document:ARCHITECTURE.md",
-      "to": "document:knowledge/architecture/phase-9-professional-context.md",
-      "metadata": {
-        "kind": "markdown"
-      }
-    },
-    {
       "id": "edge:9d78c2b53a90d57a",
       "type": "references",
       "from": "document:CONTRIBUTING.md",
@@ -5428,10 +5428,10 @@
       }
     },
     {
-      "id": "edge:45019d9e85bde6ea",
+      "id": "edge:a7c4139992e68636",
       "type": "references",
       "from": "document:README.md",
-      "to": "document:ARCHITECTURE.md",
+      "to": "document:CHANGELOG.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5446,28 +5446,10 @@
       }
     },
     {
-      "id": "edge:7829b4d41423dacc",
-      "type": "references",
-      "from": "document:README.md",
-      "to": "document:ROADMAP.md",
-      "metadata": {
-        "kind": "markdown"
-      }
-    },
-    {
       "id": "edge:8a5b7541caa65936",
       "type": "references",
       "from": "document:README.md",
       "to": "document:SECURITY.md",
-      "metadata": {
-        "kind": "markdown"
-      }
-    },
-    {
-      "id": "edge:14b6b029ec6a72ca",
-      "type": "references",
-      "from": "document:README.md",
-      "to": "document:WORKFLOW.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5491,10 +5473,37 @@
       }
     },
     {
+      "id": "edge:d475d409599895cc",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/CONTENT_PLACEMENT_RULES.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:e88e443ba33a3e40",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/REPOSITORY_STRUCTURE.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:745c89fcbd62d2eb",
       "type": "references",
       "from": "document:README.md",
       "to": "document:docs/agent-orchestration.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:9c9756532dc4d1f2",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/architecture/ARCHITECTURE.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5527,6 +5536,15 @@
       }
     },
     {
+      "id": "edge:e1396480379cac79",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/governance/GOVERNANCE.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:de0f70b24fd6c71f",
       "type": "references",
       "from": "document:README.md",
@@ -5549,6 +5567,24 @@
       "type": "references",
       "from": "document:README.md",
       "to": "document:docs/multi-device-setup.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:6ad74153d066b3c1",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/process/WORKFLOW.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:cf51c7b9a060da2d",
+      "type": "references",
+      "from": "document:README.md",
+      "to": "document:docs/project/ROADMAP.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5603,15 +5639,6 @@
       "type": "references",
       "from": "document:README.md",
       "to": "document:memory/registry.json",
-      "metadata": {
-        "kind": "markdown"
-      }
-    },
-    {
-      "id": "edge:2f62c24134a924bb",
-      "type": "references",
-      "from": "document:README.md",
-      "to": "document:references/README.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5797,24 +5824,6 @@
       }
     },
     {
-      "id": "edge:1f2bda1671a002fa",
-      "type": "references",
-      "from": "document:RELEASE_NOTES_v1.0.0.md",
-      "to": "document:docs/v1.0-final-acceptance.md",
-      "metadata": {
-        "kind": "markdown"
-      }
-    },
-    {
-      "id": "edge:362071bfe876e5f9",
-      "type": "references",
-      "from": "document:RELEASE_NOTES_v1.0.0.md",
-      "to": "document:docs/v1.0-technical-debt.md",
-      "metadata": {
-        "kind": "markdown"
-      }
-    },
-    {
       "id": "edge:9090b91ca6ea03bc",
       "type": "references",
       "from": "document:agents/README.md",
@@ -5828,6 +5837,51 @@
       "type": "references",
       "from": "document:agents/README.md",
       "to": "document:agents.json",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:9f6a5827b4062df5",
+      "type": "references",
+      "from": "document:docs/CONTENT_PLACEMENT_RULES.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:2dc83d97ecc277c9",
+      "type": "references",
+      "from": "document:docs/CONTENT_PLACEMENT_RULES.md",
+      "to": "document:docs/REPOSITORY_STRUCTURE.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:1758f958f279730a",
+      "type": "references",
+      "from": "document:docs/REPOSITORY_STRUCTURE.md",
+      "to": "document:CONTRIBUTING.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:b49f97d0cc503f8d",
+      "type": "references",
+      "from": "document:docs/REPOSITORY_STRUCTURE.md",
+      "to": "document:README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:60abe7b61464bfe4",
+      "type": "references",
+      "from": "document:docs/REPOSITORY_STRUCTURE.md",
+      "to": "document:docs/CONTENT_PLACEMENT_RULES.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5864,6 +5918,24 @@
       "type": "references",
       "from": "document:docs/agent-orchestration.md",
       "to": "document:knowledge/workflows/README.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:2319c232a78e6368",
+      "type": "references",
+      "from": "document:docs/architecture/ARCHITECTURE.md",
+      "to": "document:knowledge/architecture/phase-8-learning-orchestration.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:b4db7c9db1f5637e",
+      "type": "references",
+      "from": "document:docs/architecture/ARCHITECTURE.md",
+      "to": "document:knowledge/architecture/phase-9-professional-context.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -5968,6 +6040,24 @@
       }
     },
     {
+      "id": "edge:dd0c1c0c2c85a7c7",
+      "type": "references",
+      "from": "document:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "to": "document:docs/v1.0-final-acceptance.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
+      "id": "edge:312ebc64fed43e9a",
+      "type": "references",
+      "from": "document:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "to": "document:docs/v1.0-technical-debt.md",
+      "metadata": {
+        "kind": "markdown"
+      }
+    },
+    {
       "id": "edge:b679edb4ea9b0d42",
       "type": "references",
       "from": "document:docs/v1.0-acceptance-criteria.md",
@@ -5977,10 +6067,10 @@
       }
     },
     {
-      "id": "edge:74abe0cf4e3b7022",
+      "id": "edge:379337b02b152b03",
       "type": "references",
       "from": "document:docs/v1.0-final-acceptance.md",
-      "to": "document:RELEASE_NOTES_v1.0.0.md",
+      "to": "document:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "metadata": {
         "kind": "markdown"
       }
@@ -7210,24 +7300,6 @@
       }
     },
     {
-      "id": "edge:10701425382198a2",
-      "type": "related_to",
-      "from": "document:ARCHITECTURE.md",
-      "to": "concept:validation",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:41473226c6080937",
-      "type": "related_to",
-      "from": "document:ARCHITECTURE.md",
-      "to": "concept:workflow",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
       "id": "edge:33053007513a2cde",
       "type": "related_to",
       "from": "document:CHANGELOG.md",
@@ -7273,15 +7345,6 @@
       }
     },
     {
-      "id": "edge:0254289db6695613",
-      "type": "related_to",
-      "from": "document:GOVERNANCE.md",
-      "to": "concept:validation",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
       "id": "edge:8b0abec1e94fd241",
       "type": "related_to",
       "from": "document:README.md",
@@ -7300,82 +7363,10 @@
       }
     },
     {
-      "id": "edge:a9294d1dfaac69b9",
-      "type": "related_to",
-      "from": "document:RELEASE_NOTES_v0.8.0.md",
-      "to": "concept:validation",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:a3bccc3cc2f315f4",
-      "type": "related_to",
-      "from": "document:RELEASE_NOTES_v0.9.0.md",
-      "to": "concept:validation",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:12f34bf206757a0d",
-      "type": "related_to",
-      "from": "document:RELEASE_NOTES_v1.0.0.md",
-      "to": "concept:validation",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:4d7e729e8302d153",
-      "type": "related_to",
-      "from": "document:RELEASE_NOTES_v1.0.0.md",
-      "to": "concept:workflow",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:683de0d52e3e7a73",
-      "type": "related_to",
-      "from": "document:ROADMAP.md",
-      "to": "concept:validation",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:44c4703939ce445b",
-      "type": "related_to",
-      "from": "document:ROADMAP.md",
-      "to": "concept:workflow",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
       "id": "edge:eeb42838dfe026cd",
       "type": "related_to",
       "from": "document:SECURITY.md",
       "to": "concept:validation",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:15bfb0541e8f552b",
-      "type": "related_to",
-      "from": "document:WORKFLOW.md",
-      "to": "concept:validation",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:396b18c057e72560",
-      "type": "related_to",
-      "from": "document:WORKFLOW.md",
-      "to": "concept:workflow",
       "metadata": {
         "source": "document_text"
       }
@@ -7471,6 +7462,42 @@
       }
     },
     {
+      "id": "edge:990bcb00c45e26c3",
+      "type": "related_to",
+      "from": "document:docs/CONTENT_PLACEMENT_RULES.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:b0debcb384737be5",
+      "type": "related_to",
+      "from": "document:docs/CONTENT_PLACEMENT_RULES.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:f5683960d793d58e",
+      "type": "related_to",
+      "from": "document:docs/REPOSITORY_STRUCTURE.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:394c9f2190c886b8",
+      "type": "related_to",
+      "from": "document:docs/REPOSITORY_STRUCTURE.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:39fb84485fcc63ef",
       "type": "related_to",
       "from": "document:docs/agent-orchestration.md",
@@ -7483,6 +7510,24 @@
       "id": "edge:48ee41bb8e71ed22",
       "type": "related_to",
       "from": "document:docs/agent-orchestration.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:74aa814af181a64b",
+      "type": "related_to",
+      "from": "document:docs/architecture/ARCHITECTURE.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:c4f13396ec01a5e7",
+      "type": "related_to",
+      "from": "document:docs/architecture/ARCHITECTURE.md",
       "to": "concept:workflow",
       "metadata": {
         "source": "document_text"
@@ -7543,6 +7588,15 @@
       }
     },
     {
+      "id": "edge:560c6350a702ec6e",
+      "type": "related_to",
+      "from": "document:docs/governance/GOVERNANCE.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:9d48a5d52390ab24",
       "type": "related_to",
       "from": "document:docs/knowledge-health.md",
@@ -7591,6 +7645,78 @@
       "id": "edge:35518e38cc386969",
       "type": "related_to",
       "from": "document:docs/multi-device-setup.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:c0487ab0d33bb8b4",
+      "type": "related_to",
+      "from": "document:docs/process/WORKFLOW.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:ac83b47a49fab761",
+      "type": "related_to",
+      "from": "document:docs/process/WORKFLOW.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:7df3acb4b2123c34",
+      "type": "related_to",
+      "from": "document:docs/project/ROADMAP.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:8b6716a06b282730",
+      "type": "related_to",
+      "from": "document:docs/project/ROADMAP.md",
+      "to": "concept:workflow",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:42373891d27a60aa",
+      "type": "related_to",
+      "from": "document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:81342d0ff1099168",
+      "type": "related_to",
+      "from": "document:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:cc1ac5aadeeac24c",
+      "type": "related_to",
+      "from": "document:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "to": "concept:validation",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:3496b6845b412d2b",
+      "type": "related_to",
+      "from": "document:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "to": "concept:workflow",
       "metadata": {
         "source": "document_text"
@@ -8785,24 +8911,6 @@
       }
     },
     {
-      "id": "edge:d8b81ba595a520b6",
-      "type": "uses",
-      "from": "document:ARCHITECTURE.md",
-      "to": "tool:git",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:19caeefb6f6da38b",
-      "type": "uses",
-      "from": "document:ARCHITECTURE.md",
-      "to": "tool:mcp",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
       "id": "edge:8d41e852f721d07b",
       "type": "uses",
       "from": "document:CHANGELOG.md",
@@ -8902,123 +9010,6 @@
       }
     },
     {
-      "id": "edge:6a11ad28f77d8390",
-      "type": "uses",
-      "from": "document:RELEASE_NOTES_v0.8.0.md",
-      "to": "platform:github",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:fb903ca879c63cd1",
-      "type": "uses",
-      "from": "document:RELEASE_NOTES_v0.8.0.md",
-      "to": "tool:git",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:c82ef8cbf1d991c3",
-      "type": "uses",
-      "from": "document:RELEASE_NOTES_v0.8.0.md",
-      "to": "tool:mcp",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:aed0e53213ab30e7",
-      "type": "uses",
-      "from": "document:RELEASE_NOTES_v0.9.0.md",
-      "to": "platform:github",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:99e2c79ab07a45e7",
-      "type": "uses",
-      "from": "document:RELEASE_NOTES_v0.9.0.md",
-      "to": "tool:git",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:90fa948891cec1ed",
-      "type": "uses",
-      "from": "document:RELEASE_NOTES_v0.9.0.md",
-      "to": "tool:mcp",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:c94bc7d69888de6d",
-      "type": "uses",
-      "from": "document:RELEASE_NOTES_v1.0.0.md",
-      "to": "platform:github",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:7e7ce9a1aa6a0187",
-      "type": "uses",
-      "from": "document:RELEASE_NOTES_v1.0.0.md",
-      "to": "platform:vercel",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:0c55fc41bb2ae659",
-      "type": "uses",
-      "from": "document:RELEASE_NOTES_v1.0.0.md",
-      "to": "tool:git",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:7364cfb7f552d706",
-      "type": "uses",
-      "from": "document:RELEASE_NOTES_v1.0.0.md",
-      "to": "tool:mcp",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:5d454adbb2f28c11",
-      "type": "uses",
-      "from": "document:ROADMAP.md",
-      "to": "platform:power-apps",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:3195837500d6a7ad",
-      "type": "uses",
-      "from": "document:ROADMAP.md",
-      "to": "platform:power-automate",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:c9114db901001f50",
-      "type": "uses",
-      "from": "document:ROADMAP.md",
-      "to": "tool:mcp",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
       "id": "edge:5db0b5513643eb82",
       "type": "uses",
       "from": "document:SECURITY.md",
@@ -9031,24 +9022,6 @@
       "id": "edge:f4864a2e7a3d1aee",
       "type": "uses",
       "from": "document:SECURITY.md",
-      "to": "tool:mcp",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:49f45c966db7169b",
-      "type": "uses",
-      "from": "document:WORKFLOW.md",
-      "to": "tool:git",
-      "metadata": {
-        "source": "document_text"
-      }
-    },
-    {
-      "id": "edge:7991e70360394aba",
-      "type": "uses",
-      "from": "document:WORKFLOW.md",
       "to": "tool:mcp",
       "metadata": {
         "source": "document_text"
@@ -9073,6 +9046,69 @@
       }
     },
     {
+      "id": "edge:da1487f884b75219",
+      "type": "uses",
+      "from": "document:docs/CONTENT_PLACEMENT_RULES.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:b70c6d9f4d264863",
+      "type": "uses",
+      "from": "document:docs/CONTENT_PLACEMENT_RULES.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:4050ad2ff81e8f2b",
+      "type": "uses",
+      "from": "document:docs/REPOSITORY_STRUCTURE.md",
+      "to": "platform:claude",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:5501629647feacec",
+      "type": "uses",
+      "from": "document:docs/REPOSITORY_STRUCTURE.md",
+      "to": "platform:copilot",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:b84bdf9622cc9d38",
+      "type": "uses",
+      "from": "document:docs/REPOSITORY_STRUCTURE.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:32c54ac61da62754",
+      "type": "uses",
+      "from": "document:docs/REPOSITORY_STRUCTURE.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:f0e40fdba3e19f10",
+      "type": "uses",
+      "from": "document:docs/REPOSITORY_STRUCTURE.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
       "id": "edge:294ca0e30c7085a3",
       "type": "uses",
       "from": "document:docs/agent-orchestration.md",
@@ -9085,6 +9121,24 @@
       "id": "edge:a67571ed0fbdffb5",
       "type": "uses",
       "from": "document:docs/agent-orchestration.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:12de62e1a1a82506",
+      "type": "uses",
+      "from": "document:docs/architecture/ARCHITECTURE.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:4e18e111f2d04893",
+      "type": "uses",
+      "from": "document:docs/architecture/ARCHITECTURE.md",
       "to": "tool:mcp",
       "metadata": {
         "source": "document_text"
@@ -9175,6 +9229,141 @@
       "id": "edge:0eba5ab5d836d97d",
       "type": "uses",
       "from": "document:docs/multi-device-setup.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:23d19aaa95db3fcd",
+      "type": "uses",
+      "from": "document:docs/process/WORKFLOW.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:65efce3e56588ab9",
+      "type": "uses",
+      "from": "document:docs/process/WORKFLOW.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:e117cadddd05ff22",
+      "type": "uses",
+      "from": "document:docs/project/ROADMAP.md",
+      "to": "platform:power-apps",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:0dcf6e30fe98f0a3",
+      "type": "uses",
+      "from": "document:docs/project/ROADMAP.md",
+      "to": "platform:power-automate",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:dd5851bd5f43fdbd",
+      "type": "uses",
+      "from": "document:docs/project/ROADMAP.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:b0e1988aef3ed4d4",
+      "type": "uses",
+      "from": "document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:b284081636f9f804",
+      "type": "uses",
+      "from": "document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:506f3821fbd637f4",
+      "type": "uses",
+      "from": "document:docs/releases/RELEASE_NOTES_v0.8.0.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:9876533762326cce",
+      "type": "uses",
+      "from": "document:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:162d617bfbd1eca9",
+      "type": "uses",
+      "from": "document:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:781bb4cdd45ae244",
+      "type": "uses",
+      "from": "document:docs/releases/RELEASE_NOTES_v0.9.0.md",
+      "to": "tool:mcp",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:713e679c2d020920",
+      "type": "uses",
+      "from": "document:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "to": "platform:github",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:a97ffb7e293bc7e8",
+      "type": "uses",
+      "from": "document:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "to": "platform:vercel",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:2d947be28f1d3a82",
+      "type": "uses",
+      "from": "document:docs/releases/RELEASE_NOTES_v1.0.0.md",
+      "to": "tool:git",
+      "metadata": {
+        "source": "document_text"
+      }
+    },
+    {
+      "id": "edge:180c7438062e8b4f",
+      "type": "uses",
+      "from": "document:docs/releases/RELEASE_NOTES_v1.0.0.md",
       "to": "tool:mcp",
       "metadata": {
         "source": "document_text"
@@ -10382,6 +10571,36 @@
     {
       "source": ".kiro/specs/phase-9-professional-context/README.md",
       "target": "specs/phase-9-professional-context",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "VERSION",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "bootstrap.ps1",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "bootstrap.sh",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/releases",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "docs/releases",
+      "kind": "markdown"
+    },
+    {
+      "source": "README.md",
+      "target": "generated/README.md",
       "kind": "markdown"
     },
     {

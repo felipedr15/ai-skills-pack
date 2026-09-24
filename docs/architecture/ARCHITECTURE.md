@@ -114,7 +114,7 @@ Storage is split by nature: deterministic registries and the knowledge-health re
 `generated/` (committed, `--check`-able); sessions, approvals, memory suggestions, feedback, and
 the hash-chained audit trail live in `.ai-os/` (local, git-ignored). Promoting a memory suggestion
 into `memory/` is the only write path, and it is blocked until a human explicitly approves it —
-see [Phase 8 Architecture](knowledge/architecture/phase-8-learning-orchestration.md) for the full
+see [Phase 8 Architecture](../../knowledge/architecture/phase-8-learning-orchestration.md) for the full
 design.
 
 ## Professional Context and Work Intelligence Architecture (Phase 9)
@@ -137,7 +137,7 @@ semantic discovery derives profile entities from that same graph rather than re-
 profile records a second time. Three read-only MCP tools (`get_professional_profile`,
 `list_expertise`, `get_work_activity_summary`) and one dashboard page expose summary-only views;
 none of profile authoring, switching, sync-knowledge, or approvals is reachable through MCP or the
-dashboard. See [Phase 9 Architecture](knowledge/architecture/phase-9-professional-context.md) for
+dashboard. See [Phase 9 Architecture](../../knowledge/architecture/phase-9-professional-context.md) for
 the full design.
 
 ## Models
