@@ -66,18 +66,57 @@ Key locations: Agent instructions → `agents/*.md` + `agents.json` | Prompts �
 
 The root [bootstrap.sh](bootstrap.sh) and [bootstrap.ps1](bootstrap.ps1) call the repository's Python setup command. Review the script for your platform before running it. Core commands use Python 3.10 or newer; see [setup guidance](docs/multi-device-setup.md).
 
+## Documentation Map
+
+Start with **[docs/README.md](docs/README.md)** — the docs index and your entry point.
+
+### Core Repository Documentation
+
+- [**CONTRIBUTING.md**](CONTRIBUTING.md) — Contribution guidelines and content placement rules
+- [**SECURITY.md**](SECURITY.md) — Security reporting and handling
+- [**AGENTS.md**](AGENTS.md) — Agent-specific guidance and roles
+- [**CLAUDE.md**](CLAUDE.md) — Claude and tool-specific workflow guidance
+- [**CHANGELOG.md**](CHANGELOG.md) — Tracked changes and version history
+
+### Architecture, Design, and Governance
+
+- [**docs/architecture/ARCHITECTURE.md**](docs/architecture/ARCHITECTURE.md) — System structure and design approach
+- [**docs/governance/GOVERNANCE.md**](docs/governance/GOVERNANCE.md) — Maintenance and decision guidelines
+- [**docs/process/WORKFLOW.md**](docs/process/WORKFLOW.md) — Contribution and operational workflow
+- [**docs/project/ROADMAP.md**](docs/project/ROADMAP.md) — Planned direction and future work
+
+### Content and Repositories
+
+- [**docs/REPOSITORY_STRUCTURE.md**](docs/REPOSITORY_STRUCTURE.md) — Complete folder layout and purposes
+- [**docs/CONTENT_PLACEMENT_RULES.md**](docs/CONTENT_PLACEMENT_RULES.md) — Where to place skills, prompts, knowledge, and other assets
+- [**docs/source-of-truth.md**](docs/source-of-truth.md) — What's authoritative vs. derived; registry alignment
+
+### Setup, Operations, and Releases
+
+- [**docs/multi-device-setup.md**](docs/multi-device-setup.md) — Configure across devices and environments
+- [**docs/cli-reference.md**](docs/cli-reference.md) — Command reference for repository automation
+- [**docs/releases/**](docs/releases/) — Release notes and version-specific changes
+
+### Advanced Topics
+
+- [**docs/agent-orchestration.md**](docs/agent-orchestration.md) — Multi-agent workflows and coordination
+- [**docs/memory-approval.md**](docs/memory-approval.md) — Memory record creation and promotion
+- [**docs/continuous-learning.md**](docs/continuous-learning.md) — Building evolving memory from work
+
 ## Documentation
 
-**Start here:** [docs/README.md](docs/README.md) is the docs index and your entry point.
+**Detailed topic guide by subject:**
 
-| Topic | Document |
+| Topic | Links |
 | --- | --- |
-| Authoritative content | [Source of Truth](docs/source-of-truth.md) — what's authoritative vs. derived |
-| Architecture and structure | [Architecture](docs/architecture/ARCHITECTURE.md) · [Repository Structure](docs/REPOSITORY_STRUCTURE.md) |
-| Workflow and governance | [Workflow](docs/process/WORKFLOW.md) · [Governance](docs/governance/GOVERNANCE.md) |
-| Contributions and security | [Contributing](CONTRIBUTING.md) · [Content Placement](docs/CONTENT_PLACEMENT_RULES.md) · [Security](SECURITY.md) |
-| Plans and history | [Roadmap](docs/project/ROADMAP.md) · [Changelog](CHANGELOG.md) · [Release notes](docs/releases/) |
-| Commands and setup | [CLI reference](docs/cli-reference.md) · [Multi-device setup](docs/multi-device-setup.md) |
+| **Getting started** | [Docs index](docs/README.md) · [Quick start](#quick-start) · [Structure](docs/REPOSITORY_STRUCTURE.md) |
+| **Understanding authority** | [Source of Truth](docs/source-of-truth.md) · [Placement Rules](docs/CONTENT_PLACEMENT_RULES.md) |
+| **Contributing** | [CONTRIBUTING.md](CONTRIBUTING.md) · [Workflow](docs/process/WORKFLOW.md) · [Content Placement](docs/CONTENT_PLACEMENT_RULES.md) |
+| **Security** | [SECURITY.md](SECURITY.md) · [Memory Security](docs/memory-approval.md) |
+| **Architecture** | [ARCHITECTURE.md](docs/architecture/ARCHITECTURE.md) · [Repository Structure](docs/REPOSITORY_STRUCTURE.md) |
+| **Governance & Process** | [GOVERNANCE.md](docs/governance/GOVERNANCE.md) · [WORKFLOW.md](docs/process/WORKFLOW.md) |
+| **Setup** | [Multi-device setup](docs/multi-device-setup.md) · [CLI reference](docs/cli-reference.md) |
+| **Planning & Direction** | [ROADMAP.md](docs/project/ROADMAP.md) · [Changelog](CHANGELOG.md) · [Releases](docs/releases/) |
 
 ## Contributing
 
